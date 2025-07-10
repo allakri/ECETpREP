@@ -20,7 +20,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
 
   useEffect(() => {
-    try {
+    // Check if auth object is a valid Firebase auth instance.
+    // The dummy object from firebase.ts won't have 'onAuthStateChanged'.
+    if (auth && typeof auth.onAuthStateChanged === 'function') {
       const unsubscribe = onAuthStateChanged(auth, (user) => {
         setUser(user);
         setLoading(false);
@@ -32,14 +34,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
       });
       return () => unsubscribe();
-    } catch (error) {
+    } else {
       console.warn("Firebase Auth is not available. Running in offline mode.");
       setLoading(false);
-      return () => {}; // Return an empty function for cleanup
+      return () => {};
     }
   }, [router]);
 
   const signInWithGoogle = async () => {
+    if (!auth || typeof auth.onAuthStateChanged !== 'function') {
+      console.error("Firebase is not configured. Please check your .env.local file.");
+      return;
+    }
     setLoading(true);
     try {
       const provider = new GoogleAuthProvider();
@@ -53,6 +59,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signOut = async () => {
+     if (!auth || typeof auth.onAuthStateChanged !== 'function') {
+      console.error("Firebase is not configured. Cannot sign out.");
+      return;
+    }
     setLoading(true);
     try {
         await firebaseSignOut(auth);
