@@ -2,6 +2,7 @@ import { ExamSelection } from "@/components/exam/ExamSelection";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Hero } from "@/components/layout/Hero";
+import { OurMission } from "@/components/layout/OurMission";
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
       <AppHeader />
       <main className="flex-grow bg-secondary/30">
         <Hero />
+        <OurMission />
         <ExamSelection />
       </main>
       <AppFooter />
