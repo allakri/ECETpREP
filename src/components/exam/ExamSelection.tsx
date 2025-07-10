@@ -26,10 +26,10 @@ export function ExamSelection() {
     };
 
     return (
-        <div className="container mx-auto py-8 px-4">
+        <div id="exam-selection" className="container mx-auto py-8 px-4">
             <Card className="shadow-lg">
                 <CardHeader>
-                    <CardTitle className="text-2xl font-headline text-primary">Mock Test</CardTitle>
+                    <CardTitle className="text-2xl font-headline text-primary">Select Your Mock Test</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <ul className="space-y-2">
