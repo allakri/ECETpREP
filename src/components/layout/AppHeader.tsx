@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { Menu, Rocket, LogOut, User } from "lucide-react";
+import { Menu, Rocket, LogOut, User, LogIn } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 
 export function AppHeader() {
@@ -21,6 +21,10 @@ export function AppHeader() {
 
   const handleLogout = async () => {
     await signOut();
+    router.push('/');
+  }
+
+  const handleLogin = () => {
     router.push('/');
   }
 
@@ -41,12 +45,17 @@ export function AppHeader() {
                 </Button>
               </Link>
             ))}
-             {appUser && (
+             {appUser ? (
                 <>
                   <Link href="/profile" passHref>
                     <Button variant="ghost"><User className="mr-2 h-4 w-4"/>Profile</Button>
                   </Link>
                   <Button variant="secondary" onClick={handleLogout}><LogOut className="mr-2 h-4 w-4"/>Logout</Button>
+                </>
+             ) : (
+                <>
+                  <Button variant="ghost" onClick={handleLogin}><LogIn className="mr-2 h-4 w-4"/>Login</Button>
+                  <Button variant="secondary" onClick={handleLogin}>Sign Up</Button>
                 </>
              )}
           </div>
@@ -72,12 +81,17 @@ export function AppHeader() {
                        <Button variant="ghost" className="w-full justify-start text-lg">{link.label}</Button>
                     </Link>
                   ))}
-                  {appUser && (
+                  {appUser ? (
                     <>
                       <Link href="/profile" passHref>
                         <Button variant="ghost" className="w-full justify-start text-lg"><User className="mr-2 h-4 w-4"/>Profile</Button>
                       </Link>
                       <Button variant="default" onClick={handleLogout} className="w-full text-lg"><LogOut className="mr-2 h-4 w-4"/>Logout</Button>
+                    </>
+                  ) : (
+                    <>
+                        <Button variant="ghost" className="w-full justify-start text-lg" onClick={handleLogin}><LogIn className="mr-2 h-4 w-4"/>Login</Button>
+                        <Button variant="default" className="w-full text-lg" onClick={handleLogin}>Sign Up</Button>
                     </>
                   )}
                 </div>
