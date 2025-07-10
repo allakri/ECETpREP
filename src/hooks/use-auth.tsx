@@ -8,6 +8,7 @@ import { auth, db } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
 import { useToast } from './use-toast';
 import { CareerGoalForm } from '@/components/auth/CareerGoalForm';
+import { Loader2 } from 'lucide-react';
 
 export interface AppUser {
   uid: string;
@@ -101,6 +102,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!auth || typeof auth.onAuthStateChanged !== 'function') {
+      console.warn("Firebase Auth is not available. Skipping auth state changes.");
       setLoading(false);
       return;
     };
@@ -118,18 +120,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 setShowCareerGoalForm(false);
             }
         } else {
-             const { isNew, role, careerGoal } = await storeUserInFirestore(firebaseUser);
-             const newUser: AppUser = {
-                 uid: firebaseUser.uid,
-                 email: firebaseUser.email,
-                 displayName: firebaseUser.displayName,
-                 photoURL: firebaseUser.photoURL,
-                 role,
-                 careerGoal
-             }
-             setAppUser(newUser);
-             if(isNew || !careerGoal) {
-                 setShowCareerGoalForm(true);
+             // This can happen if fetchUserFromFirestore returns null (e.g., offline)
+             // Or if the user is new and storeUserInFirestore needs to run.
+             // We'll try to store them, which also covers the new user case.
+             try {
+                const { isNew, role, careerGoal } = await storeUserInFirestore(firebaseUser);
+                const newUser: AppUser = {
+                    uid: firebaseUser.uid,
+                    email: firebaseUser.email,
+                    displayName: firebaseUser.displayName,
+                    photoURL: firebaseUser.photoURL,
+                    role,
+                    careerGoal
+                }
+                setAppUser(newUser);
+                if(isNew || !careerGoal) {
+                    setShowCareerGoalForm(true);
+                }
+             } catch(e) {
+                console.error("Failed to store user during auth state change:", e)
              }
         }
       } else {
@@ -244,23 +253,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!isClient || loading) {
       return (
         <div className="flex items-center justify-center min-h-screen">
-          <p>Loading...</p>
+          <Loader2 className="h-8 w-8 animate-spin" />
         </div>
       );
     }
 
-    if (showCareerGoalForm && user) {
-        const tempAppUser: AppUser = appUser || {
-            uid: user.uid,
-            email: user.email,
-            displayName: user.displayName,
-            photoURL: user.photoURL,
-            role: "student",
-            careerGoal: ""
-        }
+    if (showCareerGoalForm && user && appUser) {
       return (
         <div className="flex items-center justify-center min-h-screen bg-secondary/30">
-          <CareerGoalForm user={tempAppUser} onSave={handleSaveCareerGoal} />
+          <CareerGoalForm user={appUser} onSave={handleSaveCareerGoal} />
         </div>
       );
     }
