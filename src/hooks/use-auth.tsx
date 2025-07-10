@@ -93,7 +93,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           }
         } catch (error) {
             console.error("Error fetching user data from Firestore:", error);
-            if ((error as AuthError).code === 'unavailable') {
+            if ((error as AuthError).code === 'unavailable' || (error as AuthError).code === 'failed-precondition') {
                  toast({
                     title: "Network Error",
                     description: "Could not connect to the database. Please check your network connection.",
@@ -111,6 +111,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       } else {
         setUser(null);
         setAppUser(null);
+        setIsNewUser(false);
         if (window.location.pathname !== '/') {
             router.push('/');
         }
@@ -155,9 +156,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } catch (error) {
       const authError = error as AuthError;
       if (authError.code === 'auth/popup-closed-by-user') {
-        // This is a normal user action, so we don't need to show an error.
         console.log("Sign-in popup closed by user.");
-        return;
+        setLoading(false); // Make sure to stop loading
+        return; // Don't show an error toast
       }
       
       console.error("Error during Google sign-in:", authError.code, authError.message);
@@ -175,9 +176,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             variant: "destructive",
         });
       }
-      throw error;
     } finally {
-        setLoading(false);
+        // We don't set loading to false here because it's handled by the onAuthStateChanged listener
     }
   };
 
@@ -207,6 +207,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     try {
         await firebaseSignOut(auth);
         setAppUser(null);
+        setUser(null);
     } catch (error) {
         console.error("Error during sign-out:", error);
          toast({
@@ -218,7 +219,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setLoading(false);
     }
   };
-
+  
   const value = {
     user,
     appUser,
@@ -227,23 +228,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     signOut,
   };
 
-  if (loading) {
-    return (
-       <div className="flex items-center justify-center min-h-screen">
-         <p>Loading...</p>
-       </div>
-    )
-  }
-  
-  if (isNewUser && appUser) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-secondary/30">
-        <CareerGoalForm user={appUser} onSave={handleSaveCareerGoal} />
-      </div>
-    );
-  }
+  // The main rendering logic that prevents hydration errors
+  const renderContent = () => {
+    if (loading) {
+      return (
+        <div className="flex items-center justify-center min-h-screen">
+          <p>Loading...</p>
+        </div>
+      );
+    }
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+    if (isNewUser && appUser) {
+      return (
+        <div className="flex items-center justify-center min-h-screen bg-secondary/30">
+          <CareerGoalForm user={appUser} onSave={handleSaveCareerGoal} />
+        </div>
+      );
+    }
+    
+    // Default case: render the children of the provider
+    return children;
+  };
+  
+  return <AuthContext.Provider value={value}>{renderContent()}</AuthContext.Provider>;
 }
 
 export function useAuth() {
