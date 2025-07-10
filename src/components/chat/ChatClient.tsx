@@ -1,14 +1,15 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { clearDoubt } from '@/ai/flows/doubt-clearing-flow';
 import type { MessageData } from 'genkit/experimental/ai';
+import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Home, Send, Bot, User, Loader2, ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -22,7 +23,21 @@ export default function ChatClient() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [examContext, setExamContext] = useState<{ questions: Question[], answers: AnswerSheet } | null>(null);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    // Load exam results from local storage to provide context to the chat
+    const storedAnswers = localStorage.getItem('ecetExamAnswers');
+    const storedQuestions = localStorage.getItem('ecetExamQuestions');
+    if (storedAnswers && storedQuestions) {
+      setExamContext({
+        answers: JSON.parse(storedAnswers),
+        questions: JSON.parse(storedQuestions),
+      });
+    }
+  }, []);
+
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,6 +58,8 @@ export default function ChatClient() {
       const result = await clearDoubt({
         question: input,
         history: history,
+        examQuestions: examContext?.questions,
+        examAnswers: examContext?.answers,
       });
 
       const aiMessage: ChatMessage = { role: 'model', text: result.answer };
@@ -67,6 +84,14 @@ export default function ChatClient() {
       });
     }
   }, [messages]);
+  
+  const getWelcomeMessage = () => {
+    const baseMessage = "Have a question? Ask me anything about ECET subjects! For example: \"Explain the difference between series and parallel circuits.\"";
+    if (examContext) {
+      return "I see you've just finished an exam. You can ask me which questions you got wrong or right, and I can help explain the concepts. Or, ask me anything else about ECET subjects!";
+    }
+    return baseMessage;
+  }
 
   return (
     <main className="flex h-screen w-full flex-col items-center justify-center bg-secondary/30 p-4">
@@ -94,9 +119,8 @@ export default function ChatClient() {
           <ScrollArea className="h-full p-6" ref={scrollAreaRef}>
             <div className="space-y-6">
               {messages.length === 0 && (
-                <div className="text-center text-muted-foreground pt-10">
-                  <p>Have a question? Ask me anything about ECET subjects!</p>
-                  <p className="text-sm">For example: "Explain the difference between series and parallel circuits."</p>
+                <div className="text-center text-muted-foreground pt-10 px-4">
+                  <p>{getWelcomeMessage()}</p>
                 </div>
               )}
               {messages.map((message, index) => (
@@ -147,7 +171,7 @@ export default function ChatClient() {
             <Input
               value={input}
               onChange={e => setInput(e.target.value)}
-              placeholder="Type your doubt here..."
+              placeholder="Ask about your exam or any other doubt..."
               disabled={isLoading}
               className="flex-1"
             />
