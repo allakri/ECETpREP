@@ -29,7 +29,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 const storeUserInFirestore = async (user: User): Promise<{ isNew: boolean, role: string, careerGoal?: string }> => {
-  if (!db) {
+  if (!db || typeof db.collection !== 'function') {
     throw new Error("Firestore not initialized");
   }
   const userRef = doc(db, "users", user.uid);
@@ -55,7 +55,7 @@ const storeUserInFirestore = async (user: User): Promise<{ isNew: boolean, role:
 };
 
 const fetchUserFromFirestore = async (user: User): Promise<AppUser | null> => {
-    if (!db) {
+    if (!db || typeof db.collection !== 'function') {
         console.error("Firestore is not initialized. Cannot fetch user data.");
         return null;
     }
@@ -89,7 +89,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [appUser, setAppUser] = useState<AppUser | null>(null);
   const [loading, setLoading] = useState(true);
-  const [isNewUser, setIsNewUser] = useState(false);
+  const [showCareerGoalForm, setShowCareerGoalForm] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
   const router = useRouter();
@@ -100,35 +100,42 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (!auth) {
+    if (!auth || typeof auth.onAuthStateChanged !== 'function') {
       setLoading(false);
       return;
     };
     
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       setLoading(true);
-      if (user) {
-        setUser(user);
-        const customUserData = await fetchUserFromFirestore(user);
-        setAppUser(customUserData);
-        if (customUserData && !customUserData.careerGoal) {
-           const { isNew } = await storeUserInFirestore(user).catch(() => ({ isNew: false }));
-           // Only set isNewUser to true if the careerGoal is not set.
-           // This handles the case where an existing user document might not have the field yet.
-           if (!customUserData.careerGoal) {
-             setIsNewUser(true);
-           }
-        } else if (!customUserData) {
-          // This case handles brand new users that don't even have a firestore doc yet.
-          const { isNew } = await storeUserInFirestore(user);
-          if (isNew) {
-            setIsNewUser(true);
-          }
+      if (firebaseUser) {
+        setUser(firebaseUser);
+        const customUserData = await fetchUserFromFirestore(firebaseUser);
+        if (customUserData) {
+            setAppUser(customUserData);
+            if (!customUserData.careerGoal) {
+                setShowCareerGoalForm(true);
+            } else {
+                setShowCareerGoalForm(false);
+            }
+        } else {
+             const { isNew, role, careerGoal } = await storeUserInFirestore(firebaseUser);
+             const newUser: AppUser = {
+                 uid: firebaseUser.uid,
+                 email: firebaseUser.email,
+                 displayName: firebaseUser.displayName,
+                 photoURL: firebaseUser.photoURL,
+                 role,
+                 careerGoal
+             }
+             setAppUser(newUser);
+             if(isNew || !careerGoal) {
+                 setShowCareerGoalForm(true);
+             }
         }
       } else {
         setUser(null);
         setAppUser(null);
-        setIsNewUser(false);
+        setShowCareerGoalForm(false);
       }
       setLoading(false);
     });
@@ -137,7 +144,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [toast]);
 
   const signInWithGoogle = async () => {
-    if (!auth) {
+    if (!auth || typeof auth.onAuthStateChanged !== 'function') {
       toast({
         title: "Authentication Error",
         description: "Firebase is not configured correctly. Please check console.",
@@ -163,20 +170,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setAppUser(currentUserData);
       
       if (isNew || !careerGoal) {
-        setIsNewUser(true);
+        setShowCareerGoalForm(true);
       } else {
+        setShowCareerGoalForm(false);
         router.push('/');
       }
 
     } catch (error) {
       const authError = error as AuthError;
-      if (authError.code === 'auth/popup-closed-by-user') {
-        console.log("Sign-in popup closed by user.");
-      } else {
+      if (authError.code !== 'auth/popup-closed-by-user') {
          console.error("Error during Google sign-in:", authError.code, authError.message);
          toast({
             title: "Sign-In Failed",
-            description: authError.message,
+            description: "An unexpected error occurred during sign-in. Please try again.",
             variant: "destructive",
         });
       }
@@ -192,7 +198,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const userRef = doc(db, "users", user.uid);
       await updateDoc(userRef, { careerGoal: goal });
       setAppUser(prev => prev ? { ...prev, careerGoal: goal } : null);
-      setIsNewUser(false);
+      setShowCareerGoalForm(false);
       router.push('/');
     } catch (error) {
       console.error("Failed to save career goal", error);
@@ -203,7 +209,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signOut = async () => {
-     if (!auth) {
+     if (!auth || typeof auth.onAuthStateChanged !== 'function') {
       console.error("Firebase is not configured. Cannot sign out.");
       return;
     }
@@ -212,7 +218,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         await firebaseSignOut(auth);
         setUser(null);
         setAppUser(null);
-        setIsNewUser(false);
+        setShowCareerGoalForm(false);
         router.push('/login');
     } catch (error) {
         console.error("Error during sign-out:", error);
@@ -234,11 +240,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     signOut,
   };
 
-  const renderContent = useCallback(() => {
-    if (!isClient) {
-      return null;
-    }
-    if (loading) {
+  const renderContent = () => {
+    if (!isClient || loading) {
       return (
         <div className="flex items-center justify-center min-h-screen">
           <p>Loading...</p>
@@ -246,7 +249,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       );
     }
 
-    if (isNewUser && user) {
+    if (showCareerGoalForm && user) {
         const tempAppUser: AppUser = appUser || {
             uid: user.uid,
             email: user.email,
@@ -263,7 +266,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     
     return children;
-  }, [isClient, loading, isNewUser, user, appUser, children, handleSaveCareerGoal]);
+  };
   
   return <AuthContext.Provider value={value}>{renderContent()}</AuthContext.Provider>;
 }

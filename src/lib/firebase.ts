@@ -30,8 +30,9 @@ if (areCredsAvailable) {
   // If credentials aren't available, we can provide mock objects or log a warning.
   // This is useful for preventing crashes during server-side rendering or in a dev environment without keys.
   if (typeof window !== 'undefined') {
-    console.warn("Firebase credentials are not fully provided in .env. Firebase features will be disabled.");
+    console.warn("Firebase credentials are not fully provided. Firebase features will be disabled.");
   }
+  // To prevent app from crashing, we provide dummy objects
   app = {} as FirebaseApp;
   auth = {} as Auth;
   db = {} as Firestore;
