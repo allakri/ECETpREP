@@ -8,7 +8,7 @@ import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { BrainCircuit, Home, Lightbulb, UserCheck, BarChart } from 'lucide-react';
+import { BrainCircuit, Home, Lightbulb, UserCheck, BarChart, MessageCircleQuestion } from 'lucide-react';
 import { ScoreChart } from './ScoreChart';
 
 const quotes = [
@@ -205,10 +205,14 @@ export default function ResultsClient() {
             </CardContent>
         </Card>
 
-        <div className="text-center">
+        <div className="text-center flex items-center justify-center gap-4">
             <Button onClick={() => router.push('/')} variant="default" className="font-bold shadow-lg">
                 <Home className="mr-2 h-4 w-4"/>
                 Back to Home
+            </Button>
+            <Button onClick={() => router.push('/chat')} variant="outline" className="font-bold shadow-lg">
+                <MessageCircleQuestion className="mr-2 h-4 w-4"/>
+                Clear Doubts with AI
             </Button>
         </div>
       </div>
