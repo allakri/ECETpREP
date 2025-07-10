@@ -76,32 +76,41 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Check if auth object is valid before using it
-    if (!auth?.onAuthStateChanged) {
-      if (typeof window !== 'undefined') {
-        console.warn("Firebase Auth is not available. Running in offline mode.");
-      }
-      setLoading(false);
-      return;
-    }
-
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      setUser(user);
+      setLoading(true);
       if (user) {
-        const customUserData = await fetchUserFromFirestore(user);
-        setAppUser(customUserData);
+        setUser(user);
+        try {
+          const customUserData = await fetchUserFromFirestore(user);
+          setAppUser(customUserData);
+          if (customUserData && !customUserData.careerGoal) {
+             const { isNew } = await storeUserInFirestore(user); // Check if they are actually new
+             if (isNew) {
+               setIsNewUser(true);
+             }
+          }
+        } catch (error) {
+            console.error("Error fetching user data from Firestore:", error);
+            // Handle offline error or other issues gracefully
+            toast({
+                title: "Connection Issue",
+                description: "Could not fetch user data. You might be offline.",
+                variant: "destructive"
+            });
+            setAppUser(null); // Clear app user on error
+        }
       } else {
+        setUser(null);
         setAppUser(null);
+        if (window.location.pathname !== '/') {
+            router.push('/');
+        }
       }
       setLoading(false);
-
-      if (!user && window.location.pathname !== '/') {
-        router.push('/');
-      }
     });
 
     return () => unsubscribe();
-  }, [router]);
+  }, [router, toast]);
 
   const signInWithGoogle = async () => {
     if (!auth?.onAuthStateChanged) {
