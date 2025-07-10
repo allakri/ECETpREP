@@ -1,11 +1,15 @@
-import { LoginForm } from '@/components/auth/LoginForm';
+import { ExamSelection } from "@/components/exam/ExamSelection";
+import { AppHeader } from "@/components/layout/AppHeader";
+import { AppFooter } from "@/components/layout/AppFooter";
 
-export default function LoginPage() {
+export default function HomePage() {
   return (
-    <main className="flex min-h-full flex-col items-center justify-center bg-background p-4">
-      <div className="w-full max-w-md">
-        <LoginForm />
-      </div>
-    </main>
+    <div className="flex flex-col min-h-screen">
+      <AppHeader />
+      <main className="flex-grow bg-secondary/30">
+        <ExamSelection />
+      </main>
+      <AppFooter />
+    </div>
   );
 }
