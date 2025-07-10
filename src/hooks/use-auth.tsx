@@ -56,7 +56,7 @@ const storeUserInFirestore = async (user: User): Promise<{ isNew: boolean, role:
 
 const fetchUserFromFirestore = async (user: User): Promise<AppUser | null> => {
     if (!db || typeof db.collection !== 'function') {
-      console.error("Firestore is not initialized. Cannot fetch user role.");
+      console.error("Firestore is not initialized. Cannot fetch user data.");
       return null;
     }
     const userRef = doc(db, 'users', user.uid);
@@ -84,6 +84,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const { toast } = useToast();
 
   useEffect(() => {
+    // Check if auth object is valid before using it
     if (!auth || typeof auth.onAuthStateChanged !== 'function') {
       if (typeof window !== 'undefined') {
         console.warn("Firebase Auth is not available. Running in offline mode.");

@@ -15,26 +15,20 @@ let app: FirebaseApp;
 let auth: Auth;
 let db: Firestore;
 
-// Check if all required environment variables are present
 const areCredsAvailable = 
     firebaseConfig.apiKey &&
     firebaseConfig.authDomain &&
-    firebaseConfig.projectId &&
-    firebaseConfig.storageBucket &&
-    firebaseConfig.messagingSenderId &&
-    firebaseConfig.appId;
+    firebaseConfig.projectId;
 
-if (areCredsAvailable && typeof window !== 'undefined') {
-    // Initialize Firebase only if it hasn't been initialized yet
-    app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+if (areCredsAvailable) {
+    app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
     auth = getAuth(app);
     db = getFirestore(app);
 } else {
+    // Provide mock/dummy objects if credentials are not available to prevent crashes
     if (typeof window !== 'undefined') {
-      console.warn("Firebase credentials are not available or not in a browser environment. Skipping Firebase initialization.");
+        console.warn("Firebase credentials are not fully provided in .env. Firebase features will be disabled.");
     }
-    // Provide mock/dummy objects if credentials are not available
-    // This prevents the app from crashing during server-side rendering or builds.
     app = {} as FirebaseApp;
     auth = {} as Auth;
     db = {} as Firestore;
