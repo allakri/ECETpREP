@@ -1,5 +1,6 @@
 import { initializeApp, getApps, getApp, FirebaseApp } from "firebase/app";
 import { getAuth, Auth } from "firebase/auth";
+import { getFirestore, Firestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -12,6 +13,7 @@ const firebaseConfig = {
 
 let app: FirebaseApp;
 let auth: Auth;
+let db: Firestore;
 
 // Check if all required environment variables are present
 const areCredsAvailable = 
@@ -22,17 +24,20 @@ const areCredsAvailable =
     firebaseConfig.messagingSenderId &&
     firebaseConfig.appId;
 
-if (areCredsAvailable) {
+if (areCredsAvailable && typeof window !== 'undefined') {
     // Initialize Firebase only if it hasn't been initialized yet
     app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
     auth = getAuth(app);
+    db = getFirestore(app);
 } else {
-    console.warn("Firebase credentials are not available. Skipping Firebase initialization.");
+    if (typeof window !== 'undefined') {
+      console.warn("Firebase credentials are not available or not in a browser environment. Skipping Firebase initialization.");
+    }
     // Provide mock/dummy objects if credentials are not available
     // This prevents the app from crashing during server-side rendering or builds.
     app = {} as FirebaseApp;
     auth = {} as Auth;
+    db = {} as Firestore;
 }
 
-
-export { app, auth };
+export { app, auth, db };
