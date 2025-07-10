@@ -4,23 +4,31 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { Menu, Rocket } from "lucide-react";
+import { Menu, Rocket, LogOut } from "lucide-react";
+import { useAuth } from "@/hooks/use-auth";
 
 export function AppHeader() {
   const router = useRouter();
+  const { user, signOut } = useAuth();
+
   const navLinks = [
-    { href: "/", label: "Home" },
+    { href: "/home", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/courses", label: "Courses" },
     { href: "/user-guide", label: "User Guide" },
     { href: "/contact", label: "Contact Us" },
   ];
 
+  const handleLogout = async () => {
+    await signOut();
+    router.push('/');
+  }
+
   return (
     <header className="bg-primary/90 text-primary-foreground shadow-md sticky top-0 z-40">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline">
+          <Link href="/home" className="flex items-center gap-2 font-bold text-xl font-headline">
             <Rocket />
             <span>ECET Prep</span>
           </Link>
@@ -34,7 +42,7 @@ export function AppHeader() {
                 </Button>
               </Link>
             ))}
-             <Button variant="secondary" onClick={() => router.push('/login')}>Login</Button>
+             {user && <Button variant="secondary" onClick={handleLogout}><LogOut className="mr-2 h-4 w-4"/>Logout</Button>}
           </div>
 
           {/* Mobile Navigation */}
@@ -47,9 +55,9 @@ export function AppHeader() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-full max-w-xs bg-background text-foreground">
-                <SheetHeader className="sr-only">
-                  <SheetTitle>Menu</SheetTitle>
-                  <SheetDescription>
+                <SheetHeader>
+                  <SheetTitle className="sr-only">Menu</SheetTitle>
+                  <SheetDescription className="sr-only">
                     Main navigation links for the ECET Prep Platform.
                   </SheetDescription>
                 </SheetHeader>
@@ -59,7 +67,7 @@ export function AppHeader() {
                        <Button variant="ghost" className="w-full justify-start text-lg">{link.label}</Button>
                     </Link>
                   ))}
-                  <Button variant="default" onClick={() => router.push('/login')} className="w-full text-lg">Login</Button>
+                  {user && <Button variant="default" onClick={handleLogout} className="w-full text-lg"><LogOut className="mr-2 h-4 w-4"/>Logout</Button>}
                 </div>
               </SheetContent>
             </Sheet>

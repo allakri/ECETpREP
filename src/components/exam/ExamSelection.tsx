@@ -23,7 +23,7 @@ export function ExamSelection() {
     const router = useRouter();
 
     const handleExamSelect = () => {
-        router.push('/login');
+        router.push('/exam');
     };
 
     return (
