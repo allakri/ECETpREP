@@ -2,13 +2,23 @@
 
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut as firebaseSignOut, User, AuthError } from 'firebase/auth';
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { auth, db } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
 import { useToast } from './use-toast';
 
+// Define a type for our custom user object, which includes the role
+export interface AppUser {
+  uid: string;
+  email: string | null;
+  displayName: string | null;
+  photoURL: string | null;
+  role: string;
+}
+
 interface AuthContextType {
-  user: User | null;
+  user: User | null; // This is the raw Firebase user
+  appUser: AppUser | null; // This is our custom user object with role
   loading: boolean;
   signInWithGoogle: () => Promise<void>;
   signOut: () => Promise<void>;
@@ -36,21 +46,56 @@ const storeUserInFirestore = async (user: User) => {
   }
 }
 
+const fetchUserRole = async (user: User): Promise<AppUser | null> => {
+    if (!db || typeof db.collection !== 'function') {
+      console.error("Firestore is not initialized. Cannot fetch user role.");
+      return null;
+    }
+    const userRef = doc(db, 'users', user.uid);
+    const userDoc = await getDoc(userRef);
+    if (userDoc.exists()) {
+        const userData = userDoc.data();
+        return {
+            uid: user.uid,
+            email: user.email,
+            displayName: user.displayName,
+            photoURL: user.photoURL,
+            role: userData.role || 'student', // Default to 'student' if role is not set
+        };
+    } else {
+         // This can happen if user record isn't created yet, create it.
+        await storeUserInFirestore(user);
+        return {
+             uid: user.uid,
+            email: user.email,
+            displayName: user.displayName,
+            photoURL: user.photoURL,
+            role: 'student'
+        }
+    }
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
+  const [appUser, setAppUser] = useState<AppUser | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const { toast } = useToast();
 
   useEffect(() => {
     if (auth && typeof auth.onAuthStateChanged === 'function') {
-      const unsubscribe = onAuthStateChanged(auth, (user) => {
+      const unsubscribe = onAuthStateChanged(auth, async (user) => {
         setUser(user);
+        if (user) {
+            const customUserData = await fetchUserRole(user);
+            setAppUser(customUserData);
+        } else {
+            setAppUser(null);
+        }
         setLoading(false);
-        if (!user) {
-          if (window.location.pathname !== '/') {
+
+        if (!user && window.location.pathname !== '/') {
             router.push('/');
-          }
         }
       });
       return () => unsubscribe();
@@ -75,6 +120,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
       await storeUserInFirestore(result.user);
+      const customUserData = await fetchUserRole(result.user);
+      setAppUser(customUserData);
+
     } catch (error) {
       const authError = error as AuthError;
       console.error("Error during Google sign-in:", authError.code);
@@ -106,6 +154,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setLoading(true);
     try {
         await firebaseSignOut(auth);
+        setAppUser(null);
     } catch (error) {
         console.error("Error during sign-out:", error);
          toast({
@@ -120,6 +169,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const value = {
     user,
+    appUser,
     loading,
     signInWithGoogle,
     signOut,
