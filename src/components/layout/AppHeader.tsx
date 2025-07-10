@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Menu, Rocket } from "lucide-react";
 
 export function AppHeader() {
@@ -47,6 +47,12 @@ export function AppHeader() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-full max-w-xs bg-background text-foreground">
+                <SheetHeader className="sr-only">
+                  <SheetTitle>Menu</SheetTitle>
+                  <SheetDescription>
+                    Main navigation links for the ECET Prep Platform.
+                  </SheetDescription>
+                </SheetHeader>
                 <div className="flex flex-col space-y-4 pt-8">
                   {navLinks.map((link) => (
                     <Link key={link.href} href={link.href} passHref>
