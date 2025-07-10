@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow bg-secondary/30">
+      <main className="flex-grow">
         <Hero />
         <OurMission />
         <ExamSelection />

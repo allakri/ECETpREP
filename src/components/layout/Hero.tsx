@@ -10,7 +10,7 @@ export function Hero() {
   };
 
   return (
-    <div className="text-center py-20 px-4 bg-background">
+    <div className="text-center py-16 md:py-24 px-4 bg-background">
       <h1 className="text-4xl md:text-5xl font-extrabold font-headline text-primary tracking-tight">
         Unlock Your Engineering Future
       </h1>

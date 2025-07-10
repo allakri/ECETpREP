@@ -3,7 +3,7 @@ import { Goal, Rocket, Users } from "lucide-react";
 
 export function OurMission() {
     return (
-        <div className="bg-background py-12">
+        <div className="bg-secondary/30 py-16 md:py-24">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-extrabold font-headline text-primary tracking-tight">

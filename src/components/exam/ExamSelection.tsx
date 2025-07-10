@@ -1,51 +1,52 @@
 "use client"
 
 import { useRouter } from "next/navigation";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card";
 import { Button } from "../ui/button";
-import { FlaskConical, CircuitBoard, Building, Code, TestTube, Zap, HardHat, Pickaxe, Radio, Sigma, ThumbsUp } from "lucide-react";
+import { FlaskConical, CircuitBoard, Building, Code, TestTube, Zap, HardHat, Pickaxe, Radio, Sigma } from "lucide-react";
+import * as React from "react";
 
 const exams = [
-    { name: "Pharmacy", icon: <FlaskConical /> },
-    { name: "Electronics and Instrumentation Engineering", icon: <CircuitBoard /> },
-    { name: "Civil Engineering", icon: <Building /> },
-    { name: "Computer Science and Engineering", icon: <Code /> },
-    { name: "Chemical Engineering", icon: <TestTube /> },
-    { name: "Electrical and Electronics Engineering", icon: <Zap /> },
-    { name: "Mechanical Engineering", icon: <HardHat /> },
-    { name: "Metallurgical Engineering", icon: <Pickaxe /> },
-    { name: "Electronics and Communication Engineering", icon: <Radio /> },
-    { name: "B.Sc.(Mathematics)", icon: <Sigma /> },
+    { name: "Pharmacy", icon: <FlaskConical className="h-6 w-6 text-primary/80"/> },
+    { name: "Electronics & Instrumentation", icon: <CircuitBoard className="h-6 w-6 text-primary/80"/> },
+    { name: "Civil Engineering", icon: <Building className="h-6 w-6 text-primary/80"/> },
+    { name: "Computer Science", icon: <Code className="h-6 w-6 text-primary/80"/> },
+    { name: "Chemical Engineering", icon: <TestTube className="h-6 w-6 text-primary/80"/> },
+    { name: "Electrical & Electronics", icon: <Zap className="h-6 w-6 text-primary/80"/> },
+    { name: "Mechanical Engineering", icon: <HardHat className="h-6 w-6 text-primary/80"/> },
+    { name: "Metallurgical Engineering", icon: <Pickaxe className="h-6 w-6 text-primary/80"/> },
+    { name: "Electronics & Communication", icon: <Radio className="h-6 w-6 text-primary/80"/> },
+    { name: "B.Sc. (Mathematics)", icon: <Sigma className="h-6 w-6 text-primary/80"/> },
 ];
 
 export function ExamSelection() {
     const router = useRouter();
 
     const handleExamSelect = () => {
-        router.push('/exam');
+        router.push('/login');
     };
 
     return (
-        <div id="exam-selection" className="container mx-auto py-8 px-4">
-            <Card className="shadow-lg">
-                <CardHeader>
-                    <CardTitle className="text-2xl font-headline text-primary">Select Your Mock Test</CardTitle>
+        <div id="exam-selection" className="container mx-auto py-16 md:py-24 px-4">
+            <Card className="shadow-lg max-w-4xl mx-auto border-none bg-secondary/30">
+                <CardHeader className="text-center">
+                    <CardTitle className="text-3xl font-headline text-primary">Select Your Mock Test</CardTitle>
+                    <CardDescription>Choose your branch to start a tailored practice exam.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <ul className="space-y-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {exams.map((exam) => (
-                            <li key={exam.name}>
-                                <Button
-                                    onClick={handleExamSelect}
-                                    variant="ghost"
-                                    className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/5"
-                                >
-                                    <ThumbsUp className="mr-3 text-primary"/>
-                                    <span className="text-base text-foreground">{exam.name}</span>
-                                </Button>
-                            </li>
+                            <Button
+                                key={exam.name}
+                                onClick={handleExamSelect}
+                                variant="outline"
+                                className="w-full h-auto py-6 px-4 flex flex-col items-center justify-center text-center gap-3 bg-card hover:bg-card/90 hover:scale-105 transition-transform duration-200"
+                            >
+                                {exam.icon}
+                                <span className="text-base font-semibold text-foreground whitespace-normal">{exam.name}</span>
+                            </Button>
                         ))}
-                    </ul>
+                    </div>
                 </CardContent>
             </Card>
         </div>

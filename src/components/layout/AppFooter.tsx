@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { Copyright } from "lucide-react";
+import { Copyright, Rocket } from "lucide-react";
 
 export function AppFooter() {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,10 @@ export function AppFooter() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
-            <h3 className="font-bold text-lg mb-4 font-headline">ECET Prep Platform</h3>
+            <div className="flex justify-center md:justify-start items-center gap-2 mb-4">
+                <Rocket />
+                <h3 className="font-bold text-lg font-headline">ECET Prep Platform</h3>
+            </div>
             <p className="text-sm text-primary-foreground/80">
               Your comprehensive resource for acing the Engineering Common Entrance Test.
             </p>
