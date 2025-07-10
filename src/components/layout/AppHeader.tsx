@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { Menu, Rocket, LogOut } from "lucide-react";
+import { Menu, Rocket, LogOut, User } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 
 export function AppHeader() {
   const router = useRouter();
-  const { user, signOut } = useAuth();
+  const { appUser, signOut } = useAuth();
 
   const navLinks = [
     { href: "/home", label: "Home" },
@@ -33,7 +33,6 @@ export function AppHeader() {
             <span>ECET Prep</span>
           </Link>
           
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-2">
             {navLinks.map(link => (
               <Link key={link.href} href={link.href} passHref>
@@ -42,10 +41,16 @@ export function AppHeader() {
                 </Button>
               </Link>
             ))}
-             {user && <Button variant="secondary" onClick={handleLogout}><LogOut className="mr-2 h-4 w-4"/>Logout</Button>}
+             {appUser && (
+                <>
+                  <Link href="/profile" passHref>
+                    <Button variant="ghost"><User className="mr-2 h-4 w-4"/>Profile</Button>
+                  </Link>
+                  <Button variant="secondary" onClick={handleLogout}><LogOut className="mr-2 h-4 w-4"/>Logout</Button>
+                </>
+             )}
           </div>
 
-          {/* Mobile Navigation */}
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -67,7 +72,14 @@ export function AppHeader() {
                        <Button variant="ghost" className="w-full justify-start text-lg">{link.label}</Button>
                     </Link>
                   ))}
-                  {user && <Button variant="default" onClick={handleLogout} className="w-full text-lg"><LogOut className="mr-2 h-4 w-4"/>Logout</Button>}
+                  {appUser && (
+                    <>
+                      <Link href="/profile" passHref>
+                        <Button variant="ghost" className="w-full justify-start text-lg"><User className="mr-2 h-4 w-4"/>Profile</Button>
+                      </Link>
+                      <Button variant="default" onClick={handleLogout} className="w-full text-lg"><LogOut className="mr-2 h-4 w-4"/>Logout</Button>
+                    </>
+                  )}
                 </div>
               </SheetContent>
             </Sheet>

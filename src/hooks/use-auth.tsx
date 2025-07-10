@@ -1,25 +1,25 @@
-
 "use client";
 
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut as firebaseSignOut, User, AuthError } from 'firebase/auth';
-import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, setDoc, getDoc, serverTimestamp, updateDoc } from 'firebase/firestore';
 import { auth, db } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
 import { useToast } from './use-toast';
+import { CareerGoalForm } from '@/components/auth/CareerGoalForm';
 
-// Define a type for our custom user object, which includes the role
 export interface AppUser {
   uid: string;
   email: string | null;
   displayName: string | null;
   photoURL: string | null;
   role: string;
+  careerGoal?: string;
 }
 
 interface AuthContextType {
-  user: User | null; // This is the raw Firebase user
-  appUser: AppUser | null; // This is our custom user object with role
+  user: User | null;
+  appUser: AppUser | null;
   loading: boolean;
   signInWithGoogle: () => Promise<void>;
   signOut: () => Promise<void>;
@@ -27,27 +27,16 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const storeUserInFirestore = async (user: User) => {
+const storeUserInFirestore = async (user: User): Promise<{ isNew: boolean, role: string, careerGoal?: string }> => {
   if (!db || typeof db.collection !== 'function') {
     console.error("Firestore is not initialized. Cannot store user data.");
-    return;
+    throw new Error("Firestore not initialized");
   }
   const userRef = doc(db, "users", user.uid);
-  try {
-    // Check if the user document already exists to avoid overwriting the role
-    const userDoc = await getDoc(userRef);
-    let userRole = "student"; // Default role
+  const userDoc = await getDoc(userRef);
 
-    if (!userDoc.exists()) {
-      // If user is new, assign role based on email
-      if (user.email === 'raiabhishek3646@gmail.com') {
-        userRole = 'admin';
-      }
-    } else {
-      // If user exists, retain their current role unless it's not set
-      userRole = userDoc.data().role || 'student';
-    }
-    
+  if (!userDoc.exists()) {
+    const userRole = user.email === 'raiabhishek3646@gmail.com' ? 'admin' : 'student';
     await setDoc(userRef, {
       uid: user.uid,
       email: user.email,
@@ -55,13 +44,17 @@ const storeUserInFirestore = async (user: User) => {
       photoURL: user.photoURL,
       lastLogin: serverTimestamp(),
       role: userRole,
-    }, { merge: true });
-  } catch (error) {
-    console.error("Error storing user in Firestore:", error);
+      careerGoal: "", // Initialize career goal
+    });
+    return { isNew: true, role: userRole };
+  } else {
+    await updateDoc(userRef, { lastLogin: serverTimestamp() });
+    const data = userDoc.data();
+    return { isNew: false, role: data.role || 'student', careerGoal: data.careerGoal };
   }
-}
+};
 
-const fetchUserRole = async (user: User): Promise<AppUser | null> => {
+const fetchUserFromFirestore = async (user: User): Promise<AppUser | null> => {
     if (!db || typeof db.collection !== 'function') {
       console.error("Firestore is not initialized. Cannot fetch user role.");
       return null;
@@ -75,52 +68,46 @@ const fetchUserRole = async (user: User): Promise<AppUser | null> => {
             email: user.email,
             displayName: user.displayName,
             photoURL: user.photoURL,
-            role: userData.role || 'student', // Default to 'student' if role is not set
+            role: userData.role || 'student',
+            careerGoal: userData.careerGoal || '',
         };
-    } else {
-         // This can happen if user record isn't created yet, create it.
-        await storeUserInFirestore(user);
-        return {
-             uid: user.uid,
-            email: user.email,
-            displayName: user.displayName,
-            photoURL: user.photoURL,
-            role: user.email === 'raiabhishek3646@gmail.com' ? 'admin' : 'student'
-        }
     }
-}
+    return null;
+};
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [appUser, setAppUser] = useState<AppUser | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isNewUser, setIsNewUser] = useState(false);
   const router = useRouter();
   const { toast } = useToast();
 
   useEffect(() => {
-    if (auth && typeof auth.onAuthStateChanged === 'function') {
-      const unsubscribe = onAuthStateChanged(auth, async (user) => {
-        setUser(user);
-        if (user) {
-            const customUserData = await fetchUserRole(user);
-            setAppUser(customUserData);
-        } else {
-            setAppUser(null);
-        }
-        setLoading(false);
-
-        if (!user && window.location.pathname !== '/') {
-            router.push('/');
-        }
-      });
-      return () => unsubscribe();
-    } else {
+    if (!auth || typeof auth.onAuthStateChanged !== 'function') {
       if (typeof window !== 'undefined') {
         console.warn("Firebase Auth is not available. Running in offline mode.");
       }
       setLoading(false);
-      return () => {};
+      return;
     }
+
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      setUser(user);
+      if (user) {
+        const customUserData = await fetchUserFromFirestore(user);
+        setAppUser(customUserData);
+      } else {
+        setAppUser(null);
+      }
+      setLoading(false);
+
+      if (!user && window.location.pathname !== '/') {
+        router.push('/');
+      }
+    });
+
+    return () => unsubscribe();
   }, [router]);
 
   const signInWithGoogle = async () => {
@@ -129,16 +116,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         title: "Authentication Error",
         description: "Firebase is not configured. Please check your .env file.",
         variant: "destructive",
-      })
+      });
       return;
     }
     setLoading(true);
     try {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
-      await storeUserInFirestore(result.user);
-      const customUserData = await fetchUserRole(result.user);
-      setAppUser(customUserData);
+      const { isNew, role, careerGoal } = await storeUserInFirestore(result.user);
+      
+      const currentUserData: AppUser = {
+        uid: result.user.uid,
+        email: result.user.email,
+        displayName: result.user.displayName,
+        photoURL: result.user.photoURL,
+        role: role,
+        careerGoal: careerGoal || ""
+      }
+      setAppUser(currentUserData);
+      
+      if (isNew && !careerGoal) {
+        setIsNewUser(true);
+      } else {
+        router.push('/home');
+      }
 
     } catch (error) {
       const authError = error as AuthError;
@@ -160,6 +161,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       throw error;
     } finally {
         setLoading(false);
+    }
+  };
+
+  const handleSaveCareerGoal = async (goal: string) => {
+    if (!appUser) return;
+    try {
+      setLoading(true);
+      const userRef = doc(db, "users", appUser.uid);
+      await updateDoc(userRef, { careerGoal: goal });
+      setAppUser(prev => prev ? { ...prev, careerGoal: goal } : null);
+      setIsNewUser(false);
+      router.push('/home');
+    } catch (error) {
+      console.error("Failed to save career goal", error);
+      toast({ title: "Error", description: "Could not save your goal. Please try again.", variant: "destructive" });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -191,6 +209,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     signInWithGoogle,
     signOut,
   };
+
+  if (isNewUser && appUser) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-secondary/30">
+        <CareerGoalForm user={appUser} onSave={handleSaveCareerGoal} />
+      </div>
+    );
+  }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
