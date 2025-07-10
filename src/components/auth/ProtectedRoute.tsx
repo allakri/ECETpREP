@@ -16,13 +16,13 @@ export default function ProtectedRoute({ children, requiredRole }: ProtectedRout
   useEffect(() => {
     // If loading is finished and there's no user, redirect to login
     if (!loading && !appUser) {
-      router.replace('/');
+      router.replace('/login');
       return;
     }
 
     // If a role is required and the user doesn't have it, redirect to home
     if (!loading && requiredRole && appUser?.role !== requiredRole) {
-      router.replace('/home');
+      router.replace('/');
     }
   }, [appUser, loading, requiredRole, router]);
 

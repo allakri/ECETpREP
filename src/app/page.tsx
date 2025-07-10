@@ -1,9 +1,19 @@
-import { LoginForm } from "@/components/auth/LoginForm";
+import { ExamSelection } from "@/components/exam/ExamSelection";
+import { AppHeader } from "@/components/layout/AppHeader";
+import { AppFooter } from "@/components/layout/AppFooter";
+import { Hero } from "@/components/layout/Hero";
+import { OurMission } from "@/components/layout/OurMission";
 
-export default function LoginPage() {
+export default function HomePage() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-secondary/30">
-      <LoginForm />
+    <div className="flex flex-col min-h-screen bg-background">
+      <AppHeader />
+      <main className="flex-grow">
+        <Hero />
+        <OurMission />
+        <ExamSelection />
+      </main>
+      <AppFooter />
     </div>
   );
 }

@@ -14,7 +14,7 @@ export function LoginForm() {
 
   useEffect(() => {
     if (user) {
-      router.push('/home');
+      router.push('/');
     }
   }, [user, router]);
 
@@ -22,7 +22,7 @@ export function LoginForm() {
     try {
       await signInWithGoogle();
       // Successful sign-in or popup closure is handled in the hook.
-      // If successful, the useEffect above will redirect to /home.
+      // If successful, the useEffect above will redirect to /.
     } catch (error) {
       // Critical errors are already toasted in the useAuth hook.
       // We don't need to log or toast again here.

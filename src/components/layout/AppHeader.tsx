@@ -12,7 +12,7 @@ export function AppHeader() {
   const { appUser, signOut } = useAuth();
 
   const navLinks = [
-    { href: "/home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/courses", label: "Courses" },
     { href: "/user-guide", label: "User Guide" },
@@ -21,18 +21,18 @@ export function AppHeader() {
 
   const handleLogout = async () => {
     await signOut();
-    router.push('/');
+    router.push('/login');
   }
 
   const handleLogin = () => {
-    router.push('/');
+    router.push('/login');
   }
 
   return (
     <header className="bg-primary/90 text-primary-foreground shadow-md sticky top-0 z-40">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16">
-          <Link href="/home" className="flex items-center gap-2 font-bold text-xl font-headline">
+          <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline">
             <Rocket />
             <span>ECET Prep</span>
           </Link>

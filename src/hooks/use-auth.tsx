@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, useState, ReactNode, useCallback } from 'react';
 import { onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut as firebaseSignOut, User, AuthError } from 'firebase/auth';
 import { doc, setDoc, getDoc, serverTimestamp, updateDoc } from 'firebase/firestore';
 import { auth, db } from '@/lib/firebase';
@@ -29,6 +29,10 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 const storeUserInFirestore = async (user: User): Promise<{ isNew: boolean, role: string, careerGoal?: string }> => {
+  if (!db || typeof db.collection !== 'function') {
+    console.error("Firestore is not initialized. Cannot store user.");
+    throw new Error("Firestore not initialized");
+  }
   const userRef = doc(db, "users", user.uid);
   const userDoc = await getDoc(userRef);
 
@@ -52,20 +56,33 @@ const storeUserInFirestore = async (user: User): Promise<{ isNew: boolean, role:
 };
 
 const fetchUserFromFirestore = async (user: User): Promise<AppUser | null> => {
-    const userRef = doc(db, 'users', user.uid);
-    const userDoc = await getDoc(userRef);
-    if (userDoc.exists()) {
-        const userData = userDoc.data();
-        return {
-            uid: user.uid,
-            email: user.email,
-            displayName: user.displayName,
-            photoURL: user.photoURL,
-            role: userData.role || 'student',
-            careerGoal: userData.careerGoal || '',
-        };
+    if (!db || typeof db.collection !== 'function') {
+        console.error("Firestore is not initialized. Cannot fetch user data.");
+        return null;
     }
-    return null;
+    const userRef = doc(db, 'users', user.uid);
+    try {
+        const userDoc = await getDoc(userRef);
+        if (userDoc.exists()) {
+            const userData = userDoc.data();
+            return {
+                uid: user.uid,
+                email: user.email,
+                displayName: user.displayName,
+                photoURL: user.photoURL,
+                role: userData.role || 'student',
+                careerGoal: userData.careerGoal || '',
+            };
+        }
+        return null;
+    } catch (error) {
+        if ((error as AuthError).code === 'unavailable' || (error as AuthError).code === 'failed-precondition') {
+            console.warn("Firestore is offline. Could not fetch user data.");
+        } else {
+            console.error("Error fetching user data from Firestore:", error);
+        }
+        return null;
+    }
 };
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -73,60 +90,49 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [appUser, setAppUser] = useState<AppUser | null>(null);
   const [loading, setLoading] = useState(true);
   const [isNewUser, setIsNewUser] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
   const router = useRouter();
   const { toast } = useToast();
+  
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
-    if (!auth?.onAuthStateChanged) return;
+    if (!auth?.onAuthStateChanged) {
+      setLoading(false);
+      return;
+    };
+    
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setLoading(true);
       if (user) {
         setUser(user);
-        try {
-          const customUserData = await fetchUserFromFirestore(user);
-          setAppUser(customUserData);
-          if (customUserData && !customUserData.careerGoal) {
-             const { isNew } = await storeUserInFirestore(user); // Check if they are actually new
-             if (isNew) {
-               setIsNewUser(true);
-             }
-          }
-        } catch (error) {
-            console.error("Error fetching user data from Firestore:", error);
-            if ((error as AuthError).code === 'unavailable' || (error as AuthError).code === 'failed-precondition') {
-                 toast({
-                    title: "Network Error",
-                    description: "Could not connect to the database. Please check your network connection.",
-                    variant: "destructive"
-                });
-            } else {
-                toast({
-                    title: "Connection Issue",
-                    description: "Could not fetch user data. You might be offline.",
-                    variant: "destructive"
-                });
-            }
-            setAppUser(null);
+        const customUserData = await fetchUserFromFirestore(user);
+        setAppUser(customUserData);
+        if (customUserData && !customUserData.careerGoal) {
+           const { isNew } = await storeUserInFirestore(user).catch(() => ({ isNew: false }));
+           if (isNew) {
+             setIsNewUser(true);
+           }
         }
       } else {
         setUser(null);
         setAppUser(null);
         setIsNewUser(false);
-        if (window.location.pathname !== '/') {
-            router.push('/');
-        }
       }
       setLoading(false);
     });
 
     return () => unsubscribe();
-  }, [router, toast]);
+  }, [toast]);
 
   const signInWithGoogle = async () => {
-    if (!auth?.onAuthStateChanged) {
+    if (!auth || typeof auth.onAuthStateChanged !== 'function') {
       toast({
         title: "Authentication Error",
-        description: "Firebase is not configured. Please check your .env file.",
+        description: "Firebase is not configured correctly. Please check console.",
         variant: "destructive",
       });
       return;
@@ -150,26 +156,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (isNew && !careerGoal) {
         setIsNewUser(true);
       } else {
-        router.push('/home');
+        router.push('/');
       }
 
     } catch (error) {
       const authError = error as AuthError;
       if (authError.code === 'auth/popup-closed-by-user') {
         console.log("Sign-in popup closed by user.");
-        setLoading(false); // Make sure to stop loading
-        return; // Don't show an error toast
-      }
-      
-      console.error("Error during Google sign-in:", authError.code, authError.message);
-      if (authError.code === 'auth/unauthorized-domain') {
-        toast({
-            title: "Domain Not Authorized",
-            description: "This domain is not authorized for sign-in. Please add it to your Firebase project's authentication settings.",
-            variant: "destructive",
-            duration: 9000,
-        });
+        // Don't show an error toast for this case
       } else {
+         console.error("Error during Google sign-in:", authError.code, authError.message);
          toast({
             title: "Sign-In Failed",
             description: authError.message,
@@ -177,19 +173,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         });
       }
     } finally {
-        // We don't set loading to false here because it's handled by the onAuthStateChanged listener
+        // onAuthStateChanged will handle final loading state
     }
   };
 
   const handleSaveCareerGoal = async (goal: string) => {
     if (!appUser) return;
+    setLoading(true);
     try {
-      setLoading(true);
       const userRef = doc(db, "users", appUser.uid);
       await updateDoc(userRef, { careerGoal: goal });
       setAppUser(prev => prev ? { ...prev, careerGoal: goal } : null);
       setIsNewUser(false);
-      router.push('/home');
+      router.push('/');
     } catch (error) {
       console.error("Failed to save career goal", error);
       toast({ title: "Error", description: "Could not save your goal. Please try again.", variant: "destructive" });
@@ -199,15 +195,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signOut = async () => {
-     if (!auth?.onAuthStateChanged) {
+     if (!auth || typeof auth.onAuthStateChanged !== 'function') {
       console.error("Firebase is not configured. Cannot sign out.");
       return;
     }
     setLoading(true);
     try {
         await firebaseSignOut(auth);
-        setAppUser(null);
         setUser(null);
+        setAppUser(null);
+        setIsNewUser(false);
+        router.push('/login');
     } catch (error) {
         console.error("Error during sign-out:", error);
          toast({
@@ -228,9 +226,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     signOut,
   };
 
-  // The main rendering logic that prevents hydration errors
-  const renderContent = () => {
-    if (loading) {
+  const renderContent = useCallback(() => {
+    if (!isClient || loading) {
       return (
         <div className="flex items-center justify-center min-h-screen">
           <p>Loading...</p>
@@ -246,9 +243,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       );
     }
     
-    // Default case: render the children of the provider
     return children;
-  };
+  }, [isClient, loading, isNewUser, appUser, children, handleSaveCareerGoal]);
   
   return <AuthContext.Provider value={value}>{renderContent()}</AuthContext.Provider>;
 }
