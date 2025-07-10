@@ -6,10 +6,12 @@ import { Button } from '@/components/ui/button';
 import { Rocket } from 'lucide-react';
 import { useAuth } from '@/hooks/use-auth';
 import { useEffect } from 'react';
+import { useToast } from '@/hooks/use-toast';
 
 export function LoginForm() {
   const router = useRouter();
   const { user, loading, signInWithGoogle } = useAuth();
+  const { toast } = useToast();
 
   useEffect(() => {
     if (user) {
@@ -22,7 +24,8 @@ export function LoginForm() {
       await signInWithGoogle();
       router.push('/home');
     } catch (error) {
-      console.error("Google Sign-In failed", error);
+      // The error is already handled and toasted in the useAuth hook
+      console.error("Google Sign-In failed on the component level");
     }
   };
   
