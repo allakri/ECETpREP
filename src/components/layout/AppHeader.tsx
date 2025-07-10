@@ -14,16 +14,16 @@ export function AppHeader() {
             <Link href="/" passHref>
               <Button variant="link" className="text-primary-foreground text-base">Home</Button>
             </Link>
-            <Link href="#" passHref>
+            <Link href="/about" passHref>
               <Button variant="link" className="text-primary-foreground text-base">About Us</Button>
             </Link>
-            <Link href="#" passHref>
+            <Link href="/courses" passHref>
               <Button variant="link" className="text-primary-foreground text-base">Courses</Button>
             </Link>
-            <Link href="#" passHref>
+            <Link href="/user-guide" passHref>
               <Button variant="link" className="text-primary-foreground text-base">User Guide</Button>
             </Link>
-            <Link href="#" passHref>
+            <Link href="/contact" passHref>
               <Button variant="link" className="text-primary-foreground text-base">Contact Us</Button>
             </Link>
           </div>
