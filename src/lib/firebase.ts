@@ -15,23 +15,26 @@ let app: FirebaseApp;
 let auth: Auth;
 let db: Firestore;
 
-const areCredsAvailable = 
-    firebaseConfig.apiKey &&
-    firebaseConfig.authDomain &&
-    firebaseConfig.projectId;
+// Check if we have all the required credentials
+const areCredsAvailable =
+  firebaseConfig.apiKey &&
+  firebaseConfig.authDomain &&
+  firebaseConfig.projectId;
 
 if (areCredsAvailable) {
-    app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
-    auth = getAuth(app);
-    db = getFirestore(app);
+  // Initialize Firebase only once
+  app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+  auth = getAuth(app);
+  db = getFirestore(app);
 } else {
-    // Provide mock/dummy objects if credentials are not available to prevent crashes
-    if (typeof window !== 'undefined') {
-        console.warn("Firebase credentials are not fully provided in .env. Firebase features will be disabled.");
-    }
-    app = {} as FirebaseApp;
-    auth = {} as Auth;
-    db = {} as Firestore;
+  // If credentials aren't available, we can provide mock objects or log a warning.
+  // This is useful for preventing crashes during server-side rendering or in a dev environment without keys.
+  if (typeof window !== 'undefined') {
+    console.warn("Firebase credentials are not fully provided in .env. Firebase features will be disabled.");
+  }
+  app = {} as FirebaseApp;
+  auth = {} as Auth;
+  db = {} as Firestore;
 }
 
 export { app, auth, db };

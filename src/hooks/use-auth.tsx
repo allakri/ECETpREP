@@ -28,10 +28,6 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 const storeUserInFirestore = async (user: User): Promise<{ isNew: boolean, role: string, careerGoal?: string }> => {
-  if (!db || typeof db.collection !== 'function') {
-    console.error("Firestore is not initialized. Cannot store user data.");
-    throw new Error("Firestore not initialized");
-  }
   const userRef = doc(db, "users", user.uid);
   const userDoc = await getDoc(userRef);
 
@@ -55,10 +51,6 @@ const storeUserInFirestore = async (user: User): Promise<{ isNew: boolean, role:
 };
 
 const fetchUserFromFirestore = async (user: User): Promise<AppUser | null> => {
-    if (!db || typeof db.collection !== 'function') {
-      console.error("Firestore is not initialized. Cannot fetch user data.");
-      return null;
-    }
     const userRef = doc(db, 'users', user.uid);
     const userDoc = await getDoc(userRef);
     if (userDoc.exists()) {
@@ -85,7 +77,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Check if auth object is valid before using it
-    if (!auth || typeof auth.onAuthStateChanged !== 'function') {
+    if (!auth?.onAuthStateChanged) {
       if (typeof window !== 'undefined') {
         console.warn("Firebase Auth is not available. Running in offline mode.");
       }
@@ -112,7 +104,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [router]);
 
   const signInWithGoogle = async () => {
-    if (!auth || typeof auth.onAuthStateChanged !== 'function') {
+    if (!auth?.onAuthStateChanged) {
       toast({
         title: "Authentication Error",
         description: "Firebase is not configured. Please check your .env file.",
@@ -183,7 +175,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signOut = async () => {
-     if (!auth || typeof auth.onAuthStateChanged !== 'function') {
+     if (!auth?.onAuthStateChanged) {
       console.error("Firebase is not configured. Cannot sign out.");
       return;
     }
