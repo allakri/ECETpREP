@@ -3,23 +3,35 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { generateAdaptiveFeedback } from '@/ai/flows/adaptive-feedback';
+import { assessReadiness } from '@/ai/flows/readiness-assessment';
 import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Award, BrainCircuit, Home } from 'lucide-react';
+import { Award, BrainCircuit, Home, Lightbulb, UserCheck } from 'lucide-react';
+
+const quotes = [
+  "Believe you can and you're halfway there.",
+  "The secret to getting ahead is getting started.",
+  "Don't watch the clock; do what it does. Keep going.",
+  "The expert in anything was once a beginner.",
+  "Success is the sum of small efforts, repeated day in and day out."
+];
 
 export default function ResultsClient() {
   const router = useRouter();
   const [answers, setAnswers] = useState<AnswerSheet | null>(null);
   const [questions, setQuestions] = useState<Question[] | null>(null);
   const [feedback, setFeedback] = useState<string | null>(null);
-  const [loadingFeedback, setLoadingFeedback] = useState(true);
+  const [readiness, setReadiness] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [quote, setQuote] = useState('');
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
+    setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
     const storedAnswers = localStorage.getItem('ecetExamAnswers');
     const storedQuestions = localStorage.getItem('ecetExamQuestions');
     if (storedAnswers && storedQuestions) {
@@ -29,11 +41,37 @@ export default function ResultsClient() {
       router.replace('/'); // No results to show, redirect
     }
   }, [router]);
+
+  const { score, correctCount, incorrectCount, unansweredCount, incorrectTopics } = useMemo(() => {
+    if (!answers || !questions) {
+      return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, incorrectTopics: [] };
+    }
+    let correct = 0;
+    const incorrectTop: string[] = [];
+    questions.forEach(q => {
+      if (answers[q.id] === q.correctAnswer) {
+        correct++;
+      } else if (answers[q.id] !== undefined) {
+        if (!incorrectTop.includes(q.topic)) {
+          incorrectTop.push(q.topic);
+        }
+      }
+    });
+    const answeredCount = Object.keys(answers).length;
+    const total = questions.length;
+    return {
+      score: total > 0 ? (correct / total) * 100 : 0,
+      correctCount: correct,
+      incorrectCount: answeredCount - correct,
+      unansweredCount: total - answeredCount,
+      incorrectTopics: incorrectTop
+    };
+  }, [answers, questions]);
   
   useEffect(() => {
     if (answers && questions) {
-      const getFeedback = async () => {
-        setLoadingFeedback(true);
+      const getAIInsights = async () => {
+        setLoading(true);
         try {
           const correctAnswers: Record<string, string> = {};
           const topics: Record<string, string> = {};
@@ -47,53 +85,46 @@ export default function ResultsClient() {
             userAnswers[qId] = answers[qId]
           }
 
-          const result = await generateAdaptiveFeedback({
-            examName: 'ECET Practice Exam',
-            userAnswers,
-            correctAnswers,
-            topics,
-          });
-          setFeedback(result.feedback);
+          const [feedbackResult, readinessResult] = await Promise.all([
+            generateAdaptiveFeedback({
+              examName: 'ECET Practice Exam',
+              userAnswers,
+              correctAnswers,
+              topics,
+            }),
+            assessReadiness({
+              examName: 'ECET Practice Exam',
+              score: score,
+              incorrectTopics: incorrectTopics
+            })
+          ]);
+          
+          setFeedback(feedbackResult.feedback);
+          setReadiness(readinessResult.readiness);
+
         } catch (error) {
-          console.error("Error generating feedback:", error);
+          console.error("Error generating AI insights:", error);
           setFeedback("Could not generate feedback at this time. Please try again later.");
+          setReadiness("Could not generate readiness assessment at this time.");
         } finally {
-          setLoadingFeedback(false);
+          setLoading(false);
         }
       };
-      getFeedback();
+      getAIInsights();
     }
-  }, [answers, questions]);
-
-  const { score, correctCount, incorrectCount, unansweredCount, totalQuestions } = useMemo(() => {
-    if (!answers || !questions) {
-      return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, totalQuestions: 0 };
-    }
-    let correct = 0;
-    questions.forEach(q => {
-      if (answers[q.id] === q.correctAnswer) {
-        correct++;
-      }
-    });
-    const answeredCount = Object.keys(answers).length;
-    const total = questions.length;
-    return {
-      score: total > 0 ? (correct / total) * 100 : 0,
-      correctCount: correct,
-      incorrectCount: answeredCount - correct,
-      unansweredCount: total - answeredCount,
-      totalQuestions: total
-    };
-  }, [answers, questions]);
+  }, [answers, questions, score, incorrectTopics]);
 
   if (!isMounted || !answers || !questions) {
     return (
         <div className="flex items-center justify-center min-h-screen bg-background">
-            <div className="text-center space-y-4">
+            <div className="text-center space-y-4 p-4">
                 <Skeleton className="h-12 w-12 rounded-full mx-auto" />
                 <Skeleton className="h-8 w-64 mx-auto" />
                 <Skeleton className="h-4 w-48 mx-auto" />
-                <Skeleton className="h-40 w-full max-w-2xl" />
+                <div className="max-w-4xl w-full mx-auto space-y-4">
+                  <Skeleton className="h-32 w-full" />
+                  <Skeleton className="h-32 w-full" />
+                </div>
             </div>
         </div>
     );
@@ -140,24 +171,54 @@ export default function ResultsClient() {
               </CardContent>
             </Card>
           </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <Card className="bg-primary/5">
+              <CardHeader className="flex flex-row items-center gap-4">
+                <BrainCircuit className="h-8 w-8 text-primary"/>
+                <CardTitle className="text-primary font-headline">AI Topic Feedback</CardTitle>
+              </CardHeader>
+              <CardContent>
+                {loading ? (
+                  <div className="space-y-3">
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-3/4" />
+                  </div>
+                ) : (
+                  <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">{feedback}</div>
+                )}
+              </CardContent>
+            </Card>
 
-          <Card className="bg-primary/5">
-            <CardHeader className="flex flex-row items-center gap-4">
-              <BrainCircuit className="h-8 w-8 text-primary"/>
-              <CardTitle className="text-primary font-headline">AI-Powered Feedback</CardTitle>
-            </CardHeader>
-            <CardContent>
-              {loadingFeedback ? (
-                <div className="space-y-3">
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-3/4" />
+            <Card className="bg-accent/10">
+              <CardHeader className="flex flex-row items-center gap-4">
+                <UserCheck className="h-8 w-8 text-accent-foreground"/>
+                <CardTitle className="text-accent-foreground font-headline">AI Readiness Guide</CardTitle>
+              </CardHeader>
+              <CardContent>
+                {loading ? (
+                  <div className="space-y-3">
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-3/4" />
+                  </div>
+                ) : (
+                  <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">{readiness}</div>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="bg-secondary">
+             <CardContent className="pt-6">
+                <div className="flex items-center gap-4">
+                  <Lightbulb className="h-8 w-8 text-secondary-foreground" />
+                  <blockquote className="text-secondary-foreground italic">"{quote}"</blockquote>
                 </div>
-              ) : (
-                <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">{feedback}</div>
-              )}
-            </CardContent>
+             </CardContent>
           </Card>
+
         </CardContent>
         <CardFooter className="justify-center">
           <Button onClick={() => router.push('/')} variant="default" className="font-bold">
