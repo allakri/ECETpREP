@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
@@ -76,6 +77,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const { toast } = useToast();
 
   useEffect(() => {
+    if (!auth?.onAuthStateChanged) return;
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setLoading(true);
       if (user) {
@@ -91,13 +93,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           }
         } catch (error) {
             console.error("Error fetching user data from Firestore:", error);
-            // Handle offline error or other issues gracefully
-            toast({
-                title: "Connection Issue",
-                description: "Could not fetch user data. You might be offline.",
-                variant: "destructive"
-            });
-            setAppUser(null); // Clear app user on error
+            if ((error as AuthError).code === 'unavailable') {
+                 toast({
+                    title: "Network Error",
+                    description: "Could not connect to the database. Please check your network connection.",
+                    variant: "destructive"
+                });
+            } else {
+                toast({
+                    title: "Connection Issue",
+                    description: "Could not fetch user data. You might be offline.",
+                    variant: "destructive"
+                });
+            }
+            setAppUser(null);
         }
       } else {
         setUser(null);
@@ -145,7 +154,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     } catch (error) {
       const authError = error as AuthError;
-      console.error("Error during Google sign-in:", authError.code);
+      if (authError.code === 'auth/popup-closed-by-user') {
+        // This is a normal user action, so we don't need to show an error.
+        console.log("Sign-in popup closed by user.");
+        return;
+      }
+      
+      console.error("Error during Google sign-in:", authError.code, authError.message);
       if (authError.code === 'auth/unauthorized-domain') {
         toast({
             title: "Domain Not Authorized",
@@ -212,6 +227,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     signOut,
   };
 
+  if (loading) {
+    return (
+       <div className="flex items-center justify-center min-h-screen">
+         <p>Loading...</p>
+       </div>
+    )
+  }
+  
   if (isNewUser && appUser) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-secondary/30">

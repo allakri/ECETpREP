@@ -1,17 +1,16 @@
+
 "use client";
 
 import { useRouter } from 'next/navigation';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Rocket } from 'lucide-react';
 import { useAuth } from '@/hooks/use-auth';
 import { useEffect } from 'react';
-import { useToast } from '@/hooks/use-toast';
 
 export function LoginForm() {
   const router = useRouter();
   const { user, loading, signInWithGoogle } = useAuth();
-  const { toast } = useToast();
 
   useEffect(() => {
     if (user) {
@@ -22,10 +21,12 @@ export function LoginForm() {
   const handleGoogleSignIn = async () => {
     try {
       await signInWithGoogle();
-      router.push('/home');
+      // Successful sign-in or popup closure is handled in the hook.
+      // If successful, the useEffect above will redirect to /home.
     } catch (error) {
-      // The error is already handled and toasted in the useAuth hook
-      console.error("Google Sign-In failed on the component level");
+      // Critical errors are already toasted in the useAuth hook.
+      // We don't need to log or toast again here.
+      console.error("A critical sign-in error occurred.");
     }
   };
   
