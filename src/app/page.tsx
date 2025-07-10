@@ -4,7 +4,7 @@ import { AppFooter } from "@/components/layout/AppFooter";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow bg-secondary/30">
         <ExamSelection />

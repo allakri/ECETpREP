@@ -1,9 +1,11 @@
 "use client"
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 
 export function AppHeader() {
+  const router = useRouter();
   return (
     <header className="bg-primary/90 text-primary-foreground shadow-md">
       <div className="container mx-auto px-4">
@@ -24,6 +26,9 @@ export function AppHeader() {
             <Link href="#" passHref>
               <Button variant="link" className="text-primary-foreground text-base">Contact Us</Button>
             </Link>
+          </div>
+          <div>
+            <Button variant="secondary" onClick={() => router.push('/login')}>Login</Button>
           </div>
         </nav>
       </div>
