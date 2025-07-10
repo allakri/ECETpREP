@@ -20,24 +20,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
-      if (!user) {
-        // If user is not logged in, and not on the login page, redirect them.
-        if (window.location.pathname !== '/') {
-          router.push('/');
+    try {
+      const unsubscribe = onAuthStateChanged(auth, (user) => {
+        setUser(user);
+        setLoading(false);
+        if (!user) {
+          // If user is not logged in, and not on the login page, redirect them.
+          if (window.location.pathname !== '/') {
+            router.push('/');
+          }
         }
-      }
-    });
-
-    return () => unsubscribe();
+      });
+      return () => unsubscribe();
+    } catch (error) {
+      console.warn("Firebase Auth is not available. Running in offline mode.");
+      setLoading(false);
+      return () => {}; // Return an empty function for cleanup
+    }
   }, [router]);
 
   const signInWithGoogle = async () => {
     setLoading(true);
-    const provider = new GoogleAuthProvider();
     try {
+      const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
     } catch (error) {
       console.error("Error during Google sign-in:", error);
