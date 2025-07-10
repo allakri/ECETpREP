@@ -34,13 +34,27 @@ const storeUserInFirestore = async (user: User) => {
   }
   const userRef = doc(db, "users", user.uid);
   try {
+    // Check if the user document already exists to avoid overwriting the role
+    const userDoc = await getDoc(userRef);
+    let userRole = "student"; // Default role
+
+    if (!userDoc.exists()) {
+      // If user is new, assign role based on email
+      if (user.email === 'asraiabhishek3646@gmail.com') {
+        userRole = 'admin';
+      }
+    } else {
+      // If user exists, retain their current role unless it's not set
+      userRole = userDoc.data().role || 'student';
+    }
+    
     await setDoc(userRef, {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName || "",
       photoURL: user.photoURL,
       lastLogin: serverTimestamp(),
-      role: "student", // Default role
+      role: userRole,
     }, { merge: true });
   } catch (error) {
     console.error("Error storing user in Firestore:", error);
@@ -71,7 +85,7 @@ const fetchUserRole = async (user: User): Promise<AppUser | null> => {
             email: user.email,
             displayName: user.displayName,
             photoURL: user.photoURL,
-            role: 'student'
+            role: user.email === 'asraiabhishek3646@gmail.com' ? 'admin' : 'student'
         }
     }
 }
@@ -101,7 +115,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
       return () => unsubscribe();
     } else {
-      console.warn("Firebase Auth is not available. Running in offline mode.");
+      if (typeof window !== 'undefined') {
+        console.warn("Firebase Auth is not available. Running in offline mode.");
+      }
       setLoading(false);
       return () => {};
     }
