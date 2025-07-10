@@ -262,7 +262,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     
     return children;
-  }, [isClient, loading, isNewUser, user, appUser, children]);
+  }, [isClient, loading, isNewUser, user, appUser, children, handleSaveCareerGoal]);
   
   return <AuthContext.Provider value={value}>{renderContent()}</AuthContext.Provider>;
 }
