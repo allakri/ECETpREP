@@ -75,10 +75,11 @@ const fetchUserFromFirestore = async (user: User): Promise<AppUser | null> => {
         }
         return null;
     } catch (error) {
-        if ((error as AuthError).code === 'unavailable' || (error as AuthError).code === 'failed-precondition') {
-            console.warn("Firestore is offline. Could not fetch user data.");
+        const firebaseError = error as AuthError;
+        if (firebaseError.code === 'unavailable' || firebaseError.code === 'failed-precondition' || firebaseError.message.includes('offline')) {
+            console.warn("Firestore is temporarily unavailable or the client is offline. User data will be fetched later.");
         } else {
-            console.error("Error fetching user data from Firestore:", error);
+            console.error("An unexpected error occurred while fetching user data:", error);
         }
         return null;
     }
