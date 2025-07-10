@@ -40,7 +40,7 @@ const storeUserInFirestore = async (user: User) => {
 
     if (!userDoc.exists()) {
       // If user is new, assign role based on email
-      if (user.email === 'asraiabhishek3646@gmail.com') {
+      if (user.email === 'raiabhishek3646@gmail.com') {
         userRole = 'admin';
       }
     } else {
@@ -85,7 +85,7 @@ const fetchUserRole = async (user: User): Promise<AppUser | null> => {
             email: user.email,
             displayName: user.displayName,
             photoURL: user.photoURL,
-            role: user.email === 'asraiabhishek3646@gmail.com' ? 'admin' : 'student'
+            role: user.email === 'raiabhishek3646@gmail.com' ? 'admin' : 'student'
         }
     }
 }
