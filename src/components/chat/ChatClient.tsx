@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Home, Send, Bot, User, Loader2 } from 'lucide-react';
+import { Home, Send, Bot, User, Loader2, ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 type ChatMessage = {
@@ -78,9 +78,17 @@ export default function ChatClient() {
             </div>
             <CardTitle className="font-headline text-2xl text-primary">AI Doubt Solver</CardTitle>
           </div>
-          <Button variant="ghost" size="icon" onClick={() => router.push('/')}>
-            <Home className="h-5 w-5" />
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="icon" onClick={() => router.back()}>
+              <ArrowLeft className="h-5 w-5" />
+            </Button>
+            <Button variant="ghost" size="icon" onClick={() => router.forward()}>
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+            <Button variant="ghost" size="icon" onClick={() => router.push('/')}>
+              <Home className="h-5 w-5" />
+            </Button>
+          </div>
         </CardHeader>
         <CardContent className="flex-1 p-0">
           <ScrollArea className="h-full p-6" ref={scrollAreaRef}>
