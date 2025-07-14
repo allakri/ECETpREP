@@ -4,12 +4,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { Menu, Rocket, LogOut, User, LogIn } from "lucide-react";
-import { useAuth } from "@/hooks/use-auth";
+import { Menu, Rocket } from "lucide-react";
 
 export function AppHeader() {
   const router = useRouter();
-  const { appUser, signOut } = useAuth();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -18,15 +16,6 @@ export function AppHeader() {
     { href: "/user-guide", label: "User Guide" },
     { href: "/contact", label: "Contact Us" },
   ];
-
-  const handleLogout = async () => {
-    await signOut();
-    router.push('/login');
-  }
-
-  const handleLogin = () => {
-    router.push('/login');
-  }
 
   return (
     <header className="bg-primary/90 text-primary-foreground shadow-md sticky top-0 z-40">
@@ -45,19 +34,6 @@ export function AppHeader() {
                 </Button>
               </Link>
             ))}
-             {appUser ? (
-                <>
-                  <Link href="/profile" passHref>
-                    <Button variant="ghost"><User className="mr-2 h-4 w-4"/>Profile</Button>
-                  </Link>
-                  <Button variant="secondary" onClick={handleLogout}><LogOut className="mr-2 h-4 w-4"/>Logout</Button>
-                </>
-             ) : (
-                <>
-                  <Button variant="ghost" onClick={handleLogin}><LogIn className="mr-2 h-4 w-4"/>Login</Button>
-                  <Button variant="secondary" onClick={handleLogin}>Sign Up</Button>
-                </>
-             )}
           </div>
 
           <div className="md:hidden">
@@ -81,19 +57,6 @@ export function AppHeader() {
                        <Button variant="ghost" className="w-full justify-start text-lg">{link.label}</Button>
                     </Link>
                   ))}
-                  {appUser ? (
-                    <>
-                      <Link href="/profile" passHref>
-                        <Button variant="ghost" className="w-full justify-start text-lg"><User className="mr-2 h-4 w-4"/>Profile</Button>
-                      </Link>
-                      <Button variant="default" onClick={handleLogout} className="w-full text-lg"><LogOut className="mr-2 h-4 w-4"/>Logout</Button>
-                    </>
-                  ) : (
-                    <>
-                        <Button variant="ghost" className="w-full justify-start text-lg" onClick={handleLogin}><LogIn className="mr-2 h-4 w-4"/>Login</Button>
-                        <Button variant="default" className="w-full text-lg" onClick={handleLogin}>Sign Up</Button>
-                    </>
-                  )}
                 </div>
               </SheetContent>
             </Sheet>
