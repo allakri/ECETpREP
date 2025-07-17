@@ -1,7 +1,7 @@
 
-import { initializeApp, getApps, getApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { initializeApp, getApps, getApp, FirebaseApp } from "firebase/app";
+import { getAuth, Auth } from "firebase/auth";
+import { getFirestore, Firestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -12,9 +12,34 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-// Initialize Firebase
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-const auth = getAuth(app);
-const db = getFirestore(app);
+let app: FirebaseApp;
+let auth: Auth;
+let db: Firestore;
+
+// Check if all Firebase config keys are provided and not placeholders
+const isConfigValid = firebaseConfig.apiKey && !firebaseConfig.apiKey.startsWith('your-');
+
+if (isConfigValid) {
+    app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+    auth = getAuth(app);
+    db = getFirestore(app);
+} else {
+    console.error(`
+      ********************************************************************************
+      *                                                                              *
+      *    FIREBASE IS NOT CONFIGURED. PLEASE ADD YOUR FIREBASE CREDENTIALS.         *
+      *                                                                              *
+      *    1. Go to your Firebase project console.                                   *
+      *    2. Find your web app's configuration object.                              *
+      *    3. Copy the values into the .env file at the root of your project.        *
+      *                                                                              *
+      ********************************************************************************
+    `);
+    // Provide dummy objects to prevent app from crashing on import
+    app = {} as FirebaseApp;
+    auth = {} as Auth;
+    db = {} as Firestore;
+}
+
 
 export { app, auth, db };
