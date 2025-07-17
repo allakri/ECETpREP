@@ -11,7 +11,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import { Timer, BookMarked, ChevronLeft, ChevronRight, Flag, Send, LogOut } from 'lucide-react';
+import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds

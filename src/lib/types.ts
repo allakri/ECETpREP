@@ -1,4 +1,3 @@
-
 export interface Question {
   id: number;
   question: string;
@@ -12,24 +11,3 @@ export type AnswerSheet = {
 };
 
 export type MarkedQuestions = number[];
-
-export interface RegisterFormValues {
-  name: string;
-  email: string;
-  password?: string;
-  phone: string;
-  college: string;
-  branch: string;
-  year: string;
-}
-
-export interface AppUser {
-  uid: string;
-  name: string;
-  email: string;
-  phone: string;
-  college: string;
-  branch: string;
-  year: string;
-  createdAt: Date;
-}
