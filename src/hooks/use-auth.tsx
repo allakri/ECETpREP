@@ -31,7 +31,18 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const publicRoutes = ['/login', '/register', '/', '/about', '/courses', '/contact', '/user-guide'];
 
   useEffect(() => {
+    // Check if auth object is valid before subscribing
+    if (!auth?.onAuthStateChanged) {
+        setLoading(false);
+        return;
+    }
+
     const fetchUserFromFirestore = async (firebaseUser: User) => {
+      // Check if db object is valid before querying
+      if (!db?.app) {
+        console.warn("Firestore is not available. Skipping user data fetch.");
+        return;
+      }
       try {
         const userRef = doc(db, 'users', firebaseUser.uid);
         const docSnap = await getDoc(userRef);
@@ -67,14 +78,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 
   const login = (email: string, pass: string) => {
+    if (!auth?.app) throw new Error("Firebase Auth is not initialized.");
     return signInWithEmailAndPassword(auth, email, pass);
   };
 
   const signup = (email: string, pass: string) => {
+    if (!auth?.app) throw new Error("Firebase Auth is not initialized.");
     return createUserWithEmailAndPassword(auth, email, pass);
   };
 
   const logout = () => {
+    if (!auth?.app) throw new Error("Firebase Auth is not initialized.");
     return signOut(auth);
   };
 
