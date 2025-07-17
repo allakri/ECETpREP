@@ -1,12 +1,11 @@
+
 "use client"
 
 import Link from "next/link";
 import { Copyright, Rocket } from "lucide-react";
-import { useAuth } from "@/hooks/use-auth";
 
 export function AppFooter() {
   const currentYear = new Date().getFullYear();
-  const { user } = useAuth();
 
   return (
     <footer className="bg-primary text-primary-foreground py-8">
@@ -28,7 +27,7 @@ export function AppFooter() {
               <li><Link href="/courses" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Courses</Link></li>
               <li><Link href="/contact" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Contact Us</Link></li>
               <li><Link href="/user-guide" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">User Guide</Link></li>
-              {user && <li><Link href="/dashboard" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Dashboard</Link></li>}
+              <li><Link href="/dashboard" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Dashboard</Link></li>
             </ul>
           </div>
           <div>

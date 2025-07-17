@@ -1,33 +1,21 @@
+
 "use client"
 
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Menu, Rocket, LogOut } from "lucide-react";
-import { useAuth } from "@/hooks/use-auth";
-import { useRouter } from "next/navigation";
 
 export function AppHeader() {
-  const { user, logout } = useAuth();
-  const router = useRouter();
-
-  const handleLogout = async () => {
-    await logout();
-    router.push('/login');
-  };
-
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/courses", label: "Courses" },
     { href: "/user-guide", label: "User Guide" },
     { href: "/contact", label: "Contact Us" },
+    { href: "/dashboard", label: "Dashboard" },
+    { href: "/profile", label: "Profile" },
   ];
-
-  if (user) {
-    navLinks.push({ href: "/dashboard", label: "Dashboard" });
-    navLinks.push({ href: "/profile", label: "Profile" });
-  }
 
   return (
     <header className="bg-primary/90 text-primary-foreground shadow-md sticky top-0 z-40">
@@ -46,17 +34,8 @@ export function AppHeader() {
                 </Button>
               </Link>
             ))}
-             {user ? (
-              <Button onClick={handleLogout} variant="ghost" className="text-primary-foreground text-base hover:bg-primary/80">
-                <LogOut className="mr-2 h-4 w-4" />
-                Logout
-              </Button>
-            ) : (
-              <>
-                <Link href="/login" passHref><Button variant="ghost" className="text-primary-foreground text-base hover:bg-primary/80">Login</Button></Link>
-                <Link href="/register" passHref><Button variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
-              </>
-            )}
+            <Link href="/login" passHref><Button variant="ghost" className="text-primary-foreground text-base hover:bg-primary/80">Login</Button></Link>
+            <Link href="/register" passHref><Button variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
           </div>
 
           <div className="md:hidden">
@@ -75,17 +54,8 @@ export function AppHeader() {
                     </Link>
                   ))}
                   <hr/>
-                  {user ? (
-                    <Button onClick={handleLogout} variant="ghost" className="w-full justify-start text-lg text-red-500 hover:text-red-600">
-                      <LogOut className="mr-2 h-5 w-5" />
-                      Logout
-                    </Button>
-                  ) : (
-                    <>
-                      <Link href="/login" passHref><Button variant="ghost" className="w-full justify-start text-lg">Login</Button></Link>
-                      <Link href="/register" passHref><Button className="w-full justify-center text-lg bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
-                    </>
-                  )}
+                  <Link href="/login" passHref><Button variant="ghost" className="w-full justify-start text-lg">Login</Button></Link>
+                  <Link href="/register" passHref><Button className="w-full justify-center text-lg bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
                 </div>
               </SheetContent>
             </Sheet>
