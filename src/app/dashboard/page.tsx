@@ -1,8 +1,14 @@
 
+"use client";
+
 import { AppHeader } from '@/components/layout/AppHeader';
 import { AppFooter } from '@/components/layout/AppFooter';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Legend, Bar, PieChart, Pie, Cell } from "recharts";
+import { useAuth } from '@/hooks/use-auth';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+import { Loader2 } from 'lucide-react';
 
 const examData = [
   { name: 'Test 1', score: 65 },
@@ -22,12 +28,26 @@ const COLORS = ['#84cc16', '#ef4444', '#a1a1aa'];
 
 
 export default function DashboardPage() {
-  const user = {
-    name: "Student User",
-    branch: "Computer Science",
-    college: "University of Technology",
-    yearOfStudy: "3rd Year",
-  };
+  const { user, loading } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push('/login');
+    }
+  }, [user, loading, router]);
+  
+  if (loading || !user) {
+    return (
+      <div className="flex flex-col min-h-screen">
+        <AppHeader />
+        <main className="flex-grow flex items-center justify-center bg-secondary/30 p-4">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </main>
+        <AppFooter />
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col min-h-screen">

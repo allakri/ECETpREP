@@ -5,14 +5,20 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Menu, Rocket, LogOut } from "lucide-react";
+import { useAuth } from "@/hooks/use-auth";
 
 export function AppHeader() {
+  const { user, logout } = useAuth();
+
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/courses", label: "Courses" },
     { href: "/user-guide", label: "User Guide" },
     { href: "/contact", label: "Contact Us" },
+  ];
+
+  const protectedLinks = [
     { href: "/dashboard", label: "Dashboard" },
     { href: "/profile", label: "Profile" },
   ];
@@ -34,8 +40,24 @@ export function AppHeader() {
                 </Button>
               </Link>
             ))}
-            <Link href="/login" passHref><Button variant="ghost" className="text-primary-foreground text-base hover:bg-primary/80">Login</Button></Link>
-            <Link href="/register" passHref><Button variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
+            {user ? (
+              <>
+                {protectedLinks.map(link => (
+                  <Link key={link.href} href={link.href} passHref>
+                    <Button variant="link" className="text-primary-foreground text-base">{link.label}</Button>
+                  </Link>
+                ))}
+                <Button onClick={logout} variant="ghost" className="text-primary-foreground text-base hover:bg-primary/80">
+                  <LogOut className="mr-2 h-4 w-4" />
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <>
+                <Link href="/login" passHref><Button variant="ghost" className="text-primary-foreground text-base hover:bg-primary/80">Login</Button></Link>
+                <Link href="/register" passHref><Button variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
+              </>
+            )}
           </div>
 
           <div className="md:hidden">
@@ -54,8 +76,24 @@ export function AppHeader() {
                     </Link>
                   ))}
                   <hr/>
-                  <Link href="/login" passHref><Button variant="ghost" className="w-full justify-start text-lg">Login</Button></Link>
-                  <Link href="/register" passHref><Button className="w-full justify-center text-lg bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
+                   {user ? (
+                    <>
+                      {protectedLinks.map(link => (
+                        <Link key={link.href} href={link.href} passHref>
+                          <Button variant="ghost" className="w-full justify-start text-lg">{link.label}</Button>
+                        </Link>
+                      ))}
+                      <Button onClick={logout} variant="ghost" className="w-full justify-start text-lg">
+                        <LogOut className="mr-2 h-4 w-4" />
+                        Logout
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <Link href="/login" passHref><Button variant="ghost" className="w-full justify-start text-lg">Login</Button></Link>
+                      <Link href="/register" passHref><Button className="w-full justify-center text-lg bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
+                    </>
+                  )}
                 </div>
               </SheetContent>
             </Sheet>

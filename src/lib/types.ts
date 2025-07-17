@@ -12,15 +12,3 @@ export type AnswerSheet = {
 };
 
 export type MarkedQuestions = number[];
-
-export interface AppUser {
-    uid: string;
-    name: string;
-    email: string;
-    phoneNumber: string;
-    branch: string;
-    college: string;
-    yearOfStudy: string;
-    createdAt: any;
-    updatedAt?: any;
-}

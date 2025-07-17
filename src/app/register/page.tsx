@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,12 +10,43 @@ import { Label } from "@/components/ui/label";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useAuth } from "@/hooks/use-auth";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 export default function RegisterPage() {
+  const router = useRouter();
+  const { register } = useAuth();
+  const { toast } = useToast();
+  const [year, setYear] = useState("");
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Registration functionality is for demonstration purposes.");
+    const formData = new FormData(e.currentTarget);
+    const userData = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phoneNumber: formData.get("phoneNumber") as string,
+      branch: formData.get("branch") as string,
+      college: formData.get("college") as string,
+      yearOfStudy: year,
+    };
+
+    const success = register(userData);
+
+    if (success) {
+      toast({
+        title: "Registration Successful",
+        description: "Your account has been created.",
+      });
+      router.push("/dashboard");
+    } else {
+       toast({
+        variant: "destructive",
+        title: "Registration Failed",
+        description: "An account with this email already exists.",
+      });
+    }
   };
 
   return (
@@ -30,31 +62,31 @@ export default function RegisterPage() {
             <form onSubmit={handleRegister} className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="grid gap-2">
                 <Label htmlFor="name">Full Name</Label>
-                <Input id="name" placeholder="John Doe" required />
+                <Input id="name" name="name" placeholder="John Doe" required />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="m@example.com" required />
+                <Input id="email" name="email" type="email" placeholder="m@example.com" required />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" required />
+                <Input id="password" name="password" type="password" required />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="phoneNumber">Phone Number</Label>
-                <Input id="phoneNumber" placeholder="+1 234 567 890" required />
+                <Input id="phoneNumber" name="phoneNumber" placeholder="+1 234 567 890" required />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="branch">Branch</Label>
-                <Input id="branch" placeholder="Computer Science" required />
+                <Input id="branch" name="branch" placeholder="Computer Science" required />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="college">College Name</Label>
-                <Input id="college" placeholder="University of Technology" required />
+                <Input id="college" name="college" placeholder="University of Technology" required />
               </div>
               <div className="grid gap-2 md:col-span-2">
                 <Label htmlFor="yearOfStudy">Year of Study</Label>
-                <Select required>
+                <Select required onValueChange={setYear} value={year}>
                   <SelectTrigger id="yearOfStudy">
                     <SelectValue placeholder="Select your year of study" />
                   </SelectTrigger>
