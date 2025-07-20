@@ -52,7 +52,7 @@ export function Hero() {
                 data-ai-hint="students learning studying"
                 width={2432}
                 height={1442}
-                className="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"
+                className="w-full max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
               />
             </div>
           </div>
