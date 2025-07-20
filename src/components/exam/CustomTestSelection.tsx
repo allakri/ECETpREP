@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react";
 import type { Exam } from "@/lib/exams";
 
 interface CustomTestSelectionProps {
-  exam: Exam;
+  exam: Pick<Exam, 'name' | 'subjects'>;
 }
 
 export function CustomTestSelection({ exam }: CustomTestSelectionProps) {

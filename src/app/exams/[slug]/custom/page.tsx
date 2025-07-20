@@ -3,6 +3,7 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { CustomTestSelection } from "@/components/exam/CustomTestSelection";
 import { exams } from "@/lib/exams";
+import type { Exam } from "@/lib/exams";
 
 interface CustomTestPageProps {
   params: {
@@ -25,12 +26,19 @@ export default function CustomTestPage({ params }: CustomTestPageProps) {
       </div>
     );
   }
+  
+  // Create a new object with only the properties needed by the client component.
+  // This avoids passing the non-serializable 'icon' component function.
+  const examForClient: Pick<Exam, 'name' | 'subjects'> = {
+    name: exam.name,
+    subjects: exam.subjects,
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow bg-secondary/30 py-12">
-        <CustomTestSelection exam={exam} />
+        <CustomTestSelection exam={examForClient} />
       </main>
       <AppFooter />
     </div>
