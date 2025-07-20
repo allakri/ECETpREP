@@ -13,9 +13,9 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, Flame, BarChart as BarChartIcon, Trophy } from 'lucide-react';
-import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Legend, Bar } from "recharts";
+import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, Bar } from "recharts";
 import { ScoreChart } from "@/components/results/ScoreChart";
-import { Skeleton } from '@/components/ui/skeleton';
+import { StudyActivityCalendar } from '@/components/profile/StudyActivityCalendar';
 
 // Mock data, in a real app this would come from a database
 const examData = [
@@ -151,7 +151,7 @@ export default function ProfilePage() {
 
             {/* Right Column for Dashboard Widgets */}
             <div className="lg:col-span-2 space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between pb-2">
                             <CardTitle className="text-sm font-medium">Avg. Score</CardTitle>
@@ -172,16 +172,10 @@ export default function ProfilePage() {
                             <p className="text-xs text-muted-foreground">2 more to reach your goal</p>
                         </CardContent>
                     </Card>
-                    <Card>
-                        <CardHeader className="flex flex-row items-center justify-between pb-2">
-                            <CardTitle className="text-sm font-medium">Daily Streak</CardTitle>
-                            <Flame className="h-4 w-4 text-muted-foreground" />
-                        </CardHeader>
-                        <CardContent>
-                            <div className="text-2xl font-bold">5 <span className="text-base font-normal">days</span></div>
-                            <p className="text-xs text-muted-foreground">Keep it up!</p>
-                        </CardContent>
-                    </Card>
+                </div>
+
+                <div>
+                  <StudyActivityCalendar />
                 </div>
 
                 <div className="grid grid-cols-1 xl:grid-cols-5 gap-8">
@@ -195,7 +189,7 @@ export default function ProfilePage() {
                             <BarChart data={examData}>
                                 <XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
                                 <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${value}%`}/>
-                                <Tooltip
+                                <RechartsTooltip
                                     contentStyle={{
                                         backgroundColor: "hsl(var(--background))",
                                         border: "1px solid hsl(var(--border))",
