@@ -47,7 +47,7 @@ export function ScoreChart({ score, correctCount, incorrectCount, unansweredCoun
   const id = "pie-interactive"
 
   return (
-    <Card data-chart={id} className="flex flex-col h-full shadow-lg">
+    <Card data-chart={id} className="flex flex-col h-full shadow-lg bg-secondary">
       <CardHeader className="items-center pb-0">
         <CardTitle>Exam Performance</CardTitle>
         <CardDescription>A breakdown of your results</CardDescription>

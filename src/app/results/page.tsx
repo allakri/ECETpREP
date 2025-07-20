@@ -3,7 +3,7 @@ import { Suspense } from "react";
 
 function ResultsFallback() {
     return (
-        <div className="flex items-center justify-center min-h-screen">
+        <div className="flex items-center justify-center min-h-screen bg-background">
             <p>Loading results...</p>
         </div>
     )

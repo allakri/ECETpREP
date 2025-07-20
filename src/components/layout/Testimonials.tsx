@@ -30,7 +30,7 @@ export function Testimonials() {
     <section className="bg-secondary/30 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-            <h2 className="text-3xl font-extrabold font-headline text-primary tracking-tight">
+            <h2 className="text-3xl font-extrabold font-headline text-foreground tracking-tight">
                 Trusted by Students Like You
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -39,7 +39,7 @@ export function Testimonials() {
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="flex flex-col justify-between shadow-lg">
+            <Card key={index} className="flex flex-col justify-between shadow-lg bg-secondary">
               <CardContent className="pt-6">
                 <blockquote className="text-muted-foreground italic">
                   "{testimonial.quote}"
@@ -55,7 +55,7 @@ export function Testimonials() {
                   height={48}
                 />
                 <div>
-                  <p className="font-semibold">{testimonial.name}</p>
+                  <p className="font-semibold text-primary">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.title}</p>
                 </div>
               </div>

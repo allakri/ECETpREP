@@ -10,9 +10,9 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow bg-secondary/30 py-12">
+      <main className="flex-grow bg-background py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <Card className="max-w-2xl mx-auto shadow-lg">
+          <Card className="max-w-2xl mx-auto shadow-lg bg-secondary border-border">
             <CardHeader>
               <CardTitle className="text-3xl font-headline text-primary">Contact Us</CardTitle>
               <CardDescription>Have a question or feedback? Fill out the form below to get in touch.</CardDescription>

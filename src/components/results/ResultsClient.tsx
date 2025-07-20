@@ -138,7 +138,7 @@ export default function ResultsClient() {
   }
 
   return (
-    <main className="min-h-screen bg-secondary/30 p-4 md:p-8">
+    <main className="min-h-screen bg-background p-4 md:p-8">
       <div className="max-w-7xl mx-auto space-y-6">
         <div>
           <h1 className="text-3xl font-bold font-headline text-primary">Here's your result</h1>
@@ -157,7 +157,7 @@ export default function ResultsClient() {
             </div>
 
             <div className="lg:col-span-1">
-              <Card className="h-full shadow-lg">
+              <Card className="h-full shadow-lg bg-secondary">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <BrainCircuit className="h-6 w-6 text-primary"/>
@@ -181,12 +181,12 @@ export default function ResultsClient() {
             </div>
 
             <div className="lg:col-span-1">
-              <Card className="h-full shadow-lg">
+              <Card className="h-full shadow-lg bg-secondary">
                 <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <UserCheck className="h-6 w-6 text-accent-foreground"/>
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <UserCheck className="h-6 w-6 text-accent"/>
                   </div>
-                  <CardTitle className="text-accent-foreground font-headline">AI Readiness Guide</CardTitle>
+                  <CardTitle className="text-accent font-headline">AI Readiness Guide</CardTitle>
                 </CardHeader>
                 <CardContent>
                   {loading ? (
@@ -203,7 +203,7 @@ export default function ResultsClient() {
             </div>
         </div>
 
-        <Card className="bg-background shadow-lg">
+        <Card className="bg-secondary shadow-lg">
             <CardContent className="pt-6">
               <div className="flex items-center gap-4">
                 <Lightbulb className="h-8 w-8 text-secondary-foreground" />
@@ -213,7 +213,7 @@ export default function ResultsClient() {
         </Card>
 
         <div className="text-center flex items-center justify-center gap-4">
-            <Button onClick={() => router.push('/')} variant="default" className="font-bold shadow-lg">
+            <Button onClick={() => router.push('/')} variant="default" className="font-bold shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
                 <Home className="mr-2 h-4 w-4"/>
                 Back to Home
             </Button>

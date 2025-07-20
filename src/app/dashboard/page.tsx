@@ -27,9 +27,9 @@ export default function DashboardPage() {
   
   if (loading || !user) {
     return (
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-background">
         <AppHeader />
-        <main className="flex-grow flex items-center justify-center bg-secondary/30 p-4">
+        <main className="flex-grow flex items-center justify-center bg-background p-4">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
         </main>
         <AppFooter />
@@ -38,9 +38,9 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow bg-secondary/30">
+      <main className="flex-grow bg-background">
         <DashboardClient />
       </main>
       <AppFooter />

@@ -63,7 +63,7 @@ export default function DashboardClient() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card>
+          <Card className="bg-secondary">
               <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <CardTitle className="text-sm font-medium">Avg. Score</CardTitle>
                   <Trophy className="h-4 w-4 text-muted-foreground" />
@@ -73,7 +73,7 @@ export default function DashboardClient() {
                   <p className="text-xs text-muted-foreground">+5% from last month</p>
               </CardContent>
           </Card>
-           <Card>
+           <Card className="bg-secondary">
               <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <CardTitle className="text-sm font-medium">Tests Taken</CardTitle>
                   <BarChart className="h-4 w-4 text-muted-foreground" />
@@ -83,7 +83,7 @@ export default function DashboardClient() {
                   <p className="text-xs text-muted-foreground">2 more to reach your goal</p>
               </CardContent>
           </Card>
-          <Card>
+          <Card className="bg-secondary">
               <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <CardTitle className="text-sm font-medium">Daily Streak</CardTitle>
                   <Flame className="h-4 w-4 text-muted-foreground" />
@@ -93,7 +93,7 @@ export default function DashboardClient() {
                   <p className="text-xs text-muted-foreground">Keep it up!</p>
               </CardContent>
           </Card>
-          <Card>
+          <Card className="bg-secondary">
               <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <CardTitle className="text-sm font-medium">Branch</CardTitle>
               </CardHeader>
@@ -105,7 +105,7 @@ export default function DashboardClient() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-        <Card className="shadow-lg lg:col-span-3">
+        <Card className="shadow-lg lg:col-span-3 bg-secondary">
           <CardHeader>
             <CardTitle>Exam Score History</CardTitle>
             <CardDescription>Your scores on recent mock tests show a positive trend.</CardDescription>
@@ -117,13 +117,13 @@ export default function DashboardClient() {
                 <YAxis stroke="#888888" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${value}%`}/>
                 <Tooltip
                     contentStyle={{
-                        backgroundColor: "hsl(var(--background))",
+                        backgroundColor: "hsl(var(--secondary))",
                         border: "1px solid hsl(var(--border))",
                         borderRadius: "var(--radius)"
                     }}
                  />
                 <Legend iconType="circle" />
-                <Bar dataKey="score" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="score" fill="hsl(var(--chart-1))" radius={[4, 4, 0, 0]} />
               </RechartsBarChart>
             </ResponsiveContainer>
           </CardContent>

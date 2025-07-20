@@ -26,10 +26,10 @@ export function AppHeader() {
   ];
 
   return (
-    <header className="bg-primary/90 text-primary-foreground shadow-md sticky top-0 z-40">
+    <header className="bg-background/80 backdrop-blur-sm shadow-sm sticky top-0 z-40">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline">
+          <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline text-primary">
             <Rocket />
             <span>ECET Prep</span>
           </Link>
@@ -37,7 +37,7 @@ export function AppHeader() {
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map(link => (
               <Link key={link.href} href={link.href} passHref>
-                <Button variant="link" className="text-primary-foreground text-base">
+                <Button variant="link" className="text-primary text-base hover:text-accent">
                   {link.label}
                 </Button>
               </Link>
@@ -46,17 +46,17 @@ export function AppHeader() {
               <>
                 {protectedLinks.map(link => (
                   <Link key={link.href} href={link.href} passHref>
-                    <Button variant="link" className="text-primary-foreground text-base">{link.label}</Button>
+                    <Button variant="link" className="text-primary text-base hover:text-accent">{link.label}</Button>
                   </Link>
                 ))}
-                <Button onClick={logout} variant="ghost" className="text-primary-foreground text-base hover:bg-primary/80">
+                <Button onClick={logout} variant="ghost" className="text-primary text-base hover:bg-secondary">
                   <LogOut className="mr-2 h-4 w-4" />
                   Logout
                 </Button>
               </>
             ) : (
               <>
-                <Link href="/login" passHref><Button variant="ghost" className="text-primary-foreground text-base hover:bg-primary/80">Login</Button></Link>
+                <Link href="/login" passHref><Button variant="ghost" className="text-primary text-base hover:bg-secondary">Login</Button></Link>
                 <Link href="/register" passHref><Button variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
               </>
             )}

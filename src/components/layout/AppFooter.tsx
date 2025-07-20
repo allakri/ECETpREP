@@ -8,7 +8,7 @@ export function AppFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground py-8">
+    <footer className="bg-secondary text-secondary-foreground py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
@@ -16,31 +16,31 @@ export function AppFooter() {
                 <Rocket />
                 <h3 className="font-bold text-lg font-headline">ECET Prep Platform</h3>
             </div>
-            <p className="text-sm text-primary-foreground/80">
+            <p className="text-sm text-muted-foreground">
               Your comprehensive resource for acing the Engineering Common Entrance Test.
             </p>
           </div>
           <div>
             <h3 className="font-bold text-lg mb-4 font-headline">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">About Us</Link></li>
-              <li><Link href="/exams" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Exams</Link></li>
-              <li><Link href="/discussions" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Discussions</Link></li>
-              <li><Link href="/courses" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Courses</Link></li>
-              <li><Link href="/contact" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Contact Us</Link></li>
-              <li><Link href="/user-guide" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">User Guide</Link></li>
-              <li><Link href="/dashboard" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Dashboard</Link></li>
+              <li><Link href="/about" className="hover:underline text-muted-foreground hover:text-primary">About Us</Link></li>
+              <li><Link href="/exams" className="hover:underline text-muted-foreground hover:text-primary">Exams</Link></li>
+              <li><Link href="/discussions" className="hover:underline text-muted-foreground hover:text-primary">Discussions</Link></li>
+              <li><Link href="/courses" className="hover:underline text-muted-foreground hover:text-primary">Courses</Link></li>
+              <li><Link href="/contact" className="hover:underline text-muted-foreground hover:text-primary">Contact Us</Link></li>
+              <li><Link href="/user-guide" className="hover:underline text-muted-foreground hover:text-primary">User Guide</Link></li>
+              <li><Link href="/dashboard" className="hover:underline text-muted-foreground hover:text-primary">Dashboard</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-bold text-lg mb-4 font-headline">Legal</h3>
             <ul className="space-y-2 text-sm">
-                <li><Link href="#" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Privacy Policy</Link></li>
-                <li><Link href="#" className="hover:underline text-primary-foreground/80 hover:text-primary-foreground">Terms & Conditions</Link></li>
+                <li><Link href="#" className="hover:underline text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link href="#" className="hover:underline text-muted-foreground hover:text-primary">Terms & Conditions</Link></li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-primary-foreground/20 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-primary-foreground/60">
+        <div className="border-t border-border mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
                 <Copyright className="h-4 w-4" />
                 <p>{currentYear} ECET Prep Platform. All Rights Reserved.</p>

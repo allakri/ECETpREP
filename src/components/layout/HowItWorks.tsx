@@ -41,9 +41,9 @@ export function HowItWorks() {
                         <Card key={index} className="text-center border-none shadow-none bg-transparent">
                             <CardHeader>
                                 <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
-                                    <step.icon className="h-8 w-8" />
+                                    <step.icon className="h-8 w-8 text-accent" />
                                 </div>
-                                <CardTitle className="font-headline text-xl">{step.title}</CardTitle>
+                                <CardTitle className="font-headline text-xl text-primary">{step.title}</CardTitle>
                             </CardHeader>
                             <CardContent className="text-muted-foreground">
                                 {step.description}

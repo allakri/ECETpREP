@@ -14,7 +14,7 @@ export function Hero() {
   };
 
   return (
-    <div className="relative isolate overflow-hidden bg-secondary/30">
+    <div className="relative isolate overflow-hidden bg-background">
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
           <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-6xl font-headline">
@@ -27,7 +27,7 @@ export function Hero() {
             <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg font-bold" onClick={handleGetStarted}>
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="link" size="lg" onClick={() => router.push('/about')}>
+            <Button variant="link" size="lg" className="text-primary hover:text-accent" onClick={() => router.push('/about')}>
               Learn more <span aria-hidden="true">→</span>
             </Button>
           </div>
