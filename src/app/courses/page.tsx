@@ -23,7 +23,7 @@ export default function CoursesPage() {
       <AppHeader />
       <main className="flex-grow bg-background py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <Card className="max-w-3xl mx-auto shadow-lg bg-secondary border-border">
+          <Card className="max-w-3xl mx-auto shadow-lg bg-card border-border">
             <CardHeader>
               <CardTitle className="text-3xl font-headline text-primary">Courses Offered</CardTitle>
             </CardHeader>

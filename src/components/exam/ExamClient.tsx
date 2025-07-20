@@ -98,7 +98,7 @@ export default function ExamClient() {
         <header className="flex justify-between items-center mb-4">
           <h1 className="text-2xl font-headline text-primary">ECET Exam</h1>
           <div className="flex items-center gap-4">
-            <div className={`flex items-center gap-2 font-bold p-2 rounded-lg ${timeLeft < 300 ? 'text-red-500 animate-pulse' : 'text-accent-foreground'}`}>
+            <div className={`flex items-center gap-2 font-bold p-2 rounded-lg ${timeLeft < 300 ? 'text-destructive animate-pulse' : 'text-foreground'}`}>
               <Timer className="h-6 w-6 text-accent" />
               <span className="font-mono text-xl">{formatTime(timeLeft)}</span>
             </div>
@@ -120,7 +120,7 @@ export default function ExamClient() {
               className="space-y-4"
             >
               {currentQuestion.options.map((option, index) => (
-                <div key={index} className="flex items-center space-x-3 transition-all duration-200 rounded-lg p-3 hover:bg-primary/5">
+                <div key={index} className="flex items-center space-x-3 transition-all duration-200 rounded-lg p-3 hover:bg-primary/5 dark:hover:bg-primary/10">
                   <RadioGroupItem value={option} id={`q${currentQuestion.id}-op${index}`} />
                   <Label htmlFor={`q${currentQuestion.id}-op${index}`} className="text-base cursor-pointer flex-1">{option}</Label>
                 </div>
@@ -154,7 +154,7 @@ export default function ExamClient() {
             <h2 className="font-bold font-headline">Student User</h2>
             <p className="text-sm text-muted-foreground">ECET Aspirant</p>
         </div>
-        <Card className="flex-1 flex flex-col">
+        <Card className="flex-1 flex flex-col bg-background/50 dark:bg-background/20">
             <CardHeader>
                 <CardTitle className="text-lg font-headline">Question Palette</CardTitle>
             </CardHeader>
@@ -171,11 +171,10 @@ export default function ExamClient() {
                         className={cn("h-10 w-10 p-0 text-base rounded-lg transition-all duration-200",
                           currentQuestionIndex === index && "ring-2 ring-primary ring-offset-2 ring-offset-background",
                           {
-                            'bg-green-500/20 text-green-800 border-green-500/50 hover:bg-green-500/30': status === 'answered',
-                            'bg-yellow-500/20 text-yellow-800 border-yellow-500/50 hover:bg-yellow-500/30': status === 'marked',
-                            'bg-blue-500/20 text-blue-800 border-blue-500/50 hover:bg-blue-500/30': status === 'answeredAndMarked',
-                          },
-                          "dark:bg-opacity-30 dark:text-white"
+                            'bg-green-500/20 text-green-800 dark:text-green-300 border-green-500/50 hover:bg-green-500/30': status === 'answered',
+                            'bg-yellow-500/20 text-yellow-800 dark:text-yellow-300 border-yellow-500/50 hover:bg-yellow-500/30': status === 'marked',
+                            'bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-500/50 hover:bg-blue-500/30': status === 'answeredAndMarked',
+                          }
                         )}
                       >
                         {index + 1}
@@ -186,13 +185,13 @@ export default function ExamClient() {
               </ScrollArea>
             </CardContent>
         </Card>
-        <div className="space-y-2">
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div><span className="text-xs">Answered</span></div>
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div><span className="text-xs">Marked</span></div>
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500/20 border border-blue-500/50"></div><span className="text-xs">Answered & Marked</span></div>
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full border"></div><span className="text-xs">Not Answered</span></div>
+        <div className="space-y-2 text-xs">
+            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div><span>Answered</span></div>
+            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div><span>Marked</span></div>
+            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500/20 border border-blue-500/50"></div><span>Answered & Marked</span></div>
+            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full border"></div><span>Not Answered</span></div>
         </div>
-        <Button className="w-full font-bold bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg" onClick={() => setIsSubmitDialogOpen(true)}>
+        <Button className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg" onClick={() => setIsSubmitDialogOpen(true)}>
           <Send className="mr-2 h-4 w-4" /> Submit Exam
         </Button>
       </aside>
@@ -212,7 +211,7 @@ export default function ExamClient() {
             <Button onClick={() => {
               setIsSubmitDialogOpen(false);
               handleSubmit();
-            }} className="bg-accent text-accent-foreground hover:bg-accent/90">
+            }} className="bg-primary text-primary-foreground hover:bg-primary/90">
               Submit
             </Button>
           </AlertDialogFooter>

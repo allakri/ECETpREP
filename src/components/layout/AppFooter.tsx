@@ -8,13 +8,13 @@ export function AppFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary text-secondary-foreground py-8">
+    <footer className="bg-card text-card-foreground border-t py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
             <div className="flex justify-center md:justify-start items-center gap-2 mb-4">
-                <Rocket />
-                <h3 className="font-bold text-lg font-headline">ECET Prep Platform</h3>
+                <Rocket className="text-primary"/>
+                <h3 className="font-bold text-lg font-headline text-primary">ECET Prep Platform</h3>
             </div>
             <p className="text-sm text-muted-foreground">
               Your comprehensive resource for acing the Engineering Common Entrance Test.

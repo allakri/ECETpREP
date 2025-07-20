@@ -20,7 +20,7 @@ const features = [
 
 export function Features() {
   return (
-    <div className="bg-secondary/30 py-16 sm:py-24">
+    <div className="bg-card py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-accent">Your Path to Success</h2>

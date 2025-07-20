@@ -8,11 +8,11 @@ export default function UserGuidePage() {
       <AppHeader />
       <main className="flex-grow bg-background py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <Card className="max-w-3xl mx-auto shadow-lg bg-secondary border-border">
+          <Card className="max-w-3xl mx-auto shadow-lg bg-card border-border">
             <CardHeader>
               <CardTitle className="text-3xl font-headline text-primary">User Guide</CardTitle>
             </CardHeader>
-            <CardContent className="prose prose-lg max-w-none text-foreground">
+            <CardContent className="prose prose-lg dark:prose-invert max-w-none text-foreground">
               <h4>1. Selecting an Exam</h4>
               <p>
                 From the Home page, you can see a list of available mock tests for various engineering disciplines. Simply click on the test you wish to take to begin.

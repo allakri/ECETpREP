@@ -24,10 +24,10 @@ export function Hero() {
             Your ultimate platform for ECET preparation. Master key concepts with our mock tests, get instant AI-powered feedback, and clear your doubts 24/7.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg font-bold" onClick={handleGetStarted}>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg font-bold" onClick={handleGetStarted}>
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="link" size="lg" className="text-primary hover:text-accent" onClick={() => router.push('/about')}>
+            <Button variant="link" size="lg" className="text-foreground hover:text-accent" onClick={() => router.push('/about')}>
               Learn more <span aria-hidden="true">→</span>
             </Button>
           </div>

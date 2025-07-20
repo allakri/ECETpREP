@@ -6,7 +6,7 @@ export default function ExamsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow bg-secondary/30 py-12">
+      <main className="flex-grow bg-background py-12">
         <ExamSelection />
       </main>
       <AppFooter />

@@ -43,7 +43,7 @@ export default function LoginPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow flex items-center justify-center bg-secondary/30 p-4">
+      <main className="flex-grow flex items-center justify-center bg-background p-4">
         <Card className="w-full max-w-sm shadow-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-headline text-primary">Login</CardTitle>
@@ -72,7 +72,7 @@ export default function LoginPage() {
                   required
                 />
               </div>
-              <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                 Login
               </Button>
             </form>

@@ -43,15 +43,15 @@ export default function DiscussionsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow bg-secondary/30 py-12">
+      <main className="flex-grow bg-background py-12">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto shadow-lg">
+          <Card className="max-w-4xl mx-auto shadow-lg bg-card">
             <CardHeader className="flex flex-row justify-between items-center">
               <div>
                 <CardTitle className="text-3xl font-headline text-primary">Community Discussions</CardTitle>
                 <CardDescription>Ask questions, share knowledge, and learn with your peers.</CardDescription>
               </div>
-              <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <PlusCircle className="mr-2 h-5 w-5" />
                 Start a New Discussion
               </Button>
@@ -59,7 +59,7 @@ export default function DiscussionsPage() {
             <CardContent>
               <div className="space-y-4">
                 {discussions.map((discussion) => (
-                  <Card key={discussion.id} className="hover:bg-muted/50 transition-colors">
+                  <Card key={discussion.id} className="hover:bg-muted/50 transition-colors bg-background">
                     <CardContent className="pt-6">
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-4">
@@ -71,7 +71,7 @@ export default function DiscussionsPage() {
                             <h3 className="font-semibold text-lg text-primary cursor-pointer hover:underline">{discussion.title}</h3>
                             <p className="text-sm text-muted-foreground">
                               Started by {discussion.author} in{" "}
-                              <span className="font-medium text-accent-foreground">{discussion.topic}</span>
+                              <span className="font-medium text-foreground">{discussion.topic}</span>
                             </p>
                           </div>
                         </div>

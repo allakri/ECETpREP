@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Menu, Rocket, LogOut } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function AppHeader() {
   const { user, logout } = useAuth();
@@ -37,7 +38,7 @@ export function AppHeader() {
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map(link => (
               <Link key={link.href} href={link.href} passHref>
-                <Button variant="link" className="text-primary text-base hover:text-accent">
+                <Button variant="link" className="text-foreground text-base hover:text-accent">
                   {link.label}
                 </Button>
               </Link>
@@ -46,23 +47,27 @@ export function AppHeader() {
               <>
                 {protectedLinks.map(link => (
                   <Link key={link.href} href={link.href} passHref>
-                    <Button variant="link" className="text-primary text-base hover:text-accent">{link.label}</Button>
+                    <Button variant="link" className="text-foreground text-base hover:text-accent">{link.label}</Button>
                   </Link>
                 ))}
-                <Button onClick={logout} variant="ghost" className="text-primary text-base hover:bg-secondary">
+                <Button onClick={logout} variant="ghost" className="text-foreground text-base hover:bg-secondary">
                   <LogOut className="mr-2 h-4 w-4" />
                   Logout
                 </Button>
               </>
             ) : (
               <>
-                <Link href="/login" passHref><Button variant="ghost" className="text-primary text-base hover:bg-secondary">Login</Button></Link>
-                <Link href="/register" passHref><Button variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
+                <Link href="/login" passHref><Button variant="ghost" className="text-foreground text-base hover:bg-secondary">Login</Button></Link>
+                <Link href="/register" passHref><Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">Register</Button></Link>
               </>
             )}
+            <div className="pl-2">
+              <ThemeToggle />
+            </div>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -93,7 +98,7 @@ export function AppHeader() {
                   ) : (
                     <>
                       <Link href="/login" passHref><Button variant="ghost" className="w-full justify-start text-lg">Login</Button></Link>
-                      <Link href="/register" passHref><Button className="w-full justify-center text-lg bg-accent text-accent-foreground hover:bg-accent/90">Register</Button></Link>
+                      <Link href="/register" passHref><Button className="w-full justify-center text-lg bg-primary text-primary-foreground hover:bg-primary/90">Register</Button></Link>
                     </>
                   )}
                 </div>

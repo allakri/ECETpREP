@@ -8,11 +8,11 @@ export default function AboutPage() {
       <AppHeader />
       <main className="flex-grow bg-background py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <Card className="max-w-3xl mx-auto shadow-lg bg-secondary border-border">
+          <Card className="max-w-3xl mx-auto shadow-lg bg-card border-border">
             <CardHeader>
               <CardTitle className="text-3xl font-headline text-primary">About Us</CardTitle>
             </CardHeader>
-            <CardContent className="prose prose-lg max-w-none text-foreground">
+            <CardContent className="prose prose-lg dark:prose-invert max-w-none text-foreground">
               <p>
                 Welcome to the ECET Prep Platform, your number one source for mastering the Engineering Common Entrance Test (ECET). We're dedicated to giving you the very best of preparation tools, with a focus on quality mock tests, instant feedback, and AI-powered doubt clarification.
               </p>

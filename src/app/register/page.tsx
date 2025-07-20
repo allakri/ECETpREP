@@ -52,7 +52,7 @@ export default function RegisterPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow flex items-center justify-center bg-secondary/30 p-4">
+      <main className="flex-grow flex items-center justify-center bg-background p-4">
         <Card className="w-full max-w-2xl shadow-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-headline text-primary">Create an account</CardTitle>
@@ -99,7 +99,7 @@ export default function RegisterPage() {
                 </Select>
               </div>
               <div className="md:col-span-2">
-                <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                   Create Account
                 </Button>
               </div>

@@ -12,6 +12,8 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Home, Send, Bot, User, Loader2, ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { AppHeader } from '../layout/AppHeader';
+import { AppFooter } from '../layout/AppFooter';
 
 type ChatMessage = {
   role: 'user' | 'model';
@@ -94,94 +96,87 @@ export default function ChatClient() {
   }
 
   return (
-    <main className="flex h-screen w-full flex-col items-center justify-center bg-secondary/30 p-4">
-      <Card className="w-full max-w-2xl h-[90vh] flex flex-col shadow-2xl">
-        <CardHeader className="flex flex-row items-center justify-between border-b">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-primary/10 rounded-full">
-              <Bot className="h-6 w-6 text-primary" />
+    <div className="flex flex-col min-h-screen bg-background">
+      <AppHeader />
+      <main className="flex-grow flex items-center justify-center p-4">
+        <Card className="w-full max-w-2xl h-[80vh] flex flex-col shadow-2xl">
+          <CardHeader className="flex flex-row items-center justify-between border-b">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-primary/10 rounded-full">
+                <Bot className="h-6 w-6 text-primary" />
+              </div>
+              <CardTitle className="font-headline text-2xl text-primary">AI Doubt Solver</CardTitle>
             </div>
-            <CardTitle className="font-headline text-2xl text-primary">AI Doubt Solver</CardTitle>
-          </div>
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" onClick={() => router.back()}>
-              <ArrowLeft className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" onClick={() => router.forward()}>
-              <ArrowRight className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" onClick={() => router.push('/')}>
-              <Home className="h-5 w-5" />
-            </Button>
-          </div>
-        </CardHeader>
-        <CardContent className="flex-1 p-0">
-          <ScrollArea className="h-full p-6" ref={scrollAreaRef}>
-            <div className="space-y-6">
-              {messages.length === 0 && (
-                <div className="text-center text-muted-foreground pt-10 px-4">
-                  <p>{getWelcomeMessage()}</p>
-                </div>
-              )}
-              {messages.map((message, index) => (
-                <div
-                  key={index}
-                  className={cn(
-                    'flex items-start gap-3',
-                    message.role === 'user' ? 'justify-end' : 'justify-start'
-                  )}
-                >
-                  {message.role === 'model' && (
-                    <Avatar className="h-8 w-8">
-                       <AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback>
-                    </Avatar>
-                  )}
+          </CardHeader>
+          <CardContent className="flex-1 p-0">
+            <ScrollArea className="h-full p-6" ref={scrollAreaRef}>
+              <div className="space-y-6">
+                {messages.length === 0 && (
+                  <div className="text-center text-muted-foreground pt-10 px-4">
+                    <p>{getWelcomeMessage()}</p>
+                  </div>
+                )}
+                {messages.map((message, index) => (
                   <div
+                    key={index}
                     className={cn(
-                      'max-w-[75%] rounded-lg p-3 text-sm',
-                      message.role === 'user'
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted'
+                      'flex items-start gap-3',
+                      message.role === 'user' ? 'justify-end' : 'justify-start'
                     )}
                   >
-                    <div className="prose prose-sm max-w-none text-inherit whitespace-pre-wrap">{message.text}</div>
+                    {message.role === 'model' && (
+                      <Avatar className="h-8 w-8">
+                        <AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback>
+                      </Avatar>
+                    )}
+                    <div
+                      className={cn(
+                        'max-w-[75%] rounded-lg p-3 text-sm',
+                        message.role === 'user'
+                          ? 'bg-primary text-primary-foreground'
+                          : 'bg-muted'
+                      )}
+                    >
+                      <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap">{message.text}</div>
+                    </div>
+                    {message.role === 'user' && (
+                      <Avatar className="h-8 w-8">
+                        <AvatarFallback className="bg-accent text-accent-foreground"><User size={20}/></AvatarFallback>
+                      </Avatar>
+                    )}
                   </div>
-                   {message.role === 'user' && (
+                ))}
+                {isLoading && (
+                  <div className="flex items-start gap-3 justify-start">
                     <Avatar className="h-8 w-8">
-                       <AvatarFallback className="bg-accent text-accent-foreground"><User size={20}/></AvatarFallback>
+                      <AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback>
                     </Avatar>
-                  )}
-                </div>
-              ))}
-               {isLoading && (
-                <div className="flex items-start gap-3 justify-start">
-                  <Avatar className="h-8 w-8">
-                    <AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback>
-                  </Avatar>
-                  <div className="bg-muted rounded-lg p-3">
-                    <Loader2 className="h-5 w-5 animate-spin" />
+                    <div className="bg-muted rounded-lg p-3">
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          </ScrollArea>
-        </CardContent>
-        <CardFooter className="border-t pt-6">
-          <form onSubmit={handleSendMessage} className="flex w-full items-center gap-3">
-            <Input
-              value={input}
-              onChange={e => setInput(e.target.value)}
-              placeholder="Ask about your exam or any other doubt..."
-              disabled={isLoading}
-              className="flex-1"
-            />
-            <Button type="submit" disabled={isLoading || !input.trim()} className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <Send className="mr-2 h-4 w-4" />
-              Send
-            </Button>
-          </form>
-        </CardFooter>
-      </Card>
-    </main>
+                )}
+              </div>
+            </ScrollArea>
+          </CardContent>
+          <CardFooter className="border-t pt-6">
+            <form onSubmit={handleSendMessage} className="flex w-full items-center gap-3">
+              <Input
+                value={input}
+                onChange={e => setInput(e.target.value)}
+                placeholder="Ask about your exam or any other doubt..."
+                disabled={isLoading}
+                className="flex-1"
+              />
+              <Button type="submit" disabled={isLoading || !input.trim()} className="bg-primary text-primary-foreground hover:bg-primary/90">
+                <Send className="mr-2 h-4 w-4" />
+                Send
+              </Button>
+            </form>
+          </CardFooter>
+        </Card>
+      </main>
+      <AppFooter />
+    </div>
   );
 }

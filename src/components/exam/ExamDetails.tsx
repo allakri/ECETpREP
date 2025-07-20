@@ -32,7 +32,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
 
     return (
         <div id="exam-details" className="container mx-auto px-4">
-            <Card className="shadow-lg max-w-4xl mx-auto border-none bg-transparent">
+            <Card className="shadow-lg max-w-4xl mx-auto bg-card">
                 <CardHeader className="text-center">
                     <CardTitle className="text-3xl font-headline text-primary">
                       {examName}
@@ -46,7 +46,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                                 key={paper.year}
                                 onClick={() => handlePaperSelect(paper.type)}
                                 variant="outline"
-                                className="w-full h-auto py-6 px-4 flex flex-col items-start justify-center text-left gap-3 bg-card hover:bg-card/90 hover:scale-105 transition-transform duration-200"
+                                className="w-full h-auto py-6 px-4 flex flex-col items-start justify-center text-left gap-3 bg-background hover:bg-muted/50 hover:scale-105 transition-transform duration-200"
                             >
                                 <div className="flex justify-between w-full items-center">
                                   <div className="flex items-center gap-3">
@@ -65,7 +65,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                          <Button
                             onClick={() => handlePaperSelect('Mock Test')}
                             variant="outline"
-                            className="w-full h-auto py-6 px-4 flex flex-col items-start justify-center text-left gap-3 bg-card hover:bg-card/90 hover:scale-105 transition-transform duration-200"
+                            className="w-full h-auto py-6 px-4 flex flex-col items-start justify-center text-left gap-3 bg-background hover:bg-muted/50 hover:scale-105 transition-transform duration-200"
                         >
                             <div className="flex justify-between w-full items-center">
                                 <div className="flex items-center gap-3">

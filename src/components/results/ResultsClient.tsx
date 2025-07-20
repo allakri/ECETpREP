@@ -157,7 +157,7 @@ export default function ResultsClient() {
             </div>
 
             <div className="lg:col-span-1">
-              <Card className="h-full shadow-lg bg-secondary">
+              <Card className="h-full shadow-lg">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <BrainCircuit className="h-6 w-6 text-primary"/>
@@ -181,9 +181,9 @@ export default function ResultsClient() {
             </div>
 
             <div className="lg:col-span-1">
-              <Card className="h-full shadow-lg bg-secondary">
+              <Card className="h-full shadow-lg">
                 <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
+                  <div className="p-3 bg-accent/10 rounded-lg">
                     <UserCheck className="h-6 w-6 text-accent"/>
                   </div>
                   <CardTitle className="text-accent font-headline">AI Readiness Guide</CardTitle>
@@ -203,11 +203,11 @@ export default function ResultsClient() {
             </div>
         </div>
 
-        <Card className="bg-secondary shadow-lg">
+        <Card className="bg-card shadow-lg">
             <CardContent className="pt-6">
               <div className="flex items-center gap-4">
-                <Lightbulb className="h-8 w-8 text-secondary-foreground" />
-                <blockquote className="text-secondary-foreground italic">"{quote}"</blockquote>
+                <Lightbulb className="h-8 w-8 text-foreground" />
+                <blockquote className="text-foreground italic">"{quote}"</blockquote>
               </div>
             </CardContent>
         </Card>

@@ -12,7 +12,7 @@ export default function ContactPage() {
       <AppHeader />
       <main className="flex-grow bg-background py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <Card className="max-w-2xl mx-auto shadow-lg bg-secondary border-border">
+          <Card className="max-w-2xl mx-auto shadow-lg bg-card border-border">
             <CardHeader>
               <CardTitle className="text-3xl font-headline text-primary">Contact Us</CardTitle>
               <CardDescription>Have a question or feedback? Fill out the form below to get in touch.</CardDescription>
@@ -35,7 +35,7 @@ export default function ContactPage() {
                   <Label htmlFor="message">Message</Label>
                   <Textarea id="message" placeholder="Your message here..." rows={5} />
                 </div>
-                <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                   Send Message
                 </Button>
               </form>
