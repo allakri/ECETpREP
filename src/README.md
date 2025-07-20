@@ -46,7 +46,7 @@ This application provides a seamless and interactive experience for students pre
 -   **Emotion-Aware AI Feedback:** Get instant, actionable insights on your performance with a supportive tone that adapts to your progress.
 -   **24/7 AI Doubt Clarification:** An intelligent chat agent to help you understand complex concepts anytime.
 -   **Community Discussion Forum:** A space for students to collaborate, ask questions, and support each other.
--   **Modern, Responsive UI:** A clean and intuitive user interface built with a professional design system that supports both light and dark modes.
+-   **Modern, Responsive UI:** A clean and intuitive user interface built with a professional design system that supports both light and dark modes, enhanced with smooth animations.
 
 ## Tech Stack
 
@@ -55,4 +55,5 @@ This application provides a seamless and interactive experience for students pre
 -   **Styling:** Tailwind CSS
 -   **UI Components:** ShadCN UI
 -   **Theming:** `next-themes` for light and dark mode support.
+-   **Animation:** `framer-motion` for smooth page transitions and scroll animations.
 -   **AI/Generative AI:** Google AI & Genkit
