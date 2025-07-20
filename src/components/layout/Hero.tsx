@@ -2,11 +2,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function Hero() {
-  const scrollToExams = () => {
-    document.getElementById("exam-selection")?.scrollIntoView({ behavior: "smooth" });
+  const router = useRouter();
+
+  const handleGetStarted = () => {
+    router.push("/exams");
   };
 
   return (
@@ -18,8 +21,8 @@ export function Hero() {
         Your ultimate platform for ECET preparation. Master key concepts with our mock tests, get instant AI-powered feedback, and clear your doubts 24/7.
       </p>
       <div className="mt-8">
-        <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg font-bold" onClick={scrollToExams}>
-          Get Started <ArrowDown className="ml-2 h-5 w-5" />
+        <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg font-bold" onClick={handleGetStarted}>
+          Get Started <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </div>
     </div>

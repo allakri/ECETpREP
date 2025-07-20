@@ -27,8 +27,8 @@ export function ExamSelection() {
     };
 
     return (
-        <div id="exam-selection" className="container mx-auto py-16 md:py-24 px-4">
-            <Card className="shadow-lg max-w-4xl mx-auto border-none bg-secondary/30">
+        <div id="exam-selection" className="container mx-auto px-4">
+            <Card className="shadow-lg max-w-4xl mx-auto border-none bg-transparent">
                 <CardHeader className="text-center">
                     <CardTitle className="text-3xl font-headline text-primary">Select Your Mock Test</CardTitle>
                     <CardDescription>Choose your branch to start a tailored practice exam.</CardDescription>
