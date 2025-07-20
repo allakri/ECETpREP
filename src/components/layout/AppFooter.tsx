@@ -25,6 +25,7 @@ export function AppFooter() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:underline text-muted-foreground hover:text-primary">About Us</Link></li>
               <li><Link href="/exams" className="hover:underline text-muted-foreground hover:text-primary">Exams</Link></li>
+              <li><Link href="/roadmap" className="hover:underline text-muted-foreground hover:text-primary">Roadmap</Link></li>
               <li><Link href="/discussions" className="hover:underline text-muted-foreground hover:text-primary">Discussions</Link></li>
               <li><Link href="/courses" className="hover:underline text-muted-foreground hover:text-primary">Courses</Link></li>
               <li><Link href="/contact" className="hover:underline text-muted-foreground hover:text-primary">Contact Us</Link></li>
