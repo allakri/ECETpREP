@@ -47,12 +47,12 @@ export function Hero() {
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
               <Image
-                src="https://placehold.co/1200x800.png"
+                src="https://placehold.co/600x600.png"
                 alt="ECET Prep Platform Screenshot"
                 data-ai-hint="students learning studying"
                 width={2432}
                 height={1442}
-                className="w-full max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                className="w-full max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-cover"
               />
             </div>
           </div>
