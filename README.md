@@ -12,7 +12,7 @@ This application provides a seamless and interactive experience for students pre
 
 1.  **Register & Login:** Students create an account with their academic details. This allows for a personalized experience.
 
-2.  **Personalized Dashboard:** Upon logging in, the user is greeted with a dashboard that tracks their progress, including scores from past tests and a graphical breakdown of their performance.
+2.  **Personalized Dashboard:** Upon logging in, the user is greeted with a dashboard that tracks their progress, including scores from past tests, a graphical breakdown of their performance, and a daily streak to encourage consistent practice.
 
 3.  **Select an Exam:** From the exams page, students can choose from a variety of mock tests tailored to different engineering disciplines (e.g., Computer Science, Electronics, Civil Engineering). They can opt to take a previous year's paper or create a custom test based on specific subjects.
 
@@ -20,7 +20,7 @@ This application provides a seamless and interactive experience for students pre
 
 5.  **Get Instant Results & AI Feedback:** Upon submission, students are directed to a comprehensive results page. This includes:
     *   A detailed score breakdown (correct, incorrect, unanswered).
-    *   **AI-Powered Adaptive Feedback:** An AI analyzes the student's performance to identify weak topics and provide actionable advice for improvement.
+    *   **AI-Powered Adaptive Feedback:** An AI analyzes the student's performance and past scores to provide actionable advice with an adaptive, emotion-aware tone.
     *   **AI Readiness Assessment:** A personalized, encouraging assessment of the student's preparedness for the actual exam.
 
 6.  **Clear Doubts with an AI Tutor:** Students can use the "AI Doubt Solver," a specialized chat interface. This AI tutor is designed to:
@@ -28,16 +28,19 @@ This application provides a seamless and interactive experience for students pre
     *   Provide explanations for specific exam questions, using the context of the student's recent test.
     *   Politely guide the user back to their studies if they ask off-topic questions, ensuring a focused learning experience.
 
+7. **Engage with the Community:** A dedicated discussion forum allows students to ask questions, share knowledge, and learn collaboratively with their peers.
+
 ## Key Features
 
 -   **User Authentication:** Secure registration and login for a personalized experience using client-side session management.
--   **Personalized Dashboard:** Track progress with score history and performance charts.
+-   **Personalized Dashboard:** Track progress with score history, performance charts, and a daily learning streak.
 -   **User Profiles:** View and manage personal and academic information.
 -   **Realistic Mock Tests:** A wide range of practice exams covering all major engineering branches in the ECET syllabus.
 -   **Customizable Tests:** Ability to create custom mock tests by selecting specific subjects.
 -   **Timed Exam Environment:** A built-in timer to help students practice time management skills.
--   **Personalized AI Feedback:** Get instant, actionable insights on your performance to focus your study efforts.
+-   **Emotion-Aware AI Feedback:** Get instant, actionable insights on your performance with a supportive tone that adapts to your progress.
 -   **24/7 AI Doubt Clarification:** An intelligent chat agent to help you understand complex concepts anytime.
+-   **Community Discussion Forum:** A space for students to collaborate, ask questions, and support each other.
 -   **Clean, Responsive UI:** A modern and intuitive user interface built with Next.js, ShadCN UI, and Tailwind CSS.
 
 ## Tech Stack
