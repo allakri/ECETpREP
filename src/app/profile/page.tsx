@@ -114,7 +114,7 @@ export default function ProfilePage() {
             </div>
             
             <Tabs defaultValue="dashboard" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 max-w-lg mx-auto mb-8">
+              <TabsList className="grid w-full grid-cols-3 max-w-lg mx-auto mb-8 bg-background border">
                 <TabsTrigger value="dashboard" className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"><LayoutDashboard className="mr-2"/> Dashboard</TabsTrigger>
                 <TabsTrigger value="notes" className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"><Book className="mr-2"/> Personal Notes</TabsTrigger>
                 <TabsTrigger value="todos" className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"><ListChecks className="mr-2"/> Todo List</TabsTrigger>
