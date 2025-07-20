@@ -19,6 +19,7 @@ import { StudyActivityCalendar } from '@/components/profile/StudyActivityCalenda
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PersonalNotes } from '@/components/profile/PersonalNotes';
 import { TodoList } from '@/components/profile/TodoList';
+import { Skeleton } from '@/components/ui/skeleton';
 
 
 // Mock data, in a real app this would come from a database
@@ -37,6 +38,51 @@ const overallPerformanceData = {
     unansweredCount: 5,
     totalQuestions: 65
 };
+
+const ProfilePageSkeleton = () => (
+    <div className="flex flex-col min-h-screen bg-background">
+      <AppHeader />
+      <main className="flex-grow p-4 md:p-8">
+        <div className="container mx-auto">
+          <div className="mb-8">
+            <Skeleton className="h-9 w-1/3 mb-2" />
+            <Skeleton className="h-5 w-2/3" />
+          </div>
+          <Skeleton className="h-10 w-full max-w-lg mx-auto mb-8" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-1">
+              <Card className="w-full shadow-lg">
+                <CardHeader>
+                  <Skeleton className="h-8 w-1/2" />
+                  <Skeleton className="h-4 w-3/4" />
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {[...Array(6)].map((_, i) => (
+                    <div className="grid gap-2" key={i}>
+                      <Skeleton className="h-4 w-1/4" />
+                      <Skeleton className="h-8 w-full" />
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            </div>
+            <div className="lg:col-span-2 space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Skeleton className="h-28 w-full" />
+                <Skeleton className="h-28 w-full" />
+              </div>
+              <Skeleton className="h-40 w-full" />
+              <div className="grid grid-cols-1 xl:grid-cols-5 gap-8">
+                <Skeleton className="h-80 w-full xl:col-span-3" />
+                <Skeleton className="h-80 w-full xl:col-span-2" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <AppFooter />
+    </div>
+)
 
 export default function ProfilePage() {
   const { user, updateUser, loading } = useAuth();
@@ -92,15 +138,7 @@ export default function ProfilePage() {
   };
 
   if (loading || !user) {
-    return (
-      <div className="flex flex-col min-h-screen bg-background">
-        <AppHeader />
-        <main className="flex-grow flex items-center justify-center p-4">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
-        </main>
-        <AppFooter />
-      </div>
-    );
+    return <ProfilePageSkeleton />;
   }
 
   return (

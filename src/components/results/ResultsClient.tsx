@@ -122,20 +122,16 @@ export default function ResultsClient() {
     }
   }, [answers, questions, score, incorrectTopics]);
 
-  if (!isMounted || !answers || !questions) {
-    return (
-        <div className="flex items-center justify-center min-h-screen bg-background">
-            <div className="w-full max-w-6xl mx-auto p-4 md:p-8 space-y-6">
-                <Skeleton className="h-10 w-1/3" />
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <Skeleton className="h-[450px] w-full rounded-lg" />
-                    <Skeleton className="h-[450px] w-full rounded-lg" />
-                    <Skeleton className="h-[450px] w-full rounded-lg" />
-                </div>
-            </div>
-        </div>
-    );
+  if (!isMounted) {
+    // This state is now handled by the Suspense fallback
+    return null;
   }
+  
+  if (!answers || !questions) {
+    // This case should be handled by the redirect, but as a safeguard:
+    return null;
+  }
+
 
   return (
     <main className="min-h-screen bg-background p-4 md:p-8">
