@@ -13,6 +13,7 @@ export function AppHeader() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/exams", label: "Exams" },
+    { href: "/discussions", label: "Discussions" },
     { href: "/about", label: "About Us" },
     { href: "/courses", label: "Courses" },
     { href: "/user-guide", label: "User Guide" },

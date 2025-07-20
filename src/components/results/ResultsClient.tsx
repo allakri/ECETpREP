@@ -20,6 +20,9 @@ const quotes = [
   "Success is the sum of small efforts, repeated day in and day out."
 ];
 
+const mockPastScores = [65, 78, 82, 75];
+
+
 export default function ResultsClient() {
   const router = useRouter();
   const [answers, setAnswers] = useState<AnswerSheet | null>(null);
@@ -86,6 +89,8 @@ export default function ResultsClient() {
            for (const qId in answers) {
             userAnswers[qId] = answers[qId]
           }
+          
+          const pastScoresWithCurrent = [...mockPastScores, score];
 
           const [feedbackResult, readinessResult] = await Promise.all([
             generateAdaptiveFeedback({
@@ -93,6 +98,7 @@ export default function ResultsClient() {
               userAnswers,
               correctAnswers,
               topics,
+              pastScores: pastScoresWithCurrent,
             }),
             assessReadiness({
               examName: 'ECET Practice Exam',

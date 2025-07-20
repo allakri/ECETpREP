@@ -16,6 +16,7 @@ const AdaptiveFeedbackInputSchema = z.object({
   userAnswers: z.record(z.string(), z.string()).describe('A map of question IDs to the user\'s answers.'),
   correctAnswers: z.record(z.string(), z.string()).describe('A map of question IDs to the correct answers.'),
   topics: z.record(z.string(), z.string()).describe('A map of question IDs to the topics the questions cover.'),
+  pastScores: z.array(z.number()).optional().describe("An array of the user's past scores (as percentages) on previous tests."),
 });
 export type AdaptiveFeedbackInput = z.infer<typeof AdaptiveFeedbackInputSchema>;
 
@@ -32,10 +33,17 @@ const adaptiveFeedbackPrompt = ai.definePrompt({
   name: 'adaptiveFeedbackPrompt',
   input: {schema: AdaptiveFeedbackInputSchema},
   output: {schema: AdaptiveFeedbackOutputSchema},
-  prompt: `You are an AI-powered tutoring system that provides personalized feedback to students based on their performance on practice exams.
+  prompt: `You are an AI-powered tutoring system that provides personalized, emotion-aware feedback to students based on their performance on practice exams.
 
-You will receive the student's answers, the correct answers, and the topics covered by each question.
 Your task is to identify the student's weak areas and provide suggestions for improvement. Focus on actionable advice and specific topics to study.
+
+Crucially, you must adjust your tone based on the student's performance history.
+{{#if pastScores}}
+Here are the student's recent scores: {{#each pastScores}}{{{this}}}%{{#unless @last}}, {{/unless}}{{/each}}.
+- If you see a trend of improvement, be very encouraging! For example: "Great progress! You've clearly been working hard and it's paying off."
+- If the scores are stagnant or declining, be supportive and motivational, not critical. For example: "This subject can be tricky, but don't get discouraged. Let's pinpoint where we can focus to get you back on track."
+- If this is their first test, be welcoming and set a positive tone.
+{{/if}}
 
 Exam Name: {{{examName}}}
 
@@ -54,7 +62,7 @@ Topics:
   Question ID: {{{@key}}}, Topic: {{{this}}}
 {{/each}}
 
-Provide detailed feedback to the student to help them improve their understanding of the material and perform better on future exams.
+Provide detailed, tailored feedback to the student with an appropriate, supportive, and adaptive tone.
 `, config: {
     safetySettings: [
       {

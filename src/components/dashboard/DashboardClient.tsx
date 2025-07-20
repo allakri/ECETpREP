@@ -3,7 +3,7 @@
 
 import { useAuth } from "@/hooks/use-auth";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader2 } from "lucide-react";
+import { Flame, Loader2 } from "lucide-react";
 import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Legend, Bar, PieChart, Pie, Cell } from "recharts";
 
 const examData = [
@@ -40,7 +40,7 @@ export default function DashboardClient() {
         <p className="text-muted-foreground">Here is a summary of your learning progress.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card>
               <CardHeader>
                   <CardTitle>Branch</CardTitle>
@@ -63,6 +63,16 @@ export default function DashboardClient() {
               </CardHeader>
               <CardContent>
                   <p className="text-2xl font-bold">{user.yearOfStudy}</p>
+              </CardContent>
+          </Card>
+           <Card className="bg-accent/10 border-accent">
+              <CardHeader className="flex flex-row items-center justify-between">
+                  <CardTitle>Daily Streak</CardTitle>
+                  <Flame className="h-6 w-6 text-amber-500" />
+              </CardHeader>
+              <CardContent>
+                  <p className="text-3xl font-bold">5 <span className="text-lg font-normal text-muted-foreground">days</span></p>
+                  <p className="text-xs text-muted-foreground mt-1">Keep it up to build a habit!</p>
               </CardContent>
           </Card>
       </div>
