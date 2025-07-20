@@ -12,7 +12,7 @@ import { useAuth } from '@/hooks/use-auth';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Flame, BarChart as BarChartIcon, Trophy } from 'lucide-react';
+import { Loader2, Flame, BarChart as BarChartIcon, Trophy, Pencil } from 'lucide-react';
 import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, Bar } from "recharts";
 import { ScoreChart } from "@/components/results/ScoreChart";
 import { StudyActivityCalendar } from '@/components/profile/StudyActivityCalendar';
@@ -38,7 +38,8 @@ export default function ProfilePage() {
   const { user, updateUser, loading } = useAuth();
   const router = useRouter();
   const { toast } = useToast();
-  
+
+  const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [branch, setBranch] = useState('');
@@ -68,10 +69,22 @@ export default function ProfilePage() {
       yearOfStudy: year,
     };
     updateUser(updatedDetails);
+    setIsEditing(false);
     toast({
       title: "Profile Updated",
       description: "Your changes have been saved successfully.",
     });
+  };
+
+  const handleCancel = () => {
+    if (user) {
+      setName(user.name);
+      setPhone(user.phoneNumber);
+      setBranch(user.branch);
+      setCollege(user.college);
+      setYear(user.yearOfStudy);
+    }
+    setIsEditing(false);
   };
 
   if (loading || !user) {
@@ -99,51 +112,65 @@ export default function ProfilePage() {
             {/* Left Column for Profile Editing */}
             <div className="lg:col-span-1">
               <Card className="w-full shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-headline text-primary">My Profile</CardTitle>
-                  <CardDescription>View and edit your personal information.</CardDescription>
+                <CardHeader className="flex flex-row justify-between items-center">
+                  <div>
+                    <CardTitle className="text-2xl font-headline text-primary">My Profile</CardTitle>
+                    <CardDescription>View and edit your personal information.</CardDescription>
+                  </div>
+                  {!isEditing && (
+                    <Button variant="ghost" size="icon" onClick={() => setIsEditing(true)}>
+                      <Pencil className="h-5 w-5" />
+                    </Button>
+                  )}
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSaveChanges} className="space-y-6">
                      <div className="grid gap-2">
                         <Label htmlFor="name">Full Name</Label>
-                        <Input id="name" value={name} onChange={(e) => setName(e.target.value)} />
+                        {isEditing ? <Input id="name" value={name} onChange={(e) => setName(e.target.value)} /> : <p className="text-muted-foreground">{name}</p>}
                     </div>
                     <div className="grid gap-2">
                         <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" type="email" value={user.email} disabled />
+                        <p className="text-muted-foreground">{user.email}</p>
                     </div>
                     <div className="grid gap-2">
                         <Label htmlFor="phoneNumber">Phone Number</Label>
-                        <Input id="phoneNumber" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                        {isEditing ? <Input id="phoneNumber" value={phone} onChange={(e) => setPhone(e.target.value)} /> : <p className="text-muted-foreground">{phone}</p>}
                     </div>
                     <div className="grid gap-2">
                         <Label htmlFor="branch">Branch</Label>
-                        <Input id="branch" value={branch} onChange={(e) => setBranch(e.target.value)} />
+                        {isEditing ? <Input id="branch" value={branch} onChange={(e) => setBranch(e.target.value)} /> : <p className="text-muted-foreground">{branch}</p>}
                     </div>
                     <div className="grid gap-2">
                         <Label htmlFor="college">College</Label>
-                        <Input id="college" value={college} onChange={(e) => setCollege(e.target.value)} />
+                        {isEditing ? <Input id="college" value={college} onChange={(e) => setCollege(e.target.value)} /> : <p className="text-muted-foreground">{college}</p>}
                     </div>
                     <div className="grid gap-2">
                         <Label htmlFor="yearOfStudy">Year of Study</Label>
-                        <Select value={year} onValueChange={setYear}>
-                        <SelectTrigger id="yearOfStudy">
-                            <SelectValue placeholder="Select year" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="1st Year">1st Year</SelectItem>
-                            <SelectItem value="2nd Year">2nd Year</SelectItem>
-                            <SelectItem value="3rd Year">3rd Year</SelectItem>
-                            <SelectItem value="4th Year">4th Year</SelectItem>
-                        </SelectContent>
-                        </Select>
+                        {isEditing ? (
+                          <Select value={year} onValueChange={setYear}>
+                            <SelectTrigger id="yearOfStudy">
+                                <SelectValue placeholder="Select year" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="1st Year">1st Year</SelectItem>
+                                <SelectItem value="2nd Year">2nd Year</SelectItem>
+                                <SelectItem value="3rd Year">3rd Year</SelectItem>
+                                <SelectItem value="4th Year">4th Year</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        ) : (
+                          <p className="text-muted-foreground">{year}</p>
+                        )}
                     </div>
-                    <div className="flex justify-end">
-                        <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                        Save Changes
-                        </Button>
-                    </div>
+                    {isEditing && (
+                      <div className="flex justify-end gap-2">
+                          <Button type="button" variant="ghost" onClick={handleCancel}>Cancel</Button>
+                          <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            Save Changes
+                          </Button>
+                      </div>
+                    )}
                   </form>
                 </CardContent>
               </Card>
