@@ -10,11 +10,6 @@ import { Button } from "@/components/ui/button";
 import { LayoutDashboard, Users, FileText, Megaphone, Rocket, LogOut, Home } from "lucide-react";
 import { Skeleton } from "../ui/skeleton";
 
-// --- Mock Admin Check ---
-// In a real application, this would involve checking a user's role from a database.
-const ADMIN_EMAIL = "admin@ecet.com";
-// -----------------------
-
 const navItems = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/users", label: "Users", icon: Users },
@@ -50,8 +45,8 @@ export function AdminSidebar() {
   }, []);
 
   useEffect(() => {
-    if (!loading && (!user || user.email !== ADMIN_EMAIL)) {
-      // If not loading and user is not an admin, redirect to home.
+    if (!loading && !user) {
+      // If not loading and no user is logged in, redirect to home.
       router.replace("/");
     }
   }, [user, loading, router]);
@@ -59,11 +54,6 @@ export function AdminSidebar() {
   if (!isMounted || loading || !user) {
     // Show skeleton or nothing while checking auth and mounting
     return <SidebarSkeleton />;
-  }
-
-  if (user.email !== ADMIN_EMAIL) {
-    // This case is handled by the useEffect redirect, but it's a good safeguard.
-    return null;
   }
 
   return (
