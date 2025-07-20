@@ -12,18 +12,22 @@ const papers = [
     { year: "2022", type: "Previous Paper" },
     { year: "2021", type: "Previous Paper" },
     { year: "2020", type: "Previous Paper" },
-    { year: "Custom", type: "Mock Test" },
 ];
 
 interface ExamDetailsProps {
   examName: string;
+  examSlug: string;
 }
 
-export function ExamDetails({ examName }: ExamDetailsProps) {
+export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
     const router = useRouter();
 
-    const handlePaperSelect = () => {
-        router.push('/exam');
+    const handlePaperSelect = (paperType: string) => {
+        if (paperType === 'Mock Test') {
+            router.push(`/exams/${examSlug}/custom`);
+        } else {
+            router.push('/exam');
+        }
     };
 
     return (
@@ -40,14 +44,14 @@ export function ExamDetails({ examName }: ExamDetailsProps) {
                         {papers.map((paper) => (
                             <Button
                                 key={paper.year}
-                                onClick={handlePaperSelect}
+                                onClick={() => handlePaperSelect(paper.type)}
                                 variant="outline"
                                 className="w-full h-auto py-6 px-4 flex flex-col items-start justify-center text-left gap-3 bg-card hover:bg-card/90 hover:scale-105 transition-transform duration-200"
                             >
                                 <div className="flex justify-between w-full items-center">
                                   <div className="flex items-center gap-3">
                                     <div className="p-2 bg-primary/10 rounded-md">
-                                        {paper.year === 'Custom' ? <FileText className="h-5 w-5 text-primary/80"/> : <Calendar className="h-5 w-5 text-primary/80"/>}
+                                        <Calendar className="h-5 w-5 text-primary/80"/>
                                     </div>
                                     <div>
                                         <p className="text-base font-semibold text-foreground">{paper.year} Paper</p>
@@ -58,6 +62,24 @@ export function ExamDetails({ examName }: ExamDetailsProps) {
                                 </div>
                             </Button>
                         ))}
+                         <Button
+                            onClick={() => handlePaperSelect('Mock Test')}
+                            variant="outline"
+                            className="w-full h-auto py-6 px-4 flex flex-col items-start justify-center text-left gap-3 bg-card hover:bg-card/90 hover:scale-105 transition-transform duration-200"
+                        >
+                            <div className="flex justify-between w-full items-center">
+                                <div className="flex items-center gap-3">
+                                <div className="p-2 bg-primary/10 rounded-md">
+                                    <FileText className="h-5 w-5 text-primary/80"/>
+                                </div>
+                                <div>
+                                    <p className="text-base font-semibold text-foreground">Custom Paper</p>
+                                    <p className="text-sm text-muted-foreground">Mock Test</p>
+                                </div>
+                                </div>
+                                <ArrowRight className="h-5 w-5 text-muted-foreground/50"/>
+                            </div>
+                        </Button>
                     </div>
                 </CardContent>
             </Card>

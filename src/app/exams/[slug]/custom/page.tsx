@@ -1,15 +1,15 @@
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
-import { ExamDetails } from "@/components/exam/ExamDetails";
+import { CustomTestSelection } from "@/components/exam/CustomTestSelection";
 import { exams } from "@/lib/exams";
 
-interface ExamDetailsPageProps {
+interface CustomTestPageProps {
   params: {
     slug: string;
   };
 }
 
-export default function ExamDetailsPage({ params }: ExamDetailsPageProps) {
+export default function CustomTestPage({ params }: CustomTestPageProps) {
   const { slug } = params;
   const exam = exams.find(e => e.slug === slug);
 
@@ -29,7 +29,7 @@ export default function ExamDetailsPage({ params }: ExamDetailsPageProps) {
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow bg-secondary/30 py-12">
-        <ExamDetails examName={exam.name} examSlug={exam.slug} />
+        <CustomTestSelection exam={exam} />
       </main>
       <AppFooter />
     </div>
