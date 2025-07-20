@@ -20,24 +20,23 @@ const overallPerformanceData = [
     { name: 'Unanswered', value: 5 },
 ];
 
-const COLORS = ['#84cc16', '#ef4444', '#a1a1aa'];
-
+const COLORS = ['hsl(var(--chart-1))', 'hsl(var(--chart-2))', 'hsl(var(--muted))'];
 
 export default function DashboardClient() {
-  const { user, userFromFirestore, loading } = useAuth();
+  const { user, loading } = useAuth();
 
   if (loading) {
     return <div className="flex h-full items-center justify-center"><Loader2 className="h-8 w-8 animate-spin" /></div>;
   }
 
-  if (!user || !userFromFirestore) {
+  if (!user) {
     return <div className="flex h-full items-center justify-center"><p>Please log in to see your dashboard.</p></div>;
   }
 
   return (
     <div className="container mx-auto p-4 md:p-8 space-y-8">
       <div>
-        <h1 className="text-3xl font-bold font-headline text-primary">Welcome, {userFromFirestore.name}!</h1>
+        <h1 className="text-3xl font-bold font-headline text-primary">Welcome, {user.name}!</h1>
         <p className="text-muted-foreground">Here is a summary of your learning progress.</p>
       </div>
 
@@ -47,7 +46,7 @@ export default function DashboardClient() {
                   <CardTitle>Branch</CardTitle>
               </CardHeader>
               <CardContent>
-                  <p className="text-2xl font-bold">{userFromFirestore.branch}</p>
+                  <p className="text-2xl font-bold">{user.branch}</p>
               </CardContent>
           </Card>
           <Card>
@@ -55,7 +54,7 @@ export default function DashboardClient() {
                   <CardTitle>College</CardTitle>
               </CardHeader>
               <CardContent>
-                  <p className="text-2xl font-bold">{userFromFirestore.college}</p>
+                  <p className="text-2xl font-bold">{user.college}</p>
               </CardContent>
           </Card>
           <Card>
@@ -63,7 +62,7 @@ export default function DashboardClient() {
                   <CardTitle>Year of Study</CardTitle>
               </CardHeader>
               <CardContent>
-                  <p className="text-2xl font-bold">{userFromFirestore.yearOfStudy}</p>
+                  <p className="text-2xl font-bold">{user.yearOfStudy}</p>
               </CardContent>
           </Card>
       </div>
