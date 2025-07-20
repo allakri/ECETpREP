@@ -29,7 +29,7 @@ export function AppFooter() {
               <li><Link href="/courses" className="hover:underline text-muted-foreground hover:text-primary">Courses</Link></li>
               <li><Link href="/contact" className="hover:underline text-muted-foreground hover:text-primary">Contact Us</Link></li>
               <li><Link href="/user-guide" className="hover:underline text-muted-foreground hover:text-primary">User Guide</Link></li>
-              <li><Link href="/dashboard" className="hover:underline text-muted-foreground hover:text-primary">Dashboard</Link></li>
+              <li><Link href="/profile" className="hover:underline text-muted-foreground hover:text-primary">Profile</Link></li>
             </ul>
           </div>
           <div>

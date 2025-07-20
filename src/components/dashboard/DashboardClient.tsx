@@ -3,7 +3,7 @@
 
 import { useAuth } from "@/hooks/use-auth";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Flame, Loader2, BarChart, CheckCircle, XCircle, HelpCircle, Trophy } from "lucide-react";
+import { Flame, BarChart, Trophy } from "lucide-react";
 import { ResponsiveContainer, BarChart as RechartsBarChart, XAxis, YAxis, Tooltip, Legend, Bar } from "recharts";
 import { ScoreChart } from "../results/ScoreChart";
 import { Skeleton } from "../ui/skeleton";

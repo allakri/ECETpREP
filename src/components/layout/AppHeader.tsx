@@ -22,7 +22,6 @@ export function AppHeader() {
   ];
 
   const protectedLinks = [
-    { href: "/dashboard", label: "Dashboard" },
     { href: "/profile", label: "Profile" },
   ];
 
