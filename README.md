@@ -14,7 +14,7 @@ This application provides a seamless and interactive experience for students pre
 
 2.  **Personalized Dashboard:** Upon logging in, the user is greeted with a dashboard that tracks their progress, including scores from past tests and a graphical breakdown of their performance.
 
-3.  **Select an Exam:** From the home page, students can choose from a variety of mock tests tailored to different engineering disciplines (e.g., Computer Science, Electronics, Civil Engineering).
+3.  **Select an Exam:** From the exams page, students can choose from a variety of mock tests tailored to different engineering disciplines (e.g., Computer Science, Electronics, Civil Engineering). They can opt to take a previous year's paper or create a custom test based on specific subjects.
 
 4.  **Take a Mock Test:** The exam interface simulates a real testing environment with a timer, a question palette for easy navigation, and the ability to mark questions for review.
 
@@ -30,10 +30,11 @@ This application provides a seamless and interactive experience for students pre
 
 ## Key Features
 
--   **User Authentication:** Secure registration and login for a personalized experience.
+-   **User Authentication:** Secure registration and login for a personalized experience using client-side session management.
 -   **Personalized Dashboard:** Track progress with score history and performance charts.
 -   **User Profiles:** View and manage personal and academic information.
 -   **Realistic Mock Tests:** A wide range of practice exams covering all major engineering branches in the ECET syllabus.
+-   **Customizable Tests:** Ability to create custom mock tests by selecting specific subjects.
 -   **Timed Exam Environment:** A built-in timer to help students practice time management skills.
 -   **Personalized AI Feedback:** Get instant, actionable insights on your performance to focus your study efforts.
 -   **24/7 AI Doubt Clarification:** An intelligent chat agent to help you understand complex concepts anytime.
