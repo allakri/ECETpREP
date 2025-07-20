@@ -1,7 +1,7 @@
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { ExamDetails } from "@/components/exam/ExamDetails";
-import { exams } from "@/components/exam/ExamSelection";
+import { exams } from "@/lib/exams";
 
 interface ExamDetailsPageProps {
   params: {
