@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Menu, Rocket, LogOut } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import { ThemeToggle } from "./ThemeToggle";
@@ -76,6 +76,9 @@ export function AppHeader() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-full max-w-xs bg-background text-foreground">
+                <SheetHeader className="sr-only">
+                  <SheetTitle>Mobile Navigation Menu</SheetTitle>
+                </SheetHeader>
                 <div className="flex flex-col space-y-4 pt-8">
                   {navLinks.map((link) => (
                     <Link key={link.href} href={link.href} passHref>
