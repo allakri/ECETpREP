@@ -9,35 +9,46 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
-import { useAuth } from "@/hooks/use-auth";
 import { useToast } from "@/hooks/use-toast";
+import { createClient } from "@/lib/supabase/client";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
-  const { login } = useAuth();
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+    const supabase = createClient();
     
-    // In a real app, you'd check password too. Here we just check if the user exists.
-    const success = login(email);
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
     
-    if (success) {
-      toast({
-        title: "Login Successful",
-        description: "Welcome back!",
-      });
-      router.push("/dashboard");
-    } else {
+    if (error) {
       toast({
         variant: "destructive",
         title: "Login Failed",
-        description: "No account found with that email. Please register first.",
+        description: error.message,
       });
+    } else {
+      toast({
+        title: "Login Successful",
+        description: "Welcome back! Redirecting to your dashboard...",
+      });
+      // The router refresh is important to allow the new user session
+      // (in the cookie) to be read by the server.
+      router.refresh();
+      router.push("/profile");
     }
+    setLoading(false);
   };
 
   return (
@@ -64,6 +75,9 @@ export default function LoginPage() {
               <div className="grid gap-2">
                 <div className="flex items-center">
                   <Label htmlFor="password">Password</Label>
+                   <Link href="#" className="ml-auto inline-block text-sm underline">
+                    Forgot your password?
+                  </Link>
                 </div>
                 <Input
                   id="password"
@@ -72,7 +86,8 @@ export default function LoginPage() {
                   required
                 />
               </div>
-              <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" disabled={loading}>
+                 {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 Login
               </Button>
             </form>

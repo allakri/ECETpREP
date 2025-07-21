@@ -1,11 +1,14 @@
 
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
+import { createClient } from '@/lib/supabase/client';
+import type { User as SupabaseUser } from '@supabase/supabase-js';
 
-// Simplified user type for client-side only
-interface User {
+// Define our custom user profile type
+interface UserProfile {
+  id: string;
   name: string;
   email: string;
   phoneNumber: string;
@@ -14,13 +17,14 @@ interface User {
   yearOfStudy: string;
 }
 
+// Combine Supabase user and our profile
+type User = SupabaseUser & UserProfile;
+
 interface AuthContextType {
   user: User | null;
   loading: boolean;
-  login: (email: string) => boolean;
-  logout: () => void;
-  register: (userData: Omit<User, 'email'> & { email: string }) => boolean;
-  updateUser: (updatedDetails: Partial<Omit<User, 'email'>>) => void;
+  logout: () => Promise<void>;
+  isAdmin: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -28,68 +32,81 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const supabase = createClient();
   const router = useRouter();
+  const pathname = usePathname();
+
+  const fetchUserProfile = useCallback(async (supabaseUser: SupabaseUser): Promise<User | null> => {
+    const { data: profile, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', supabaseUser.id)
+      .single();
+
+    if (error) {
+      console.error('Error fetching user profile:', error);
+      return null;
+    }
+
+    if (profile) {
+      return {
+        ...supabaseUser,
+        name: profile.name,
+        phoneNumber: profile.phone_number,
+        branch: profile.branch,
+        college: profile.college,
+        yearOfStudy: profile.year_of_study,
+      };
+    }
+    return null;
+  }, [supabase]);
+
 
   useEffect(() => {
-    // On initial load, check if user data exists in local storage
-    try {
-      const storedUser = localStorage.getItem('ecetUser');
-      if (storedUser) {
-        setUser(JSON.parse(storedUser));
-      }
-    } catch (error) {
-      console.error("Failed to parse user from localStorage", error);
-      localStorage.removeItem('ecetUser');
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  const login = (email: string): boolean => {
-    try {
-      const storedUser = localStorage.getItem('ecetUser');
-      if (storedUser) {
-        const parsedUser = JSON.parse(storedUser);
-        if (parsedUser.email === email) {
-          setUser(parsedUser);
-          return true;
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        setLoading(true);
+        if (session?.user) {
+          const userProfile = await fetchUserProfile(session.user);
+          setUser(userProfile);
+          setIsAdmin(userProfile?.email === 'admin@ecet.com');
+        } else {
+          setUser(null);
+          setIsAdmin(false);
         }
+        setLoading(false);
       }
-    } catch (error) {
-       console.error("Failed during login", error);
-    }
-    return false;
-  };
+    );
 
-  const register = (userData: User): boolean => {
-    try {
-      // For simplicity, this mock auth overwrites any existing user.
-      // A real backend would check for existing emails.
-      localStorage.setItem('ecetUser', JSON.stringify(userData));
-      setUser(userData);
-      return true;
-    } catch (error) {
-      console.error("Failed to register user", error);
-      return false;
-    }
-  };
+    // Initial check
+    const checkUser = async () => {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session?.user) {
+            const userProfile = await fetchUserProfile(session.user);
+            setUser(userProfile);
+            setIsAdmin(userProfile?.email === 'admin@ecet.com');
+        }
+        setLoading(false);
+    };
+    checkUser();
 
-  const updateUser = (updatedDetails: Partial<Omit<User, 'email'>>) => {
-    if (user) {
-      const newUser = { ...user, ...updatedDetails };
-      setUser(newUser);
-      localStorage.setItem('ecetUser', JSON.stringify(newUser));
-    }
-  };
 
-  const logout = () => {
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [supabase.auth, fetchUserProfile]);
+  
+  const logout = async () => {
+    await supabase.auth.signOut();
     setUser(null);
-    localStorage.removeItem('ecetUser');
+    setIsAdmin(false);
     router.push('/login');
+    router.refresh();
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, logout, register, updateUser }}>
+    <AuthContext.Provider value={{ user, loading, logout, isAdmin }}>
       {children}
     </AuthContext.Provider>
   );
