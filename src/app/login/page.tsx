@@ -32,6 +32,8 @@ export default function LoginPage() {
       password,
     });
     
+    setLoading(false);
+
     if (error) {
       toast({
         variant: "destructive",
@@ -48,7 +50,6 @@ export default function LoginPage() {
       router.refresh();
       router.push("/profile");
     }
-    setLoading(false);
   };
 
   return (
@@ -63,7 +64,7 @@ export default function LoginPage() {
           <CardContent>
             <form onSubmit={handleLogin} className="grid gap-4">
               <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">Email <span className="text-destructive">*</span></Label>
                 <Input
                   id="email"
                   name="email"
@@ -74,7 +75,7 @@ export default function LoginPage() {
               </div>
               <div className="grid gap-2">
                 <div className="flex items-center">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password">Password <span className="text-destructive">*</span></Label>
                    <Link href="#" className="ml-auto inline-block text-sm underline">
                     Forgot your password?
                   </Link>
@@ -98,9 +99,4 @@ export default function LoginPage() {
               </Link>
             </div>
           </CardContent>
-        </Card>
-      </main>
-      <AppFooter />
-    </div>
-  );
-}
+        

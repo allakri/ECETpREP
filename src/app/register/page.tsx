@@ -46,6 +46,8 @@ export default function RegisterPage() {
       },
     });
 
+    setLoading(false);
+
     if (error) {
       toast({
         variant: "destructive",
@@ -57,10 +59,10 @@ export default function RegisterPage() {
         title: "Registration Pending",
         description: "Please check your email to verify your account.",
       });
-      // You might want to redirect to a "check your email" page
-      // For now, we just clear the form.
+       // Clear form after successful submission
+      (e.target as HTMLFormElement).reset();
+      setYear("");
     }
-    setLoading(false);
   };
 
   return (
@@ -70,36 +72,36 @@ export default function RegisterPage() {
         <Card className="w-full max-w-2xl shadow-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-headline text-primary">Create an account</CardTitle>
-            <CardDescription>Enter your details to get started.</CardDescription>
+            <CardDescription>Enter your details to get started. Fields marked with <span className="text-destructive">*</span> are required.</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleRegister} className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="grid gap-2">
-                <Label htmlFor="name">Full Name</Label>
+                <Label htmlFor="name">Full Name <span className="text-destructive">*</span></Label>
                 <Input id="name" name="name" placeholder="John Doe" required />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">Email <span className="text-destructive">*</span></Label>
                 <Input id="email" name="email" type="email" placeholder="m@example.com" required />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">Password <span className="text-destructive">*</span></Label>
                 <Input id="password" name="password" type="password" required />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="phoneNumber">Phone Number</Label>
+                <Label htmlFor="phoneNumber">Phone Number <span className="text-destructive">*</span></Label>
                 <Input id="phoneNumber" name="phoneNumber" placeholder="+1 234 567 890" required />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="branch">Branch</Label>
+                <Label htmlFor="branch">Branch <span className="text-destructive">*</span></Label>
                 <Input id="branch" name="branch" placeholder="Computer Science" required />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="college">College Name</Label>
+                <Label htmlFor="college">College Name <span className="text-destructive">*</span></Label>
                 <Input id="college" name="college" placeholder="University of Technology" required />
               </div>
               <div className="grid gap-2 md:col-span-2">
-                <Label htmlFor="yearOfStudy">Year of Study</Label>
+                <Label htmlFor="yearOfStudy">Year of Study <span className="text-destructive">*</span></Label>
                 <Select required onValueChange={setYear} value={year}>
                   <SelectTrigger id="yearOfStudy">
                     <SelectValue placeholder="Select your year of study" />
@@ -127,8 +129,4 @@ export default function RegisterPage() {
             </div>
           </CardContent>
         </Card>
-      </main>
-      <AppFooter />
-    </div>
-  );
-}
+      </main
