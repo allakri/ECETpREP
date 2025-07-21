@@ -1,6 +1,6 @@
 # ECET Prep Platform
 
-Welcome to the ECET Prep Platform, a comprehensive, AI-powered web application designed to help students master the Engineering Common Entrance Test (ECET) and achieve their engineering aspirations.
+Welcome to the ECET Prep Platform, a comprehensive, AI-powered web application designed to help students master the Engineering Common Entrance Test (ECET) and achieve their engineering aspirations. This platform includes a full-featured admin panel for easy management.
 
 ## Our Mission
 
@@ -8,40 +8,36 @@ Our primary motive is to democratize high-quality exam preparation. We aim to pr
 
 ## How It Works
 
-This application provides a seamless and interactive experience for students preparing for the ECET. The core workflow is as follows:
+This application provides a seamless and interactive experience for both students and administrators.
 
-1.  **Register & Login:** Students create an account with their academic details. This allows for a personalized experience.
+### Student Workflow
 
-2.  **Personalized Dashboard:** Upon logging in, the user is greeted with a dashboard that tracks their progress, including scores from past tests, a graphical breakdown of their performance, and a daily streak to encourage consistent practice.
+1.  **Register & Login:** Students create an account with their academic details for a personalized experience.
+2.  **Unified Profile Hub:** Upon logging in, the user has access to a central profile page that includes a dashboard for progress tracking, personal notes, and a todo list to organize study tasks.
+3.  **Explore the Roadmap:** A strategic guide on the "Roadmap" page walks students through their entire preparation journey.
+4.  **Take Mock Tests:** Students can select from a wide range of mock tests, including previous years' papers and custom tests based on specific subjects. The exam interface simulates a real testing environment.
+5.  **Get AI-Powered Results:** After submitting an exam, students receive a detailed results page with their score, a breakdown of answers, and AI-generated adaptive feedback and readiness assessment.
+6.  **AI Doubt Solver:** A specialized chat interface allows students to get 24/7 help with ECET-related questions from an AI tutor.
+7.  **Community Engagement:** A discussion forum provides a space for students to collaborate and learn from their peers.
 
-3.  **Select an Exam:** From the exams page, students can choose from a variety of mock tests tailored to different engineering disciplines (e.g., Computer Science, Electronics, Civil Engineering). They can opt to take a previous year's paper or create a custom test based on specific subjects.
+### Admin Workflow
 
-4.  **Take a Mock Test:** The exam interface simulates a real testing environment with a timer, a question palette for easy navigation, and the ability to mark questions for review.
-
-5.  **Get Instant Results & AI Feedback:** Upon submission, students are directed to a comprehensive results page. This includes:
-    *   A detailed score breakdown (correct, incorrect, unanswered).
-    *   **AI-Powered Adaptive Feedback:** An AI analyzes the student's performance and past scores to provide actionable advice with an adaptive, emotion-aware tone.
-    *   **AI Readiness Assessment:** A personalized, encouraging assessment of the student's preparedness for the actual exam.
-
-6.  **Clear Doubts with an AI Tutor:** Students can use the "AI Doubt Solver," a specialized chat interface. This AI tutor is designed to:
-    *   Answer questions related to ECET subjects.
-    *   Provide explanations for specific exam questions, using the context of the student's recent test.
-    *   Politely guide the user back to their studies if they ask off-topic questions, ensuring a focused learning experience.
-
-7. **Engage with the Community:** A dedicated discussion forum allows students to ask questions, share knowledge, and learn collaboratively with their peers.
+1.  **Secure Login:** Administrators log in to access a dedicated admin panel.
+2.  **Dashboard Overview:** The admin dashboard provides at-a-glance statistics, such as total users, tests taken, and active discussions.
+3.  **Manage Test Series:** Admins can upload new test questions via JSON files and view existing test data.
+4.  **Post Announcements:** An interface to create and post platform-wide announcements for all users.
+5.  **View Users:** A list of recently joined users can be monitored from the dashboard.
 
 ## Key Features
 
--   **User Authentication:** Secure registration and login for a personalized experience using client-side session management.
--   **Personalized Dashboard:** Track progress with score history, performance charts, and a daily learning streak.
--   **User Profiles:** View and manage personal and academic information.
--   **Realistic Mock Tests:** A wide range of practice exams covering all major engineering branches in the ECET syllabus.
--   **Customizable Tests:** Ability to create custom mock tests by selecting specific subjects.
--   **Timed Exam Environment:** A built-in timer to help students practice time management skills.
--   **Emotion-Aware AI Feedback:** Get instant, actionable insights on your performance with a supportive tone that adapts to your progress.
--   **24/7 AI Doubt Clarification:** An intelligent chat agent to help you understand complex concepts anytime.
--   **Community Discussion Forum:** A space for students to collaborate, ask questions, and support each other.
--   **Clean, Responsive UI:** A modern and intuitive user interface built with Next.js, ShadCN UI, and Tailwind CSS.
+-   **User Authentication:** Secure registration and login for students and administrators.
+-   **Unified Profile Hub:** A central page to manage personal information, track progress, take study notes, and manage a todo list.
+-   **Realistic Mock Tests:** A wide range of practice exams covering all major engineering branches.
+-   **Emotion-Aware AI Feedback:** Instant, actionable insights on performance with a supportive, adaptive tone.
+-   **24/7 AI Doubt Clarification:** An intelligent chat agent for complex concepts.
+-   **Community Discussion Forum:** A space for peer-to-peer learning.
+-   **Comprehensive Admin Panel:** A dedicated interface for admins to manage users, test content, and announcements.
+-   **Modern, Responsive UI:** A clean and intuitive UI built with Next.js, ShadCN UI, and Tailwind CSS, featuring smooth animations and a professional design system with light and dark modes.
 
 ## Tech Stack
 
@@ -49,4 +45,5 @@ This application provides a seamless and interactive experience for students pre
 -   **Language:** TypeScript
 -   **Styling:** Tailwind CSS
 -   **UI Components:** ShadCN UI
+-   **Animation:** `framer-motion`
 -   **AI/Generative AI:** Google AI & Genkit

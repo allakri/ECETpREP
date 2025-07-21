@@ -47,6 +47,7 @@ This application provides a seamless and interactive experience for students pre
 -   **24/7 AI Doubt Clarification:** An intelligent chat agent to help you understand complex concepts anytime.
 -   **Community Discussion Forum:** A space for students to collaborate, ask questions, and support each other.
 -   **Modern, Responsive UI:** A clean and intuitive user interface built with a professional design system that supports both light and dark modes, enhanced with smooth animations.
+-   **Admin Panel:** A comprehensive dashboard for administrators to manage test content, users, and announcements.
 
 ## Tech Stack
 
