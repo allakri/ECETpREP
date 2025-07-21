@@ -12,32 +12,12 @@ import { useAuth } from '@/hooks/use-auth';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Flame, BarChart as BarChartIcon, Trophy, Pencil, Book, ListChecks, LayoutDashboard } from 'lucide-react';
-import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, Bar } from "recharts";
-import { ScoreChart } from "@/components/results/ScoreChart";
+import { Loader2, Pencil, Book, ListChecks, LayoutDashboard, BarChart2, CheckCircle } from 'lucide-react';
 import { StudyActivityCalendar } from '@/components/profile/StudyActivityCalendar';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PersonalNotes } from '@/components/profile/PersonalNotes';
 import { TodoList } from '@/components/profile/TodoList';
 import { Skeleton } from '@/components/ui/skeleton';
-
-
-// Mock data, in a real app this would come from a database
-const examData = [
-  { name: 'Test 1', score: 65 },
-  { name: 'Test 2', score: 78 },
-  { name: 'Test 3', score: 82 },
-  { name: 'Test 4', score: 75 },
-  { name: 'Test 5', score: 91 },
-];
-
-const overallPerformanceData = {
-    score: 81,
-    correctCount: 45,
-    incorrectCount: 15,
-    unansweredCount: 5,
-    totalQuestions: 65
-};
 
 const ProfilePageSkeleton = () => (
     <div className="flex flex-col min-h-screen bg-background">
@@ -150,7 +130,7 @@ export default function ProfilePage() {
       <main className="flex-grow p-4 md:p-8">
         <div className="container mx-auto">
             <div className="mb-8">
-                <h1 className="text-3xl font-bold font-headline text-primary">Welcome, {user.name}!</h1>
+                <h1 className="text-3xl font-bold font-headline text-primary">Welcome, {user.name || 'Student'}!</h1>
                 <p className="text-muted-foreground">Your personal study hub. Track your progress, take notes, and manage your tasks.</p>
             </div>
             
@@ -181,7 +161,7 @@ export default function ProfilePage() {
                         <form onSubmit={handleSaveChanges} className="space-y-6">
                             <div className="grid gap-2">
                                 <Label htmlFor="name">Full Name</Label>
-                                {isEditing ? <Input id="name" value={name} onChange={(e) => setName(e.target.value)} /> : <p className="text-muted-foreground">{name}</p>}
+                                {isEditing ? <Input id="name" value={name} onChange={(e) => setName(e.target.value)} /> : <p className="text-muted-foreground">{name || 'Not set'}</p>}
                             </div>
                             <div className="grid gap-2">
                                 <Label htmlFor="email">Email Address</Label>
@@ -189,15 +169,15 @@ export default function ProfilePage() {
                             </div>
                             <div className="grid gap-2">
                                 <Label htmlFor="phoneNumber">Phone Number</Label>
-                                {isEditing ? <Input id="phoneNumber" value={phone} onChange={(e) => setPhone(e.target.value)} /> : <p className="text-muted-foreground">{phone}</p>}
+                                {isEditing ? <Input id="phoneNumber" value={phone} onChange={(e) => setPhone(e.target.value)} /> : <p className="text-muted-foreground">{phone || 'Not set'}</p>}
                             </div>
                             <div className="grid gap-2">
                                 <Label htmlFor="branch">Branch</Label>
-                                {isEditing ? <Input id="branch" value={branch} onChange={(e) => setBranch(e.target.value)} /> : <p className="text-muted-foreground">{branch}</p>}
+                                {isEditing ? <Input id="branch" value={branch} onChange={(e) => setBranch(e.target.value)} /> : <p className="text-muted-foreground">{branch || 'Not set'}</p>}
                             </div>
                             <div className="grid gap-2">
                                 <Label htmlFor="college">College</Label>
-                                {isEditing ? <Input id="college" value={college} onChange={(e) => setCollege(e.target.value)} /> : <p className="text-muted-foreground">{college}</p>}
+                                {isEditing ? <Input id="college" value={college} onChange={(e) => setCollege(e.target.value)} /> : <p className="text-muted-foreground">{college || 'Not set'}</p>}
                             </div>
                             <div className="grid gap-2">
                                 <Label htmlFor="yearOfStudy">Year of Study</Label>
@@ -214,7 +194,7 @@ export default function ProfilePage() {
                                     </SelectContent>
                                 </Select>
                                 ) : (
-                                <p className="text-muted-foreground">{year}</p>
+                                <p className="text-muted-foreground">{year || 'Not set'}</p>
                                 )}
                             </div>
                             {isEditing && (
@@ -237,21 +217,21 @@ export default function ProfilePage() {
                             <Card>
                                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                                     <CardTitle className="text-sm font-medium">Avg. Score</CardTitle>
-                                    <Trophy className="h-4 w-4 text-muted-foreground" />
+                                    <CheckCircle className="h-4 w-4 text-muted-foreground" />
                                 </CardHeader>
                                 <CardContent>
-                                    <div className="text-2xl font-bold">78%</div>
-                                    <p className="text-xs text-muted-foreground">+5% from last month</p>
+                                    <div className="text-2xl font-bold">0%</div>
+                                    <p className="text-xs text-muted-foreground">Complete a test to see your average.</p>
                                 </CardContent>
                             </Card>
                             <Card>
                                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                                     <CardTitle className="text-sm font-medium">Tests Taken</CardTitle>
-                                    <BarChartIcon className="h-4 w-4 text-muted-foreground" />
+                                    <BarChart2 className="h-4 w-4 text-muted-foreground" />
                                 </CardHeader>
                                 <CardContent>
-                                    <div className="text-2xl font-bold">12</div>
-                                    <p className="text-xs text-muted-foreground">2 more to reach your goal</p>
+                                    <div className="text-2xl font-bold">0</div>
+                                    <p className="text-xs text-muted-foreground">Let's get that number up!</p>
                                 </CardContent>
                             </Card>
                         </div>
@@ -260,34 +240,31 @@ export default function ProfilePage() {
                         <StudyActivityCalendar />
                         </div>
 
-                        <div className="grid grid-cols-1 xl:grid-cols-5 gap-8">
-                            <Card className="shadow-lg xl:col-span-3">
+                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                            <Card className="shadow-lg">
                                 <CardHeader>
                                     <CardTitle>Exam Score History</CardTitle>
-                                    <CardDescription>Your scores on recent mock tests show a positive trend.</CardDescription>
+                                    <CardDescription>Your scores will appear here after you take an exam.</CardDescription>
                                 </CardHeader>
-                                <CardContent>
-                                    <ResponsiveContainer width="100%" height={300}>
-                                    <BarChart data={examData}>
-                                        <XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
-                                        <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${value}%`}/>
-                                        <RechartsTooltip
-                                            contentStyle={{
-                                                backgroundColor: "hsl(var(--background))",
-                                                border: "1px solid hsl(var(--border))",
-                                                borderRadius: "var(--radius)"
-                                            }}
-                                        />
-                                        <Legend iconType="circle" />
-                                        <Bar dataKey="score" fill="hsl(var(--chart-1))" radius={[4, 4, 0, 0]} />
-                                    </BarChart>
-                                    </ResponsiveContainer>
+                                <CardContent className="h-[300px] flex items-center justify-center">
+                                    <div className="text-center text-muted-foreground">
+                                        <p>No exam data yet.</p>
+                                        <Button variant="link" onClick={() => router.push('/exams')}>Take your first test!</Button>
+                                    </div>
                                 </CardContent>
                             </Card>
 
-                            <div className="xl:col-span-2">
-                                <ScoreChart {...overallPerformanceData} />
-                            </div>
+                            <Card className="shadow-lg">
+                                <CardHeader>
+                                    <CardTitle>Exam Performance</CardTitle>
+                                    <CardDescription>A breakdown of your results will show here.</CardDescription>
+                                </CardHeader>
+                                <CardContent className="h-[300px] flex items-center justify-center">
+                                    <div className="text-center text-muted-foreground">
+                                        <p>Complete an exam to see your performance.</p>
+                                    </div>
+                                </CardContent>
+                            </Card>
                         </div>
                     </div>
                 </div>
