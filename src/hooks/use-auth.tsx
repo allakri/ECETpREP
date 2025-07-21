@@ -17,6 +17,16 @@ interface UserProfile {
   yearOfStudy: string;
 }
 
+// User profile data that can be updated
+type UpdatableUserProfile = {
+  name?: string;
+  phone_number?: string;
+  branch?: string;
+  college?: string;
+  year_of_study?: string;
+};
+
+
 // Combine Supabase user and our profile
 type User = SupabaseUser & UserProfile;
 
@@ -24,7 +34,7 @@ interface AuthContextType {
   user: User | null;
   loading: boolean;
   logout: () => Promise<void>;
-  updateUser: (details: Partial<UserProfile>) => Promise<void>;
+  updateUser: (details: UpdatableUserProfile) => Promise<void>;
   isAdmin: boolean;
 }
 
@@ -38,23 +48,39 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
 
   const fetchUserProfile = useCallback(async (supabaseUser: SupabaseUser): Promise<User | null> => {
-    // In a real app, you would fetch from a 'profiles' table
-    // For now, we'll use the metadata and mock the rest
-    const userMetadata = supabaseUser.user_metadata;
-    if (userMetadata) {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', supabaseUser.id)
+      .single();
+
+    if (error && error.code !== 'PGRST116') { // PGRST116: no rows found
+      console.error('Error fetching profile:', error);
+      return null;
+    }
+
+    if (data) {
       return {
         ...supabaseUser,
-        name: userMetadata.name || 'No Name',
-        phoneNumber: userMetadata.phone_number || 'No Phone',
-        branch: userMetadata.branch || 'No Branch',
-        college: userMetadata.college || 'No College',
-        yearOfStudy: userMetadata.year_of_study || 'No Year',
-        // id is already in supabaseUser
-        // email is already in supabaseUser
+        name: data.name || '',
+        phoneNumber: data.phone_number || '',
+        branch: data.branch || '',
+        college: data.college || '',
+        yearOfStudy: data.year_of_study || '',
       };
     }
-    return null;
-  }, []);
+    
+     // Fallback to user_metadata if profile table is empty
+    const userMetadata = supabaseUser.user_metadata;
+    return {
+      ...supabaseUser,
+      name: userMetadata.name || 'No Name',
+      phoneNumber: userMetadata.phone_number || 'No Phone',
+      branch: userMetadata.branch || 'No Branch',
+      college: userMetadata.college || 'No College',
+      yearOfStudy: userMetadata.year_of_study || 'No Year',
+    };
+  }, [supabase]);
 
 
   useEffect(() => {
@@ -99,13 +125,38 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     router.push('/login');
   };
 
-  const updateUser = async (details: Partial<UserProfile>) => {
+  const updateUser = async (details: UpdatableUserProfile) => {
     if (!user) return;
-    // In a real app, you'd update the database.
-    // Here we just update local state.
-    const updatedUser = { ...user, ...details };
-    setUser(updatedUser);
-    // You would also call supabase.auth.updateUser({ data: ... })
+
+    // 1. Update the user metadata in auth.users
+    const { data: authData, error: authError } = await supabase.auth.updateUser({
+        data: details
+    });
+
+    if (authError) {
+        console.error("Error updating user auth data:", authError);
+        return;
+    }
+
+    // 2. Update the corresponding row in the public.profiles table
+    const { data: profileData, error: profileError } = await supabase
+        .from('profiles')
+        .update({
+            ...details,
+            updated_at: new Date().toISOString(),
+        })
+        .eq('id', user.id);
+
+    if (profileError) {
+        console.error("Error updating user profile:", profileError);
+        return;
+    }
+
+    // 3. Refresh the local user state with the updated information
+    if (authData.user) {
+        const updatedUserProfile = await fetchUserProfile(authData.user);
+        setUser(updatedUserProfile);
+    }
   };
 
   return (

@@ -90,6 +90,7 @@ export default function ProfilePage() {
   const { toast } = useToast();
 
   const [isEditing, setIsEditing] = useState(false);
+  const [isUpdating, setIsUpdating] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [branch, setBranch] = useState('');
@@ -101,24 +102,26 @@ export default function ProfilePage() {
       router.push('/login');
     }
     if (user) {
-      setName(user.name);
-      setPhone(user.phoneNumber);
-      setBranch(user.branch);
-      setCollege(user.college);
-      setYear(user.yearOfStudy);
+      setName(user.name || '');
+      setPhone(user.phoneNumber || '');
+      setBranch(user.branch || '');
+      setCollege(user.college || '');
+      setYear(user.yearOfStudy || '');
     }
   }, [user, loading, router]);
 
-  const handleSaveChanges = (e: React.FormEvent) => {
+  const handleSaveChanges = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsUpdating(true);
     const updatedDetails = {
       name,
-      phoneNumber: phone,
+      phone_number: phone,
       branch,
       college,
-      yearOfStudy: year,
+      year_of_study: year,
     };
-    updateUser(updatedDetails);
+    await updateUser(updatedDetails);
+    setIsUpdating(false);
     setIsEditing(false);
     toast({
       title: "Profile Updated",
@@ -216,8 +219,9 @@ export default function ProfilePage() {
                             </div>
                             {isEditing && (
                             <div className="flex justify-end gap-2">
-                                <Button type="button" variant="ghost" onClick={handleCancel}>Cancel</Button>
-                                <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                                <Button type="button" variant="ghost" onClick={handleCancel} disabled={isUpdating}>Cancel</Button>
+                                <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90" disabled={isUpdating}>
+                                    {isUpdating && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                                     Save Changes
                                 </Button>
                             </div>
