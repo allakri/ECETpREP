@@ -2,7 +2,6 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,16 +15,15 @@ import { createClient } from "@/lib/supabase/client";
 import { Loader2 } from "lucide-react";
 
 export default function RegisterPage() {
-  const router = useRouter();
   const { toast } = useToast();
   const [year, setYear] = useState("");
   const [loading, setLoading] = useState(false);
+  const [supabase] = useState(() => createClient());
 
   const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     const formData = new FormData(e.currentTarget);
-    const supabase = createClient();
     
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
@@ -129,4 +127,8 @@ export default function RegisterPage() {
             </div>
           </CardContent>
         </Card>
-      </main
+      </main>
+      <AppFooter />
+    </div>
+  );
+}

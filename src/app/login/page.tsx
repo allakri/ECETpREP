@@ -18,6 +18,7 @@ export default function LoginPage() {
   const router = useRouter();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const [supabase] = useState(() => createClient());
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,7 +26,6 @@ export default function LoginPage() {
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
-    const supabase = createClient();
     
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -99,4 +99,9 @@ export default function LoginPage() {
               </Link>
             </div>
           </CardContent>
-        
+        </Card>
+      </main>
+      <AppFooter />
+    </div>
+  );
+}

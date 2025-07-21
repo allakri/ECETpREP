@@ -2,9 +2,9 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
-import type { User as SupabaseUser } from '@supabase/supabase-js';
+import type { User as SupabaseUser, SupabaseClient } from '@supabase/supabase-js';
 
 // Define our custom user profile type
 interface UserProfile {
@@ -24,6 +24,7 @@ interface AuthContextType {
   user: User | null;
   loading: boolean;
   logout: () => Promise<void>;
+  updateUser: (details: Partial<UserProfile>) => Promise<void>;
   isAdmin: boolean;
 }
 
@@ -33,34 +34,27 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
-  const supabase = createClient();
+  const [supabase] = useState(() => createClient());
   const router = useRouter();
-  const pathname = usePathname();
 
   const fetchUserProfile = useCallback(async (supabaseUser: SupabaseUser): Promise<User | null> => {
-    const { data: profile, error } = await supabase
-      .from('profiles')
-      .select('*')
-      .eq('id', supabaseUser.id)
-      .single();
-
-    if (error) {
-      console.error('Error fetching user profile:', error);
-      return null;
-    }
-
-    if (profile) {
+    // In a real app, you would fetch from a 'profiles' table
+    // For now, we'll use the metadata and mock the rest
+    const userMetadata = supabaseUser.user_metadata;
+    if (userMetadata) {
       return {
         ...supabaseUser,
-        name: profile.name,
-        phoneNumber: profile.phone_number,
-        branch: profile.branch,
-        college: profile.college,
-        yearOfStudy: profile.year_of_study,
+        name: userMetadata.name || 'No Name',
+        phoneNumber: userMetadata.phone_number || 'No Phone',
+        branch: userMetadata.branch || 'No Branch',
+        college: userMetadata.college || 'No College',
+        yearOfStudy: userMetadata.year_of_study || 'No Year',
+        // id is already in supabaseUser
+        // email is already in supabaseUser
       };
     }
     return null;
-  }, [supabase]);
+  }, []);
 
 
   useEffect(() => {
@@ -101,12 +95,21 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     await supabase.auth.signOut();
     setUser(null);
     setIsAdmin(false);
-    router.push('/login');
     router.refresh();
+    router.push('/login');
+  };
+
+  const updateUser = async (details: Partial<UserProfile>) => {
+    if (!user) return;
+    // In a real app, you'd update the database.
+    // Here we just update local state.
+    const updatedUser = { ...user, ...details };
+    setUser(updatedUser);
+    // You would also call supabase.auth.updateUser({ data: ... })
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, logout, isAdmin }}>
+    <AuthContext.Provider value={{ user, loading, logout, updateUser, isAdmin }}>
       {children}
     </AuthContext.Provider>
   );
