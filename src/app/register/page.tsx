@@ -10,43 +10,57 @@ import { Label } from "@/components/ui/label";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useAuth } from "@/hooks/use-auth";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { createClient } from "@/lib/supabase/client";
+import { Loader2 } from "lucide-react";
 
 export default function RegisterPage() {
   const router = useRouter();
-  const { register } = useAuth();
   const { toast } = useToast();
   const [year, setYear] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     const formData = new FormData(e.currentTarget);
+    const supabase = createClient();
+    
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
     const userData = {
       name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      phoneNumber: formData.get("phoneNumber") as string,
+      phone_number: formData.get("phoneNumber") as string,
       branch: formData.get("branch") as string,
       college: formData.get("college") as string,
-      yearOfStudy: year,
+      year_of_study: year,
     };
+    
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: userData,
+        emailRedirectTo: `${location.origin}/auth/callback`,
+      },
+    });
 
-    const success = register(userData);
-
-    if (success) {
+    if (error) {
       toast({
-        title: "Registration Successful",
-        description: "Your account has been created.",
-      });
-      router.push("/dashboard");
-    } else {
-       toast({
         variant: "destructive",
         title: "Registration Failed",
-        description: "An account with this email already exists.",
+        description: error.message,
       });
+    } else {
+      toast({
+        title: "Registration Pending",
+        description: "Please check your email to verify your account.",
+      });
+      // You might want to redirect to a "check your email" page
+      // For now, we just clear the form.
     }
+    setLoading(false);
   };
 
   return (
@@ -99,7 +113,8 @@ export default function RegisterPage() {
                 </Select>
               </div>
               <div className="md:col-span-2">
-                <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" disabled={loading}>
+                  {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   Create Account
                 </Button>
               </div>
