@@ -52,6 +52,7 @@ export function Hero() {
                 width={600}
                 height={600}
                 className="w-full max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-cover"
+                priority
               />
             </div>
           </div>

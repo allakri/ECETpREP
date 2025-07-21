@@ -22,7 +22,6 @@ const quotes = [
 
 const mockPastScores = [65, 78, 82, 75];
 
-
 export default function ResultsClient() {
   const router = useRouter();
   const [answers, setAnswers] = useState<AnswerSheet | null>(null);
