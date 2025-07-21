@@ -84,9 +84,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 
   useEffect(() => {
+    // onAuthStateChange fires an initial session event, so we don't need a separate getSession() call.
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        setLoading(true);
         if (session?.user) {
           const userProfile = await fetchUserProfile(session.user);
           setUser(userProfile);
@@ -99,23 +99,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       }
     );
 
-    // Initial check
-    const checkUser = async () => {
-        const { data: { session } } = await supabase.auth.getSession();
-        if (session?.user) {
-            const userProfile = await fetchUserProfile(session.user);
-            setUser(userProfile);
-            setIsAdmin(userProfile?.email === 'admin@ecet.com');
-        }
-        setLoading(false);
-    };
-    checkUser();
-
-
     return () => {
       subscription.unsubscribe();
     };
-  }, [supabase.auth, fetchUserProfile]);
+  }, [supabase, fetchUserProfile]);
   
   const logout = async () => {
     await supabase.auth.signOut();
