@@ -4,22 +4,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
-import { subDays, format, getDay, startOfMonth, getDaysInMonth, addMonths } from 'date-fns';
+import { subDays, format, getDay, startOfMonth, getDaysInMonth } from 'date-fns';
 
-// --- Mock Data Generation ---
-// In a real app, this would come from a database.
-const generateMockActivity = () => {  
-  const activity: { [key: string]: number } = {};
-  for (let i = 0; i < 365; i++) {
-    const date = format(subDays(new Date(), i), 'yyyy-MM-dd');
-    if (Math.random() > 0.4) { // ~60% of days have activity
-      activity[date] = Math.floor(Math.random() * 5) + 1; // 1 to 5 activities
-    }
-  }
-  return activity;
-};
-
-const activityData = generateMockActivity();
+// In a real app, this data would come from a database, fetched based on the user's exam history.
+// For now, we start with no activity.
+const activityData: { [key: string]: number } = {};
 // -----------------------------
 
 
