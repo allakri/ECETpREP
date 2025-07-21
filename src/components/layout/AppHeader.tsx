@@ -16,9 +16,9 @@ export function AppHeader() {
     { href: "/exams", label: "Exams" },
     { href: "/roadmap", label: "Roadmap" },
     { href: "/discussions", label: "Discussions" },
-    { href: "/about", label: "About Us" },
     { href: "/courses", label: "Courses" },
     { href: "/user-guide", label: "User Guide" },
+    { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact Us" },
   ];
 
