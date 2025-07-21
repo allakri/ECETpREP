@@ -140,7 +140,7 @@ export function PersonalNotes() {
                     <Button onClick={handleCreateNew}>
                         <Plus className="mr-2 h-4 w-4" /> Create New
                     </Button>
-                </CardHeader>
+                </div>
             </CardHeader>
             <CardContent>
                 <div className="space-y-4">
