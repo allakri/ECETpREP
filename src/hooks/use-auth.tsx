@@ -63,6 +63,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       return {
         ...supabaseUser,
         name: data.name || '',
+        email: supabaseUser.email || '',
         phoneNumber: data.phone_number || '',
         branch: data.branch || '',
         college: data.college || '',
@@ -75,6 +76,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return {
       ...supabaseUser,
       name: userMetadata.name || 'No Name',
+      email: supabaseUser.email || '',
       phoneNumber: userMetadata.phone_number || 'No Phone',
       branch: userMetadata.branch || 'No Branch',
       college: userMetadata.college || 'No College',
