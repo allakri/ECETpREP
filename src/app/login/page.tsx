@@ -12,13 +12,16 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { useToast } from "@/hooks/use-toast";
 import { createClient } from "@/lib/supabase/client";
 import { useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Loader2, Eye, EyeOff } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
   const [supabase] = useState(() => createClient());
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => setShowPassword(!showPassword);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,12 +46,12 @@ export default function LoginPage() {
     } else {
       toast({
         title: "Login Successful",
-        description: "Welcome back! Redirecting to your dashboard...",
+        description: "Welcome back! Redirecting to the homepage...",
       });
       // The router refresh is important to allow the new user session
       // (in the cookie) to be read by the server.
       router.refresh();
-      router.push("/profile");
+      router.push("/");
     }
   };
 
@@ -76,16 +79,27 @@ export default function LoginPage() {
               <div className="grid gap-2">
                 <div className="flex items-center">
                   <Label htmlFor="password">Password <span className="text-destructive">*</span></Label>
-                   <Link href="#" className="ml-auto inline-block text-sm underline">
+                   <Link href="#" className="ml-auto inline-block text-sm underline text-primary hover:text-primary/80">
                     Forgot your password?
                   </Link>
                 </div>
-                <Input
-                  id="password"
-                  name="password"
-                  type="password"
-                  required
-                />
+                <div className="relative">
+                  <Input
+                    id="password"
+                    name="password"
+                    type={showPassword ? "text" : "password"}
+                    required
+                  />
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon"
+                    className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7 text-muted-foreground"
+                    onClick={togglePasswordVisibility}
+                  >
+                    {showPassword ? <EyeOff /> : <Eye />}
+                  </Button>
+                </div>
               </div>
               <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" disabled={loading}>
                  {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
