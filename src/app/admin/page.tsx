@@ -1,4 +1,6 @@
 
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, FileText, Megaphone, Upload, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,7 +14,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
+} from "@/components/ui/table";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useState, useEffect } from "react";
 
 const users = [
   { name: "Priya Sharma", email: "priya.sharma@example.com", branch: "Computer Science", joined: "2023-10-15" },
@@ -21,7 +25,55 @@ const users = [
   { name: "Suresh Kumar", email: "suresh.k@example.com", branch: "Civil Engineering", joined: "2023-11-01" },
 ];
 
+const AdminDashboardSkeleton = () => (
+  <div className="space-y-8">
+    <Skeleton className="h-9 w-1/3" />
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <Skeleton className="h-28 w-full" />
+      <Skeleton className="h-28 w-full" />
+      <Skeleton className="h-28 w-full" />
+    </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <Skeleton className="h-64 w-full" />
+      <Skeleton className="h-64 w-full" />
+    </div>
+    <Card>
+      <CardHeader>
+        <Skeleton className="h-8 w-1/4" />
+        <Skeleton className="h-4 w-1/2" />
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="flex justify-between items-center">
+              <Skeleton className="h-5 w-1/4" />
+              <Skeleton className="h-5 w-1/4" />
+              <Skeleton className="h-5 w-1/4" />
+              <Skeleton className="h-5 w-1/4" />
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  </div>
+);
+
+
 export default function AdminDashboardPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data fetching
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 1 second delay
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <AdminDashboardSkeleton />;
+  }
+  
   return (
     <div className="space-y-8">
       <h1 className="text-3xl font-bold font-headline text-primary">Admin Dashboard</h1>

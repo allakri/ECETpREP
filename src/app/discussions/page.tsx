@@ -1,10 +1,14 @@
 
+"use client";
+
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlusCircle, MessageSquare } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useState, useEffect } from "react";
 
 const discussions = [
   {
@@ -39,7 +43,63 @@ const discussions = [
   },
 ];
 
+const DiscussionsPageSkeleton = () => (
+  <div className="flex flex-col min-h-screen bg-background">
+    <AppHeader />
+    <main className="flex-grow bg-background py-12">
+      <div className="container mx-auto px-4">
+        <Card className="max-w-4xl mx-auto shadow-lg bg-card">
+          <CardHeader className="flex flex-row justify-between items-center">
+            <div>
+              <Skeleton className="h-9 w-72 mb-2" />
+              <Skeleton className="h-5 w-96" />
+            </div>
+            <Skeleton className="h-10 w-52" />
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {[...Array(3)].map((_, i) => (
+                <Card key={i} className="bg-background">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-start gap-4">
+                        <Skeleton className="h-10 w-10 rounded-full" />
+                        <div className="space-y-2">
+                          <Skeleton className="h-6 w-80" />
+                          <Skeleton className="h-4 w-60" />
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <Skeleton className="h-5 w-8" />
+                        <Skeleton className="h-5 w-24" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </main>
+    <AppFooter />
+  </div>
+);
+
 export default function DiscussionsPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <DiscussionsPageSkeleton />;
+  }
+  
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
