@@ -4,13 +4,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
-import { subDays, format, getDay, startOfMonth, getDaysInMonth } from 'date-fns';
+import { format, getDay, startOfMonth, getDaysInMonth, endOfMonth } from 'date-fns';
+import { Flame, Sparkles, CalendarClock } from 'lucide-react';
 
-// In a real app, this data would come from a database, fetched based on the user's exam history.
-// For now, we start with no activity.
+// In a real app, this data would come from a database.
 const activityData: { [key: string]: number } = {};
-// -----------------------------
-
 
 const getActivityColor = (count: number | undefined) => {
   if (!count || count === 0) return 'bg-muted/30';
@@ -20,49 +18,41 @@ const getActivityColor = (count: number | undefined) => {
   return 'bg-green-700/90 dark:bg-green-400/90';
 };
 
-const getMonthName = (monthIndex: number) => {
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    return monthNames[monthIndex];
-}
+const streakStats = [
+    { title: "Current Streak", value: "0 Days", icon: Flame },
+    { title: "Last Month", value: "0 Days", icon: CalendarClock },
+    { title: "Highest Streak", value: "0 Days", icon: Sparkles },
+]
 
 export function StudyActivityCalendar() {
   const today = new Date();
-  const calendarMonths = [];
-  let totalContributions = 0;
+  const monthStart = startOfMonth(today);
+  const monthEnd = endOfMonth(today);
+  const daysInMonth = getDaysInMonth(today);
+  const firstDayOfMonth = getDay(monthStart); // 0 = Sunday, 1 = Monday...
 
-  for (let i = 3; i >= 0; i--) {
-    const date = subDays(today, i * 30);
-    const monthStart = startOfMonth(date);
-    const monthIndex = monthStart.getMonth();
-    const year = monthStart.getFullYear();
-    const daysInMonth = getDaysInMonth(monthStart);
-    const firstDayOfMonth = getDay(monthStart);
+  const calendarDays = [];
 
-    const days = Array.from({ length: firstDayOfMonth }, (_, i) => <div key={`empty-${i}`} />);
+  // Add empty divs for days before the first day of the month
+  for (let i = 0; i < firstDayOfMonth; i++) {
+    calendarDays.push(<div key={`empty-${i}`} className="h-4 w-4 rounded-sm" />);
+  }
 
-    for (let day = 1; day <= daysInMonth; day++) {
-        const currentDate = new Date(year, monthIndex, day);
-        const formattedDate = format(currentDate, 'yyyy-MM-dd');
-        const count = activityData[formattedDate];
-        if(count) totalContributions += count;
-        
-        days.push(
-            <Tooltip key={formattedDate}>
-            <TooltipTrigger asChild>
-                <div className={cn("h-3 w-3 rounded-sm", getActivityColor(count))} />
-            </TooltipTrigger>
-            <TooltipContent>
-                <p className="text-xs">{count || 'No'} contributions on {format(currentDate, 'MMM d, yyyy')}</p>
-            </TooltipContent>
-            </Tooltip>
-        );
-    }
-    
-    calendarMonths.push(
-        <div key={`${year}-${monthIndex}`}>
-            <p className="text-xs text-muted-foreground mb-1">{getMonthName(monthIndex)}</p>
-            <div className="grid grid-cols-7 grid-rows-5 gap-1">{days}</div>
-        </div>
+  // Add days of the month
+  for (let day = 1; day <= daysInMonth; day++) {
+    const currentDate = new Date(today.getFullYear(), today.getMonth(), day);
+    const formattedDate = format(currentDate, 'yyyy-MM-dd');
+    const count = activityData[formattedDate];
+
+    calendarDays.push(
+      <Tooltip key={formattedDate}>
+        <TooltipTrigger asChild>
+          <div className={cn("h-4 w-4 rounded-sm", getActivityColor(count))} />
+        </TooltipTrigger>
+        <TooltipContent>
+          <p className="text-xs">{count || 'No'} contributions on {format(currentDate, 'MMM d, yyyy')}</p>
+        </TooltipContent>
+      </Tooltip>
     );
   }
 
@@ -70,21 +60,39 @@ export function StudyActivityCalendar() {
     <Card>
       <CardHeader>
         <CardTitle>Study Activity</CardTitle>
-        <CardDescription>{totalContributions} contributions in the last 4 months.</CardDescription>
+        <CardDescription>Your daily study consistency.</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="space-y-6">
+        <div className="grid grid-cols-3 gap-4 text-center">
+            {streakStats.map(stat => {
+                const Icon = stat.icon;
+                return (
+                    <div key={stat.title} className="p-3 bg-muted/50 rounded-lg">
+                        <Icon className="h-6 w-6 text-muted-foreground mx-auto mb-2" />
+                        <p className="text-sm font-semibold">{stat.title}</p>
+                        <p className="text-lg font-bold text-primary">{stat.value}</p>
+                    </div>
+                )
+            })}
+        </div>
         <TooltipProvider>
-            <div className="flex justify-start gap-3 overflow-x-auto pb-2">
-                {calendarMonths}
-            </div>
-            <div className="flex justify-end items-center gap-2 mt-2 text-xs text-muted-foreground">
-                Less
-                <div className="h-3 w-3 rounded-sm bg-muted/30" />
-                <div className="h-3 w-3 rounded-sm bg-green-300/60 dark:bg-green-800/60" />
-                <div className="h-3 w-3 rounded-sm bg-green-500/70 dark:bg-green-600/70" />
-                <div className="h-3 w-3 rounded-sm bg-green-600/80 dark:bg-green-500/80" />
-                <div className="h-3 w-3 rounded-sm bg-green-700/90 dark:bg-green-400/90" />
-                More
+            <div>
+                <div className="flex justify-between items-center mb-2">
+                    <p className="font-semibold text-lg">{format(today, 'MMMM yyyy')}</p>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        Less
+                        <div className="h-3 w-3 rounded-sm bg-muted/30" />
+                        <div className="h-3 w-3 rounded-sm bg-green-300/60" />
+                        <div className="h-3 w-3 rounded-sm bg-green-500/70" />
+                        More
+                    </div>
+                </div>
+                <div className="grid grid-cols-7 gap-2">
+                     {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+                        <div key={day} className="text-xs font-medium text-muted-foreground text-center">{day}</div>
+                    ))}
+                    {calendarDays}
+                </div>
             </div>
         </TooltipProvider>
       </CardContent>
