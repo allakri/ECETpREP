@@ -9,6 +9,12 @@ import { PlusCircle, MessageSquare } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState, useEffect } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
+
 
 const discussions = [
   {
@@ -111,10 +117,36 @@ export default function DiscussionsPage() {
                 <CardTitle className="text-3xl font-headline text-primary">Community Discussions</CardTitle>
                 <CardDescription>Ask questions, share knowledge, and learn with your peers.</CardDescription>
               </div>
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <PlusCircle className="mr-2 h-5 w-5" />
-                Start a New Discussion
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    <PlusCircle className="mr-2 h-5 w-5" />
+                    Start a New Discussion
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[625px]">
+                    <DialogHeader>
+                        <DialogTitle className="font-headline text-primary text-2xl">Start a New Discussion</DialogTitle>
+                    </DialogHeader>
+                    <div className="grid gap-4 py-4">
+                        <div className="grid grid-cols-4 items-center gap-4">
+                            <Label htmlFor="title" className="text-right">
+                                Title
+                            </Label>
+                            <Input id="title" placeholder="Enter a descriptive title for your question" className="col-span-3" />
+                        </div>
+                        <div className="grid grid-cols-4 items-start gap-4">
+                            <Label htmlFor="message" className="text-right pt-2">
+                                Message
+                            </Label>
+                            <Textarea id="message" placeholder="Type your message here. Be clear and concise." className="col-span-3" rows={8}/>
+                        </div>
+                    </div>
+                    <DialogFooter>
+                        <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">Post Discussion</Button>
+                    </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -130,17 +162,17 @@ export default function DiscussionsPage() {
                           <div>
                             <h3 className="font-semibold text-lg text-primary cursor-pointer hover:underline">{discussion.title}</h3>
                             <p className="text-sm text-muted-foreground">
-                              Started by {discussion.author} in{" "}
-                              <span className="font-medium text-foreground">{discussion.topic}</span>
+                              Started by {discussion.author}
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center text-sm text-muted-foreground text-right">
+                        <div className="flex items-center text-sm text-muted-foreground text-right gap-4">
+                          <Badge variant="outline">{discussion.topic}</Badge>
                           <div className="flex items-center gap-2">
                             <MessageSquare className="h-4 w-4" />
                             <span>{discussion.replies}</span>
                           </div>
-                          <div className="ml-4 w-24">
+                          <div className="w-24">
                             <p>{discussion.lastReply}</p>
                           </div>
                         </div>
