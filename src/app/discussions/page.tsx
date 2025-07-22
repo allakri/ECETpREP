@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { useAuth } from "@/hooks/use-auth";
 
 
 const discussions = [
@@ -94,6 +95,7 @@ const DiscussionsPageSkeleton = () => (
 
 export default function DiscussionsPage() {
   const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -117,36 +119,38 @@ export default function DiscussionsPage() {
                 <CardTitle className="text-3xl font-headline text-primary">Community Discussions</CardTitle>
                 <CardDescription>Ask questions, share knowledge, and learn with your peers.</CardDescription>
               </div>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                    <PlusCircle className="mr-2 h-5 w-5" />
-                    Start a New Discussion
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-[625px]">
-                    <DialogHeader>
-                        <DialogTitle className="font-headline text-primary text-2xl">Start a New Discussion</DialogTitle>
-                    </DialogHeader>
-                    <div className="grid gap-4 py-4">
-                        <div className="grid grid-cols-4 items-center gap-4">
-                            <Label htmlFor="title" className="text-right">
-                                Title
-                            </Label>
-                            <Input id="title" placeholder="Enter a descriptive title for your question" className="col-span-3" />
-                        </div>
-                        <div className="grid grid-cols-4 items-start gap-4">
-                            <Label htmlFor="message" className="text-right pt-2">
-                                Message
-                            </Label>
-                            <Textarea id="message" placeholder="Type your message here. Be clear and concise." className="col-span-3" rows={8}/>
-                        </div>
-                    </div>
-                    <DialogFooter>
-                        <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">Post Discussion</Button>
-                    </DialogFooter>
-                </DialogContent>
-              </Dialog>
+              {user && (
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                      <PlusCircle className="mr-2 h-5 w-5" />
+                      Start a New Discussion
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[625px]">
+                      <DialogHeader>
+                          <DialogTitle className="font-headline text-primary text-2xl">Start a New Discussion</DialogTitle>
+                      </DialogHeader>
+                      <div className="grid gap-4 py-4">
+                          <div className="grid grid-cols-4 items-center gap-4">
+                              <Label htmlFor="title" className="text-right">
+                                  Title
+                              </Label>
+                              <Input id="title" placeholder="Enter a descriptive title for your question" className="col-span-3" />
+                          </div>
+                          <div className="grid grid-cols-4 items-start gap-4">
+                              <Label htmlFor="message" className="text-right pt-2">
+                                  Message
+                              </Label>
+                              <Textarea id="message" placeholder="Type your message here. Be clear and concise." className="col-span-3" rows={8}/>
+                          </div>
+                      </div>
+                      <DialogFooter>
+                          <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">Post Discussion</Button>
+                      </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+              )}
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
