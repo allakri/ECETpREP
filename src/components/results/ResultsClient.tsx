@@ -87,7 +87,7 @@ export default function ResultsClient() {
   
   
   useEffect(() => {
-    if (answers && questions && user) {
+    if (answers && questions && user && !isProgressSaved) {
       const getAIInsightsAndSave = async () => {
         setLoading(true);
         try {
@@ -133,8 +133,10 @@ export default function ResultsClient() {
         }
       };
       getAIInsightsAndSave();
+    } else if (!user) {
+        setLoading(false); // Not logged in, so don't show loading state
     }
-  }, [answers, questions, score, incorrectTopics, user, saveProgress]);
+  }, [answers, questions, score, incorrectTopics, user, saveProgress, isProgressSaved]);
 
   if (!isMounted) {
     // This state is now handled by the Suspense fallback
@@ -152,7 +154,7 @@ export default function ResultsClient() {
       <div className="max-w-7xl mx-auto space-y-6">
         <div>
           <h1 className="text-3xl font-bold font-headline text-primary">Here's your result</h1>
-          <p className="text-muted-foreground">Congratulations on completing the exam. Your progress has been saved.</p>
+          <p className="text-muted-foreground">Congratulations on completing the exam. {isProgressSaved ? 'Your progress has been saved.' : 'Log in to save your progress.'}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
@@ -184,7 +186,7 @@ export default function ResultsClient() {
                       <Skeleton className="h-4 w-1/2" />
                     </div>
                   ) : (
-                    <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">{feedback}</div>
+                    <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">{feedback || 'Log in to receive personalized AI feedback based on your performance history.'}</div>
                   )}
                 </CardContent>
               </Card>
@@ -206,7 +208,7 @@ export default function ResultsClient() {
                       <Skeleton className="h-4 w-3/4" />
                     </div>
                   ) : (
-                    <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">{readiness}</div>
+                    <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">{readiness || 'Log in to receive a personalized readiness assessment.'}</div>
                   )}
                 </CardContent>
               </Card>

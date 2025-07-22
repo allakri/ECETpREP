@@ -106,6 +106,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
+        setLoading(true);
         if (session?.user) {
           const userProfile = await fetchUserProfile(session.user);
           setUser(userProfile);
@@ -125,27 +126,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   
   const logout = async () => {
     await supabase.auth.signOut();
-    setUser(null);
-    setIsAdmin(false);
     router.refresh();
-    router.push('/login');
   };
 
   const updateUser = async (details: UpdatableUserProfile) => {
     if (!user) return;
 
-    // 1. Update the user metadata in auth.users as a fallback
-    const { data: authData, error: authError } = await supabase.auth.updateUser({
-        data: details
-    });
-
-    if (authError) {
-        console.error("Error updating user auth data:", authError);
-        return;
-    }
-
-    // 2. Update the corresponding row in the public.profiles table
-    const { error: profileError } = await supabase
+    const { error } = await supabase
         .from('profiles')
         .update({
             ...details,
@@ -153,14 +140,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         })
         .eq('id', user.id);
 
-    if (profileError) {
-        console.error("Error updating user profile:", profileError);
+    if (error) {
+        console.error("Error updating user profile:", error);
         return;
     }
 
-    // 3. Refresh the local user state with the updated information
-    if (authData.user) {
-        const updatedUserProfile = await fetchUserProfile(authData.user);
+    // Refresh the local user state with the updated information
+    const {data: { user: supabaseUser }} = await supabase.auth.getUser();
+    if (supabaseUser) {
+        const updatedUserProfile = await fetchUserProfile(supabaseUser);
         setUser(updatedUserProfile);
     }
   };
