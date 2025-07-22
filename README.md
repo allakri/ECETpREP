@@ -12,8 +12,8 @@ This application provides a seamless and interactive experience for both student
 
 ### Student Workflow
 
-1.  **Register & Login:** Students create an account with their academic details for a personalized experience.
-2.  **Unified Profile Hub:** Upon logging in, the user has access to a central profile page that includes a dashboard for progress tracking, personal notes, and a todo list to organize study tasks.
+1.  **Register & Login:** Students create an account with their academic details for a personalized experience. The login and registration process is secure and includes password visibility toggles and a "Forgot Password" flow. The user session persists across page reloads.
+2.  **Unified Profile Hub:** Upon logging in, the user has access to a central profile page that includes a dashboard for progress tracking, personal notes, and a todo list to organize study tasks. All data is saved in the browser's local storage for persistence.
 3.  **Explore the Roadmap:** A strategic guide on the "Roadmap" page walks students through their entire preparation journey.
 4.  **Take Mock Tests:** Students can select from a wide range of mock tests, including previous years' papers and custom tests based on specific subjects. The exam interface simulates a real testing environment.
 5.  **Get AI-Powered Results:** After submitting an exam, students receive a detailed results page with their score, a breakdown of answers, and AI-generated adaptive feedback and readiness assessment.
@@ -30,8 +30,8 @@ This application provides a seamless and interactive experience for both student
 
 ## Key Features
 
--   **User Authentication:** Secure registration and login for students and administrators.
--   **Unified Profile Hub:** A central page to manage personal information, track progress, take study notes, and manage a todo list.
+-   **User Authentication:** Secure registration and login for students and administrators, including password reset functionality and persistent sessions.
+-   **Unified Profile Hub:** A central page to manage personal information, track progress, take personal study notes, and manage a todo list, with data saved to local storage.
 -   **Realistic Mock Tests:** A wide range of practice exams covering all major engineering branches.
 -   **Emotion-Aware AI Feedback:** Instant, actionable insights on performance with a supportive, adaptive tone.
 -   **24/7 AI Doubt Clarification:** An intelligent chat agent for complex concepts.
