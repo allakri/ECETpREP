@@ -10,7 +10,7 @@ import { AppFooter } from '@/components/layout/AppFooter';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useAuth } from '@/hooks/use-auth';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, Pencil, Book, ListChecks, LayoutDashboard, BarChart2, CheckCircle } from 'lucide-react';
 import { StudyActivityCalendar } from '@/components/profile/StudyActivityCalendar';
@@ -122,15 +122,18 @@ export default function ProfilePage() {
     setIsEditing(false);
   };
 
-  const overallPerformanceData = useAuth().user?.exam_score_history.reduce(
-    (acc, test) => {
-        const score = Math.round(test.score);
-        acc.correctCount += score;
-        acc.incorrectCount += (100 - score);
-        return acc;
-    },
-    { score: useAuth().user?.avg_score || 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, totalQuestions: (useAuth().user?.tests_taken || 0) * 100 }
-  );
+  const overallPerformanceData = useMemo(() => {
+    if (!user || !user.exam_score_history) return null;
+    return user.exam_score_history.reduce(
+        (acc, test) => {
+            const score = Math.round(test.score);
+            acc.correctCount += score;
+            acc.incorrectCount += (100 - score);
+            return acc;
+        },
+        { score: user.avg_score || 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, totalQuestions: (user.tests_taken || 0) * 100 }
+    );
+  }, [user]);
 
   if (loading || !user) {
     return <ProfilePageSkeleton />;
@@ -321,3 +324,4 @@ export default function ProfilePage() {
   );
 }
 
+    
