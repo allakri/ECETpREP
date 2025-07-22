@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { generateAdaptiveFeedback } from '@/ai/flows/adaptive-feedback';
 import { assessReadiness } from '@/ai/flows/readiness-assessment';
@@ -11,6 +11,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Skeleton } from '@/components/ui/skeleton';
 import { BrainCircuit, Home, Lightbulb, UserCheck, BarChart, MessageCircleQuestion } from 'lucide-react';
 import { ScoreChart } from './ScoreChart';
+import { useAuth } from '@/hooks/use-auth';
+import { format } from 'date-fns';
 
 const quotes = [
   "Believe you can and you're halfway there.",
@@ -20,10 +22,9 @@ const quotes = [
   "Success is the sum of small efforts, repeated day in and day out."
 ];
 
-const mockPastScores = [65, 78, 82, 75];
-
 export default function ResultsClient() {
   const router = useRouter();
+  const { user, updateUserProgress } = useAuth();
   const [answers, setAnswers] = useState<AnswerSheet | null>(null);
   const [questions, setQuestions] = useState<Question[] | null>(null);
   const [feedback, setFeedback] = useState<string | null>(null);
@@ -31,6 +32,7 @@ export default function ResultsClient() {
   const [loading, setLoading] = useState(true);
   const [quote, setQuote] = useState('');
   const [isMounted, setIsMounted] = useState(false);
+  const [isProgressSaved, setIsProgressSaved] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -72,9 +74,21 @@ export default function ResultsClient() {
     };
   }, [answers, questions]);
   
+  const saveProgress = useCallback(async () => {
+    if (user && score > 0 && !isProgressSaved) {
+        await updateUserProgress({
+            examName: `Test #${(user.tests_taken || 0) + 1}`,
+            score: score,
+            date: format(new Date(), 'yyyy-MM-dd'),
+        });
+        setIsProgressSaved(true);
+    }
+  }, [user, score, isProgressSaved, updateUserProgress]);
+  
+  
   useEffect(() => {
-    if (answers && questions) {
-      const getAIInsights = async () => {
+    if (answers && questions && user) {
+      const getAIInsightsAndSave = async () => {
         setLoading(true);
         try {
           const correctAnswers: Record<string, string> = {};
@@ -89,7 +103,7 @@ export default function ResultsClient() {
             userAnswers[qId] = answers[qId]
           }
           
-          const pastScoresWithCurrent = [...mockPastScores, score];
+          const pastScoresWithCurrent = [...(user.exam_score_history || []).map(h => h.score), score];
 
           const [feedbackResult, readinessResult] = await Promise.all([
             generateAdaptiveFeedback({
@@ -103,7 +117,8 @@ export default function ResultsClient() {
               examName: 'ECET Practice Exam',
               score: score,
               incorrectTopics: incorrectTopics
-            })
+            }),
+            saveProgress() // Save progress in parallel
           ]);
           
           setFeedback(feedbackResult.feedback);
@@ -117,9 +132,9 @@ export default function ResultsClient() {
           setLoading(false);
         }
       };
-      getAIInsights();
+      getAIInsightsAndSave();
     }
-  }, [answers, questions, score, incorrectTopics]);
+  }, [answers, questions, score, incorrectTopics, user, saveProgress]);
 
   if (!isMounted) {
     // This state is now handled by the Suspense fallback
@@ -137,7 +152,7 @@ export default function ResultsClient() {
       <div className="max-w-7xl mx-auto space-y-6">
         <div>
           <h1 className="text-3xl font-bold font-headline text-primary">Here's your result</h1>
-          <p className="text-muted-foreground">Congratulations on completing the exam. Here's a detailed breakdown.</p>
+          <p className="text-muted-foreground">Congratulations on completing the exam. Your progress has been saved.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">

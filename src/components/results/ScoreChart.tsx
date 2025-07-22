@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -28,6 +29,10 @@ const chartConfig = {
     label: "Incorrect",
     color: "hsl(var(--chart-2))",
   },
+   unanswered: {
+    label: "Unanswered",
+    color: "hsl(var(--muted))",
+  },
 } satisfies ChartConfig
 
 interface ScoreChartProps {
@@ -41,7 +46,8 @@ interface ScoreChartProps {
 export function ScoreChart({ score, correctCount, incorrectCount, unansweredCount, totalQuestions }: ScoreChartProps) {
   const chartData = [
     { name: "correct", value: correctCount, fill: "var(--color-correct)" },
-    { name: "incorrect", value: incorrectCount + unansweredCount, fill: "var(--color-incorrect)" },
+    { name: "incorrect", value: incorrectCount, fill: "var(--color-incorrect)" },
+    { name: "unanswered", value: unansweredCount, fill: "var(--color-unanswered)" },
   ]
 
   const id = "pie-interactive"
@@ -59,7 +65,7 @@ export function ScoreChart({ score, correctCount, incorrectCount, unansweredCoun
         >
           <PieChart>
             <Pie
-              data={chartData}
+              data={chartData.filter(d => d.value > 0)} // Don't render segments with 0 value
               dataKey="value"
               nameKey="name"
               innerRadius={60}
@@ -122,7 +128,7 @@ export function ScoreChart({ score, correctCount, incorrectCount, unansweredCoun
             </div>
             <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-muted"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[--color-unanswered]"></span>
                     <span>Unanswered</span>
                 </div>
                 <span>{unansweredCount}/{totalQuestions}</span>

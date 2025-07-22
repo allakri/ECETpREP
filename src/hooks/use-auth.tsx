@@ -6,6 +6,12 @@ import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
 import type { User as SupabaseUser, SupabaseClient } from '@supabase/supabase-js';
 
+export interface ExamScore {
+  examName: string;
+  score: number;
+  date: string;
+}
+
 // Define our custom user profile type
 interface UserProfile {
   id: string;
@@ -15,6 +21,14 @@ interface UserProfile {
   branch: string;
   college: string;
   yearOfStudy: string;
+  // New progress fields
+  avg_score: number;
+  tests_taken: number;
+  study_activities: string[]; // Array of dates 'yyyy-MM-dd'
+  exam_score_history: ExamScore[];
+  current_streak: number;
+  last_month_streak: number;
+  highest_streak: number;
 }
 
 // User profile data that can be updated
@@ -24,17 +38,25 @@ type UpdatableUserProfile = {
   branch?: string;
   college?: string;
   year_of_study?: string;
+  avg_score?: number;
+  tests_taken?: number;
+  study_activities?: string[];
+  exam_score_history?: ExamScore[];
+  current_streak?: number;
+  last_month_streak?: number;
+  highest_streak?: number;
 };
 
 
 // Combine Supabase user and our profile
-type User = SupabaseUser & UserProfile;
+export type User = SupabaseUser & UserProfile;
 
 interface AuthContextType {
   user: User | null;
   loading: boolean;
   logout: () => Promise<void>;
   updateUser: (details: UpdatableUserProfile) => Promise<void>;
+  updateUserProgress: (newScore: ExamScore) => Promise<void>;
   isAdmin: boolean;
 }
 
@@ -59,34 +81,29 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       return null;
     }
 
-    if (data) {
-      return {
-        ...supabaseUser,
-        name: data.name || '',
-        email: supabaseUser.email || '',
-        phoneNumber: data.phone_number || '',
-        branch: data.branch || '',
-        college: data.college || '',
-        yearOfStudy: data.year_of_study || '',
-      };
-    }
-    
-     // Fallback to user_metadata if profile table is empty
     const userMetadata = supabaseUser.user_metadata;
+    const profileData = data || {};
+
     return {
-      ...supabaseUser,
-      name: userMetadata.name || 'No Name',
-      email: supabaseUser.email || '',
-      phoneNumber: userMetadata.phone_number || 'No Phone',
-      branch: userMetadata.branch || 'No Branch',
-      college: userMetadata.college || 'No College',
-      yearOfStudy: userMetadata.year_of_study || 'No Year',
+        ...supabaseUser,
+        name: profileData.name || userMetadata.name || 'No Name',
+        email: supabaseUser.email || '',
+        phoneNumber: profileData.phone_number || userMetadata.phone_number || 'No Phone',
+        branch: profileData.branch || userMetadata.branch || 'No Branch',
+        college: profileData.college || userMetadata.college || 'No College',
+        yearOfStudy: profileData.year_of_study || userMetadata.year_of_study || 'No Year',
+        avg_score: profileData.avg_score || 0,
+        tests_taken: profileData.tests_taken || 0,
+        study_activities: profileData.study_activities || [],
+        exam_score_history: profileData.exam_score_history || [],
+        current_streak: profileData.current_streak || 0,
+        last_month_streak: profileData.last_month_streak || 0,
+        highest_streak: profileData.highest_streak || 0,
     };
   }, [supabase]);
 
 
   useEffect(() => {
-    // onAuthStateChange fires an initial session event, so we don't need a separate getSession() call.
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         if (session?.user) {
@@ -117,7 +134,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const updateUser = async (details: UpdatableUserProfile) => {
     if (!user) return;
 
-    // 1. Update the user metadata in auth.users
+    // 1. Update the user metadata in auth.users as a fallback
     const { data: authData, error: authError } = await supabase.auth.updateUser({
         data: details
     });
@@ -128,7 +145,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
 
     // 2. Update the corresponding row in the public.profiles table
-    const { data: profileData, error: profileError } = await supabase
+    const { error: profileError } = await supabase
         .from('profiles')
         .update({
             ...details,
@@ -148,8 +165,30 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  const updateUserProgress = async (newScore: ExamScore) => {
+    if (!user) return;
+
+    // Calculate new progress metrics
+    const newTestsTaken = user.tests_taken + 1;
+    const newHistory = [...user.exam_score_history, newScore];
+    const newAvgScore = newHistory.reduce((acc, item) => acc + item.score, 0) / newHistory.length;
+    const newActivities = [...new Set([...user.study_activities, newScore.date])];
+    
+    // TODO: Implement streak logic in the future
+
+    const progressUpdate: UpdatableUserProfile = {
+      tests_taken: newTestsTaken,
+      avg_score: newAvgScore,
+      exam_score_history: newHistory,
+      study_activities: newActivities,
+    };
+
+    await updateUser(progressUpdate);
+  };
+
+
   return (
-    <AuthContext.Provider value={{ user, loading, logout, updateUser, isAdmin }}>
+    <AuthContext.Provider value={{ user, loading, logout, updateUser, updateUserProgress, isAdmin }}>
       {children}
     </AuthContext.Provider>
   );

@@ -18,6 +18,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PersonalNotes } from '@/components/profile/PersonalNotes';
 import { TodoList } from '@/components/profile/TodoList';
 import { Skeleton } from '@/components/ui/skeleton';
+import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Legend, Bar as RechartsBar } from 'recharts';
+import { ScoreChart } from '@/components/results/ScoreChart';
 
 const ProfilePageSkeleton = () => (
     <div className="flex flex-col min-h-screen bg-background">
@@ -120,6 +122,16 @@ export default function ProfilePage() {
     setIsEditing(false);
   };
 
+  const overallPerformanceData = useAuth().user?.exam_score_history.reduce(
+    (acc, test) => {
+        const score = Math.round(test.score);
+        acc.correctCount += score;
+        acc.incorrectCount += (100 - score);
+        return acc;
+    },
+    { score: useAuth().user?.avg_score || 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, totalQuestions: (useAuth().user?.tests_taken || 0) * 100 }
+  );
+
   if (loading || !user) {
     return <ProfilePageSkeleton />;
   }
@@ -220,8 +232,8 @@ export default function ProfilePage() {
                                     <CheckCircle className="h-4 w-4 text-muted-foreground" />
                                 </CardHeader>
                                 <CardContent>
-                                    <div className="text-2xl font-bold">0%</div>
-                                    <p className="text-xs text-muted-foreground">Complete a test to see your average.</p>
+                                    <div className="text-2xl font-bold">{user.avg_score.toFixed(1)}%</div>
+                                    <p className="text-xs text-muted-foreground">Across {user.tests_taken} tests.</p>
                                 </CardContent>
                             </Card>
                             <Card>
@@ -230,39 +242,65 @@ export default function ProfilePage() {
                                     <BarChart2 className="h-4 w-4 text-muted-foreground" />
                                 </CardHeader>
                                 <CardContent>
-                                    <div className="text-2xl font-bold">0</div>
-                                    <p className="text-xs text-muted-foreground">Let's get that number up!</p>
+                                    <div className="text-2xl font-bold">{user.tests_taken}</div>
+                                    <p className="text-xs text-muted-foreground">Keep up the great work!</p>
                                 </CardContent>
                             </Card>
                         </div>
 
                         <div>
-                        <StudyActivityCalendar />
+                            <StudyActivityCalendar activityData={user.study_activities} streakData={{current: user.current_streak, lastMonth: user.last_month_streak, highest: user.highest_streak}}/>
                         </div>
 
                         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
                             <Card className="shadow-lg">
                                 <CardHeader>
                                     <CardTitle>Exam Score History</CardTitle>
-                                    <CardDescription>Your scores will appear here after you take an exam.</CardDescription>
+                                    <CardDescription>Your performance over time.</CardDescription>
                                 </CardHeader>
-                                <CardContent className="h-[300px] flex items-center justify-center">
-                                    <div className="text-center text-muted-foreground">
-                                        <p>No exam data yet.</p>
-                                        <Button variant="link" onClick={() => router.push('/exams')}>Take your first test!</Button>
-                                    </div>
+                                <CardContent className="h-[300px]">
+                                    {user.exam_score_history.length > 0 ? (
+                                        <ResponsiveContainer width="100%" height="100%">
+                                            <BarChart data={user.exam_score_history.map(h => ({ name: h.examName, score: h.score }))}>
+                                                <XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
+                                                <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${value}%`}/>
+                                                <Tooltip
+                                                    contentStyle={{
+                                                        backgroundColor: "hsl(var(--background))",
+                                                        border: "1px solid hsl(var(--border))",
+                                                        borderRadius: "var(--radius)"
+                                                    }}
+                                                />
+                                                <Legend iconType="circle" />
+                                                <RechartsBar dataKey="score" fill="hsl(var(--chart-1))" radius={[4, 4, 0, 0]} />
+                                            </BarChart>
+                                        </ResponsiveContainer>
+                                    ) : (
+                                        <div className="h-full flex items-center justify-center">
+                                            <div className="text-center text-muted-foreground">
+                                                <p>No exam data yet.</p>
+                                                <Button variant="link" onClick={() => router.push('/exams')}>Take your first test!</Button>
+                                            </div>
+                                        </div>
+                                    )}
                                 </CardContent>
                             </Card>
 
                             <Card className="shadow-lg">
                                 <CardHeader>
-                                    <CardTitle>Exam Performance</CardTitle>
-                                    <CardDescription>A breakdown of your results will show here.</CardDescription>
+                                    <CardTitle>Overall Performance</CardTitle>
+                                    <CardDescription>A summary of all your answers.</CardDescription>
                                 </CardHeader>
-                                <CardContent className="h-[300px] flex items-center justify-center">
-                                    <div className="text-center text-muted-foreground">
-                                        <p>Complete an exam to see your performance.</p>
-                                    </div>
+                                <CardContent className="h-[300px]">
+                                    {user.tests_taken > 0 && overallPerformanceData ? (
+                                       <ScoreChart {...overallPerformanceData} />
+                                    ) : (
+                                        <div className="h-full flex items-center justify-center">
+                                            <div className="text-center text-muted-foreground">
+                                                <p>Complete an exam to see your performance.</p>
+                                            </div>
+                                        </div>
+                                    )}
                                 </CardContent>
                             </Card>
                         </div>
@@ -282,3 +320,4 @@ export default function ProfilePage() {
     </div>
   );
 }
+
