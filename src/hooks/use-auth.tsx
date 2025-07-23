@@ -86,6 +86,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     return {
         ...supabaseUser,
+        id: supabaseUser.id,
         name: profileData.name || userMetadata.name || 'No Name',
         email: supabaseUser.email || '',
         phoneNumber: profileData.phone_number || userMetadata.phone_number || 'No Phone',

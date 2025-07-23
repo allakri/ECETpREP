@@ -124,14 +124,19 @@ export default function ProfilePage() {
 
   const overallPerformanceData = useMemo(() => {
     if (!user || !user.exam_score_history) return null;
+    const totalQuestions = (user.tests_taken || 0) * 100; // This is an approximation
+    if (totalQuestions === 0) return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, totalQuestions: 0 };
+    
+    const correctCount = user.exam_score_history.reduce((acc, test) => acc + (test.score / 100 * totalQuestions / user.tests_taken), 0);
+
     return user.exam_score_history.reduce(
         (acc, test) => {
-            const score = Math.round(test.score);
-            acc.correctCount += score;
-            acc.incorrectCount += (100 - score);
+            const correct = Math.round(test.score * (100 / 100)); // Assuming each test has 100 questions for simplicity
+            acc.correctCount += correct;
+            acc.incorrectCount += (100 - correct);
             return acc;
         },
-        { score: user.avg_score || 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, totalQuestions: (user.tests_taken || 0) * 100 }
+        { score: user.avg_score || 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, totalQuestions: totalQuestions }
     );
   }, [user]);
 
@@ -323,5 +328,3 @@ export default function ProfilePage() {
     </div>
   );
 }
-
-    
