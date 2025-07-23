@@ -3,9 +3,41 @@
 
 import Link from "next/link";
 import { Copyright, Rocket } from "lucide-react";
+import { useState, useEffect } from 'react';
+
+const CountUp = ({ end }: { end: number }) => {
+    const [count, setCount] = useState(0);
+    const duration = 2000; // 2 seconds
+
+    useEffect(() => {
+        let start = 0;
+        const startTimestamp = performance.now();
+        
+        const step = (timestamp: number) => {
+            const progress = timestamp - startTimestamp;
+            const percentage = Math.min(progress / duration, 1);
+            setCount(Math.floor(percentage * (end - start) + start));
+            if (progress < duration) {
+                requestAnimationFrame(step);
+            } else {
+                setCount(end); // Ensure it ends exactly on the end number
+            }
+        };
+
+        requestAnimationFrame(step);
+    }, [end]);
+
+    return <span>{count.toLocaleString()}</span>;
+};
+
 
 export function AppFooter() {
   const currentYear = new Date().getFullYear();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+      setIsMounted(true);
+  }, []);
 
   return (
     <footer className="bg-card text-card-foreground border-t py-8">
@@ -46,9 +78,9 @@ export function AppFooter() {
                 <Copyright className="h-4 w-4" />
                 <p>{currentYear} ECET Prep Platform. All Rights Reserved.</p>
             </div>
-            <div className="flex gap-4 mt-4 sm:mt-0">
-                <p>Visitors: 1,077,492</p>
-                <p>Mock Tests Taken: 38,144</p>
+            <div className="flex gap-4 mt-4 sm:mt-0 font-medium">
+                <p>Visitors: {isMounted ? <CountUp end={1077492} /> : 0}</p>
+                <p>Mock Tests Taken: {isMounted ? <CountUp end={38144} /> : 0}</p>
             </div>
         </div>
       </div>
