@@ -13,9 +13,11 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { Loader2, Eye, EyeOff } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function RegisterPage() {
   const { toast } = useToast();
+  const router = useRouter();
   const [year, setYear] = useState("");
   const [loading, setLoading] = useState(false);
   const [supabase] = useState(() => createClient());
@@ -43,7 +45,6 @@ export default function RegisterPage() {
       password,
       options: {
         data: userData,
-        emailRedirectTo: `${location.origin}/auth/callback`,
       },
     });
 
@@ -57,12 +58,11 @@ export default function RegisterPage() {
       });
     } else {
       toast({
-        title: "Registration Pending",
-        description: "Please check your email to verify your account.",
+        title: "Registration Successful!",
+        description: "Welcome! Redirecting you to your profile...",
       });
-       // Clear form after successful submission
-      (e.target as HTMLFormElement).reset();
-      setYear("");
+      router.refresh(); // Refresh to ensure the new session is picked up
+      router.push("/profile");
     }
   };
 
