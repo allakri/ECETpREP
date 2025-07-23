@@ -1,3 +1,9 @@
+-- Drop existing objects if they exist to prevent errors on re-run
+DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
+DROP FUNCTION IF EXISTS public.handle_new_user();
+DROP TABLE IF EXISTS public.profiles;
+
+
 -- Create the profiles table to store public user data
 CREATE TABLE public.profiles (
   id uuid NOT NULL PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
@@ -37,7 +43,9 @@ BEGIN
   INSERT INTO public.profiles (id, name, phone_number, branch, college, year_of_study)
   VALUES (
     new.id,
-    new.raw_user_meta_data->>'name',
+    -- For email signups, these come from the 'data' option
+    -- For OAuth signups, Supabase provides 'full_name'
+    COALESCE(new.raw_user_meta_data->>'name', new.raw_user_meta_data->>'full_name'),
     new.raw_user_meta_data->>'phone_number',
     new.raw_user_meta_data->>'branch',
     new.raw_user_meta_data->>'college',
@@ -51,4 +59,3 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;
 CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW EXECUTE PROCEDURE public.handle_new_user();
-
