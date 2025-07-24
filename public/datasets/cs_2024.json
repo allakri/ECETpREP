@@ -1,37 +1,1173 @@
 [
+  
   {
-    "id": 1,
-    "question": "Which of the following is not a standard data type in C?",
-    "options": ["int", "float", "string", "char"],
-    "correctAnswer": "string",
-    "topic": "C Programming Basics"
+    "question": "If \\( A = \\begin{pmatrix} \\cos\\theta & \\sin\\theta & 0 \\\\ -\\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = F(\\theta) \\), then \\( A^{-1} = \\)",
+    "options": [
+      "\\(F(\\theta)\\)",
+      "\\(-F(-\\theta)\\)",
+      "\\(-F(\\theta)\\)",
+      "\\(F(-\\theta)\\)"
+    ],
+    "answer": "\\(F(-\\theta)\\)"
   },
   {
-    "id": 2,
-    "question": "What is the time complexity of a binary search algorithm?",
-    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-    "correctAnswer": "O(log n)",
-    "topic": "Data Structures and Algorithms"
+    "question": "If \\( (x, y, z) \\) is the solution of linear equations \\( x+y+z=6 \\), \\( x-y+z=2 \\), \\( 2x+y-z=1 \\), then \\( \\frac{yz}{x} = \\)",
+    "options": [
+      "\\(\\frac{1}{6}\\)",
+      "\\(\\frac{3}{2}\\)",
+      "6",
+      "3"
+    ],
+    "answer": "6"
   },
   {
-    "id": 3,
-    "question": "Which of these is a non-volatile memory?",
-    "options": ["RAM", "DRAM", "SRAM", "ROM"],
-    "correctAnswer": "ROM",
-    "topic": "Computer Architecture"
+    "question": "If A and B are square matrices of order 3 with \\( |A|=2 \\), \\( |B|=-4 \\), then \\( |2AB| = \\)",
+    "options": [
+      "-64",
+      "16",
+      "64",
+      "-16"
+    ],
+    "answer": "-64"
   },
   {
-    "id": 4,
-    "question": "What does SQL stand for?",
-    "options": ["Structured Query Language", "Strong Question Language", "Structured Question List", "Simple Query Language"],
-    "correctAnswer": "Structured Query Language",
-    "topic": "Database Management"
+    "question": "If \\( \\log_{\\sqrt{27}}(x) = \\frac{8}{3} \\), then \\( x = \\)",
+    "options": [
+      "10",
+      "16",
+      "81",
+      "27"
+    ],
+    "answer": "81"
   },
   {
-    "id": 5,
-    "question": "Which protocol is used to send email?",
-    "options": ["HTTP", "FTP", "SMTP", "POP3"],
-    "correctAnswer": "SMTP",
-    "topic": "Computer Networks"
+    "question": "If \\( \\frac{x^{3}}{(x-1)(x+2)} = Ax + B + \\frac{C}{x-1} + \\frac{D}{x+2} \\), then \\( C + D = \\)",
+    "options": [
+      "-3",
+      "3",
+      "2",
+      "0"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "\\( \\frac{\\sin^{2} 33^{\\circ} - \\sin^{2} 57^{\\circ}}{\\sin 21^{\\circ} - \\cos 21^{\\circ}} = \\)",
+    "options": [
+      "\\(\\frac{\\sqrt{3}}{2}\\)",
+      "\\(\\frac{1}{2}\\)",
+      "\\(\\frac{1}{\\sqrt{2}}\\)",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "question": "If \\( A + B = \\frac{\\pi}{3} \\) and \\( \\cos A + \\cos B = 1 \\), then \\( 3 \\cos(A - B) = \\)",
+    "options": [
+      "-1",
+      "0",
+      "1",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "question": "If \\( 2 \\tan^{-1}\\left(\\frac{2}{3}\\right) = \\tan^{-1}(k) \\), then \\( k = \\)",
+    "options": [
+      "\\(\\frac{5}{12}\\)",
+      "\\(\\frac{4}{3}\\)",
+      "\\(\\frac{12}{5}\\)",
+      "\\(\\frac{3}{4}\\)"
+    ],
+    "answer": "\\(\\frac{12}{5}\\)"
+  },
+  {
+    "question": "If \\( \\tan^{-1}\\left(\\frac{1-x}{1+x}\\right) = \\frac{1}{2} \\tan^{-1}(x) \\), \\( x > 0 \\), then \\( x = \\)",
+    "options": [
+      "\\(\\frac{\\sqrt{3}}{2}\\)",
+      "\\(\\sqrt{3}\\)",
+      "\\(\\frac{1}{2}\\)",
+      "1"
+    ],
+    "answer": "\\(\\frac{\\sqrt{3}}{2}\\)"
+  },
+  {
+    "question": "If \\( \\cosh x = \\frac{3}{2} \\), then \\( \\cosh 2x = \\)",
+    "options": [
+      "\\(\\frac{1}{3}\\)",
+      "\\(\\frac{5}{2}\\)",
+      "\\(\\frac{11}{3}\\)",
+      "\\(\\frac{17}{3}\\)"
+    ],
+    "answer": "\\(\\frac{17}{3}\\)"
+  },
+  {
+    "question": "\\( \\left(\\frac{\\sqrt{3}+i}{2}\\right)^{6} + \\left(\\frac{\\sqrt{3}-i}{2}\\right)^{6} = \\)",
+    "options": [
+      "3",
+      "-3",
+      "2",
+      "-2"
+    ],
+    "answer": "-2"
+  },
+  {
+    "question": "The distance between the lines \\( y = 2x + 4 \\) and \\( 6x - 3y = 5 \\) is (in units)",
+    "options": [
+      "\\(\\frac{13}{2 \\sqrt{5}}\\)",
+      "\\(\\frac{17}{3 \\sqrt{5}}\\)",
+      "\\(\\frac{17}{2 \\sqrt{5}}\\)",
+      "\\(\\frac{14}{3 \\sqrt{5}}\\)"
+    ],
+    "answer": "\\(\\frac{17}{2 \\sqrt{5}}\\)"
+  },
+  {
+    "question": "If the radius of the circle \\( x^{2} + y^{2} - 4x + 6y - k = 0 \\) is 4, then \\( k = \\)",
+    "options": [
+      "3",
+      "-3",
+      "2",
+      "\\(\\frac{1}{2}\\)"
+    ],
+    "answer": "-3"
+  },
+  {
+    "question": "If the angle between the lines \\( 3x - 4y + 1 = 0 \\) and \\( ax + by - 7 = 0 \\) is \\( 90^{\\circ} \\), then \\( 3a - 4b = \\)",
+    "options": [
+      "12",
+      "-1",
+      "0",
+      "-12"
+    ],
+    "answer": "-12"
+  },
+  {
+    "question": "The equation of the tangent to the circle \\( x^{2} + y^{2} - 6x + 4y - 12 = 0 \\) at \\( (-1, 1) \\) is",
+    "options": [
+      "\\(4x + 3y + 1 = 0\\)",
+      "\\(2x - 3y + 5 = 0\\)",
+      "\\(2x + 3y - 1 = 0\\)",
+      "\\(4x - 3y + 7 = 0\\)"
+    ],
+    "answer": "\\(2x + 3y - 1 = 0\\)"
+  },
+  {
+    "question": "The eccentricity of the ellipse whose latus rectum is equal to half of its major axis is",
+    "options": [
+      "\\(\\sqrt{3}\\)",
+      "\\(\\frac{1}{\\sqrt{2}}\\)",
+      "\\(\\sqrt{2}\\)",
+      "\\(\\frac{1}{\\sqrt{3}}\\)"
+    ],
+    "answer": "\\(\\frac{1}{\\sqrt{2}}\\)"
+  },
+  {
+    "question": "\\( \\frac{d}{dx} \\left( \\sqrt{\\sin \\left( x^{2} \\right)} \\right) = \\)",
+    "options": [
+      "\\(\\frac{x^{2} \\cos \\left( x^{2} \\right)}{\\sqrt{\\sin \\left( x^{2} \\right)}}\\)",
+      "\\(\\frac{x \\cos \\left( x^{2} \\right)}{2 \\sqrt{\\sin \\left( x^{2} \\right)}}\\)",
+      "\\(\\frac{x \\cos \\left( x^{2} \\right)}{\\sqrt{\\sin \\left( x^{2} \\right)}}\\)",
+      "\\(\\frac{\\cos \\left( x^{2} \\right)}{2x \\sqrt{\\sin \\left( x^{2} \\right)}}\\)"
+    ],
+    "answer": "\\(\\frac{x \\cos \\left( x^{2} \\right)}{\\sqrt{\\sin \\left( x^{2} \\right)}}\\)"
+  },
+  {
+    "question": "\\( \\frac{d}{dx} \\tan^{-1} \\left( \\frac{\\sin x}{1 + \\cos x} \\right) = \\)",
+    "options": [
+      "1",
+      "\\(\\frac{1}{2}\\)",
+      "2",
+      "None of the above"
+    ],
+    "answer": "\\(\\frac{1}{2}\\)"
+  },
+  {
+    "question": "If \\( y^{x} = x^{\\cos y} \\), then \\( \\frac{dy}{dx} = \\)",
+    "options": [
+      "\\(\\frac{y (\\cos y - x \\log y)}{x (x + y \\sin y \\log x)}\\)",
+      "\\(\\frac{y (\\cos y + x \\log y)}{x (x + y \\sin y \\log x)}\\)",
+      "\\(\\frac{y (\\cos y - x \\log y)}{x (x - y \\sin y \\log x)}\\)",
+      "\\(\\frac{(\\cos y - x \\log y)}{(x + y \\sin y \\log x)}\\)"
+    ],
+    "answer": "\\(\\frac{y (\\cos y - x \\log y)}{x (x + y \\sin y \\log x)}\\)"
+  },
+  {
+    "question": "\\( \\lim_{x \\to 3} \\frac{x^{2} - x - 6}{x^{2} + x - 12} = \\)",
+    "options": [
+      "\\(\\frac{5}{7}\\)",
+      "\\(\\frac{2}{3}\\)",
+      "\\(\\frac{3}{4}\\)",
+      "\\(\\frac{6}{7}\\)"
+    ],
+    "answer": "\\(\\frac{5}{7}\\)"
+  },
+  {
+    "question": "The equation of the normal to the curve \\( y = x^{3} - 3x \\) at the point \\( P(2, 2) \\) is",
+    "options": [
+      "\\(x + 9y - 2 = 0\\)",
+      "\\(x + 9y - 22 = 0\\)",
+      "\\(x + 9y - 20 = 0\\)",
+      "\\(x + 9y - 12 = 0\\)"
+    ],
+    "answer": "\\(x + 9y - 20 = 0\\)"
+  },
+  {
+    "question": "The maximum value of \\( y = (x - 1)^{2} e^{x} \\) is",
+    "options": [
+      "\\(\\frac{4}{e}\\)",
+      "\\(\\frac{1}{e}\\)",
+      "\\(\\frac{9}{e}\\)",
+      "\\(\\frac{2}{e}\\)"
+    ],
+    "answer": "\\(\\frac{4}{e}\\)"
+  },
+  {
+    "question": "If \\( f(x, y) = (x + y) e^{xy} \\), then at \\( P(2, 2) \\) the value of \\( \\frac{\\partial f}{\\partial x} = \\)",
+    "options": [
+      "\\(8 e^{4}\\)",
+      "\\(4 e^{4}\\)",
+      "\\(9 e^{4}\\)",
+      "\\(16 e^{4}\\)"
+    ],
+    "answer": "\\(4 e^{4}\\)"
+  },
+  {
+    "question": "If \\( u(x, y) = \\sin^{-1}\\left(\\frac{x^{4} + y^{4}}{x^{2} + y^{2}}\\right) \\), then \\( x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = \\)",
+    "options": [
+      "\\(2 \\cot u\\)",
+      "\\(2 \\tan u\\)",
+      "\\(2 \\sin u\\)",
+      "\\(2 \\cos u\\)"
+    ],
+    "answer": "\\(2 \\tan u\\)"
+  },
+  {
+    "question": "\\( \\int \\frac{1}{(1 - \\cos x)} dx = \\)",
+    "options": [
+      "-cot x - cosec x + c",
+      "-cot x + cosec x + c",
+      "cot x - cosec x + c",
+      "-tan x - sec x + c"
+    ],
+    "answer": "-cot x - cosec x + c"
+  },
+  {
+    "question": "\\( \\int_{2}^{4} f(x) dx = \\)",
+    "options": [
+      "\\(\\int_{2}^{4} f(6 + x) dx\\)",
+      "\\(\\int_{2}^{4} f(4 - x) dx\\)",
+      "\\(\\int_{2}^{4} f(2 - x) dx\\)",
+      "\\(\\int_{2}^{4} f(6 - x) dx\\)"
+    ],
+    "answer": "\\(\\int_{2}^{4} f(6 - x) dx\\)"
+  },
+  {
+    "question": "\\( \\int_{-1}^{1} \\sin \\pi x dx = \\)",
+    "options": [
+      "\\(\\frac{1}{\\pi}\\)",
+      "\\(\\frac{2}{\\pi}\\)",
+      "0",
+      "None of the above"
+    ],
+    "answer": "0"
+  },
+  {
+    "question": "\\( \\lim_{n \\to \\infty} \\left[ \\frac{1}{n} + \\frac{n^{2}}{(n + 1)^{3}} + \\frac{n^{2}}{(n + 2)^{3}} + \\ldots + \\frac{1}{8n} \\right] = \\)",
+    "options": [
+      "\\(\\frac{1}{8}\\)",
+      "\\(\\frac{1}{4}\\)",
+      "\\(\\frac{3}{8}\\)",
+      "\\(\\frac{1}{2}\\)"
+    ],
+    "answer": "\\(\\frac{1}{4}\\)"
+  },
+  {
+    "question": "The area of the region bounded by the lines \\( x = 1 \\), \\( x = 4 \\), \\( y = 4x \\) and \\( y = x^{2} \\) is",
+    "options": [
+      "\\(\\frac{9}{2}\\)",
+      "\\(\\frac{27}{2}\\)",
+      "9",
+      "\\(\\frac{27}{4}\\)"
+    ],
+    "answer": "\\(\\frac{27}{2}\\)"
+  },
+  {
+    "question": "According to Simpson's \\( \\frac{1}{3} \\) rule, the value of the integral \\( \\int_{1}^{3} \\frac{1}{x} dx \\) with \\( h = \\frac{1}{2} \\), is",
+    "options": [
+      "1.5",
+      "0.5",
+      "1.1",
+      "2"
+    ],
+    "answer": "1.1"
+  },
+  {
+    "question": "The differential equation whose general solution is \\( y = Ax^{2} + Bx \\), where A and B are arbitrary constants is",
+    "options": [
+      "\\(x^{2} y'' + 2xy' - 2y = 0\\)",
+      "\\(x^{2} y'' - 2xy' + 2y = 0\\)",
+      "\\(y'' - 2y' + 2y = 0\\)",
+      "\\(x^{2} y'' - 2xy' - 2y = 0\\)"
+    ],
+    "answer": "\\(x^{2} y'' - 2xy' + 2y = 0\\)"
+  },
+  {
+    "question": "The general solution of the differential equation \\( (e^{x} + 1) y dy + (y + 1) dx = 0 \\) is",
+    "options": [
+      "\\(e^{x - y} = c(y + 1)(1 - e^{x})\\)",
+      "\\(e^{x + y} = c(y + 1)(1 + e^{x})\\)",
+      "\\(e^{2x - y} = c(y + 1)(1 - e^{x})\\)",
+      "\\(e^{x + y} = c y (1 + e^{x})\\)"
+    ],
+    "answer": "\\(e^{x - y} = c(y + 1)(1 - e^{x})\\)"
+  },
+  {
+    "question": "If the differential equation \\( (x^{2} + y^{2}) dx + kxy dy = 0 \\) is exact, then \\( k = \\)",
+    "options": [
+      "1",
+      "-1",
+      "-2",
+      "2"
+    ],
+    "answer": "-1"
+  },
+  {
+    "question": "The general solution of the differential equation \\( \\frac{dy}{dx} + y \\tan x = \\cos^{2} x \\) is",
+    "options": [
+      "\\(y \\cot x = \\tan x + c\\)",
+      "\\(y \\sec x = x \\sin x + c\\)",
+      "\\(x \\sec x = \\sin x + c\\)",
+      "\\(y \\sec x = \\sin x + c\\)"
+    ],
+    "answer": "\\(y \\sec x = \\sin x + c\\)"
+  },
+  {
+    "question": "The integrating factor of the differential equation \\( \\frac{dy}{dx} + \\frac{2x}{x^{2}+1} y = x^{2} + 1 \\) is",
+    "options": [
+      "\\(2x\\)",
+      "\\(x^{2} + 2\\)",
+      "\\(x^{2} + 1\\)",
+      "\\(x^{2} - 1\\)"
+    ],
+    "answer": "\\(x^{2} + 1\\)"
+  },
+  {
+    "question": "The general solution of the differential equation \\( 6y'' - 5y' - 6y = 0 \\) is",
+    "options": [
+      "\\(y = a e^{9x} + b e^{4x}\\)",
+      "\\(y = a e^{-9x} + b e^{-4x}\\)",
+      "\\(y = a e^{\\frac{3x}{2}} + b e^{\\frac{-2x}{3}}\\)",
+      "\\(y = a e^{\\frac{-3x}{2}} + b e^{\\frac{-2x}{3}}\\)"
+    ],
+    "answer": "\\(y = a e^{\\frac{3x}{2}} + b e^{\\frac{-2x}{3}}\\)"
+  },
+  {
+    "question": "A particular integral of the differential equation \\( (4D^{2} + 4D - 3) y = e^{3x} \\) is (Here \\( D \\equiv \\frac{d}{dx} \\))",
+    "options": [
+      "\\(\\frac{1}{11} e^{3x}\\)",
+      "\\(\\frac{1}{45} e^{3x}\\)",
+      "\\(\\frac{1}{5} e^{3x}\\)",
+      "\\(\\frac{1}{3} e^{3x}\\)"
+    ],
+    "answer": "\\(\\frac{1}{45} e^{3x}\\)"
+  },
+  {
+    "question": "A particular integral of the differential equation \\( (D^{2} + 4) y = 5(\\cos 3x + \\sin 3x) \\) is (Here \\( D \\equiv \\frac{d}{dx} \\))",
+    "options": [
+      "\\(\\cos 3x + \\sin 3x\\)",
+      "\\(\\cos 3x - \\sin 3x\\)",
+      "\\(-\\cos 3x - \\sin 3x\\)",
+      "\\(\\sin 3x - \\cos 3x\\)"
+    ],
+    "answer": "\\(\\cos 3x + \\sin 3x\\)"
+  },
+  {
+    "question": "If \\( L\\left\\{\\int_{0}^{t} \\cosh 3u du\\right\\} = f(s) \\), then \\( f(4) = \\)",
+    "options": [
+      "\\(\\frac{1}{7}\\)",
+      "\\(\\frac{1}{32}\\)",
+      "0",
+      "\\(\\frac{7}{32}\\)"
+    ],
+    "answer": "\\(\\frac{1}{32}\\)"
+  },
+  {
+    "question": "Let \\( F(t) = \\begin{cases} e^{t-1}, & t>1 \\\\ 0, & t<1 \\end{cases} \\). If \\( s>1 \\) then \\( L\\{F(t)\\} = \\)",
+    "options": [
+      "\\(\\frac{1}{s-1}\\)",
+      "\\(\\frac{e^{-1}}{s-1}\\)",
+      "\\(\\frac{e^{-s}}{s-1}\\)",
+      "\\(\\frac{e^{s}}{s-1}\\)"
+    ],
+    "answer": "\\(\\frac{e^{-s}}{s-1}\\)"
+  },
+  {
+    "question": "\\( \\int_{0}^{\\infty} t e^{-t} \\sin t dt = \\)",
+    "options": [
+      "-1",
+      "\\(\\frac{1}{2}\\)",
+      "0",
+      "2"
+    ],
+    "answer": "\\(\\frac{1}{2}\\)"
+  },
+  {
+    "question": "\\( L^{-1}\\left\\{\\frac{1}{s(s-1)}\\right\\} = \\)",
+    "options": [
+      "\\(1 - e^{t}\\)",
+      "\\(e^{t} + 1\\)",
+      "\\(1 - e^{-t}\\)",
+      "\\(e^{t} - 1\\)"
+    ],
+    "answer": "\\(e^{t} - 1\\)"
+  },
+  {
+    "question": "If \\( L^{-1}\\left\\{\\frac{s+1}{s^{2}+2s+2}\\right\\} = e^{at} \\cos bt \\), then \\( a^{2} + b^{2} = \\)",
+    "options": [
+      "2",
+      "4",
+      "0",
+      "8"
+    ],
+    "answer": "2"
+  },
+  {
+    "question": "The convolution of the functions 1 and \\( \\sin t \\) is",
+    "options": [
+      "\\(1 - \\cos t\\)",
+      "\\(1 - \\sin t\\)",
+      "\\(1 + \\cos t\\)",
+      "\\(1 + \\sin t\\)"
+    ],
+    "answer": "\\(1 - \\cos t\\)"
+  },
+  {
+    "question": "The Laplace transform of the solution of the initial value problem \\( y'' + 9y = 9u(t-3) \\), \\( y(0) = 0 \\), \\( y'(0) = 0 \\) (Here \\( u(t-3) \\) is the unit step function) is",
+    "options": [
+      "\\(\\frac{9 e^{3s}}{s(s^{2} - 9)}\\)",
+      "\\(\\frac{e^{-3s}}{s^{2}(s^{2} + 9)}\\)",
+      "\\(\\frac{9 e^{-3s}}{(s^{2} + 9)^{2}}\\)",
+      "\\(\\frac{9 e^{-3s}}{s(s^{2} + 9)}\\)"
+    ],
+    "answer": "\\(\\frac{9 e^{-3s}}{s(s^{2} + 9)}\\)"
+  },
+  {
+    "question": "The value of the integral \\( \\int_{0}^{2\\pi} | \\sin x | dx \\) is",
+    "options": [
+      "\\( \\pi \\)",
+      "\\( 2\\pi \\)",
+      "4",
+      "0"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "The value of \\( a_{3} \\) in the Fourier series expansion of the function \\( f(x) = \\begin{cases} 0, & -\\pi < x \\leq 0 \\\\ x, & 0 < x \\leq \\pi \\end{cases} \\) is",
+    "options": [
+      "\\(\\frac{-2}{\\pi}\\)",
+      "\\(\\frac{-2}{3\\pi}\\)",
+      "\\(\\frac{-2}{5\\pi}\\)",
+      "0"
+    ],
+    "answer": "0"
+  },
+  {
+    "question": "The value of \\( b_{1} \\) in the Fourier series expansion of \\( f(x) = x \\sin x \\) in \\( 0 \\leq x \\leq 2\\pi \\) is",
+    "options": [
+      "\\( \\pi \\)",
+      "\\( 2\\pi \\)",
+      "\\( 3\\pi \\)",
+      "\\( 4\\pi \\)"
+    ],
+    "answer": "\\( \\pi \\)"
+  },
+  {
+    "question": "The period of the function \\( f(x) = \\sin \\left( \\frac{\\pi x}{3} \\right) \\) is",
+    "options": [
+      "\\( \\pi \\)",
+      "\\(\\frac{\\pi}{3}\\)",
+      "3",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "Velocity (v) of water waves depends on their Wavelength (λ), Density of Water (ρ) and acceleration due to gravity (g). By the method of dimensional analysis, the relation between these quantities is given by",
+    "options": [
+      "v² is proportional to (ρλg)",
+      "v is proportional to λg/√ρ",
+      "v² is proportional to (λg)",
+      "v² is proportional to (λg/ρ)"
+    ],
+    "answer": "v² is proportional to (λg)"
+  },
+  {
+    "question": "The Force \\( \\vec{F} = 2\\hat{i} + 3\\hat{j} + 7\\hat{k} \\) newtons (N), acting on an object causes a displacement \\( \\vec{S} = 2\\hat{i} + 3\\hat{j} + 5\\hat{k} \\) meters (m). Then the work done is",
+    "options": [
+      "30 Nm",
+      "40 Nm",
+      "48 Nm",
+      "25 Nm"
+    ],
+    "answer": "48 Nm"
+  },
+  {
+    "question": "\\( \\vec{A} = \\hat{i} + 2\\hat{j} + 3\\hat{k} \\) and \\( \\vec{B} = 3\\hat{i} + 2\\hat{j} + \\hat{k} \\) are the adjacent sides of a parallelogram respectively. The area of the Parallelogram is",
+    "options": [
+      "8√2",
+      "8√3",
+      "3√8",
+      "√8"
+    ],
+    "answer": "8√3"
+  },
+  {
+    "question": "A block is placed on a rough floor and a horizontal force 'F' is applied on it. The force of friction 'f' by the floor on the block is measured for different values of 'F'. The graph between the 'f' and 'F' would be",
+    "options": [
+      "The graph is a straight line of slope 45° for all 'F'",
+      "The graph is a straight line parallel to 'F' axis for all 'F'",
+      "The graph is a straight line of slope 45° for small values of 'F' and straight line parallel to 'F' axis for large 'F'",
+      "The graph is exponential with values of 'F'"
+    ],
+    "answer": "The graph is a straight line of slope 45° for small values of 'F' and straight line parallel to 'F' axis for large 'F'"
+  },
+  {
+    "question": "Throughout the flight of a particle in projectile motion",
+    "options": [
+      "The horizontal component of velocity is constant",
+      "The vertical component of velocity is constant",
+      "The horizontal component of velocity decreases",
+      "The horizontal component of velocity is zero"
+    ],
+    "answer": "The horizontal component of velocity is constant"
+  },
+  {
+    "question": "A motor cyclist driving with a speed of 0.6 km/minute goes over a turn of radius of curvature 10 m. His slope with vertical in degrees (take g = 10 m/sec²).",
+    "options": [
+      "0°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "answer": "60°"
+  },
+  {
+    "question": "Two wires of lengths in the ratio 2:3 taken from same material and having the same mass are stretched by same force. Then their elongations are in the ratio of",
+    "options": [
+      "2:3",
+      "3:2",
+      "1:2",
+      "4:9"
+    ],
+    "answer": "4:9"
+  },
+  {
+    "question": "Which of the following statements is wrong?",
+    "options": [
+      "Surface Tension of a liquid decreases with increase of temperature",
+      "Surface Tension of a liquid increases or decreases depending on the type of impurities added to the liquid",
+      "Angle of Contact depends on the inclination of the solid rod placed in the liquid",
+      "A drop of oil placed on the surface of water will spread as a thin layer"
+    ],
+    "answer": "Angle of Contact depends on the inclination of the solid rod placed in the liquid"
+  },
+  {
+    "question": "A streamline flow is maintained across the two capillary tubes A and B connected in series. The length of B is twice that of A and the radius of B is half that of A. The pressure across A is P. The pressure across B is",
+    "options": [
+      "4P",
+      "16P",
+      "32P",
+      "P/32"
+    ],
+    "answer": "16P"
+  },
+  {
+    "question": "A body of mass 0.1 kg is thrown vertically upward. At a certain point above the ground, the Potential energy and Kinetic energy of the body are 3.7 J and 6.3 J. The maximum height it reaches is (g=10m/s²).",
+    "options": [
+      "10 m",
+      "4 m",
+      "100 m",
+      "0.7 m"
+    ],
+    "answer": "4 m"
+  },
+  {
+    "question": "Two containers of volumes 20m³ and 30m³ have gases at Pressures of 40 MPa and 50 MPa. The two containers are connected by a very narrow pipe of negligible volume and the gases are allowed to intermingle. If the temperature remains constant, the final pressure in MPa is",
+    "options": [
+      "46",
+      "40",
+      "50",
+      "0"
+    ],
+    "answer": "46"
+  },
+  {
+    "question": "During an adiabatic process, a mono atomic gas at 27°C is compressed suddenly to 1/8 of its original volume. Then the Final temperature in °C is (The ratio of the two specific heats of gases = 5/3)",
+    "options": [
+      "1160",
+      "887",
+      "927",
+      "88"
+    ],
+    "answer": "927"
+  },
+  {
+    "question": "The time period of a simple pendulum is 3 sec. Its length is made 4 times. Then its time period is",
+    "options": [
+      "3 sec",
+      "4 sec",
+      "6 sec",
+      "1.5 sec"
+    ],
+    "answer": "6 sec"
+  },
+  {
+    "question": "A particle executes Simple Harmonic Motion with an amplitude of 5 cm. When the particle is at 4 cm from the mean position, the magnitude of its velocity in SI units is equal to that of its acceleration. Then, its periodic time in seconds is",
+    "options": [
+      "8π/3",
+      "4π/3",
+      "3π/8",
+      "7π/3"
+    ],
+    "answer": "4π/3"
+  },
+  {
+    "question": "The two equations of Simple Harmonic Motions are \\( Y_1 = 12 \\sin(50t + \\pi/2) \\) and \\( Y_2 = 12 \\sin(50t + \\pi/3) \\). The phase difference between two motions is",
+    "options": [
+      "π/2",
+      "π/3",
+      "π/6",
+      "π/8"
+    ],
+    "answer": "π/6"
+  },
+  {
+    "question": "Multiple reflections leading to persistence of sound in an auditorium are",
+    "options": [
+      "beats",
+      "echo",
+      "reverberation",
+      "stationary waves"
+    ],
+    "answer": "reverberation"
+  },
+  {
+    "question": "Two sources S1 and S2 are moving with certain velocities. The apparent frequencies observed by a stationary observer are double and half of their original frequencies respectively. If the velocity of sound is v and velocity of wind is zero, then the velocities of two sources respectively are",
+    "options": [
+      "v/2 and 2v",
+      "v and v/2",
+      "3v/2 and 2v",
+      "v/2 and v"
+    ],
+    "answer": "v/2 and 2v"
+  },
+  {
+    "question": "The Moment of couple acting on a bar magnet kept at an angle 30° to the direction of uniform magnetic field of induction 2 Tesla is equal to",
+    "options": [
+      "Pole Strength of the Magnet",
+      "Length of the Magnet",
+      "Magnetic Flux",
+      "Magnetic Moment of the Magnet"
+    ],
+    "answer": "Magnetic Moment of the Magnet"
+  },
+  {
+    "question": "In a Meter Bridge, R1 and R2 are the resistances connected in the left and right gaps respectively. The bridge is balanced at the balancing point of 60 cm from left. When a resistance of 30 Ω is connected in parallel to R2, the balancing point shifted to 90 cm. The values of R1 and R2 respectively are (in Ω)",
+    "options": [
+      "30 and 50",
+      "200 and 350",
+      "225 and 150",
+      "100 and 75"
+    ],
+    "answer": "100 and 75"
+  },
+  {
+    "question": "When 220 V AC is applied across a step-up transformer, it draws a current of 3A in the secondary. If the number of turns in the primary coil of the transformer is 100 and that of secondary coil is 2000. The output power of the transformer is",
+    "options": [
+      "8800 W",
+      "13200 W",
+      "4400 W",
+      "2200 W"
+    ],
+    "answer": "8800 W"
+  },
+  {
+    "question": "A photon of frequency v is incident on a photosensitive metal surface whose threshold frequency is v0. The kinetic energy of emitted photo electron is",
+    "options": [
+      "h*v",
+      "h*v0",
+      "h*(v - v0)",
+      "h*(v + v0)"
+    ],
+    "answer": "h*(v - v0)"
+  },
+  {
+    "question": "In LASER, the condition of Population Inversion mean",
+    "options": [
+      "The number of atoms in the lower energy state are more than the higher energy state.",
+      "The number of atoms in the higher energy state are more than the lower energy state.",
+      "The number of atoms in the lower and higher energy states are same.",
+      "The number of atoms in higher energy state are zero."
+    ],
+    "answer": "The number of atoms in the higher energy state are more than the lower energy state."
+  },
+  {
+    "question": "In a Graded Index Optical Fibre",
+    "options": [
+      "The Refractive Index of the core remains constant and will be greater than that of the cladding.",
+      "The Refractive Index of the core remains constant and will be less than that of the cladding.",
+      "The Refractive Indices of both core and cladding remain constant and are equal.",
+      "The Refractive Index of the core varies with maximum at the centre and decreases as the radial distance increases from the axis of the core."
+    ],
+    "answer": "The Refractive Index of the core varies with maximum at the centre and decreases as the radial distance increases from the axis of the core."
+  },
+  {
+    "question": "Which of the following statements is correct, if ne and nh are the concentrations of the Electrons and Holes respectively",
+    "options": [
+      "In an intrinsic semiconductor, ne = nh and both these charge carriers contribute to current equally",
+      "In p-type semiconductor, ne > nh and the current due to electrons is more than that of holes",
+      "In n-type semiconductor, np > ne and current due to holes is more than that of electrons",
+      "In an extrinsic semiconductor, ne = nh and both these charge carriers contribute to current equally"
+    ],
+    "answer": "In an intrinsic semiconductor, ne = nh and both these charge carriers contribute to current equally"
+  },
+  {
+    "question": "The semiconductors used for fabrication of visible LEDs have band gap",
+    "options": [
+      "Close to 1.5 eV",
+      "Close to 1.1 eV",
+      "About 1.0 ev to 1.6 eV",
+      "About 1.8 eV to 3 eV"
+    ],
+    "answer": "About 1.8 eV to 3 eV"
+  },
+  {
+    "question": "According to Aufbau principle, which orbital is filled immediately after each of the 3p, 4p, 4f and 5d?",
+    "options": [
+      "3d, 5s, 5d, 6p",
+      "3d, 4d, 5d, 6p",
+      "4s, 5s, 5d, 6p",
+      "4s, 5s, 5d, 7s"
+    ],
+    "answer": "4s, 5s, 5d, 6p"
+  },
+  {
+    "question": "Which one of the following properties is not due to hydrogen bonding.",
+    "options": [
+      "High boiling point of water",
+      "High viscosity of glycerol",
+      "Solubility of ammonia in water",
+      "Polar nature of halogen acid"
+    ],
+    "answer": "Polar nature of halogen acid"
+  },
+  {
+    "question": "2Mg(s) + O2(g) → 2MgO(s) In above reaction equation, the oxidation state of magnesium is changed from",
+    "options": [
+      "0 to +2",
+      "0 to -2",
+      "+2 to -1",
+      "+2 to 0"
+    ],
+    "answer": "0 to +2"
+  },
+  {
+    "question": "100 mL of ethanol, whose density is 1.2 g.mL⁻¹ is diluted to 1.0 L by addition of distilled water. Molarity of the resultant solution is",
+    "options": [
+      "1.60",
+      "2.60",
+      "0.46",
+      "2.90"
+    ],
+    "answer": "2.60"
+  },
+  {
+    "question": "Among the below options, which is not a characteristic of a colloid",
+    "options": [
+      "Particle size between 10 Å⁰ – 1000 Å⁰",
+      "Heterogeneous",
+      "Can be separable by filtration",
+      "Diffuse slowly"
+    ],
+    "answer": "Can be separable by filtration"
+  },
+  {
+    "question": "The correct order of decreasing strength of acids is",
+    "options": [
+      "HClO4 > H2SO4 > HNO3 > HCl",
+      "H2SO4 > HClO4 > HCl > HNO3",
+      "HClO4 > H2SO4 > HCl > HNO3",
+      "HNO3 > HCl > H2SO4 > HClO4"
+    ],
+    "answer": "HClO4 > H2SO4 > HCl > HNO3"
+  },
+  {
+    "question": "The solution which can resist change in its pH on the addition of an acid or a base is known as",
+    "options": [
+      "Isotonic solution",
+      "Colloidal solution",
+      "Neutral solution",
+      "Buffer solution"
+    ],
+    "answer": "Buffer solution"
+  },
+  {
+    "question": "The minimum level of a pollutant above which a healthy individual worker is adversely affected on exposure to it for eight hours in a day is called",
+    "options": [
+      "Critical Limit Value",
+      "Toxic Limit Value",
+      "Threshold Limit Value",
+      "Dangerous Limit Value"
+    ],
+    "answer": "Threshold Limit Value"
+  },
+  {
+    "question": "The consequences of global warming are: (A) Increase in average temperature of the earth (B) Melting of Himalayan glaciers (C) Increased Biochemical Oxygen Demand of natural water (D) Eutrophication of water bodies Choose the correct option.",
+    "options": [
+      "A, D",
+      "A, C",
+      "A, B",
+      "A, B, C"
+    ],
+    "answer": "A, B"
+  },
+  {
+    "question": "The chemicals used for defluoridation of water by Nalgonda Technique are",
+    "options": [
+      "CaO and CaOCl2",
+      "Alum, CaO and CaOCl2",
+      "CaH2, NaOCl and Alum",
+      "NaOCl, NaH and Alum"
+    ],
+    "answer": "Alum, CaO and CaOCl2"
+  },
+  {
+    "question": "The process which removes non-ionic, ionic, colloidal and organic matter in water is",
+    "options": [
+      "Ion exchange process",
+      "Lime soda process",
+      "Reverse osmosis process",
+      "Zeolite process"
+    ],
+    "answer": "Reverse osmosis process"
+  },
+  {
+    "question": "The set of products that are formed during electrolysis of aqueous solution of KCl between platinum electrodes is",
+    "options": [
+      "HCl and KOH",
+      "KOH and Cl₂",
+      "KOH, Cl₂ and H₂",
+      "K and Cl₂"
+    ],
+    "answer": "KOH, Cl₂ and H₂"
+  },
+  {
+    "question": "When the same quantity of electricity is passed through aqueous AgNO₃ and H₂SO₄ solutions connected in series, 5.04 x 10⁻² g of H₂ is liberated. What is the mass of silver (in grams) deposited? (Eq. Wt. of hydrogen and silver is 1.008 and 108 respectively)",
+    "options": [
+      "54",
+      "0.54",
+      "5.4",
+      "10.8"
+    ],
+    "answer": "5.4"
+  },
+  {
+    "question": "Choose the correct option that differentiates metals from non-metals",
+    "options": [
+      "Metals form acidic oxides, whereas non-metals form basic oxides.",
+      "Metals have a tendency to gain electrons, whereas non-metals have a tendency to lose electrons.",
+      "Metals are generally good conductors of electricity, whereas non-metals are insulators.",
+      "All metals exist in a solid state at room temperature."
+    ],
+    "answer": "Metals are generally good conductors of electricity, whereas non-metals are insulators."
+  },
+  {
+    "question": "Nichrome is commonly used in heating elements because",
+    "options": [
+      "It has high electrical conductivity",
+      "It has a high melting point and corrosion resistance",
+      "It is lightweight",
+      "It is brittle and hard"
+    ],
+    "answer": "It has a high melting point and corrosion resistance"
+  },
+  {
+    "question": "______ combinations is used for prevention of corrosion.",
+    "options": [
+      "Phosphorous or Antimony",
+      "Phosphorous or Chlorine",
+      "Antimony or Nitrogen",
+      "Antimony or Sodium"
+    ],
+    "answer": "Phosphorous or Antimony"
+  },
+  {
+    "question": "The process of coating zinc metal over iron to improve corrosion resistance of iron is called",
+    "options": [
+      "Electroplating",
+      "Annealing",
+      "Galvanizing",
+      "Tinning"
+    ],
+    "answer": "Galvanizing"
+  },
+  {
+    "question": "______ is a cross linked polymer.",
+    "options": [
+      "Bakelite",
+      "LDPE",
+      "Polystyrene",
+      "PVC"
+    ],
+    "answer": "Bakelite"
+  },
+  {
+    "question": "Identify the Biodegradable polymers from the following and choose the correct option. (I) PVC (II) PHBV (III) Polypropylene (IV) Nylon-2-nylon-6",
+    "options": [
+      "I and II",
+      "II and IV",
+      "I and IV",
+      "I, II and III"
+    ],
+    "answer": "II and IV"
+  },
+  {
+    "question": "Calculate the amount of oxygen required for the complete combustion of 1 mole of Methane (CH₄).",
+    "options": [
+      "1 mole",
+      "2 moles",
+      "3 moles",
+      "4 moles"
+    ],
+    "answer": "2 moles"
+  },
+  {
+    "question": "______ represents the composition of water gas",
+    "options": [
+      "CO + H₂",
+      "CO₂ + H₂",
+      "CO + CH₄",
+      "CO₂ + CH₄"
+    ],
+    "answer": "CO + H₂"
+  },
+  {
+    "question": "Match the following and choose the correct option. List - I a) Hydrogen electrode b) Standard hydrogen electrode c) Metal-metal ion electrode d) Glass electrode List - II (i) Pt|Fe³⁺, Fe²⁺ (ii) Fe|Fe²⁺ (iii) pH measurement (iv) Pt, H₂ (2 bar)|H⁺(0.1 M) (v) Pt, H₂ (1 bar)|H⁺(1.0 M) (vi) Oxidation electrode",
+    "options": [
+      "a-iii, b-v, c-i, d-vi",
+      "a-v, b-iv, c-ii, d-iii",
+      "a - v, b-iii, c-i, d-vi",
+      "a-iv, b-v, c-ii, d-iii"
+    ],
+    "answer": "a-iv, b-v, c-ii, d-iii"
+  },
+  {
+    "question": "The cell reaction of the galvanic cell Cu(s)|Cu²⁺(aq.)|Ag⁺(aq.)|Ag(s) is",
+    "options": [
+      "Ag + Cu²⁺ → Ag⁺ + Cu⁺",
+      "Ag + Cu²⁺ → Ag⁺ + Cu",
+      "Cu + 2Ag⁺ → Cu²⁺ + 2Ag",
+      "Cu²⁺ + 2Ag → Cu²⁺ + 2Ag⁺"
+    ],
+    "answer": "Cu + 2Ag⁺ → Cu²⁺ + 2Ag"
+  },
+  {
+    "question": "______ is used to reduce water pollution.",
+    "options": [
+      "Neem",
+      "Watermelon",
+      "Water hyacinth",
+      "People"
+    ],
+    "answer": "Water hyacinth"
+  },
+  {
+    "question": "Which of the following can cause soil pollution",
+    "options": [
+      "DDT",
+      "CO₂",
+      "NO₂",
+      "Nitrogen"
+    ],
+    "answer": "DDT"
+  },
+  {
+    "question": "The decimal equivalent of the octal number (645) is ______",
+    "options": [
+      "(450)₁₀",
+      "(451)₁₀",
+      "(421)₁₀",
+      "(501)₁₀"
+    ],
+    "answer": "(421)₁₀"
+  },
+  {
+    "question": "The characteristic equation of JK flip flop is",
+    "options": [
+      "Q(n+1) = J̅Q(n) + K̅Q(n)",
+      "Q(n+1) = JQ̅(n) + K̅Q(n)",
+      "Q(n+1) = JQ̅(n) + KQ̅(n)",
+      "Q(n+1) = JQ̅(n) + K̅Q(n)"
+    ],
+    "answer": "Q(n+1) = JQ̅(n) + K̅Q(n)"
+  },
+  {
+    "question": "Multiplication result of (10.10)₂ and (01.01)₂ is ______",
+    "options": [
+      "101.0010",
+      "0010.101",
+      "011.0010",
+      "110.0011"
+    ],
+    "answer": "011.0010"
+  },
+  {
+    "question": "For the logic circuit shown in the figure the required input (A, B, C) condition to make the output (X) = 1 is",
+    "options": [
+      "(1,0,1)",
+      "(0,0,1)",
+      "(1,1,1)",
+      "(0,1,1)"
+    ],
+    "answer": "(0,1,1)"
+  },
+  {
+    "question": "A three variable truth table has a High output for the inputs (A, B, C): 010, 011 and 110. The Boolean expression for Sum Of Product (SOP) can be written as",
+    "options": [
+      "AB + BC",
+      "AB + BC̅",
+      "AB̅ + BC",
+      "AB̅ + BC̅"
+    ],
+    "answer": "AB̅ + BC"
+  },
+  {
+    "question": "The logic function implemented by the circuit shown below is (ground implies a logic 0)",
+    "options": [
+      "F = AND(P, Q)",
+      "F = OR(P, Q)",
+      "F = XNOR(P, Q)",
+      "F = XOR(P, Q)"
+    ],
+    "answer": "F = XOR(P, Q)"
+  },
+  {
+    "question": "Among the digital IC families ECL, TTL and CMOS, which one of the following is correct?",
+    "options": [
+      "ECL has more propagation delay",
+      "TTL has the largest Fan-out",
+      "CMOS has the lowest power consumption",
+      "TTL has the highest noise margin"
+    ],
+    "answer": "CMOS has the lowest power consumption"
+  },
+  {
+    "question": "The outputs of the two flip-flops Q1, Q2 in the figure shown are initialized to 0, 0. The sequence generated at Q1 upon application of clock signal is",
+    "options": [
+      "01110...",
+      "01010...",
+      "00110...",
+      "01100..."
+    ],
+    "answer": "01100..."
+  },
+  {
+    "question": "The output frequency of a mod-12 counter is 6 KHz, then the input frequency is",
+    "options": [
+      "6 KHz",
+      "500 Hz",
+      "24 KHz",
+      "72 KHz"
+    ],
+    "answer": "72 KHz"
+  },
+  {
+    "question": "Which of the following is correct for DRAM",
+    "options": [
+      "Periodic refreshing is not required",
+      "Data is stored in Capacitor",
+      "Data stored in Latch",
+      "Read and write operations performed simultaneously"
+    ],
+    "answer": "Data is stored in Capacitor"
+  },
+  {
+    "question": "The most relevant addressing mode to write position independent code is",
+    "options": [
+      "Direct Mode",
+      "Indirect Mode",
+      "Relative Mode",
+      "Indexed Mode"
+    ],
+    "answer": "Relative Mode"
+  },
+  {
+    "question": "The speed imbalance between memory access and CPU operation can be reduced by",
+    "options": [
+      "Cycle Stealing",
+      "Memory Interleaving",
+      "Reducing the size of memory",
+      "Demand Paging"
+    ],
+    "answer": "Memory Interleaving"
+  },
+  {
+    "question": "On receiving an interrupt from an I/O device, the CPU",
+    "options": [
+      "Halts for a predetermined time",
+      "Hands over control of address bus and data bus to the interrupting device",
+      "Branches off to the interrupt service routine immediately",
+      "Branches off to the interrupt service routine after completion of the current instruction"
+    ],
+    "answer": "Branches off to the interrupt service routine after completion of the current instruction"
+  },
+  {
+    "question": "The three main components of a digital computer system are",
+    "options": [
+      "Memory, I/O, DMA",
+      "ALU, CPU, memory",
+      "Memory, CPU, I/O",
+      "Control circuits, ALU, registers"
+    ],
+    "answer": "Memory, CPU, I/O"
+  },
+  {
+    "question": "The computer architecture aimed at reducing the time of execution of instructions is",
+    "options": [
+      "CISC",
+      "RISC",
+      "ISA",
+      "Von Neumann"
+    ],
+    "answer": "RISC"
+  },
+  {
+    "question": "The method of accessing the I/O devices by repeatedly checking the status flags is called",
+    "options": [
+      "Program-controlled I/O",
+      "Memory-mapped I/O",
+      "Status mapped I/O",
+      "Direct Memory Access"
+    ],
+    "answer": "Program-controlled I/O"
+  },
+  {
+    "question": "SIMD represents an organization that",
+    "options": [
+      "Refers to a computer system capable of processing several programs at the same time",
+      "Represents organization of single computer containing a control unit, processor unit and a memory unit",
+      "Includes many processing units under the supervision of a common control unit",
+      "Includes many processing units with non-shared memory"
+    ],
+    "answer": "Includes many processing units under the supervision of a common control unit"
+  },
+  {
+    "question": "Memory access in RISC architecture is limited to _______ instructions",
+    "options": [
+      "CALL and RET",
+      "PUSH and POP",
+      "MOV and JMP",
+      "STA and LDA"
+    ],
+    "answer": "STA and LDA"
   }
 ]

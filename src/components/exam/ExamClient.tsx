@@ -57,9 +57,11 @@ export default function ExamClient() {
         }
 
         try {
-            const response = await fetch(`/datasets/${examSlug}_${year}.json`);
+            // Corrected file path construction
+            const filePath = `/datasets/${examSlug}_${year}.json`;
+            const response = await fetch(filePath);
             if (!response.ok) {
-                throw new Error('Failed to load questions');
+                throw new Error(`Failed to load questions from ${filePath}. Status: ${response.status}`);
             }
             const data = await response.json();
             setQuestions(data);
@@ -257,7 +259,7 @@ export default function ExamClient() {
         <div className="space-y-2 text-xs">
             <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div><span>Answered</span></div>
             <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div><span>Marked</span></div>
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500/20 border border-blue-500/50"></div><span>Answered & Marked</span></div>
+            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500/20 border-blue-500/50"></div><span>Answered & Marked</span></div>
             <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full border"></div><span>Not Answered</span></div>
         </div>
         <Button className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg" onClick={() => setIsSubmitDialogOpen(true)}>
@@ -337,3 +339,5 @@ export default function ExamClient() {
     </div>
   );
 }
+
+    
