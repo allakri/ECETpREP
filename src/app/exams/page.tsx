@@ -23,7 +23,7 @@ export default function ExamsPage() {
                 </TapsTrigger>
                 <TabsTrigger value="govt" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-base py-2">
                   <Briefcase className="mr-2 h-5 w-5"/> Government Exams
-                </TabsTrigger>
+                </TapsTrigger>
               </TabsList>
               <TabsContent value="ecet">
                 <Card className="shadow-lg max-w-4xl lg:max-w-6xl mx-auto bg-card">
