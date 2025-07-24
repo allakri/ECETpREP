@@ -1,20 +1,22 @@
+
 "use client";
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { questions } from '@/data/questions';
 import type { AnswerSheet, MarkedQuestions, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel } from '@/components/ui/alert-dialog';
+import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction, AlertDialogCancel } from '@/components/ui/alert-dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut } from 'lucide-react';
+import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, AlertTriangle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
+const MAX_VIOLATIONS = 3;
 
 export default function ExamClient() {
   const router = useRouter();
@@ -25,12 +27,27 @@ export default function ExamClient() {
   const [timeLeft, setTimeLeft] = useState(EXAM_DURATION);
   const [isMounted, setIsMounted] = useState(false);
   const [isSubmitDialogOpen, setIsSubmitDialogOpen] = useState(false);
+  const [isViolationDialogOpen, setIsViolationDialogOpen] = useState(false);
+  const violationCount = useRef(0);
 
-  const handleSubmit = useCallback(() => {
+  const handleSubmit = useCallback((reason: 'user' | 'time' | 'violation') => {
+    let title = "Exam Submitted";
+    let description = "Your answers have been saved.";
+
+    if (reason === 'time') {
+      title = "Time's Up!";
+      description = "Your exam has been submitted automatically.";
+    } else if (reason === 'violation') {
+      title = "Exam Terminated";
+      description = `Exam submitted due to ${MAX_VIOLATIONS} violations.`;
+    }
+
+    toast({ title, description });
+    
     localStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
     localStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
-    router.push('/results');
-  }, [answers, router]);
+    router.replace('/results');
+  }, [answers, router, toast]);
 
   useEffect(() => {
     setIsMounted(true);
@@ -38,19 +55,31 @@ export default function ExamClient() {
       setTimeLeft(prevTime => {
         if (prevTime <= 1) {
           clearInterval(timer);
-          toast({
-            title: "Time's Up!",
-            description: "Your exam has been submitted automatically.",
-          });
-          handleSubmit();
+          handleSubmit('time');
           return 0;
         }
         return prevTime - 1;
       });
     }, 1000);
 
-    return () => clearInterval(timer);
-  }, [handleSubmit, toast]);
+    const handleVisibilityChange = () => {
+        if (document.hidden) {
+            violationCount.current += 1;
+            if (violationCount.current >= MAX_VIOLATIONS) {
+                handleSubmit('violation');
+            } else {
+                setIsViolationDialogOpen(true);
+            }
+        }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+        clearInterval(timer);
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [handleSubmit]);
   
   const handleAnswerSelect = (questionId: number, answer: string) => {
     setAnswers(prev => ({ ...prev, [questionId]: answer }));
@@ -210,10 +239,35 @@ export default function ExamClient() {
             </AlertDialogCancel>
             <Button onClick={() => {
               setIsSubmitDialogOpen(false);
-              handleSubmit();
+              handleSubmit('user');
             }} className="bg-primary text-primary-foreground hover:bg-primary/90">
               Submit
             </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <AlertDialog open={isViolationDialogOpen} onOpenChange={setIsViolationDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <div className="flex justify-center mb-4">
+              <div className="h-16 w-16 rounded-full bg-destructive/10 flex items-center justify-center">
+                  <AlertTriangle className="h-10 w-10 text-destructive" />
+              </div>
+            </div>
+            <AlertDialogTitle className="text-center font-headline text-2xl text-destructive">Warning: Exam Violation</AlertDialogTitle>
+            <AlertDialogDescription className="text-center">
+              You have switched away from the exam window. This is a violation of the rules.
+              <br />
+              You have <strong className="font-bold">{MAX_VIOLATIONS - violationCount.current}</strong> warning(s) remaining.
+              <br />
+              If you switch away again, your exam may be terminated.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+             <AlertDialogAction onClick={() => setIsViolationDialogOpen(false)} className="w-full">
+                I Understand, Continue Exam
+            </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
