@@ -19,8 +19,8 @@ const spaceGrotesk = Space_Grotesk({
 
 
 export const metadata: Metadata = {
-  title: 'ECET Prep Platform',
-  description: 'ECET Online Exam Platform',
+  title: 'Diploma Prep Hub',
+  description: 'Your AI-Powered Partner for Diploma and Government Exams',
 };
 
 export default function RootLayout({

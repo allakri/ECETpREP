@@ -11,17 +11,17 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 // Placeholder component for "Why ECET Matters" section
-const WhyEcetMatters = () => (
+const WhyExamsMatter = () => (
   <div className="bg-background py-16 sm:py-24">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-        Why the ECET is Your Golden Ticket
+        Why These Exams Are Your Golden Ticket
       </h2>
       <p className="mt-4 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
-        The ECET is more than just an exam; it's a bridge to top-tier engineering colleges and a high-growth career. Success here opens doors to opportunities that can shape your future.
+        These entrance exams are more than just tests; they are a bridge to top-tier engineering colleges and high-growth government careers. Success here opens doors to opportunities that can shape your future.
       </p>
       <div className="mt-8">
-        <Button size="lg" variant="outline">Learn More About ECET</Button>
+        <Button size="lg" variant="outline">Learn More About Your Options</Button>
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@ export default function HomePage() {
         <Stats />
         <Features />
         <HowItWorks />
-        <WhyEcetMatters />
+        <WhyExamsMatter />
         <Testimonials />
         <SuccessStories />
       </main>

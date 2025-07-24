@@ -35,10 +35,10 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent className="prose prose-lg dark:prose-invert max-w-none text-foreground space-y-4">
               <p>
-                Welcome to the ECET Prep Platform. We aren't just another mock test website; we are a dedicated team of educators and technologists on a mission to revolutionize how students prepare for the Engineering Common Entrance Test (ECET).
+                Welcome to the Diploma Prep Hub. We aren't just another mock test website; we are a dedicated team of educators and technologists on a mission to revolutionize how students prepare for their entrance and government exams.
               </p>
               <p>
-                Our journey began with a simple, powerful idea: every student deserves access to the best tools to achieve their dreams. We saw a need for a smarter, more personalized, and more supportive way to prepare for one of the most important exams in a student's life. Driven by this passion, we created a comprehensive ecosystem designed to guide you from foundational learning to exam day excellence.
+                Our journey began with a simple, powerful idea: every student deserves access to the best tools to achieve their dreams. We saw a need for a smarter, more personalized, and more supportive way to prepare for the most important exams in a student's life. Driven by this passion, we created a comprehensive ecosystem designed to guide you from foundational learning to exam day excellence.
               </p>
             </CardContent>
           </Card>

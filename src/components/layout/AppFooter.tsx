@@ -46,10 +46,10 @@ export function AppFooter() {
           <div className="md:col-span-2">
             <div className="flex justify-center md:justify-start items-center gap-2 mb-4">
                 <Rocket className="text-primary"/>
-                <h3 className="font-bold text-lg font-headline text-primary">ECET Prep Platform</h3>
+                <h3 className="font-bold text-lg font-headline text-primary">Diploma Prep Hub</h3>
             </div>
             <p className="text-sm text-muted-foreground max-w-md mx-auto md:mx-0">
-              Your comprehensive resource for acing the Engineering Common Entrance Test. Built with modern AI to give you a personalized path to success.
+              Your comprehensive resource for acing diploma-level and government entrance exams. Built with modern AI to give you a personalized path to success.
             </p>
           </div>
           <div>
@@ -74,11 +74,11 @@ export function AppFooter() {
         <div className="border-t border-border mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
                 <Copyright className="h-4 w-4" />
-                <p>{currentYear} ECET Prep Platform. All Rights Reserved.</p>
+                <p>{currentYear} Diploma Prep Hub. All Rights Reserved.</p>
             </div>
              <div className="flex items-center gap-2 mt-4 sm:mt-0">
                 <span>Contact:</span>
-                <a href="mailto:help@ecetprep.in" className="font-medium hover:underline text-primary">help@ecetprep.in</a>
+                <a href="mailto:help@diplomaprep.in" className="font-medium hover:underline text-primary">help@diplomaprep.in</a>
             </div>
         </div>
       </div>

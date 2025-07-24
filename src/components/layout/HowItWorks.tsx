@@ -65,7 +65,7 @@ export function HowItWorks() {
                         How The Platform Works
                     </h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-                        Our platform is designed to be simple and effective. Here’s how you can get started on your journey to acing the ECET.
+                        Our platform is designed to be simple and effective. Here’s how you can get started on your journey to acing your exams.
                     </p>
                 </motion.div>
                 <motion.div 

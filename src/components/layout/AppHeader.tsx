@@ -29,7 +29,7 @@ export function AppHeader() {
         <nav className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline text-primary">
             <Rocket />
-            <span>ECET Prep</span>
+            <span>Diploma Prep</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-1">
