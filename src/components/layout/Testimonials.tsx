@@ -102,7 +102,7 @@ export function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="flex flex-col justify-between shadow-lg bg-background h-[280px]">
+                  <Card className="flex flex-col justify-between shadow-lg bg-background h-[300px]">
                     <CardContent className="pt-6">
                       <blockquote className="text-muted-foreground italic text-lg">
                         "{testimonial.quote}"
