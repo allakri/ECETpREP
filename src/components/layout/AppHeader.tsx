@@ -22,10 +22,6 @@ export function AppHeader() {
     { href: "/contact", label: "Contact Us" },
   ];
   
-  const allNavLinks = user
-    ? [...navLinks, { href: "/profile", label: "Profile" }]
-    : navLinks;
-
   return (
     <header className="bg-background/80 backdrop-blur-sm shadow-sm sticky top-0 z-40">
       <div className="container mx-auto px-4">
@@ -36,13 +32,20 @@ export function AppHeader() {
           </Link>
           
           <div className="hidden md:flex items-center space-x-1">
-            {allNavLinks.map(link => (
+            {navLinks.map(link => (
               <Link key={link.href} href={link.href} passHref>
                 <Button variant="link" className="text-foreground text-base hover:text-accent">
                   {link.label}
                 </Button>
               </Link>
             ))}
+            {!isInitialLoad && user && (
+              <Link href="/profile" passHref>
+                <Button variant="link" className="text-foreground text-base hover:text-accent">
+                  Profile
+                </Button>
+              </Link>
+            )}
             <div className="pl-2 flex items-center gap-2">
               {!isInitialLoad && (
                   user ? (
@@ -75,11 +78,16 @@ export function AppHeader() {
                   <SheetTitle className="text-left text-2xl font-headline text-primary">Menu</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col space-y-2 pt-4 flex-grow">
-                  {allNavLinks.map((link) => (
+                  {navLinks.map((link) => (
                     <Link key={link.href} href={link.href} passHref>
                        <Button variant="ghost" className="w-full justify-start text-lg">{link.label}</Button>
                     </Link>
                   ))}
+                  {!isInitialLoad && user && (
+                    <Link href="/profile" passHref>
+                       <Button variant="ghost" className="w-full justify-start text-lg">Profile</Button>
+                    </Link>
+                  )}
                 </div>
                 <div className="border-t pt-4">
                    {!isInitialLoad && (
