@@ -14,13 +14,13 @@ export default function ExamsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow bg-secondary/20 py-12">
+      <main className="flex-grow bg-background py-12">
         <div className="container mx-auto px-4">
             <Tabs defaultValue="ecet" className="w-full">
               <TabsList className="grid w-full grid-cols-2 max-w-lg mx-auto mb-8 bg-card border">
                 <TabsTrigger value="ecet" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-base py-2">
                   <GraduationCap className="mr-2 h-5 w-5"/> ECET Practice Exams
-                </TabsTrigger>
+                </TapsTrigger>
                 <TabsTrigger value="govt" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-base py-2">
                   <Briefcase className="mr-2 h-5 w-5"/> Government Exams
                 </TabsTrigger>
