@@ -57,7 +57,7 @@ interface AuthContextType {
   loading: boolean;
   logout: () => Promise<void>;
   updateUser: (details: UpdatableUserProfile) => Promise<void>;
-  updateUserProgress: (newScore: ExamScore) => Promise<void>;
+  updateUserProgress: (currentUser: User, newScore: ExamScore) => Promise<void>;
   isAdmin: boolean;
   isInitialLoad: boolean; // Add this to track initial auth check
 }
@@ -158,14 +158,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  const updateUserProgress = async (newScore: ExamScore) => {
-    if (!user) return;
+  const updateUserProgress = async (currentUser: User, newScore: ExamScore) => {
+    if (!currentUser) return;
 
     // Calculate new progress metrics
-    const newTestsTaken = user.tests_taken + 1;
-    const newHistory = [...user.exam_score_history, newScore];
+    const newTestsTaken = currentUser.tests_taken + 1;
+    const newHistory = [...currentUser.exam_score_history, newScore];
     const newAvgScore = newHistory.reduce((acc, item) => acc + item.score, 0) / newHistory.length;
-    const newActivities = [...new Set([...user.study_activities, newScore.date])];
+    const newActivities = [...new Set([...currentUser.study_activities, newScore.date])];
     
     // TODO: Implement streak logic in the future
 

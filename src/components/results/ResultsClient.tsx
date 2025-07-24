@@ -74,20 +74,11 @@ export default function ResultsClient() {
     };
   }, [answers, questions]);
   
-  const saveProgress = useCallback(async () => {
-    if (user && score > 0 && !isProgressSaved) {
-        await updateUserProgress({
-            examName: `Test #${(user.tests_taken || 0) + 1}`,
-            score: score,
-            date: format(new Date(), 'yyyy-MM-dd'),
-        });
-        setIsProgressSaved(true);
-    }
-  }, [user, score, isProgressSaved, updateUserProgress]);
-  
   
   useEffect(() => {
-    if (answers && questions && user && !isProgressSaved) {
+    const hasRun = sessionStorage.getItem('resultsGenerated');
+    if (answers && questions && user && !hasRun) {
+      sessionStorage.setItem('resultsGenerated', 'true');
       const getAIInsightsAndSave = async () => {
         setLoading(true);
         try {
@@ -97,6 +88,12 @@ export default function ResultsClient() {
           }
           
           const pastScoresWithCurrent = [...(user.exam_score_history || []).map(h => h.score), score];
+
+          const newScoreData = {
+              examName: `Test #${(user.tests_taken || 0) + 1}`,
+              score: score,
+              date: format(new Date(), 'yyyy-MM-dd'),
+          };
 
           const [feedbackResult, readinessResult] = await Promise.all([
             generateAdaptiveFeedback({
@@ -110,11 +107,12 @@ export default function ResultsClient() {
               score: score,
               incorrectTopics: incorrectTopics
             }),
-            saveProgress() // Save progress in parallel
+            updateUserProgress(user, newScoreData),
           ]);
           
           setFeedback(feedbackResult.feedback);
           setReadiness(readinessResult.readiness);
+          setIsProgressSaved(true);
 
         } catch (error) {
           console.error("Error generating AI insights:", error);
@@ -128,7 +126,11 @@ export default function ResultsClient() {
     } else if (!user) {
         setLoading(false); // Not logged in, so don't show loading state
     }
-  }, [answers, questions, score, incorrectTopics, user, saveProgress, isProgressSaved]);
+     // Clear the flag when the component unmounts
+    return () => {
+      sessionStorage.removeItem('resultsGenerated');
+    };
+  }, [answers, questions, score, incorrectTopics, user, updateUserProgress]);
 
   if (!isMounted) {
     // This state is now handled by the Suspense fallback
