@@ -5,7 +5,7 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, CheckCircle2, Download, Lightbulb, Target, BookCopy, ShieldQuestion, Medal, Brain, Clock, Users } from "lucide-react";
+import { BookOpen, CheckCircle2, Download, Lightbulb, Target, BookCopy, ShieldQuestion, Medal, Brain, Clock, Users, CalendarCheck, Repeat, Beaker, HeartPulse } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -112,12 +112,44 @@ const guideSections = [
         title: "6. Key Takeaways", 
         icon: Medal,
         content: (
-          <ul className="space-y-3 prose dark:prose-invert max-w-none text-muted-foreground">
-              <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-accent mt-1 shrink-0"/><span>Begin early with a clear, structured roadmap to guide your efforts.</span></li>
-              <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-accent mt-1 shrink-0"/><span>Revise systematically using active recall methods to ensure long-term retention.</span></li>
-              <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-accent mt-1 shrink-0"/><span>Simulate real exam conditions with frequent mock tests to build confidence and time management skills.</span></li>
-              <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-accent mt-1 shrink-0"/><span>Prioritize your health and well-being; a rested mind is a productive mind.</span></li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Card className="bg-background">
+                  <CardContent className="pt-6 flex items-start gap-4">
+                      <CalendarCheck className="h-8 w-8 text-accent mt-1 shrink-0"/>
+                      <div>
+                          <h4 className="font-bold">Start Early & Plan</h4>
+                          <p className="text-sm text-muted-foreground">Begin with a clear, structured roadmap to guide your efforts effectively from day one.</p>
+                      </div>
+                  </CardContent>
+              </Card>
+               <Card className="bg-background">
+                  <CardContent className="pt-6 flex items-start gap-4">
+                      <Repeat className="h-8 w-8 text-accent mt-1 shrink-0"/>
+                      <div>
+                          <h4 className="font-bold">Revise Systematically</h4>
+                          <p className="text-sm text-muted-foreground">Use active recall methods and consistent revision to ensure long-term knowledge retention.</p>
+                      </div>
+                  </CardContent>
+              </Card>
+               <Card className="bg-background">
+                  <CardContent className="pt-6 flex items-start gap-4">
+                      <Beaker className="h-8 w-8 text-accent mt-1 shrink-0"/>
+                      <div>
+                          <h4 className="font-bold">Simulate Exam Conditions</h4>
+                          <p className="text-sm text-muted-foreground">Take frequent mock tests to build confidence and master time management under pressure.</p>
+                      </div>
+                  </CardContent>
+              </Card>
+              <Card className="bg-background">
+                  <CardContent className="pt-6 flex items-start gap-4">
+                      <HeartPulse className="h-8 w-8 text-accent mt-1 shrink-0"/>
+                      <div>
+                          <h4 className="font-bold">Prioritize Well-being</h4>
+                          <p className="text-sm text-muted-foreground">A rested mind is a productive mind. Ensure proper sleep and breaks to avoid burnout.</p>
+                      </div>
+                  </CardContent>
+              </Card>
+          </div>
       )
   }
 ];
@@ -296,5 +328,3 @@ export default function RoadmapPage() {
     </div>
   );
 }
-
-    
