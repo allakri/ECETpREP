@@ -14,6 +14,7 @@ import { Home, Send, Bot, User, Loader2, ArrowLeft, ArrowRight } from 'lucide-re
 import { cn } from '@/lib/utils';
 import { AppHeader } from '../layout/AppHeader';
 import { AppFooter } from '../layout/AppFooter';
+import Link from 'next/link';
 
 type ChatMessage = {
   role: 'user' | 'model';
@@ -107,6 +108,12 @@ export default function ChatClient() {
               </div>
               <CardTitle className="font-headline text-2xl text-primary">AI Doubt Solver</CardTitle>
             </div>
+             <Button asChild variant="outline">
+                <Link href="/">
+                    <Home className="mr-2 h-4 w-4" />
+                    Back to Home
+                </Link>
+            </Button>
           </CardHeader>
           <CardContent className="flex-1 p-0">
             <ScrollArea className="h-full p-6" ref={scrollAreaRef}>

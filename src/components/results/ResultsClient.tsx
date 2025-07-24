@@ -91,13 +91,6 @@ export default function ResultsClient() {
       const getAIInsightsAndSave = async () => {
         setLoading(true);
         try {
-          const correctAnswers: Record<string, string> = {};
-          const topics: Record<string, string> = {};
-          questions.forEach(q => {
-            correctAnswers[q.id.toString()] = q.correctAnswer;
-            topics[q.id.toString()] = q.topic;
-          });
-
           const userAnswers: Record<string, string> = {};
            for (const qId in answers) {
             userAnswers[qId] = answers[qId]
@@ -108,9 +101,8 @@ export default function ResultsClient() {
           const [feedbackResult, readinessResult] = await Promise.all([
             generateAdaptiveFeedback({
               examName: 'ECET Practice Exam',
+              questions: questions,
               userAnswers,
-              correctAnswers,
-              topics,
               pastScores: pastScoresWithCurrent,
             }),
             assessReadiness({

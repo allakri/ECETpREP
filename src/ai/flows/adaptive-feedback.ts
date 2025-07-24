@@ -11,11 +11,18 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
+const QuestionSchema = z.object({
+  id: z.number(),
+  question: z.string(),
+  options: z.array(z.string()),
+  correctAnswer: z.string(),
+  topic: z.string(),
+});
+
 const AdaptiveFeedbackInputSchema = z.object({
   examName: z.string().describe('The name of the exam the user took.'),
+  questions: z.array(QuestionSchema).describe('The full list of questions from the exam.'),
   userAnswers: z.record(z.string(), z.string()).describe('A map of question IDs to the user\'s answers.'),
-  correctAnswers: z.record(z.string(), z.string()).describe('A map of question IDs to the correct answers.'),
-  topics: z.record(z.string(), z.string()).describe('A map of question IDs to the topics the questions cover.'),
   pastScores: z.array(z.number()).optional().describe("An array of the user's past scores (as percentages) on previous tests."),
 });
 export type AdaptiveFeedbackInput = z.infer<typeof AdaptiveFeedbackInputSchema>;
@@ -45,24 +52,26 @@ Here are the student's recent scores: {{#each pastScores}}{{{this}}}%{{#unless @
 - If this is their first test, be welcoming and set a positive tone.
 {{/if}}
 
+For each question the user answered incorrectly, you MUST explain why their answer was wrong and why the correct answer is right. Provide a brief concept explanation for the topic.
+
 Exam Name: {{{examName}}}
 
-Student Answers:
+Exam Questions:
+{{#each questions}}
+  ID: {{id}}
+  Question: {{question}}
+  Options: {{#each options}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
+  Correct Answer: {{correctAnswer}}
+  Topic: {{topic}}
+{{/each}}
+
+Student's Answers (Question ID: Answer):
 {{#each userAnswers}}
-  Question ID: {{@key}}, Answer: {{{this}}}
+  {{@key}}: {{{this}}}
 {{/each}}
 
-Correct Answers:
-{{#each correctAnswers}}
-  Question ID: {{{@key}}}, Answer: {{{this}}}
-{{/each}}
 
-Topics:
-{{#each topics}}
-  Question ID: {{{@key}}}, Topic: {{{this}}}
-{{/each}}
-
-Provide detailed, tailored feedback to the student with an appropriate, supportive, and adaptive tone.
+Provide detailed, tailored feedback to the student with an appropriate, supportive, and adaptive tone. Explain the incorrect answers as requested.
 `, config: {
     safetySettings: [
       {
