@@ -56,5 +56,20 @@ export const questions: Question[] = [
     options: ["Frees memory", "Allocates memory", "Creates a file", "Closes a file"],
     correctAnswer: "Allocates memory",
     topic: "Programming"
+  },
+   {
+    id: 9,
+    question: "What is the primary purpose of an operating system?",
+    options: ["To provide a user interface", "To manage hardware and software resources", "To run applications", "To connect to the internet"],
+    correctAnswer: "To manage hardware and software resources",
+    topic: "Operating Systems"
+  },
+  {
+    id: 10,
+    question: "In networking, what does the acronym LAN stand for?",
+    options: ["Large Area Network", "Local Access Network", "Local Area Network", "Long Area Network"],
+    correctAnswer: "Local Area Network",
+    topic": "Networking"
   }
 ];
+
