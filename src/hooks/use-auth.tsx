@@ -5,6 +5,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode, useCa
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
 import type { User as SupabaseUser, SupabaseClient } from '@supabase/supabase-js';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export interface ExamScore {
   examName: string;
@@ -68,7 +69,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const [isInitialLoad, setIsInitialLoad] = useState(true); // Start as true
   const [isAdmin, setIsAdmin] = useState(false);
-  const [supabase] = useState(() => createClient());
+  const supabase = createClient();
   const router = useRouter();
 
   const fetchUserProfile = useCallback(async (supabaseUser: SupabaseUser): Promise<User | null> => {
