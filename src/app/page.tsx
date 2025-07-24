@@ -8,6 +8,7 @@ import { Testimonials } from "@/components/layout/Testimonials";
 import { Stats } from "@/components/layout/Stats";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 // Placeholder component for "Why ECET Matters" section
 const WhyEcetMatters = () => (
@@ -37,7 +38,9 @@ const SuccessStories = () => (
         Real stories from students who turned their hard work into success with our platform.
       </p>
        <div className="mt-8">
-        <Button size="lg">Read Success Stories</Button>
+        <Button asChild size="lg">
+          <Link href="/success">Read Success Stories</Link>
+        </Button>
       </div>
     </div>
   </div>
