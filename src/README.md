@@ -1,6 +1,6 @@
-# ECET Prep Platform: Your AI-Powered Success Partner
+# Diploma Prep Hub: Your AI-Powered Success Partner
 
-Welcome to the ECET Prep Platform, a cutting-edge web application engineered to revolutionize how students prepare for the Engineering Common Entrance Test (ECET). This is more than just a mock test tool; it's a comprehensive, AI-driven ecosystem designed to guide you from foundation-building to exam day success.
+Welcome to the Diploma Prep Hub, a cutting-edge web application engineered to revolutionize how students prepare for diploma-level entrance tests and government exams. This is more than just a mock test tool; it's a comprehensive, AI-driven ecosystem designed to guide you from foundation-building to exam day success.
 
 ## Our Mission
 
