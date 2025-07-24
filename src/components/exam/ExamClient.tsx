@@ -28,6 +28,7 @@ export default function ExamClient() {
   const [isMounted, setIsMounted] = useState(false);
   const [isSubmitDialogOpen, setIsSubmitDialogOpen] = useState(false);
   const [isViolationDialogOpen, setIsViolationDialogOpen] = useState(false);
+  const [isExitDialogOpen, setIsExitDialogOpen] = useState(false);
   const violationCount = useRef(0);
 
   const handleSubmit = useCallback((reason: 'user' | 'time' | 'violation') => {
@@ -131,7 +132,7 @@ export default function ExamClient() {
               <Timer className="h-6 w-6 text-accent" />
               <span className="font-mono text-xl">{formatTime(timeLeft)}</span>
             </div>
-            <Button variant="outline" size="sm" onClick={() => router.push('/')}><LogOut className="mr-2 h-4 w-4" /> Exit</Button>
+            <Button variant="outline" size="sm" onClick={() => setIsExitDialogOpen(true)}><LogOut className="mr-2 h-4 w-4" /> Exit</Button>
           </div>
         </header>
 
@@ -269,6 +270,28 @@ export default function ExamClient() {
                 I Understand, Continue Exam
             </AlertDialogAction>
           </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <AlertDialog open={isExitDialogOpen} onOpenChange={setIsExitDialogOpen}>
+        <AlertDialogContent>
+            <AlertDialogHeader>
+            <AlertDialogTitle className="font-headline">Confirm Exit</AlertDialogTitle>
+            <AlertDialogDescription>
+                Are you sure you want to exit the exam? Your progress will not be saved and you will have to start over.
+            </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+            <AlertDialogCancel asChild>
+                <Button variant="outline">Cancel</Button>
+            </AlertDialogCancel>
+            <AlertDialogAction onClick={() => {
+                setIsExitDialogOpen(false);
+                router.push('/');
+            }} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
+                Yes, Exit
+            </AlertDialogAction>
+            </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
     </div>
