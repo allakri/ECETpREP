@@ -40,13 +40,8 @@ export function Hero() {
           animate="visible"
           variants={containerVariants}
         >
-          <motion.div className="mb-4" variants={itemVariants}>
-             <span className="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full dark:bg-green-900 dark:text-green-300">
-                Free Forever
-              </span>
-          </motion.div>
           <motion.h1 
-            className="text-4xl font-bold tracking-tight text-primary sm:text-6xl font-headline"
+            className="mt-6 text-4xl font-bold tracking-tight text-primary sm:text-6xl font-headline"
             variants={itemVariants}
           >
             Unlock Your Engineering Future
