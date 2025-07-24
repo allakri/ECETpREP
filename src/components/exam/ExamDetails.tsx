@@ -6,6 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui
 import { Button } from "../ui/button";
 import { Calendar, FileText, ArrowRight } from "lucide-react";
 import * as React from "react";
+import { useAuth } from "@/hooks/use-auth";
+import { useToast } from "@/hooks/use-toast";
 
 const papers = [
     { year: "2024", type: "Previous Paper" },
@@ -22,11 +24,35 @@ interface ExamDetailsProps {
 
 export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
     const router = useRouter();
+    const { user } = useAuth();
+    const { toast } = useToast();
 
     const handlePaperSelect = (paperType: string) => {
+        if (!user) {
+            toast({
+                title: "Authentication Required",
+                description: "Please log in to start an exam.",
+                variant: "destructive",
+            });
+            router.push('/login');
+            return;
+        }
         // All paper selections will now go to the instructions page first.
         router.push('/exam/instructions');
     };
+    
+    const handleCustomPaperSelect = () => {
+        if (!user) {
+            toast({
+                title: "Authentication Required",
+                description: "Please log in to create a custom test.",
+                variant: "destructive",
+            });
+            router.push('/login');
+            return;
+        }
+        router.push(`/exams/${examSlug}/custom`);
+    }
 
     return (
         <div id="exam-details" className="container mx-auto px-4">
@@ -61,7 +87,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                             </Button>
                         ))}
                          <Button
-                            onClick={() => router.push(`/exams/${examSlug}/custom`)}
+                            onClick={handleCustomPaperSelect}
                             variant="outline"
                             className="w-full h-auto py-6 px-4 flex flex-col items-start justify-center text-left gap-3 bg-background hover:bg-muted/50 hover:scale-105 transition-transform duration-200"
                         >

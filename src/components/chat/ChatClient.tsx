@@ -15,20 +15,57 @@ import { cn } from '@/lib/utils';
 import { AppHeader } from '../layout/AppHeader';
 import { AppFooter } from '../layout/AppFooter';
 import Link from 'next/link';
+import { useAuth } from '@/hooks/use-auth';
+import { Skeleton } from '../ui/skeleton';
 
 type ChatMessage = {
   role: 'user' | 'model';
   text: string;
 };
 
+const ChatSkeleton = () => (
+    <div className="flex flex-col min-h-screen bg-background">
+        <AppHeader />
+        <main className="flex-grow flex items-center justify-center p-4">
+             <div className="w-full max-w-2xl h-[80vh] flex flex-col shadow-2xl border rounded-lg p-4 gap-4">
+                <div className="flex items-center justify-between border-b pb-4">
+                    <div className="flex items-center gap-3">
+                        <Skeleton className="h-10 w-10 rounded-full" />
+                        <Skeleton className="h-7 w-48" />
+                    </div>
+                    <Skeleton className="h-9 w-32" />
+                </div>
+                <div className="flex-1 space-y-4">
+                    <Skeleton className="h-12 w-2/3 ml-auto rounded-lg" />
+                    <Skeleton className="h-16 w-3/4 mr-auto rounded-lg" />
+                </div>
+                <div className="flex w-full items-center gap-3 border-t pt-6">
+                    <Skeleton className="h-10 flex-1" />
+                    <Skeleton className="h-10 w-24" />
+                </div>
+            </div>
+        </main>
+        <AppFooter />
+    </div>
+);
+
+
 export default function ChatClient() {
   const router = useRouter();
+  const { user, loading } = useAuth();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [examContext, setExamContext] = useState<{ questions: Question[], answers: AnswerSheet } | null>(null);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   
+  useEffect(() => {
+    if (!loading && !user) {
+        router.replace('/login');
+    }
+  }, [user, loading, router]);
+
+
   useEffect(() => {
     // Load exam results from local storage to provide context to the chat
     const storedAnswers = localStorage.getItem('ecetExamAnswers');
@@ -94,6 +131,10 @@ export default function ChatClient() {
       return "I see you've just finished an exam. You can ask me which questions you got wrong or right, and I can help explain the concepts. Or, ask me anything else about ECET subjects!";
     }
     return baseMessage;
+  }
+
+  if (loading || !user) {
+    return <ChatSkeleton />;
   }
 
   return (
