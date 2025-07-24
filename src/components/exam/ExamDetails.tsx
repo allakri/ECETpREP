@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useRouter } from "next/navigation";
@@ -23,11 +24,8 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
     const router = useRouter();
 
     const handlePaperSelect = (paperType: string) => {
-        if (paperType === 'Mock Test') {
-            router.push(`/exams/${examSlug}/custom`);
-        } else {
-            router.push('/exam');
-        }
+        // All paper selections will now go to the instructions page first.
+        router.push('/exam/instructions');
     };
 
     return (
@@ -63,7 +61,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                             </Button>
                         ))}
                          <Button
-                            onClick={() => handlePaperSelect('Mock Test')}
+                            onClick={() => router.push(`/exams/${examSlug}/custom`)}
                             variant="outline"
                             className="w-full h-auto py-6 px-4 flex flex-col items-start justify-center text-left gap-3 bg-background hover:bg-muted/50 hover:scale-105 transition-transform duration-200"
                         >
