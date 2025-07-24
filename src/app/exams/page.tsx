@@ -14,7 +14,7 @@ export default function ExamsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow bg-secondary/20 py-12">
+      <main className="flex-grow bg-background py-12">
         <div className="container mx-auto px-4">
             <Card className="shadow-lg max-w-4xl lg:max-w-6xl mx-auto bg-card">
                  <Tabs defaultValue="ecet" className="w-full">
