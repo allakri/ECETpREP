@@ -1,9 +1,18 @@
 
 "use client";
 
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -27,17 +36,14 @@ const testimonials = [
     image: "https://placehold.co/100x100.png",
     imageHint: "woman smiling",
   },
+  {
+    quote: "The 24/7 AI Doubt Solver is brilliant. I could get my questions answered instantly, even late at night. It's like having a personal tutor.",
+    name: "Suresh Kumar",
+    title: "Civil Eng. Aspirant",
+    image: "https://placehold.co/100x100.png",
+    imageHint: "man engineer",
+  }
 ];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -51,6 +57,16 @@ const itemVariants = {
 };
 
 export function Testimonials() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <section className="bg-card py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -68,39 +84,52 @@ export function Testimonials() {
                 Don't just take our word for it. Here's what some of our students have to say about their experience.
             </p>
         </motion.div>
-        <motion.div 
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={containerVariants}
+        
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 4000,
+              stopOnInteraction: true,
+            }),
+          ]}
+          className="w-full max-w-5xl mx-auto"
         >
-          {testimonials.map((testimonial, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="flex flex-col justify-between shadow-lg bg-background h-full">
-                <CardContent className="pt-6">
-                  <blockquote className="text-muted-foreground italic">
-                    "{testimonial.quote}"
-                  </blockquote>
-                </CardContent>
-                <div className="mt-4 flex items-center gap-4 p-6 pt-0">
-                  <Image
-                    className="h-12 w-12 rounded-full"
-                    src={testimonial.image}
-                    data-ai-hint={testimonial.imageHint}
-                    alt={testimonial.name}
-                    width={48}
-                    height={48}
-                  />
-                  <div>
-                    <p className="font-semibold text-primary">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                  </div>
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="flex flex-col justify-between shadow-lg bg-background h-[280px]">
+                    <CardContent className="pt-6">
+                      <blockquote className="text-muted-foreground italic text-lg">
+                        "{testimonial.quote}"
+                      </blockquote>
+                    </CardContent>
+                    <div className="mt-4 flex items-center gap-4 p-6 pt-0">
+                      <Image
+                        className="h-12 w-12 rounded-full object-cover"
+                        src={testimonial.image}
+                        data-ai-hint={testimonial.imageHint}
+                        alt={testimonial.name}
+                        width={48}
+                        height={48}
+                      />
+                      <div>
+                        <p className="font-semibold text-primary">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                      </div>
+                    </div>
+                  </Card>
                 </div>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );

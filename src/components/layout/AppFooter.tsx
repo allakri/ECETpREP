@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 const CountUp = ({ end }: { end: number }) => {
     const [count, setCount] = useState(0);
-    const duration = 2000; // 2 seconds
+    const duration = 2000;
 
     useEffect(() => {
         let start = 0;
@@ -20,7 +20,7 @@ const CountUp = ({ end }: { end: number }) => {
             if (progress < duration) {
                 requestAnimationFrame(step);
             } else {
-                setCount(end); // Ensure it ends exactly on the end number
+                setCount(end);
             }
         };
 
@@ -42,34 +42,32 @@ export function AppFooter() {
   return (
     <footer className="bg-card text-card-foreground border-t py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+          <div className="md:col-span-2">
             <div className="flex justify-center md:justify-start items-center gap-2 mb-4">
                 <Rocket className="text-primary"/>
                 <h3 className="font-bold text-lg font-headline text-primary">ECET Prep Platform</h3>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Your comprehensive resource for acing the Engineering Common Entrance Test.
+            <p className="text-sm text-muted-foreground max-w-md mx-auto md:mx-0">
+              Your comprehensive resource for acing the Engineering Common Entrance Test. Built with modern AI to give you a personalized path to success.
             </p>
           </div>
           <div>
             <h3 className="font-bold text-lg mb-4 font-headline">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="hover:underline text-muted-foreground hover:text-primary">About Us</Link></li>
               <li><Link href="/exams" className="hover:underline text-muted-foreground hover:text-primary">Exams</Link></li>
               <li><Link href="/roadmap" className="hover:underline text-muted-foreground hover:text-primary">Roadmap</Link></li>
               <li><Link href="/discussions" className="hover:underline text-muted-foreground hover:text-primary">Discussions</Link></li>
-              <li><Link href="/courses" className="hover:underline text-muted-foreground hover:text-primary">Courses</Link></li>
-              <li><Link href="/contact" className="hover:underline text-muted-foreground hover:text-primary">Contact Us</Link></li>
-              <li><Link href="/user-guide" className="hover:underline text-muted-foreground hover:text-primary">User Guide</Link></li>
               <li><Link href="/profile" className="hover:underline text-muted-foreground hover:text-primary">Profile</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-lg mb-4 font-headline">Legal</h3>
+            <h3 className="font-bold text-lg mb-4 font-headline">Company</h3>
             <ul className="space-y-2 text-sm">
+                <li><Link href="/about" className="hover:underline text-muted-foreground hover:text-primary">About Us</Link></li>
+                <li><Link href="/contact" className="hover:underline text-muted-foreground hover:text-primary">Contact Us</Link></li>
                 <li><Link href="#" className="hover:underline text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link href="#" className="hover:underline text-muted-foreground hover:text-primary">Terms & Conditions</Link></li>
+                <li><Link href="#" className="hover:underline text-muted-foreground hover:text-primary">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
@@ -78,9 +76,9 @@ export function AppFooter() {
                 <Copyright className="h-4 w-4" />
                 <p>{currentYear} ECET Prep Platform. All Rights Reserved.</p>
             </div>
-            <div className="flex gap-4 mt-4 sm:mt-0 font-medium">
-                <p>Visitors: {isMounted ? <CountUp end={1077492} /> : 0}</p>
-                <p>Mock Tests Taken: {isMounted ? <CountUp end={38144} /> : 0}</p>
+             <div className="flex items-center gap-2 mt-4 sm:mt-0">
+                <span>Contact:</span>
+                <a href="mailto:help@ecetprep.in" className="font-medium hover:underline text-primary">help@ecetprep.in</a>
             </div>
         </div>
       </div>

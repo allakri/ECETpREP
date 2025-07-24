@@ -2,7 +2,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BarChart, BookOpenCheck, BrainCircuit } from "lucide-react";
+import { ArrowRight, BarChart, BookOpenCheck, BrainCircuit, PlayCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -31,10 +31,6 @@ const itemVariants = {
 export function Hero() {
   const router = useRouter();
 
-  const handleGetStarted = () => {
-    router.push("/exams");
-  };
-
   return (
     <div className="relative isolate overflow-hidden bg-background">
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
@@ -44,27 +40,32 @@ export function Hero() {
           animate="visible"
           variants={containerVariants}
         >
+          <motion.div className="mb-4" variants={itemVariants}>
+             <span className="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full dark:bg-green-900 dark:text-green-300">
+                Free Forever
+              </span>
+          </motion.div>
           <motion.h1 
             className="text-4xl font-bold tracking-tight text-primary sm:text-6xl font-headline"
             variants={itemVariants}
           >
             Unlock Your Engineering Future
           </motion.h1>
-          <motion.p 
-            className="mt-6 text-lg leading-8 text-muted-foreground"
+           <motion.p 
+            className="mt-6 text-xl leading-8 text-muted-foreground"
             variants={itemVariants}
           >
-            Your ultimate platform for ECET preparation. Master key concepts with our mock tests, get instant AI-powered feedback, and clear your doubts 24/7.
+            From Diploma to Degree, We’ve Got Your Back. Master key concepts with mock tests, instant AI feedback, and 24/7 doubt solving.
           </motion.p>
           <motion.div 
             className="mt-10 flex items-center gap-x-6"
             variants={itemVariants}
           >
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg font-bold" onClick={handleGetStarted}>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl transition-all font-bold shadow-lg" onClick={() => router.push('/register')}>
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="link" size="lg" className="text-foreground hover:text-accent" onClick={() => router.push('/about')}>
-              Learn more <span aria-hidden="true">→</span>
+            <Button variant="link" size="lg" className="text-foreground hover:text-accent font-bold" onClick={() => router.push('/#how-it-works')}>
+              <PlayCircle className="mr-2 h-5 w-5"/> Watch Demo
             </Button>
           </motion.div>
           <motion.div 
@@ -92,10 +93,10 @@ export function Hero() {
             <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
               <Image
                 src="https://placehold.co/600x400.png"
-                alt="ECET Prep Platform Screenshot"
-                data-ai-hint="student learning"
+                alt="AI-powered ECET prep dashboard showing student progress"
+                data-ai-hint="student dashboard futuristic"
                 width={600}
-                height={600}
+                height={400}
                 className="w-full max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-cover"
                 priority
               />

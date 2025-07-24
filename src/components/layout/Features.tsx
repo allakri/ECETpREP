@@ -1,24 +1,25 @@
 
 "use client";
 
-import { BrainCircuit, BookCheck, Timer } from "lucide-react";
+import { BrainCircuit, BookCheck, MessageSquareHeart } from "lucide-react";
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
 
 const features = [
   {
     name: 'AI-Powered Feedback',
-    description: 'Our AI analyzes your test performance to identify your weakest subjects and provides actionable advice, helping you study smarter, not harder.',
+    description: 'Get instant, personalized feedback that pinpoints your weak areas and guides your study plan. No more guesswork.',
     icon: BrainCircuit,
   },
   {
-    name: 'Comprehensive Mock Tests',
-    description: 'Access a vast library of mock tests, including previous years\' papers and custom tests tailored to your specific branch and subjects.',
+    name: 'Realistic Mock Tests',
+    description: 'Practice with a vast library of mock tests, including previous years\' papers, in a timed, real-exam environment.',
     icon: BookCheck,
   },
   {
-    name: 'Realistic Exam Simulation',
-    description: 'Practice in a real exam environment with a countdown timer and a question palette for easy navigation, just like the actual ECET.',
-    icon: Timer,
+    name: '24/7 AI Doubt Solver',
+    description: 'Stuck on a concept at 2 AM? Our AI tutor is always available to provide clear, step-by-step explanations.',
+    icon: MessageSquareHeart,
   },
 ]
 
@@ -64,21 +65,22 @@ export function Features() {
           </p>
         </motion.div>
         <motion.dl 
-          className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
         >
             {features.map((feature) => (
-              <motion.div key={feature.name} className="relative pl-16" variants={itemVariants}>
-                <dt className="text-base font-semibold leading-7 text-foreground">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                    <feature.icon className="h-6 w-6 text-primary-foreground" aria-hidden="true" />
-                  </div>
+              <motion.div key={feature.name} className="flex flex-col items-center text-center p-6 rounded-lg border border-transparent hover:border-primary/20 hover:shadow-lg transition-all" variants={itemVariants}>
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary mb-4">
+                  <feature.icon className="h-7 w-7 text-primary-foreground" aria-hidden="true" />
+                </div>
+                <dt className="text-xl font-semibold leading-7 text-foreground font-headline">
                   {feature.name}
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-muted-foreground">{feature.description}</dd>
+                <Button variant="link" className="mt-4">Learn More →</Button>
               </motion.div>
             ))}
         </motion.dl>

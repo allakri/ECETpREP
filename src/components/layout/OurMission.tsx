@@ -29,7 +29,7 @@ const itemVariants = {
 
 export function OurMission() {
     return (
-        <div className="bg-secondary/30 py-16 md:py-24">
+        <div className="bg-background py-16 md:py-24">
             <div className="container mx-auto px-4">
                 <motion.div 
                     className="text-center mb-12"
@@ -53,7 +53,7 @@ export function OurMission() {
                     variants={containerVariants}
                 >
                     <motion.div variants={itemVariants}>
-                      <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                      <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 h-full bg-card">
                           <CardHeader>
                               <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
                                   <Rocket className="h-8 w-8" />
@@ -66,7 +66,7 @@ export function OurMission() {
                       </Card>
                     </motion.div>
                     <motion.div variants={itemVariants}>
-                      <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                      <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 h-full bg-card">
                            <CardHeader>
                               <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
                                   <Goal className="h-8 w-8" />
@@ -79,7 +79,7 @@ export function OurMission() {
                       </Card>
                     </motion.div>
                     <motion.div variants={itemVariants}>
-                      <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                      <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 h-full bg-card">
                            <CardHeader>
                               <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
                                   <Users className="h-8 w-8" />

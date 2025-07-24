@@ -8,23 +8,23 @@ import { motion } from "framer-motion";
 const steps = [
   {
     icon: UserPlus,
-    title: "1. Register & Login",
-    description: "Create your account in seconds to get access to a personalized dashboard and track your progress.",
+    title: "1. Register",
+    description: "Create your account in seconds to get a personalized dashboard.",
   },
   {
     icon: FileText,
-    title: "2. Select an Exam",
-    description: "Choose from a wide range of mock tests for your branch, including previous years' papers and custom tests.",
+    title: "2. Pick Exam",
+    description: "Choose from a wide range of mock tests for your branch.",
   },
   {
     icon: Bot,
-    title: "3. Get AI Feedback",
-    description: "After each test, receive instant, AI-powered feedback identifying your weak areas and suggesting improvements.",
+    title: "3. Get Feedback",
+    description: "Receive instant, AI-powered analysis of your performance.",
   },
   {
     icon: Award,
-    title: "4. Achieve Your Goal",
-    description: "Use the insights to focus your studies, clear doubts with our AI tutor, and build the confidence to succeed.",
+    title: "4. Succeed",
+    description: "Use the insights to focus your studies and achieve your goal.",
   },
 ];
 
@@ -52,7 +52,7 @@ const itemVariants = {
 
 export function HowItWorks() {
     return (
-        <div className="bg-background py-16 md:py-24">
+        <div id="how-it-works" className="bg-secondary/20 py-16 md:py-24">
             <div className="container mx-auto px-4">
                 <motion.div 
                     className="text-center mb-12"
@@ -62,7 +62,7 @@ export function HowItWorks() {
                     variants={itemVariants}
                 >
                     <h2 className="text-3xl font-extrabold font-headline text-primary tracking-tight">
-                        A Clear Path to Success
+                        How The Platform Works
                     </h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
                         Our platform is designed to be simple and effective. Here’s how you can get started on your journey to acing the ECET.
@@ -77,7 +77,7 @@ export function HowItWorks() {
                 >
                     {steps.map((step, index) => (
                         <motion.div key={index} variants={itemVariants}>
-                            <Card className="text-center border-none shadow-none bg-transparent">
+                            <Card className="text-center border-border shadow-lg bg-card h-full hover:shadow-primary/20 transition-shadow">
                                 <CardHeader>
                                     <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
                                         <step.icon className="h-8 w-8 text-accent" />
