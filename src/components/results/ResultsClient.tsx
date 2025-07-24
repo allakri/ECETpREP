@@ -126,8 +126,8 @@ export default function ResultsClient() {
 
         } catch (error) {
           console.error("Error generating AI insights:", error);
-          setFeedback("Could not generate feedback at this time. Please try again later.");
-          setReadiness("Could not generate readiness assessment at this time.");
+          setFeedback("We're sorry, but the AI feedback service is currently unavailable. Please try again later.");
+          setReadiness("We're sorry, but the AI readiness assessment is currently unavailable. Please try again later.");
         } finally {
           setLoading(false);
         }
