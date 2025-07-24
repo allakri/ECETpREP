@@ -4,6 +4,7 @@
 import { BrainCircuit, BookCheck, MessageSquareHeart } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const features = [
   {
@@ -80,7 +81,9 @@ export function Features() {
                   {feature.name}
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-muted-foreground">{feature.description}</dd>
-                <Button variant="link" className="mt-4">Learn More →</Button>
+                <Link href="/about" asChild>
+                  <Button variant="link" className="mt-4">Learn More →</Button>
+                </Link>
               </motion.div>
             ))}
         </motion.dl>
