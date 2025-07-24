@@ -3,16 +3,18 @@
 
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, CheckCircle2, Download, Lightbulb, Target } from "lucide-react";
+import { BookOpen, CheckCircle2, Download, Lightbulb, Target, BookCopy, ShieldQuestion, Medal, Brain, Clock, Users } from "lucide-react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const guideSections = [
-    {
-        title: "1. Understanding the Exam",
-        icon: Target,
+    { 
+        id: 'understanding-exam', 
+        title: "1. Understanding the Exam", 
+        icon: Target, 
         content: (
             <div className="prose dark:prose-invert max-w-none text-muted-foreground">
                 <h4>1.1 Syllabus Analysis</h4>
@@ -27,13 +29,14 @@ const guideSections = [
                     <li>Focus on high-weightage topics to prioritize them in your study plan.</li>
                 </ul>
             </div>
-        )
+        ) 
     },
-    {
-        title: "2. Creating a Study Plan & Roadmap",
-        icon: Target,
+    { 
+        id: 'study-plan', 
+        title: "2. Creating a Study Plan", 
+        icon: Clock, 
         content: (
-            <div className="prose dark:prose-invert max-w-none text-muted-foreground">
+             <div className="prose dark:prose-invert max-w-none text-muted-foreground">
                 <h4>2.1 Initial Planning</h4>
                 <ul>
                     <li>Allocate 1 week at the start for a full syllabus breakdown and to identify your weak/strong areas.</li>
@@ -51,9 +54,10 @@ const guideSections = [
             </div>
         )
     },
-    {
-        title: "3. Study Techniques & Strategies",
-        icon: Lightbulb,
+    { 
+        id: 'study-techniques', 
+        title: "3. Study Techniques", 
+        icon: Brain,
         content: (
             <div className="prose dark:prose-invert max-w-none text-muted-foreground">
                 <h4>3.1 Smart Study Techniques</h4>
@@ -71,8 +75,42 @@ const guideSections = [
         )
     },
     {
-        title: "9. Key Takeaways",
-        icon: CheckCircle2,
+        id: 'practice-testing',
+        title: "4. Practice and Mock Testing",
+        icon: BookCopy,
+        content: (
+            <div className="prose dark:prose-invert max-w-none text-muted-foreground">
+                <h4>4.1 Solving Previous Year Papers</h4>
+                <ul>
+                    <li>Attempt at least one full paper under timed conditions every week during the last 3 months.</li>
+                    <li>Analyze mistakes, review solutions, and revise weak topics.</li>
+                </ul>
+                <h4>4.2 Mock Tests</h4>
+                <ul>
+                    <li>Take sectional mocks for each subject twice a month.</li>
+                    <li>In the last two months, switch to full-length mock tests at least once a week.</li>
+                </ul>
+            </div>
+        )
+    },
+    {
+        id: 'faqs',
+        title: "5. FAQs and Tips",
+        icon: ShieldQuestion,
+        content: (
+             <div className="prose dark:prose-invert max-w-none text-muted-foreground">
+                <ul>
+                    <li><strong>Is daily study more effective than weekend marathons?</strong> Yes—consistency and daily engagement yield better retention and less stress.</li>
+                    <li><strong>Are coaching classes necessary?</strong> Not mandatory; self-study using the right resources is sufficient, but coaching can help for doubt clearing and structured guidance.</li>
+                    <li><strong>How should I handle technical subjects?</strong> Focus on concepts first, then practice application through worked examples and past papers.</li>
+                </ul>
+            </div>
+        )
+    },
+    { 
+        id: 'key-takeaways',
+        title: "6. Key Takeaways", 
+        icon: Medal,
         content: (
           <ul className="space-y-3 prose dark:prose-invert max-w-none text-muted-foreground">
               <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-accent mt-1 shrink-0"/><span>Begin early with a clear, structured roadmap to guide your efforts.</span></li>
@@ -107,11 +145,61 @@ const containerVariants = {
 };
 
 export default function RoadmapPage() {
+  const [activeSection, setActiveSection] = useState(guideSections[0].id);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-30% 0px -70% 0px' }
+    );
+
+    guideSections.forEach((section) => {
+      const element = document.getElementById(section.id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      guideSections.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+  
+  const handleDownload = (filename: string) => {
+    // In a real app, you'd link to a file in /public
+    // For this prototype, we'll simulate a download by creating a dummy file.
+    const element = document.createElement("a");
+    const file = new Blob(["This is a placeholder for your " + filename], {type: 'text/plain'});
+    element.href = URL.createObjectURL(file);
+    element.download = filename;
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+    element.remove();
+  }
+
+  const scrollToSection = (id: string) => {
+      const element = document.getElementById(id);
+      if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+  };
+
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow bg-background">
-        {/* Hero Section */}
         <motion.div 
             className="text-center py-20 px-4 bg-primary/5"
             initial="hidden"
@@ -124,71 +212,89 @@ export default function RoadmapPage() {
             <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground">
               A step-by-step, time-tested guide built by exam experts and toppers to help you ace the ECET & other government exams.
             </p>
-            <Button size="lg" className="mt-8">
-                Start Your Journey
-            </Button>
         </motion.div>
         
         <div className="container mx-auto px-4 py-16">
-            {/* Main Content Card */}
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.1 }}
-                variants={containerVariants}
-            >
-                <Card className="max-w-4xl mx-auto shadow-lg bg-card border-border">
-                    <CardHeader className="flex flex-row items-center gap-4">
-                         <div className="p-3 bg-accent/10 rounded-lg">
-                            <BookOpen className="h-6 w-6 text-accent"/>
-                         </div>
-                        <CardTitle className="text-2xl font-headline text-primary">Exam Preparation Handbook</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <Accordion type="single" collapsible className="w-full" defaultValue="item-0">
-                        {guideSections.map((section, index) => {
-                          const Icon = section.icon;
-                          return (
-                            <AccordionItem value={`item-${index}`} key={index}>
-                                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-                                    <div className="flex items-center gap-3">
-                                        <Icon className="h-5 w-5 text-primary/80"/>
-                                        <span>{section.title}</span>
-                                    </div>
-                                </AccordionTrigger>
-                                <AccordionContent className="pl-4 border-l-2 border-primary/20 ml-4">
-                                    {section.content}
-                                </AccordionContent>
-                            </AccordionItem>
-                          )
-                        })}
-                      </Accordion>
-                    </CardContent>
-                  </Card>
-              </motion.div>
+            <div className="flex flex-col lg:flex-row gap-12">
+                {/* Sticky Sidebar */}
+                <aside className="lg:w-1/4 lg:sticky top-24 self-start">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="font-headline">Roadmap Sections</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <ul className="space-y-2">
+                                {guideSections.map(section => {
+                                    const Icon = section.icon;
+                                    return (
+                                        <li key={section.id}>
+                                            <Button
+                                                variant={activeSection === section.id ? 'default' : 'ghost'}
+                                                className="w-full justify-start gap-3"
+                                                onClick={() => scrollToSection(section.id)}
+                                            >
+                                                <Icon className={cn("h-5 w-5", activeSection === section.id ? 'text-primary-foreground' : 'text-primary/80')} />
+                                                <span className="truncate">{section.title.substring(section.title.indexOf(' ')+1)}</span>
+                                            </Button>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </CardContent>
+                    </Card>
+                </aside>
 
-              {/* Downloadable Resources Section */}
-              <motion.div
-                className="max-w-4xl mx-auto mt-12"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={itemVariants}
-               >
-                 <Card className="bg-secondary/10 border-secondary/20">
-                    <CardHeader>
-                        <CardTitle className="font-headline text-secondary">Downloadable Resources</CardTitle>
-                    </CardHeader>
-                    <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <Button variant="outline"><Download className="mr-2 h-4 w-4" /> Study Planner PDF</Button>
-                        <Button variant="outline"><Download className="mr-2 h-4 w-4" /> Formula Mind Maps</Button>
-                        <Button variant="outline"><Download className="mr-2 h-4 w-4" /> Subject Checklist</Button>
-                    </CardContent>
-                 </Card>
-              </motion.div>
+                {/* Main Content */}
+                <div className="lg:w-3/4 space-y-12">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        variants={containerVariants}
+                        className="space-y-12"
+                    >
+                        {guideSections.map((section) => (
+                          <motion.div id={section.id} key={section.id} variants={itemVariants}>
+                            <Card className="shadow-lg bg-card border-border scroll-mt-24">
+                                <CardHeader className="flex flex-row items-center gap-4">
+                                     <div className="p-3 bg-accent/10 rounded-lg">
+                                        <section.icon className="h-6 w-6 text-accent"/>
+                                     </div>
+                                    <CardTitle className="text-2xl font-headline text-primary">{section.title}</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    {section.content}
+                                </CardContent>
+                              </Card>
+                          </motion.div>
+                        ))}
+                    </motion.div>
+                    
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={itemVariants}
+                       >
+                         <Card className="bg-secondary/10 border-secondary/20">
+                            <CardHeader>
+                                <CardTitle className="font-headline text-secondary">Downloadable Resources</CardTitle>
+                                <CardDescription>Get these handy resources to supplement your preparation.</CardDescription>
+                            </CardHeader>
+                            <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                                <Button variant="outline" onClick={() => handleDownload('study-planner.pdf')}><Download className="mr-2 h-4 w-4" /> Study Planner PDF</Button>
+                                <Button variant="outline" onClick={() => handleDownload('formula-mind-maps.pdf')}><Download className="mr-2 h-4 w-4" /> Formula Mind Maps</Button>
+                                <Button variant="outline" onClick={() => handleDownload('subject-checklist.pdf')}><Download className="mr-2 h-4 w-4" /> Subject Checklist</Button>
+                            </CardContent>
+                         </Card>
+                      </motion.div>
+                </div>
+            </div>
         </div>
       </main>
       <AppFooter />
     </div>
   );
 }
+
+    
