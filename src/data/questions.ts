@@ -69,7 +69,6 @@ export const questions: Question[] = [
     question: "In networking, what does the acronym LAN stand for?",
     options: ["Large Area Network", "Local Access Network", "Local Area Network", "Long Area Network"],
     correctAnswer: "Local Area Network",
-    topic": "Networking"
+    topic: "Networking"
   }
 ];
-
