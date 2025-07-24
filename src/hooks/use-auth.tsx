@@ -58,6 +58,7 @@ interface AuthContextType {
   updateUser: (details: UpdatableUserProfile) => Promise<void>;
   updateUserProgress: (newScore: ExamScore) => Promise<void>;
   isAdmin: boolean;
+  isInitialLoad: boolean; // Add this to track initial auth check
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -65,6 +66,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isInitialLoad, setIsInitialLoad] = useState(true); // Start as true
   const [isAdmin, setIsAdmin] = useState(false);
   const [supabase] = useState(() => createClient());
   const router = useRouter();
@@ -117,6 +119,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           setIsAdmin(false);
         }
         setLoading(false);
+        setIsInitialLoad(false); // Set to false after the first check
       }
     );
 
@@ -177,7 +180,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 
   return (
-    <AuthContext.Provider value={{ user, loading, logout, updateUser, updateUserProgress, isAdmin }}>
+    <AuthContext.Provider value={{ user, loading, logout, updateUser, updateUserProgress, isAdmin, isInitialLoad }}>
       {children}
     </AuthContext.Provider>
   );
