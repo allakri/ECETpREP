@@ -9,7 +9,7 @@ import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { BrainCircuit, Home, Lightbulb, UserCheck, BarChart, MessageCircleQuestion } from 'lucide-react';
+import { BrainCircuit, Home, Lightbulb, UserCheck, BarChart, MessageCircleQuestion, ListChecks } from 'lucide-react';
 import { ScoreChart } from './ScoreChart';
 import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
@@ -220,6 +220,10 @@ export default function ResultsClient() {
             <Button onClick={() => router.push('/')} variant="default" className="font-bold shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
                 <Home className="mr-2 h-4 w-4"/>
                 Back to Home
+            </Button>
+            <Button onClick={() => router.push('/exam/review')} variant="secondary" className="font-bold shadow-lg">
+                <ListChecks className="mr-2 h-4 w-4"/>
+                Review Answers & Learn
             </Button>
             <Button onClick={() => router.push('/chat')} variant="outline" className="font-bold shadow-lg">
                 <MessageCircleQuestion className="mr-2 h-4 w-4"/>
