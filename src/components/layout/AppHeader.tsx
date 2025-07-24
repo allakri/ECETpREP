@@ -4,10 +4,11 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { Menu, Rocket, LogOut } from "lucide-react";
+import { Menu, LogOut } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import { ThemeToggle } from "./ThemeToggle";
 import { Skeleton } from "../ui/skeleton";
+import Image from "next/image";
 
 export function AppHeader() {
   const { user, logout, isInitialLoad } = useAuth();
@@ -28,8 +29,8 @@ export function AppHeader() {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline text-primary">
-            <Rocket />
-            <span>Diploma Prep</span>
+            <Image src="/images/logo.png" alt="Diploma Prep Hub Logo" width={32} height={32} className="rounded-md"/>
+            <span>Diploma Prep Hub</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-1">
