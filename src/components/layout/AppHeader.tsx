@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../u
 import { Menu, Rocket, LogOut } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import { ThemeToggle } from "./ThemeToggle";
+import { Skeleton } from "../ui/skeleton";
 
 export function AppHeader() {
   const { user, logout, isInitialLoad } = useAuth();
@@ -47,18 +48,21 @@ export function AppHeader() {
               </Link>
             )}
             <div className="pl-2 flex items-center gap-2">
-              {!isInitialLoad && (
-                  user ? (
-                    <Button onClick={logout} variant="ghost" className="text-foreground text-base hover:bg-secondary">
-                      <LogOut className="mr-2 h-4 w-4" />
-                      Logout
-                    </Button>
-                  ) : (
-                    <>
-                      <Link href="/login" passHref><Button variant="ghost" className="text-foreground text-base hover:bg-secondary">Login</Button></Link>
-                      <Link href="/register" passHref><Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">Register</Button></Link>
-                    </>
-                  )
+              {isInitialLoad ? (
+                <div className="flex items-center gap-2">
+                  <Skeleton className="h-9 w-20" />
+                  <Skeleton className="h-9 w-24" />
+                </div>
+              ) : user ? (
+                <Button onClick={logout} variant="ghost" className="text-foreground text-base hover:bg-secondary">
+                  <LogOut className="mr-2 h-4 w-4" />
+                  Logout
+                </Button>
+              ) : (
+                <>
+                  <Link href="/login" passHref><Button variant="ghost" className="text-foreground text-base hover:bg-secondary">Login</Button></Link>
+                  <Link href="/register" passHref><Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">Register</Button></Link>
+                </>
               )}
               <ThemeToggle />
             </div>
@@ -90,19 +94,20 @@ export function AppHeader() {
                   )}
                 </div>
                 <div className="border-t pt-4">
-                   {!isInitialLoad && (
-                       user ? (
-                          <Button onClick={logout} variant="outline" className="w-full justify-center text-lg">
-                            <LogOut className="mr-2 h-5 w-5" />
-                            Logout
-                          </Button>
-                      ) : (
-                        <div className="space-y-2">
-                          <Link href="/login" passHref><Button variant="outline" className="w-full justify-center text-lg">Login</Button></Link>
-                          <Link href="/register" passHref><Button className="w-full justify-center text-lg bg-primary text-primary-foreground hover:bg-primary/90">Register</Button></Link>
-                        </div>
-                      )
-                   )}
+                   {isInitialLoad ? (
+                      <Skeleton className="h-10 w-full" />
+                   ) : user ? (
+                      <Button onClick={logout} variant="outline" className="w-full justify-center text-lg">
+                        <LogOut className="mr-2 h-5 w-5" />
+                        Logout
+                      </Button>
+                    ) : (
+                      <div className="space-y-2">
+                        <Link href="/login" passHref><Button variant="outline" className="w-full justify-center text-lg">Login</Button></Link>
+                        <Link href="/register" passHref><Button className="w-full justify-center text-lg bg-primary text-primary-foreground hover:bg-primary/90">Register</Button></Link>
+                      </div>
+                    )
+                   }
                 </div>
               </SheetContent>
             </Sheet>
