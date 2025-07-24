@@ -1,9 +1,9 @@
 
+
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { useRouter } from 'next/navigation';
-import { questions } from '@/data/questions';
+import { useRouter, useSearchParams } from 'next/navigation';
 import type { AnswerSheet, MarkedQuestions, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,7 +12,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, AlertTriangle } from 'lucide-react';
+import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, AlertTriangle, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
@@ -20,43 +20,75 @@ const MAX_VIOLATIONS = 3;
 
 export default function ExamClient() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { toast } = useToast();
+
+  const [questions, setQuestions] = useState<Question[] | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<AnswerSheet>({});
   const [markedForReview, setMarkedForReview] = useState<MarkedQuestions>([]);
   const [timeLeft, setTimeLeft] = useState(EXAM_DURATION);
-  const [isMounted, setIsMounted] = useState(false);
   const [isSubmitDialogOpen, setIsSubmitDialogOpen] = useState(false);
   const [isViolationDialogOpen, setIsViolationDialogOpen] = useState(false);
   const [isExitDialogOpen, setIsExitDialogOpen] = useState(false);
   const violationCount = useRef(0);
 
-  const handleSubmit = useCallback((reason: 'user' | 'time' | 'violation') => {
-    let title = "Exam Submitted";
-    let description = "Your answers have been saved.";
-
-    if (reason === 'time') {
-      title = "Time's Up!";
-      description = "Your exam has been submitted automatically.";
-    } else if (reason === 'violation') {
-      title = "Exam Terminated";
-      description = `Exam submitted due to ${MAX_VIOLATIONS} violations.`;
-    }
-
-    toast({ title, description });
-    
+  const handleSubmit = useCallback(() => {
     localStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
-    localStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
+    if (questions) {
+      localStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
+    }
     router.replace('/results');
-  }, [answers, router, toast]);
+  }, [answers, router, questions]);
 
   useEffect(() => {
-    setIsMounted(true);
+    const examSlug = searchParams.get('examSlug');
+    const year = searchParams.get('year');
+
+    async function loadQuestions() {
+        if (!examSlug || !year) {
+            toast({
+                title: 'Error',
+                description: 'Exam details not found. Redirecting...',
+                variant: 'destructive',
+            });
+            router.push('/exams');
+            return;
+        }
+
+        try {
+            const response = await fetch(`/datasets/${examSlug}_${year}.json`);
+            if (!response.ok) {
+                throw new Error('Failed to load questions');
+            }
+            const data = await response.json();
+            setQuestions(data);
+        } catch (error) {
+            console.error(error);
+            toast({
+                title: 'Error Loading Questions',
+                description: 'Could not load the question paper. Please try again.',
+                variant: 'destructive',
+            });
+             // Fallback to default questions if specific one fails
+            const { questions: defaultQuestions } = await import('@/data/questions');
+            setQuestions(defaultQuestions);
+        }
+    }
+
+    loadQuestions();
+  }, [searchParams, router, toast]);
+
+
+  useEffect(() => {
+    if (!questions) return; // Don't start timer until questions are loaded
+
     const timer = setInterval(() => {
       setTimeLeft(prevTime => {
         if (prevTime <= 1) {
           clearInterval(timer);
-          handleSubmit('time');
+          toast({ title: "Time's Up!", description: "Your exam has been submitted automatically." });
+          handleSubmit();
           return 0;
         }
         return prevTime - 1;
@@ -67,7 +99,8 @@ export default function ExamClient() {
         if (document.hidden) {
             violationCount.current += 1;
             if (violationCount.current >= MAX_VIOLATIONS) {
-                handleSubmit('violation');
+                toast({ title: "Exam Terminated", description: `Exam submitted due to ${MAX_VIOLATIONS} violations.`, variant: 'destructive' });
+                handleSubmit();
             } else {
                 setIsViolationDialogOpen(true);
             }
@@ -80,7 +113,7 @@ export default function ExamClient() {
         clearInterval(timer);
         document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [handleSubmit]);
+  }, [handleSubmit, questions, toast]);
   
   const handleAnswerSelect = (questionId: number, answer: string) => {
     setAnswers(prev => ({ ...prev, [questionId]: answer }));
@@ -93,14 +126,20 @@ export default function ExamClient() {
   };
 
   const clearResponse = () => {
+    if (!questions) return;
     const questionId = questions[currentQuestionIndex].id;
     const newAnswers = { ...answers };
     delete newAnswers[questionId];
     setAnswers(newAnswers);
   };
   
-  if (!isMounted) {
-    return null; // Or a loading spinner
+  if (!questions) {
+    return (
+        <div className="flex h-screen w-full items-center justify-center bg-background">
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            <p className="ml-4 text-lg">Loading Question Paper...</p>
+        </div>
+    );
   }
 
   const currentQuestion = questions[currentQuestionIndex];
@@ -126,7 +165,7 @@ export default function ExamClient() {
     <div className="flex h-screen flex-col md:flex-row bg-background text-foreground">
       <main className="flex-1 flex flex-col p-4 md:p-6 overflow-y-auto">
         <header className="flex justify-between items-center mb-4">
-          <h1 className="text-2xl font-headline text-primary">ECET Exam</h1>
+          <h1 className="text-2xl font-headline text-primary">{searchParams.get('examName') || 'ECET Exam'}</h1>
           <div className="flex items-center gap-4">
             <div className={`flex items-center gap-2 font-bold p-2 rounded-lg ${timeLeft < 300 ? 'text-destructive animate-pulse' : 'text-foreground'}`}>
               <Timer className="h-6 w-6 text-accent" />
@@ -240,7 +279,8 @@ export default function ExamClient() {
             </AlertDialogCancel>
             <Button onClick={() => {
               setIsSubmitDialogOpen(false);
-              handleSubmit('user');
+              toast({ title: "Exam Submitted!", description: "Your answers have been saved." });
+              handleSubmit();
             }} className="bg-primary text-primary-foreground hover:bg-primary/90">
               Submit
             </Button>

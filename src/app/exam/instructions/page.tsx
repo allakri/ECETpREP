@@ -1,7 +1,8 @@
 
+
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AppHeader } from "@/components/layout/AppHeader";
@@ -18,9 +19,11 @@ const instructions = [
 
 export default function ExamInstructionsPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleStartExam = () => {
-    router.push('/exam');
+    // Forward the existing search params to the exam page
+    router.push(`/exam?${searchParams.toString()}`);
   };
 
   return (

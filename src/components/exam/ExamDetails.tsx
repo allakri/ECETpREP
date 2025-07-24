@@ -1,4 +1,5 @@
 
+
 "use client"
 
 import { useRouter } from "next/navigation";
@@ -27,7 +28,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
     const { user } = useAuth();
     const { toast } = useToast();
 
-    const handlePaperSelect = (paperType: string) => {
+    const handlePaperSelect = (year: string) => {
         if (!user) {
             toast({
                 title: "Authentication Required",
@@ -37,8 +38,13 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
             router.push('/login');
             return;
         }
-        // All paper selections will now go to the instructions page first.
-        router.push('/exam/instructions');
+        // Pass exam details to the instructions page
+        const params = new URLSearchParams({
+            examName: examName,
+            examSlug: examSlug,
+            year: year
+        });
+        router.push(`/exam/instructions?${params.toString()}`);
     };
     
     const handleCustomPaperSelect = () => {
@@ -68,7 +74,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                         {papers.map((paper) => (
                             <Button
                                 key={paper.year}
-                                onClick={() => handlePaperSelect(paper.type)}
+                                onClick={() => handlePaperSelect(paper.year)}
                                 variant="outline"
                                 className="w-full h-auto py-6 px-4 flex flex-col items-start justify-center text-left gap-3 bg-background hover:bg-muted/50 hover:scale-105 transition-transform duration-200"
                             >

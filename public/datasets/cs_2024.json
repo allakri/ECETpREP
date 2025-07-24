@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following is not a standard data type in C?",
+    "options": ["int", "float", "string", "char"],
+    "correctAnswer": "string",
+    "topic": "C Programming Basics"
+  },
+  {
+    "id": 2,
+    "question": "What is the time complexity of a binary search algorithm?",
+    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+    "correctAnswer": "O(log n)",
+    "topic": "Data Structures and Algorithms"
+  },
+  {
+    "id": 3,
+    "question": "Which of these is a non-volatile memory?",
+    "options": ["RAM", "DRAM", "SRAM", "ROM"],
+    "correctAnswer": "ROM",
+    "topic": "Computer Architecture"
+  },
+  {
+    "id": 4,
+    "question": "What does SQL stand for?",
+    "options": ["Structured Query Language", "Strong Question Language", "Structured Question List", "Simple Query Language"],
+    "correctAnswer": "Structured Query Language",
+    "topic": "Database Management"
+  },
+  {
+    "id": 5,
+    "question": "Which protocol is used to send email?",
+    "options": ["HTTP", "FTP", "SMTP", "POP3"],
+    "correctAnswer": "SMTP",
+    "topic": "Computer Networks"
+  }
+]
