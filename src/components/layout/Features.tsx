@@ -81,9 +81,9 @@ export function Features() {
                   {feature.name}
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-muted-foreground">{feature.description}</dd>
-                <Link href="/about" asChild>
-                  <Button variant="link" className="mt-4">Learn More →</Button>
-                </Link>
+                <Button asChild variant="link" className="mt-4">
+                  <Link href="/about">Learn More →</Link>
+                </Button>
               </motion.div>
             ))}
         </motion.dl>
