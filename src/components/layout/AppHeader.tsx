@@ -37,43 +37,47 @@ export function AppHeader() {
         <nav className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline text-primary">
             <Image src="/images/logo.png" alt="Diploma Prep Hub Logo" width={32} height={32} className="rounded-md"/>
-            {isMounted && <span className="hidden sm:inline">Diploma Prep Hub</span>}
+            <span className="hidden sm:inline">Diploma Prep Hub</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-1">
-            {navLinks.map(link => (
-              <Link key={link.href} href={link.href} passHref>
-                <Button variant="link" className="text-foreground text-base hover:text-accent">
-                  {link.label}
-                </Button>
-              </Link>
-            ))}
-            {!isInitialLoad && user && (
-              <Link href="/profile" passHref>
-                <Button variant="link" className="text-foreground text-base hover:text-accent">
-                  Profile
-                </Button>
-              </Link>
-            )}
-            <div className="pl-2 flex items-center gap-2">
-              {isInitialLoad ? (
-                <div className="flex items-center gap-2">
-                  <Skeleton className="h-9 w-20" />
-                  <Skeleton className="h-9 w-24" />
+            {isMounted && (
+              <>
+                {navLinks.map(link => (
+                  <Link key={link.href} href={link.href} passHref>
+                    <Button variant="link" className="text-foreground text-base hover:text-accent">
+                      {link.label}
+                    </Button>
+                  </Link>
+                ))}
+                {!isInitialLoad && user && (
+                  <Link href="/profile" passHref>
+                    <Button variant="link" className="text-foreground text-base hover:text-accent">
+                      Profile
+                    </Button>
+                  </Link>
+                )}
+                <div className="pl-2 flex items-center gap-2">
+                  {isInitialLoad ? (
+                    <div className="flex items-center gap-2">
+                      <Skeleton className="h-9 w-20" />
+                      <Skeleton className="h-9 w-24" />
+                    </div>
+                  ) : user ? (
+                    <Button onClick={logout} variant="ghost" className="text-foreground text-base hover:bg-secondary">
+                      <LogOut className="mr-2 h-4 w-4" />
+                      Logout
+                    </Button>
+                  ) : (
+                    <>
+                      <Link href="/login" passHref><Button variant="ghost" className="text-foreground text-base hover:bg-secondary">Login</Button></Link>
+                      <Link href="/register" passHref><Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">Register</Button></Link>
+                    </>
+                  )}
+                  <ThemeToggle />
                 </div>
-              ) : user ? (
-                <Button onClick={logout} variant="ghost" className="text-foreground text-base hover:bg-secondary">
-                  <LogOut className="mr-2 h-4 w-4" />
-                  Logout
-                </Button>
-              ) : (
-                <>
-                  <Link href="/login" passHref><Button variant="ghost" className="text-foreground text-base hover:bg-secondary">Login</Button></Link>
-                  <Link href="/register" passHref><Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">Register</Button></Link>
-                </>
-              )}
-              <ThemeToggle />
-            </div>
+              </>
+            )}
           </div>
 
           <div className="md:hidden flex items-center gap-2">
