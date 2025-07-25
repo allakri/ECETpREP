@@ -79,7 +79,7 @@ export function Hero() {
           </motion.div>
         </motion.div>
         <motion.div 
-          className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32"
+          className="relative mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -89,9 +89,9 @@ export function Hero() {
               <Image
                 src="/images/hero.png"
                 alt="AI-powered diploma prep dashboard showing student progress"
-                width={600}
-                height={400}
-                className="w-full max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-cover"
+                width={2432}
+                height={1442}
+                className="w-[76rem] max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                 priority
               />
             </div>
