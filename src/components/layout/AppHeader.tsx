@@ -28,7 +28,6 @@ export function AppHeader() {
     { href: "/courses", label: "Courses" },
     { href: "/user-guide", label: "User Guide" },
     { href: "/about", label: "About Us" },
-    { href: "/contact", label: "Contact Us" },
   ];
   
   return (

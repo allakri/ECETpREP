@@ -65,7 +65,6 @@ export function AppFooter() {
             <h3 className="font-bold text-lg mb-4 font-headline">Company</h3>
             <ul className="space-y-2 text-sm">
                 <li><Link href="/about" className="hover:underline text-muted-foreground hover:text-primary">About Us</Link></li>
-                <li><Link href="/contact" className="hover:underline text-muted-foreground hover:text-primary">Contact Us</Link></li>
                 <li><Link href="#" className="hover:underline text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link href="#" className="hover:underline text-muted-foreground hover:text-primary">Terms of Service</Link></li>
             </ul>
