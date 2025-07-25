@@ -89,9 +89,9 @@ export function Hero() {
               <Image
                 src="/images/hero.png"
                 alt="AI-powered diploma prep dashboard showing student progress"
-                width={2432}
-                height={1442}
-                className="w-[76rem] max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                width={600}
+                height={400}
+                className="w-full max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                 priority
               />
             </div>
