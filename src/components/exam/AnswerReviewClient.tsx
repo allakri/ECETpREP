@@ -4,14 +4,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import type { AnswerSheet, Question } from '@/lib/types';
+import type { MessageData } from 'genkit/experimental/ai';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import { CheckCircle, XCircle, ChevronLeft, ChevronRight, Lightbulb, Home, AlertCircle, Loader2 } from 'lucide-react';
+import { CheckCircle, XCircle, ChevronLeft, ChevronRight, Lightbulb, Home, AlertCircle, Loader2, MessageSquarePlus, Bot, User, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '../ui/skeleton';
 import { explainAnswer } from '@/ai/flows/explain-answer-flow';
+import { clearDoubt } from '@/ai/flows/doubt-clearing-flow';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
 
 const LoadingSkeleton = () => (
     <div className="flex h-screen w-full items-center justify-center bg-background">
@@ -26,6 +30,12 @@ const LoadingSkeleton = () => (
     </div>
 );
 
+type ChatMessage = {
+  role: 'user' | 'model';
+  text: string;
+};
+
+
 export default function AnswerReviewClient() {
   const router = useRouter();
   const { toast } = useToast();
@@ -35,6 +45,12 @@ export default function AnswerReviewClient() {
   const [isMounted, setIsMounted] = useState(false);
   const [aiExplanations, setAiExplanations] = useState<Record<number, string>>({});
   const [loadingExplanation, setLoadingExplanation] = useState<number | null>(null);
+
+  // State for chat within the dialog
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+  const [chatInput, setChatInput] = useState('');
+  const [isChatLoading, setIsChatLoading] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -54,6 +70,8 @@ export default function AnswerReviewClient() {
   }, [router, toast]);
 
   const handleGenerateExplanation = useCallback(async (question: Question, userAnswer: string) => {
+    if (aiExplanations[question.id]) return; // Don't re-generate if it exists
+    
     setLoadingExplanation(question.id);
     try {
       const result = await explainAnswer({
@@ -81,7 +99,48 @@ export default function AnswerReviewClient() {
     } finally {
       setLoadingExplanation(null);
     }
-  }, [toast]);
+  }, [toast, aiExplanations]);
+
+  const handleOpenChatDialog = (question: Question, explanation: string) => {
+    setChatMessages([{ role: 'model', text: explanation }]);
+    setChatInput('');
+    setIsChatOpen(true);
+  };
+  
+  const handleSendChatMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!chatInput.trim() || !questions) return;
+
+    const userMessage: ChatMessage = { role: 'user', text: chatInput };
+    setChatMessages(prev => [...prev, userMessage]);
+    setChatInput('');
+    setIsChatLoading(true);
+
+    try {
+        const history: MessageData[] = chatMessages.map(msg => ({
+            role: msg.role,
+            parts: [{ text: msg.text }],
+        }));
+        
+        const currentQuestion = questions[currentQuestionIndex];
+        const contextQuestion = `The user is asking about the following question:\n\nQuestion: "${currentQuestion.question}"\nThe correct answer is "${currentQuestion.correctAnswer}".\nMy initial explanation was: "${aiExplanations[currentQuestion.id]}"\n\nNow, the user's follow-up question is:`;
+
+        const result = await clearDoubt({
+            question: `${contextQuestion} ${chatInput}`,
+            history: history,
+        });
+
+        const aiMessage: ChatMessage = { role: 'model', text: result.answer };
+        setChatMessages(prev => [...prev, aiMessage]);
+    } catch (error) {
+        console.error('Error getting response from AI:', error);
+        const errorMessage: ChatMessage = { role: 'model', text: "Sorry, I encountered an error. Please try again." };
+        setChatMessages(prev => [...prev, errorMessage]);
+    } finally {
+        setIsChatLoading(false);
+    }
+  };
+
 
   if (!isMounted || !questions || !answers) {
     return <LoadingSkeleton />;
@@ -183,13 +242,63 @@ export default function AnswerReviewClient() {
             {!isCorrect && userAnswer && (
                  <Card className="bg-primary/5">
                     <CardHeader>
-                        <CardTitle className="font-headline text-lg flex items-center gap-2 text-primary">
-                            <Lightbulb /> AI Explanation
-                        </CardTitle>
+                        <div className="flex justify-between items-center">
+                            <CardTitle className="font-headline text-lg flex items-center gap-2 text-primary">
+                                <Lightbulb /> AI Explanation
+                            </CardTitle>
+                            <Dialog open={isChatOpen} onOpenChange={setIsChatOpen}>
+                                <DialogTrigger asChild>
+                                    <Button 
+                                        variant="secondary"
+                                        size="sm"
+                                        disabled={!aiExplanations[currentQuestion.id]}
+                                        onClick={() => handleOpenChatDialog(currentQuestion, aiExplanations[currentQuestion.id])}
+                                    >
+                                        <MessageSquarePlus className="mr-2 h-4 w-4" /> Ask AI
+                                    </Button>
+                                </DialogTrigger>
+                                <DialogContent className="sm:max-w-[625px] h-[80vh] flex flex-col">
+                                    <DialogHeader>
+                                        <DialogTitle>Discuss with AI Tutor</DialogTitle>
+                                        <DialogDescription>
+                                           Ask follow-up questions about "{currentQuestion.question}"
+                                        </DialogDescription>
+                                    </DialogHeader>
+                                    <div className="flex-1 pr-0 py-4">
+                                        <ScrollArea className="h-full pr-6">
+                                            <div className="space-y-4">
+                                            {chatMessages.map((message, index) => (
+                                                <div key={index} className={cn('flex items-start gap-3', message.role === 'user' ? 'justify-end' : 'justify-start')}>
+                                                    {message.role === 'model' && <Avatar className="h-8 w-8"><AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback></Avatar>}
+                                                    <div className={cn('max-w-[85%] rounded-lg p-3 text-sm', message.role === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted')}>
+                                                        <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap">{message.text}</div>
+                                                    </div>
+                                                    {message.role === 'user' && <Avatar className="h-8 w-8"><AvatarFallback className="bg-accent text-accent-foreground"><User size={20}/></AvatarFallback></Avatar>}
+                                                </div>
+                                            ))}
+                                            {isChatLoading && (
+                                                <div className="flex items-start gap-3 justify-start">
+                                                    <Avatar className="h-8 w-8"><AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback></Avatar>
+                                                    <div className="bg-muted rounded-lg p-3"><Loader2 className="h-5 w-5 animate-spin" /></div>
+                                                </div>
+                                            )}
+                                            </div>
+                                        </ScrollArea>
+                                    </div>
+                                    <DialogFooter>
+                                        <form onSubmit={handleSendChatMessage} className="flex w-full items-center gap-2">
+                                            <Input value={chatInput} onChange={(e) => setChatInput(e.target.value)} placeholder="Ask a follow-up question..." disabled={isChatLoading} />
+                                            <Button type="submit" disabled={isChatLoading || !chatInput.trim()}><Send className="h-4 w-4" /></Button>
+                                        </form>
+                                    </DialogFooter>
+                                </DialogContent>
+                            </Dialog>
+                        </div>
                     </CardHeader>
                     <CardContent>
-                        {aiExplanations[currentQuestion.id] ? (
-                            <div className="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap">
+                       <ScrollArea className="h-32">
+                         {aiExplanations[currentQuestion.id] ? (
+                            <div className="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap pr-4">
                                 {aiExplanations[currentQuestion.id]}
                             </div>
                         ) : (
@@ -201,6 +310,7 @@ export default function AnswerReviewClient() {
                                 {loadingExplanation === currentQuestion.id ? "Analyzing..." : "Explain my mistake"}
                             </Button>
                         )}
+                       </ScrollArea>
                     </CardContent>
                  </Card>
             )}
@@ -219,3 +329,4 @@ export default function AnswerReviewClient() {
     </div>
   );
 }
+
