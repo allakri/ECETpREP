@@ -9,9 +9,16 @@ import { useAuth } from "@/hooks/use-auth";
 import { ThemeToggle } from "./ThemeToggle";
 import { Skeleton } from "../ui/skeleton";
 import Image from "next/image";
+import { useState, useEffect } from 'react';
 
 export function AppHeader() {
   const { user, logout, isInitialLoad } = useAuth();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -30,7 +37,7 @@ export function AppHeader() {
         <nav className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline text-primary">
             <Image src="/images/logo.png" alt="Diploma Prep Hub Logo" width={32} height={32} className="rounded-md"/>
-            <span className="hidden sm:inline">Diploma Prep Hub</span>
+            {isMounted && <span className="hidden sm:inline">Diploma Prep Hub</span>}
           </Link>
           
           <div className="hidden md:flex items-center space-x-1">
