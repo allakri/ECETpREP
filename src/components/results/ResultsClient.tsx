@@ -25,7 +25,7 @@ const quotes = [
 
 export default function ResultsClient() {
   const router = useRouter();
-  const { user, updateUserProgress } = useAuth();
+  const { user, loading, updateUserProgress } = useAuth();
   const [answers, setAnswers] = useState<AnswerSheet | null>(null);
   const [questions, setQuestions] = useState<Question[] | null>(null);
   const [feedback, setFeedback] = useState<string | null>(null);
@@ -77,7 +77,13 @@ export default function ResultsClient() {
   
   useEffect(() => {
     const hasRun = sessionStorage.getItem('resultsGenerated');
-    if (answers && questions && user && !hasRun) {
+
+    if (loading || !answers || !questions || hasRun) {
+        if (!loading && !user) setLoadingAI(false);
+        return;
+    }
+    
+    if (user) {
       sessionStorage.setItem('resultsGenerated', 'true');
       const getAIInsightsAndSave = async () => {
         setLoadingAI(true);
@@ -124,14 +130,12 @@ export default function ResultsClient() {
         }
       };
       getAIInsightsAndSave();
-    } else if (!user) { // If user is not logged in, no need to show loader.
-        setLoadingAI(false);
     }
      // Clear the flag when the component unmounts
     return () => {
       sessionStorage.removeItem('resultsGenerated');
     };
-  }, [answers, questions, score, incorrectTopics, user, updateUserProgress]);
+  }, [answers, questions, score, incorrectTopics, user, loading, updateUserProgress]);
 
   if (!isMounted) {
     // This state is now handled by the Suspense fallback

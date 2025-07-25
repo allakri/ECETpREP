@@ -168,10 +168,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         branch: details.branch ?? user.branch,
         college: details.college ?? user.college,
         year_of_study: details.year_of_study ?? user.yearOfStudy,
-        avg_score: details.avg_score ?? user.avg_score,
-        tests_taken: details.tests_taken ?? user.tests_taken,
-        study_activities: details.study_activities ?? user.study_activities,
-        exam_score_history: details.exam_score_history ?? user.exam_score_history,
     });
 
 
@@ -199,14 +195,25 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     
     // TODO: Implement streak logic in the future
 
-    const progressUpdate: UpdatableUserProfile = {
-      tests_taken: newTestsTaken,
-      avg_score: newAvgScore,
-      exam_score_history: newHistory,
-      study_activities: newActivities,
-    };
+    const { error } = await supabase.rpc('update_user_progress', {
+        user_id: user.id,
+        new_avg_score: newAvgScore,
+        new_tests_taken: newTestsTaken,
+        new_exam_score_history: newHistory,
+        new_study_activities: newActivities,
+    });
 
-    await updateUser(progressUpdate);
+    if (error) {
+        console.error("Error updating user progress:", error);
+        return;
+    }
+
+    // Refresh the local user state with the updated information
+    const {data: { user: supabaseUser }} = await supabase.auth.getUser();
+    if (supabaseUser) {
+        const updatedUserProfile = await fetchUserProfile(supabaseUser);
+        storeUser(updatedUserProfile);
+    }
   };
 
 
