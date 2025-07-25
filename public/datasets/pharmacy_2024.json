@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following is an example of a solid dosage form?",
+    "options": ["Syrup", "Elixir", "Tablet", "Suspension"],
+    "correctAnswer": "Tablet",
+    "topic": "Pharmaceutics"
+  },
+  {
+    "id": 2,
+    "question": "Pharmacokinetics is the study of:",
+    "options": ["What the drug does to the body", "What the body does to the drug", "The chemical structure of the drug", "The source of the drug"],
+    "correctAnswer": "What the body does to the drug",
+    "topic": "Pharmacology"
+  },
+  {
+    "id": 3,
+    "question": "Which of the following is an alkaloid obtained from the Cinchona plant?",
+    "options": ["Morphine", "Quinine", "Atropine", "Reserpine"],
+    "correctAnswer": "Quinine",
+    "topic": "Pharmacognosy"
+  },
+  {
+    "id": 4,
+    "question": "A functional group present in aspirin is:",
+    "options": ["Carboxylic acid", "Ester", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B",
+    "topic": "Pharmaceutical Chemistry"
+  },
+  {
+    "id": 5,
+    "question": "The study of adverse effects of drugs is known as:",
+    "options": ["Pharmacology", "Toxicology", "Pharmacognosy", "Pharmaceutics"],
+    "correctAnswer": "Toxicology",
+    "topic": "Pharmacology"
+  }
+]

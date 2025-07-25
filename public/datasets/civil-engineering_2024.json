@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "The ratio of lateral strain to longitudinal strain is called:",
+    "options": ["Modulus of Elasticity", "Bulk Modulus", "Shear Modulus", "Poisson's Ratio"],
+    "correctAnswer": "Poisson's Ratio",
+    "topic": "Strength of Materials"
+  },
+  {
+    "id": 2,
+    "question": "Bernoulli's equation deals with the conservation of:",
+    "options": ["Mass", "Momentum", "Energy", "Force"],
+    "correctAnswer": "Energy",
+    "topic": "Hydraulics"
+  },
+  {
+    "id": 3,
+    "question": "The type of surveying in which the curvature of the earth is taken into account is called:",
+    "options": ["Plane Surveying", "Geodetic Surveying", "Topographical Surveying", "Cadastral Surveying"],
+    "correctAnswer": "Geodetic Surveying",
+    "topic": "Surveying"
+  },
+  {
+    "id": 4,
+    "question": "What is the most common admixture used to accelerate the setting time of concrete?",
+    "options": ["Gypsum", "Calcium Chloride", "Sugar", "Fly Ash"],
+    "correctAnswer": "Calcium Chloride",
+    "topic": "Concrete Technology"
+  },
+  {
+    "id": 5,
+    "question": "A simply supported beam carries a point load at its center. The shape of the bending moment diagram will be:",
+    "options": ["Rectangle", "Triangle", "Parabola", "Cube"],
+    "correctAnswer": "Triangle",
+    "topic": "Theory of Structures"
+  }
+]

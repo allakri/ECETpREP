@@ -32,7 +32,6 @@ export default function ResultsClient() {
   const [loadingAI, setLoadingAI] = useState(true);
   const [quote, setQuote] = useState('');
   const [isMounted, setIsMounted] = useState(false);
-  const [isProgressSaved, setIsProgressSaved] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -95,9 +94,16 @@ export default function ResultsClient() {
               date: format(new Date(), 'yyyy-MM-dd'),
           };
 
+          const updatedUser = {
+              ...user,
+              tests_taken: user.tests_taken + 1,
+              avg_score: (user.exam_score_history.reduce((acc, item) => acc + item.score, 0) + newScoreData.score) / (user.tests_taken + 1),
+              exam_score_history: [...user.exam_score_history, newScoreData],
+              study_activities: [...new Set([...user.study_activities, newScoreData.date])],
+          }
+
           // Save progress first
-          await updateUserProgress(newScoreData);
-          setIsProgressSaved(true);
+          await updateUserProgress(updatedUser);
 
           // Then, fetch AI insights in parallel
           const [feedbackResult, readinessResult] = await Promise.all([
@@ -151,7 +157,7 @@ export default function ResultsClient() {
       <div className="max-w-7xl mx-auto space-y-6">
         <div>
           <h1 className="text-3xl font-bold font-headline text-primary">Here's your result</h1>
-          <p className="text-muted-foreground">Congratulations on completing the exam. {user && isProgressSaved ? 'Your progress has been saved.' : user ? 'Saving your progress...' : 'Log in to save your progress.'}</p>
+          <p className="text-muted-foreground">Congratulations on completing the exam. {user ? 'Your progress has been saved.' : 'Log in to save your progress.'}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">

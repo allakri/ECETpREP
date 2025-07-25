@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils';
 import { CheckCircle, XCircle, ChevronLeft, ChevronRight, Lightbulb, Home, AlertCircle, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '../ui/skeleton';
+import { explainAnswer } from '@/ai/flows/explain-answer-flow';
 
 const LoadingSkeleton = () => (
     <div className="flex h-screen w-full items-center justify-center bg-background">
@@ -52,6 +53,36 @@ export default function AnswerReviewClient() {
     }
   }, [router, toast]);
 
+  const handleGenerateExplanation = useCallback(async (question: Question, userAnswer: string) => {
+    setLoadingExplanation(question.id);
+    try {
+      const result = await explainAnswer({
+        question: question.question,
+        options: question.options,
+        userAnswer: userAnswer,
+        correctAnswer: question.correctAnswer,
+        topic: question.topic,
+      });
+      setAiExplanations(prev => ({
+        ...prev,
+        [question.id]: result.explanation,
+      }));
+    } catch (error) {
+      console.error("Error generating AI explanation:", error);
+      toast({
+        variant: 'destructive',
+        title: 'AI Error',
+        description: 'Could not generate an explanation at this time.',
+      });
+      setAiExplanations(prev => ({
+        ...prev,
+        [question.id]: "Sorry, an error occurred while generating the explanation.",
+      }));
+    } finally {
+      setLoadingExplanation(null);
+    }
+  }, [toast]);
+
   if (!isMounted || !questions || !answers) {
     return <LoadingSkeleton />;
   }
@@ -67,17 +98,6 @@ export default function AnswerReviewClient() {
     const question = questions.find(q => q.id === questionId);
     return answer === question?.correctAnswer ? 'correct' : 'incorrect';
   };
-
-  const handleGenerateExplanation = async (questionId: number) => {
-    setLoadingExplanation(questionId);
-    // TODO: Wire up to a real Genkit flow
-    await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call
-    setAiExplanations(prev => ({
-      ...prev,
-      [questionId]: `This is a placeholder AI explanation for question ${questionId}. The AI would explain that the correct answer is '${currentQuestion.correctAnswer}' because of [concept]. It would also clarify why your answer, '${userAnswer}', was incorrect based on common misconceptions.`
-    }));
-    setLoadingExplanation(null);
-  }
 
   return (
     <div className="flex h-[calc(100vh-8rem)] flex-col md:flex-row bg-secondary/10 text-foreground">
@@ -144,8 +164,9 @@ export default function AnswerReviewClient() {
                             isCorrectAns ? "border-green-500 bg-green-500/10" : "border-transparent",
                             isUserAns && !isCorrectAns && "border-red-500 bg-red-500/10"
                         )}>
-                            {isUserAns && !isCorrectAns && <XCircle className="h-5 w-5 text-red-500"/>}
-                            {isCorrectAns && <CheckCircle className="h-5 w-5 text-green-500"/>}
+                            {isCorrectAns && <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0"/>}
+                            {!isCorrectAns && isUserAns && <XCircle className="h-5 w-5 text-red-500 flex-shrink-0"/>}
+                            {!isCorrectAns && !isUserAns && <div className="w-5 h-5 flex-shrink-0" /> /* Placeholder for alignment */}
                             <span className={cn("text-base", isCorrectAns && "font-bold")}>{option}</span>
                         </div>
                     )
@@ -159,29 +180,31 @@ export default function AnswerReviewClient() {
                 </div>
             )}
 
-             <Card className="bg-primary/5">
-                <CardHeader>
-                    <CardTitle className="font-headline text-lg flex items-center gap-2 text-primary">
-                        <Lightbulb /> AI Explanation
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    {aiExplanations[currentQuestion.id] ? (
-                        <div className="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap">
-                            {aiExplanations[currentQuestion.id]}
-                        </div>
-                    ) : (
-                         <Button 
-                            onClick={() => handleGenerateExplanation(currentQuestion.id)} 
-                            disabled={loadingExplanation === currentQuestion.id}
-                        >
-                            {loadingExplanation === currentQuestion.id && <Loader2 className="mr-2 h-4 w-4 animate-spin"/>}
-                            {loadingExplanation === currentQuestion.id ? "Analyzing..." : "Generate Explanation"}
-                        </Button>
-                    )}
-                </CardContent>
-             </Card>
-
+            {!isCorrect && userAnswer && (
+                 <Card className="bg-primary/5">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-lg flex items-center gap-2 text-primary">
+                            <Lightbulb /> AI Explanation
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        {aiExplanations[currentQuestion.id] ? (
+                            <div className="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap">
+                                {aiExplanations[currentQuestion.id]}
+                            </div>
+                        ) : (
+                             <Button 
+                                onClick={() => handleGenerateExplanation(currentQuestion, userAnswer)} 
+                                disabled={loadingExplanation === currentQuestion.id}
+                            >
+                                {loadingExplanation === currentQuestion.id && <Loader2 className="mr-2 h-4 w-4 animate-spin"/>}
+                                {loadingExplanation === currentQuestion.id ? "Analyzing..." : "Explain my mistake"}
+                            </Button>
+                        )}
+                    </CardContent>
+                 </Card>
+            )}
+             
           </CardContent>
           <CardFooter className="flex justify-end items-center gap-4 border-t pt-4">
             <Button onClick={() => setCurrentQuestionIndex(prev => Math.max(0, prev - 1))} disabled={currentQuestionIndex === 0}>
