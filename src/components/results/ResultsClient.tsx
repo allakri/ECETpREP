@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { useEffect, useState, useMemo, useCallback } from 'react';
@@ -94,18 +95,9 @@ export default function ResultsClient() {
               date: format(new Date(), 'yyyy-MM-dd'),
           };
 
-          const updatedUser = {
-              ...user,
-              tests_taken: user.tests_taken + 1,
-              avg_score: (user.exam_score_history.reduce((acc, item) => acc + item.score, 0) + newScoreData.score) / (user.tests_taken + 1),
-              exam_score_history: [...user.exam_score_history, newScoreData],
-              study_activities: [...new Set([...user.study_activities, newScoreData.date])],
-          }
+          await updateUserProgress(newScoreData);
 
-          // Save progress first
-          await updateUserProgress(updatedUser);
-
-          // Then, fetch AI insights in parallel
+          // Fetch AI insights in parallel
           const [feedbackResult, readinessResult] = await Promise.all([
             generateAdaptiveFeedback({
               examName: 'ECET Practice Exam',
@@ -132,8 +124,8 @@ export default function ResultsClient() {
         }
       };
       getAIInsightsAndSave();
-    } else {
-        setLoadingAI(false); // Not logged in, so don't show loading state
+    } else if (!user) { // If user is not logged in, no need to show loader.
+        setLoadingAI(false);
     }
      // Clear the flag when the component unmounts
     return () => {

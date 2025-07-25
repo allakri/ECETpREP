@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import { CheckCircle, XCircle, ChevronLeft, ChevronRight, Lightbulb, Home, AlertCircle, Loader2, MessageSquarePlus, Bot, User, Send } from 'lucide-react';
+import { CheckCircle, XCircle, ChevronLeft, ChevronRight, Lightbulb, Home, AlertCircle, Loader2, MessageSquarePlus, Bot, User, Send, HelpCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '../ui/skeleton';
 import { explainAnswer } from '@/ai/flows/explain-answer-flow';
@@ -83,7 +83,7 @@ export default function AnswerReviewClient() {
     }
   }, [chatMessages]);
 
-  const handleGenerateExplanation = useCallback(async (question: Question, userAnswer: string) => {
+  const handleGenerateExplanation = useCallback(async (question: Question) => {
     if (aiExplanations[question.id]) return; // Don't re-generate if it exists
     
     setLoadingExplanation(question.id);
@@ -91,7 +91,7 @@ export default function AnswerReviewClient() {
       const result = await explainAnswer({
         question: question.question,
         options: question.options,
-        userAnswer: userAnswer,
+        userAnswer: answers?.[question.id] || "Not Answered",
         correctAnswer: question.correctAnswer,
         topic: question.topic,
       });
@@ -113,10 +113,10 @@ export default function AnswerReviewClient() {
     } finally {
       setLoadingExplanation(null);
     }
-  }, [toast, aiExplanations]);
+  }, [toast, aiExplanations, answers]);
 
   const handleOpenChatDialog = (question: Question, explanation: string) => {
-    setChatMessages([{ role: 'model', text: `Here is the initial explanation for your incorrect answer:\n\n${explanation}\n\nWhat would you like to discuss further?` }]);
+    setChatMessages([{ role: 'model', text: `Here is the initial explanation for the question:\n\n${explanation}\n\nWhat would you like to discuss further?` }]);
     setChatInput('');
     setIsChatOpen(true);
   };
@@ -184,7 +184,7 @@ export default function AnswerReviewClient() {
             <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-red-500"></div><span>Incorrect</span></div>
             <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-muted border"></div><span>Unanswered</span></div>
         </div>
-        <Card className="flex-1 flex flex-col bg-background/50 dark:bg-background/20">
+        <Card className="flex-1 flex flex-col bg-background/50 dark:bg-background/20 overflow-hidden">
             <CardHeader className="p-4 border-b">
                 <CardTitle className="text-base font-headline">Question Palette</CardTitle>
             </CardHeader>
@@ -238,8 +238,9 @@ export default function AnswerReviewClient() {
                             isUserAns && !isCorrectAns && "border-red-500 bg-red-500/10"
                         )}>
                             {isCorrectAns && <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0"/>}
-                            {!isCorrectAns && isUserAns && <XCircle className="h-5 w-5 text-red-500 flex-shrink-0"/>}
-                            {!isCorrectAns && !isUserAns && <div className="w-5 h-5 flex-shrink-0" /> /* Placeholder for alignment */}
+                            {isUserAns && !isCorrectAns && <XCircle className="h-5 w-5 text-red-500 flex-shrink-0"/>}
+                            {!isCorrectAns && !isUserAns && (userAnswer !== undefined) && <div className="w-5 h-5 flex-shrink-0" /> /* Placeholder for alignment */}
+                             {userAnswer === undefined && <div className="w-5 h-5 flex-shrink-0" />}
                             <span className={cn("text-base", isCorrectAns && "font-bold")}><Latex>{option}</Latex></span>
                         </div>
                     )
@@ -253,81 +254,79 @@ export default function AnswerReviewClient() {
                 </div>
             )}
 
-            {!isCorrect && userAnswer && (
-                 <Card className="bg-primary/5">
-                    <CardHeader>
-                        <div className="flex justify-between items-center">
-                            <CardTitle className="font-headline text-lg flex items-center gap-2 text-primary">
-                                <Lightbulb /> AI Explanation
-                            </CardTitle>
-                            <Dialog open={isChatOpen} onOpenChange={setIsChatOpen}>
-                                <DialogTrigger asChild>
-                                    <Button 
-                                        variant="secondary"
-                                        size="sm"
-                                        disabled={!aiExplanations[currentQuestion.id]}
-                                        onClick={() => handleOpenChatDialog(currentQuestion, aiExplanations[currentQuestion.id])}
-                                    >
-                                        <MessageSquarePlus className="mr-2 h-4 w-4" /> Discuss with AI
-                                    </Button>
-                                </DialogTrigger>
-                                <DialogContent className="sm:max-w-[625px] h-[80vh] flex flex-col">
-                                    <DialogHeader>
-                                        <DialogTitle>Discuss with AI Tutor</DialogTitle>
-                                        <DialogDescription>
-                                           Ask follow-up questions about "{currentQuestion.question}"
-                                        </DialogDescription>
-                                    </DialogHeader>
-                                    <div className="flex-1 overflow-hidden py-4">
-                                        <ScrollArea className="h-full pr-4" ref={chatScrollAreaRef}>
-                                            <div className="space-y-4">
-                                            {chatMessages.map((message, index) => (
-                                                <div key={index} className={cn('flex items-start gap-3', message.role === 'user' ? 'justify-end' : 'justify-start')}>
-                                                    {message.role === 'model' && <Avatar className="h-8 w-8"><AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback></Avatar>}
-                                                    <div className={cn('max-w-[85%] rounded-lg p-3 text-sm', message.role === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted')}>
-                                                        <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap">{message.text}</div>
-                                                    </div>
-                                                    {message.role === 'user' && <Avatar className="h-8 w-8"><AvatarFallback className="bg-accent text-accent-foreground"><User size={20}/></AvatarFallback></Avatar>}
+            <Card className="bg-primary/5">
+                <CardHeader>
+                    <div className="flex justify-between items-center">
+                        <CardTitle className="font-headline text-lg flex items-center gap-2 text-primary">
+                            <Lightbulb /> AI Explanation
+                        </CardTitle>
+                        <Dialog open={isChatOpen} onOpenChange={setIsChatOpen}>
+                            <DialogTrigger asChild>
+                                <Button 
+                                    variant="secondary"
+                                    size="sm"
+                                    disabled={!aiExplanations[currentQuestion.id]}
+                                    onClick={() => handleOpenChatDialog(currentQuestion, aiExplanations[currentQuestion.id])}
+                                >
+                                    <MessageSquarePlus className="mr-2 h-4 w-4" /> Discuss with AI
+                                </Button>
+                            </DialogTrigger>
+                            <DialogContent className="sm:max-w-[625px] h-[80vh] flex flex-col">
+                                <DialogHeader>
+                                    <DialogTitle>Discuss with AI Tutor</DialogTitle>
+                                    <DialogDescription>
+                                        Ask follow-up questions about "{currentQuestion.question}"
+                                    </DialogDescription>
+                                </DialogHeader>
+                                <div className="flex-1 overflow-hidden py-4">
+                                    <ScrollArea className="h-full pr-4" ref={chatScrollAreaRef}>
+                                        <div className="space-y-4">
+                                        {chatMessages.map((message, index) => (
+                                            <div key={index} className={cn('flex items-start gap-3', message.role === 'user' ? 'justify-end' : 'justify-start')}>
+                                                {message.role === 'model' && <Avatar className="h-8 w-8"><AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback></Avatar>}
+                                                <div className={cn('max-w-[85%] rounded-lg p-3 text-sm', message.role === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted')}>
+                                                    <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap">{message.text}</div>
                                                 </div>
-                                            ))}
-                                            {isChatLoading && (
-                                                <div className="flex items-start gap-3 justify-start">
-                                                    <Avatar className="h-8 w-8"><AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback></Avatar>
-                                                    <div className="bg-muted rounded-lg p-3"><Loader2 className="h-5 w-5 animate-spin" /></div>
-                                                </div>
-                                            )}
+                                                {message.role === 'user' && <Avatar className="h-8 w-8"><AvatarFallback className="bg-accent text-accent-foreground"><User size={20}/></AvatarFallback></Avatar>}
                                             </div>
-                                        </ScrollArea>
-                                    </div>
-                                    <DialogFooter>
-                                        <form onSubmit={handleSendChatMessage} className="flex w-full items-center gap-2">
-                                            <Input value={chatInput} onChange={(e) => setChatInput(e.target.value)} placeholder="Ask a follow-up question..." disabled={isChatLoading} />
-                                            <Button type="submit" disabled={isChatLoading || !chatInput.trim()}><Send className="h-4 w-4" /></Button>
-                                        </form>
-                                    </DialogFooter>
-                                </DialogContent>
-                            </Dialog>
+                                        ))}
+                                        {isChatLoading && (
+                                            <div className="flex items-start gap-3 justify-start">
+                                                <Avatar className="h-8 w-8"><AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback></Avatar>
+                                                <div className="bg-muted rounded-lg p-3"><Loader2 className="h-5 w-5 animate-spin" /></div>
+                                            </div>
+                                        )}
+                                        </div>
+                                    </ScrollArea>
+                                </div>
+                                <DialogFooter>
+                                    <form onSubmit={handleSendChatMessage} className="flex w-full items-center gap-2">
+                                        <Input value={chatInput} onChange={(e) => setChatInput(e.target.value)} placeholder="Ask a follow-up question..." disabled={isChatLoading} />
+                                        <Button type="submit" disabled={isChatLoading || !chatInput.trim()}><Send className="h-4 w-4" /></Button>
+                                    </form>
+                                </DialogFooter>
+                            </DialogContent>
+                        </Dialog>
+                    </div>
+                </CardHeader>
+                <CardContent>
+                    <ScrollArea className="h-32">
+                        {aiExplanations[currentQuestion.id] ? (
+                        <div className="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap pr-4">
+                            <Latex>{aiExplanations[currentQuestion.id]}</Latex>
                         </div>
-                    </CardHeader>
-                    <CardContent>
-                       <ScrollArea className="h-32">
-                         {aiExplanations[currentQuestion.id] ? (
-                            <div className="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap pr-4">
-                                <Latex>{aiExplanations[currentQuestion.id]}</Latex>
-                            </div>
-                        ) : (
-                             <Button 
-                                onClick={() => handleGenerateExplanation(currentQuestion, userAnswer)} 
-                                disabled={loadingExplanation === currentQuestion.id}
-                            >
-                                {loadingExplanation === currentQuestion.id && <Loader2 className="mr-2 h-4 w-4 animate-spin"/>}
-                                {loadingExplanation === currentQuestion.id ? "Analyzing..." : "Explain my mistake"}
-                            </Button>
-                        )}
-                       </ScrollArea>
-                    </CardContent>
-                 </Card>
-            )}
+                    ) : (
+                            <Button 
+                            onClick={() => handleGenerateExplanation(currentQuestion)} 
+                            disabled={loadingExplanation === currentQuestion.id}
+                        >
+                            {loadingExplanation === currentQuestion.id && <Loader2 className="mr-2 h-4 w-4 animate-spin"/>}
+                            {loadingExplanation === currentQuestion.id ? "Analyzing..." : "Get AI Explanation"}
+                        </Button>
+                    )}
+                    </ScrollArea>
+                </CardContent>
+            </Card>
              
           </CardContent>
           <CardFooter className="flex justify-end items-center gap-4 border-t pt-4">
