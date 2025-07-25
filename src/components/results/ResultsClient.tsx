@@ -33,6 +33,7 @@ export default function ResultsClient() {
   const [loadingAI, setLoadingAI] = useState(true);
   const [quote, setQuote] = useState('');
   const [isMounted, setIsMounted] = useState(false);
+  const [isProgressSaved, setIsProgressSaved] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -76,66 +77,60 @@ export default function ResultsClient() {
   
   
   useEffect(() => {
-    const hasRun = sessionStorage.getItem('resultsGenerated');
-
-    if (loading || !answers || !questions || hasRun) {
-        if (!loading && !user) setLoadingAI(false);
-        return;
+    if (loading || !user || !answers || !questions || isProgressSaved) {
+      if (!loading) setLoadingAI(false); // Stop loading if not logged in
+      return;
     }
-    
-    if (user) {
-      sessionStorage.setItem('resultsGenerated', 'true');
-      const getAIInsightsAndSave = async () => {
-        setLoadingAI(true);
-        try {
-          const userAnswers: Record<string, string> = {};
-           for (const qId in answers) {
-            userAnswers[qId] = answers[qId]
-          }
-          
-          const pastScoresWithCurrent = [...(user.exam_score_history || []).map(h => h.score), score];
 
-          const newScoreData = {
-              examName: `Test #${(user.tests_taken || 0) + 1}`,
-              score: score,
-              date: format(new Date(), 'yyyy-MM-dd'),
-          };
+    const getAIInsightsAndSave = async () => {
+      setLoadingAI(true);
+      try {
+        // Save progress first
+        const newScoreData = {
+            examName: `Test #${(user.tests_taken || 0) + 1}`,
+            score: score,
+            date: format(new Date(), 'yyyy-MM-dd'),
+        };
+        await updateUserProgress(newScoreData);
+        setIsProgressSaved(true); // Mark as saved
 
-          await updateUserProgress(newScoreData);
-
-          // Fetch AI insights in parallel
-          const [feedbackResult, readinessResult] = await Promise.all([
-            generateAdaptiveFeedback({
-              examName: 'ECET Practice Exam',
-              questions: questions,
-              userAnswers,
-              pastScores: pastScoresWithCurrent,
-            }),
-            assessReadiness({
-              examName: 'ECET Practice Exam',
-              score: score,
-              incorrectTopics: incorrectTopics
-            })
-          ]);
-          
-          setFeedback(feedbackResult.feedback);
-          setReadiness(readinessResult.readiness);
-
-        } catch (error) {
-          console.error("Error generating AI insights:", error);
-          setFeedback("We're sorry, but the AI feedback service is currently unavailable. Please try again later.");
-          setReadiness("We're sorry, but the AI readiness assessment is currently unavailable. Please try again later.");
-        } finally {
-          setLoadingAI(false);
+        // Then, fetch AI insights
+        const userAnswers: Record<string, string> = {};
+        for (const qId in answers) {
+          userAnswers[qId] = answers[qId]
         }
-      };
-      getAIInsightsAndSave();
-    }
-     // Clear the flag when the component unmounts
-    return () => {
-      sessionStorage.removeItem('resultsGenerated');
+        
+        const pastScoresWithCurrent = [...(user.exam_score_history || []).map(h => h.score), score];
+        
+        const [feedbackResult, readinessResult] = await Promise.all([
+          generateAdaptiveFeedback({
+            examName: 'ECET Practice Exam',
+            questions: questions,
+            userAnswers,
+            pastScores: pastScoresWithCurrent,
+          }),
+          assessReadiness({
+            examName: 'ECET Practice Exam',
+            score: score,
+            incorrectTopics: incorrectTopics
+          })
+        ]);
+        
+        setFeedback(feedbackResult.feedback);
+        setReadiness(readinessResult.readiness);
+
+      } catch (error) {
+        console.error("Error generating AI insights or saving progress:", error);
+        setFeedback("We're sorry, but the AI feedback service is currently unavailable. Please try again later.");
+        setReadiness("We're sorry, but the AI readiness assessment is currently unavailable. Please check your score and try to improve weak topics.");
+      } finally {
+        setLoadingAI(false);
+      }
     };
-  }, [answers, questions, score, incorrectTopics, user, loading, updateUserProgress]);
+    
+    getAIInsightsAndSave();
+
+  }, [answers, questions, score, incorrectTopics, user, loading, updateUserProgress, isProgressSaved]);
 
   if (!isMounted) {
     // This state is now handled by the Suspense fallback
