@@ -1,31 +1,31 @@
 [
   {
-    "id": 7225444802,
-    "question": "If the determinant of the matrix \\begin{vmatrix} 2 & x & 3 \\\\ 4 & 1 & 6 \\\\ -1 & 2 & 7 \\end{vmatrix} = 0, then the value of x is:",
+    "id": "7225444802",
+    "question": "If \\(\\begin{vmatrix} 2 & x & 3 \\\\ 4 & 1 & 6 \\\\ -1 & 2 & 7 \\end{vmatrix} = 0\\) then the value of x is",
     "options": [
       "6",
-      "\\frac{5}{3}",
-      "\\frac{1}{2}",
+      "5/3",
+      "1/2",
       "-6"
     ],
-    "correctAnswer": "\\frac{1}{2}",
+    "correctAnswer": "1/2",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444803,
-    "question": "If 2A + 3B - 4I = \\begin{pmatrix} 3 & 15 \\\\ 20 & 28 \\end{pmatrix} and A + B + I = \\begin{pmatrix} 4 & 6 \\\\ 8 & 14 \\end{pmatrix} then A =",
+    "id": "7225444803",
+    "question": "If \\(2A + 3B - 4I = \\begin{pmatrix} 3 & 15 \\\\ 20 & 28 \\end{pmatrix}\\) and \\(A + B + I = \\begin{pmatrix} 4 & 6 \\\\ 8 & 14 \\end{pmatrix}\\) then A =",
     "options": [
-      "\\begin{pmatrix} 3 & 5 \\\\ 0 & 8 \\end{pmatrix}",
-      "\\begin{pmatrix} 3 & 15 \\\\ 2 & 8 \\end{pmatrix}",
-      "\\begin{pmatrix} 13 & 1 \\\\ 20 & 2 \\end{pmatrix}",
-      "\\begin{pmatrix} 2 & 3 \\\\ 4 & 7 \\end{pmatrix}"
+      "\\(\\begin{pmatrix} 3 & 5 \\\\ 0 & 8 \\end{pmatrix}\\)",
+      "\\(\\begin{pmatrix} 3 & 15 \\\\ 2 & 8 \\end{pmatrix}\\)",
+      "\\(\\begin{pmatrix} 13 & 1 \\\\ 20 & 2 \\end{pmatrix}\\)",
+      "\\(\\begin{pmatrix} 2 & 3 \\\\ 4 & 7 \\end{pmatrix}\\)"
     ],
-    "correctAnswer": "\\begin{pmatrix} 2 & 3 \\\\ 4 & 7 \\end{pmatrix}",
+    "correctAnswer": "\\(\\begin{pmatrix} 2 & 3 \\\\ 4 & 7 \\end{pmatrix}\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444804,
-    "question": "For the system of the simultaneous linear equations x – y – 2z = 3; 2x + y + z = 5; 4x – y – 2z = 1, then z =",
+    "id": "7225444804",
+    "question": "The system of the simultaneous linear equations \\(x - y - 2z = 3; 2x + y + z = 5; 4x - y - 2z = 1\\) then z =",
     "options": [
       "-10",
       "3",
@@ -36,8 +36,8 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444805,
-    "question": "If A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 4 \\end{pmatrix} and B = \\begin{pmatrix} -4 & 6 \\\\ 2 & -3 \\end{pmatrix} then AB =",
+    "id": "7225444805",
+    "question": "If \\(A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 4 \\end{pmatrix}\\) and \\(B = \\begin{pmatrix} -4 & 6 \\\\ 2 & -3 \\end{pmatrix}\\) then AB =",
     "options": [
       "1",
       "-8",
@@ -48,8 +48,8 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444806,
-    "question": "If A is a square matrix such that A^T = A then A is called",
+    "id": "7225444806",
+    "question": "If A is a square matrix such that \\(A^T = A\\) then A is called",
     "options": [
       "symmetric matrix",
       "skew symmetric matrix",
@@ -60,8 +60,8 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444807,
-    "question": "If \\frac{10-x}{x^2+x-12} = \\frac{A}{x+4} + \\frac{B}{x-3} then A + B =",
+    "id": "7225444807",
+    "question": "If \\(\\frac{10-x}{x^2+x-12} = \\frac{A}{x+4} + \\frac{B}{x-3}\\) then A + B =",
     "options": [
       "-1",
       "1",
@@ -72,44 +72,44 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444808,
-    "question": "If \\frac{4x^2+5x+8}{(x^2+5)(x+2)} = \\frac{Ax+B}{x^2+5} + \\frac{C}{x+2} then B + C =",
+    "id": "7225444808",
+    "question": "If \\(\\frac{4x^2+5x+8}{(x^2+5)(x+2)} = \\frac{Ax+B}{x^2+5} + \\frac{C}{x+2}\\) then B + C =",
     "options": [
-      "\\frac{12}{7}",
-      "-\\frac{15}{9}",
-      "\\frac{15}{9}",
-      "\\frac{17}{9}"
+      "12/7",
+      "-15/9",
+      "15/9",
+      "17/9"
     ],
-    "correctAnswer": "\\frac{15}{9}",
+    "correctAnswer": "15/9",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444809,
-    "question": "If \\sin\\theta = \\frac{3}{5}, \\theta is acute, then 2\\tan\\theta + 3\\sec\\theta + 4\\csc\\theta =",
+    "id": "7225444809",
+    "question": "If \\(\\sin\\theta = \\frac{3}{5}\\), \\(\\theta\\) is acute, then \\(2\\tan\\theta + 3\\sec\\theta + 4\\csc\\theta =\\)",
     "options": [
       "-1",
-      "\\frac{163}{12}",
-      "-\\frac{163}{12}",
-      "\\frac{13}{12}"
+      "163/12",
+      "-163/12",
+      "13/12"
     ],
-    "correctAnswer": "\\frac{163}{12}",
+    "correctAnswer": "163/12",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444810,
-    "question": "If x = a\\sec\\theta, y = b\\tan\\theta then \\frac{x^2}{a^2} - \\frac{y^2}{b^2} =",
+    "id": "7225444810",
+    "question": "If \\(x = a\\sec\\theta, y = b\\tan\\theta\\) then \\(\\frac{x^2}{a^2} - \\frac{y^2}{b^2} =\\)",
     "options": [
-      "\\frac{1}{2}",
-      "1",
-      "\\frac{1}{4}",
+      "1/2",
+      "1/2",
+      "1/4",
       "1"
     ],
     "correctAnswer": "1",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444811,
-    "question": "The value of \\tan^2(60^{\\circ}) + 2\\tan^2(45^{\\circ}) is",
+    "id": "7225444811",
+    "question": "The value of \\(\\tan^2 60^\\circ + 2\\tan^2 45^\\circ\\) is",
     "options": [
       "5",
       "2",
@@ -120,8 +120,8 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444812,
-    "question": "The value of \\tan(20^{\\circ}) \\tan(40^{\\circ}) \\tan(60^{\\circ}) \\tan(80^{\\circ}) is",
+    "id": "7225444812",
+    "question": "The value of \\(\\tan 20^\\circ \\tan 40^\\circ \\tan 60^\\circ \\tan 80^\\circ\\) is",
     "options": [
       "-2",
       "2",
@@ -132,31 +132,31 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444813,
-    "question": "If (1 + \\tan A)(1 + \\tan B) = 2 then A + B =",
+    "id": "7225444813",
+    "question": "If \\((1 + \\tan A)(1 + \\tan B) = 2\\) then \\(A + B =\\)",
     "options": [
-      "65^{\\circ}",
-      "45^{\\circ}",
-      "35^{\\circ}",
-      "25^{\\circ}"
+      "65°",
+      "45°",
+      "35°",
+      "25°"
     ],
-    "correctAnswer": "45^{\\circ}",
+    "correctAnswer": "45°",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444814,
-    "question": "The value of \\sin(20^{\\circ}) \\sin(40^{\\circ}) \\sin(60^{\\circ}) \\sin(80^{\\circ}) is",
+    "id": "7225444814",
+    "question": "The value of \\(\\sin 20^\\circ \\sin 40^\\circ \\sin 60^\\circ \\sin 80^\\circ\\) is",
     "options": [
-      "-\\frac{3}{16}",
-      "\\frac{23}{16}",
-      "\\frac{31}{16}",
-      "\\frac{3}{16}"
+      "-3/16",
+      "23/16",
+      "31/16",
+      "3/16"
     ],
-    "correctAnswer": "\\frac{3}{16}",
+    "correctAnswer": "3/16",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444815,
+    "id": "7225444815",
     "question": "If in a triangle ABC, a = 13, b = 14, c = 15 then the area of the triangle is",
     "options": [
       "35 sq. units",
@@ -168,44 +168,44 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444816,
-    "question": "The value of \\sin^{-1}(\\frac{5}{13}) + \\tan^{-1}(\\frac{12}{5}) is",
+    "id": "7225444816",
+    "question": "The value of \\(\\sin^{-1}\\frac{5}{13} + \\tan^{-1}\\frac{12}{5}\\) is",
     "options": [
-      "-\\frac{\\pi}{2}",
-      "\\frac{\\pi}{4}",
-      "\\frac{\\pi}{2}",
-      "\\frac{\\pi}{3}"
+      "-\\pi/2",
+      "\\pi/4",
+      "\\pi/2",
+      "\\pi/3"
     ],
-    "correctAnswer": "\\frac{\\pi}{2}",
+    "correctAnswer": "\\pi/2",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444817,
-    "question": "The general solution of trigonometric equation \\sec(4\\theta) - \\sec(2\\theta) = 2 is",
+    "id": "7225444817",
+    "question": "The general solution of trigonometric equation \\(\\sec 4\\theta - \\sec 2\\theta = 2\\) is",
     "options": [
-      "\\frac{2n\\pi}{5} \\pm \\frac{\\pi}{10} \\text{ or } 2n\\pi \\pm \\frac{\\pi}{2}",
-      "\\frac{3n\\pi}{5}",
-      "\\frac{5n\\pi}{4}",
-      "\\frac{n\\pi}{4}"
+      "\\(\\frac{2n\\pi}{5} \\pm \\frac{\\pi}{10}\\) or \\(2n\\pi \\pm \\frac{\\pi}{2}\\)",
+      "\\(\\frac{3n\\pi}{5}\\)",
+      "\\(\\frac{5n\\pi}{4}\\)",
+      "\\(\\frac{n\\pi}{4}\\)"
     ],
-    "correctAnswer": "\\frac{2n\\pi}{5} \\pm \\frac{\\pi}{10} \\text{ or } 2n\\pi \\pm \\frac{\\pi}{2}",
+    "correctAnswer": "\\(\\frac{2n\\pi}{5} \\pm \\frac{\\pi}{10}\\) or \\(2n\\pi \\pm \\frac{\\pi}{2}\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444818,
-    "question": "The value of \\tan^{-1}(2\\sin(150^{\\circ})) is",
+    "id": "7225444818",
+    "question": "The value of \\(\\tan^{-1}(2\\sin 150^\\circ)\\) is",
     "options": [
       "\\pi",
       "3\\pi",
-      "\\frac{\\pi}{2}",
-      "\\frac{\\pi}{4}"
+      "\\pi/2",
+      "\\pi/4"
     ],
-    "correctAnswer": "\\frac{\\pi}{4}",
+    "correctAnswer": "\\pi/4",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444819,
-    "question": "The modulus of \\( \\frac{(1+i)(1-\\sqrt{3}i)}{1-i} \\) is",
+    "id": "7225444819",
+    "question": "The modulus of \\(\\frac{(1+i)(1-\\sqrt{3})i}{1-i}\\) is",
     "options": [
       "2",
       "6",
@@ -216,8 +216,8 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444820,
-    "question": "If 1, \\omega, \\omega^2 are the cube roots of unity, then (1-\\omega)(1-\\omega^2)(1-\\omega^4)(1-\\omega^5) =",
+    "id": "7225444820",
+    "question": "If \\(1, \\omega, \\omega^2\\) are the cube roots of unity, then \\((1-\\omega)(1-\\omega^2)(1-\\omega^4)(1-\\omega^5)=\\)",
     "options": [
       "3",
       "9",
@@ -228,8 +228,8 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444821,
-    "question": "The length of the tangent from (-3,1) to the circle 3x^2 + 3y^2 - 5x - 6y - 12 = 0 is",
+    "id": "7225444821",
+    "question": "The length of the tangent from (-3,1) to the circle \\(3x^2 + 3y^2 - 5x - 6y - 12 = 0\\) is",
     "options": [
       "-3",
       "3",
@@ -240,272 +240,272 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444822,
+    "id": "7225444822",
     "question": "The eccentricity of an equilateral hyperbola is",
     "options": [
       "1",
-      "\\sqrt{2}",
+      "\\(\\sqrt{2}\\)",
       "3",
-      "\\sqrt{3}"
+      "\\(\\sqrt{3}\\)"
     ],
-    "correctAnswer": "\\sqrt{2}",
+    "correctAnswer": "\\(\\sqrt{2}\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444823,
-    "question": "The eccentricity of the hyperbola 36x^2 - 25y^2 = 900 is",
+    "id": "7225444823",
+    "question": "The eccentricity of the hyperbola \\(36x^2 - 25y^2 = 900\\) is",
     "options": [
-      "\\frac{\\sqrt{61}}{5}",
-      "\\frac{9}{2}",
-      "\\frac{3}{2}",
-      "\\frac{5}{2}"
+      "\\(\\sqrt{61}/5\\)",
+      "9/2",
+      "3/2",
+      "5/2"
     ],
-    "correctAnswer": "\\frac{\\sqrt{61}}{5}",
+    "correctAnswer": "\\(\\sqrt{61}/5\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444824,
-    "question": "The equation of tangent to parabola y^2 = 16x at an end point of latus rectum is",
+    "id": "7225444824",
+    "question": "The equation of tangent to parabola \\(y^2 = 16x\\) at an end point of latus rectum is",
     "options": [
-      "2x - 3y - 4 = 0",
-      "2x + 2y + 4 = 0",
-      "x - y + 4 = 0",
-      "x - y - 4 = 0"
+      "\\(2x - 3y - 4 = 0\\)",
+      "\\(2x + 2y + 4 = 0\\)",
+      "\\(x - y + 4 = 0\\)",
+      "\\(x - y - 4 = 0\\)"
     ],
-    "correctAnswer": "x - y + 4 = 0",
+    "correctAnswer": "\\(x - y + 4 = 0\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444825,
-    "question": "If y = 4x + k is a tangent to the hyperbola \\frac{x^2}{64} - \\frac{y^2}{49} = 1 then the value of k is",
+    "id": "7225444825",
+    "question": "If \\(y = 4x + k\\) is a tangent to the hyperbola \\(\\frac{x^2}{64} - \\frac{y^2}{49} = 1\\) then the value of k is",
     "options": [
-      "\\pm\\sqrt{775}",
-      "\\pm\\sqrt{995}",
-      "\\pm\\sqrt{275}",
-      "\\pm\\sqrt{975}"
+      "\\(\\pm\\sqrt{775}\\)",
+      "\\(\\pm\\sqrt{995}\\)",
+      "\\(\\pm\\sqrt{275}\\)",
+      "\\(\\pm\\sqrt{975}\\)"
     ],
-    "correctAnswer": "\\pm\\sqrt{975}",
+    "correctAnswer": "\\(\\pm\\sqrt{975}\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444826,
-    "question": "If the line 2x + \\sqrt{6} y = 2 touches the hyperbola x^2 - 2y^2 = 4 then the point of contact is",
+    "id": "7225444826",
+    "question": "If the line \\(2x + \\sqrt{6}y = 2\\) touches the hyperbola \\(x^2 - 2y^2 = 4\\) then the point of contact is",
     "options": [
-      "(4, \\sqrt{6})",
-      "(4, -\\sqrt{6})",
-      "(-4,6)",
-      "(5,7)"
+      "\\((4, \\sqrt{6})\\)",
+      "\\((4, -\\sqrt{6})\\)",
+      "\\((-4, 6)\\)",
+      "\\((5, 7)\\)"
     ],
-    "correctAnswer": "(4, -\\sqrt{6})",
+    "correctAnswer": "\\((4, -\\sqrt{6})\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444827,
-    "question": "The value of \\lim_{x \\to 2} \\frac{x^3-3x-2}{2x^2-5x+2} is",
+    "id": "7225444827",
+    "question": "The value of \\(\\lim_{x\\to 2} \\frac{x^3-3x-2}{2x^2-5x+2}\\) is",
     "options": [
-      "\\frac{1}{3}",
+      "1/3",
       "3",
-      "\\frac{1}{5}",
-      "\\frac{1}{2}"
+      "1/5",
+      "1/2"
     ],
     "correctAnswer": "3",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444828,
-    "question": "If 2x^2 - 3xy + 4y^2 = 1 then \\frac{dy}{dx} =",
+    "id": "7225444828",
+    "question": "If \\(2x^2 - 3xy + 4y^2 = 1\\) then \\(\\frac{dy}{dx} =\\)",
     "options": [
-      "\\frac{4x-3y}{3x-8y}",
-      "\\frac{4x-7y}{3x-8y}",
-      "\\frac{4x-3y}{3x+8y}",
-      "\\frac{4x-3y}{3x-18y}"
+      "\\(\\frac{4x-3y}{3x-8y}\\)",
+      "\\(\\frac{4x-7y}{3x-8y}\\)",
+      "\\(\\frac{4x-3y}{3x+8y}\\)",
+      "\\(\\frac{4x-3y}{3x-18y}\\)"
     ],
-    "correctAnswer": "\\frac{4x-3y}{3x-8y}",
+    "correctAnswer": "\\(\\frac{4x-3y}{3x-8y}\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444829,
-    "question": "If x = a\\sin^2(t) and y = a\\cos^2(t) then \\frac{dy}{dx} =",
+    "id": "7225444829",
+    "question": "If \\(x = a\\sin^2 t\\) and \\(y = a\\cos^2 t\\) then \\(\\frac{dy}{dx}=\\)",
     "options": [
       "-2",
-      "\\tan(t)",
-      "\\sin(t)",
+      "\\(\\tan t\\)",
+      "\\(\\sin t\\)",
       "-1"
     ],
     "correctAnswer": "-1",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444830,
-    "question": "For the curve xy^2 = 16 at the point where the ordinate is -2, the equation of the tangent is",
+    "id": "7225444830",
+    "question": "The curve \\(xy^2 = 16\\) at the point where the ordinate is -2 then the equation of tangent is",
     "options": [
-      "x + 4y - 12 = 0",
-      "2x - 4y - 12 = 0",
-      "x - 4y - 12 = 0",
-      "x - 5y - 12 = 0"
+      "\\(x + 4y - 12 = 0\\)",
+      "\\(2x - 4y - 12 = 0\\)",
+      "\\(x - 4y - 12 = 0\\)",
+      "\\(x - 5y - 12 = 0\\)"
     ],
-    "correctAnswer": "x - 4y - 12 = 0",
+    "correctAnswer": "\\(x - 4y - 12 = 0\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444831,
-    "question": "The equation of the normal to the curve y^2 = \\frac{x^3}{2a-x} at the point (a, a) is",
+    "id": "7225444831",
+    "question": "The equation of the normal to the curve \\(y^2 = \\frac{x^3}{2a-x}\\) at the point (a, a) is",
     "options": [
-      "x + 2y = 3a",
-      "x - 2y = 4a",
-      "2x + y = 2a",
-      "3x - 4y = 5a"
+      "\\(x + 2y = 3a\\)",
+      "\\(x - 2y = 4a\\)",
+      "\\(2x + y = 2a\\)",
+      "\\(3x - 4y = 5a\\)"
     ],
-    "correctAnswer": "x + 2y = 3a",
+    "correctAnswer": "\\(x + 2y = 3a\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444832,
-    "question": "The angle between the curves xy = 2 and y^2 = 4x is",
+    "id": "7225444832",
+    "question": "The angle between the curves xy = 2 and \\(y^2 = 4x\\) is",
     "options": [
-      "-\\tan^{-1}(3)",
-      "\\tan^{-1}(3)",
-      "\\sin^{-1}(3)",
-      "\\cos^{-1}(3)"
+      "\\(-\\tan^{-1}(3)\\)",
+      "\\(\\tan^{-1}(3)\\)",
+      "\\(\\sin^{-1}(3)\\)",
+      "\\(\\cos^{-1}(3)\\)"
     ],
-    "correctAnswer": "\\tan^{-1}(3)",
+    "correctAnswer": "\\(\\tan^{-1}(3)\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444833,
-    "question": "The maximum value of xe^{-x} is",
+    "id": "7225444833",
+    "question": "The maximum value of \\(xe^{-x}\\) is",
     "options": [
-      "\\frac{1}{e}",
-      "-\\frac{1}{e}",
-      "2e",
-      "e"
+      "\\(1/e\\)",
+      "\\(-1/e\\)",
+      "\\(2e\\)",
+      "\\(e\\)"
     ],
-    "correctAnswer": "\\frac{1}{e}",
+    "correctAnswer": "\\(1/e\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444834,
+    "id": "7225444834",
     "question": "The height of the right circular cylinder of greatest volume which is inscribed in a sphere of radius a is",
     "options": [
-      "-\\frac{2a}{7}",
-      "\\frac{a}{2}",
-      "\\frac{2a}{\\sqrt{3}}",
-      "\\frac{1}{2}"
+      "\\(-2a/7\\)",
+      "\\(a/2\\)",
+      "\\(2a/\\sqrt{3}\\)",
+      "\\(1/2\\)"
     ],
-    "correctAnswer": "\\frac{2a}{\\sqrt{3}}",
+    "correctAnswer": "\\(2a/\\sqrt{3}\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444835,
-    "question": "The volume of a spherical ball is increasing at the rate of 4\\pi cc/s. then the rate of increase of the radius, when the volume is 288\\pi cc is",
+    "id": "7225444835",
+    "question": "The volume of a spherical ball is increasing at the rate of \\(4\\pi\\) cc/s. then the rate of increase of the radius, when the volume is \\(288\\pi\\) cc is",
     "options": [
       "36 cm/sec",
       "6 cm/sec",
-      "\\frac{1}{36} cm/sec",
-      "\\frac{1}{6} cm/sec"
+      "\\(1/36\\) cm/sec",
+      "\\(1/6\\) cm/sec"
     ],
-    "correctAnswer": "\\frac{1}{36} cm/sec",
+    "correctAnswer": "\\(1/36\\) cm/sec",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444836,
-    "question": "If z = e^{ax+by} f(ax - by) then b\\frac{\\partial z}{\\partial x} + a\\frac{\\partial z}{\\partial y} =",
+    "id": "7225444836",
+    "question": "If \\(z = e^{(ax+by)} f(ax-by)\\) then \\(b\\frac{\\partial z}{\\partial x} + a\\frac{\\partial z}{\\partial y}=\\)",
     "options": [
-      "-2abz",
-      "3abz",
-      "2abz",
-      "5abz"
+      "\\(-2abz\\)",
+      "\\(3abz\\)",
+      "\\(2abz\\)",
+      "\\(5abz\\)"
     ],
-    "correctAnswer": "2abz",
+    "correctAnswer": "\\(2abz\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444837,
-    "question": "The value of \\int \\frac{e^x - e^{-x}}{e^x + e^{-x}} dx is",
+    "id": "7225444837",
+    "question": "The value of \\(\\int \\frac{e^x-e^{-x}}{e^x+e^{-x}}dx\\) is",
     "options": [
-      "\\log(e^{2x} - 1) - x + c",
-      "-\\log(e^{2x} + 1) - x + c",
-      "\\log(e^{2x} + 7) - x + c",
-      "\\log(e^{2x} + 1) - x + c"
+      "\\(\\log(e^{2x}-1) - x + c\\)",
+      "\\(-\\log(e^{2x}+1) - x + c\\)",
+      "\\(\\log(e^{2x}+7) - x + c\\)",
+      "\\(\\log(e^{2x}+1) - x + c\\)"
     ],
-    "correctAnswer": "\\log(e^{2x} + 1) - x + c",
+    "correctAnswer": "\\(\\log(e^{2x}+1) - x + c\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444838,
-    "question": "The value of \\int \\frac{dx}{\\sqrt{4x^2 - 4x + 2}} is",
+    "id": "7225444838",
+    "question": "The value of \\(\\int \\frac{dx}{\\sqrt{4x^2-4x+2}}\\) is",
     "options": [
-      "-\\frac{1}{2}\\sinh^{-1}(x-1) + c",
-      "\\frac{1}{2}\\sinh^{-1}(2x+1) + c",
-      "\\frac{1}{2}\\sinh^{-1}(2x-1) + c",
-      "\\frac{1}{2}\\sinh^{-1}(3x-1) + c"
+      "\\(-\\frac{1}{2}\\sinh^{-1}(x-1)+c\\)",
+      "\\(\\frac{1}{2}\\sinh^{-1}(2x+1)+c\\)",
+      "\\(\\frac{1}{2}\\sinh^{-1}(2x-1)+c\\)",
+      "\\(\\frac{1}{2}\\sinh^{-1}(3x-1)+c\\)"
     ],
-    "correctAnswer": "\\frac{1}{2}\\sinh^{-1}(2x-1) + c",
+    "correctAnswer": "\\(\\frac{1}{2}\\sinh^{-1}(2x-1)+c\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444839,
-    "question": "The value of \\int \\log(x) dx is",
+    "id": "7225444839",
+    "question": "The value of \\(\\int \\log x dx\\) is",
     "options": [
-      "\\log(x) - x + c",
-      "x\\log(x) - x + c",
-      "2x\\log(x) + x + c",
-      "-x\\log(x) + x + c"
+      "\\(\\log x - x + c\\)",
+      "\\(x\\log x - x + c\\)",
+      "\\(2x\\log x + x + c\\)",
+      "\\(-x\\log x + x + c\\)"
     ],
-    "correctAnswer": "x\\log(x) - x + c",
+    "correctAnswer": "\\(x\\log x - x + c\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444840,
-    "question": "The value of \\int_{0}^{\\frac{\\pi}{4}} \\sqrt{1+\\sin(2x)} dx is",
+    "id": "7225444840",
+    "question": "The value of \\(\\int_0^{\\pi/4} \\sqrt{1+\\sin 2x} dx\\) is",
     "options": [
       "1",
       "2",
       "-1",
-      "\\pi"
+      "\\(\\pi\\)"
     ],
     "correctAnswer": "1",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444841,
-    "question": "The area enclosed between the curves y^2 = 4x and x^2 = 4y is",
+    "id": "7225444841",
+    "question": "The area enclosed between the curves \\(y^2 = 4x\\) and \\(x^2 = 4y\\) is",
     "options": [
-      "\\frac{16}{3} square units",
-      "\\frac{5}{2} square units",
-      "\\frac{3}{2} square units",
-      "\\frac{9}{2} square units"
+      "16/3 square units",
+      "5/2 square units",
+      "3/2 square units",
+      "9/2 square units"
     ],
-    "correctAnswer": "\\frac{16}{3} square units",
+    "correctAnswer": "16/3 square units",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444842,
-    "question": "The mean value of \\frac{1}{4+x^2} on [-2,2] is",
+    "id": "7225444842",
+    "question": "The mean value of \\(\\frac{1}{4+x^2}\\) on [-2,2] is",
     "options": [
-      "\\frac{\\pi}{12}",
-      "\\frac{\\pi}{2}",
-      "\\frac{\\pi}{8}",
-      "\\frac{\\pi}{4}"
+      "\\(\\pi/12\\)",
+      "\\(\\pi/2\\)",
+      "\\(\\pi/8\\)",
+      "\\(\\pi/4\\)"
     ],
-    "correctAnswer": "\\frac{\\pi}{4}",
+    "correctAnswer": "\\(\\pi/8\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444843,
-    "question": "The value of \\int \\frac{dx}{1+4x^2} on R is",
+    "id": "7225444843",
+    "question": "The value of \\(\\int \\frac{1}{1+4x^2}dx\\) on R is",
     "options": [
-      "-\\frac{1}{2}\\tan^{-1}(2x) + c",
-      "\\frac{1}{2}\\tan^{-1}(5x) + c",
-      "-\\frac{1}{2}\\tan^{-1}(x) + c",
-      "\\frac{1}{2}\\tan^{-1}(2x) + c"
+      "\\(-\\frac{1}{2}\\tan^{-1}(2x) + c\\)",
+      "\\(\\frac{1}{2}\\tan^{-1}(5x) + c\\)",
+      "\\(-\\frac{1}{2}\\tan^{-1}(x) + c\\)",
+      "\\(\\frac{1}{2}\\tan^{-1}(2x) + c\\)"
     ],
-    "correctAnswer": "\\frac{1}{2}\\tan^{-1}(2x) + c",
+    "correctAnswer": "\\(\\frac{1}{2}\\tan^{-1}(2x) + c\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444844,
-    "question": "The value of \\int_{0}^{1} \\frac{x \\sin^{-1}(x)}{\\sqrt{1-x^2}} dx is",
+    "id": "7225444844",
+    "question": "The value of \\(\\int_0^1 \\frac{x\\sin^{-1}x}{\\sqrt{1-x^2}}dx\\) is",
     "options": [
       "-1",
       "0",
@@ -516,116 +516,116 @@
     "topic": "Mathematics"
   },
   {
-    "id": 7225444845,
-    "question": "The order and degree of the differential equation (\\frac{d^2y}{dx^2})^2 + 3(\\frac{dy}{dx}) + 2 = 0 is",
+    "id": "7225444845",
+    "question": "The order and degree of the differential equation \\((\\frac{dy}{dx})^2 + 3(\\frac{dy}{dx}) + 2 = 0\\) is",
     "options": [
       "Order=2, degree=2",
       "Order=2, degree=1",
-      "order = 1, degree = 2",
+      "Order=1, degree=2",
       "Order=3, degree=1"
     ],
-    "correctAnswer": "order = 1, degree = 2",
+    "correctAnswer": "Order=1, degree=2",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444846,
-    "question": "The general solution of the differential equation \\frac{dy}{dx} + y\\cot(x) = 4x\\csc(x) is",
+    "id": "7225444846",
+    "question": "The general solution of the differential equation \\(\\frac{dy}{dx} + y\\cot x = 4x\\csc x\\) is",
     "options": [
-      "y\\cos(x) = 2x^2+c",
-      "y\\sin(x) = 2x^2+c",
-      "y\\sin(x) = -2x^2+c",
-      "y\\sin(x) = 3x^2+c"
+      "\\(y\\cos x = 2x^2+c\\)",
+      "\\(y\\sin x = 2x^2+c\\)",
+      "\\(y\\sin x = -2x^2+c\\)",
+      "\\(y\\sin x = 3x^2+c\\)"
     ],
-    "correctAnswer": "y\\sin(x) = 2x^2+c",
+    "correctAnswer": "\\(y\\sin x = 2x^2+c\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444847,
-    "question": "The general solution of the linear differential equation \\frac{dy}{dx} - \\frac{y}{x+1} = e^{3x}(x+1) is",
+    "id": "7225444847",
+    "question": "The general solution of the linear differential equation \\(\\frac{dy}{dx} - \\frac{y}{x+1} = e^{3x}(x+1)\\) is",
     "options": [
-      "\\frac{y}{\\sin(x)} = -\\frac{e^{4x}}{4} + c",
-      "\\frac{y}{x+1} = \\frac{e^{3x}}{3} + c",
-      "ye^{3x}x = -\\frac{\\cos(2x)}{4} + ce^{3x}",
-      "y\\sin(x) = \\frac{e^{3x}}{4} + c"
+      "\\(y/\\sin x = -\\frac{e^{4x}}{4} + c\\)",
+      "\\(\\frac{y}{x+1} = \\frac{e^{3x}}{3} + c\\)",
+      "\\(ye^{3x}x = -\\frac{\\cos 2x}{4} + ce^{3x}\\)",
+      "\\(y\\sin x = \\frac{e^{3x}}{4} + c\\)"
     ],
-    "correctAnswer": "\\frac{y}{x+1} = \\frac{e^{3x}}{3} + c",
+    "correctAnswer": "\\(\\frac{y}{x+1} = \\frac{e^{3x}}{3} + c\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444848,
-    "question": "The particular integral of the differential equation \\frac{d^2y}{dx^2} + 3\\frac{dy}{dx} + 2y = e^x is",
+    "id": "7225444848",
+    "question": "The particular integral of the differential equation \\(\\frac{d^2y}{dx^2} + 3\\frac{dy}{dx} + 2y = e^x\\) is",
     "options": [
-      "\\frac{e^x}{6}",
-      "\\frac{e^x}{16}",
-      "\\frac{e^x}{9}",
-      "\\frac{e^x}{6}"
+      "\\(e^x/6\\)",
+      "\\(e^x/16\\)",
+      "\\(e^x/9\\)",
+      "\\(e^x/6\\)"
     ],
-    "correctAnswer": "\\frac{e^x}{6}",
+    "correctAnswer": "\\(e^x/6\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444849,
-    "question": "The particular integral for the differential equation (D^2 + 4D + 3)y = \\sin(3x) is",
+    "id": "7225444849",
+    "question": "The particular integral for the differential equation \\((D^2 + 4D + 3)y = \\sin 3x\\) is",
     "options": [
-      "\\sin(x) + 3\\cos(2x)",
-      "\\cos(3x) - 2\\sin(4x)",
-      "\\frac{2}{30}(2\\cos(2x) + \\sin(x))",
-      "-\\frac{1}{30}(2\\cos(3x) + \\sin(3x))"
+      "\\(\\sin x + 3\\cos 2x\\)",
+      "\\(\\cos 3x - 2\\sin 4x\\)",
+      "\\(\\frac{2}{30}(2\\cos 2x + \\sin x)\\)",
+      "\\(-\\frac{1}{30}(2\\cos 3x + \\sin 3x)\\)"
     ],
-    "correctAnswer": "-\\frac{1}{30}(2\\cos(3x) + \\sin(3x))",
+    "correctAnswer": "\\(-\\frac{1}{30}(2\\cos 3x + \\sin 3x)\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444850,
-    "question": "The general solution of the differential equation \\frac{dy}{dx} + \\frac{y}{x} = y^2x is",
+    "id": "7225444850",
+    "question": "The general solution of the differential equation \\(\\frac{dy}{dx} + \\frac{y}{x} = y^2x\\) is",
     "options": [
-      "\\frac{1}{xy} = -x + c",
-      "-\\frac{1}{xy} = -x + c",
-      "\\frac{2}{xy} = x + c",
-      "\\frac{1}{y} = -x + c"
+      "\\(\\frac{1}{xy} = -x+c\\)",
+      "\\(\\frac{-1}{xy} = -x+c\\)",
+      "\\(\\frac{2}{xy} = x+c\\)",
+      "\\(\\frac{1}{y} = -x+c\\)"
     ],
-    "correctAnswer": "\\frac{1}{xy} = -x + c",
+    "correctAnswer": "\\(\\frac{1}{xy} = -x+c\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444851,
-    "question": "The general solution of the differential equation (2x + y + 1)dx + (x + 2y + 1)dy = 0 is",
+    "id": "7225444851",
+    "question": "The general solution of the differential equation \\((2x+y+1)dx + (x+2y+1)dy = 0\\) is",
     "options": [
-      "x^2 + xy + 3y^2 + 2x + y = c",
-      "x^2 + xy + y^2 + x + y = c",
-      "2x^2 + xy + 2y^2 + x + y = c",
-      "x^2 - xy + 2y^2 + x + y = c"
+      "\\(x^2 + xy + 3y^2 + 2x + y = c\\)",
+      "\\(x^2 + xy + y^2 + x + y = c\\)",
+      "\\(2x^2 + xy + 2y^2 + x + y = c\\)",
+      "\\(x^2 - xy + 2y^2 + x + y = c\\)"
     ],
-    "correctAnswer": "x^2 + xy + y^2 + x + y = c",
+    "correctAnswer": "\\(x^2 + xy + y^2 + x + y = c\\)",
     "topic": "Mathematics"
   },
   {
-    "id": 7225444852,
+    "id": "7225444852",
     "question": "The dimensions of permeability is",
     "options": [
-      "MLT^{-2}A^{-2}",
-      "MLT^{-1}A^{-2}",
-      "MLT^{-2}A^{-1}",
-      "MLT^{-1}A^{-1}"
+      "\\(MLT^{-2}A^{-2}\\)",
+      "\\(MLT^{-1}A^{-2}\\)",
+      "\\(MLT^{-2}A^{-1}\\)",
+      "\\(MLT^{-1}A^{-1}\\)"
     ],
-    "correctAnswer": "MLT^{-2}A^{-2}",
+    "correctAnswer": "\\(MLT^{-2}A^{-2}\\)",
     "topic": "Physics"
   },
   {
-    "id": 7225444853,
+    "id": "7225444853",
     "question": "If velocity (V), force (F) and energy (E) are taken as fundamental units, then dimensional formula for mass will be",
     "options": [
-      "V^{0}FE^{2}",
-      "VF^{-2}E^{0}",
-      "V^{-2}F^{0}E",
-      "V^{-2}F^{0}E"
+      "\\(V^0FE^2\\)",
+      "\\(VF^{-2}E^0\\)",
+      "\\(V^{-2}F^0E\\)",
+      "\\(V^{-2}F^0E\\)"
     ],
-    "correctAnswer": "V^{-2}F^{0}E",
+    "correctAnswer": "\\(V^{-2}F^0E\\)",
     "topic": "Physics"
   },
   {
-    "id": 7225444854,
-    "question": "Vector A extends from the origin to a point having polar coordinates (7, 70°) and vector B extends from the origin to a point having polar coordinates (4, 130°). Find A \\cdot B",
+    "id": "7225444854",
+    "question": "Vector A extends from the origin to a point having polar coordinates (7, 70°) and vector B extends from the origin to a point having polar coordinates (4, 130°). Find A • B",
     "options": [
       "28",
       "14",
@@ -636,8 +636,8 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444855,
-    "question": "If two vectors 2\\hat{i} + 3\\hat{j} – \\hat{k} and –4\\hat{i} – 6\\hat{j} – \\lambda\\hat{k} are parallel to each other then value of \\lambda be",
+    "id": "7225444855",
+    "question": "If two vectors \\(2\\hat{i} + 3\\hat{j} - \\hat{k}\\) and \\(-4\\hat{i} - 6\\hat{j} - \\lambda\\hat{k}\\) are parallel to each other then value of \\(\\lambda\\) be",
     "options": [
       "2",
       "4",
@@ -648,32 +648,32 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444856,
+    "id": "7225444856",
     "question": "The coefficient of static friction between contact surfaces of two bodies is 1. The contact surface of one body supports the other till the inclination is less than",
     "options": [
-      "30^{\\circ}",
-      "45^{\\circ}",
-      "60^{\\circ}",
-      "90^{\\circ}"
+      "30°",
+      "45°",
+      "60°",
+      "90°"
     ],
-    "correctAnswer": "45^{\\circ}",
+    "correctAnswer": "45°",
     "topic": "Physics"
   },
   {
-    "id": 7225444857,
+    "id": "7225444857",
     "question": "A smooth block is released from rest on a 45° inclined plane and it slides a distance 'd'. The time taken to slide is 'n' times that on a smooth inclined plane. The coefficient of friction is",
     "options": [
-      "\\mu_{k} = 1 - \\frac{1}{n^2}",
-      "\\mu_{k} = \\sqrt{1 - \\frac{1}{n^2}}",
-      "\\mu_{k} = \\frac{1}{1-n^2}",
-      "\\mu_{k} = \\sqrt{\\frac{1}{1-n^2}}"
+      "\\(\\mu_k = 1 - \\frac{1}{n^2}\\)",
+      "\\(\\mu_k = \\sqrt{1 - \\frac{1}{n^2}}\\)",
+      "\\(\\mu_k = \\frac{1}{1-n^2}\\)",
+      "\\(\\mu_k = \\sqrt{\\frac{1}{1-n^2}}\\)"
     ],
-    "correctAnswer": "\\mu_{k} = 1 - \\frac{1}{n^2}",
+    "correctAnswer": "\\(\\mu_k = 1 - \\frac{1}{n^2}\\)",
     "topic": "Physics"
   },
   {
-    "id": 7225444858,
-    "question": "A body is projected at an angle other than 90° with the horizontal with some velocity. If the time of ascent of the body is 1second, then the maximum height it can reach is (Take g=10ms^{-2})",
+    "id": "7225444858",
+    "question": "A body is projected at an angle other than 90° with the horizontal with some velocity. If the time of ascent of the body is 1 second, then the maximum height it can reach is (Take g=10ms⁻²)",
     "options": [
       "5 m",
       "10 m",
@@ -684,20 +684,20 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444859,
+    "id": "7225444859",
     "question": "A bullet fired from a gun falls at a distance half of its maximum range. The angle of projection of the bullet is",
     "options": [
-      "45^{\\circ}",
-      "60^{\\circ}",
-      "30^{\\circ}",
-      "15^{\\circ}"
+      "45°",
+      "60°",
+      "30°",
+      "15°"
     ],
-    "correctAnswer": "15^{\\circ}",
+    "correctAnswer": "15°",
     "topic": "Physics"
   },
   {
-    "id": 7225444860,
-    "question": "A body is thrown vertically upwards with a velocity. Select the incorrect statements from the following\nI. Both velocity and acceleration are zero at its highest point.\nII. Velocity is maximum and acceleration is zero at the highest point\nIII. Velocity is maximum and acceleration is 'g' downwards at its highest point",
+    "id": "7225444860",
+    "question": "A body is thrown vertically upwards with a velocity. Select the incorrect statements from the following. I. Both velocity and acceleration are zero at its highest point. II. Velocity is maximum and acceleration is zero at the highest point. III. Velocity is maximum and acceleration is 'g' downwards at its highest point.",
     "options": [
       "I, II and III",
       "II and III",
@@ -708,8 +708,8 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444861,
-    "question": "A person standing on a tower of height 60 m throws an object upwards with velocity of 40 m/s at an angle 30° to the horizontal. Find the total time taken by the object to gain maximum height and fall on the ground (take g= 10 m/s^2).",
+    "id": "7225444861",
+    "question": "A person standing on a tower of height 60 m throws an object upwards with velocity of 40 m/s at an angle 30° to the horizontal. Find the total time taken by the object to gain maximum height and fall on the ground (take g= 10 m/s²).",
     "options": [
       "3 s",
       "20 s",
@@ -720,7 +720,7 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444862,
+    "id": "7225444862",
     "question": "A bucket full of water is drawn up by a person. In this case the work done by the gravitational force is",
     "options": [
       "Negative because the force and displacement are in opposite directions",
@@ -732,19 +732,19 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444863,
+    "id": "7225444863",
     "question": "When a long spring is stretched by x cm, its potential energy is U. If the spring is stretched by Nx cm, the potential energy stored in it will be",
     "options": [
-      "\\frac{U}{N}",
+      "UN",
       "NU",
-      "N^2U",
-      "\\frac{U}{N^2}"
+      "\\(N^2U\\)",
+      "\\(U/N^2\\)"
     ],
-    "correctAnswer": "N^2U",
+    "correctAnswer": "\\(N^2U\\)",
     "topic": "Physics"
   },
   {
-    "id": 7225444864,
+    "id": "7225444864",
     "question": "Which of the following is a non-renewable source of energy?",
     "options": [
       "Coal",
@@ -756,8 +756,8 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444865,
-    "question": "If a class room has dimensions 20x15x5 m^3 and reverberation time 1.5 sec, the total absorption of all surfaces and the average absorption coefficient will be",
+    "id": "7225444865",
+    "question": "If a class room has dimensions 20x15x5 m³ and reverberation time 1.5 sec, the total absorption of all surfaces and the average absorption coefficient will be",
     "options": [
       "0.7 and 69",
       "69 and 0.07",
@@ -768,7 +768,7 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444866,
+    "id": "7225444866",
     "question": "A source of sound of frequency 450 cycles/sec is stationary but an observer is moving towards the source with 34 m/sec speed. If the speed of sound is 340 m/sec, the apparent frequency will be",
     "options": [
       "410 cycles/sec",
@@ -780,23 +780,23 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444867,
+    "id": "7225444867",
     "question": "A simple pendulum has a time period T in vacuum. Its time period when it is completely immersed in a liquid of density one-eighth of the density of material of the bob is",
     "options": [
-      "\\sqrt{\\frac{7}{8}}T",
-      "\\sqrt{\\frac{5}{8}}T",
-      "\\sqrt{\\frac{3}{8}}T",
-      "\\sqrt{\\frac{8}{7}}T"
+      "\\(\\sqrt{\\frac{7}{8}}T\\)",
+      "\\(\\sqrt{\\frac{5}{8}}T\\)",
+      "\\(\\sqrt{\\frac{3}{8}}T\\)",
+      "\\(\\sqrt{\\frac{8}{7}}T\\)"
     ],
-    "correctAnswer": "\\sqrt{\\frac{8}{7}}T",
+    "correctAnswer": "\\(\\sqrt{\\frac{8}{7}}T\\)",
     "topic": "Physics"
   },
   {
-    "id": 7225444868,
-    "question": "A particle executes simple harmonic motion represented by displacement function as x(t) = A\\sin(\\omega t + \\phi). If the position and velocity of the particle at t = 0 s are 2 cm and 2\\omega cm s^{-1} respectively, then its amplitude is x\\sqrt{2} cm where the value of x is",
+    "id": "7225444868",
+    "question": "A particle executes simple harmonic motion represented by displacement function as x(t) = A sin(ωt + φ). If the position and velocity of the particle at t = 0 s are 2 cm and 2ω cm s⁻¹ respectively, then its amplitude is x√2 cm where the value of x is",
     "options": [
       "2",
-      "2\\sqrt{2}",
+      "2√2",
       "4",
       "1"
     ],
@@ -804,7 +804,7 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444869,
+    "id": "7225444869",
     "question": "An observer standing between two parallel cliffs emits an intense sound note. If two successive echoes are heard after 5 s and 7 s, then distance between the cliffs is (velocity of sound is 340 m/s)",
     "options": [
       "850 m",
@@ -816,8 +816,8 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444870,
-    "question": "M grams of steam at 100°C is mixed with 200 g of ice at its melting point in a thermally insulated container. If it produced liquid water at 40°C [heat of vaporization of water is 540 cal/g and heat of fusion of ice is 80 cal/g] the value of M is",
+    "id": "7225444870",
+    "question": "M grams of steam at 100°C is mixed with 200 g of ice at its melting point in a thermally insulated container. If it produced liquid water at 40°C [heat of vaporization of water is 540 cal/g and heat of fusion of ice is 80 cal/g], the value of M is",
     "options": [
       "20",
       "80",
@@ -828,8 +828,8 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444871,
-    "question": "Which type of ideal gas will have the largest value for C_{p} - C_{v}?",
+    "id": "7225444871",
+    "question": "Which type of ideal gas will have the largest value for \\(C_p - C_v\\)?",
     "options": [
       "Polyatomic",
       "Diatomic",
@@ -840,7 +840,7 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444872,
+    "id": "7225444872",
     "question": "In thermodynamics, heat and work are",
     "options": [
       "Path functions",
@@ -852,31 +852,31 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444873,
+    "id": "7225444873",
     "question": "For an adiabatic expansion of an ideal gas, the fractional change in its pressure is equal to (where y is the ratio of specific heats):",
     "options": [
-      "-\\gamma(\\frac{V}{dV})",
-      "-\\gamma(\\frac{dV}{V})",
-      "-\\frac{1}{\\gamma}(\\frac{V}{dV})",
-      "-\\frac{1}{\\gamma}(\\frac{dV}{V})"
+      "\\(-\\gamma\\frac{V}{dV}\\)",
+      "\\(-\\gamma\\frac{dV}{V}\\)",
+      "\\(-\\frac{1}{\\gamma}\\frac{V}{dV}\\)",
+      "\\(-\\frac{1}{\\gamma}\\frac{dV}{V}\\)"
     ],
-    "correctAnswer": "-\\gamma(\\frac{dV}{V})",
+    "correctAnswer": "\\(-\\gamma\\frac{dV}{V}\\)",
     "topic": "Physics"
   },
   {
-    "id": 7225444874,
+    "id": "7225444874",
     "question": "Which of the following processes must violate the first law of thermodynamics?",
     "options": [
-      "W > 0, Q > 0, and \\Delta E_{int} < 0",
-      "W > 0, Q < 0, and \\Delta E_{int} > 0",
-      "W < 0, Q > 0, and \\Delta E_{int} < 0",
-      "W > 0, Q < 0, and \\Delta E_{int} = 0"
+      "\\(W > 0, Q > 0, \\text{and} \\Delta E_{int} < 0\\)",
+      "\\(W > 0, Q < 0, \\text{and} \\Delta E_{int} > 0\\)",
+      "\\(W < 0, Q > 0, \\text{and} \\Delta E_{int} < 0\\)",
+      "\\(W > 0, Q < 0, \\text{and} \\Delta E_{int} = 0\\)"
     ],
-    "correctAnswer": "W > 0, Q > 0, and \\Delta E_{int} < 0",
+    "correctAnswer": "\\(W > 0, Q > 0, \\text{and} \\Delta E_{int} < 0\\)",
     "topic": "Physics"
   },
   {
-    "id": 7225444875,
+    "id": "7225444875",
     "question": "The critical angle for total internal reflection is maximum for",
     "options": [
       "Red light",
@@ -888,32 +888,32 @@
     "topic": "Physics"
   },
   {
-    "id": 7225444876,
+    "id": "7225444876",
     "question": "Photon of frequency (f) has a momentum (p) associated with it. If c is the velocity of light, the momentum is",
     "options": [
-      "\\frac{hf}{c}",
-      "\\frac{f}{c}",
+      "hf/c",
+      "f/c",
       "hfc",
-      "\\frac{hf}{c^2}"
+      "hf/c²"
     ],
-    "correctAnswer": "\\frac{hf}{c}",
+    "correctAnswer": "hf/c",
     "topic": "Physics"
   },
   {
-    "id": 7225444877,
+    "id": "7225444877",
     "question": "Bohr's theory can be applied to which of the following ions?",
     "options": [
-      "Na^{+}",
-      "Be^{2+}",
-      "Li^{+}",
-      "Li^{2+}"
+      "\\(Na^+\\)",
+      "\\(Be^{2+}\\)",
+      "\\(Li^+\\)",
+      "\\(Li^{2+}\\)"
     ],
-    "correctAnswer": "Li^{2+}",
+    "correctAnswer": "\\(Li^{2+}\\)",
     "topic": "Chemistry"
   },
   {
-    "id": 7225444878,
-    "question": "What is the correct orbital designation of an electron with the quantum number, n=4, l=3, m=2, s=\\frac{1}{2}?",
+    "id": "7225444878",
+    "question": "What is the correct orbital designation of an electron with the quantum number, n=4, l=3, m=2, s=1/2?",
     "options": [
       "3d",
       "4f",
@@ -924,7 +924,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444879,
+    "id": "7225444879",
     "question": "The two electrons present in an orbital are distinguished by",
     "options": [
       "Principal Quantum number",
@@ -936,32 +936,32 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444880,
+    "id": "7225444880",
     "question": "Favorable conditions for the formation of an ionic bond are",
     "options": [
       "Small cation, large anion, high charge on both the ions.",
-      "Large cation, small anion, low charge on both the ions",
+      "Large cation, small anion, low charge on both the ions.",
       "Large cation, large anion, high charge on both the ions.",
-      "Small cation, small anion, high charge on both the ions"
+      "Small cation, small anion, high charge on both the ions."
     ],
-    "correctAnswer": "Large cation, small anion, low charge on both the ions",
+    "correctAnswer": "Large cation, small anion, low charge on both the ions.",
     "topic": "Chemistry"
   },
   {
-    "id": 7225444881,
+    "id": "7225444881",
     "question": "The maximum covalent character is observed in",
     "options": [
       "LiCl",
-      "BeCl_2",
+      "BeCl2",
       "LiF",
-      "BeBr_2"
+      "BeBr2"
     ],
-    "correctAnswer": "BeBr_2",
+    "correctAnswer": "BeBr2",
     "topic": "Chemistry"
   },
   {
-    "id": 7225444882,
-    "question": "In a reaction of H_2SO_4 with NaOH, NaHSO_4 is formed. Equivalent weight of H_2SO_4 is",
+    "id": "7225444882",
+    "question": "In a reaction of \\(H_2SO_4\\) with NaOH, \\(NaHSO_4\\) is formed. Equivalent weight of \\(H_2SO_4\\) is",
     "options": [
       "49 grams",
       "98 grams",
@@ -972,7 +972,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444883,
+    "id": "7225444883",
     "question": "If 5.85 grams of NaCl are dissolved in water and the solution is made up to 0.5 litre, the molarity of solution will be:",
     "options": [
       "0.2",
@@ -984,7 +984,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444884,
+    "id": "7225444884",
     "question": "The solution of Mercury with other metals is called",
     "options": [
       "Saturated solutions",
@@ -996,7 +996,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444885,
+    "id": "7225444885",
     "question": "A strong acid has a",
     "options": [
       "Weak conjugate acid",
@@ -1008,11 +1008,11 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444886,
+    "id": "7225444886",
     "question": "Electron pair donor is",
     "options": [
-      "Lowry- Bronsted base",
-      "Lowry- Bronsted acid",
+      "Lowry-Bronsted base",
+      "Lowry-Bronsted acid",
       "Lewis acid",
       "Lewis base"
     ],
@@ -1020,7 +1020,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444887,
+    "id": "7225444887",
     "question": "The poor conductor of the electricity among the following is:",
     "options": [
       "Copper",
@@ -1032,8 +1032,8 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444888,
-    "question": "The amount of electricity that can deposit 108 g of silver from AgNO_3 solution is",
+    "id": "7225444888",
+    "question": "The amount of electricity that can deposit 108 g of silver from AgNO3 solution is",
     "options": [
       "1 ampere",
       "1 coulomb",
@@ -1044,7 +1044,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444889,
+    "id": "7225444889",
     "question": "Which of the following is false regarding galvanic cells?",
     "options": [
       "It converts chemical energy into electrical energy",
@@ -1056,34 +1056,34 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444890,
+    "id": "7225444890",
     "question": "What is the standard reduction potential of cathode of a galvanic cell if the standard EMF of the cell and standard reduction potential of the anode are 2.71 volts and -2.37 volts respectively?",
     "options": [
       "0.68 volts",
       "-0.68 volts",
       "-0.34 volts",
-      "0.34 volts."
+      "0.34 volts"
     ],
-    "correctAnswer": "0.34 volts.",
+    "correctAnswer": "0.34 volts",
     "topic": "Chemistry"
   },
   {
-    "id": 7225444891,
+    "id": "7225444891",
     "question": "Hardness of water is conventionally expressed in terms of equivalent amount of",
     "options": [
-      "MgCO_3",
-      "CaCO_3",
-      "Na_2CO_3",
-      "K_2CO_3"
+      "MgCO3",
+      "CaCO3",
+      "Na2CO3",
+      "K2CO3"
     ],
-    "correctAnswer": "CaCO_3",
+    "correctAnswer": "CaCO3",
     "topic": "Chemistry"
   },
   {
-    "id": 7225444892,
+    "id": "7225444892",
     "question": "Zero hardness of water is achieved by",
     "options": [
-      "Using Lime soda process",
+      "Using lime soda process",
       "Excess lime treatment",
       "Using excess alum dosage",
       "Ion-Exchange method"
@@ -1092,8 +1092,8 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444893,
-    "question": "What is the hardness of water in terms of CaCO_3 equivalent if water contains 27.6 mg/L of MgSO_4",
+    "id": "7225444893",
+    "question": "What is the hardness of water in terms of CaCO3 equivalent if water contains 27.6 mg/L of MgSO4",
     "options": [
       "23 mg/L",
       "2.3 mg/L",
@@ -1104,7 +1104,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444894,
+    "id": "7225444894",
     "question": "Electrochemical corrosion in acidic environment is carried with",
     "options": [
       "Evolution of oxygen",
@@ -1116,19 +1116,19 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444895,
+    "id": "7225444895",
     "question": "Which of the following metal oxide film is protective from corrosion?",
     "options": [
       "Porous",
-      "Non- porous",
+      "Non-porous",
       "Volatile",
       "Unstable"
     ],
-    "correctAnswer": "Non- porous",
+    "correctAnswer": "Non-porous",
     "topic": "Chemistry"
   },
   {
-    "id": 7225444896,
+    "id": "7225444896",
     "question": "Which of the following is thermosetting plastic?",
     "options": [
       "PVC",
@@ -1140,7 +1140,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444897,
+    "id": "7225444897",
     "question": "Ebonite is",
     "options": [
       "highly vulcanized rubber",
@@ -1152,7 +1152,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444898,
+    "id": "7225444898",
     "question": "Buna-S rubber is made up of the monomers of",
     "options": [
       "1,3 butadiene and acrylonitrile",
@@ -1164,19 +1164,19 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444899,
+    "id": "7225444899",
     "question": "Composition of water gas is",
     "options": [
-      "CO + N_2",
-      "CO + CH_4",
-      "CO + H_2",
-      "CH_4 + N_2"
+      "CO + N2",
+      "CO + CH4",
+      "CO + H2",
+      "CH4 + N2"
     ],
-    "correctAnswer": "CO + H_2",
+    "correctAnswer": "CO + H2",
     "topic": "Chemistry"
   },
   {
-    "id": 7225444900,
+    "id": "7225444900",
     "question": "Which of the following is not a green house gas",
     "options": [
       "Hydrogen",
@@ -1188,7 +1188,7 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444901,
+    "id": "7225444901",
     "question": "Photochemical smog is due to the presence of",
     "options": [
       "Oxide of carbon",
@@ -1200,8 +1200,8 @@
     "topic": "Chemistry"
   },
   {
-    "id": 7225444902,
-    "question": "(1E.42)_{16} = (?)_{8}",
+    "id": "7225444902",
+    "question": "\\((1E.42)_{16} = (?)_{8}\\)",
     "options": [
       "36.204",
       "36.202",
@@ -1212,7 +1212,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444903,
+    "id": "7225444903",
     "question": "Which logic gates among the below options can be used to create any Boolean function economically?",
     "options": [
       "XOR, NAND, OR",
@@ -1224,8 +1224,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444904,
-    "question": "101001 - 010110 =?",
+    "id": "7225444904",
+    "question": "101001 - 010110 = ?",
     "options": [
       "100110",
       "010011",
@@ -1236,19 +1236,19 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444905,
+    "id": "7225444905",
     "question": "DeMorgan's theorem states that",
     "options": [
-      "\\overline{A + B} = \\overline{A} \\cdot \\overline{B} and \\overline{A \\cdot B} = \\overline{A} \\cdot \\overline{B}",
-      "\\overline{A + B} = \\overline{A} + \\overline{B} and \\overline{A \\cdot B} = \\overline{A} \\cdot \\overline{B}",
-      "\\overline{A + B} = \\overline{A} \\cdot \\overline{B} and \\overline{A \\cdot B} = \\overline{A} + \\overline{B}",
-      "\\overline{A + B} = \\overline{A} + \\overline{B} and \\overline{A \\cdot B} = \\overline{A} + \\overline{B}"
+      "\\(\\overline{(A+B)} = \\overline{A}.\\overline{B}\\) and \\(\\overline{(A.B)} = \\overline{A}.\\overline{B}\\)",
+      "\\(\\overline{(A+B)} = \\overline{A}+\\overline{B}\\) and \\(\\overline{(A.B)} = \\overline{A}.\\overline{B}\\)",
+      "\\(\\overline{(A+B)} = \\overline{A}.\\overline{B}\\) and \\(\\overline{(A.B)} = \\overline{A}+\\overline{B}\\)",
+      "\\(\\overline{(A+B)} = \\overline{A}+\\overline{B}\\) and \\(\\overline{(A.B)} = \\overline{A}+\\overline{B}\\)"
     ],
-    "correctAnswer": "\\overline{A + B} = \\overline{A} \\cdot \\overline{B} and \\overline{A \\cdot B} = \\overline{A} + \\overline{B}",
+    "correctAnswer": "\\(\\overline{(A+B)} = \\overline{A}.\\overline{B}\\) and \\(\\overline{(A.B)} = \\overline{A}+\\overline{B}\\)",
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444906,
+    "id": "7225444906",
     "question": "When will JK flip flop toggle the input?",
     "options": [
       "J = 0, K = 0",
@@ -1260,7 +1260,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444907,
+    "id": "7225444907",
     "question": "If the total number of transistors fabricated on a single chip is in the range of 300 to 3000, which integrated circuit do you prefer?",
     "options": [
       "VLSI",
@@ -1272,7 +1272,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444908,
+    "id": "7225444908",
     "question": "The binary equivalent of 0.6875 is --------",
     "options": [
       "0.1011",
@@ -1284,7 +1284,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444909,
+    "id": "7225444909",
     "question": "Which is the DeMorgan's gate equivalent to OR?",
     "options": [
       "Negative NOR",
@@ -1296,7 +1296,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444910,
+    "id": "7225444910",
     "question": "What are the data width and address widths of 8086 microprocessor?",
     "options": [
       "12,16",
@@ -1308,7 +1308,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444911,
+    "id": "7225444911",
     "question": "How many valid flag bits there in the flag register of 8086 microprocessor?",
     "options": [
       "9",
@@ -1320,7 +1320,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444912,
+    "id": "7225444912",
     "question": "Who decides the starting address of the segment in physical memory?",
     "options": [
       "Segment descriptor",
@@ -1332,7 +1332,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444913,
+    "id": "7225444913",
     "question": "The communication line between CPU, memory and peripherals is called a",
     "options": [
       "Bus",
@@ -1344,19 +1344,19 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444914,
+    "id": "7225444914",
     "question": "Which of the following mapping is not used for mapping process in cache memory?",
     "options": [
       "Associative mapping",
       "Direct mapping",
       "Set-Associative mapping",
-      "Segmented – page mapping"
+      "Segmented - page mapping"
     ],
-    "correctAnswer": "Segmented – page mapping",
+    "correctAnswer": "Segmented - page mapping",
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444915,
+    "id": "7225444915",
     "question": "Identify the false statement among the following.",
     "options": [
       "The program counter holds the memory address of the instruction in execution",
@@ -1368,7 +1368,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444916,
+    "id": "7225444916",
     "question": "Which of the following stores the operand during execution and result of the operation after execution?",
     "options": [
       "Flag register",
@@ -1380,7 +1380,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444917,
+    "id": "7225444917",
     "question": "A stack pointer is",
     "options": [
       "a 16-bit register in the microprocessor that indicate the beginning of the stack memory.",
@@ -1392,7 +1392,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444918,
+    "id": "7225444918",
     "question": "The CMP instruction that compares the source and destination operands performs -------- operation.",
     "options": [
       "Addition",
@@ -1404,7 +1404,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444919,
+    "id": "7225444919",
     "question": "A machine in which the least significant byte (LSB) is stored in the lowest location is",
     "options": [
       "Big endian",
@@ -1416,7 +1416,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444920,
+    "id": "7225444920",
     "question": "What is the maximum number of addresses needed in an instruction?",
     "options": [
       "0",
@@ -1428,8 +1428,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444921,
-    "question": "Using 2’s complement notation, what is the result of 11000 + 11100",
+    "id": "7225444921",
+    "question": "Using 2's complement notation, what is the result of 11000 + 11100",
     "options": [
       "10100",
       "110100",
@@ -1440,7 +1440,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444922,
+    "id": "7225444922",
     "question": "Which option should be selected to work the following C expression? string p = \"HELLO\";",
     "options": [
       "typedef char [] string;",
@@ -1452,8 +1452,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444923,
-    "question": "Given the below binary number in 32-bit (single precision) IEEE-754 format: 001111110 01101101 00000000 00000000, its approximate decimal value is ---",
+    "id": "7225444923",
+    "question": "Given the following binary number in 32-bit (single precision) IEEE-754 format: 001111110 01101101 00000000 00000000, its approximate decimal value is ---",
     "options": [
       "23.1",
       "0.231",
@@ -1464,7 +1464,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444924,
+    "id": "7225444924",
     "question": "Which register among the following can interact with the secondary storage?",
     "options": [
       "PC",
@@ -1476,7 +1476,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444925,
+    "id": "7225444925",
     "question": "Assume that you are editing a file named prime.c. Where will it be among the following?",
     "options": [
       "ROM",
@@ -1488,7 +1488,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444926,
+    "id": "7225444926",
     "question": "Who monitors the execution of instructions?",
     "options": [
       "Accumulator",
@@ -1500,7 +1500,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444927,
+    "id": "7225444927",
     "question": "Identify the function of the control unit in the CPU?",
     "options": [
       "It stores program instruction",
@@ -1512,8 +1512,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444928,
-    "question": "When data is not found in Cache memory, it is called ----------",
+    "id": "7225444928",
+    "question": "When data is not found in Cache memory, it is called ------------",
     "options": [
       "Not Found",
       "Not Available",
@@ -1524,7 +1524,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444929,
+    "id": "7225444929",
     "question": "Where is the return address from an interrupt-service routine stored?",
     "options": [
       "Heap",
@@ -1536,20 +1536,20 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444930,
-    "question": "What is the output of the C program?\n#include<stdio.h>\nint main()\n{\nprintf(“main”);\nmain();\nreturn 0;\n}",
+    "id": "7225444930",
+    "question": "What is the output of the C program?\n```c\n#include<stdio.h>\nint main()\n{\n    printf(\"main\");\n    main();\n    return 0;\n}\n```",
     "options": [
       "Compiler error",
       "main",
-      "mainmainmainmainmainmainmainmain… (Prints until stack overflow)",
+      "mainmainmainmainmainmainmainmain... (Prints until stack overflow)",
       "Runtime error"
     ],
-    "correctAnswer": "mainmainmainmainmainmainmainmain… (Prints until stack overflow)",
+    "correctAnswer": "mainmainmainmainmainmainmainmain... (Prints until stack overflow)",
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444931,
-    "question": "What is the output of the C program?\n#include<stdio.h>\nint main()\n{\nint v=5;\nv = !v>6;\nprintf(“%d”,v);\n}",
+    "id": "7225444931",
+    "question": "What is the output of the C program?\n```c\n#include<stdio.h>\nint main()\n{\n    int v=5;\n    v = !v>6;\n    printf(\"%d\",v);\n}\n```",
     "options": [
       "0",
       "1",
@@ -1560,7 +1560,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444932,
+    "id": "7225444932",
     "question": "Linked lists are not suitable for the implementation of",
     "options": [
       "Insertion sort",
@@ -1572,11 +1572,11 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444933,
+    "id": "7225444933",
     "question": "Let A be an array. How do you access the 3rd element using pointers?",
     "options": [
       "*A+2",
-      "*(A+2)",
+      "(*A+2)",
       "&(A+2)",
       "*(A+2)"
     ],
@@ -1584,7 +1584,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444934,
+    "id": "7225444934",
     "question": "What is the disadvantage of array data structure?",
     "options": [
       "Static memory allocation",
@@ -1596,7 +1596,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444935,
+    "id": "7225444935",
     "question": "When a pop() operation is called on an empty queue, what is the condition called?",
     "options": [
       "Overflow",
@@ -1608,7 +1608,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444936,
+    "id": "7225444936",
     "question": "What is a complete binary tree?",
     "options": [
       "Each node has exactly zero or two children",
@@ -1620,8 +1620,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444937,
-    "question": "If the height of a tree with single node is considered as 1, what is the maximum number of nodes in a binary tree of height 5?",
+    "id": "7225444937",
+    "question": "If the height of a tree with single node is considered as 1. What is the maximum number of nodes in a binary tree of height 5?",
     "options": [
       "31",
       "7",
@@ -1632,7 +1632,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444938,
+    "id": "7225444938",
     "question": "What is the drawback of a Linked List?",
     "options": [
       "Random access is not possible in a linked list",
@@ -1644,8 +1644,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444939,
-    "question": "Which sorting algorithm has the worst-case time complexity of O(n^2) while other cases time complexities are much better than the worst case?",
+    "id": "7225444939",
+    "question": "Which sorting algorithm has the worst-case time complexity of \\(O(n^2)\\) while other cases time complexities are much better than the worst case?",
     "options": [
       "Quick sort",
       "Merge sort",
@@ -1656,7 +1656,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444940,
+    "id": "7225444940",
     "question": "Which address identifies a process on a host?",
     "options": [
       "physical",
@@ -1668,7 +1668,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444941,
+    "id": "7225444941",
     "question": "Which layer takes care of compression and encryption?",
     "options": [
       "Application",
@@ -1680,7 +1680,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444942,
+    "id": "7225444942",
     "question": "In which topology the network consists of direct link between two computers?",
     "options": [
       "Bus",
@@ -1692,19 +1692,19 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444943,
+    "id": "7225444943",
     "question": "If n devices are connected by mesh topology that uses simplex connections, then how many cables or lines are required?",
     "options": [
       "n",
       "n - 1",
       "n(n - 1)",
-      "\\frac{n(n - 1)}{2}"
+      "n(n - 1) / 2"
     ],
     "correctAnswer": "n(n - 1)",
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444944,
+    "id": "7225444944",
     "question": "Which topology has minimal traffic?",
     "options": [
       "Mesh",
@@ -1716,8 +1716,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444945,
-    "question": "Two hosts are 10,000 km apart and they are connected by single direct link of bandwidth 10^{6} bits per second. What is the propagation time if the propagation speed along the link is 2 \\times 10^{8} m/sec?",
+    "id": "7225444945",
+    "question": "Two hosts are 10,000 km apart and they are connected by single direct link of bandwidth 10⁶ bits per second. What is the propagation time if the propagation speed along the link is 2 x 10⁸ m/sec?",
     "options": [
       "50 milli sec",
       "100 milli sec",
@@ -1728,7 +1728,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444946,
+    "id": "7225444946",
     "question": "What is the class of the IP address 172.50.4.12?",
     "options": [
       "Class D",
@@ -1740,7 +1740,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444947,
+    "id": "7225444947",
     "question": "The network address of 172.16.0.0/19 provides how many subnets and hosts?",
     "options": [
       "7 subnets, each having 30 hosts",
@@ -1752,7 +1752,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444948,
+    "id": "7225444948",
     "question": "Which protocol is used for sending emails, and, receiving emails respectively?",
     "options": [
       "POP3, SMTP",
@@ -1764,7 +1764,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444949,
+    "id": "7225444949",
     "question": "Consider the below 4 actions in a network. What is the order in which these actions should be executed for communication between a web browser and a web server?\n1. The web browser requests a webpage using HTTP.\n2. The web browser establishes a TCP connection with the web server.\n3. The web server sends the requested webpage using HTTP.\n4. The web browser resolves the domain name using DNS.",
     "options": [
       "4,2,1,3",
@@ -1776,8 +1776,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444950,
-    "question": "The PCB of a process does not contain ----------",
+    "id": "7225444950",
+    "question": "The PCB of a process does not contain ------------",
     "options": [
       "Contents of the CPU registers",
       "Program Code",
@@ -1788,7 +1788,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444951,
+    "id": "7225444951",
     "question": "Which system call returns the process identifier of a terminated child?",
     "options": [
       "Wait",
@@ -1800,7 +1800,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444952,
+    "id": "7225444952",
     "question": "Which data structure is used for the ready queue?",
     "options": [
       "Stack",
@@ -1812,8 +1812,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444953,
-    "question": "The list of processes waiting at an I/O device are in ----------",
+    "id": "7225444953",
+    "question": "The list of processes waiting at an I/O device are in ------------",
     "options": [
       "Ready queue",
       "Job queue",
@@ -1824,20 +1824,20 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444954,
-    "question": "Consider the 3 processes shown in the table:\nProcess | Arrival time | Time units required\nP1 | 0 | 5\nP2 | 1 | 7\nP3 | 5 | 4\nThe completion order of the 3 processes under the policies FCFS and Round Robin scheduling with CPU quantum of 2 time units is---------",
+    "id": "7225444954",
+    "question": "Consider the 3 processes shown in the table:\n| Process | Arrival time | Time units required |\n|---------|--------------|---------------------|\n| P1      | 0            | 5                   |\n| P2      | 1            | 7                   |\n| P3      | 5            | 4                   |\nThe completion order of the 3 processes under the policies FCFS and Round Robin scheduling with CPU quantum of 2 time units is---------",
     "options": [
-      "FCFS: P1,P2,P3 RR: P1,P2,P3",
-      "FCFS: P1,P2,P3 RR: P1,P3,P2",
-      "FCFS: P1,P3,P2 RR: P1,P2,P3",
-      "FCFS: P1,P3,P2 RR: P1,P3,P2"
+      "FCFS: P1,P2,P3  RR: P1,P2,P3",
+      "FCFS: P1,P2,P3  RR: P1,P3,P2",
+      "FCFS: P1,P3,P2  RR: P1,P2,P3",
+      "FCFS: P1,P3,P2  RR: P1,P3,P2"
     ],
-    "correctAnswer": "FCFS: P1,P2,P3 RR: P1,P3,P2",
+    "correctAnswer": "FCFS: P1,P2,P3  RR: P1,P3,P2",
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444955,
-    "question": "There are 200 tracks on a disk platter and the pending requests have come in the order : 36, 69, 167, 76, 42, 51, 126, 12, and 199. Assume the arm is located at the 100th track and moving towards track 200. If the sequence of disc access is 126, 167, 199, 12, 36, 42, 51, 69, and 76 then which disc access scheduling policy is used?",
+    "id": "7225444955",
+    "question": "There are 200 tracks on a disk platter and the pending requests have come in the order: 36, 69, 167, 76, 42, 51, 126, 12, and 199. Assume the arm is located at the 100th track and moving towards track 200. If the sequence of disc access is 126, 167, 199, 12, 36, 42, 51, 69, and 76 then which disc access scheduling policy is used?",
     "options": [
       "SCAN",
       "Shortest Seek Time First",
@@ -1848,7 +1848,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444956,
+    "id": "7225444956",
     "question": "When the time slice of Round Robin scheduling is large, its behaviour is similar to--------",
     "options": [
       "FCFS",
@@ -1860,8 +1860,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444957,
-    "question": "If a resource pre-emption is used to eliminate deadlock, the process holding it so far has to be ----------",
+    "id": "7225444957",
+    "question": "If a resource pre-emption is used to eliminate deadlock, the process holding it so far has to be ------------",
     "options": [
       "Aborted",
       "Queued",
@@ -1872,7 +1872,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444958,
+    "id": "7225444958",
     "question": "How to avoid starvation of processes?",
     "options": [
       "Include aging in the priority scheme",
@@ -1884,7 +1884,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444959,
+    "id": "7225444959",
     "question": "A virtual memory system has an address space of 8 k words, a memory space of 4 k words, and page and block sizes of 1 k words. Find the number of page faults using LRU policy, for following page references. 1 0 2 4 6 2 1 5 7 0 0",
     "options": [
       "5",
@@ -1896,7 +1896,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444960,
+    "id": "7225444960",
     "question": "Which is true with reference to Working Set model for page replacement?",
     "options": [
       "It refers to static page replacement algorithm",
@@ -1908,7 +1908,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444961,
+    "id": "7225444961",
     "question": "Which is not an OS service?",
     "options": [
       "Program execution",
@@ -1920,8 +1920,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444962,
-    "question": "Given a relation as shown in the Table1. If {Name,Age} has to be the key for this table, what value should not be used in place of X ?. Table 1 Student Table\nRoll no | Name | Email | Age | GPA\n401 | Ram | Ram@gmail.com | X | 7.9\n402 | Gopi | Gopi@gmail.com | 19 | 8.2\n403 | Ram | RamCSE@gmail.com | 20 | 6.5\n404 | Gopi | GopiCSE@gmail.com | 18 | 7.6\n405 | Ramani | Ramani@gmail.com | 21 | 8.9",
+    "id": "7225444962",
+    "question": "Given a relation as shown in the Table1. If {Name, Age} has to be the key for this table, what value should not be used in place of X ?. \nTable 1 Student Table\n| Roll no | Name | Email | Age | GPA |\n|---|---|---|---|---|\n| 401 | Ram | Ram@gmail.com | X | 7.9 |\n| 402 | Gopi | Gopi@gmail.com | 19 | 8.2 |\n| 403 | Ram | RamCSE@gmail.com | 20 | 6.5 |\n| 404 | Gopi | GopiCSE@gmail.com | 18 | 7.6 |\n| 405 | Ramani | Ramani@gmail.com | 21 | 8.9 |",
     "options": [
       "18",
       "19",
@@ -1932,19 +1932,19 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444963,
-    "question": "Consider a relation R(A, B, C, D, E, F) with the Functional Dependencies F = {{A, C} \\to {D, E}, {A, D, F} \\to {B, C}}. Which among the following is a trivial FD from F^{+} which is the closure of F.",
+    "id": "7225444963",
+    "question": "Consider a relation R(A, B, C, D, E, F) with the Functional Dependencies F = {{A, C} -> {D, E}, {A, D, F} -> {B, C}}. Which among the following is a trivial FD from F+ which is the closure of F.",
     "options": [
-      "{A, C} \\to {D, E}",
-      "{A, C} \\to {C, E}",
-      "{A, D} \\to {D}",
-      "{A, D, F} \\to {B}"
+      "{A, C} -> {D, E}",
+      "{A, C} -> {C, E}",
+      "{A, D} -> {D}",
+      "{A, D, F} -> {B}"
     ],
-    "correctAnswer": "{A, D} \\to {D}",
+    "correctAnswer": "{A, D} -> {D}",
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444964,
+    "id": "7225444964",
     "question": "Which of the following conditions is satisfied in a 2NF table?",
     "options": [
       "Eliminate all partial dependencies",
@@ -1956,7 +1956,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444965,
+    "id": "7225444965",
     "question": "The process of properly defining tables to provide flexibility, minimized redundancy and data integrity is called",
     "options": [
       "Database Design",
@@ -1968,7 +1968,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444966,
+    "id": "7225444966",
     "question": "Which SQL query can be used to find out the number of values in a column?",
     "options": [
       "TOTAL",
@@ -1980,7 +1980,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444967,
+    "id": "7225444967",
     "question": "A relationship between two tables can be created using which of the following?",
     "options": [
       "Primary Key",
@@ -1992,7 +1992,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444968,
+    "id": "7225444968",
     "question": "A many to many relationship between two entities usually result in how many tables?",
     "options": [
       "3",
@@ -2004,7 +2004,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444969,
+    "id": "7225444969",
     "question": "What does Atomicity property signify?",
     "options": [
       "A transaction always takes place",
@@ -2016,8 +2016,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444970,
-    "question": "What is the output of the SQL statement: SELECT SUBSTR(‘Hello World’, 2, 3) FROM DUAL;",
+    "id": "7225444970",
+    "question": "What is the output of the SQL statement: SELECT SUBSTR('Hello World', 2, 3) FROM DUAL;",
     "options": [
       "el",
       "e",
@@ -2028,7 +2028,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444971,
+    "id": "7225444971",
     "question": "Which of the following creates a virtual relation for storing the query?",
     "options": [
       "Function",
@@ -2040,7 +2040,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444972,
+    "id": "7225444972",
     "question": "Wrapping data and its related functionality into a single entity is known as",
     "options": [
       "Abstraction",
@@ -2052,7 +2052,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444973,
+    "id": "7225444973",
     "question": "Which of the following explains Polymorphism?",
     "options": [
       "int func(int, int); float func1(float, float);",
@@ -2064,8 +2064,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444974,
-    "question": "Which of the following feature of OOPs is not used in the following C++ code?\ncode?\nclass A{\nint i;\npublic:\nvoid print() {cout<< \"hello\" << i;}\n}\nclass B : public A{\nint j;\npublic:\nvoid assign (int a) {j = a;}\n}",
+    "id": "7225444974",
+    "question": "Which of the following feature of OOPs is not used in the following C++ code?\n```cpp\nclass A{\n int i;\n public:\n void print() {cout<<\"hello\"<<i;}\n};\nclass B : public A{\n int j;\n public:\n void assign (int a) {j = a;}\n};\n```",
     "options": [
       "Abstraction",
       "Encapsulation",
@@ -2076,7 +2076,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444975,
+    "id": "7225444975",
     "question": "In C++, whenever a class contains two constructors, the constructors are",
     "options": [
       "default constructors",
@@ -2088,7 +2088,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444976,
+    "id": "7225444976",
     "question": "Which of the following is not a type of Constructor?",
     "options": [
       "Friend constructor",
@@ -2100,8 +2100,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444977,
-    "question": "What is the output of the code below?\n#include<iostream>\nusing namespace std;\nclass Point {\nprivate:\nint x, y;\npublic:\nPoint(int i, int j); // Constructor\n};\nPoint::Point(int i = 0, int j = 0) {\nx = i;\ny = j;\ncout<< \"Constructor called\";\n}\nint main()\n{\nPoint t1, *t2;\nreturn 0;\n}",
+    "id": "7225444977",
+    "question": "What is the output of the code below?\n```cpp\n#include<iostream>\nusing namespace std;\nclass Point {\nprivate:\n    int x;\n    int y;\npublic:\n    Point(int i, int j); // Constructor\n};\nPoint::Point(int i = 0, int j = 0) {\n    x = i;\n    y = j;\n    cout << \"Constructor called\";\n}\nint main()\n{\n    Point t1, *t2;\n    return 0;\n}\n```",
     "options": [
       "Constructor called Constructor called",
       "Constructor called",
@@ -2112,7 +2112,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444978,
+    "id": "7225444978",
     "question": "Which of the following is correct?",
     "options": [
       "Base class pointer object cannot point to a derived class object",
@@ -2124,7 +2124,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444979,
+    "id": "7225444979",
     "question": "Which of the following cannot be a friend?",
     "options": [
       "Function",
@@ -2136,7 +2136,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444980,
+    "id": "7225444980",
     "question": "How run-time polymorphisms are implemented in C++?",
     "options": [
       "Using Inheritance",
@@ -2148,7 +2148,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444981,
+    "id": "7225444981",
     "question": "Which of the following is an abstract data type?",
     "options": [
       "int",
@@ -2160,8 +2160,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444982,
-    "question": "What is the output of the following code?\npublic class Solution{\npublic static void main(String[] args){\nbyte x = 127;\nx++;\nx++;\nSystem.out.print(x);\n}\n}",
+    "id": "7225444982",
+    "question": "What is the output of the following code?\n```java\npublic class Solution{\n    public static void main(String[] args){\n        byte x = 127;\n        x++;\n        x++;\n        System.out.print(x);\n    }\n}\n```",
     "options": [
       "-127",
       "2",
@@ -2172,19 +2172,19 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444983,
+    "id": "7225444983",
     "question": "Which of the following is a correct way to declare arrays in java?",
     "options": [
       "int [10]a = new int[];",
       "int a[] = new int(10);",
       "int []a = new int[10];",
-      "int a[] = new int {10};"
+      "int a[] = new int{10};"
     ],
     "correctAnswer": "int []a = new int[10];",
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444984,
+    "id": "7225444984",
     "question": "When an array is passed to a method in Java, what does the method receive?",
     "options": [
       "A reference to the array",
@@ -2196,8 +2196,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444985,
-    "question": "What is the output of the following code?\npublic class Solution{\npublic static void main(String[] args){\nshort x = 10;\nx = x * 5;\nSystem.out.print(x);\n}\n}",
+    "id": "7225444985",
+    "question": "What is the output of the following code?\n```java\npublic class Solution{\n    public static void main(String[] args){\n        short x = 10;\n        x = x * 5;\n        System.out.print(x);\n    }\n}\n```",
     "options": [
       "50",
       "0",
@@ -2208,7 +2208,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444986,
+    "id": "7225444986",
     "question": "Identify the keyword among the following that makes a variable belong to a class, rather than being defined for each instance of the class.",
     "options": [
       "private",
@@ -2220,8 +2220,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444987,
-    "question": "Identify what can directly access and change the value of the variable x.\nPackage com.mypackage;\nPublic class Solution{\nPrivate int x = 100;\n}",
+    "id": "7225444987",
+    "question": "Identify what can directly access and change the value of the variable x.\n```java\nPackage com.mypackage;\nPublic class Solution{\n    Private int x = 100;\n}\n```",
     "options": [
       "Any class",
       "Any child class of Solution class",
@@ -2232,7 +2232,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444988,
+    "id": "7225444988",
     "question": "Where is the toString() method defined?",
     "options": [
       "java.lang.String",
@@ -2244,8 +2244,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444989,
-    "question": "Identify the output of the following program.\nString str = “abcde”;\nSystem.out.println(str.substring(1, 3));",
+    "id": "7225444989",
+    "question": "Identify the output of the following program.\n```java\nString str = \"abcde\";\nSystem.out.println(str.substring(1, 3));\n```",
     "options": [
       "bc",
       "abc",
@@ -2256,7 +2256,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444990,
+    "id": "7225444990",
     "question": "When is finalize() invoked in Java?",
     "options": [
       "Just before an object is garbage collected",
@@ -2268,8 +2268,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444991,
-    "question": "What is the output of the below code?\npublic class ThreadTest extends Thread\n{\npublic void run()\n{\nSystem.out.println(\"In run\");\nyield();\nSystem.out.println(\"Leaving run\");\n}\npublic static void main(String []argv)\n{\n(new ThreadTest()).start();\n}\n}",
+    "id": "7225444991",
+    "question": "What is the output of the below code?\n```java\npublic class ThreadTest extends Thread\n{\n    public void run()\n    {\n        System.out.println(\"In run\");\n        yield();\n        System.out.println(\"Leaving run\");\n    }\n    public static void main(String []argv)\n    {\n        (new ThreadTest()).start();\n    }\n}\n```",
     "options": [
       "Compilation error in main()",
       "Compilation error in run()",
@@ -2280,7 +2280,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444992,
+    "id": "7225444992",
     "question": "How to create a hyperlink in HTML?",
     "options": [
       "<a href = \"www.XYZ.com\"> XYZ.com </a>",
@@ -2292,7 +2292,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444993,
+    "id": "7225444993",
     "question": "How to insert an image in HTML?",
     "options": [
       "<img href = \"abc.png\" />",
@@ -2304,7 +2304,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444994,
+    "id": "7225444994",
     "question": "Which of the following is the correct way to open the file \"sample.txt\" as readable?",
     "options": [
       "fopen(\"sample.txt\", \"r\");",
@@ -2316,8 +2316,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444995,
-    "question": "Given the below PHP statement, how do you find the number of fruits? $fruits = array(\"Apple\", \"Banana\", \"Orange\");",
+    "id": "7225444995",
+    "question": "Given the below PHP statement, how do you find the number of fruits?\n$fruits = array(\"Apple\", \"Banana\", \"Orange\");",
     "options": [
       "len($fruits)",
       "length($fruits)",
@@ -2328,8 +2328,8 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444996,
-    "question": "What will be the output of the following PHP program?\n<?php\nfunction multi($num)\n{\nif ($num == 3)\necho \"I Wonder\";\nif ($num == 7)\necho \"Which One\";\nif ($num == 8)\necho \"Is The\";\nif ($num == 19)\necho \"Correct Answer\";\n}\n$v = stripos(\"I love php, I love phptoo!\", \"PHP\");\nmulti($v);\n?>",
+    "id": "7225444996",
+    "question": "What will be the output of the following PHP program?\n```php\n<?php\nfunction multi($num)\n{\n    if ($num == 3)\n        echo \"I Wonder\";\n    if ($num == 7)\n        echo \"Which One\";\n    if ($num == 8)\n        echo \"Is The\";\n    if ($num == 19)\n        echo \"Correct Answer\";\n}\n$v = stripos(\"I love php, I love phptoo!\", \"PHP\");\nmulti($v);\n?>\n```",
     "options": [
       "I Wonder",
       "Which One",
@@ -2340,7 +2340,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444997,
+    "id": "7225444997",
     "question": "Which function in PHP starts with __ (double underscore)?",
     "options": [
       "Default Function",
@@ -2352,7 +2352,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444998,
+    "id": "7225444998",
     "question": "What will happen at the end of the following sequence of SQL commands?\nBEGIN TRANSACTION\nDELETE FROM MYTABLE WHERE ID=1\nDELETE FROM OTHERTABLE\nROLLBACK TRANSACTION",
     "options": [
       "The contents of both OTHERTABLE and MYTABLE will be deleted",
@@ -2364,7 +2364,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225444999,
+    "id": "7225444999",
     "question": "What does the DESC keyword do in the following query?\nSELECT *\nFROM MY_TABLE\nWHERE ID > 0\nORDER BY ID, NAME DESC",
     "options": [
       "It causes the dataset returned by the query to be sorted in descending order",
@@ -2376,7 +2376,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225445000,
+    "id": "7225445000",
     "question": "Which object is used to fill DataSet or DataTable with query result in area ADO.net?",
     "options": [
       "DataReader",
@@ -2388,7 +2388,7 @@
     "topic": "Computer Science and Engineering"
   },
   {
-    "id": 7225445001,
+    "id": "7225445001",
     "question": "In PHP for each loop is used to iterate over",
     "options": [
       "number",
