@@ -160,13 +160,20 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const updateUser = async (details: UpdatableUserProfile) => {
     if (!user) return;
 
-    const { error } = await supabase
-        .from('profiles')
-        .update({
-            ...details,
-            updated_at: new Date().toISOString(),
-        })
-        .eq('id', user.id);
+    // Use the new RPC function to update the user profile
+    const { error } = await supabase.rpc('update_user_profile', {
+        user_id: user.id,
+        full_name: details.name ?? user.name,
+        phone_number: details.phone_number ?? user.phoneNumber,
+        branch: details.branch ?? user.branch,
+        college: details.college ?? user.college,
+        year_of_study: details.year_of_study ?? user.yearOfStudy,
+        avg_score: details.avg_score ?? user.avg_score,
+        tests_taken: details.tests_taken ?? user.tests_taken,
+        study_activities: details.study_activities ?? user.study_activities,
+        exam_score_history: details.exam_score_history ?? user.exam_score_history,
+    });
+
 
     if (error) {
         console.error("Error updating user profile:", error);
