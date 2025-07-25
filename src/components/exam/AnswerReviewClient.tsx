@@ -16,6 +16,7 @@ import { explainAnswer } from '@/ai/flows/explain-answer-flow';
 import { clearDoubt } from '@/ai/flows/doubt-clearing-flow';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 const LoadingSkeleton = () => (
     <div className="flex h-screen w-full items-center justify-center bg-background">
