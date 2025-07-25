@@ -227,13 +227,13 @@ export default function ExamClient() {
             <h2 className="font-bold font-headline">Student User</h2>
             <p className="text-sm text-muted-foreground">ECET Aspirant</p>
         </div>
-        <Card className="flex-1 flex flex-col bg-background/50 dark:bg-background/20">
-            <CardHeader>
+        <Card className="flex-1 flex flex-col bg-background/50 dark:bg-background/20 overflow-hidden">
+            <CardHeader className="p-4 border-b">
                 <CardTitle className="text-lg font-headline">Question Palette</CardTitle>
             </CardHeader>
-            <CardContent className="flex-1">
+            <CardContent className="flex-1 p-2 overflow-y-auto">
               <ScrollArea className="h-full">
-                <div className="grid grid-cols-5 md:grid-cols-4 lg:grid-cols-5 gap-2 pr-4">
+                <div className="grid grid-cols-5 md:grid-cols-4 lg:grid-cols-5 gap-2 p-2">
                   {questions.map((q, index) => {
                     const status = getQuestionStatus(q.id);
                     return (
