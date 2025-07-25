@@ -30,7 +30,7 @@ export function AppHeader() {
         <nav className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline text-primary">
             <Image src="/images/logo.png" alt="Diploma Prep Hub Logo" width={32} height={32} className="rounded-md"/>
-            <span>Diploma Prep Hub</span>
+            <span className="hidden sm:inline">Diploma Prep Hub</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-1">
