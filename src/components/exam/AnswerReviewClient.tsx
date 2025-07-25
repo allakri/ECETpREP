@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import type { AnswerSheet, Question } from '@/lib/types';
 import type { MessageData } from 'genkit/experimental/ai';
@@ -52,6 +52,7 @@ export default function AnswerReviewClient() {
   const [chatInput, setChatInput] = useState('');
   const [isChatLoading, setIsChatLoading] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const chatScrollAreaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setIsMounted(true);
@@ -69,6 +70,15 @@ export default function AnswerReviewClient() {
       router.replace('/');
     }
   }, [router, toast]);
+
+  useEffect(() => {
+    if (chatScrollAreaRef.current) {
+        chatScrollAreaRef.current.scrollTo({
+            top: chatScrollAreaRef.current.scrollHeight,
+            behavior: 'smooth',
+        });
+    }
+  }, [chatMessages]);
 
   const handleGenerateExplanation = useCallback(async (question: Question, userAnswer: string) => {
     if (aiExplanations[question.id]) return; // Don't re-generate if it exists
@@ -103,7 +113,7 @@ export default function AnswerReviewClient() {
   }, [toast, aiExplanations]);
 
   const handleOpenChatDialog = (question: Question, explanation: string) => {
-    setChatMessages([{ role: 'model', text: explanation }]);
+    setChatMessages([{ role: 'model', text: `Here is the initial explanation for your incorrect answer:\n\n${explanation}\n\nWhat would you like to discuss further?` }]);
     setChatInput('');
     setIsChatOpen(true);
   };
@@ -255,7 +265,7 @@ export default function AnswerReviewClient() {
                                         disabled={!aiExplanations[currentQuestion.id]}
                                         onClick={() => handleOpenChatDialog(currentQuestion, aiExplanations[currentQuestion.id])}
                                     >
-                                        <MessageSquarePlus className="mr-2 h-4 w-4" /> Ask AI
+                                        <MessageSquarePlus className="mr-2 h-4 w-4" /> Discuss with AI
                                     </Button>
                                 </DialogTrigger>
                                 <DialogContent className="sm:max-w-[625px] h-[80vh] flex flex-col">
@@ -265,8 +275,8 @@ export default function AnswerReviewClient() {
                                            Ask follow-up questions about "{currentQuestion.question}"
                                         </DialogDescription>
                                     </DialogHeader>
-                                    <div className="flex-1 pr-0 py-4">
-                                        <ScrollArea className="h-full pr-6">
+                                    <div className="flex-1 overflow-hidden py-4">
+                                        <ScrollArea className="h-full pr-4" ref={chatScrollAreaRef}>
                                             <div className="space-y-4">
                                             {chatMessages.map((message, index) => (
                                                 <div key={index} className={cn('flex items-start gap-3', message.role === 'user' ? 'justify-end' : 'justify-start')}>
@@ -330,4 +340,3 @@ export default function AnswerReviewClient() {
     </div>
   );
 }
-
