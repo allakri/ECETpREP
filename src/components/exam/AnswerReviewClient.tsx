@@ -84,7 +84,7 @@ export default function AnswerReviewClient() {
   }, [chatMessages]);
 
   const handleGenerateExplanation = useCallback(async (question: Question) => {
-    if (aiExplanations[question.id]) return; // Don't re-generate if it exists
+    if (aiExplanations[question.id] && loadingExplanation !== question.id) return;
     
     setLoadingExplanation(question.id);
     try {
@@ -113,7 +113,7 @@ export default function AnswerReviewClient() {
     } finally {
       setLoadingExplanation(null);
     }
-  }, [toast, aiExplanations, answers]);
+  }, [toast, aiExplanations, answers, loadingExplanation]);
 
   const handleOpenChatDialog = (question: Question, explanation: string) => {
     setChatMessages([{ role: 'model', text: `Here is the initial explanation for the question:\n\n${explanation}\n\nWhat would you like to discuss further?` }]);
@@ -188,7 +188,7 @@ export default function AnswerReviewClient() {
             <CardHeader className="p-4 border-b">
                 <CardTitle className="text-base font-headline">Question Palette</CardTitle>
             </CardHeader>
-            <CardContent className="flex-1 p-2">
+            <CardContent className="flex-1 p-2 overflow-y-auto">
               <ScrollArea className="h-full">
                 <div className="grid grid-cols-5 gap-2 p-2">
                   {questions.map((q, index) => {
@@ -285,7 +285,7 @@ export default function AnswerReviewClient() {
                                             <div key={index} className={cn('flex items-start gap-3', message.role === 'user' ? 'justify-end' : 'justify-start')}>
                                                 {message.role === 'model' && <Avatar className="h-8 w-8"><AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback></Avatar>}
                                                 <div className={cn('max-w-[85%] rounded-lg p-3 text-sm', message.role === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted')}>
-                                                    <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap">{message.text}</div>
+                                                    <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap"><Latex>{message.text}</Latex></div>
                                                 </div>
                                                 {message.role === 'user' && <Avatar className="h-8 w-8"><AvatarFallback className="bg-accent text-accent-foreground"><User size={20}/></AvatarFallback></Avatar>}
                                             </div>
