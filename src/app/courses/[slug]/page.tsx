@@ -3,6 +3,8 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { courses } from "@/lib/courses";
 import { CourseClientPage } from "@/components/course/CourseClientPage";
+import { AppShell } from "@/components/layout/AppShell";
+import { notFound } from "next/navigation";
 
 interface CourseSubPageProps {
   params: {
@@ -15,18 +17,16 @@ export default function CourseSubPage({ params }: CourseSubPageProps) {
   const course = courses.find((c) => c.slug === slug);
 
   if (!course) {
-    return (
-      <div className="flex flex-col min-h-screen">
-        <AppHeader />
-        <main className="flex-grow flex items-center justify-center bg-background py-12">
-          <h1 className="text-2xl font-bold text-destructive">Course not found!</h1>
-        </main>
-        <AppFooter />
-      </div>
-    );
+    return notFound();
   }
 
-  return <CourseClientPage course={course} />;
+  const { icon: Icon, ...serializableCourseData } = course;
+
+  return (
+    <AppShell>
+        <CourseClientPage course={serializableCourseData} icon={<Icon className="h-12 w-12 text-primary" />} />
+    </AppShell>
+  );
 }
 
 // Generate static paths for each course slug

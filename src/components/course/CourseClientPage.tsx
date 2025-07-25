@@ -8,11 +8,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import type { Course } from "@/lib/courses";
-import { AppHeader } from "@/components/layout/AppHeader";
-import { AppFooter } from "@/components/layout/AppFooter";
 
 interface CourseClientPageProps {
-  course: Course;
+  course: Omit<Course, 'icon'>;
+  icon: React.ReactNode;
 }
 
 const itemVariants = {
@@ -27,12 +26,10 @@ const itemVariants = {
   },
 };
 
-export function CourseClientPage({ course }: CourseClientPageProps) {
-  const Icon = course.icon;
+export function CourseClientPage({ course, icon }: CourseClientPageProps) {
 
   return (
     <div className="flex flex-col min-h-screen bg-secondary/10">
-      <AppHeader />
       <main className="flex-grow bg-background py-12 md:py-20">
         <div className="container mx-auto px-4">
           {/* Breadcrumbs */}
@@ -53,7 +50,7 @@ export function CourseClientPage({ course }: CourseClientPageProps) {
             <Card className="mb-12 shadow-lg bg-card border-border">
                 <CardHeader className="flex flex-col md:flex-row items-start gap-6">
                     <div className="p-4 bg-primary/10 rounded-lg">
-                        <Icon className="h-12 w-12 text-primary" />
+                        {icon}
                     </div>
                     <div>
                         <CardTitle className="text-3xl lg:text-4xl font-headline text-primary">
@@ -168,7 +165,6 @@ export function CourseClientPage({ course }: CourseClientPageProps) {
           </div>
         </div>
       </main>
-      <AppFooter />
     </div>
   );
 }
