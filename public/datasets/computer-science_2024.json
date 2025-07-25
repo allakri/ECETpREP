@@ -1,4 +1,3 @@
-
 [
   {
     "id": 7225444802,
@@ -666,7 +665,7 @@
     "options": [
       "\\mu_{k} = 1 - \\frac{1}{n^2}",
       "\\mu_{k} = \\sqrt{1 - \\frac{1}{n^2}}",
-      "\\frac{1}{1-n^2}",
+      "\\mu_{k} = \\frac{1}{1-n^2}",
       "\\mu_{k} = \\sqrt{\\frac{1}{1-n^2}}"
     ],
     "correctAnswer": "\\mu_{k} = 1 - \\frac{1}{n^2}",
@@ -698,7 +697,7 @@
   },
   {
     "id": 7225444860,
-    "question": "A body is thrown vertically upwards with a velocity. Select the incorrect statements from the following\\nI. Both velocity and acceleration are zero at its highest point.\\nII. Velocity is maximum and acceleration is zero at the highest point\\nIII. Velocity is maximum and acceleration is 'g' downwards at its highest point",
+    "question": "A body is thrown vertically upwards with a velocity. Select the incorrect statements from the following\nI. Both velocity and acceleration are zero at its highest point.\nII. Velocity is maximum and acceleration is zero at the highest point\nIII. Velocity is maximum and acceleration is 'g' downwards at its highest point",
     "options": [
       "I, II and III",
       "II and III",
@@ -1442,7 +1441,7 @@
   },
   {
     "id": 7225444922,
-    "question": "Which option should be selected to work the following C expression? string p = \\\"HELLO\\\";",
+    "question": "Which option should be selected to work the following C expression? string p = \"HELLO\";",
     "options": [
       "typedef char [] string;",
       "typedef char *string;",
@@ -1454,7 +1453,7 @@
   },
   {
     "id": 7225444923,
-    "question": "Given the following binary number in 32-bit (single precision) IEEE-754 format: 001111110 01101101 00000000 00000000, its approximate decimal value is ---",
+    "question": "Given the below binary number in 32-bit (single precision) IEEE-754 format: 001111110 01101101 00000000 00000000, its approximate decimal value is ---",
     "options": [
       "23.1",
       "0.231",
@@ -1538,7 +1537,7 @@
   },
   {
     "id": 7225444930,
-    "question": "What is the output of the C program?\\n#include<stdio.h>\\nint main()\\n{\\nprintf(“main”);\\nmain();\\nreturn 0;\\n}",
+    "question": "What is the output of the C program?\n#include<stdio.h>\nint main()\n{\nprintf(“main”);\nmain();\nreturn 0;\n}",
     "options": [
       "Compiler error",
       "main",
@@ -1550,7 +1549,7 @@
   },
   {
     "id": 7225444931,
-    "question": "What is the output of the C program?\\n#include<stdio.h>\\nint main()\\n{\\nint v=5;\\nv = !v>6;\\nprintf(“%d”,v);\\n}",
+    "question": "What is the output of the C program?\n#include<stdio.h>\nint main()\n{\nint v=5;\nv = !v>6;\nprintf(“%d”,v);\n}",
     "options": [
       "0",
       "1",
@@ -1766,7 +1765,7 @@
   },
   {
     "id": 7225444949,
-    "question": "Consider the below 4 actions in a network. What is the order in which these actions should be executed for communication between a web browser and a web server?\\n1. The web browser requests a webpage using HTTP.\\n2. The web browser establishes a TCP connection with the web server.\\n3. The web server sends the requested webpage using HTTP.\\n4. The web browser resolves the domain name using DNS.",
+    "question": "Consider the below 4 actions in a network. What is the order in which these actions should be executed for communication between a web browser and a web server?\n1. The web browser requests a webpage using HTTP.\n2. The web browser establishes a TCP connection with the web server.\n3. The web server sends the requested webpage using HTTP.\n4. The web browser resolves the domain name using DNS.",
     "options": [
       "4,2,1,3",
       "1,2,3,4",
@@ -1826,7 +1825,7 @@
   },
   {
     "id": 7225444954,
-    "question": "Consider the 3 processes shown in the table:\\nProcess | Arrival time | Time units required\\nP1 | 0 | 5\\nP2 | 1 | 7\\nP3 | 5 | 4\\nThe completion order of the 3 processes under the policies FCFS and Round Robin scheduling with CPU quantum of 2 time units is---------",
+    "question": "Consider the 3 processes shown in the table:\nProcess | Arrival time | Time units required\nP1 | 0 | 5\nP2 | 1 | 7\nP3 | 5 | 4\nThe completion order of the 3 processes under the policies FCFS and Round Robin scheduling with CPU quantum of 2 time units is---------",
     "options": [
       "FCFS: P1,P2,P3 RR: P1,P2,P3",
       "FCFS: P1,P2,P3 RR: P1,P3,P2",
@@ -1922,7 +1921,7 @@
   },
   {
     "id": 7225444962,
-    "question": "Given a relation as shown in the Table1. If {Name,Age} has to be the key for this table, what value should not be used in place of X ?. Table 1 Student Table\\nRoll no | Name | Email | Age | GPA\\n401 | Ram | Ram@gmail.com | X | 7.9\\n402 | Gopi | Gopi@gmail.com | 19 | 8.2\\n403 | Ram | RamCSE@gmail.com | 20 | 6.5\\n404 | Gopi | GopiCSE@gmail.com | 18 | 7.6\\n405 | Ramani | Ramani@gmail.com | 21 | 8.9",
+    "question": "Given a relation as shown in the Table1. If {Name,Age} has to be the key for this table, what value should not be used in place of X ?. Table 1 Student Table\nRoll no | Name | Email | Age | GPA\n401 | Ram | Ram@gmail.com | X | 7.9\n402 | Gopi | Gopi@gmail.com | 19 | 8.2\n403 | Ram | RamCSE@gmail.com | 20 | 6.5\n404 | Gopi | GopiCSE@gmail.com | 18 | 7.6\n405 | Ramani | Ramani@gmail.com | 21 | 8.9",
     "options": [
       "18",
       "19",
@@ -2066,7 +2065,7 @@
   },
   {
     "id": 7225444974,
-    "question": "Which of the following feature of OOPs is not used in the following C++ code?\\ncode?\\nclass A{\\nint i;\\npublic:\\nvoid print() {cout<< “hello” << i;}\\n}\\nclass B : public A{\\nint j;\\npublic:\\nvoid assign (int a) {j = a;}\\n}",
+    "question": "Which of the following feature of OOPs is not used in the following C++ code?\ncode?\nclass A{\nint i;\npublic:\nvoid print() {cout<< \"hello\" << i;}\n}\nclass B : public A{\nint j;\npublic:\nvoid assign (int a) {j = a;}\n}",
     "options": [
       "Abstraction",
       "Encapsulation",
@@ -2102,7 +2101,7 @@
   },
   {
     "id": 7225444977,
-    "question": "What is the output of the code below?\\n#include<iostream>\\nusing namespace std;\\nclass Point {\\nprivate:\\nint x, y;\\npublic:\\nPoint(int i, int j); // Constructor\\n};\\nPoint::Point(int i = 0, int j = 0) {\\nx = i;\\ny = j;\\ncout<< “Constructor called”;\\n}\\nint main()\\n{\\nPoint t1, *t2;\\nreturn 0;\\n}",
+    "question": "What is the output of the code below?\n#include<iostream>\nusing namespace std;\nclass Point {\nprivate:\nint x, y;\npublic:\nPoint(int i, int j); // Constructor\n};\nPoint::Point(int i = 0, int j = 0) {\nx = i;\ny = j;\ncout<< \"Constructor called\";\n}\nint main()\n{\nPoint t1, *t2;\nreturn 0;\n}",
     "options": [
       "Constructor called Constructor called",
       "Constructor called",
@@ -2162,7 +2161,7 @@
   },
   {
     "id": 7225444982,
-    "question": "What is the output of the following code?\\npublic class Solution{\\npublic static void main(String[] args){\\nbyte x = 127;\\nx++;\\nx++;\\nSystem.out.print(x);\\n}\\n}",
+    "question": "What is the output of the following code?\npublic class Solution{\npublic static void main(String[] args){\nbyte x = 127;\nx++;\nx++;\nSystem.out.print(x);\n}\n}",
     "options": [
       "-127",
       "2",
@@ -2198,7 +2197,7 @@
   },
   {
     "id": 7225444985,
-    "question": "What is the output of the following code?\\npublic class Solution{\\npublic static void main(String[] args){\\nshort x = 10;\\nx = x * 5;\\nSystem.out.print(x);\\n}\\n}",
+    "question": "What is the output of the following code?\npublic class Solution{\npublic static void main(String[] args){\nshort x = 10;\nx = x * 5;\nSystem.out.print(x);\n}\n}",
     "options": [
       "50",
       "0",
@@ -2222,7 +2221,7 @@
   },
   {
     "id": 7225444987,
-    "question": "Identify what can directly access and change the value of the variable x.\\nPackage com.mypackage;\\nPublic class Solution{\\nPrivate int x = 100;\\n}",
+    "question": "Identify what can directly access and change the value of the variable x.\nPackage com.mypackage;\nPublic class Solution{\nPrivate int x = 100;\n}",
     "options": [
       "Any class",
       "Any child class of Solution class",
@@ -2246,7 +2245,7 @@
   },
   {
     "id": 7225444989,
-    "question": "Identify the output of the following program.\\nString str = “abcde”;\\nSystem.out.println(str.substring(1, 3));",
+    "question": "Identify the output of the following program.\nString str = “abcde”;\nSystem.out.println(str.substring(1, 3));",
     "options": [
       "bc",
       "abc",
@@ -2270,55 +2269,55 @@
   },
   {
     "id": 7225444991,
-    "question": "What is the output of the below code?\\npublic class ThreadTest extends Thread\\n{\\npublic void run()\\n{\\nSystem.out.println(\\\"In run\\\");\\nyield();\\nSystem.out.println(\\\"Leaving run\\\");\\n}\\npublic static void main(String []argv)\\n{\\n(new ThreadTest()).start();\\n}\\n}",
+    "question": "What is the output of the below code?\npublic class ThreadTest extends Thread\n{\npublic void run()\n{\nSystem.out.println(\"In run\");\nyield();\nSystem.out.println(\"Leaving run\");\n}\npublic static void main(String []argv)\n{\n(new ThreadTest()).start();\n}\n}",
     "options": [
       "Compilation error in main()",
       "Compilation error in run()",
       "In run",
-      "In run\\nLeaving run"
+      "In run\nLeaving run"
     ],
-    "correctAnswer": "In run\\nLeaving run",
+    "correctAnswer": "In run\nLeaving run",
     "topic": "Computer Science and Engineering"
   },
   {
     "id": 7225444992,
     "question": "How to create a hyperlink in HTML?",
     "options": [
-      "<a href = \\\"www.XYZ.com\\\"> XYZ.com </a>",
-      "<a url = \\\"www.XYZ.com\\\"> XYZ.com /a>",
-      "<a link = \\\"www.XYZ.com\\\"> XYZ.com </a>",
+      "<a href = \"www.XYZ.com\"> XYZ.com </a>",
+      "<a url = \"www.XYZ.com\"> XYZ.com /a>",
+      "<a link = \"www.XYZ.com\"> XYZ.com </a>",
       "<a> www.XYZ.com <XYZ.com /a>"
     ],
-    "correctAnswer": "<a href = \\\"www.XYZ.com\\\"> XYZ.com </a>",
+    "correctAnswer": "<a href = \"www.XYZ.com\"> XYZ.com </a>",
     "topic": "Computer Science and Engineering"
   },
   {
     "id": 7225444993,
     "question": "How to insert an image in HTML?",
     "options": [
-      "<img href = \\\"abc.png\\\" />",
-      "<img url = \\\"abc.png\\\" />",
-      "<img link = \\\"abc.png\\\" />",
-      "<img src = \\\"abc.png\\\" />"
+      "<img href = \"abc.png\" />",
+      "<img url = \"abc.png\" />",
+      "<img link = \"abc.png\" />",
+      "<img src = \"abc.png\" />"
     ],
-    "correctAnswer": "<img src = \\\"abc.png\\\" />",
+    "correctAnswer": "<img src = \"abc.png\" />",
     "topic": "Computer Science and Engineering"
   },
   {
     "id": 7225444994,
-    "question": "Which of the following is the correct way to open the file \\\"sample.txt\\\" as readable?",
+    "question": "Which of the following is the correct way to open the file \"sample.txt\" as readable?",
     "options": [
-      "fopen(\\\"sample.txt\\\", \\\"r\\\");",
-      "fopen(\\\"sample.txt\\\", \\\"r+\\\");",
-      "fopen(\\\"sample.txt\\\", \\\"read\\\");",
-      "fopen(\\\"sample.txt\\\");"
+      "fopen(\"sample.txt\", \"r\");",
+      "fopen(\"sample.txt\", \"r+\");",
+      "fopen(\"sample.txt\", \"read\");",
+      "fopen(\"sample.txt\");"
     ],
-    "correctAnswer": "fopen(\\\"sample.txt\\\", \\\"r\\\");",
+    "correctAnswer": "fopen(\"sample.txt\", \"r\");",
     "topic": "Computer Science and Engineering"
   },
   {
     "id": 7225444995,
-    "question": "Given the below PHP statement, how do you find the number of fruits? $fruits = array(\\\"Apple\\\", \\\"Banana\\\", \\\"Orange\\\");",
+    "question": "Given the below PHP statement, how do you find the number of fruits? $fruits = array(\"Apple\", \"Banana\", \"Orange\");",
     "options": [
       "len($fruits)",
       "length($fruits)",
@@ -2330,7 +2329,7 @@
   },
   {
     "id": 7225444996,
-    "question": "What will be the output of the following PHP program?\\n<?php\\nfunction multi($num)\\n{\\nif ($num == 3)\\necho \\\"I Wonder\\\";\\nif ($num == 7)\\necho \\\"Which One\\\";\\nif ($num == 8)\\necho \\\"Is The\\\";\\nif ($num == 19)\\necho \\\"Correct Answer\\\";\\n}\\n$v = stripos(\\\"I love php, I love phptoo!\\\", \\\"PHP\\\");\\nmulti($v);\\n?>",
+    "question": "What will be the output of the following PHP program?\n<?php\nfunction multi($num)\n{\nif ($num == 3)\necho \"I Wonder\";\nif ($num == 7)\necho \"Which One\";\nif ($num == 8)\necho \"Is The\";\nif ($num == 19)\necho \"Correct Answer\";\n}\n$v = stripos(\"I love php, I love phptoo!\", \"PHP\");\nmulti($v);\n?>",
     "options": [
       "I Wonder",
       "Which One",
@@ -2354,7 +2353,7 @@
   },
   {
     "id": 7225444998,
-    "question": "What will happen at the end of the following sequence of SQL commands?\\nBEGIN TRANSACTION\\nDELETE FROM MYTABLE WHERE ID=1\\nDELETE FROM OTHERTABLE\\nROLLBACK TRANSACTION",
+    "question": "What will happen at the end of the following sequence of SQL commands?\nBEGIN TRANSACTION\nDELETE FROM MYTABLE WHERE ID=1\nDELETE FROM OTHERTABLE\nROLLBACK TRANSACTION",
     "options": [
       "The contents of both OTHERTABLE and MYTABLE will be deleted",
       "The contents of OTHERTABLE will be deleted, as will be all the contents of MYTABLE whose ID is 1",
@@ -2366,7 +2365,7 @@
   },
   {
     "id": 7225444999,
-    "question": "What does the DESC keyword do in the following query?\\nSELECT *\\nFROM MY_TABLE\\nWHERE ID > 0\\nORDER BY ID, NAME DESC",
+    "question": "What does the DESC keyword do in the following query?\nSELECT *\nFROM MY_TABLE\nWHERE ID > 0\nORDER BY ID, NAME DESC",
     "options": [
       "It causes the dataset returned by the query to be sorted in descending order",
       "It causes rows with the same ID to be sorted by NAME in ascending order",

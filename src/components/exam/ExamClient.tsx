@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -195,7 +193,9 @@ export default function ExamClient() {
               {currentQuestion.options.map((option, index) => (
                 <div key={index} className="flex items-center space-x-3 transition-all duration-200 rounded-lg p-3 hover:bg-primary/5 dark:hover:bg-primary/10">
                   <RadioGroupItem value={option} id={`q${currentQuestion.id}-op${index}`} />
-                  <Label htmlFor={`q${currentQuestion.id}-op${index}`} className="text-base cursor-pointer flex-1"><Latex>{option}</Latex></Label>
+                  <Label htmlFor={`q${currentQuestion.id}-op${index}`} className="text-base cursor-pointer flex-1">
+                    <Latex>{option}</Latex>
+                  </Label>
                 </div>
               ))}
             </RadioGroup>
