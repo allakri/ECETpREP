@@ -1,26 +1,27 @@
+
 [
   {
     "id": 7225444802,
-    "question": "If the determinant of the matrix \\\\begin{vmatrix} 2 & x & 3 \\\\\\\\ 4 & 1 & 6 \\\\\\\\ -1 & 2 & 7 \\\\end{vmatrix} = 0, then the value of x is:",
+    "question": "If the determinant of the matrix \\begin{vmatrix} 2 & x & 3 \\\\ 4 & 1 & 6 \\\\ -1 & 2 & 7 \\end{vmatrix} = 0, then the value of x is:",
     "options": [
       "6",
-      "\\\\frac{5}{3}",
-      "\\\\frac{1}{2}",
+      "\\frac{5}{3}",
+      "\\frac{1}{2}",
       "-6"
     ],
-    "correctAnswer": "\\\\frac{1}{2}",
+    "correctAnswer": "\\frac{1}{2}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444803,
-    "question": "If 2A + 3B - 4I = \\\\begin{pmatrix} 3 & 15 \\\\\\\\ 20 & 28 \\\\end{pmatrix} and A + B + I = \\\\begin{pmatrix} 4 & 6 \\\\\\\\ 8 & 14 \\\\end{pmatrix} then A =",
+    "question": "If 2A + 3B - 4I = \\begin{pmatrix} 3 & 15 \\\\ 20 & 28 \\end{pmatrix} and A + B + I = \\begin{pmatrix} 4 & 6 \\\\ 8 & 14 \\end{pmatrix} then A =",
     "options": [
-      "\\\\begin{pmatrix} 3 & 5 \\\\\\\\ 0 & 8 \\\\end{pmatrix}",
-      "\\\\begin{pmatrix} 3 & 15 \\\\\\\\ 2 & 8 \\\\end{pmatrix}",
-      "\\\\begin{pmatrix} 13 & 1 \\\\\\\\ 20 & 2 \\\\end{pmatrix}",
-      "\\\\begin{pmatrix} 2 & 3 \\\\\\\\ 4 & 7 \\\\end{pmatrix}"
+      "\\begin{pmatrix} 3 & 5 \\\\ 0 & 8 \\end{pmatrix}",
+      "\\begin{pmatrix} 3 & 15 \\\\ 2 & 8 \\end{pmatrix}",
+      "\\begin{pmatrix} 13 & 1 \\\\ 20 & 2 \\end{pmatrix}",
+      "\\begin{pmatrix} 2 & 3 \\\\ 4 & 7 \\end{pmatrix}"
     ],
-    "correctAnswer": "\\\\begin{pmatrix} 2 & 3 \\\\\\\\ 4 & 7 \\\\end{pmatrix}",
+    "correctAnswer": "\\begin{pmatrix} 2 & 3 \\\\ 4 & 7 \\end{pmatrix}",
     "topic": "Mathematics"
   },
   {
@@ -37,7 +38,7 @@
   },
   {
     "id": 7225444805,
-    "question": "If A = \\\\begin{pmatrix} 1 & 2 \\\\\\\\ 2 & 4 \\\\end{pmatrix} and B = \\\\begin{pmatrix} -4 & 6 \\\\\\\\ 2 & -3 \\\\end{pmatrix} then AB =",
+    "question": "If A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 4 \\end{pmatrix} and B = \\begin{pmatrix} -4 & 6 \\\\ 2 & -3 \\end{pmatrix} then AB =",
     "options": [
       "1",
       "-8",
@@ -61,7 +62,7 @@
   },
   {
     "id": 7225444807,
-    "question": "If \\\\frac{10-x}{x^2+x-12} = \\\\frac{A}{x+4} + \\\\frac{B}{x-3} then A + B =",
+    "question": "If \\frac{10-x}{x^2+x-12} = \\frac{A}{x+4} + \\frac{B}{x-3} then A + B =",
     "options": [
       "-1",
       "1",
@@ -73,35 +74,35 @@
   },
   {
     "id": 7225444808,
-    "question": "If \\\\frac{4x^2+5x+8}{(x^2+5)(x+2)} = \\\\frac{Ax+B}{x^2+5} + \\\\frac{C}{x+2} then B + C =",
+    "question": "If \\frac{4x^2+5x+8}{(x^2+5)(x+2)} = \\frac{Ax+B}{x^2+5} + \\frac{C}{x+2} then B + C =",
     "options": [
-      "\\\\frac{12}{7}",
-      "-\\\\frac{15}{9}",
-      "\\\\frac{15}{9}",
-      "\\\\frac{17}{9}"
+      "\\frac{12}{7}",
+      "-\\frac{15}{9}",
+      "\\frac{15}{9}",
+      "\\frac{17}{9}"
     ],
-    "correctAnswer": "\\\\frac{15}{9}",
+    "correctAnswer": "\\frac{15}{9}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444809,
-    "question": "If \\\\sin\\\\theta = \\\\frac{3}{5}, \\\\theta is acute, then 2\\\\tan\\\\theta + 3\\\\sec\\\\theta + 4\\\\csc\\\\theta =",
+    "question": "If \\sin\\theta = \\frac{3}{5}, \\theta is acute, then 2\\tan\\theta + 3\\sec\\theta + 4\\csc\\theta =",
     "options": [
       "-1",
-      "\\\\frac{163}{12}",
-      "-\\\\frac{163}{12}",
-      "\\\\frac{13}{12}"
+      "\\frac{163}{12}",
+      "-\\frac{163}{12}",
+      "\\frac{13}{12}"
     ],
-    "correctAnswer": "\\\\frac{163}{12}",
+    "correctAnswer": "\\frac{163}{12}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444810,
-    "question": "If x = a\\\\sec\\\\theta, y = b\\\\tan\\\\theta then \\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} =",
+    "question": "If x = a\\sec\\theta, y = b\\tan\\theta then \\frac{x^2}{a^2} - \\frac{y^2}{b^2} =",
     "options": [
-      "\\\\frac{1}{2}",
+      "\\frac{1}{2}",
       "1",
-      "\\\\frac{1}{4}",
+      "\\frac{1}{4}",
       "1"
     ],
     "correctAnswer": "1",
@@ -109,7 +110,7 @@
   },
   {
     "id": 7225444811,
-    "question": "The value of \\\\tan^2(60^{\\\\circ}) + 2\\\\tan^2(45^{\\\\circ}) is",
+    "question": "The value of \\tan^2(60^{\\circ}) + 2\\tan^2(45^{\\circ}) is",
     "options": [
       "5",
       "2",
@@ -121,7 +122,7 @@
   },
   {
     "id": 7225444812,
-    "question": "The value of \\\\tan(20^{\\\\circ}) \\\\tan(40^{\\\\circ}) \\\\tan(60^{\\\\circ}) \\\\tan(80^{\\\\circ}) is",
+    "question": "The value of \\tan(20^{\\circ}) \\tan(40^{\\circ}) \\tan(60^{\\circ}) \\tan(80^{\\circ}) is",
     "options": [
       "-2",
       "2",
@@ -133,26 +134,26 @@
   },
   {
     "id": 7225444813,
-    "question": "If (1 + \\\\tan A)(1 + \\\\tan B) = 2 then A + B =",
+    "question": "If (1 + \\tan A)(1 + \\tan B) = 2 then A + B =",
     "options": [
-      "65^{\\\\circ}",
-      "45^{\\\\circ}",
-      "35^{\\\\circ}",
-      "25^{\\\\circ}"
+      "65^{\\circ}",
+      "45^{\\circ}",
+      "35^{\\circ}",
+      "25^{\\circ}"
     ],
-    "correctAnswer": "45^{\\\\circ}",
+    "correctAnswer": "45^{\\circ}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444814,
-    "question": "The value of \\\\sin(20^{\\\\circ}) \\\\sin(40^{\\\\circ}) \\\\sin(60^{\\\\circ}) \\\\sin(80^{\\\\circ}) is",
+    "question": "The value of \\sin(20^{\\circ}) \\sin(40^{\\circ}) \\sin(60^{\\circ}) \\sin(80^{\\circ}) is",
     "options": [
-      "-\\\\frac{3}{16}",
-      "\\\\frac{23}{16}",
-      "\\\\frac{31}{16}",
-      "\\\\frac{3}{16}"
+      "-\\frac{3}{16}",
+      "\\frac{23}{16}",
+      "\\frac{31}{16}",
+      "\\frac{3}{16}"
     ],
-    "correctAnswer": "\\\\frac{3}{16}",
+    "correctAnswer": "\\frac{3}{16}",
     "topic": "Mathematics"
   },
   {
@@ -169,43 +170,43 @@
   },
   {
     "id": 7225444816,
-    "question": "The value of \\\\sin^{-1}(\\\\frac{5}{13}) + \\\\tan^{-1}(\\\\frac{12}{5}) is",
+    "question": "The value of \\sin^{-1}(\\frac{5}{13}) + \\tan^{-1}(\\frac{12}{5}) is",
     "options": [
-      "-\\\\frac{\\\\pi}{2}",
-      "\\\\frac{\\\\pi}{4}",
-      "\\\\frac{\\\\pi}{2}",
-      "\\\\frac{\\\\pi}{3}"
+      "-\\frac{\\pi}{2}",
+      "\\frac{\\pi}{4}",
+      "\\frac{\\pi}{2}",
+      "\\frac{\\pi}{3}"
     ],
-    "correctAnswer": "\\\\frac{\\\\pi}{2}",
+    "correctAnswer": "\\frac{\\pi}{2}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444817,
-    "question": "The general solution of trigonometric equation \\\\sec(4\\\\theta) - \\\\sec(2\\\\theta) = 2 is",
+    "question": "The general solution of trigonometric equation \\sec(4\\theta) - \\sec(2\\theta) = 2 is",
     "options": [
-      "\\\\frac{2n\\\\pi}{5} \\\\pm \\\\frac{\\\\pi}{10} \\\\text{ or } 2n\\\\pi \\\\pm \\\\frac{\\\\pi}{2}",
-      "\\\\frac{3n\\\\pi}{5}",
-      "\\\\frac{5n\\\\pi}{4}",
-      "\\\\frac{n\\\\pi}{4}"
+      "\\frac{2n\\pi}{5} \\pm \\frac{\\pi}{10} \\text{ or } 2n\\pi \\pm \\frac{\\pi}{2}",
+      "\\frac{3n\\pi}{5}",
+      "\\frac{5n\\pi}{4}",
+      "\\frac{n\\pi}{4}"
     ],
-    "correctAnswer": "\\\\frac{2n\\\\pi}{5} \\\\pm \\\\frac{\\\\pi}{10} \\\\text{ or } 2n\\\\pi \\\\pm \\\\frac{\\\\pi}{2}",
+    "correctAnswer": "\\frac{2n\\pi}{5} \\pm \\frac{\\pi}{10} \\text{ or } 2n\\pi \\pm \\frac{\\pi}{2}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444818,
-    "question": "The value of \\\\tan^{-1}(2\\\\sin(150^{\\\\circ})) is",
+    "question": "The value of \\tan^{-1}(2\\sin(150^{\\circ})) is",
     "options": [
-      "\\\\pi",
-      "3\\\\pi",
-      "\\\\frac{\\\\pi}{2}",
-      "\\\\frac{\\\\pi}{4}"
+      "\\pi",
+      "3\\pi",
+      "\\frac{\\pi}{2}",
+      "\\frac{\\pi}{4}"
     ],
-    "correctAnswer": "\\\\frac{\\\\pi}{4}",
+    "correctAnswer": "\\frac{\\pi}{4}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444819,
-    "question": "The modulus of \\\\( \\\\frac{(1+i)(1-\\\\sqrt{3}i)}{1-i} \\\\) is",
+    "question": "The modulus of \\( \\frac{(1+i)(1-\\sqrt{3}i)}{1-i} \\) is",
     "options": [
       "2",
       "6",
@@ -217,7 +218,7 @@
   },
   {
     "id": 7225444820,
-    "question": "If 1, \\\\omega, \\\\omega^2 are the cube roots of unity, then (1-\\\\omega)(1-\\\\omega^2)(1-\\\\omega^4)(1-\\\\omega^5) =",
+    "question": "If 1, \\omega, \\omega^2 are the cube roots of unity, then (1-\\omega)(1-\\omega^2)(1-\\omega^4)(1-\\omega^5) =",
     "options": [
       "3",
       "9",
@@ -244,23 +245,23 @@
     "question": "The eccentricity of an equilateral hyperbola is",
     "options": [
       "1",
-      "\\\\sqrt{2}",
+      "\\sqrt{2}",
       "3",
-      "\\\\sqrt{3}"
+      "\\sqrt{3}"
     ],
-    "correctAnswer": "\\\\sqrt{2}",
+    "correctAnswer": "\\sqrt{2}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444823,
     "question": "The eccentricity of the hyperbola 36x^2 - 25y^2 = 900 is",
     "options": [
-      "\\\\frac{\\\\sqrt{61}}{5}",
-      "\\\\frac{9}{2}",
-      "\\\\frac{3}{2}",
-      "\\\\frac{5}{2}"
+      "\\frac{\\sqrt{61}}{5}",
+      "\\frac{9}{2}",
+      "\\frac{3}{2}",
+      "\\frac{5}{2}"
     ],
-    "correctAnswer": "\\\\frac{\\\\sqrt{61}}{5}",
+    "correctAnswer": "\\frac{\\sqrt{61}}{5}",
     "topic": "Mathematics"
   },
   {
@@ -277,59 +278,59 @@
   },
   {
     "id": 7225444825,
-    "question": "If y = 4x + k is a tangent to the hyperbola \\\\frac{x^2}{64} - \\\\frac{y^2}{49} = 1 then the value of k is",
+    "question": "If y = 4x + k is a tangent to the hyperbola \\frac{x^2}{64} - \\frac{y^2}{49} = 1 then the value of k is",
     "options": [
-      "\\\\pm\\\\sqrt{775}",
-      "\\\\pm\\\\sqrt{995}",
-      "\\\\pm\\\\sqrt{275}",
-      "\\\\pm\\\\sqrt{975}"
+      "\\pm\\sqrt{775}",
+      "\\pm\\sqrt{995}",
+      "\\pm\\sqrt{275}",
+      "\\pm\\sqrt{975}"
     ],
-    "correctAnswer": "\\\\pm\\\\sqrt{975}",
+    "correctAnswer": "\\pm\\sqrt{975}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444826,
-    "question": "If the line 2x + \\\\sqrt{6} y = 2 touches the hyperbola x^2 - 2y^2 = 4 then the point of contact is",
+    "question": "If the line 2x + \\sqrt{6} y = 2 touches the hyperbola x^2 - 2y^2 = 4 then the point of contact is",
     "options": [
-      "(4, \\\\sqrt{6})",
-      "(4, -\\\\sqrt{6})",
+      "(4, \\sqrt{6})",
+      "(4, -\\sqrt{6})",
       "(-4,6)",
       "(5,7)"
     ],
-    "correctAnswer": "(4, -\\\\sqrt{6})",
+    "correctAnswer": "(4, -\\sqrt{6})",
     "topic": "Mathematics"
   },
   {
     "id": 7225444827,
-    "question": "The value of \\\\lim_{x \\\\to 2} \\\\frac{x^3-3x-2}{2x^2-5x+2} is",
+    "question": "The value of \\lim_{x \\to 2} \\frac{x^3-3x-2}{2x^2-5x+2} is",
     "options": [
-      "\\\\frac{1}{3}",
+      "\\frac{1}{3}",
       "3",
-      "\\\\frac{1}{5}",
-      "\\\\frac{1}{2}"
+      "\\frac{1}{5}",
+      "\\frac{1}{2}"
     ],
     "correctAnswer": "3",
     "topic": "Mathematics"
   },
   {
     "id": 7225444828,
-    "question": "If 2x^2 - 3xy + 4y^2 = 1 then \\\\frac{dy}{dx} =",
+    "question": "If 2x^2 - 3xy + 4y^2 = 1 then \\frac{dy}{dx} =",
     "options": [
-      "\\\\frac{4x-3y}{3x-8y}",
-      "\\\\frac{4x-7y}{3x-8y}",
-      "\\\\frac{4x-3y}{3x+8y}",
-      "\\\\frac{4x-3y}{3x-18y}"
+      "\\frac{4x-3y}{3x-8y}",
+      "\\frac{4x-7y}{3x-8y}",
+      "\\frac{4x-3y}{3x+8y}",
+      "\\frac{4x-3y}{3x-18y}"
     ],
-    "correctAnswer": "\\\\frac{4x-3y}{3x-8y}",
+    "correctAnswer": "\\frac{4x-3y}{3x-8y}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444829,
-    "question": "If x = a\\\\sin^2(t) and y = a\\\\cos^2(t) then \\\\frac{dy}{dx} =",
+    "question": "If x = a\\sin^2(t) and y = a\\cos^2(t) then \\frac{dy}{dx} =",
     "options": [
       "-2",
-      "\\\\tan(t)",
-      "\\\\sin(t)",
+      "\\tan(t)",
+      "\\sin(t)",
       "-1"
     ],
     "correctAnswer": "-1",
@@ -349,7 +350,7 @@
   },
   {
     "id": 7225444831,
-    "question": "The equation of the normal to the curve y^2 = \\\\frac{x^3}{2a-x} at the point (a, a) is",
+    "question": "The equation of the normal to the curve y^2 = \\frac{x^3}{2a-x} at the point (a, a) is",
     "options": [
       "x + 2y = 3a",
       "x - 2y = 4a",
@@ -363,53 +364,53 @@
     "id": 7225444832,
     "question": "The angle between the curves xy = 2 and y^2 = 4x is",
     "options": [
-      "-\\\\tan^{-1}(3)",
-      "\\\\tan^{-1}(3)",
-      "\\\\sin^{-1}(3)",
-      "\\\\cos^{-1}(3)"
+      "-\\tan^{-1}(3)",
+      "\\tan^{-1}(3)",
+      "\\sin^{-1}(3)",
+      "\\cos^{-1}(3)"
     ],
-    "correctAnswer": "\\\\tan^{-1}(3)",
+    "correctAnswer": "\\tan^{-1}(3)",
     "topic": "Mathematics"
   },
   {
     "id": 7225444833,
     "question": "The maximum value of xe^{-x} is",
     "options": [
-      "\\\\frac{1}{e}",
-      "-\\\\frac{1}{e}",
+      "\\frac{1}{e}",
+      "-\\frac{1}{e}",
       "2e",
       "e"
     ],
-    "correctAnswer": "\\\\frac{1}{e}",
+    "correctAnswer": "\\frac{1}{e}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444834,
     "question": "The height of the right circular cylinder of greatest volume which is inscribed in a sphere of radius a is",
     "options": [
-      "-\\\\frac{2a}{7}",
-      "\\\\frac{a}{2}",
-      "\\\\frac{2a}{\\\\sqrt{3}}",
-      "\\\\frac{1}{2}"
+      "-\\frac{2a}{7}",
+      "\\frac{a}{2}",
+      "\\frac{2a}{\\sqrt{3}}",
+      "\\frac{1}{2}"
     ],
-    "correctAnswer": "\\\\frac{2a}{\\\\sqrt{3}}",
+    "correctAnswer": "\\frac{2a}{\\sqrt{3}}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444835,
-    "question": "The volume of a spherical ball is increasing at the rate of 4\\\\pi cc/s. then the rate of increase of the radius, when the volume is 288\\\\pi cc is",
+    "question": "The volume of a spherical ball is increasing at the rate of 4\\pi cc/s. then the rate of increase of the radius, when the volume is 288\\pi cc is",
     "options": [
       "36 cm/sec",
       "6 cm/sec",
-      "\\\\frac{1}{36} cm/sec",
-      "\\\\frac{1}{6} cm/sec"
+      "\\frac{1}{36} cm/sec",
+      "\\frac{1}{6} cm/sec"
     ],
-    "correctAnswer": "\\\\frac{1}{36} cm/sec",
+    "correctAnswer": "\\frac{1}{36} cm/sec",
     "topic": "Mathematics"
   },
   {
     "id": 7225444836,
-    "question": "If z = e^{ax+by} f(ax - by) then b\\\\frac{\\\\partial z}{\\\\partial x} + a\\\\frac{\\\\partial z}{\\\\partial y} =",
+    "question": "If z = e^{ax+by} f(ax - by) then b\\frac{\\partial z}{\\partial x} + a\\frac{\\partial z}{\\partial y} =",
     "options": [
       "-2abz",
       "3abz",
@@ -421,48 +422,48 @@
   },
   {
     "id": 7225444837,
-    "question": "The value of \\\\int \\\\frac{e^x - e^{-x}}{e^x + e^{-x}} dx is",
+    "question": "The value of \\int \\frac{e^x - e^{-x}}{e^x + e^{-x}} dx is",
     "options": [
-      "\\\\log(e^{2x} - 1) - x + c",
-      "-\\\\log(e^{2x} + 1) - x + c",
-      "\\\\log(e^{2x} + 7) - x + c",
-      "\\\\log(e^{2x} + 1) - x + c"
+      "\\log(e^{2x} - 1) - x + c",
+      "-\\log(e^{2x} + 1) - x + c",
+      "\\log(e^{2x} + 7) - x + c",
+      "\\log(e^{2x} + 1) - x + c"
     ],
-    "correctAnswer": "\\\\log(e^{2x} + 1) - x + c",
+    "correctAnswer": "\\log(e^{2x} + 1) - x + c",
     "topic": "Mathematics"
   },
   {
     "id": 7225444838,
-    "question": "The value of \\\\int \\\\frac{dx}{\\\\sqrt{4x^2 - 4x + 2}} is",
+    "question": "The value of \\int \\frac{dx}{\\sqrt{4x^2 - 4x + 2}} is",
     "options": [
-      "-\\\\frac{1}{2}\\\\sinh^{-1}(x-1) + c",
-      "\\\\frac{1}{2}\\\\sinh^{-1}(2x+1) + c",
-      "\\\\frac{1}{2}\\\\sinh^{-1}(2x-1) + c",
-      "\\\\frac{1}{2}\\\\sinh^{-1}(3x-1) + c"
+      "-\\frac{1}{2}\\sinh^{-1}(x-1) + c",
+      "\\frac{1}{2}\\sinh^{-1}(2x+1) + c",
+      "\\frac{1}{2}\\sinh^{-1}(2x-1) + c",
+      "\\frac{1}{2}\\sinh^{-1}(3x-1) + c"
     ],
-    "correctAnswer": "\\\\frac{1}{2}\\\\sinh^{-1}(2x-1) + c",
+    "correctAnswer": "\\frac{1}{2}\\sinh^{-1}(2x-1) + c",
     "topic": "Mathematics"
   },
   {
     "id": 7225444839,
-    "question": "The value of \\\\int \\\\log(x) dx is",
+    "question": "The value of \\int \\log(x) dx is",
     "options": [
-      "\\\\log(x) - x + c",
-      "x\\\\log(x) - x + c",
-      "2x\\\\log(x) + x + c",
-      "-x\\\\log(x) + x + c"
+      "\\log(x) - x + c",
+      "x\\log(x) - x + c",
+      "2x\\log(x) + x + c",
+      "-x\\log(x) + x + c"
     ],
-    "correctAnswer": "x\\\\log(x) - x + c",
+    "correctAnswer": "x\\log(x) - x + c",
     "topic": "Mathematics"
   },
   {
     "id": 7225444840,
-    "question": "The value of \\\\int_{0}^{\\\\frac{\\\\pi}{4}} \\\\sqrt{1+\\\\sin(2x)} dx is",
+    "question": "The value of \\int_{0}^{\\frac{\\pi}{4}} \\sqrt{1+\\sin(2x)} dx is",
     "options": [
       "1",
       "2",
       "-1",
-      "\\\\pi"
+      "\\pi"
     ],
     "correctAnswer": "1",
     "topic": "Mathematics"
@@ -471,41 +472,41 @@
     "id": 7225444841,
     "question": "The area enclosed between the curves y^2 = 4x and x^2 = 4y is",
     "options": [
-      "\\\\frac{16}{3} square units",
-      "\\\\frac{5}{2} square units",
-      "\\\\frac{3}{2} square units",
-      "\\\\frac{9}{2} square units"
+      "\\frac{16}{3} square units",
+      "\\frac{5}{2} square units",
+      "\\frac{3}{2} square units",
+      "\\frac{9}{2} square units"
     ],
-    "correctAnswer": "\\\\frac{16}{3} square units",
+    "correctAnswer": "\\frac{16}{3} square units",
     "topic": "Mathematics"
   },
   {
     "id": 7225444842,
-    "question": "The mean value of \\\\frac{1}{4+x^2} on [-2,2] is",
+    "question": "The mean value of \\frac{1}{4+x^2} on [-2,2] is",
     "options": [
-      "\\\\frac{\\\\pi}{12}",
-      "\\\\frac{\\\\pi}{2}",
-      "\\\\frac{\\\\pi}{8}",
-      "\\\\frac{\\\\pi}{4}"
+      "\\frac{\\pi}{12}",
+      "\\frac{\\pi}{2}",
+      "\\frac{\\pi}{8}",
+      "\\frac{\\pi}{4}"
     ],
-    "correctAnswer": "\\\\frac{\\\\pi}{4}",
+    "correctAnswer": "\\frac{\\pi}{4}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444843,
-    "question": "The value of \\\\int \\\\frac{dx}{1+4x^2} on R is",
+    "question": "The value of \\int \\frac{dx}{1+4x^2} on R is",
     "options": [
-      "-\\\\frac{1}{2}\\\\tan^{-1}(2x) + c",
-      "\\\\frac{1}{2}\\\\tan^{-1}(5x) + c",
-      "-\\\\frac{1}{2}\\\\tan^{-1}(x) + c",
-      "\\\\frac{1}{2}\\\\tan^{-1}(2x) + c"
+      "-\\frac{1}{2}\\tan^{-1}(2x) + c",
+      "\\frac{1}{2}\\tan^{-1}(5x) + c",
+      "-\\frac{1}{2}\\tan^{-1}(x) + c",
+      "\\frac{1}{2}\\tan^{-1}(2x) + c"
     ],
-    "correctAnswer": "\\\\frac{1}{2}\\\\tan^{-1}(2x) + c",
+    "correctAnswer": "\\frac{1}{2}\\tan^{-1}(2x) + c",
     "topic": "Mathematics"
   },
   {
     "id": 7225444844,
-    "question": "The value of \\\\int_{0}^{1} \\\\frac{x \\\\sin^{-1}(x)}{\\\\sqrt{1-x^2}} dx is",
+    "question": "The value of \\int_{0}^{1} \\frac{x \\sin^{-1}(x)}{\\sqrt{1-x^2}} dx is",
     "options": [
       "-1",
       "0",
@@ -517,7 +518,7 @@
   },
   {
     "id": 7225444845,
-    "question": "The order and degree of the differential equation (\\\\frac{d^2y}{dx^2})^2 + 3(\\\\frac{dy}{dx}) + 2 = 0 is",
+    "question": "The order and degree of the differential equation (\\frac{d^2y}{dx^2})^2 + 3(\\frac{dy}{dx}) + 2 = 0 is",
     "options": [
       "Order=2, degree=2",
       "Order=2, degree=1",
@@ -529,62 +530,62 @@
   },
   {
     "id": 7225444846,
-    "question": "The general solution of the differential equation \\\\frac{dy}{dx} + y\\\\cot(x) = 4x\\\\csc(x) is",
+    "question": "The general solution of the differential equation \\frac{dy}{dx} + y\\cot(x) = 4x\\csc(x) is",
     "options": [
-      "y\\\\cos(x) = 2x^2+c",
-      "y\\\\sin(x) = 2x^2+c",
-      "y\\\\sin(x) = -2x^2+c",
-      "y\\\\sin(x) = 3x^2+c"
+      "y\\cos(x) = 2x^2+c",
+      "y\\sin(x) = 2x^2+c",
+      "y\\sin(x) = -2x^2+c",
+      "y\\sin(x) = 3x^2+c"
     ],
-    "correctAnswer": "y\\\\sin(x) = 2x^2+c",
+    "correctAnswer": "y\\sin(x) = 2x^2+c",
     "topic": "Mathematics"
   },
   {
     "id": 7225444847,
-    "question": "The general solution of the linear differential equation \\\\frac{dy}{dx} - \\\\frac{y}{x+1} = e^{3x}(x+1) is",
+    "question": "The general solution of the linear differential equation \\frac{dy}{dx} - \\frac{y}{x+1} = e^{3x}(x+1) is",
     "options": [
-      "\\\\frac{y}{\\\\sin(x)} = -\\\\frac{e^{4x}}{4} + c",
-      "\\\\frac{y}{x+1} = \\\\frac{e^{3x}}{3} + c",
-      "ye^{3x}x = -\\\\frac{\\\\cos(2x)}{4} + ce^{3x}",
-      "y\\\\sin(x) = \\\\frac{e^{3x}}{4} + c"
+      "\\frac{y}{\\sin(x)} = -\\frac{e^{4x}}{4} + c",
+      "\\frac{y}{x+1} = \\frac{e^{3x}}{3} + c",
+      "ye^{3x}x = -\\frac{\\cos(2x)}{4} + ce^{3x}",
+      "y\\sin(x) = \\frac{e^{3x}}{4} + c"
     ],
-    "correctAnswer": "\\\\frac{y}{x+1} = \\\\frac{e^{3x}}{3} + c",
+    "correctAnswer": "\\frac{y}{x+1} = \\frac{e^{3x}}{3} + c",
     "topic": "Mathematics"
   },
   {
     "id": 7225444848,
-    "question": "The particular integral of the differential equation \\\\frac{d^2y}{dx^2} + 3\\\\frac{dy}{dx} + 2y = e^x is",
+    "question": "The particular integral of the differential equation \\frac{d^2y}{dx^2} + 3\\frac{dy}{dx} + 2y = e^x is",
     "options": [
-      "\\\\frac{e^x}{6}",
-      "\\\\frac{e^x}{16}",
-      "\\\\frac{e^x}{9}",
-      "\\\\frac{e^x}{6}"
+      "\\frac{e^x}{6}",
+      "\\frac{e^x}{16}",
+      "\\frac{e^x}{9}",
+      "\\frac{e^x}{6}"
     ],
-    "correctAnswer": "\\\\frac{e^x}{6}",
+    "correctAnswer": "\\frac{e^x}{6}",
     "topic": "Mathematics"
   },
   {
     "id": 7225444849,
-    "question": "The particular integral for the differential equation (D^2 + 4D + 3)y = \\\\sin(3x) is",
+    "question": "The particular integral for the differential equation (D^2 + 4D + 3)y = \\sin(3x) is",
     "options": [
-      "\\\\sin(x) + 3\\\\cos(2x)",
-      "\\\\cos(3x) - 2\\\\sin(4x)",
-      "\\\\frac{2}{30}(2\\\\cos(2x) + \\\\sin(x))",
-      "-\\\\frac{1}{30}(2\\\\cos(3x) + \\\\sin(3x))"
+      "\\sin(x) + 3\\cos(2x)",
+      "\\cos(3x) - 2\\sin(4x)",
+      "\\frac{2}{30}(2\\cos(2x) + \\sin(x))",
+      "-\\frac{1}{30}(2\\cos(3x) + \\sin(3x))"
     ],
-    "correctAnswer": "-\\\\frac{1}{30}(2\\\\cos(3x) + \\\\sin(3x))",
+    "correctAnswer": "-\\frac{1}{30}(2\\cos(3x) + \\sin(3x))",
     "topic": "Mathematics"
   },
   {
     "id": 7225444850,
-    "question": "The general solution of the differential equation \\\\frac{dy}{dx} + \\\\frac{y}{x} = y^2x is",
+    "question": "The general solution of the differential equation \\frac{dy}{dx} + \\frac{y}{x} = y^2x is",
     "options": [
-      "\\\\frac{1}{xy} = -x + c",
-      "-\\\\frac{1}{xy} = -x + c",
-      "\\\\frac{2}{xy} = x + c",
-      "\\\\frac{1}{y} = -x + c"
+      "\\frac{1}{xy} = -x + c",
+      "-\\frac{1}{xy} = -x + c",
+      "\\frac{2}{xy} = x + c",
+      "\\frac{1}{y} = -x + c"
     ],
-    "correctAnswer": "\\\\frac{1}{xy} = -x + c",
+    "correctAnswer": "\\frac{1}{xy} = -x + c",
     "topic": "Mathematics"
   },
   {
@@ -625,7 +626,7 @@
   },
   {
     "id": 7225444854,
-    "question": "Vector A extends from the origin to a point having polar coordinates (7, 70°) and vector B extends from the origin to a point having polar coordinates (4, 130°). Find A \\\\cdot B",
+    "question": "Vector A extends from the origin to a point having polar coordinates (7, 70°) and vector B extends from the origin to a point having polar coordinates (4, 130°). Find A \\cdot B",
     "options": [
       "28",
       "14",
@@ -637,7 +638,7 @@
   },
   {
     "id": 7225444855,
-    "question": "If two vectors 2\\\\hat{i} + 3\\\\hat{j} – \\\\hat{k} and –4\\\\hat{i} – 6\\\\hat{j} – \\\\lambda\\\\hat{k} are parallel to each other then value of \\\\lambda be",
+    "question": "If two vectors 2\\hat{i} + 3\\hat{j} – \\hat{k} and –4\\hat{i} – 6\\hat{j} – \\lambda\\hat{k} are parallel to each other then value of \\lambda be",
     "options": [
       "2",
       "4",
@@ -651,24 +652,24 @@
     "id": 7225444856,
     "question": "The coefficient of static friction between contact surfaces of two bodies is 1. The contact surface of one body supports the other till the inclination is less than",
     "options": [
-      "30^{\\\\circ}",
-      "45^{\\\\circ}",
-      "60^{\\\\circ}",
-      "90^{\\\\circ}"
+      "30^{\\circ}",
+      "45^{\\circ}",
+      "60^{\\circ}",
+      "90^{\\circ}"
     ],
-    "correctAnswer": "45^{\\\\circ}",
+    "correctAnswer": "45^{\\circ}",
     "topic": "Physics"
   },
   {
     "id": 7225444857,
     "question": "A smooth block is released from rest on a 45° inclined plane and it slides a distance 'd'. The time taken to slide is 'n' times that on a smooth inclined plane. The coefficient of friction is",
     "options": [
-      "\\\\mu_{k} = 1 - \\\\frac{1}{n^2}",
-      "\\\\mu_{k} = \\\\sqrt{1 - \\\\frac{1}{n^2}}",
-      "\\\\mu_{k} = \\\\frac{1}{1-n^2}",
-      "\\\\mu_{k} = \\\\sqrt{\\\\frac{1}{1-n^2}}"
+      "\\mu_{k} = 1 - \\frac{1}{n^2}",
+      "\\mu_{k} = \\sqrt{1 - \\frac{1}{n^2}}",
+      "\\frac{1}{1-n^2}",
+      "\\mu_{k} = \\sqrt{\\frac{1}{1-n^2}}"
     ],
-    "correctAnswer": "\\\\mu_{k} = 1 - \\\\frac{1}{n^2}",
+    "correctAnswer": "\\mu_{k} = 1 - \\frac{1}{n^2}",
     "topic": "Physics"
   },
   {
@@ -687,17 +688,17 @@
     "id": 7225444859,
     "question": "A bullet fired from a gun falls at a distance half of its maximum range. The angle of projection of the bullet is",
     "options": [
-      "45^{\\\\circ}",
-      "60^{\\\\circ}",
-      "30^{\\\\circ}",
-      "15^{\\\\circ}"
+      "45^{\\circ}",
+      "60^{\\circ}",
+      "30^{\\circ}",
+      "15^{\\circ}"
     ],
-    "correctAnswer": "15^{\\\\circ}",
+    "correctAnswer": "15^{\\circ}",
     "topic": "Physics"
   },
   {
     "id": 7225444860,
-    "question": "A body is thrown vertically upwards with a velocity. Select the incorrect statements from the following\\\\nI. Both velocity and acceleration are zero at its highest point.\\\\nII. Velocity is maximum and acceleration is zero at the highest point\\\\nIII. Velocity is maximum and acceleration is 'g' downwards at its highest point",
+    "question": "A body is thrown vertically upwards with a velocity. Select the incorrect statements from the following\\nI. Both velocity and acceleration are zero at its highest point.\\nII. Velocity is maximum and acceleration is zero at the highest point\\nIII. Velocity is maximum and acceleration is 'g' downwards at its highest point",
     "options": [
       "I, II and III",
       "II and III",
@@ -735,10 +736,10 @@
     "id": 7225444863,
     "question": "When a long spring is stretched by x cm, its potential energy is U. If the spring is stretched by Nx cm, the potential energy stored in it will be",
     "options": [
-      "\\\\frac{U}{N}",
+      "\\frac{U}{N}",
       "NU",
       "N^2U",
-      "\\\\frac{U}{N^2}"
+      "\\frac{U}{N^2}"
     ],
     "correctAnswer": "N^2U",
     "topic": "Physics"
@@ -783,20 +784,20 @@
     "id": 7225444867,
     "question": "A simple pendulum has a time period T in vacuum. Its time period when it is completely immersed in a liquid of density one-eighth of the density of material of the bob is",
     "options": [
-      "\\\\sqrt{\\\\frac{7}{8}}T",
-      "\\\\sqrt{\\\\frac{5}{8}}T",
-      "\\\\sqrt{\\\\frac{3}{8}}T",
-      "\\\\sqrt{\\\\frac{8}{7}}T"
+      "\\sqrt{\\frac{7}{8}}T",
+      "\\sqrt{\\frac{5}{8}}T",
+      "\\sqrt{\\frac{3}{8}}T",
+      "\\sqrt{\\frac{8}{7}}T"
     ],
-    "correctAnswer": "\\\\sqrt{\\\\frac{8}{7}}T",
+    "correctAnswer": "\\sqrt{\\frac{8}{7}}T",
     "topic": "Physics"
   },
   {
     "id": 7225444868,
-    "question": "A particle executes simple harmonic motion represented by displacement function as x(t) = A\\\\sin(\\\\omega t + \\\\phi). If the position and velocity of the particle at t = 0 s are 2 cm and 2\\\\omega cm s^{-1} respectively, then its amplitude is x\\\\sqrt{2} cm where the value of x is",
+    "question": "A particle executes simple harmonic motion represented by displacement function as x(t) = A\\sin(\\omega t + \\phi). If the position and velocity of the particle at t = 0 s are 2 cm and 2\\omega cm s^{-1} respectively, then its amplitude is x\\sqrt{2} cm where the value of x is",
     "options": [
       "2",
-      "2\\\\sqrt{2}",
+      "2\\sqrt{2}",
       "4",
       "1"
     ],
@@ -855,24 +856,24 @@
     "id": 7225444873,
     "question": "For an adiabatic expansion of an ideal gas, the fractional change in its pressure is equal to (where y is the ratio of specific heats):",
     "options": [
-      "-\\\\gamma(\\\\frac{V}{dV})",
-      "-\\\\gamma(\\\\frac{dV}{V})",
-      "-\\\\frac{1}{\\\\gamma}(\\\\frac{V}{dV})",
-      "-\\\\frac{1}{\\\\gamma}(\\\\frac{dV}{V})"
+      "-\\gamma(\\frac{V}{dV})",
+      "-\\gamma(\\frac{dV}{V})",
+      "-\\frac{1}{\\gamma}(\\frac{V}{dV})",
+      "-\\frac{1}{\\gamma}(\\frac{dV}{V})"
     ],
-    "correctAnswer": "-\\\\gamma(\\\\frac{dV}{V})",
+    "correctAnswer": "-\\gamma(\\frac{dV}{V})",
     "topic": "Physics"
   },
   {
     "id": 7225444874,
     "question": "Which of the following processes must violate the first law of thermodynamics?",
     "options": [
-      "W > 0, Q > 0, and \\\\Delta E_{int} < 0",
-      "W > 0, Q < 0, and \\\\Delta E_{int} > 0",
-      "W < 0, Q > 0, and \\\\Delta E_{int} < 0",
-      "W > 0, Q < 0, and \\\\Delta E_{int} = 0"
+      "W > 0, Q > 0, and \\Delta E_{int} < 0",
+      "W > 0, Q < 0, and \\Delta E_{int} > 0",
+      "W < 0, Q > 0, and \\Delta E_{int} < 0",
+      "W > 0, Q < 0, and \\Delta E_{int} = 0"
     ],
-    "correctAnswer": "W > 0, Q > 0, and \\\\Delta E_{int} < 0",
+    "correctAnswer": "W > 0, Q > 0, and \\Delta E_{int} < 0",
     "topic": "Physics"
   },
   {
@@ -891,12 +892,12 @@
     "id": 7225444876,
     "question": "Photon of frequency (f) has a momentum (p) associated with it. If c is the velocity of light, the momentum is",
     "options": [
-      "\\\\frac{hf}{c}",
-      "\\\\frac{f}{c}",
+      "\\frac{hf}{c}",
+      "\\frac{f}{c}",
       "hfc",
-      "\\\\frac{hf}{c^2}"
+      "\\frac{hf}{c^2}"
     ],
-    "correctAnswer": "\\\\frac{hf}{c}",
+    "correctAnswer": "\\frac{hf}{c}",
     "topic": "Physics"
   },
   {
@@ -913,7 +914,7 @@
   },
   {
     "id": 7225444878,
-    "question": "What is the correct orbital designation of an electron with the quantum number, n=4, l=3, m=2, s=\\\\frac{1}{2}?",
+    "question": "What is the correct orbital designation of an electron with the quantum number, n=4, l=3, m=2, s=\\frac{1}{2}?",
     "options": [
       "3d",
       "4f",
@@ -1239,12 +1240,12 @@
     "id": 7225444905,
     "question": "DeMorgan's theorem states that",
     "options": [
-      "\\\\overline{A + B} = \\\\overline{A} \\\\cdot \\\\overline{B} and \\\\overline{A \\\\cdot B} = \\\\overline{A} \\\\cdot \\\\overline{B}",
-      "\\\\overline{A + B} = \\\\overline{A} + \\\\overline{B} and \\\\overline{A \\\\cdot B} = \\\\overline{A} \\\\cdot \\\\overline{B}",
-      "\\\\overline{A + B} = \\\\overline{A} \\\\cdot \\\\overline{B} and \\\\overline{A \\\\cdot B} = \\\\overline{A} + \\\\overline{B}",
-      "\\\\overline{A + B} = \\\\overline{A} + \\\\overline{B} and \\\\overline{A \\\\cdot B} = \\\\overline{A} + \\\\overline{B}"
+      "\\overline{A + B} = \\overline{A} \\cdot \\overline{B} and \\overline{A \\cdot B} = \\overline{A} \\cdot \\overline{B}",
+      "\\overline{A + B} = \\overline{A} + \\overline{B} and \\overline{A \\cdot B} = \\overline{A} \\cdot \\overline{B}",
+      "\\overline{A + B} = \\overline{A} \\cdot \\overline{B} and \\overline{A \\cdot B} = \\overline{A} + \\overline{B}",
+      "\\overline{A + B} = \\overline{A} + \\overline{B} and \\overline{A \\cdot B} = \\overline{A} + \\overline{B}"
     ],
-    "correctAnswer": "\\\\overline{A + B} = \\\\overline{A} \\\\cdot \\\\overline{B} and \\\\overline{A \\\\cdot B} = \\\\overline{A} + \\\\overline{B}",
+    "correctAnswer": "\\overline{A + B} = \\overline{A} \\cdot \\overline{B} and \\overline{A \\cdot B} = \\overline{A} + \\overline{B}",
     "topic": "Computer Science and Engineering"
   },
   {
@@ -1537,7 +1538,7 @@
   },
   {
     "id": 7225444930,
-    "question": "What is the output of the C program?\\\\n#include<stdio.h>\\\\nint main()\\\\n{\\\\nprintf(“main”);\\\\nmain();\\\\nreturn 0;\\\\n}",
+    "question": "What is the output of the C program?\\n#include<stdio.h>\\nint main()\\n{\\nprintf(“main”);\\nmain();\\nreturn 0;\\n}",
     "options": [
       "Compiler error",
       "main",
@@ -1549,7 +1550,7 @@
   },
   {
     "id": 7225444931,
-    "question": "What is the output of the C program?\\\\n#include<stdio.h>\\\\nint main()\\\\n{\\\\nint v=5;\\\\nv = !v>6;\\\\nprintf(“%d”,v);\\\\n}",
+    "question": "What is the output of the C program?\\n#include<stdio.h>\\nint main()\\n{\\nint v=5;\\nv = !v>6;\\nprintf(“%d”,v);\\n}",
     "options": [
       "0",
       "1",
@@ -1698,7 +1699,7 @@
       "n",
       "n - 1",
       "n(n - 1)",
-      "\\\\frac{n(n - 1)}{2}"
+      "\\frac{n(n - 1)}{2}"
     ],
     "correctAnswer": "n(n - 1)",
     "topic": "Computer Science and Engineering"
@@ -1717,7 +1718,7 @@
   },
   {
     "id": 7225444945,
-    "question": "Two hosts are 10,000 km apart and they are connected by single direct link of bandwidth 10^{6} bits per second. What is the propagation time if the propagation speed along the link is 2 \\\\times 10^{8} m/sec?",
+    "question": "Two hosts are 10,000 km apart and they are connected by single direct link of bandwidth 10^{6} bits per second. What is the propagation time if the propagation speed along the link is 2 \\times 10^{8} m/sec?",
     "options": [
       "50 milli sec",
       "100 milli sec",
@@ -1765,7 +1766,7 @@
   },
   {
     "id": 7225444949,
-    "question": "Consider the below 4 actions in a network. What is the order in which these actions should be executed for communication between a web browser and a web server?\\\\n1. The web browser requests a webpage using HTTP.\\\\n2. The web browser establishes a TCP connection with the web server.\\\\n3. The web server sends the requested webpage using HTTP.\\\\n4. The web browser resolves the domain name using DNS.",
+    "question": "Consider the below 4 actions in a network. What is the order in which these actions should be executed for communication between a web browser and a web server?\\n1. The web browser requests a webpage using HTTP.\\n2. The web browser establishes a TCP connection with the web server.\\n3. The web server sends the requested webpage using HTTP.\\n4. The web browser resolves the domain name using DNS.",
     "options": [
       "4,2,1,3",
       "1,2,3,4",
@@ -1825,7 +1826,7 @@
   },
   {
     "id": 7225444954,
-    "question": "Consider the 3 processes shown in the table:\\\\nProcess | Arrival time | Time units required\\\\nP1 | 0 | 5\\\\nP2 | 1 | 7\\\\nP3 | 5 | 4\\\\nThe completion order of the 3 processes under the policies FCFS and Round Robin scheduling with CPU quantum of 2 time units is---------",
+    "question": "Consider the 3 processes shown in the table:\\nProcess | Arrival time | Time units required\\nP1 | 0 | 5\\nP2 | 1 | 7\\nP3 | 5 | 4\\nThe completion order of the 3 processes under the policies FCFS and Round Robin scheduling with CPU quantum of 2 time units is---------",
     "options": [
       "FCFS: P1,P2,P3 RR: P1,P2,P3",
       "FCFS: P1,P2,P3 RR: P1,P3,P2",
@@ -1921,7 +1922,7 @@
   },
   {
     "id": 7225444962,
-    "question": "Given a relation as shown in the Table1. If {Name,Age} has to be the key for this table, what value should not be used in place of X ?. Table 1 Student Table\\\\nRoll no | Name | Email | Age | GPA\\\\n401 | Ram | Ram@gmail.com | X | 7.9\\\\n402 | Gopi | Gopi@gmail.com | 19 | 8.2\\\\n403 | Ram | RamCSE@gmail.com | 20 | 6.5\\\\n404 | Gopi | GopiCSE@gmail.com | 18 | 7.6\\\\n405 | Ramani | Ramani@gmail.com | 21 | 8.9",
+    "question": "Given a relation as shown in the Table1. If {Name,Age} has to be the key for this table, what value should not be used in place of X ?. Table 1 Student Table\\nRoll no | Name | Email | Age | GPA\\n401 | Ram | Ram@gmail.com | X | 7.9\\n402 | Gopi | Gopi@gmail.com | 19 | 8.2\\n403 | Ram | RamCSE@gmail.com | 20 | 6.5\\n404 | Gopi | GopiCSE@gmail.com | 18 | 7.6\\n405 | Ramani | Ramani@gmail.com | 21 | 8.9",
     "options": [
       "18",
       "19",
@@ -1933,14 +1934,14 @@
   },
   {
     "id": 7225444963,
-    "question": "Consider a relation R(A, B, C, D, E, F) with the Functional Dependencies F = {{A, C} \\\\to {D, E}, {A, D, F} \\\\to {B, C}}. Which among the following is a trivial FD from F^{+} which is the closure of F.",
+    "question": "Consider a relation R(A, B, C, D, E, F) with the Functional Dependencies F = {{A, C} \\to {D, E}, {A, D, F} \\to {B, C}}. Which among the following is a trivial FD from F^{+} which is the closure of F.",
     "options": [
-      "{A, C} \\\\to {D, E}",
-      "{A, C} \\\\to {C, E}",
-      "{A, D} \\\\to {D}",
-      "{A, D, F} \\\\to {B}"
+      "{A, C} \\to {D, E}",
+      "{A, C} \\to {C, E}",
+      "{A, D} \\to {D}",
+      "{A, D, F} \\to {B}"
     ],
-    "correctAnswer": "{A, D} \\\\to {D}",
+    "correctAnswer": "{A, D} \\to {D}",
     "topic": "Computer Science and Engineering"
   },
   {
@@ -2065,7 +2066,7 @@
   },
   {
     "id": 7225444974,
-    "question": "Which of the following feature of OOPs is not used in the following C++ code?\\\\ncode?\\\\nclass A{\\\\nint i;\\\\npublic:\\\\nvoid print() {cout<< “hello” << i;}\\\\n}\\\\nclass B : public A{\\\\nint j;\\\\npublic:\\\\nvoid assign (int a) {j = a;}\\\\n}",
+    "question": "Which of the following feature of OOPs is not used in the following C++ code?\\ncode?\\nclass A{\\nint i;\\npublic:\\nvoid print() {cout<< “hello” << i;}\\n}\\nclass B : public A{\\nint j;\\npublic:\\nvoid assign (int a) {j = a;}\\n}",
     "options": [
       "Abstraction",
       "Encapsulation",
@@ -2101,7 +2102,7 @@
   },
   {
     "id": 7225444977,
-    "question": "What is the output of the code below?\\\\n#include<iostream>\\\\nusing namespace std;\\\\nclass Point {\\\\nprivate:\\\\nint x, y;\\\\npublic:\\\\nPoint(int i, int j); // Constructor\\\\n};\\\\nPoint::Point(int i = 0, int j = 0) {\\\\nx = i;\\\\ny = j;\\\\ncout<< “Constructor called”;\\\\n}\\\\nint main()\\\\n{\\\\nPoint t1, *t2;\\\\nreturn 0;\\\\n}",
+    "question": "What is the output of the code below?\\n#include<iostream>\\nusing namespace std;\\nclass Point {\\nprivate:\\nint x, y;\\npublic:\\nPoint(int i, int j); // Constructor\\n};\\nPoint::Point(int i = 0, int j = 0) {\\nx = i;\\ny = j;\\ncout<< “Constructor called”;\\n}\\nint main()\\n{\\nPoint t1, *t2;\\nreturn 0;\\n}",
     "options": [
       "Constructor called Constructor called",
       "Constructor called",
@@ -2161,7 +2162,7 @@
   },
   {
     "id": 7225444982,
-    "question": "What is the output of the following code?\\\\npublic class Solution{\\\\npublic static void main(String[] args){\\\\nbyte x = 127;\\\\nx++;\\\\nx++;\\\\nSystem.out.print(x);\\\\n}\\\\n}",
+    "question": "What is the output of the following code?\\npublic class Solution{\\npublic static void main(String[] args){\\nbyte x = 127;\\nx++;\\nx++;\\nSystem.out.print(x);\\n}\\n}",
     "options": [
       "-127",
       "2",
@@ -2197,7 +2198,7 @@
   },
   {
     "id": 7225444985,
-    "question": "What is the output of the following code?\\\\npublic class Solution{\\\\npublic static void main(String[] args){\\\\nshort x = 10;\\\\nx = x * 5;\\\\nSystem.out.print(x);\\\\n}\\\\n}",
+    "question": "What is the output of the following code?\\npublic class Solution{\\npublic static void main(String[] args){\\nshort x = 10;\\nx = x * 5;\\nSystem.out.print(x);\\n}\\n}",
     "options": [
       "50",
       "0",
@@ -2221,7 +2222,7 @@
   },
   {
     "id": 7225444987,
-    "question": "Identify what can directly access and change the value of the variable x.\\\\nPackage com.mypackage;\\\\nPublic class Solution{\\\\nPrivate int x = 100;\\\\n}",
+    "question": "Identify what can directly access and change the value of the variable x.\\nPackage com.mypackage;\\nPublic class Solution{\\nPrivate int x = 100;\\n}",
     "options": [
       "Any class",
       "Any child class of Solution class",
@@ -2245,7 +2246,7 @@
   },
   {
     "id": 7225444989,
-    "question": "Identify the output of the following program.\\\\nString str = “abcde”;\\\\nSystem.out.println(str.substring(1, 3));",
+    "question": "Identify the output of the following program.\\nString str = “abcde”;\\nSystem.out.println(str.substring(1, 3));",
     "options": [
       "bc",
       "abc",
@@ -2269,14 +2270,14 @@
   },
   {
     "id": 7225444991,
-    "question": "What is the output of the below code?\\\\npublic class ThreadTest extends Thread\\\\n{\\\\npublic void run()\\\\n{\\\\nSystem.out.println(\\\"In run\\\");\\\\nyield();\\\\nSystem.out.println(\\\"Leaving run\\\");\\\\n}\\\\npublic static void main(String []argv)\\\\n{\\\\n(new ThreadTest()).start();\\\\n}\\\\n}",
+    "question": "What is the output of the below code?\\npublic class ThreadTest extends Thread\\n{\\npublic void run()\\n{\\nSystem.out.println(\\\"In run\\\");\\nyield();\\nSystem.out.println(\\\"Leaving run\\\");\\n}\\npublic static void main(String []argv)\\n{\\n(new ThreadTest()).start();\\n}\\n}",
     "options": [
       "Compilation error in main()",
       "Compilation error in run()",
       "In run",
-      "In run\\\\nLeaving run"
+      "In run\\nLeaving run"
     ],
-    "correctAnswer": "In run\\\\nLeaving run",
+    "correctAnswer": "In run\\nLeaving run",
     "topic": "Computer Science and Engineering"
   },
   {
@@ -2329,7 +2330,7 @@
   },
   {
     "id": 7225444996,
-    "question": "What will be the output of the following PHP program?\\\\n<?php\\\\nfunction multi($num)\\\\n{\\\\nif ($num == 3)\\\\necho \\\"I Wonder\\\";\\\\nif ($num == 7)\\\\necho \\\"Which One\\\";\\\\nif ($num == 8)\\\\necho \\\"Is The\\\";\\\\nif ($num == 19)\\\\necho \\\"Correct Answer\\\";\\\\n}\\\\n$v = stripos(\\\"I love php, I love phptoo!\\\", \\\"PHP\\\");\\\\nmulti($v);\\\\n?>",
+    "question": "What will be the output of the following PHP program?\\n<?php\\nfunction multi($num)\\n{\\nif ($num == 3)\\necho \\\"I Wonder\\\";\\nif ($num == 7)\\necho \\\"Which One\\\";\\nif ($num == 8)\\necho \\\"Is The\\\";\\nif ($num == 19)\\necho \\\"Correct Answer\\\";\\n}\\n$v = stripos(\\\"I love php, I love phptoo!\\\", \\\"PHP\\\");\\nmulti($v);\\n?>",
     "options": [
       "I Wonder",
       "Which One",
@@ -2353,7 +2354,7 @@
   },
   {
     "id": 7225444998,
-    "question": "What will happen at the end of the following sequence of SQL commands?\\\\nBEGIN TRANSACTION\\\\nDELETE FROM MYTABLE WHERE ID=1\\\\nDELETE FROM OTHERTABLE\\\\nROLLBACK TRANSACTION",
+    "question": "What will happen at the end of the following sequence of SQL commands?\\nBEGIN TRANSACTION\\nDELETE FROM MYTABLE WHERE ID=1\\nDELETE FROM OTHERTABLE\\nROLLBACK TRANSACTION",
     "options": [
       "The contents of both OTHERTABLE and MYTABLE will be deleted",
       "The contents of OTHERTABLE will be deleted, as will be all the contents of MYTABLE whose ID is 1",
@@ -2365,7 +2366,7 @@
   },
   {
     "id": 7225444999,
-    "question": "What does the DESC keyword do in the following query?\\\\nSELECT *\\\\nFROM MY_TABLE\\\\nWHERE ID > 0\\\\nORDER BY ID, NAME DESC",
+    "question": "What does the DESC keyword do in the following query?\\nSELECT *\\nFROM MY_TABLE\\nWHERE ID > 0\\nORDER BY ID, NAME DESC",
     "options": [
       "It causes the dataset returned by the query to be sorted in descending order",
       "It causes rows with the same ID to be sorted by NAME in ascending order",
