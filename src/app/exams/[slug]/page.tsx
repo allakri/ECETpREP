@@ -1,7 +1,9 @@
+
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { ExamDetails } from "@/components/exam/ExamDetails";
 import { exams } from "@/lib/exams";
+import { notFound } from 'next/navigation';
 
 interface ExamDetailsPageProps {
   params: {
@@ -14,15 +16,7 @@ export default function ExamDetailsPage({ params }: ExamDetailsPageProps) {
   const exam = exams.find(e => e.slug === slug);
 
   if (!exam) {
-    return (
-      <div className="flex flex-col min-h-screen">
-        <AppHeader />
-        <main className="flex-grow flex items-center justify-center bg-background py-12">
-          <h1 className="text-2xl font-bold text-destructive">Exam not found!</h1>
-        </main>
-        <AppFooter />
-      </div>
-    );
+    return notFound();
   }
 
   return (

@@ -4,6 +4,7 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { CustomTestSelection } from "@/components/exam/CustomTestSelection";
 import { exams } from "@/lib/exams";
 import type { Exam } from "@/lib/exams";
+import { notFound } from "next/navigation";
 
 interface CustomTestPageProps {
   params: {
@@ -16,15 +17,7 @@ export default function CustomTestPage({ params }: CustomTestPageProps) {
   const exam = exams.find(e => e.slug === slug);
 
   if (!exam) {
-    return (
-      <div className="flex flex-col min-h-screen">
-        <AppHeader />
-        <main className="flex-grow flex items-center justify-center bg-secondary/30 py-12">
-          <h1 className="text-2xl font-bold text-destructive">Exam not found!</h1>
-        </main>
-        <AppFooter />
-      </div>
-    );
+    return notFound();
   }
   
   // Create a new object with only the properties needed by the client component.
