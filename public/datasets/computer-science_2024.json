@@ -1,38 +1,38 @@
 
 [
-    {
-      "id": 1,
-      "question": "Which data structure uses the Last-In, First-Out (LIFO) principle?",
-      "options": ["Queue", "Stack", "Linked List", "Tree"],
-      "correctAnswer": "Stack",
-      "topic": "Data Structures"
-    },
-    {
-      "id": 2,
-      "question": "What is the time complexity of a binary search algorithm?",
-      "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-      "correctAnswer": "O(log n)",
-      "topic": "Algorithms"
-    },
-    {
-        "id": 3,
-        "question": "In object-oriented programming, what is the process of hiding the internal details of an object and exposing only the necessary functionalities?",
-        "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
-        "correctAnswer": "Encapsulation",
-        "topic": "OOP"
-    },
-    {
-        "id": 4,
-        "question": "Which of the following is not a type of database model?",
-        "options": ["Relational", "Hierarchical", "Network", "Sequential"],
-        "correctAnswer": "Sequential",
-        "topic": "DBMS"
-    },
-    {
-        "id": 5,
-        "question": "What does SQL stand for?",
-        "options": ["Structured Query Language", "Simple Query Language", "Standard Query Language", "Stylish Question Language"],
-        "correctAnswer": "Structured Query Language",
-        "topic": "DBMS"
-    }
-  ]
+  {
+    "id": 1,
+    "question": "In a series RLC circuit, what is the condition for resonance?",
+    "options": ["$X_L > X_C$", "$X_L < X_C$", "$X_L = X_C$", "$R = 0$"],
+    "correctAnswer": "$X_L = X_C$",
+    "topic": "Electrical Circuits"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is a non-volatile memory?",
+    "options": ["DRAM", "SRAM", "ROM", "Cache Memory"],
+    "correctAnswer": "ROM",
+    "topic": "Computer Architecture"
+  },
+  {
+    "id": 3,
+    "question": "The rate of change of momentum is directly proportional to the:",
+    "options": ["Applied Force", "Velocity", "Mass", "Acceleration"],
+    "correctAnswer": "Applied Force",
+    "topic": "Physics"
+  },
+  {
+    "id": 4,
+    "question": "What is the integral of $\\frac{1}{x} dx$?",
+    "options": ["$x^2$", "$\\ln|x| + C$", "$\\frac{1}{x^2}$", "$e^x$"],
+    "correctAnswer": "$\\ln|x| + C$",
+    "topic": "Mathematics"
+  },
+  {
+    "id": 5,
+    "question": "Which data structure uses the Last-In, First-Out (LIFO) principle?",
+    "options": ["Queue", "Stack", "Linked List", "Tree"],
+    "correctAnswer": "Stack",
+    "topic": "Data Structures"
+  }
+]

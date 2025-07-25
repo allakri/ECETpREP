@@ -58,8 +58,8 @@ export default function ExamInstructionsPage() {
                   );
                 })}
               </ul>
-              <div className="p-4 bg-secondary/10 border border-secondary/20 rounded-lg text-center">
-                <p className="font-semibold text-secondary-foreground">Wishing you all the very best for your exam. Stay calm and focused!</p>
+              <div className="p-4 bg-primary/10 border border-primary/20 rounded-lg text-center">
+                <p className="font-semibold text-primary">Wishing you all the very best for your exam. Stay calm and focused!</p>
               </div>
             </CardContent>
             <div className="p-6 flex justify-center">

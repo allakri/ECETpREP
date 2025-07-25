@@ -14,6 +14,8 @@ import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
 import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, AlertTriangle, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import Latex from 'react-latex-next';
+import 'katex/dist/katex.min.css';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
 const MAX_VIOLATIONS = 3;
@@ -184,7 +186,7 @@ export default function ExamClient() {
             </CardTitle>
           </CardHeader>
           <CardContent className="flex-1">
-            <p className="mb-6 text-lg">{currentQuestion.question}</p>
+            <p className="mb-6 text-lg"><Latex>{currentQuestion.question}</Latex></p>
             <RadioGroup
               value={answers[currentQuestion.id] || ''}
               onValueChange={(value) => handleAnswerSelect(currentQuestion.id, value)}
@@ -193,7 +195,7 @@ export default function ExamClient() {
               {currentQuestion.options.map((option, index) => (
                 <div key={index} className="flex items-center space-x-3 transition-all duration-200 rounded-lg p-3 hover:bg-primary/5 dark:hover:bg-primary/10">
                   <RadioGroupItem value={option} id={`q${currentQuestion.id}-op${index}`} />
-                  <Label htmlFor={`q${currentQuestion.id}-op${index}`} className="text-base cursor-pointer flex-1">{option}</Label>
+                  <Label htmlFor={`q${currentQuestion.id}-op${index}`} className="text-base cursor-pointer flex-1"><Latex>{option}</Latex></Label>
                 </div>
               ))}
             </RadioGroup>
@@ -339,5 +341,3 @@ export default function ExamClient() {
     </div>
   );
 }
-
-    

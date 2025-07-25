@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -17,6 +18,8 @@ import { clearDoubt } from '@/ai/flows/doubt-clearing-flow';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import Latex from 'react-latex-next';
+import 'katex/dist/katex.min.css';
 
 const LoadingSkeleton = () => (
     <div className="flex h-screen w-full items-center justify-center bg-background">
@@ -223,7 +226,7 @@ export default function AnswerReviewClient() {
              <CardDescription>Topic: {currentQuestion.topic}</CardDescription>
           </CardHeader>
           <CardContent className="flex-1 space-y-6">
-            <p className="text-lg font-semibold">{currentQuestion.question}</p>
+            <p className="text-lg font-semibold"><Latex>{currentQuestion.question}</Latex></p>
             <div className="space-y-4">
                 {currentQuestion.options.map((option, index) => {
                     const isUserAns = userAnswer === option;
@@ -237,7 +240,7 @@ export default function AnswerReviewClient() {
                             {isCorrectAns && <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0"/>}
                             {!isCorrectAns && isUserAns && <XCircle className="h-5 w-5 text-red-500 flex-shrink-0"/>}
                             {!isCorrectAns && !isUserAns && <div className="w-5 h-5 flex-shrink-0" /> /* Placeholder for alignment */}
-                            <span className={cn("text-base", isCorrectAns && "font-bold")}>{option}</span>
+                            <span className={cn("text-base", isCorrectAns && "font-bold")}><Latex>{option}</Latex></span>
                         </div>
                     )
                 })}
@@ -310,7 +313,7 @@ export default function AnswerReviewClient() {
                        <ScrollArea className="h-32">
                          {aiExplanations[currentQuestion.id] ? (
                             <div className="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap pr-4">
-                                {aiExplanations[currentQuestion.id]}
+                                <Latex>{aiExplanations[currentQuestion.id]}</Latex>
                             </div>
                         ) : (
                              <Button 

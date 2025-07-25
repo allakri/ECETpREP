@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -21,7 +22,7 @@ const ExplainAnswerInputSchema = z.object({
 export type ExplainAnswerInput = z.infer<typeof ExplainAnswerInputSchema>;
 
 const ExplainAnswerOutputSchema = z.object({
-  explanation: z.string().describe("A clear, concise explanation of why the user's answer was incorrect and why the correct answer is right."),
+  explanation: z.string().describe("A clear, concise explanation of why the user's answer was incorrect and why the correct answer is right. Use LaTeX for mathematical equations, enclosed in single dollar signs for inline and double for block, e.g., $...$ or $$...$$"),
 });
 export type ExplainAnswerOutput = z.infer<typeof ExplainAnswerOutputSchema>;
 
@@ -39,6 +40,7 @@ Follow these steps:
 1.  Acknowledge the student's answer and state clearly why it is incorrect. Refer to the specific concept they might have misunderstood.
 2.  State the correct answer and provide a step-by-step explanation of why it is correct.
 3.  Briefly summarize the core concept of the topic to reinforce learning.
+4.  If there are mathematical equations in the question or explanation, format them using LaTeX. Use single dollar signs ($...$) for inline equations and double dollar signs ($$ ... $$) for block equations.
 
 Keep the tone supportive and educational.
 
