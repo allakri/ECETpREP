@@ -31,7 +31,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow bg-secondary/20 py-12 md:py-20">
+      <main className="flex-grow bg-background py-12 md:py-20">
         <div className="container mx-auto px-4">
           <Card className="max-w-4xl mx-auto shadow-lg bg-card border-border">
             <CardHeader className="text-center">
