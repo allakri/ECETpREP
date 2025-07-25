@@ -57,12 +57,13 @@ interface AuthContextType {
   loading: boolean;
   logout: () => Promise<void>;
   updateUser: (details: UpdatableUserProfile) => Promise<void>;
-  updateUserProgress: (currentUser: User, newScore: ExamScore) => Promise<void>;
+  updateUserProgress: (newScore: ExamScore) => Promise<void>;
   isAdmin: boolean;
   isInitialLoad: boolean; // Add this to track initial auth check
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
+const USER_CACHE_KEY = 'diploma-prep-hub-user';
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -71,6 +72,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const supabase = createClient();
   const router = useRouter();
+
+  // Function to save user to state and localStorage
+  const storeUser = (user: User | null) => {
+    setUser(user);
+    setIsAdmin(user?.email === 'admin@ecet.com');
+    if (user) {
+      localStorage.setItem(USER_CACHE_KEY, JSON.stringify(user));
+    } else {
+      localStorage.removeItem(USER_CACHE_KEY);
+    }
+  };
 
   const fetchUserProfile = useCallback(async (supabaseUser: SupabaseUser): Promise<User | null> => {
     const { data, error } = await supabase
@@ -108,16 +120,26 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 
   useEffect(() => {
+    // On initial mount, try to load user from cache to prevent UI flicker
+    try {
+        const cachedUser = localStorage.getItem(USER_CACHE_KEY);
+        if (cachedUser) {
+            storeUser(JSON.parse(cachedUser));
+        }
+    } catch (e) {
+        console.error("Failed to parse cached user", e);
+        localStorage.removeItem(USER_CACHE_KEY);
+    }
+    // We still set loading to true initially until the server confirms auth state.
+    setLoading(true);
+
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        setLoading(true);
         if (session?.user) {
           const userProfile = await fetchUserProfile(session.user);
-          setUser(userProfile);
-          setIsAdmin(userProfile?.email === 'admin@ecet.com');
+          storeUser(userProfile);
         } else {
-          setUser(null);
-          setIsAdmin(false);
+          storeUser(null);
         }
         setLoading(false);
         setIsInitialLoad(false); // Set to false after the first check
@@ -131,6 +153,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   
   const logout = async () => {
     await supabase.auth.signOut();
+    storeUser(null);
     router.refresh();
   };
 
@@ -154,18 +177,18 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const {data: { user: supabaseUser }} = await supabase.auth.getUser();
     if (supabaseUser) {
         const updatedUserProfile = await fetchUserProfile(supabaseUser);
-        setUser(updatedUserProfile);
+        storeUser(updatedUserProfile);
     }
   };
 
-  const updateUserProgress = async (currentUser: User, newScore: ExamScore) => {
-    if (!currentUser) return;
+  const updateUserProgress = async (newScore: ExamScore) => {
+    if (!user) return;
 
     // Calculate new progress metrics
-    const newTestsTaken = currentUser.tests_taken + 1;
-    const newHistory = [...currentUser.exam_score_history, newScore];
+    const newTestsTaken = user.tests_taken + 1;
+    const newHistory = [...user.exam_score_history, newScore];
     const newAvgScore = newHistory.reduce((acc, item) => acc + item.score, 0) / newHistory.length;
-    const newActivities = [...new Set([...currentUser.study_activities, newScore.date])];
+    const newActivities = [...new Set([...user.study_activities, newScore.date])];
     
     // TODO: Implement streak logic in the future
 

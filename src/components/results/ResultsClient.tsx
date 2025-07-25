@@ -29,7 +29,7 @@ export default function ResultsClient() {
   const [questions, setQuestions] = useState<Question[] | null>(null);
   const [feedback, setFeedback] = useState<string | null>(null);
   const [readiness, setReadiness] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loadingAI, setLoadingAI] = useState(true);
   const [quote, setQuote] = useState('');
   const [isMounted, setIsMounted] = useState(false);
   const [isProgressSaved, setIsProgressSaved] = useState(false);
@@ -80,7 +80,7 @@ export default function ResultsClient() {
     if (answers && questions && user && !hasRun) {
       sessionStorage.setItem('resultsGenerated', 'true');
       const getAIInsightsAndSave = async () => {
-        setLoading(true);
+        setLoadingAI(true);
         try {
           const userAnswers: Record<string, string> = {};
            for (const qId in answers) {
@@ -95,6 +95,11 @@ export default function ResultsClient() {
               date: format(new Date(), 'yyyy-MM-dd'),
           };
 
+          // Save progress first
+          await updateUserProgress(newScoreData);
+          setIsProgressSaved(true);
+
+          // Then, fetch AI insights in parallel
           const [feedbackResult, readinessResult] = await Promise.all([
             generateAdaptiveFeedback({
               examName: 'ECET Practice Exam',
@@ -106,25 +111,23 @@ export default function ResultsClient() {
               examName: 'ECET Practice Exam',
               score: score,
               incorrectTopics: incorrectTopics
-            }),
-            updateUserProgress(user, newScoreData),
+            })
           ]);
           
           setFeedback(feedbackResult.feedback);
           setReadiness(readinessResult.readiness);
-          setIsProgressSaved(true);
 
         } catch (error) {
           console.error("Error generating AI insights:", error);
           setFeedback("We're sorry, but the AI feedback service is currently unavailable. Please try again later.");
           setReadiness("We're sorry, but the AI readiness assessment is currently unavailable. Please try again later.");
         } finally {
-          setLoading(false);
+          setLoadingAI(false);
         }
       };
       getAIInsightsAndSave();
-    } else if (!user) {
-        setLoading(false); // Not logged in, so don't show loading state
+    } else {
+        setLoadingAI(false); // Not logged in, so don't show loading state
     }
      // Clear the flag when the component unmounts
     return () => {
@@ -148,7 +151,7 @@ export default function ResultsClient() {
       <div className="max-w-7xl mx-auto space-y-6">
         <div>
           <h1 className="text-3xl font-bold font-headline text-primary">Here's your result</h1>
-          <p className="text-muted-foreground">Congratulations on completing the exam. {isProgressSaved ? 'Your progress has been saved.' : 'Log in to save your progress.'}</p>
+          <p className="text-muted-foreground">Congratulations on completing the exam. {user && isProgressSaved ? 'Your progress has been saved.' : user ? 'Saving your progress...' : 'Log in to save your progress.'}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
@@ -171,7 +174,7 @@ export default function ResultsClient() {
                   <CardTitle className="text-primary font-headline">AI Topic Feedback</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {loading ? (
+                  {loadingAI ? (
                     <div className="space-y-3">
                       <Skeleton className="h-4 w-full" />
                       <Skeleton className="h-4 w-full" />
@@ -195,7 +198,7 @@ export default function ResultsClient() {
                   <CardTitle className="text-accent font-headline">AI Readiness Guide</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {loading ? (
+                  {loadingAI ? (
                     <div className="space-y-3">
                       <Skeleton className="h-4 w-full" />
                       <Skeleton className="h-4 w-full" />
