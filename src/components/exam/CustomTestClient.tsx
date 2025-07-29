@@ -27,10 +27,11 @@ const GenerateQuizInputSchema = z.object({
 type GenerateQuizInput = z.infer<typeof GenerateQuizInputSchema>;
 
 interface CustomTestClientProps {
-  exam: Exam;
+  exam: Omit<Exam, 'icon'>; // The icon is passed as children
+  children: React.ReactNode;
 }
 
-export function CustomTestClient({ exam }: CustomTestClientProps) {
+export function CustomTestClient({ exam, children }: CustomTestClientProps) {
   const router = useRouter();
   const { toast } = useToast();
 
@@ -112,9 +113,7 @@ export function CustomTestClient({ exam }: CustomTestClientProps) {
     <div id="custom-test-selection" className="container mx-auto px-4">
       <Card className="shadow-lg max-w-2xl mx-auto">
         <CardHeader className="text-center">
-          <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
-            <Sparkles className="h-10 w-10" />
-          </div>
+          {children}
           <CardTitle className="text-3xl font-headline text-primary">
             AI Custom Quiz Generator
           </CardTitle>
