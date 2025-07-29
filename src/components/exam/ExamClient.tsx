@@ -54,9 +54,6 @@ export default function ExamClient() {
             if (customQuestionsStr) {
                 setQuestions(JSON.parse(customQuestionsStr));
                 setExamName(sessionStorage.getItem('customExamName') || 'AI Custom Test');
-                // Clean up session storage
-                sessionStorage.removeItem(customExamKey);
-                sessionStorage.removeItem('customExamName');
             } else {
                  toast({
                     title: 'Error',
@@ -66,7 +63,6 @@ export default function ExamClient() {
                 router.push('/exams');
             }
         } else if (examSlug && year) {
-            // ONLINE MODE
             setExamName(searchParams.get('examName') || 'ECET Exam');
             try {
                 const filePath = `/datasets/${examSlug}_${year}.json`;
