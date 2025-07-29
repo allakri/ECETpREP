@@ -1,10 +1,11 @@
 
+
 "use client"
 
 import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card";
 import { Button } from "../ui/button";
-import { Calendar, FileText, ArrowRight, Sparkles } from "lucide-react";
+import { Calendar, FileText, ArrowRight, Sparkles, Clock, HelpCircle, Award } from "lucide-react";
 import * as React from "react";
 import { useAuth } from "@/hooks/use-auth";
 import { useToast } from "@/hooks/use-toast";
@@ -13,11 +14,11 @@ import { usePathname } from 'next/navigation'
 
 
 const papers = [
-    { year: "2024", type: "Previous Paper" },
-    { year: "2023", type: "Previous Paper" },
-    { year: "2022", type: "Previous Paper" },
-    { year: "2021", type: "Previous Paper" },
-    { year: "2020", type: "Previous Paper" },
+    { year: "2024", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
+    { year: "2023", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
+    { year: "2022", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
+    { year: "2021", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
+    { year: "2020", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
 ];
 
 interface ExamDetailsProps {
@@ -73,7 +74,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                     <CardDescription>Select a paper to begin your test, or create a custom one with AI.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {papers.map((paper) => (
                             <div key={paper.year} className="p-4 border rounded-lg bg-background hover:shadow-lg transition-shadow duration-200 flex flex-col gap-3">
                                 <div className="flex items-center gap-3">
@@ -81,26 +82,38 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                                         <Calendar className="h-5 w-5 text-primary/80"/>
                                     </div>
                                     <div>
-                                        <p className="text-base font-semibold text-foreground">{paper.year} Paper</p>
+                                        <p className="text-lg font-bold text-foreground">{paper.year} Paper</p>
                                         <p className="text-sm text-muted-foreground">{paper.type}</p>
                                     </div>
                                 </div>
-                                <div className="flex-grow"></div>
-                                <div className="flex gap-2 w-full">
-                                    <Button
-                                        onClick={() => handlePaperSelect(paper.year)}
-                                        className="w-full"
-                                    >
-                                        Start Test <ArrowRight className="ml-2 h-4 w-4"/>
-                                    </Button>
+                                <div className="text-sm text-muted-foreground space-y-2 mt-2 flex-grow">
+                                    <div className="flex items-center gap-2">
+                                        <HelpCircle className="h-4 w-4" />
+                                        <span>{paper.questions} Questions</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <Clock className="h-4 w-4" />
+                                        <span>{paper.duration} Duration</span>
+                                    </div>
+                                     <div className="flex items-center gap-2">
+                                        <Award className="h-4 w-4" />
+                                        <span>{paper.marks} Marks</span>
+                                    </div>
                                 </div>
+                                
+                                <Button
+                                    onClick={() => handlePaperSelect(paper.year)}
+                                    className="w-full mt-2"
+                                >
+                                    Start Test <ArrowRight className="ml-2 h-4 w-4"/>
+                                </Button>
                             </div>
                         ))}
                          <div className="p-4 border-2 border-dashed border-accent/50 rounded-lg bg-accent/5 hover:shadow-lg transition-shadow duration-200 flex flex-col gap-3 justify-center items-center text-center">
                             <div className="p-3 bg-accent/10 rounded-full">
                                 <Sparkles className="h-6 w-6 text-accent"/>
                             </div>
-                            <p className="text-base font-semibold text-foreground">AI Custom Quiz</p>
+                            <p className="text-lg font-bold text-foreground">AI Custom Quiz</p>
                             <p className="text-sm text-muted-foreground -mt-2">Generate a personalized test based on topics and difficulty.</p>
                             
                             <div className="flex-grow"></div>
