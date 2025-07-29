@@ -35,7 +35,7 @@ export function AppHeader() {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl font-headline text-primary">
-            <Image src="/images/logo.png" alt="Diploma Prep Hub Logo" width={32} height={32} className="rounded-md"/>
+            <Image src="/images/logo.png" alt="Diploma Prep Hub Logo" width={32} height={32} className="rounded-md" style={{height: 'auto'}}/>
             <span className="hidden sm:inline">Diploma Prep Hub</span>
           </Link>
           
