@@ -12,10 +12,22 @@ import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { Sparkles, ArrowRight, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { generateCustomQuiz, type GenerateQuizInput } from "@/ai/flows/generate-custom-quiz";
+import { generateCustomQuiz } from "@/ai/flows/generate-custom-quiz";
 import type { Question } from "@/lib/types";
 import { AppShell } from "@/components/layout/AppShell";
 import { Checkbox } from "@/components/ui/checkbox";
+import { z } from "zod";
+
+// Define Zod schemas and types here, in the client component
+const GenerateQuizInputSchema = z.object({
+  subjects: z.array(z.string()).describe('An array of one or more subjects to generate questions from.'),
+  topics: z.string().optional().describe('Optional comma-separated list of specific topics to focus on within the subjects.'),
+  easyQuestions: z.number().int().min(0).describe('Number of easy questions to generate.'),
+  mediumQuestions: z.number().int().min(0).describe('Number of medium questions to generate.'),
+  hardQuestions: z.number().int().min(0).describe('Number of hard questions to generate.'),
+});
+type GenerateQuizInput = z.infer<typeof GenerateQuizInputSchema>;
+
 
 interface CustomTestPageProps {
   params: {

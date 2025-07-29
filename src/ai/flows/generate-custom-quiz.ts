@@ -1,11 +1,10 @@
+
 'use server';
 
 /**
  * @fileOverview AI-powered custom quiz generator.
  *
  * - generateCustomQuiz - A function that generates a quiz based on user specifications.
- * - GenerateQuizInput - The input type for the generateCustomQuiz function.
- * - GenerateQuizOutput - The return type for the generateCustomQuiz function.
  */
 
 import {ai} from '@/ai/genkit';
@@ -20,19 +19,19 @@ const QuestionSchema = z.object({
   difficulty: z.enum(['Easy', 'Medium', 'Hard']).describe("The difficulty level of the question.")
 });
 
-export const GenerateQuizInputSchema = z.object({
+const GenerateQuizInputSchema = z.object({
   subjects: z.array(z.string()).describe('An array of one or more subjects to generate questions from.'),
   topics: z.string().optional().describe('Optional comma-separated list of specific topics to focus on within the subjects.'),
   easyQuestions: z.number().int().min(0).describe('Number of easy questions to generate.'),
   mediumQuestions: z.number().int().min(0).describe('Number of medium questions to generate.'),
   hardQuestions: z.number().int().min(0).describe('Number of hard questions to generate.'),
 });
-export type GenerateQuizInput = z.infer<typeof GenerateQuizInputSchema>;
+type GenerateQuizInput = z.infer<typeof GenerateQuizInputSchema>;
 
-export const GenerateQuizOutputSchema = z.object({
+const GenerateQuizOutputSchema = z.object({
   questions: z.array(QuestionSchema).describe('The array of generated quiz questions.'),
 });
-export type GenerateQuizOutput = z.infer<typeof GenerateQuizOutputSchema>;
+type GenerateQuizOutput = z.infer<typeof GenerateQuizOutputSchema>;
 
 export async function generateCustomQuiz(input: GenerateQuizInput): Promise<GenerateQuizOutput> {
   // Ensure we don't call the AI with zero questions.
