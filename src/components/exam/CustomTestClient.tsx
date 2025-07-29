@@ -12,7 +12,6 @@ import { Sparkles, ArrowRight, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { generateCustomQuiz } from "@/ai/flows/generate-custom-quiz";
 import type { Question } from "@/lib/types";
-import { Checkbox } from "@/components/ui/checkbox";
 import { z } from "zod";
 import type { Exam } from "@/lib/exams";
 
@@ -35,7 +34,7 @@ export function CustomTestClient({ exam, children }: CustomTestClientProps) {
   const router = useRouter();
   const { toast } = useToast();
 
-  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+  const [subjects, setSubjects] = useState("");
   const [topics, setTopics] = useState("");
   const [numEasy, setNumEasy] = useState(5);
   const [numMedium, setNumMedium] = useState(5);
@@ -44,13 +43,9 @@ export function CustomTestClient({ exam, children }: CustomTestClientProps) {
 
   const totalQuestions = numEasy + numMedium + numHard;
 
-  const handleSubjectChange = (subject: string, checked: boolean) => {
-    setSelectedSubjects(prev =>
-      checked ? [...prev, subject] : prev.filter(s => s !== subject)
-    );
-  };
-
   const handleGenerateQuiz = async () => {
+    const parsedSubjects = subjects.split(',').map(s => s.trim()).filter(s => s.length > 0);
+
     if (totalQuestions === 0) {
       toast({
         variant: "destructive",
@@ -59,11 +54,11 @@ export function CustomTestClient({ exam, children }: CustomTestClientProps) {
       });
       return;
     }
-     if (selectedSubjects.length === 0) {
+     if (parsedSubjects.length === 0) {
       toast({
         variant: "destructive",
-        title: "No Subjects Selected",
-        description: "Please select at least one subject.",
+        title: "No Subjects Provided",
+        description: "Please enter at least one subject.",
       });
       return;
     }
@@ -71,7 +66,7 @@ export function CustomTestClient({ exam, children }: CustomTestClientProps) {
     setIsLoading(true);
     try {
       const quizInput: GenerateQuizInput = {
-        subjects: selectedSubjects,
+        subjects: parsedSubjects,
         topics: topics,
         easyQuestions: numEasy,
         mediumQuestions: numMedium,
@@ -85,7 +80,7 @@ export function CustomTestClient({ exam, children }: CustomTestClientProps) {
         throw new Error("The AI returned no questions. Please try again.");
       }
       
-      const examName = `AI Custom Test (${selectedSubjects.join(", ")})`;
+      const examName = `AI Custom Test (${parsedSubjects.join(", ")})`;
       const sessionKey = `custom-exam-${Date.now()}`;
       
       sessionStorage.setItem(sessionKey, JSON.stringify(generatedQuestions));
@@ -123,21 +118,15 @@ export function CustomTestClient({ exam, children }: CustomTestClientProps) {
         </CardHeader>
         <CardContent className="space-y-8">
           <div className="space-y-3">
-            <Label className="text-lg font-semibold">1. Select Subjects (Required)</Label>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4 border rounded-lg bg-background">
-              {exam.subjects.map((subject) => (
-                <div key={subject} className="flex items-center space-x-2">
-                  <Checkbox
-                    id={subject}
-                    onCheckedChange={(checked) => handleSubjectChange(subject, checked as boolean)}
-                    disabled={isLoading}
-                  />
-                  <Label htmlFor={subject} className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                    {subject}
-                  </Label>
-                </div>
-              ))}
-            </div>
+            <Label htmlFor="subjects" className="text-lg font-semibold">1. Enter Subjects (Required)</Label>
+            <Input
+              id="subjects"
+              placeholder="e.g., Data Structures, Operating Systems"
+              value={subjects}
+              onChange={(e) => setSubjects(e.target.value)}
+              disabled={isLoading}
+            />
+            <p className="text-xs text-muted-foreground">Separate multiple subjects with a comma.</p>
           </div>
 
           <div className="space-y-3">
@@ -198,7 +187,7 @@ export function CustomTestClient({ exam, children }: CustomTestClientProps) {
           <p className="text-xl font-bold">Total Questions: <span className="text-accent">{totalQuestions}</span></p>
           <Button
             onClick={handleGenerateQuiz}
-            disabled={isLoading || totalQuestions === 0 || selectedSubjects.length === 0}
+            disabled={isLoading || totalQuestions === 0 || subjects.trim() === ""}
             size="lg"
             className="font-bold"
           >
