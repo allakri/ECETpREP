@@ -160,15 +160,16 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const updateUser = async (details: UpdatableUserProfile) => {
     if (!user) return;
 
-    // Use the new RPC function to update the user profile
-    const { error } = await supabase.rpc('update_user_profile', {
-        user_id: user.id,
-        full_name: details.name ?? user.name,
-        phone_number: details.phone_number ?? user.phoneNumber,
-        branch: details.branch ?? user.branch,
-        college: details.college ?? user.college,
-        year_of_study: details.year_of_study ?? user.yearOfStudy,
-    });
+    const { error } = await supabase
+      .from('profiles')
+      .update({
+        name: details.name,
+        phone_number: details.phone_number,
+        branch: details.branch,
+        college: details.college,
+        year_of_study: details.year_of_study,
+       }, { returning: 'minimal' })
+      .eq('id', user.id);
 
 
     if (error) {
@@ -195,13 +196,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     
     // TODO: Implement streak logic in the future
 
-    const { error } = await supabase.rpc('update_user_progress', {
-        user_id: user.id,
-        new_avg_score: newAvgScore,
-        new_tests_taken: newTestsTaken,
-        new_exam_score_history: newHistory,
-        new_study_activities: newActivities,
-    });
+    const { error } = await supabase
+        .from('profiles')
+        .update({
+            avg_score: newAvgScore,
+            tests_taken: newTestsTaken,
+            exam_score_history: newHistory as any, // Supabase might need 'any' for JSONB
+            study_activities: newActivities,
+        })
+        .eq('id', user.id);
 
     if (error) {
         console.error("Error updating user progress:", error);
