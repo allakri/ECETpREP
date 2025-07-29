@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -32,6 +33,7 @@ export default function ExamClient() {
   const [isViolationDialogOpen, setIsViolationDialogOpen] = useState(false);
   const [isExitDialogOpen, setIsExitDialogOpen] = useState(false);
   const violationCount = useRef(0);
+  const [examName, setExamName] = useState('ECET Exam');
 
   const handleSubmit = useCallback(() => {
     localStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
@@ -44,37 +46,57 @@ export default function ExamClient() {
   useEffect(() => {
     const examSlug = searchParams.get('examSlug');
     const year = searchParams.get('year');
+    const offlineTestKey = searchParams.get('offlineTestKey');
 
     async function loadQuestions() {
-        if (!examSlug || !year) {
-            toast({
-                title: 'Error',
-                description: 'Exam details not found. Redirecting...',
-                variant: 'destructive',
-            });
-            router.push('/exams');
-            return;
-        }
-
-        try {
-            // Corrected file path construction
-            const filePath = `/datasets/${examSlug}_${year}.json`;
-            const response = await fetch(filePath);
-            if (!response.ok) {
-                throw new Error(`Failed to load questions from ${filePath}. Status: ${response.status}`);
+        if (offlineTestKey) {
+            // OFFLINE MODE
+            const offlineIndexStr = localStorage.getItem('offline-tests-index');
+            const offlineIndex = offlineIndexStr ? JSON.parse(offlineIndexStr) : [];
+            const testMeta = offlineIndex.find((t: any) => t.key === offlineTestKey);
+            
+            const offlineQuestionsStr = localStorage.getItem(offlineTestKey);
+            if (offlineQuestionsStr && testMeta) {
+                setQuestions(JSON.parse(offlineQuestionsStr));
+                setExamName(`${testMeta.examName} (${testMeta.year}) - Offline`);
+            } else {
+                 toast({
+                    title: 'Error',
+                    description: 'Offline test data not found. Please try downloading it again.',
+                    variant: 'destructive',
+                });
+                router.push('/exams');
             }
-            const data = await response.json();
-            setQuestions(data);
-        } catch (error) {
-            console.error(error);
-            toast({
-                title: 'Error Loading Questions',
-                description: 'Could not load the question paper. Please try again.',
-                variant: 'destructive',
-            });
-             // Fallback to default questions if specific one fails
-            const { questions: defaultQuestions } = await import('@/data/questions');
-            setQuestions(defaultQuestions);
+        } else {
+            // ONLINE MODE
+            if (!examSlug || !year) {
+                toast({
+                    title: 'Error',
+                    description: 'Exam details not found. Redirecting...',
+                    variant: 'destructive',
+                });
+                router.push('/exams');
+                return;
+            }
+
+            setExamName(searchParams.get('examName') || 'ECET Exam');
+            try {
+                const filePath = `/datasets/${examSlug}_${year}.json`;
+                const response = await fetch(filePath);
+                if (!response.ok) {
+                    throw new Error(`Failed to load questions from ${filePath}. Status: ${response.status}`);
+                }
+                const data = await response.json();
+                setQuestions(data);
+            } catch (error) {
+                console.error(error);
+                toast({
+                    title: 'Error Loading Questions',
+                    description: 'Could not load the question paper. Please try again.',
+                    variant: 'destructive',
+                });
+                router.push('/exams');
+            }
         }
     }
 
@@ -167,7 +189,7 @@ export default function ExamClient() {
     <div className="flex h-screen flex-col md:flex-row bg-background text-foreground">
       <main className="flex-1 flex flex-col p-4 md:p-6 overflow-y-auto">
         <header className="flex justify-between items-center mb-4">
-          <h1 className="text-2xl font-headline text-primary">{searchParams.get('examName') || 'ECET Exam'}</h1>
+          <h1 className="text-2xl font-headline text-primary">{examName}</h1>
           <div className="flex items-center gap-4">
             <div className={`flex items-center gap-2 font-bold p-2 rounded-lg ${timeLeft < 300 ? 'text-destructive animate-pulse' : 'text-foreground'}`}>
               <Timer className="h-6 w-6 text-accent" />
