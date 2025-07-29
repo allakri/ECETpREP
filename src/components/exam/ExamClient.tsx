@@ -54,6 +54,7 @@ export default function ExamClient() {
             if (customQuestionsStr) {
                 setQuestions(JSON.parse(customQuestionsStr));
                 setExamName(sessionStorage.getItem('customExamName') || 'AI Custom Test');
+                // Clean up session storage
                 sessionStorage.removeItem(customExamKey);
                 sessionStorage.removeItem('customExamName');
             } else {

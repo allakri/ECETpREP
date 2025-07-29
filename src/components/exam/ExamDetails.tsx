@@ -4,11 +4,13 @@
 import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card";
 import { Button } from "../ui/button";
-import { Calendar, FileText, ArrowRight } from "lucide-react";
+import { Calendar, FileText, ArrowRight, Sparkles } from "lucide-react";
 import * as React from "react";
 import { useAuth } from "@/hooks/use-auth";
 import { useToast } from "@/hooks/use-toast";
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
+
 
 const papers = [
     { year: "2024", type: "Previous Paper" },
@@ -25,6 +27,7 @@ interface ExamDetailsProps {
 
 export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
     const router = useRouter();
+    const pathname = usePathname();
     const { user } = useAuth();
     const { toast } = useToast();
 
@@ -57,7 +60,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
             router.push('/login');
             return;
         }
-        router.push(`/exams/${examSlug}/custom`);
+        router.push(`${pathname}/custom`);
     }
 
     return (
@@ -67,7 +70,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                     <CardTitle className="text-3xl font-headline text-primary">
                       {examName}
                     </CardTitle>
-                    <CardDescription>Select a paper to begin your test.</CardDescription>
+                    <CardDescription>Select a paper to begin your test, or create a custom one with AI.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -93,20 +96,17 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                                 </div>
                             </div>
                         ))}
-                         <div className="p-4 border rounded-lg bg-background hover:shadow-lg transition-shadow duration-200 flex flex-col gap-3">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 bg-primary/10 rounded-md">
-                                    <FileText className="h-5 w-5 text-primary/80"/>
-                                </div>
-                                <div>
-                                    <p className="text-base font-semibold text-foreground">Custom Paper</p>
-                                    <p className="text-sm text-muted-foreground">Mock Test</p>
-                                </div>
+                         <div className="p-4 border-2 border-dashed border-accent/50 rounded-lg bg-accent/5 hover:shadow-lg transition-shadow duration-200 flex flex-col gap-3 justify-center items-center text-center">
+                            <div className="p-3 bg-accent/10 rounded-full">
+                                <Sparkles className="h-6 w-6 text-accent"/>
                             </div>
+                            <p className="text-base font-semibold text-foreground">AI Custom Quiz</p>
+                            <p className="text-sm text-muted-foreground -mt-2">Generate a personalized test based on topics and difficulty.</p>
+                            
                             <div className="flex-grow"></div>
                             <Button
                                 onClick={handleCustomPaperSelect}
-                                className="w-full"
+                                className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
                             >
                                 Create & Start <ArrowRight className="ml-2 h-4 w-4"/>
                             </Button>
