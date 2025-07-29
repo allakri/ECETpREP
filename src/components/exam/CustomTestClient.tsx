@@ -85,25 +85,13 @@ export function CustomTestClient({ exam }: CustomTestClientProps) {
       }
       
       const examName = `AI Custom Test (${selectedSubjects.join(", ")})`;
-      const offlineTestKey = `offline-test-custom-${Date.now()}`;
+      const sessionKey = `custom-exam-${Date.now()}`;
       
-      localStorage.setItem(offlineTestKey, JSON.stringify(generatedQuestions));
+      sessionStorage.setItem(sessionKey, JSON.stringify(generatedQuestions));
+      sessionStorage.setItem('customExamName', examName);
       
-      const indexKey = 'offline-tests-index';
-      const existingIndex = JSON.parse(localStorage.getItem(indexKey) || '[]');
-      const newIndexEntry = {
-          key: offlineTestKey,
-          examName: examName,
-          examSlug: 'custom',
-          year: 'AI',
-          downloadedAt: new Date().toISOString(),
-      };
-      const updatedIndex = existingIndex.filter((item: any) => item.key !== offlineTestKey);
-      updatedIndex.push(newIndexEntry);
-      localStorage.setItem(indexKey, JSON.stringify(updatedIndex));
-
       const params = new URLSearchParams({
-        offlineTestKey: offlineTestKey,
+        customExamKey: sessionKey,
       });
 
       router.push(`/exam/instructions?${params.toString()}`);

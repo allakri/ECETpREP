@@ -46,23 +46,20 @@ export default function ExamClient() {
   useEffect(() => {
     const examSlug = searchParams.get('examSlug');
     const year = searchParams.get('year');
-    const offlineTestKey = searchParams.get('offlineTestKey');
+    const customExamKey = searchParams.get('customExamKey');
 
     async function loadQuestions() {
-        if (offlineTestKey) {
-            // OFFLINE MODE
-            const offlineIndexStr = localStorage.getItem('offline-tests-index');
-            const offlineIndex = offlineIndexStr ? JSON.parse(offlineIndexStr) : [];
-            const testMeta = offlineIndex.find((t: any) => t.key === offlineTestKey);
-            
-            const offlineQuestionsStr = localStorage.getItem(offlineTestKey);
-            if (offlineQuestionsStr && testMeta) {
-                setQuestions(JSON.parse(offlineQuestionsStr));
-                setExamName(`${testMeta.examName} (${testMeta.year}) - Offline`);
+        if (customExamKey) {
+            const customQuestionsStr = sessionStorage.getItem(customExamKey);
+            if (customQuestionsStr) {
+                setQuestions(JSON.parse(customQuestionsStr));
+                setExamName(sessionStorage.getItem('customExamName') || 'AI Custom Test');
+                sessionStorage.removeItem(customExamKey);
+                sessionStorage.removeItem('customExamName');
             } else {
                  toast({
                     title: 'Error',
-                    description: 'Offline test data not found. Please try downloading it again.',
+                    description: 'Custom exam data not found. Please try generating it again.',
                     variant: 'destructive',
                 });
                 router.push('/exams');
