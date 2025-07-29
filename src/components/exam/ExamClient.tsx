@@ -44,9 +44,9 @@ export default function ExamClient() {
   }, [answers, router, questions]);
 
   useEffect(() => {
+    const customExamKey = searchParams.get('customExamKey');
     const examSlug = searchParams.get('examSlug');
     const year = searchParams.get('year');
-    const customExamKey = searchParams.get('customExamKey');
 
     async function loadQuestions() {
         if (customExamKey) {
@@ -65,18 +65,8 @@ export default function ExamClient() {
                 });
                 router.push('/exams');
             }
-        } else {
+        } else if (examSlug && year) {
             // ONLINE MODE
-            if (!examSlug || !year) {
-                toast({
-                    title: 'Error',
-                    description: 'Exam details not found. Redirecting...',
-                    variant: 'destructive',
-                });
-                router.push('/exams');
-                return;
-            }
-
             setExamName(searchParams.get('examName') || 'ECET Exam');
             try {
                 const filePath = `/datasets/${examSlug}_${year}.json`;
@@ -95,6 +85,13 @@ export default function ExamClient() {
                 });
                 router.push('/exams');
             }
+        } else {
+            toast({
+                title: 'Error',
+                description: 'Exam details not found. Redirecting...',
+                variant: 'destructive',
+            });
+            router.push('/exams');
         }
     }
 
