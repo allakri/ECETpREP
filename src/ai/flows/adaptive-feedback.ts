@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -28,7 +29,7 @@ const AdaptiveFeedbackInputSchema = z.object({
 export type AdaptiveFeedbackInput = z.infer<typeof AdaptiveFeedbackInputSchema>;
 
 const AdaptiveFeedbackOutputSchema = z.object({
-  feedback: z.string().describe('AI-generated adaptive feedback based on the user\'s performance.'),
+  feedback: z.string().describe('AI-generated adaptive feedback based on the user\'s performance in Markdown format.'),
 });
 export type AdaptiveFeedbackOutput = z.infer<typeof AdaptiveFeedbackOutputSchema>;
 
@@ -40,38 +41,47 @@ const adaptiveFeedbackPrompt = ai.definePrompt({
   name: 'adaptiveFeedbackPrompt',
   input: {schema: AdaptiveFeedbackInputSchema},
   output: {schema: AdaptiveFeedbackOutputSchema},
-  prompt: `You are an AI-powered tutoring system that provides personalized, emotion-aware feedback to students based on their performance on practice exams.
+  prompt: `You are an expert AI tutor. Your goal is to provide detailed, encouraging, and actionable feedback on a student's practice exam performance. Use Markdown for clear formatting.
 
-Your task is to identify the student's weak areas and provide suggestions for improvement. Focus on actionable advice and specific topics to study.
-
-Crucially, you must adjust your tone based on the student's performance history.
+**Tone and Emotion:**
+First, assess the student's performance trend based on their past scores.
 {{#if pastScores}}
-Here are the student's recent scores: {{#each pastScores}}{{{this}}}%{{#unless @last}}, {{/unless}}{{/each}}.
-- If you see a trend of improvement, be very encouraging! For example: "Great progress! You've clearly been working hard and it's paying off."
-- If the scores are stagnant or declining, be supportive and motivational, not critical. For example: "This subject can be tricky, but don't get discouraged. Let's pinpoint where we can focus to get you back on track."
-- If this is their first test, be welcoming and set a positive tone.
+Here are the student's recent scores (most recent is last): {{#each pastScores}}{{{this}}}%{{#unless @last}}, {{/unless}}{{/each}}.
+- If scores are improving, start with strong encouragement (e.g., "Excellent work! Your dedication is clearly paying off...").
+- If scores are stagnant or declining, be supportive and motivational (e.g., "This subject can be challenging, but let's break it down. Every expert was once a beginner...").
+- If this is their first test (no past scores), be welcoming and positive ("Great job completing your first practice test! This is a fantastic starting point...").
 {{/if}}
 
-For each question the user answered incorrectly, you MUST explain why their answer was wrong and why the correct answer is right. Provide a brief concept explanation for the topic.
+**Feedback Structure:**
+Your response MUST follow this structure:
 
-Exam Name: {{{examName}}}
+1.  **Overall Summary:**
+    - Start with the emotionally-aware opening based on their score trend.
+    - Briefly summarize their overall performance on the '{{{examName}}}'.
 
-Exam Questions:
-{{#each questions}}
-  ID: {{id}}
-  Question: {{question}}
-  Options: {{#each options}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
-  Correct Answer: {{correctAnswer}}
-  Topic: {{topic}}
-{{/each}}
+2.  **Topic-by-Topic Performance Breakdown:**
+    - Create a list of all topics covered in the exam.
+    - For each topic, calculate their score (e.g., "Strength of Materials: 2/3 correct").
+    - Categorize each topic as 'Strong', 'Needs Improvement', or 'Weak'.
 
-Student's Answers (Question ID: Answer):
-{{#each userAnswers}}
-  {{@key}}: {{{this}}}
-{{/each}}
+3.  **Detailed Analysis of Incorrect Answers:**
+    - Create a section titled "Let's Review Your Incorrect Answers".
+    - For each question the student answered incorrectly:
+        - State the question clearly.
+        - Mention their incorrect answer and the correct answer.
+        - **Crucially, provide a concise explanation** of *why* the correct answer is right and why their choice was likely incorrect (e.g., "It seems you may have confused concept A with concept B...").
 
+4.  **Actionable Study Plan:**
+    - Create a section titled "Your Personalized Study Plan".
+    - Based on the weak topics, provide 2-3 specific, actionable recommendations.
+    - Example: "1. **Focus on [Weak Topic 1]:** Re-read Chapter 4 of your textbook and try solving the first 10 practice problems. 2. **Practice [Weak Topic 2]:** Watch a tutorial video on [specific concept] and then take a short quiz on our platform."
 
-Provide detailed, tailored feedback to the student with an appropriate, supportive, and adaptive tone. Explain the incorrect answers as requested.
+**Exam Data:**
+- Exam Name: {{{examName}}}
+- Full list of questions, options, correct answers, and topics are provided in the 'questions' array.
+- The student's answers are in the 'userAnswers' object (question ID: answer).
+
+Generate the feedback now.
 `, config: {
     safetySettings: [
       {

@@ -1,8 +1,7 @@
 
-
 "use client";
 
-import { useEffect, useState, useMemo, useCallback } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { generateAdaptiveFeedback } from '@/ai/flows/adaptive-feedback';
 import { assessReadiness } from '@/ai/flows/readiness-assessment';
@@ -10,11 +9,13 @@ import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { BrainCircuit, Home, Lightbulb, UserCheck, BarChart, MessageCircleQuestion, ListChecks, Check, X, Target, Clock, Trophy } from 'lucide-react';
+import { BrainCircuit, Home, UserCheck, ListChecks, Check, X, Target, Clock, Trophy } from 'lucide-react';
 import { ScoreChart } from './ScoreChart';
 import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
+import { MessageCircleQuestion } from 'lucide-react';
 
 const quotes = [
   "Believe you can and you're halfway there.",
@@ -185,7 +186,7 @@ export default function ResultsClient() {
       >
         <motion.div className="text-center" variants={itemVariants}>
           <h1 className="text-4xl font-bold font-headline text-primary">Well Done! Here Are Your Results.</h1>
-          <p className="text-muted-foreground mt-2 text-lg">Congratulations on completing the exam. {user ? 'Your progress has been saved.' : 'Log in to save your progress.'}</p>
+          <p className="text-muted-foreground mt-2 text-lg">{user ? 'Your progress has been saved.' : 'Log in to save your progress.'}</p>
            <p className="text-muted-foreground mt-4 italic">"{quote}"</p>
         </motion.div>
         
@@ -238,7 +239,9 @@ export default function ResultsClient() {
                       <Skeleton className="h-4 w-1/2" />
                     </div>
                   ) : (
-                    <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">{feedback || 'Log in to receive personalized AI feedback based on your performance history.'}</div>
+                    <div className="prose prose-sm dark:prose-invert max-w-none text-foreground prose-headings:text-primary">
+                        <ReactMarkdown>{feedback || 'Log in to receive personalized AI feedback based on your performance history.'}</ReactMarkdown>
+                    </div>
                   )}
                 </CardContent>
               </Card>
@@ -261,7 +264,9 @@ export default function ResultsClient() {
                       <Skeleton className="h-4 w-3/4" />
                     </div>
                   ) : (
-                    <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">{readiness || 'Log in to receive a personalized readiness assessment.'}</div>
+                     <div className="prose prose-sm dark:prose-invert max-w-none text-foreground">
+                        <ReactMarkdown>{readiness || 'Log in to receive a personalized readiness assessment.'}</ReactMarkdown>
+                    </div>
                   )}
                 </CardContent>
               </Card>

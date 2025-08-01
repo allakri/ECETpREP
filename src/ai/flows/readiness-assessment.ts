@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -19,7 +20,7 @@ const ReadinessAssessmentInputSchema = z.object({
 export type ReadinessAssessmentInput = z.infer<typeof ReadinessAssessmentInputSchema>;
 
 const ReadinessAssessmentOutputSchema = z.object({
-  readiness: z.string().describe('A paragraph assessing if the student is ready for the real exam, providing encouragement and specific advice based on their score and weak topics.'),
+  readiness: z.string().describe('A paragraph assessing if the student is ready for the real exam, providing encouragement and specific advice based on their score and weak topics. Use Markdown for formatting.'),
 });
 export type ReadinessAssessmentOutput = z.infer<typeof ReadinessAssessmentOutputSchema>;
 
@@ -31,26 +32,33 @@ const readinessAssessmentPrompt = ai.definePrompt({
   name: 'readinessAssessmentPrompt',
   input: {schema: ReadinessAssessmentInputSchema},
   output: {schema: ReadinessAssessmentOutputSchema},
-  prompt: `You are an AI-powered guidance counselor for students preparing for competitive exams.
-Your task is to provide an honest but encouraging assessment of a student's readiness for their upcoming exam based on their practice test performance.
+  prompt: `You are an experienced and encouraging AI guidance counselor. Your task is to provide a realistic but motivational readiness assessment for a student who just completed a practice exam.
 
-Analyze the student's score and the topics they struggled with.
-Based on this, tell them whether you think they are ready for the real exam. Be realistic but motivational.
-If they are not ready, highlight the weak areas and suggest a constructive path forward. If they are doing well, reinforce their confidence.
+**Student's Performance Data:**
+- Exam Name: {{{examName}}}
+- Score: {{{score}}}%
+- Topics with incorrect answers: {{#if incorrectTopics}}{{#each incorrectTopics}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}{{else}}None!{{/if}}
 
-Exam Name: {{{examName}}}
-Score: {{{score}}}%
+**Your Assessment MUST Follow This Structure:**
 
-Topics with incorrect answers:
-{{#if incorrectTopics}}
-  {{#each incorrectTopics}}
-    - {{{this}}}
-  {{/each}}
-{{else}}
-  None! Great job!
-{{/if}}
+1.  **Readiness Level:** Start by giving a clear, one-sentence assessment of their current readiness. Use one of these phrases:
+    *   **Score > 85%:** "You are well-prepared and on track for success."
+    *   **Score 60-84%:** "You have a strong foundation, but a few key areas need more focus."
+    *   **Score < 60%:** "You've built a starting point, and with a focused strategy, you can make significant improvements."
 
-Provide a concise, one-paragraph assessment of their readiness.
+2.  **Strengths:** Briefly mention what their score indicates as a strength.
+    *   If score is high, praise their solid understanding.
+    *   If score is mid-range, acknowledge their grasp of core concepts.
+    *   If score is low, praise their effort in attempting the test.
+
+3.  **Areas for Improvement:**
+    *   Clearly list the topics where they made mistakes: {{#if incorrectTopics}}"Your main areas for improvement are: {{#each incorrectTopics}}**{{{this}}}**{{#unless @last}}, {{/unless}}{{/each}}."{{else}}"You had no incorrect topics, which is outstanding! Focus on revision and time management."{{/if}}
+
+4.  **Actionable Next Step:** Provide ONE clear, immediate next step.
+    *   Example: "Your next step should be to review the incorrect answers from this test using the 'Review Answers' feature. Pay close attention to the explanations for the '{{{incorrectTopics.[0]}}}' questions."
+    *   If there are no incorrect topics, suggest: "Your next step is to take another mock test under timed conditions to improve speed and consistency."
+
+Keep the entire response to a single, concise paragraph. Be motivational and encouraging.
 `,
   config: {
     safetySettings: [
