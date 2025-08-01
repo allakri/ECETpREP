@@ -30,7 +30,6 @@ const corePrinciples = [
 const teamMembers = [
     {
         name: "Abhishek Rai",
-        role: "Founder & Project Lead",
         contribution: "Visionary behind the platform, leading the project from concept to execution with a passion for educational technology.",
         avatar: "https://placehold.co/150x150.png",
         avatarHint: "man portrait smiling",
@@ -38,7 +37,6 @@ const teamMembers = [
     },
     {
         name: "Shashi",
-        role: "Lead Developer",
         contribution: "Architected and built the robust front-end, ensuring a seamless and performant user experience across all devices.",
         avatar: "https://placehold.co/150x150.png",
         avatarHint: "man software developer",
@@ -46,7 +44,6 @@ const teamMembers = [
     },
     {
         name: "Revanth",
-        role: "UI/UX Designer",
         contribution: "Crafted the intuitive and visually appealing user interface, focusing on a clean, user-friendly design system.",
         avatar: "https://placehold.co/150x150.png",
         avatarHint: "man designer",
@@ -54,7 +51,6 @@ const teamMembers = [
     },
     {
         name: "Sneha",
-        role: "AI & Backend Engineer",
         contribution: "Developed the intelligent AI flows and managed the backend infrastructure that powers our personalized learning features.",
         avatar: "https://placehold.co/150x150.png",
         avatarHint: "woman engineer",
@@ -111,8 +107,7 @@ export default function AboutPage() {
                                 <AvatarImage src={member.avatar} alt={member.name} data-ai-hint={member.avatarHint} />
                                 <AvatarFallback>{member.name.substring(0, 2)}</AvatarFallback>
                             </Avatar>
-                            <h3 className="text-xl font-bold text-primary">{member.name}</h3>
-                            <p className="font-semibold text-accent mb-2">{member.role}</p>
+                            <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
                             <p className="text-sm text-muted-foreground">{member.contribution}</p>
                         </CardContent>
                     </Card>
