@@ -20,6 +20,17 @@ import 'katex/dist/katex.min.css';
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
 const MAX_VIOLATIONS = 3;
 
+// A simple mapping from full slug to the folder name convention
+const slugToFolderMap: Record<string, string> = {
+    'computer-science': 'CSE',
+    'civil-engineering': 'CIVIL',
+    'electronics-communication': 'ECE',
+    'electrical-electronics': 'EEE',
+    'mechanical-engineering': 'MECH',
+    // Add other mappings as needed
+};
+
+
 export default function ExamClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -66,8 +77,8 @@ export default function ExamClient() {
         } else if (examSlug && year) {
             setExamName(searchParams.get('examName') || 'ECET Exam');
             try {
-                // New logic to fetch from nested folder structure
-                const filePath = `/datasets/TGEAPCET/${examSlug.toUpperCase()}/${year}.json`;
+                const folderName = slugToFolderMap[examSlug] || examSlug.toUpperCase();
+                const filePath = `/datasets/TGEAPCET/${folderName}/${year}.json`;
                 const response = await fetch(filePath);
                 if (!response.ok) {
                     throw new Error(`Failed to load questions from ${filePath}. Status: ${response.status}`);
