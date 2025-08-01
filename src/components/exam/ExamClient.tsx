@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -65,7 +66,8 @@ export default function ExamClient() {
         } else if (examSlug && year) {
             setExamName(searchParams.get('examName') || 'ECET Exam');
             try {
-                const filePath = `/datasets/${examSlug}_${year}.json`;
+                // New logic to fetch from nested folder structure
+                const filePath = `/datasets/TGEAPCET/${examSlug.toUpperCase()}/${year}.json`;
                 const response = await fetch(filePath);
                 if (!response.ok) {
                     throw new Error(`Failed to load questions from ${filePath}. Status: ${response.status}`);

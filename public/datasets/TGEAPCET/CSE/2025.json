@@ -1,0 +1,2402 @@
+[
+    {
+      "id": "5069615616",
+      "question": "If A = \\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix} and if (aI + bA)^2 = A, then b^4 =",
+      "options": [
+        "1",
+        "\\frac{1}{2}",
+        "-\\frac{1}{4}",
+        "\\frac{1}{4}"
+      ],
+      "correctAnswer": "\\frac{1}{4}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615617",
+      "question": "If A = \\begin{pmatrix} \\cos\\theta & \\sin\\theta & 0 \\\\ -\\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = F(\\theta), then A^{-1} =",
+      "options": [
+        "F(\\theta)",
+        "F(-\\theta)",
+        "-F(\\theta)",
+        "-F(-\\theta)"
+      ],
+      "correctAnswer": "F(-\\theta)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615618",
+      "question": "If (x,y,z) is the solution of linear equations x + y + z = 6, x - y + z = 2, 2x + y - z = 1, then \\frac{yz}{x} =",
+      "options": [
+        "\\frac{1}{6}",
+        "\\frac{3}{2}",
+        "6",
+        "3"
+      ],
+      "correctAnswer": "6",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615619",
+      "question": "If A and B are square matrices of order 3 with |A| = 2, |B| = -4, then |2AB| =",
+      "options": [
+        "-64",
+        "16",
+        "64",
+        "-16"
+      ],
+      "correctAnswer": "-64",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615620",
+      "question": "If log_{\\sqrt{27}}(x) = \\frac{8}{3}, then x =",
+      "options": [
+        "10",
+        "16",
+        "81",
+        "27"
+      ],
+      "correctAnswer": "81",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615621",
+      "question": "If \\frac{x^3}{(x-1)(x+2)} = Ax + B + \\frac{C}{x-1} + \\frac{D}{x+2}, then C + D =",
+      "options": [
+        "-3",
+        "3",
+        "2",
+        "0"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615622",
+      "question": "\\frac{\\sin^2 33^{\\circ} - \\sin^2 57^{\\circ}}{\\sin 21^{\\circ} - \\cos 21^{\\circ}} =",
+      "options": [
+        "\\frac{\\sqrt{3}}{2}",
+        "\\frac{1}{2}",
+        "\\frac{1}{\\sqrt{2}}",
+        "1"
+      ],
+      "correctAnswer": "\\frac{1}{\\sqrt{2}}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615623",
+      "question": "If A + B = \\frac{\\pi}{3} and cos A + cos B = 1, then 3cos(A - B) =",
+      "options": [
+        "-1",
+        "2",
+        "-2",
+        "1"
+      ],
+      "correctAnswer": "-1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615624",
+      "question": "If 2 tan^{-1}(\\frac{2}{3}) = tan^{-1}(k), then k =",
+      "options": [
+        "\\frac{5}{12}",
+        "\\frac{4}{3}",
+        "\\frac{12}{5}",
+        "\\frac{3}{4}"
+      ],
+      "correctAnswer": "\\frac{12}{5}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615625",
+      "question": "If tan^{-1}(\\frac{1-x}{1+x}) = \\frac{1}{2}tan^{-1}(x), x > 0, then x =",
+      "options": [
+        "\\frac{\\sqrt{3}}{2}",
+        "\\frac{1}{\\sqrt{3}}",
+        "\\frac{1}{2}",
+        "1"
+      ],
+      "correctAnswer": "\\frac{1}{\\sqrt{3}}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615626",
+      "question": "If cosh x = \\frac{3}{2} then cosh 2x =",
+      "options": [
+        "\\frac{1}{3}",
+        "\\frac{7}{2}",
+        "\\frac{5}{2}",
+        "\\frac{11}{3}"
+      ],
+      "correctAnswer": "\\frac{7}{2}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615627",
+      "question": "(\\frac{\\sqrt{3}+i}{2})^6 + (\\frac{\\sqrt{3}-i}{2})^6 =",
+      "options": [
+        "3",
+        "-3",
+        "2",
+        "-2"
+      ],
+      "correctAnswer": "-2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615628",
+      "question": "The distance between the lines y = 2x + 4 and 6x - 3y = 5 is (in units)",
+      "options": [
+        "\\frac{13}{2\\sqrt{5}}",
+        "\\frac{17}{3\\sqrt{5}}",
+        "\\frac{17}{2\\sqrt{5}}",
+        "\\frac{14}{3\\sqrt{5}}"
+      ],
+      "correctAnswer": "\\frac{17}{3\\sqrt{5}}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615629",
+      "question": "If the radius of the circle x^2 + y^2 - 4x + 6y - k = 0 is 4, then k =",
+      "options": [
+        "3",
+        "-3",
+        "2",
+        "\\frac{1}{2}"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615630",
+      "question": "If the angle between the lines 3x - 4y + 1 = 0 and ax + by - 7 = 0 is 90^{\\circ}, then 3a - 4b =",
+      "options": [
+        "12",
+        "-1",
+        "0",
+        "7"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615631",
+      "question": "The equation of the tangent to the circle x^2 + y^2 - 6x + 4y - 12 = 0 at (-1,1) is",
+      "options": [
+        "4x + 3y + 1 = 0",
+        "2x - 3y + 5 = 0",
+        "2x + 3y - 1 = 0",
+        "4x - 3y + 7 = 0"
+      ],
+      "correctAnswer": "4x - 3y + 7 = 0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615632",
+      "question": "The eccentricity of the ellipse whose latus rectum is equal to half of its major axis is",
+      "options": [
+        "\\sqrt{3}",
+        "\\frac{1}{\\sqrt{2}}",
+        "\\sqrt{2}",
+        "\\frac{1}{\\sqrt{3}}"
+      ],
+      "correctAnswer": "\\frac{1}{\\sqrt{2}}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615633",
+      "question": "\\frac{d}{dx}(\\sqrt{\\sin(x^2)}) =",
+      "options": [
+        "\\frac{x^2 \\cos(x^2)}{\\sqrt{\\sin(x^2)}}",
+        "\\frac{x \\cos(x^2)}{2\\sqrt{\\sin(x^2)}}",
+        "\\frac{x \\cos(x^2)}{\\sqrt{\\sin(x^2)}}",
+        "\\frac{x \\sin(x^2)}{\\sqrt{\\cos(x^2)}}"
+      ],
+      "correctAnswer": "\\frac{x \\cos(x^2)}{\\sqrt{\\sin(x^2)}}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615634",
+      "question": "\\frac{d}{dx} \\tan^{-1}(\\frac{\\sin x}{1 + \\cos x}) =",
+      "options": [
+        "2",
+        "4",
+        "1",
+        "\\frac{1}{2}"
+      ],
+      "correctAnswer": "\\frac{1}{2}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615635",
+      "question": "If y^x = x^{\\cos y}, then \\frac{dy}{dx} =",
+      "options": [
+        "\\frac{y(\\cos y - x \\log y)}{x(x + y \\sin y \\log x)}",
+        "\\frac{y(\\cos y + x \\log y)}{x(x + y \\sin y \\log x)}",
+        "\\frac{y(\\cos y - x \\log y)}{x(x - y \\sin y \\log x)}",
+        "\\frac{(\\cos y - x \\log y)}{(x + y \\sin y \\log x)}"
+      ],
+      "correctAnswer": "\\frac{y(\\cos y - x \\log y)}{x(x - y \\sin y \\log x)}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615636",
+      "question": "\\lim_{x \\to 3} \\frac{x^2 - x - 6}{x^2 + x - 12} =",
+      "options": [
+        "\\frac{1}{6}",
+        "\\frac{2}{3}",
+        "\\frac{3}{4}",
+        "\\frac{5}{7}"
+      ],
+      "correctAnswer": "\\frac{5}{7}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615637",
+      "question": "The equation of the normal to the curve y = x^3 - 3x at the point P(2, 2) is",
+      "options": [
+        "x + 9y - 2 = 0",
+        "x + 9y - 22 = 0",
+        "x + 9y - 20 = 0",
+        "x + 9y - 12 = 0"
+      ],
+      "correctAnswer": "x + 9y - 20 = 0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615638",
+      "question": "The maximum value of y = (x - 1)^2 e^x is",
+      "options": [
+        "\\frac{4}{e}",
+        "\\frac{2}{e}",
+        "\\frac{1}{e}",
+        "\\frac{9}{e}"
+      ],
+      "correctAnswer": "\\frac{4}{e}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615639",
+      "question": "If f(x,y) = (x + y)e^{xy}, then at P(2,2) the value of \\frac{\\partial f}{\\partial x} =",
+      "options": [
+        "8e^4",
+        "4e^4",
+        "9e^4",
+        "16e^4"
+      ],
+      "correctAnswer": "9e^4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615640",
+      "question": "If u(x,y) = \\sin^{-1}(\\frac{x^4+y^4}{x^2+y^2}), then x\\frac{\\partial u}{\\partial x} + y\\frac{\\partial u}{\\partial y} =",
+      "options": [
+        "2 \\cot u",
+        "2 \\tan u",
+        "2 \\sin u",
+        "2 \\cos u"
+      ],
+      "correctAnswer": "2 \\tan u",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615641",
+      "question": "\\int \\frac{1}{(1 - \\cos x)} dx =",
+      "options": [
+        "-\\cot x - \\csc x + c",
+        "-\\cot x + \\csc x + c",
+        "\\cot x - \\csc x + c",
+        "-\\tan x - \\sec x + c"
+      ],
+      "correctAnswer": "-\\cot x - \\csc x + c",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615642",
+      "question": "\\int_2^4 f(x) dx =",
+      "options": [
+        "\\int_2^4 f(6 + x) dx",
+        "\\int_2^4 f(4 - x) dx",
+        "\\int_2^4 f(2 - x) dx",
+        "\\int_2^4 f(6 - x) dx"
+      ],
+      "correctAnswer": "\\int_2^4 f(6 - x) dx",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615643",
+      "question": "\\int_{-1}^1 \\sin(\\pi x) dx =",
+      "options": [
+        "\\frac{1}{\\pi}",
+        "\\frac{2}{\\pi}",
+        "0",
+        "-\\frac{2}{\\pi}"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615644",
+      "question": "\\lim_{n \\to \\infty} [\\frac{1}{n} + \\frac{n^2}{(n+1)^3} + \\frac{n^2}{(n+2)^3} + ... + \\frac{1}{8n}] =",
+      "options": [
+        "\\frac{1}{8}",
+        "\\frac{1}{4}",
+        "\\frac{3}{8}",
+        "\\frac{1}{2}"
+      ],
+      "correctAnswer": "\\frac{3}{8}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615645",
+      "question": "The area of the region bounded by the lines x = 1, x = 4, y = 4x and y = x^2 is",
+      "options": [
+        "2",
+        "6",
+        "16",
+        "9"
+      ],
+      "correctAnswer": "9",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615646",
+      "question": "According to Simpson's \\frac{1}{3} rule, the value of the integral \\int_1^3 \\frac{1}{x} dx with h = \\frac{1}{2}, is",
+      "options": [
+        "1.5",
+        "0.5",
+        "1.1",
+        "2"
+      ],
+      "correctAnswer": "1.1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615647",
+      "question": "The differential equation whose general solution is y = Ax^2 + Bx, where A and B are arbitrary constants is",
+      "options": [
+        "x^2y'' + 2xy' - 2y = 0",
+        "x^2y'' - 2xy' + 2y = 0",
+        "y'' - 2y' + 2y = 0",
+        "x^2y'' - 2xy' - 2y = 0"
+      ],
+      "correctAnswer": "x^2y'' - 2xy' + 2y = 0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615648",
+      "question": "The general solution of the differential equation (e^x + 1)y dy + (y + 1) dx = 0 is",
+      "options": [
+        "e^{x-y} = c(y+1)(1-e^x)",
+        "e^{x+y} = c(y+1)(1+e^x)",
+        "e^{2x-y} = c(y+1)(1-e^x)",
+        "e^{x+y} = cy(1+e^x)"
+      ],
+      "correctAnswer": "e^{x+y} = c(y+1)(1+e^x)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615649",
+      "question": "If the differential equation (x^2 + y^2)dx + kxy dy = 0 is exact, then k =",
+      "options": [
+        "2",
+        "1",
+        "-1",
+        "-2"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615650",
+      "question": "The general solution of the differential equation \\frac{dy}{dx} + y \\tan x = \\cos^2 x is",
+      "options": [
+        "y \\cot x = \\tan x + c",
+        "y \\sec x = x \\sin x + c",
+        "x \\sec x = \\sin x + c",
+        "y \\sec x = \\sin x + c"
+      ],
+      "correctAnswer": "y \\sec x = \\sin x + c",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615651",
+      "question": "The integrating factor of the differential equation \\frac{dy}{dx} + \\frac{2x}{x^2+1}y = x^2 + 1 is",
+      "options": [
+        "2x",
+        "x^2 + 2",
+        "x^2 + 1",
+        "x^2 - 1"
+      ],
+      "correctAnswer": "x^2 + 1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615652",
+      "question": "The general solution of the differential equation y'' - 5y' - 6y = 0 is",
+      "options": [
+        "y = ae^{9x} + be^{4x}",
+        "y = ae^{-9x} + be^{-4x}",
+        "y = ae^{\\frac{2x}{2}} + be^{-\\frac{2x}{3}}",
+        "y = ae^{-\\frac{3x}{2}} + be^{-\\frac{2x}{3}}"
+      ],
+      "correctAnswer": "y = ae^{\\frac{2x}{2}} + be^{-\\frac{2x}{3}}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615653",
+      "question": "A particular integral of the differential equation (4D^2 + 4D - 3)y = e^{3x} is (Here D = \\frac{d}{dx})",
+      "options": [
+        "\\frac{1}{11}e^{3x}",
+        "\\frac{1}{45}e^{3x}",
+        "\\frac{1}{5}e^{3x}",
+        "\\frac{1}{3}e^{3x}"
+      ],
+      "correctAnswer": "\\frac{1}{45}e^{3x}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615654",
+      "question": "A particular integral of the differential equation (D^2 + 4)y = 5(\\cos 3x + \\sin 3x) is (Here D = \\frac{d}{dx})",
+      "options": [
+        "\\cos 3x + \\sin 3x",
+        "\\cos 3x - \\sin 3x",
+        "-\\cos 3x - \\sin 3x",
+        "\\sin 3x - \\cos 3x"
+      ],
+      "correctAnswer": "-\\cos 3x - \\sin 3x",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615655",
+      "question": "If L{\\int_0^t \\cosh 3u du} = f(s), then f(4) =",
+      "options": [
+        "\\frac{1}{7}",
+        "\\frac{1}{32}",
+        "0",
+        "\\frac{7}{32}"
+      ],
+      "correctAnswer": "\\frac{1}{7}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615656",
+      "question": "Let F(t) = \\begin{cases} e^{t-1}, & t > 1 \\\\ 0, & t < 1 \\end{cases}. If s > 1 then L{F(t)} =",
+      "options": [
+        "\\frac{1}{s-1}",
+        "\\frac{e^{-1}}{s-1}",
+        "\\frac{e^{-s}}{s-1}",
+        "\\frac{e^s}{s-1}"
+      ],
+      "correctAnswer": "\\frac{e^{-s}}{s-1}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615657",
+      "question": "\\int_0^\\infty te^{-t} \\sin t dt =",
+      "options": [
+        "-1",
+        "\\frac{1}{2}",
+        "0",
+        "2"
+      ],
+      "correctAnswer": "\\frac{1}{2}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615658",
+      "question": "L^{-1}{\\frac{1}{s(s-1)}} =",
+      "options": [
+        "1 - e^t",
+        "e^t + 1",
+        "e^{-t} - 1",
+        "e^t - 1"
+      ],
+      "correctAnswer": "e^t - 1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615659",
+      "question": "If L^{-1}{\\frac{s+1}{s^2+2s+2}} = e^{at}\\cos bt, then a^2+b^2 =",
+      "options": [
+        "2",
+        "4",
+        "0",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615660",
+      "question": "The convolution of the functions 1 and sin t is",
+      "options": [
+        "1 - \\cos t",
+        "1 - \\sin t",
+        "\\cos t",
+        "1 + \\cos t"
+      ],
+      "correctAnswer": "1 - \\cos t",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615661",
+      "question": "The Laplace transform of the solution of the initial value problem y'' + 9y = 9u(t-3), y(0) = 0, y'(0) = 0 (Here u(t-3) is the unit step function) is",
+      "options": [
+        "\\frac{9e^{-3s}}{s(s^2-9)}",
+        "\\frac{e^{-3s}}{s^2(s^2+9)}",
+        "\\frac{9e^{-3s}}{(s^2+9)^2}",
+        "\\frac{9e^{-3s}}{s(s^2+9)}"
+      ],
+      "correctAnswer": "\\frac{9e^{-3s}}{s(s^2+9)}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615662",
+      "question": "\\int_{\\pi/2}^{3\\pi/2} \\cos^2 4x dx =",
+      "options": [
+        "\\pi",
+        "3\\pi",
+        "2\\pi",
+        "\\pi/2"
+      ],
+      "correctAnswer": "\\pi",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615663",
+      "question": "The value of a_3 in the Fourier series expansion of the function f(x) = \\begin{cases} 0, & -\\pi < x \\le 0 \\\\ x, & 0 < x \\le \\pi \\end{cases} is",
+      "options": [
+        "\\frac{-2}{\\pi}",
+        "\\frac{-2}{3\\pi}",
+        "\\frac{-2}{5\\pi}",
+        "\\frac{-2}{9\\pi}"
+      ],
+      "correctAnswer": "\\frac{-2}{9\\pi}",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615664",
+      "question": "The value of b_1 in the Fourier series expansion of f(x) = x \\sin x in 0 \\le x \\le 2\\pi is",
+      "options": [
+        "\\pi",
+        "2\\pi",
+        "3\\pi",
+        "4\\pi"
+      ],
+      "correctAnswer": "\\pi",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615665",
+      "question": "The period of the function f(x) = \\sin(\\frac{\\pi x}{3}) is",
+      "options": [
+        "\\pi",
+        "\\pi/3",
+        "\\pi/6",
+        "6"
+      ],
+      "correctAnswer": "6",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5069615666",
+      "question": "Velocity (v) of water waves depends on their Wavelength (\\lambda), Density of Water (\\rho) and acceleration due to gravity (g). By the method of dimensional analysis, the relation between these quantities is given by",
+      "options": [
+        "v^2 is proportional to (\\rho\\lambda g)",
+        "v is proportional to \\lambda g/\\sqrt{\\rho}",
+        "v^2 is proportional to (\\lambda g)",
+        "v is proportional to (\\rho\\lambda g)"
+      ],
+      "correctAnswer": "v^2 is proportional to (\\lambda g)",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615667",
+      "question": "The Force \\vec{F} = 2\\hat{i} + 3\\hat{j} + 7\\hat{k} newtons (N), acting on an object causes a displacement \\vec{S} = 2\\hat{i} + 3\\hat{j} + 5\\hat{k} meters (m). Then the work done is",
+      "options": [
+        "30 Nm",
+        "40 Nm",
+        "48 Nm",
+        "25 Nm"
+      ],
+      "correctAnswer": "48 Nm",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615668",
+      "question": "\\vec{A} = \\hat{i} + 2\\hat{j} + 3\\hat{k} and \\vec{B} = 3\\hat{i} + 2\\hat{j} + \\hat{k} are the adjacent sides of a parallelogram respectively. The area of the Parallelogram is",
+      "options": [
+        "8\\sqrt{2}",
+        "8\\sqrt{3}",
+        "3\\sqrt{8}",
+        "\\sqrt{8}"
+      ],
+      "correctAnswer": "8\\sqrt{3}",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615669",
+      "question": "A block is placed on a rough floor and a horizontal force ‘F’ is applied on it. The force of friction ‘f’ by the floor on the block is measured for different values of ‘F’. The graph between the ‘f’ and ‘F’ would be",
+      "options": [
+        "The graph is a straight line of slope 45° for all ‘F’",
+        "The graph is a straight line parallel to ‘F’ axis for all ‘F’",
+        "The graph is a straight line of slope 45° for small values of ‘F’ and straight line parallel to ‘F’ axis for large ‘F’",
+        "The graph is exponential with values of ‘F’"
+      ],
+      "correctAnswer": "The graph is a straight line of slope 45° for small values of ‘F’ and straight line parallel to ‘F’ axis for large ‘F’",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615670",
+      "question": "Throughout the flight of a particle in projectile motion",
+      "options": [
+        "The horizontal component of velocity is constant",
+        "The vertical component of velocity is constant",
+        "The horizontal component of velocity decreases",
+        "The horizontal component of velocity is zero"
+      ],
+      "correctAnswer": "The horizontal component of velocity is constant",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615671",
+      "question": "A motor cyclist driving with a speed of 0.6 km/minute goes over a turn of radius of curvature 10 m. His slope with vertical in degrees (take g = 10 m/sec^2).",
+      "options": [
+        "0°",
+        "30°",
+        "45°",
+        "60°"
+      ],
+      "correctAnswer": "45°",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615672",
+      "question": "Two wires of lengths in the ratio 2:3 taken from same material and having the same mass are stretched by same force. Then their elongations are in the ratio of",
+      "options": [
+        "2:3",
+        "3:2",
+        "1:2",
+        "4:9"
+      ],
+      "correctAnswer": "4:9",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615673",
+      "question": "Which of the following statements is wrong?",
+      "options": [
+        "Surface Tension of a liquid decreases with increase of temperature",
+        "Surface Tension of a liquid increases or decreases depending on the type of impurities added to the liquid",
+        "Angle of Contact depends on the inclination of the solid rod placed in the liquid",
+        "A drop of oil placed on the surface of water will spread as a thin layer"
+      ],
+      "correctAnswer": "Angle of Contact depends on the inclination of the solid rod placed in the liquid",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615674",
+      "question": "A streamline flow is maintained across the two capillary tubes A and B connected in series. The length of B is twice that of A and the radius of B is half that of A. The pressure across A is P. The pressure across B is",
+      "options": [
+        "4P",
+        "16P",
+        "32P",
+        "P/32"
+      ],
+      "correctAnswer": "32P",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615675",
+      "question": "A body of mass 0.1 kg is thrown vertically upward. At a certain point above the ground, the Potential energy and Kinetic energy of the body are 3.7 J and 6.3 J. The maximum height it reaches is (g=10m/s^2)",
+      "options": [
+        "10 m",
+        "4 m",
+        "100 m",
+        "0.7 m"
+      ],
+      "correctAnswer": "10 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615676",
+      "question": "Two containers of volumes 20m^3 and 30m^3 have gases at Pressures of 40 MPa and 50 MPa. The two containers are connected by a very narrow pipe of negligible volume and the gases are allowed to intermingle. If the temperature remains constant, the final pressure in MPa is",
+      "options": [
+        "46",
+        "40",
+        "50",
+        "30"
+      ],
+      "correctAnswer": "46",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615677",
+      "question": "During an adiabatic process, a mono atomic gas at 27°C is compressed suddenly to 1/8 of its original volume. Then the Final temperature in °C is (The ratio of the two specific heats of gases = 5/3)",
+      "options": [
+        "1160",
+        "887",
+        "927",
+        "88"
+      ],
+      "correctAnswer": "927",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615678",
+      "question": "The time period of a simple pendulum is 3 sec. Its length is made 4 times. Then its time period is",
+      "options": [
+        "3 sec",
+        "4 sec",
+        "6 sec",
+        "1.5 sec"
+      ],
+      "correctAnswer": "6 sec",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615679",
+      "question": "A particle executes Simple Harmonic Motion with an amplitude of 5 cm. When the particle is at 4 cm from the mean position, the magnitude of its velocity in SI units is equal to that of its acceleration. Then, its periodic time in seconds is",
+      "options": [
+        "8\\pi/3",
+        "4\\pi/3",
+        "3\\pi/8",
+        "7\\pi/3"
+      ],
+      "correctAnswer": "8\\pi/3",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615680",
+      "question": "The two equations of Simple Harmonic Motions are Y_1= 12 Sin(50t +\\pi/2) and Y_2 =12 Sin(50t +\\pi/3). The phase difference between two motions is",
+      "options": [
+        "\\pi/2",
+        "\\pi/3",
+        "\\pi/6",
+        "\\pi/8"
+      ],
+      "correctAnswer": "\\pi/6",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615681",
+      "question": "Multiple reflections leading to persistence of sound in an auditorium are",
+      "options": [
+        "beats",
+        "echo",
+        "reverberation",
+        "stationary waves"
+      ],
+      "correctAnswer": "reverberation",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615682",
+      "question": "Two sources S_1 and S_2 are moving with certain velocities. The apparent frequencies observed by a stationary observer are double and half of their original frequencies respectively. If the velocity of sound is v and velocity of wind is zero, then the velocities of two sources respectively are",
+      "options": [
+        "v/2 and 2v",
+        "v and v/2",
+        "3v/2 and 2v",
+        "v/2 and v"
+      ],
+      "correctAnswer": "v/2 and v",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615683",
+      "question": "The Moment of couple acting on a bar magnet kept at an angle 30° to the direction of uniform magnetic field of induction 2 Tesla is equal to",
+      "options": [
+        "Pole Strength of the Magnet",
+        "Length of the Magnet",
+        "Magnetic Flux",
+        "Magnetic Moment of the Magnet"
+      ],
+      "correctAnswer": "Magnetic Moment of the Magnet",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615684",
+      "question": "In a Meter Bridge, R_1 and R_2 are the resistances connected in the left and right gaps respectively. The bridge is balanced at the balancing point of 60 cm from left. When a resistance of 30 \\Omega is connected in parallel to R_2, the balancing point shifted to 90 cm. The values of R_1 and R_2 respectively are (in \\Omega)",
+      "options": [
+        "30 and 50",
+        "200 and 350",
+        "225 and 150",
+        "100 and 75"
+      ],
+      "correctAnswer": "225 and 150",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615685",
+      "question": "When 220 V AC is applied across a step-up transformer, it draws a current of 3A in the secondary. If the number of turns in the primary coil of the transformer is 100 and that of secondary coil is 2000. The output power of the transformer is",
+      "options": [
+        "8800 W",
+        "13200 W",
+        "4400 W",
+        "2200 W"
+      ],
+      "correctAnswer": "13200 W",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615686",
+      "question": "A photon of frequency v is incident on a photosensitive metal surface whose threshold frequency is v_o. The kinetic energy of emitted photo electron is",
+      "options": [
+        "h*v",
+        "h*v_o",
+        "h*(v - v_o)",
+        "h*(v + v_o)"
+      ],
+      "correctAnswer": "h*(v - v_o)",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615687",
+      "question": "In LASER, the condition of Population Inversion mean",
+      "options": [
+        "The number of atoms in the lower energy state are more than the higher energy state",
+        "The number of atoms in the higher energy state are more than the lower energy state",
+        "The number of atoms in the lower and higher energy states are same",
+        "The number of atoms in higher energy state are zero"
+      ],
+      "correctAnswer": "The number of atoms in the higher energy state are more than the lower energy state",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615688",
+      "question": "In a Graded Index Optical Fibre",
+      "options": [
+        "The Refractive Index of the core remains constant and will be greater than that of the cladding",
+        "The Refractive Index of the core remains constant and will be less than that of the cladding",
+        "The Refractive Indices of both core and cladding remain constant and are equal",
+        "The Refractive Index of the core varies with maximum at the centre and decreases as the radial distance increases from the axis of the core"
+      ],
+      "correctAnswer": "The Refractive Index of the core varies with maximum at the centre and decreases as the radial distance increases from the axis of the core",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615689",
+      "question": "Which of the following statements is correct, if n_e and n_h are the concentrations of the Electrons and Holes respectively",
+      "options": [
+        "In an intrinsic semiconductor, n_e = n_h and both these charge carriers contribute to current equally",
+        "In p-type semiconductor, n_e > n_h and the current due to electrons is more than that of holes",
+        "In n-type semiconductor, n_p > n_e and current due to holes is more than that of electrons",
+        "In an extrinsic semiconductor, n_e = n_h and both these charge carriers contribute to current equally"
+      ],
+      "correctAnswer": "In an intrinsic semiconductor, n_e = n_h and both these charge carriers contribute to current equally",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615690",
+      "question": "The semiconductors used for fabrication of visible LEDs have band gap",
+      "options": [
+        "Close to 1.5 eV",
+        "Close to 1.1 eV",
+        "About 1.0 eV to 1.6 eV",
+        "About 1.8 eV to 3 eV"
+      ],
+      "correctAnswer": "About 1.8 eV to 3 eV",
+      "topic": "Physics"
+    },
+    {
+      "id": "5069615691",
+      "question": "According to Aufbau principle, which orbital is filled immediately after each of the 3p, 4p, 4f and 5d?",
+      "options": [
+        "3d, 5s, 5d, 6p",
+        "3d, 4d, 5d, 6p",
+        "4s, 5s, 5d, 6p",
+        "4s, 5s, 5d, 7s"
+      ],
+      "correctAnswer": "4s, 5s, 5d, 6p",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615692",
+      "question": "Which one of the following properties is not due to hydrogen bonding.",
+      "options": [
+        "High boiling point of water",
+        "High viscosity of glycerol",
+        "Solubility of ammonia in water",
+        "Polar nature of halogen acid"
+      ],
+      "correctAnswer": "Polar nature of halogen acid",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615693",
+      "question": "In above reaction equation, 2Mg(s) + O_2(g) -> 2MgO(s) the oxidation state of magnesium is changed from",
+      "options": [
+        "0 to +2",
+        "0 to -2",
+        "+2 to -1",
+        "+2 to 0"
+      ],
+      "correctAnswer": "0 to +2",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615694",
+      "question": "100 mL of ethanol, whose density is 1.2 g.mL^{-1} is diluted to 1.0 L by addition of distilled water. Molarity of the resultant solution is",
+      "options": [
+        "1.60",
+        "2.60",
+        "0.46",
+        "2.90"
+      ],
+      "correctAnswer": "2.60",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615695",
+      "question": "Among the below options, which is not a characteristic of a colloid",
+      "options": [
+        "Particle size between 10 A° - 1000 A°",
+        "Heterogeneous",
+        "Can be separable by filtration",
+        "Diffuse slowly"
+      ],
+      "correctAnswer": "Can be separable by filtration",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615696",
+      "question": "The correct order of decreasing strength of acids is",
+      "options": [
+        "HClO_4 > H_2SO_4 > HNO_3 > HCl",
+        "H_2SO_4 > HClO_4 > HCl > HNO_3",
+        "HClO_4 > H_2SO_4 > HCl > HNO_3",
+        "HNO_3 > HCl > H_2SO_4 > HClO_4"
+      ],
+      "correctAnswer": "HClO_4 > H_2SO_4 > HCl > HNO_3",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615697",
+      "question": "The solution which can resist change in its pH on the addition of an acid or a base is known as",
+      "options": [
+        "Isotonic solution",
+        "Colloidal solution",
+        "Neutral solution",
+        "Buffer solution"
+      ],
+      "correctAnswer": "Buffer solution",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615698",
+      "question": "The minimum level of a pollutant above which a healthy individual worker is adversely affected on exposure to it for eight hours in a day is called",
+      "options": [
+        "Critical Limit Value",
+        "Toxic Limit Value",
+        "Threshold Limit Value",
+        "Dangerous Limit Value"
+      ],
+      "correctAnswer": "Threshold Limit Value",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615699",
+      "question": "The consequences of global warming are: (A) Increase in average temperature of the earth (B) Melting of Himalayan glaciers (C) Increased Biochemical Oxygen Demand of natural water (D) Eutrophication of water bodies. Choose the correct option.",
+      "options": [
+        "A, D",
+        "A, C",
+        "A, B",
+        "A, B, C"
+      ],
+      "correctAnswer": "A, B",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615700",
+      "question": "The chemicals used for defluoridation of water by Nalgonda Technique are",
+      "options": [
+        "CaO and CaOCl_2",
+        "Alum, CaO and CaOCl_2",
+        "CaH_2, NaOCl and Alum",
+        "NaOCl, NaH and Alum"
+      ],
+      "correctAnswer": "Alum, CaO and CaOCl_2",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615701",
+      "question": "The process which removes non-ionic, ionic, colloidal and organic matter in water is",
+      "options": [
+        "Ion exchange process",
+        "Lime soda process",
+        "Reverse osmosis process",
+        "Zeolite process"
+      ],
+      "correctAnswer": "Reverse osmosis process",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615702",
+      "question": "The set of products that are formed during electrolysis of aqueous solution of KCl between platinum electrodes is",
+      "options": [
+        "HCl and KOH",
+        "KOH and Cl_2",
+        "KOH, Cl_2 and H_2",
+        "K and Cl_2"
+      ],
+      "correctAnswer": "KOH, Cl_2 and H_2",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615703",
+      "question": "When same quantity of electricity is passed through aqueous AgNO_3 and H_2SO_4 solutions connected in series, 5.04 x 10^{-2} g of H_2 is liberated. What is the mass of silver (in grams) deposited? (Eq. Wt. of hydrogen and silver is 1.008 and 108 respectively)",
+      "options": [
+        "54",
+        "0.54",
+        "5.4",
+        "10.8"
+      ],
+      "correctAnswer": "5.4",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615704",
+      "question": "Choose the correct option that differentiates metals from non-metals",
+      "options": [
+        "Metals form acidic oxides, whereas non-metals form basic oxides.",
+        "Metals have a tendency to gain electrons, whereas non-metals have a tendency to lose electrons.",
+        "Metals are generally good conductors of electricity, whereas non-metals are insulators.",
+        "All metals exist in a solid state at room temperature."
+      ],
+      "correctAnswer": "Metals are generally good conductors of electricity, whereas non-metals are insulators.",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615705",
+      "question": "Nichrome is commonly used in heating elements because",
+      "options": [
+        "It has high electrical conductivity",
+        "It has a high melting point and corrosion resistance",
+        "It is lightweight",
+        "It is brittle and hard"
+      ],
+      "correctAnswer": "It has a high melting point and corrosion resistance",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615706",
+      "question": "_________ combinations is used for prevention of corrosion.",
+      "options": [
+        "Phosphorous or Antimony",
+        "Phosphorous or Chlorine",
+        "Antimony or Nitrogen",
+        "Antimony or Sodium"
+      ],
+      "correctAnswer": "Phosphorous or Antimony",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615707",
+      "question": "The process of coating zinc metal over iron to improve corrosion resistance of iron is called",
+      "options": [
+        "Electroplating",
+        "Annealing",
+        "Galvanizing",
+        "Tinning"
+      ],
+      "correctAnswer": "Galvanizing",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615708",
+      "question": "_________ is a cross linked polymer.",
+      "options": [
+        "Bakelite",
+        "LDPE",
+        "Polystyrene",
+        "PVC"
+      ],
+      "correctAnswer": "Bakelite",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615709",
+      "question": "Identify the Biodegradable polymers from the following and choose the correct option. (I) PVC (II) PHBV (III) Polypropylene (IV) Nylon-2-nylon-6",
+      "options": [
+        "I and II",
+        "II and IV",
+        "I and IV",
+        "I, II and III"
+      ],
+      "correctAnswer": "II and IV",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615710",
+      "question": "Calculate the amount of oxygen required for the complete combustion of 1 mole of Methane (CH_4).",
+      "options": [
+        "1 mole",
+        "2 moles",
+        "3 moles",
+        "4 moles"
+      ],
+      "correctAnswer": "2 moles",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615711",
+      "question": "_________ represents the composition of water gas",
+      "options": [
+        "CO + H_2",
+        "CO_2 + H_2",
+        "CO + CH_4",
+        "CO_2 + CH_4"
+      ],
+      "correctAnswer": "CO + H_2",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615712",
+      "question": "Match the following and choose the correct option. List-I a) Hydrogen electrode b) Standard hydrogen electrode c) Metal-metal ion electrode d) Glass electrode List-II (i) Pt | Fe^{3+}, Fe^{2+} (ii) Fe | Fe^{2+} (iii) pH measurement (iv) Pt, H_2 (2 bar) | H^{+} (0.1M) (v) Pt, H_2 (1 bar) | H^{+} (1.0M) (vi) Oxidation electrode",
+      "options": [
+        "a - iii, b - v, c - i, d - vi",
+        "a - v, b - iv, c - ii, d - iii",
+        "a - v, b - iii, c -i, d - vi",
+        "a - iv, b - v, c - ii, d- iii"
+      ],
+      "correctAnswer": "a - iv, b - v, c - ii, d- iii",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615713",
+      "question": "The cell reaction of the galvanic cell Cu(s) | Cu^{2+}(aq) || Ag^{+}(aq) | Ag(s) is",
+      "options": [
+        "Ag + Cu^{2+} -> Ag^{+} + Cu^{+}",
+        "Ag + Cu^{2+} -> Ag^{+} + Cu",
+        "Cu + 2Ag^{+} -> Cu^{2+} + 2Ag",
+        "Cu^{2+} + 2Ag -> Cu^{2+} + 2Ag^{+}"
+      ],
+      "correctAnswer": "Cu + 2Ag^{+} -> Cu^{2+} + 2Ag",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615714",
+      "question": "_________ is used to reduce water pollution.",
+      "options": [
+        "Neem",
+        "Watermelon",
+        "Water hyacinth",
+        "People"
+      ],
+      "correctAnswer": "Water hyacinth",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615715",
+      "question": "Which of the following can cause soil pollution",
+      "options": [
+        "DDT",
+        "CO_2",
+        "NO_2",
+        "Nitrogen"
+      ],
+      "correctAnswer": "DDT",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5069615716",
+      "question": "The decimal equivalent of the octal number (645)_8 is ________",
+      "options": [
+        "(450)_{10}",
+        "(451)_{10}",
+        "(421)_{10}",
+        "(501)_{10}"
+      ],
+      "correctAnswer": "(421)_{10}",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615717",
+      "question": "The characteristic equation of JK flip flop is",
+      "options": [
+        "Q(n+1) = J\\bar{Q}(n) + \\bar{K}Q(n)",
+        "Q(n+1) = J\\bar{Q}(n) + K\\bar{Q}(n)",
+        "Q(n+1) = J\\bar{Q}(n) + K\\bar{Q}(n)",
+        "Q(n+1) = J\\bar{Q}(n) + \\bar{K}\\bar{Q}(n)"
+      ],
+      "correctAnswer": "Q(n+1) = J\\bar{Q}(n) + \\bar{K}Q(n)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615718",
+      "question": "Multiplication result of (10.10)_2 and (01.01)_2 is __________",
+      "options": [
+        "101.0010",
+        "0010.101",
+        "011.0010",
+        "110.0011"
+      ],
+      "correctAnswer": "011.0010",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615719",
+      "question": "For the logic circuit shown in the figure the required input (A, B, C) condition to make the output (X) = 1 is",
+      "options": [
+        "(1,0,1)",
+        "(0,0,1)",
+        "(1,1,1)",
+        "(0,1,1)"
+      ],
+      "correctAnswer": "(0,1,1)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615720",
+      "question": "A three variable truth table has a High output for the inputs (A, B, C): 010, 011 and 110. The Boolean expression for Sum Of Product (SOP) can be written as",
+      "options": [
+        "AB + BC",
+        "\\bar{A}B + B\\bar{C}",
+        "\\bar{A}B + BC",
+        "AB + B\\bar{C}"
+      ],
+      "correctAnswer": "\\bar{A}B + B\\bar{C}",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615721",
+      "question": "The logic function implemented by the circuit shown below is (ground implies a logic “0”)",
+      "options": [
+        "F = AND (P, Q)",
+        "F = OR (P, Q)",
+        "F = XNOR (P, Q)",
+        "F = XOR (P, Q)"
+      ],
+      "correctAnswer": "F = XOR (P, Q)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615722",
+      "question": "Among the digital IC families ECL, TTL and CMOS, which one of the following is correct?",
+      "options": [
+        "ECL has more propagation delay",
+        "TTL has the largest Fan-out",
+        "CMOS has the lowest power consumption",
+        "TTL has the highest noise margin"
+      ],
+      "correctAnswer": "CMOS has the lowest power consumption",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615723",
+      "question": "The outputs of the two flip-flops Q_1, Q_2 in the figure shown are initialized to 0, 0. The sequence generated at Q_1 upon application of clock signal is",
+      "options": [
+        "01110...",
+        "01010...",
+        "00110...",
+        "01100..."
+      ],
+      "correctAnswer": "01100...",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615724",
+      "question": "The output frequency of a mod-12 counter is 6 KHz, then the input frequency is",
+      "options": [
+        "6 KHz",
+        "500 Hz",
+        "24 KHz",
+        "72 KHz"
+      ],
+      "correctAnswer": "72 KHz",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615725",
+      "question": "Which of the following is correct for DRAM",
+      "options": [
+        "Periodic refreshing is not required",
+        "Data is stored in Capacitor",
+        "Data stored in Latch",
+        "Read and write operations performed simultaneously"
+      ],
+      "correctAnswer": "Data is stored in Capacitor",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615726",
+      "question": "The most relevant addressing mode to write position independent code is",
+      "options": [
+        "Direct Mode",
+        "Indirect Mode",
+        "Relative Mode",
+        "Indexed Mode"
+      ],
+      "correctAnswer": "Relative Mode",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615727",
+      "question": "The speed imbalance between memory access and CPU operation can be reduced by",
+      "options": [
+        "Cycle Stealing",
+        "Memory Interleaving",
+        "Reducing the size of memory",
+        "Demand Paging"
+      ],
+      "correctAnswer": "Memory Interleaving",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615728",
+      "question": "On receiving an interrupt from an I/O device, the CPU",
+      "options": [
+        "Halts for a predetermined time",
+        "Hands over control of address bus and data bus to the interrupting device",
+        "Branches off to the interrupt service routine immediately",
+        "Branches off to the interrupt service routine after completion of the current instruction"
+      ],
+      "correctAnswer": "Branches off to the interrupt service routine after completion of the current instruction",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615729",
+      "question": "The three main components of a digital computer system are",
+      "options": [
+        "Memory, I/O, DMA",
+        "ALU, CPU, memory",
+        "Memory, CPU, I/O",
+        "Control circuits, ALU, registers"
+      ],
+      "correctAnswer": "Memory, CPU, I/O",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615730",
+      "question": "The computer architecture aimed at reducing the time of execution of instructions is",
+      "options": [
+        "CISC",
+        "RISC",
+        "ISA",
+        "Von Neumann"
+      ],
+      "correctAnswer": "RISC",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615731",
+      "question": "The method of accessing the I/O devices by repeatedly checking the status flags is called",
+      "options": [
+        "Program-controlled I/O",
+        "Memory-mapped I/O",
+        "Status mapped I/O",
+        "Direct Memory Access"
+      ],
+      "correctAnswer": "Program-controlled I/O",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615732",
+      "question": "SIMD represents an organization that",
+      "options": [
+        "Refers to a computer system capable of processing several programs at the same time",
+        "Represents organization of single computer containing a control unit, processor unit and a memory unit",
+        "Includes many processing units under the supervision of a common control unit",
+        "Includes many processing units with non-shared memory"
+      ],
+      "correctAnswer": "Includes many processing units under the supervision of a common control unit",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615733",
+      "question": "Memory access in RISC architecture is limited to ________ instructions",
+      "options": [
+        "CALL and RET",
+        "PUSH and POP",
+        "MOV and JMP",
+        "STA and LDA"
+      ],
+      "correctAnswer": "STA and LDA",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615734",
+      "question": "Match the following and choose the correct option\nA. Increase in capacity and Access Time I. SCSI\nB. Signed Integers II. CPU registers to Magnetic Disk\nC. Bidirectional Bus III. Parallel Processing\nD. Associative Memory IV. 2’s Complement",
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-IV, C-II, D-I",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "correctAnswer": "A-II, B-IV, C-I, D-III",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615735",
+      "question": "The sequence of events in an instruction cycle are",
+      "options": [
+        "Storing, Fetching, Decoding, Executing",
+        "Fetching, Decoding, Executing, Storing",
+        "Storing, Decoding, Fetching, Executing",
+        "Fetching, Storing, Executing, Decoding"
+      ],
+      "correctAnswer": "Fetching, Decoding, Executing, Storing",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615736",
+      "question": "Which of the following is NOT a valid preprocessor directive?",
+      "options": [
+        "#include <stdio.h>",
+        "#define MAX 100",
+        "#macro SUM(a, b) (a + b)",
+        "#ifdef DEBUG"
+      ],
+      "correctAnswer": "#macro SUM(a, b) (a + b)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615737",
+      "question": "What is the output of the following C code?\n#include <stdio.h>\nvoid func(int *p) {\n  *p = *p + 5;\n}\nint main() {\n  int a = 10;\n  func(&a);\n  printf(\"%d\", a);\n  return 0;\n}",
+      "options": [
+        "10",
+        "15",
+        "Compilation Error",
+        "Undefined Behaviour"
+      ],
+      "correctAnswer": "15",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615738",
+      "question": "What is the output of the following C code?\n#include <stdio.h>\nvoid func(int *x) {\n  *x = *x + 10;\n}\nint main() {\n  int a = 5;\n  func(a);\n  printf(\"%d\", a);\n  return 0;\n}",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "Compilation Error"
+      ],
+      "correctAnswer": "Compilation Error",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615739",
+      "question": "Which of the following is TRUE about unions in C?",
+      "options": [
+        "All members share the same memory location",
+        "Union members can store values simultaneously",
+        "Unions take more memory than structures",
+        "No option is correct"
+      ],
+      "correctAnswer": "All members share the same memory location",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615740",
+      "question": "What is the output of the following C code?\n#include <stdio.h>\nint main() {\n  int arr[2][2] = {{1, 2, 3, 4}};\n  printf(\"%d\", *(*(arr + 1) + 1));\n  return 0;\n}",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "Compilation Error"
+      ],
+      "correctAnswer": "4",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615741",
+      "question": "What is the time complexity to insert a node somewhere in the middle of the linked list?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n^2)"
+      ],
+      "correctAnswer": "O(n)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615742",
+      "question": "What happens when we use malloc to allocate memory for a structure but forget to free it?",
+      "options": [
+        "The structure is automatically freed",
+        "Causes a segmentation fault",
+        "Causes a memory leak",
+        "The structure becomes inaccessible"
+      ],
+      "correctAnswer": "Causes a memory leak",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615743",
+      "question": "In a doubly linked list, the most expensive operation is",
+      "options": [
+        "Insertion at the beginning",
+        "Creation of list",
+        "Traversing the list",
+        "Deleting a node with a given value"
+      ],
+      "correctAnswer": "Deleting a node with a given value",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615744",
+      "question": "Which data structure is best suited for implementing a priority queue?",
+      "options": [
+        "Stack",
+        "Binary Heap",
+        "Circular Queue",
+        "Doubly Linked List"
+      ],
+      "correctAnswer": "Binary Heap",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615745",
+      "question": "How many comparisons are required to search for an element in a sorted array of size 1024 using binary search in the worst case?",
+      "options": [
+        "10",
+        "1024",
+        "512",
+        "20"
+      ],
+      "correctAnswer": "10",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615746",
+      "question": "Given two singly linked lists, the most efficient way to find their intersection node is",
+      "options": [
+        "Traverse both lists and compare each node (O(n^2))",
+        "Use hashing (O(n) space, O(n) time)",
+        "Find the difference in lengths and traverse accordingly (O(n) time, O(1) space)",
+        "Sort both lists and compare (O(n log n))"
+      ],
+      "correctAnswer": "Find the difference in lengths and traverse accordingly (O(n) time, O(1) space)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615747",
+      "question": "Which of the following is an application of the stack data structure?",
+      "options": [
+        "Function Call Recursion",
+        "Level Order Tree Traversal",
+        "Scheduling in Operating Systems",
+        "Binary Search"
+      ],
+      "correctAnswer": "Function Call Recursion",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615748",
+      "question": "Which of the following statement is true?",
+      "options": [
+        "All objects of a class share all the data members of the class",
+        "Objects of a class do not share non-static members of the class. Every object has its own copy",
+        "Objects of a class do not share codes of non-static methods, they have their own copy",
+        "Objects of a class share non-static members of the class. Every object has its own copy"
+      ],
+      "correctAnswer": "Objects of a class do not share non-static members of the class. Every object has its own copy",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615749",
+      "question": "In a class definition, functions and data designated private are accessible",
+      "options": [
+        "to any function in the program",
+        "only if you know the password",
+        "only to public members of the class",
+        "to member functions of that class"
+      ],
+      "correctAnswer": "to member functions of that class",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615750",
+      "question": "What will be the output of the following C++ code?\n#include <iostream>\n#include <string>\nusing namespace std;\nint main(int argc, char const *argv[])\n{\n  char s1[6] = \"Hello\";\n  char s2[6] = \"World\";\n  char s3[12] = s1 + \" \" + s2;\n  cout<<s3;\n  return 0;\n}",
+      "options": [
+        "Hello",
+        "World",
+        "Error",
+        "Hello World"
+      ],
+      "correctAnswer": "Error",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615751",
+      "question": "Operator overloading in C++ is",
+      "options": [
+        "making C++ operators work with objects",
+        "giving C++ operators more than they can handle",
+        "making new C++ operators",
+        "giving new meanings to existing C++ operators"
+      ],
+      "correctAnswer": "making C++ operators work with objects",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615752",
+      "question": "A pointer points to the type of variable that must be part of the pointer's definition such that",
+      "options": [
+        "the compiler can perform arithmetic operations correctly to access the array elements",
+        "Pointers can be added to one another to access structure members",
+        "The data types don't get mixed up when arithmetic operations are performed on them",
+        "Pointers will not point to any variable"
+      ],
+      "correctAnswer": "The data types don't get mixed up when arithmetic operations are performed on them",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615753",
+      "question": "Aggregation is ___________",
+      "options": [
+        "A stronger form of instantiation",
+        "A stronger form of generalization",
+        "A stronger form of composition",
+        "A “has a” relationship"
+      ],
+      "correctAnswer": "A “has a” relationship",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615754",
+      "question": "Which of the following is used for late-binding?",
+      "options": [
+        "Constant functions",
+        "Virtual functions",
+        "Operator functions",
+        "Friend functions"
+      ],
+      "correctAnswer": "Virtual functions",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615755",
+      "question": "What is the output of the following code?\n#include <iostream>\ninline int inlinedemo(int a, int b) {\n  int sum = 0;\n  for (int i = 0; i < 100; i++)\n  {\n    sum += (a + b) * i;\n  }\n  return sum;\n}\nint main() {\n  std::cout << inlinedemo(5, 10) << std::endl;\n  return 0;\n}",
+      "options": [
+        "74256",
+        "74250",
+        "74251",
+        "74257"
+      ],
+      "correctAnswer": "74250",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615756",
+      "question": "The purpose of the template class is to",
+      "options": [
+        "Work with different data types",
+        "Store in different containers",
+        "Generate classes with different numbers of member functions",
+        "Generate objects which must all be identical"
+      ],
+      "correctAnswer": "Work with different data types",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615757",
+      "question": "Select the correct option with respect to function templates.",
+      "options": [
+        "Code duplicating is increased",
+        "It takes a long time to execute",
+        "It takes a long time to execute & duplicate code is increased",
+        "Writes only one function and will work with many different data types"
+      ],
+      "correctAnswer": "Writes only one function and will work with many different data types",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615758",
+      "question": "A functional dependency of the form X->Y is trivial if",
+      "options": [
+        "Y \\subseteq X",
+        "Y \\subset X",
+        "X \\subseteq Y",
+        "X \\subset Y and Y \\subset X"
+      ],
+      "correctAnswer": "Y \\subseteq X",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615759",
+      "question": "An ER diagram incorrectly shows two entities directly connected by more than one relationship, this error is known as",
+      "options": [
+        "Attribute duplication",
+        "Relationship redundancy",
+        "Cardinality mismatch",
+        "Entity ambiguity"
+      ],
+      "correctAnswer": "Relationship redundancy",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615760",
+      "question": "Given relations R(w,x) and S(y,z), the result of SELECT DISTINCT w, x FROM R, S is guaranteed to be same as R, if",
+      "options": [
+        "R and S have the same number of tuples",
+        "R and S have no duplicates",
+        "S has no duplicates and R is non-empty",
+        "R has no duplicates and S is non-empty"
+      ],
+      "correctAnswer": "R has no duplicates and S is non-empty",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615761",
+      "question": "In SQL, the JOIN clause is used to",
+      "options": [
+        "Combine rows from only two tables based on related columns",
+        "Combine rows from only distinct tables based on related columns",
+        "Combine rows from two or more tables based on related columns",
+        "Combine rows from more than two distinct tables based on related columns"
+      ],
+      "correctAnswer": "Combine rows from two or more tables based on related columns",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615762",
+      "question": "A developer runs a query to select all records from a table, but it returns no results despite the table being not empty. What is the likely cause?",
+      "options": [
+        "A syntax error in the SELECT statement",
+        "The WHERE clause is filtering out all records",
+        "The table is locked",
+        "The database connection is lost"
+      ],
+      "correctAnswer": "The WHERE clause is filtering out all records",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615763",
+      "question": "In SQL, how to modify an existing table to add a foreign key constraint referencing another table?",
+      "options": [
+        "ALTER TABLE table_name ADD CONSTRAINT fk_name FOREIGN KEY (column1) REFERENCES other_table(column2)",
+        "ALTER TABLE table_name MODIFY COLUMN column_name FOREIGN KEY REFERENCES other_table(column_name)",
+        "ALTER TABLE table_name ADD FOREIGN KEY (column_name) REFERENCES other_table",
+        "USE table_name ADD FOREIGN KEY REFERENCES other_table"
+      ],
+      "correctAnswer": "ALTER TABLE table_name ADD CONSTRAINT fk_name FOREIGN KEY (column1) REFERENCES other_table(column2)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615764",
+      "question": "The property that ensures a committed transaction's changes remain permanent even under system failures is",
+      "options": [
+        "Atomicity",
+        "Isolation",
+        "Consistency",
+        "Durability"
+      ],
+      "correctAnswer": "Durability",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615765",
+      "question": "A table contains a non-primary key column that depends on only part of a composite primary key. What normalization issue does this indicate?",
+      "options": [
+        "Partial dependency, indicating a violation of 2NF",
+        "Non-atomic values, indicating a violation of 1NF",
+        "Transitive dependency, indicating a violation of 3NF",
+        "Functional dependency, indicating a violation of 1NF"
+      ],
+      "correctAnswer": "Partial dependency, indicating a violation of 2NF",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615766",
+      "question": "In a relational database, what does a composite index refer to",
+      "options": [
+        "An index that combines multiple tables",
+        "An index built on a single column",
+        "An index used exclusively for joins",
+        "An index that includes multiple columns from a single table"
+      ],
+      "correctAnswer": "An index that includes multiple columns from a single table",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615767",
+      "question": "“Every non-key attribute is functionally dependent on the primary key”. this property belongs to",
+      "options": [
+        "First Normal Form",
+        "Second Normal Form",
+        "Third Normal Form",
+        "Fourth Normal Form"
+      ],
+      "correctAnswer": "Second Normal Form",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615768",
+      "question": "The function of the Northbridge in a motherboard chipset is",
+      "options": [
+        "Controls USB and audio functions",
+        "Manages RAM, PCIe, and CPU communication",
+        "Handles power distribution",
+        "Controls hard disk drives"
+      ],
+      "correctAnswer": "Manages RAM, PCIe, and CPU communication",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615769",
+      "question": "Arrange the following in decreasing order of speed\n1. L1 Cache\n2. L2 Cache\n3. RAM\n4. Hard Disk",
+      "options": [
+        "1 > 2 > 3 > 4",
+        "2 > 1 > 3 > 4",
+        "1 > 3 > 2 > 4",
+        "3 > 2 > 1 > 4"
+      ],
+      "correctAnswer": "1 > 2 > 3 > 4",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615770",
+      "question": "The following is NOT a step in the BIOS boot sequence",
+      "options": [
+        "Power-On Self Test (POST)",
+        "Loading the Operating System",
+        "Loading Device Drivers",
+        "Memory Paging Initialization"
+      ],
+      "correctAnswer": "Memory Paging Initialization",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615771",
+      "question": "Which of the following is NOT a characteristic of MAC addresses?",
+      "options": [
+        "Unique to every network device",
+        "48-bit in length",
+        "Assigned by software configuration",
+        "Used for local network communication"
+      ],
+      "correctAnswer": "Assigned by software configuration",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615772",
+      "question": "Which of the following is NOT true about TCP?",
+      "options": [
+        "Connection-oriented",
+        "Reliable data transfer",
+        "Faster than UDP",
+        "Provides congestion control"
+      ],
+      "correctAnswer": "Faster than UDP",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615773",
+      "question": "What is the correct sequence of messages in a TCP 3-way handshake?",
+      "options": [
+        "SYN -> SYN-ACK -> ACK",
+        "ACK -> SYN-ACK -> SYN",
+        "SYN-ACK -> SYN -> ACK",
+        "SYN -> ACK -> SYN-ACK"
+      ],
+      "correctAnswer": "SYN -> SYN-ACK -> ACK",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615774",
+      "question": "What is the primary difference between CSMA/CD and CSMA/CA?",
+      "options": [
+        "CSMA/CD avoids collisions, while CSMA/CA detects them",
+        "CSMA/CD detects collisions, while CSMA/CA avoids them",
+        "CSMA/CD is used in Wi-Fi, while CSMA/CA is used in Ethernet",
+        "CSMA/CD operates at the Network Layer, while CSMA/CA operates at the Transport Layer"
+      ],
+      "correctAnswer": "CSMA/CD detects collisions, while CSMA/CA avoids them",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615775",
+      "question": "In which OSI layer do switches operate",
+      "options": [
+        "Transport Layer",
+        "Network Layer",
+        "Data Link Layer",
+        "Physical Layer"
+      ],
+      "correctAnswer": "Data Link Layer",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615776",
+      "question": "In FTP, which mode establishes two separate connections for control and data?",
+      "options": [
+        "Active Mode",
+        "Passive Mode",
+        "Hybrid Mode",
+        "Broadcast Mode"
+      ],
+      "correctAnswer": "Active Mode",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615777",
+      "question": "In SMTP, which command is used to specify the sender's email address",
+      "options": [
+        "RCPT TO",
+        "MAIL FROM",
+        "DATA",
+        "HELO"
+      ],
+      "correctAnswer": "MAIL FROM",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615778",
+      "question": "Consider a computer system with ‘n’ CPUs. What will be the maximum number of processes that can exist in ready state?",
+      "options": [
+        "Independent of ‘n’",
+        "n",
+        "n^2",
+        "2^n"
+      ],
+      "correctAnswer": "Independent of ‘n’",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615779",
+      "question": "In a memory management system with a page size of 2 KB, where both physical and virtual addresses start from 0 and program pages 0, 1, 2 and 3 are mapped to main memory frames 1, 3, 2 and 0 respectively, what is the physical address (in decimal) which maps to the virtual address 2500?",
+      "options": [
+        "6496",
+        "6696",
+        "6596",
+        "6796"
+      ],
+      "correctAnswer": "6596",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615780",
+      "question": "Consider a scheduler that knows the CPU burst lengths in advance, three processes (A, B and C) arrive at time zero with CPU burst times of 16, 20 and 10 milliseconds. If a non-preemptive scheduling algorithm is used, what is the minimum possible average waiting time (rounded to the nearest integer) for these processes?",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "12",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615781",
+      "question": "Let the following five disk access requests from processes P, Q, R, S and T in the form (request ID, cylinder number): (P,155), (Q,85), (R,110), (S,30), (T,115). If the scheduler follows the Shortest Seek Time First (SSTF) scheduling algorithm and if the disk head is initially positioned at cylinder 100, then which of the following statements is false?",
+      "options": [
+        "R is serviced before P",
+        "The head reverses its direction of movement between servicing of Q and P",
+        "Q is serviced after S, but before T",
+        "T is serviced before P"
+      ],
+      "correctAnswer": "Q is serviced after S, but before T",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615782",
+      "question": "Which of the following process state transition is NOT possible?",
+      "options": [
+        "Running to Ready",
+        "Waiting to Running",
+        "Waiting to Ready",
+        "Running to terminated"
+      ],
+      "correctAnswer": "Waiting to Running",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615783",
+      "question": "Consider three processes A, B and C which have peak resource demand of 3, 4 and 6 respectively. But the system contains ‘m’ resources of the same type, the minimum value of ‘m’ required to ensure that deadlock never occurs is",
+      "options": [
+        "14",
+        "12",
+        "11",
+        "9"
+      ],
+      "correctAnswer": "11",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615784",
+      "question": "Consider the following C program\n{\n  fork();\n  fork();\n  printf(\"hello\");\n}\nIf this code segment is executed, how many times will the string \"hello\" be printed?",
+      "options": [
+        "4 times",
+        "2 times",
+        "1 time",
+        "8 times"
+      ],
+      "correctAnswer": "4 times",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615785",
+      "question": "A system has a TLB with 512 entries and a 4 KB page size. If the page size is increased to 16 KB, which of the following is true?",
+      "options": [
+        "TLB hit rate increases",
+        "TLB miss rate decreases",
+        "The number of addressable pages in the TLB decreases",
+        "The number of addressable pages in the TLB remains the same"
+      ],
+      "correctAnswer": "The number of addressable pages in the TLB decreases",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615786",
+      "question": "At a certain point in computation, the value of a counting semaphore is 7. After 20 P (wait) operations and x V (signal) operations, the new semaphore value becomes 5. What is the value of x?",
+      "options": [
+        "13",
+        "18",
+        "22",
+        "15"
+      ],
+      "correctAnswer": "18",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615787",
+      "question": "Which of the following statements incorrectly describes paging compared to segmentation?",
+      "options": [
+        "Paging suffers from internal fragmentation, whereas segmentation suffers from external fragmentation",
+        "In paging, the logical address is divided into page number and offset, whereas in segmentation it is divided into segment number and offset",
+        "Page size in paging is variable, whereas segment size is fixed",
+        "Paging helps in virtual memory management while segmentation allows logical program division"
+      ],
+      "correctAnswer": "Page size in paging is variable, whereas segment size is fixed",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615788",
+      "question": "Which of the following is NOT a feature of Java?",
+      "options": [
+        "Multithreaded",
+        "Object-oriented",
+        "Platform-dependent",
+        "Robust"
+      ],
+      "correctAnswer": "Platform-dependent",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615789",
+      "question": "________ component is responsible for running the compiled java bytecode.",
+      "options": [
+        "JDK",
+        "JVM",
+        "JRE",
+        "JIT"
+      ],
+      "correctAnswer": "JVM",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615790",
+      "question": "What will be the output of the following program?\npublic class Exam {\n  public static void main(String[] args) {\n    int count = 1;\n    while (count <= 15) {\n      System.out.println(count % 2 == 1 ? \"***\" : \"+++++\");\n      ++count;\n    } // end while\n  } // end main\n}",
+      "options": [
+        "8 times *** and 7 times +++++",
+        "15 times +++++",
+        "15 times ***",
+        "*and + will be printed consecutively"
+      ],
+      "correctAnswer": "8 times *** and 7 times +++++",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615791",
+      "question": "Predict the output of the code\nclass A {\n  int i = 10;\n  public A(int j) {\n    System.out.println(i);\n    this.i = j * 10;\n  }\n}\nclass B extends A {\n  public B(int j) {\n    super(j);\n    System.out.println(i);\n    this.i = j * 20;\n  }\n}\npublic class MainClass {\n  public static void main(String[] args) {\n    B b = new B(20);\n    System.out.println(b.i);\n  }\n}",
+      "options": [
+        "20 10 400",
+        "400 20 10",
+        "400 10 20",
+        "10 200 400"
+      ],
+      "correctAnswer": "10 200 400",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615792",
+      "question": "Which keyword is used to define a constant variable in java?",
+      "options": [
+        "Static",
+        "Const",
+        "Final",
+        "Immutable"
+      ],
+      "correctAnswer": "Final",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615793",
+      "question": "Which of the following is a type of polymorphism in java?",
+      "options": [
+        "Multiple polymorphism",
+        "Multilevel polymorphism",
+        "Execution time polymorphism",
+        "Compile time polymorphism"
+      ],
+      "correctAnswer": "Compile time polymorphism",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615794",
+      "question": "What is chained exception in java?",
+      "options": [
+        "Exceptions occurred by the Virtual Machine Error",
+        "An exception caused by other exceptions",
+        "Exceptions occur in chains with discarding the debugging information",
+        "There is no such concept in java"
+      ],
+      "correctAnswer": "An exception caused by other exceptions",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615795",
+      "question": "What is an interface with no methods or fields called?",
+      "options": [
+        "Marker Interface",
+        "Abstract Interface",
+        "Runnable Interface",
+        "Sequence Interface"
+      ],
+      "correctAnswer": "Marker Interface",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615796",
+      "question": "Which of these methods is used to register a mouse motion listener?",
+      "options": [
+        "addMouse()",
+        "eventMouseListener()",
+        "addMouseListener()",
+        "addMouseMotionListener()"
+      ],
+      "correctAnswer": "addMouseMotionListener()",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615797",
+      "question": "What are the major components of the JDBC?",
+      "options": [
+        "DriverManager, Driver, Connection and ResultSet",
+        "DriverManager, Driver, Connection and Statement",
+        "DriverManager, Statement and ResultSet",
+        "DriverManager, Connection, Statement and ResultSet"
+      ],
+      "correctAnswer": "DriverManager, Driver, Connection and Statement",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615798",
+      "question": "Which of the following statement is True for Python tuple",
+      "options": [
+        "A tuple do not allow duplicate values",
+        "A tuple is unordered",
+        "We can change the tuple once created",
+        "We cannot change the tuple once created"
+      ],
+      "correctAnswer": "We cannot change the tuple once created",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615799",
+      "question": "What will be the output of the following Python code?\nclass tester:\n  def __init__(self, id):\n    self.id = str(id)\n    id=\"224\"\ntemp = tester(12)\nprint(temp.id)",
+      "options": [
+        "12",
+        "224",
+        "None",
+        "Error"
+      ],
+      "correctAnswer": "12",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615800",
+      "question": "The output of the following code is\nsampleList = [10, 20, 30, 40]\ndel sampleList[0:6]\nprint(sampleList)",
+      "options": [
+        "[]",
+        "List index out of range",
+        "[10,20]",
+        "TypeError"
+      ],
+      "correctAnswer": "[]",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615801",
+      "question": "The output of the following program is\ntuple = {}\ntuple[(1,2,4)] = 8\ntuple[(4,2,1)] = 10\ntuple[(1,2)] = 12\n_sum = 0\nfor k in tuple:\n  _sum += tuple[k]\nprint(len(tuple) + _sum)",
+      "options": [
+        "12",
+        "31",
+        "33",
+        "34"
+      ],
+      "correctAnswer": "33",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615802",
+      "question": "Which of the following will not raise an error in Python?",
+      "options": [
+        "math.inf + 1",
+        "math.nan / 0",
+        "math.log(-5)",
+        "math.sqrt(-1)"
+      ],
+      "correctAnswer": "math.inf + 1",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615803",
+      "question": "The primary limitation of using grid() and pack() together in the same parent widget is",
+      "options": [
+        "It increases the window size",
+        "It makes widgets overlap",
+        "It does not allow widgets to be resized",
+        "It causes an error or unexpected behavior"
+      ],
+      "correctAnswer": "It causes an error or unexpected behavior",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615804",
+      "question": "The output of the following program is\nList = [True, 50, 10]\nList.insert(2, 5)\nprint(List, \"Sum is: \", sum(List))",
+      "options": [
+        "[True, 50, 10, 5] Sum is: 66",
+        "[True, 50, 5, 10] Sum is: 65",
+        "TypeError: unsupported operand type(s) for +: ‘int’ and ‘str’",
+        "[True, 50, 5, 10] Sum is: 66"
+      ],
+      "correctAnswer": "[True, 50, 5, 10] Sum is: 66",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615805",
+      "question": "The output of the following program is\nL = [1, 3, 5, 7, 9]\nprint(L.pop(-3), end = ' ')\nprint(L.remove(L[0]), end = ' ')\nprint(L)",
+      "options": [
+        "5 None [3, 7, 9]",
+        "5 1 [3, 7, 9]",
+        "5 1 [7, 9]",
+        "5 None [1, 3, 7, 9]"
+      ],
+      "correctAnswer": "5 None [3, 7, 9]",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615806",
+      "question": "The final content of file.txt after running this code is\nf = open(\"file.txt\", \"w\")\nf.write(\"Line 1\\n\")\nf.flush()\nf.write(\"Line 2\\n\")\nf.close()",
+      "options": [
+        "Line 1\\nLine 2\\n",
+        "Line 2\\n",
+        "Line 1\\n",
+        "Undefined behavior"
+      ],
+      "correctAnswer": "Line 1\\nLine 2\\n",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615807",
+      "question": "The output of the following code is\nimport threading\ndef task():\n  print(\"Thread running\")\nt = threading.Thread(target=task)\nt.start()\nprint(\"Main thread exiting\")",
+      "options": [
+        "Only \"Main thread exiting\"",
+        "\"Thread running\" followed by \"Main thread exiting\"",
+        "\"Main thread exiting\" followed by \"Thread running\"",
+        "\"Thread running\" never prints"
+      ],
+      "correctAnswer": "\"Thread running\" followed by \"Main thread exiting\"",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615808",
+      "question": "HTML has language element which permit certain actions other than describing the structure of the web document. Which one of the following actions is NOT supported by pure HTML (without any server or client side scripting) pages?",
+      "options": [
+        "Automatically redirect to another page upon download",
+        "Embed web objects from different sites into the same page",
+        "Display the client time as part of the page",
+        "Refresh the page automatically after a specified interval"
+      ],
+      "correctAnswer": "Display the client time as part of the page",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615809",
+      "question": "Which of the following statement is/are FALSE?\nI. XML overcomes the limitations in HTML to support a structured way of organizing content.\nII. XML specification is not case sensitive while HTML specification is case sensitive.\nIII. XML supports user defined tags while HTML uses pre-defined tags.\nIV. XML tags need not be closed while HTML tags must be closed.",
+      "options": [
+        "II only",
+        "II and IV only",
+        "I only",
+        "III and IV only"
+      ],
+      "correctAnswer": "II and IV only",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615810",
+      "question": "Which of the tag is used to create a number list?",
+      "options": [
+        "<LI>",
+        "<OL>",
+        "<LI and OL>",
+        "<NL>"
+      ],
+      "correctAnswer": "<LI and OL>",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615811",
+      "question": "The ________ tag is an inline container used to mark up a part of a text or a part of a document.",
+      "options": [
+        "<map>",
+        "<span>",
+        "<img>",
+        "<tr>"
+      ],
+      "correctAnswer": "<span>",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615812",
+      "question": "________ is used to create a link to another documents by using href attribute.",
+      "options": [
+        "<b>",
+        "<blink>",
+        "<a>",
+        "<hlink>"
+      ],
+      "correctAnswer": "<a>",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615813",
+      "question": "A client can use ______ request to get a web resource from the server.",
+      "options": [
+        "PUT",
+        "GET",
+        "POST",
+        "HEAD"
+      ],
+      "correctAnswer": "GET",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615814",
+      "question": "Variable name in PHP starts with",
+      "options": [
+        "! (Exclamation)",
+        "$ (Dollar)",
+        "& (Ampersand)",
+        "# (Hash)"
+      ],
+      "correctAnswer": "$ (Dollar)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "5069615815",
+      "question": "Which of the following statements is true regarding HTTP?",
+      "options": [
+        "Web browsers use only HTTP as a communication protocol with servers",
+        "It refers to resources using their Universal Resource Identifier (URI)",
+        "It is designed to route information based on content",
+        "It does not maintain any connection information on previous transactions"
+      ],
+      "correctAnswer": "It does not maintain any connection information on previous transactions",
+      "topic": "Computer Science and Engineering"
+    }
+  ]
