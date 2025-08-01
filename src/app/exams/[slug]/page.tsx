@@ -12,8 +12,7 @@ interface ExamDetailsPageProps {
 }
 
 export default function ExamDetailsPage({ params }: ExamDetailsPageProps) {
-  const { slug } = params;
-  const exam = exams.find(e => e.slug === slug);
+  const exam = exams.find(e => e.slug === params.slug);
 
   if (!exam) {
     return notFound();
