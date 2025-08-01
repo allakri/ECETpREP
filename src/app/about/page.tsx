@@ -2,7 +2,7 @@
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Target, Cpu, Users } from "lucide-react";
+import { Target, Cpu, Users, Brush, Code, Bot } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -25,7 +25,42 @@ const corePrinciples = [
         title: "Supportive Community",
         description: "Learning is a collaborative effort. We foster a supportive environment where students can connect, share knowledge, and grow together."
     }
-]
+];
+
+const teamMembers = [
+    {
+        name: "Abhishek Rai",
+        role: "Founder & Project Lead",
+        contribution: "Visionary behind the platform, leading the project from concept to execution with a passion for educational technology.",
+        avatar: "https://placehold.co/150x150.png",
+        avatarHint: "man portrait smiling",
+        icon: Target,
+    },
+    {
+        name: "Shashi",
+        role: "Lead Developer",
+        contribution: "Architected and built the robust front-end, ensuring a seamless and performant user experience across all devices.",
+        avatar: "https://placehold.co/150x150.png",
+        avatarHint: "man software developer",
+        icon: Code,
+    },
+    {
+        name: "Revanth",
+        role: "UI/UX Designer",
+        contribution: "Crafted the intuitive and visually appealing user interface, focusing on a clean, user-friendly design system.",
+        avatar: "https://placehold.co/150x150.png",
+        avatarHint: "man designer",
+        icon: Brush,
+    },
+    {
+        name: "Sneha",
+        role: "AI & Backend Engineer",
+        contribution: "Developed the intelligent AI flows and managed the backend infrastructure that powers our personalized learning features.",
+        avatar: "https://placehold.co/150x150.png",
+        avatarHint: "woman engineer",
+        icon: Bot,
+    }
+];
 
 export default function AboutPage() {
   return (
@@ -48,26 +83,6 @@ export default function AboutPage() {
             </CardContent>
           </Card>
 
-           <div className="max-w-4xl mx-auto mt-12">
-            <Card className="shadow-lg bg-card border-border">
-                <CardHeader className="text-center">
-                    <CardTitle className="text-2xl font-headline text-primary">A Word From Our Founder</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-                    <Avatar className="h-24 w-24 border-4 border-primary/20">
-                        <AvatarImage src="https://placehold.co/100x100.png" alt="Rai Abhishek" data-ai-hint="man portrait"/>
-                        <AvatarFallback>RA</AvatarFallback>
-                    </Avatar>
-                    <div>
-                        <p className="text-lg text-foreground italic">
-                            "Seeing the gap between traditional learning and the demands of competitive exams, I wanted to build a bridge with technology. The Diploma Prep Hub is that bridge—a platform built to empower every student with the tools and confidence they need to not just compete, but to excel."
-                        </p>
-                        <p className="font-bold text-primary mt-4">— Rai Abhishek, Founder of Diploma Prep Hub</p>
-                    </div>
-                </CardContent>
-            </Card>
-          </div>
-
           <div className="max-w-4xl mx-auto mt-12">
             <h2 className="text-2xl font-bold text-center mb-8 font-headline text-primary">Our Core Principles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -83,6 +98,25 @@ export default function AboutPage() {
                     </div>
                 )
               })}
+            </div>
+          </div>
+
+          <div className="max-w-5xl mx-auto mt-20">
+            <h2 className="text-3xl font-bold text-center mb-12 font-headline text-primary">Meet the Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {teamMembers.map((member) => (
+                    <Card key={member.name} className="text-center shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+                        <CardContent className="pt-6 flex flex-col items-center">
+                            <Avatar className="h-24 w-24 mb-4 border-4 border-primary/20">
+                                <AvatarImage src={member.avatar} alt={member.name} data-ai-hint={member.avatarHint} />
+                                <AvatarFallback>{member.name.substring(0, 2)}</AvatarFallback>
+                            </Avatar>
+                            <h3 className="text-xl font-bold text-primary">{member.name}</h3>
+                            <p className="font-semibold text-accent mb-2">{member.role}</p>
+                            <p className="text-sm text-muted-foreground">{member.contribution}</p>
+                        </CardContent>
+                    </Card>
+                ))}
             </div>
           </div>
           
