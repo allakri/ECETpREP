@@ -10,10 +10,11 @@ import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { BrainCircuit, Home, Lightbulb, UserCheck, BarChart, MessageCircleQuestion, ListChecks } from 'lucide-react';
+import { BrainCircuit, Home, Lightbulb, UserCheck, BarChart, MessageCircleQuestion, ListChecks, Check, X, Target, Clock, Trophy } from 'lucide-react';
 import { ScoreChart } from './ScoreChart';
 import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
+import { motion } from 'framer-motion';
 
 const quotes = [
   "Believe you can and you're halfway there.",
@@ -22,6 +23,28 @@ const quotes = [
   "The expert in anything was once a beginner.",
   "Success is the sum of small efforts, repeated day in and day out."
 ];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function ResultsClient() {
   const router = useRouter();
@@ -48,9 +71,9 @@ export default function ResultsClient() {
     }
   }, [router]);
 
-  const { score, correctCount, incorrectCount, unansweredCount, incorrectTopics, totalQuestions } = useMemo(() => {
+  const { score, correctCount, incorrectCount, unansweredCount, incorrectTopics, totalQuestions, accuracy } = useMemo(() => {
     if (!answers || !questions) {
-      return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, incorrectTopics: [], totalQuestions: 0 };
+      return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, incorrectTopics: [], totalQuestions: 0, accuracy: 0 };
     }
     let correct = 0;
     const incorrectTop: string[] = [];
@@ -72,6 +95,7 @@ export default function ResultsClient() {
       unansweredCount: total - answeredCount,
       incorrectTopics: incorrectTop,
       totalQuestions: total,
+      accuracy: answeredCount > 0 ? (correct / answeredCount) * 100 : 0,
     };
   }, [answers, questions]);
   
@@ -141,18 +165,49 @@ export default function ResultsClient() {
     // This case should be handled by the redirect, but as a safeguard:
     return null;
   }
+  
+  const kpiData = [
+    { title: "Final Score", value: `${score.toFixed(1)}%`, icon: Trophy, color: "text-amber-500" },
+    { title: "Correct Answers", value: `${correctCount}/${totalQuestions}`, icon: Check, color: "text-green-500" },
+    { title: "Incorrect Answers", value: `${incorrectCount}/${totalQuestions}`, icon: X, color: "text-red-500" },
+    { title: "Accuracy", value: `${accuracy.toFixed(1)}%`, icon: Target, color: "text-blue-500" },
+    { title: "Time Taken", value: "N/A", icon: Clock, color: "text-indigo-500" },
+  ];
 
 
   return (
-    <main className="min-h-screen bg-background p-4 md:p-8">
-      <div className="max-w-7xl mx-auto space-y-6">
-        <div>
-          <h1 className="text-3xl font-bold font-headline text-primary">Here's your result</h1>
-          <p className="text-muted-foreground">Congratulations on completing the exam. {user ? 'Your progress has been saved.' : 'Log in to save your progress.'}</p>
-        </div>
+    <main className="min-h-screen bg-secondary/20 p-4 md:p-8">
+      <motion.div 
+        className="max-w-7xl mx-auto space-y-8"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.div className="text-center" variants={itemVariants}>
+          <h1 className="text-4xl font-bold font-headline text-primary">Well Done! Here Are Your Results.</h1>
+          <p className="text-muted-foreground mt-2 text-lg">Congratulations on completing the exam. {user ? 'Your progress has been saved.' : 'Log in to save your progress.'}</p>
+           <p className="text-muted-foreground mt-4 italic">"{quote}"</p>
+        </motion.div>
+        
+        <motion.div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4" variants={containerVariants}>
+            {kpiData.map(item => {
+                const Icon = item.icon;
+                return (
+                    <motion.div key={item.title} variants={itemVariants}>
+                        <Card className="shadow-lg h-full">
+                            <CardContent className="pt-6 flex flex-col items-center text-center">
+                                <Icon className={`h-8 w-8 mb-2 ${item.color}`} />
+                                <p className="text-2xl font-bold">{item.value}</p>
+                                <p className="text-sm text-muted-foreground">{item.title}</p>
+                            </CardContent>
+                        </Card>
+                    </motion.div>
+                )
+            })}
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
-            <div className="lg:col-span-1 h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <motion.div className="lg:col-span-1 h-full" variants={itemVariants}>
               <ScoreChart 
                 score={score}
                 correctCount={correctCount}
@@ -160,15 +215,18 @@ export default function ResultsClient() {
                 unansweredCount={unansweredCount}
                 totalQuestions={totalQuestions}
               />
-            </div>
+            </motion.div>
 
-            <div className="lg:col-span-1">
+            <motion.div className="lg:col-span-2 space-y-8" variants={itemVariants}>
               <Card className="h-full shadow-lg">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <BrainCircuit className="h-6 w-6 text-primary"/>
                   </div>
-                  <CardTitle className="text-primary font-headline">AI Topic Feedback</CardTitle>
+                  <div>
+                    <CardTitle className="text-primary font-headline">AI Topic Feedback</CardTitle>
+                    <CardDescription>Personalized analysis to guide your next steps.</CardDescription>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   {loadingAI ? (
@@ -184,15 +242,16 @@ export default function ResultsClient() {
                   )}
                 </CardContent>
               </Card>
-            </div>
 
-            <div className="lg:col-span-1">
               <Card className="h-full shadow-lg">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="p-3 bg-accent/10 rounded-lg">
                     <UserCheck className="h-6 w-6 text-accent"/>
                   </div>
-                  <CardTitle className="text-accent font-headline">AI Readiness Guide</CardTitle>
+                  <div>
+                    <CardTitle className="text-accent font-headline">AI Readiness Guide</CardTitle>
+                    <CardDescription>An assessment of your preparedness for the final exam.</CardDescription>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   {loadingAI ? (
@@ -206,33 +265,24 @@ export default function ResultsClient() {
                   )}
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
         </div>
 
-        <Card className="bg-card shadow-lg">
-            <CardContent className="pt-6">
-              <div className="flex items-center gap-4">
-                <Lightbulb className="h-8 w-8 text-foreground" />
-                <blockquote className="text-foreground italic">"{quote}"</blockquote>
-              </div>
-            </CardContent>
-        </Card>
-
-        <div className="text-center flex items-center justify-center gap-4">
-            <Button onClick={() => router.push('/')} variant="default" className="font-bold shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
+        <motion.div className="text-center flex items-center justify-center gap-4 pt-4" variants={itemVariants}>
+            <Button onClick={() => router.push('/')} size="lg" variant="outline" className="font-bold shadow-lg">
                 <Home className="mr-2 h-4 w-4"/>
                 Back to Home
             </Button>
-            <Button onClick={() => router.push('/exam/review')} variant="secondary" className="font-bold shadow-lg">
+            <Button onClick={() => router.push('/exam/review')} size="lg" variant="default" className="font-bold shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
                 <ListChecks className="mr-2 h-4 w-4"/>
                 Review Answers & Learn
             </Button>
-            <Button onClick={() => router.push('/chat')} variant="outline" className="font-bold shadow-lg">
+            <Button onClick={() => router.push('/chat')} size="lg" variant="secondary" className="font-bold shadow-lg">
                 <MessageCircleQuestion className="mr-2 h-4 w-4"/>
                 Clear Doubts with AI
             </Button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </main>
   );
 }
