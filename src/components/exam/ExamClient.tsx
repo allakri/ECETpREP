@@ -27,7 +27,6 @@ const slugToFolderMap: Record<string, string> = {
     'electronics-communication': 'ECE',
     'electrical-electronics': 'EEE',
     'mechanical-engineering': 'MECH',
-    'electronics-instrumentation': 'EIE',
     'pharmacy': 'PHARMACY',
     'chemical-engineering': 'CHEM',
     'metallurgical-engineering': 'MET',
