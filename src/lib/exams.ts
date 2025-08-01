@@ -18,13 +18,6 @@ export const exams: Exam[] = [
       testCount: 15,
     },
     { 
-      name: "Electronics & Instrumentation", 
-      slug: "electronics-instrumentation", 
-      icon: CircuitBoard,
-      subjects: ["Mathematics", "Physics", "Chemistry", "Instrumentation", "Digital Electronics"],
-      testCount: 12,
-    },
-    { 
       name: "Civil Engineering", 
       slug: "civil-engineering", 
       icon: Building,
