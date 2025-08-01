@@ -85,19 +85,6 @@ export const courses: Course[] = [
             { subject: "Manufacturing Technology", topics: ["Casting", "Welding", "Machining"] }
         ]
     },
-    {
-        title: "Electronics & Instrumentation",
-        slug: "electronics-instrumentation",
-        description: "Measurement, control, and automation.",
-        icon: CircuitBoard,
-        tags: ["Instrumentation", "Control Systems", "Digital Electronics"],
-        syllabus: [
-            { subject: "Electronic Measurements", topics: ["CRO", "Signal Generators", "Transducers"] },
-            { subject: "Control Systems", topics: ["Open/Closed Loop", "Time/Frequency Response", "Stability"] },
-            { subject: "Industrial Instrumentation", topics: ["Temperature, Pressure, Flow Measurement", "PLCs"] },
-            { subject: "Biomedical Instrumentation", topics: ["ECG", "EEG", "Medical Imaging Systems"] }
-        ]
-    },
      {
         title: "Pharmacy",
         slug: "pharmacy",
