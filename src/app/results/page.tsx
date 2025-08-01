@@ -16,11 +16,9 @@ function ResultsFallback() {
                     <div className="lg:col-span-1 h-full">
                          <Skeleton className="h-[450px] w-full rounded-lg" />
                     </div>
-                     <div className="lg:col-span-1 h-full">
-                         <Skeleton className="h-[450px] w-full rounded-lg" />
-                    </div>
-                     <div className="lg:col-span-1 h-full">
-                         <Skeleton className="h-[450px] w-full rounded-lg" />
+                     <div className="lg:col-span-2 space-y-8">
+                         <Skeleton className="h-[225px] w-full rounded-lg" />
+                         <Skeleton className="h-[225px] w-full rounded-lg" />
                     </div>
                 </div>
                  <Skeleton className="h-16 w-full rounded-lg" />
@@ -33,7 +31,7 @@ function ResultsFallback() {
 
 export default function ResultsPage() {
     return (
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-background">
         <AppHeader />
         <main className="flex-grow">
           <Suspense fallback={<ResultsFallback />}>

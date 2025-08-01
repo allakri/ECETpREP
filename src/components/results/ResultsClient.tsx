@@ -158,12 +158,10 @@ export default function ResultsClient() {
   }, [answers, questions, score, incorrectTopics, user, loading, updateUserProgress, isProgressSaved]);
 
   if (!isMounted) {
-    // This state is now handled by the Suspense fallback
     return null;
   }
   
   if (!answers || !questions) {
-    // This case should be handled by the redirect, but as a safeguard:
     return null;
   }
   
@@ -177,7 +175,7 @@ export default function ResultsClient() {
 
 
   return (
-    <main className="min-h-screen bg-secondary/20 p-4 md:p-8">
+    <div className="bg-secondary/20 p-4 md:p-8">
       <motion.div 
         className="max-w-7xl mx-auto space-y-8"
         initial="hidden"
@@ -288,6 +286,6 @@ export default function ResultsClient() {
             </Button>
         </motion.div>
       </motion.div>
-    </main>
+    </div>
   );
 }

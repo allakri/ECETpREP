@@ -24,7 +24,7 @@ const AdaptiveFeedbackInputSchema = z.object({
   examName: z.string().describe('The name of the exam the user took.'),
   questions: z.array(QuestionSchema).describe('The full list of questions from the exam.'),
   userAnswers: z.record(z.string(), z.string()).describe('A map of question IDs to the user\'s answers.'),
-  pastScores: z.array(z.number()).optional().describe("An array of the user's past scores (as percentages) on previous tests."),
+  pastScores: z.array(z.number()).optional().describe("An array of the user's past scores (as percentages) on previous tests, including the current one."),
 });
 export type AdaptiveFeedbackInput = z.infer<typeof AdaptiveFeedbackInputSchema>;
 
