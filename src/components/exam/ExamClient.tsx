@@ -63,7 +63,7 @@ export default function ExamClient() {
     router.replace('/results');
   }, [answers, router, questions, sessionKey]);
   
-  // Effect to load questions and initialize session
+  // Effect to set the session key and restore state from local storage
   useEffect(() => {
     const customExamKey = searchParams.get('customExamKey');
     const examSlug = searchParams.get('examSlug');
@@ -96,9 +96,16 @@ export default function ExamClient() {
             localStorage.removeItem(currentSessionKey); // Clear corrupted data
         }
     }
+  }, [searchParams, router, toast]);
 
-
+  // Effect to load questions
+  useEffect(() => {
     async function loadQuestions() {
+        const customExamKey = searchParams.get('customExamKey');
+        const examSlug = searchParams.get('examSlug');
+        const year = searchParams.get('year');
+        const offlineTestKey = searchParams.get('offlineTestKey');
+
         if (customExamKey) {
             const customQuestionsStr = sessionStorage.getItem(customExamKey);
             if (customQuestionsStr) {
@@ -132,8 +139,6 @@ export default function ExamClient() {
                 toast({ title: 'Error Loading Questions', description: 'Could not load the question paper.', variant: 'destructive' });
                 router.push('/exams');
             }
-        } else {
-            // This case should be handled by the initial currentSessionKey check
         }
     }
 
@@ -365,8 +370,7 @@ export default function ExamClient() {
 
       <AlertDialog open={isViolationDialogOpen} onOpenChange={setIsViolationDialogOpen}>
         <AlertDialogContent>
-          <AlertDialogHeader>
-            <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-4">
               <div className="h-16 w-16 rounded-full bg-destructive/10 flex items-center justify-center">
                   <AlertTriangle className="h-10 w-10 text-destructive" />
               </div>
