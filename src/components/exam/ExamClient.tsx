@@ -49,19 +49,54 @@ export default function ExamClient() {
   const [isExitDialogOpen, setIsExitDialogOpen] = useState(false);
   const violationCount = useRef(0);
   const [examName, setExamName] = useState('ECET Exam');
+  const [sessionKey, setSessionKey] = useState<string | null>(null);
 
   const handleSubmit = useCallback(() => {
     localStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
     if (questions) {
       localStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
     }
+    // Clean up the session state from local storage after submission
+    if (sessionKey) {
+        localStorage.removeItem(sessionKey);
+    }
     router.replace('/results');
-  }, [answers, router, questions]);
-
+  }, [answers, router, questions, sessionKey]);
+  
+  // Effect to load questions and initialize session
   useEffect(() => {
     const customExamKey = searchParams.get('customExamKey');
     const examSlug = searchParams.get('examSlug');
     const year = searchParams.get('year');
+    const offlineTestKey = searchParams.get('offlineTestKey');
+
+    let currentSessionKey = '';
+    if(customExamKey) currentSessionKey = customExamKey;
+    else if(offlineTestKey) currentSessionKey = offlineTestKey;
+    else if(examSlug && year) currentSessionKey = `exam-session-${examSlug}-${year}`;
+    
+    if(!currentSessionKey){
+        toast({ title: 'Error', description: 'Invalid exam session. Redirecting...', variant: 'destructive' });
+        router.push('/exams');
+        return;
+    }
+    
+    setSessionKey(currentSessionKey);
+
+    // Restore state from localStorage if it exists
+    const savedStateRaw = localStorage.getItem(currentSessionKey);
+    if(savedStateRaw){
+        try {
+            const savedState = JSON.parse(savedStateRaw);
+            setAnswers(savedState.answers || {});
+            setMarkedForReview(savedState.markedForReview || []);
+            setTimeLeft(savedState.timeLeft || EXAM_DURATION);
+        } catch(e) {
+            console.error("Failed to parse saved exam state", e);
+            localStorage.removeItem(currentSessionKey); // Clear corrupted data
+        }
+    }
+
 
     async function loadQuestions() {
         if (customExamKey) {
@@ -70,47 +105,54 @@ export default function ExamClient() {
                 setQuestions(JSON.parse(customQuestionsStr));
                 setExamName(sessionStorage.getItem('customExamName') || 'AI Custom Test');
             } else {
-                 toast({
-                    title: 'Error',
-                    description: 'Custom exam data not found. Please try generating it again.',
-                    variant: 'destructive',
-                });
-                router.push('/exams');
+                 toast({ title: 'Error', description: 'Custom exam data not found.', variant: 'destructive' });
+                 router.push('/exams');
             }
+        } else if (offlineTestKey) {
+             const offlineDataRaw = localStorage.getItem(offlineTestKey);
+             if (offlineDataRaw) {
+                 const offlineData = JSON.parse(offlineDataRaw);
+                 setQuestions(offlineData.questions);
+                 setExamName(`${offlineData.examName} - ${offlineData.year} (Offline)`);
+             } else {
+                 toast({ title: 'Error', description: 'Offline exam data not found.', variant: 'destructive' });
+                 router.push('/exams/offline');
+             }
         } else if (examSlug && year) {
             setExamName(searchParams.get('examName') || 'ECET Exam');
             try {
                 const folderName = slugToFolderMap[examSlug] || examSlug.toUpperCase();
                 const filePath = `/datasets/TGEAPCET/${folderName}/${year}.json`;
                 const response = await fetch(filePath);
-                if (!response.ok) {
-                    throw new Error(`Failed to load questions from ${filePath}. Status: ${response.status}`);
-                }
+                if (!response.ok) throw new Error(`Failed to load questions from ${filePath}. Status: ${response.status}`);
                 const data = await response.json();
                 setQuestions(data);
             } catch (error) {
                 console.error(error);
-                toast({
-                    title: 'Error Loading Questions',
-                    description: 'Could not load the question paper. Please try again.',
-                    variant: 'destructive',
-                });
+                toast({ title: 'Error Loading Questions', description: 'Could not load the question paper.', variant: 'destructive' });
                 router.push('/exams');
             }
         } else {
-            toast({
-                title: 'Error',
-                description: 'Exam details not found. Redirecting...',
-                variant: 'destructive',
-            });
-            router.push('/exams');
+            // This case should be handled by the initial currentSessionKey check
         }
     }
 
     loadQuestions();
   }, [searchParams, router, toast]);
+  
+  // Effect to save progress to localStorage
+  useEffect(() => {
+    if (!sessionKey || !questions) return;
+    const stateToSave = {
+        answers,
+        markedForReview,
+        timeLeft
+    };
+    localStorage.setItem(sessionKey, JSON.stringify(stateToSave));
+  }, [answers, markedForReview, timeLeft, sessionKey, questions]);
 
 
+  // Main timer and violation handler effect
   useEffect(() => {
     if (!questions) return; // Don't start timer until questions are loaded
 
