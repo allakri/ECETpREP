@@ -245,9 +245,9 @@ export default function ExamClient() {
   return (
     <div className="flex h-screen flex-col md:flex-row bg-background text-foreground">
       <main className="flex-1 flex flex-col p-4 md:p-6 overflow-y-auto">
-        <header className="flex justify-between items-center mb-4">
-          <h1 className="text-2xl font-headline text-primary">{examName}</h1>
-          <div className="flex items-center gap-4">
+        <header className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
+          <h1 className="text-xl md:text-2xl font-headline text-primary text-center sm:text-left">{examName}</h1>
+          <div className="flex items-center gap-2 sm:gap-4">
             <div className={`flex items-center gap-2 font-bold p-2 rounded-lg ${timeLeft < 300 ? 'text-destructive animate-pulse' : 'text-foreground'}`}>
               <Timer className="h-6 w-6 text-accent" />
               <span className="font-mono text-xl">{formatTime(timeLeft)}</span>
@@ -279,16 +279,16 @@ export default function ExamClient() {
               ))}
             </RadioGroup>
           </CardContent>
-          <CardFooter className="flex flex-wrap justify-between items-center gap-4 border-t pt-6">
-            <div className="flex gap-2">
+          <CardFooter className="flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 border-t pt-6">
+            <div className="flex gap-2 flex-wrap justify-center">
               <Button onClick={() => handleMarkForReview(currentQuestion.id)} variant={isMarked ? "default" : "outline"}>
-                <BookMarked className="mr-2 h-4 w-4" /> {isMarked ? 'Unmark Review' : 'Mark for Review'}
+                <BookMarked className="mr-2 h-4 w-4" /> {isMarked ? 'Unmark' : 'Mark Review'}
               </Button>
               <Button onClick={clearResponse} variant="ghost">Clear Response</Button>
             </div>
             <div className="flex gap-2">
               <Button onClick={() => setCurrentQuestionIndex(prev => Math.max(0, prev - 1))} disabled={currentQuestionIndex === 0}>
-                <ChevronLeft className="mr-2 h-4 w-4" /> Previous
+                <ChevronLeft className="mr-2 h-4 w-4" /> Prev
               </Button>
               <Button onClick={() => setCurrentQuestionIndex(prev => Math.min(questions.length - 1, prev + 1))} disabled={currentQuestionIndex === questions.length - 1}>
                 Next <ChevronRight className="ml-2 h-4 w-4" />
@@ -312,7 +312,7 @@ export default function ExamClient() {
             </CardHeader>
             <CardContent className="flex-1 p-2 overflow-y-auto">
               <ScrollArea className="h-full">
-                <div className="grid grid-cols-5 md:grid-cols-4 lg:grid-cols-5 gap-2 p-2">
+                <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-4 lg:grid-cols-5 gap-2 p-2">
                   {questions.map((q, index) => {
                     const status = getQuestionStatus(q.id);
                     return (
@@ -420,5 +420,3 @@ export default function ExamClient() {
     </div>
   );
 }
-
-    
