@@ -91,7 +91,7 @@ export function Hero() {
                 alt="AI-powered diploma prep dashboard showing student progress"
                 width={600}
                 height={400}
-                className="w-full max-w-none rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                className="w-full rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                 priority
               />
             </div>
