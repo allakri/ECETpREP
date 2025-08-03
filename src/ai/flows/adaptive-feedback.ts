@@ -51,12 +51,14 @@ const adaptiveFeedbackPrompt = ai.definePrompt({
 **Analyze the provided exam data:**
 -   **Questions**: The full list of questions, including correct answers and topics.
 -   **User Answers**: A map of question IDs to the student's selected answers.
--   **Past Scores**: An optional array of previous scores, with the most recent score last. ({{pastScores}})
+{{#if pastScores}}
+-   **Past Scores**: An array of previous scores, with the most recent score last. ({{pastScores}})
+{{/if}}
 
 **Follow this exact structure for your response:**
 
 1.  **Greeting & Overall Performance:**
-    - Start with an encouraging sentence. If past scores show improvement, mention it. If not, be motivational.
+    - Start with an encouraging sentence. If past scores show improvement, mention it. If not, be motivational. If no past scores, give a general positive opening.
     - State their overall performance on this exam.
 
 2.  **Strengths:**

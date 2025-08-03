@@ -2,7 +2,7 @@
 
 "use client";
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { generateAdaptiveFeedback } from '@/ai/flows/adaptive-feedback';
 import { assessReadiness } from '@/ai/flows/readiness-assessment';
@@ -10,13 +10,12 @@ import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { BrainCircuit, Home, UserCheck, ListChecks, Check, X, Target, Clock, Trophy, ArrowRight } from 'lucide-react';
+import { BrainCircuit, Home, UserCheck, ListChecks, Check, X, Target, Clock, Trophy, ArrowRight, MessageCircleQuestion } from 'lucide-react';
 import { ScoreChart } from './ScoreChart';
 import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
-import { MessageCircleQuestion } from 'lucide-react';
 
 const quotes = [
   "Believe you can and you're halfway there.",
@@ -156,7 +155,7 @@ export default function ResultsClient() {
     
     getAIInsightsAndSave();
 
-  }, [answers, questions, score, incorrectTopics, user, loading, updateUserProgress, isProgressSaved]);
+  }, [user, loading, isProgressSaved, answers, questions, score, incorrectTopics, updateUserProgress]);
 
   if (!isMounted || !questions || !answers) {
     return null;
@@ -189,7 +188,7 @@ export default function ResultsClient() {
       title: "Return to Dashboard",
       description: "Go back to the main dashboard to see your overall progress.",
       icon: Home,
-      action: () => router.push('/'),
+      action: () => router.push('/profile'),
       color: "bg-muted/50 text-muted-foreground"
     }
   ];

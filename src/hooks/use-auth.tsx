@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
@@ -70,7 +71,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const [isInitialLoad, setIsInitialLoad] = useState(true); // Start as true
   const [isAdmin, setIsAdmin] = useState(false);
-  const supabase = createClient();
+  const [supabase] = useState(() => createClient());
   const router = useRouter();
 
   // Function to save user to state and localStorage
@@ -157,7 +158,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     router.refresh();
   };
 
-  const updateUser = async (details: UpdatableUserProfile) => {
+  const updateUser = useCallback(async (details: UpdatableUserProfile) => {
     if (!user) return;
 
     const { error } = await supabase
@@ -183,9 +184,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         const updatedUserProfile = await fetchUserProfile(supabaseUser);
         storeUser(updatedUserProfile);
     }
-  };
+  }, [user, supabase, fetchUserProfile]);
 
-  const updateUserProgress = async (newScore: ExamScore) => {
+  const updateUserProgress = useCallback(async (newScore: ExamScore) => {
     if (!user) return;
 
     // Calculate new progress metrics
@@ -217,7 +218,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         const updatedUserProfile = await fetchUserProfile(supabaseUser);
         storeUser(updatedUserProfile);
     }
-  };
+  }, [user, supabase, fetchUserProfile]);
 
 
   return (
