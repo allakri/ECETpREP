@@ -12,14 +12,14 @@ import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
 
 const papers = [
-    { year: "2025", type: "Latest Pattern", questions: 100, duration: "2 Hours", marks: 100 },
-    { year: "2024", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
-    { year: "2023", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
-    { year: "2022", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
-    { year: "2021", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
-    { year: "2020", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
-    { year: "2019", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
-    { year: "2018", type: "Previous Paper", questions: 100, duration: "2 Hours", marks: 100 },
+    { year: "2025", type: "Latest Pattern", questions: 200, duration: "2 Hours", marks: 200 },
+    { year: "2024", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
+    { year: "2023", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
+    { year: "2022", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
+    { year: "2021", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
+    { year: "2020", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
+    { year: "2019", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
+    { year: "2018", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
 ];
 
 interface ExamDetailsProps {
