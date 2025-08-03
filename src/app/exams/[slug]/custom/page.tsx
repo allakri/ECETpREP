@@ -1,9 +1,11 @@
 
+
 import { exams } from "@/lib/exams";
 import { notFound } from "next/navigation";
 import { CustomTestClient } from "@/components/exam/CustomTestClient";
 import { AppShell } from "@/components/layout/AppShell";
 import { Sparkles } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 interface CustomTestPageProps {
   params: {
@@ -28,6 +30,7 @@ export default function CustomTestPage({ params }: CustomTestPageProps) {
   return (
     <AppShell>
       <div className="bg-secondary/30 py-12 md:py-20">
+        <Breadcrumbs />
         <CustomTestClient exam={serializableExamData}>
           {/* The icon is passed as a child, which is a valid Server->Client pattern */}
           <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">

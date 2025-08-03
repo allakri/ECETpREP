@@ -20,6 +20,7 @@ import { TodoList } from '@/components/profile/TodoList';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Legend, Bar as RechartsBar } from 'recharts';
 import { ScoreChart } from '@/components/results/ScoreChart';
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 
 const ProfilePageSkeleton = () => (
     <div className="flex flex-col min-h-screen bg-background">
@@ -148,6 +149,7 @@ export default function ProfilePage() {
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow p-4 md:p-8">
+        <Breadcrumbs />
         <div className="container mx-auto">
             <div className="mb-8">
                 <h1 className="text-3xl font-bold font-headline text-primary">Welcome, {user.name || 'Student'}!</h1>

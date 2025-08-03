@@ -16,6 +16,7 @@ import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, AlertTriang
 import { useToast } from '@/hooks/use-toast';
 import Latex from 'react-latex-next';
 import 'katex/dist/katex.min.css';
+import { Breadcrumbs } from '../layout/Breadcrumbs';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
 const MAX_VIOLATIONS = 3;

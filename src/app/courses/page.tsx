@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { AppShell } from "@/components/layout/AppShell";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -39,6 +40,7 @@ export default function CoursesPage() {
   return (
     <AppShell>
         <div className="flex-grow bg-background">
+            <Breadcrumbs className="pt-8" />
             {/* Hero Section */}
             <motion.div 
             className="text-center py-16 md:py-24 px-4 bg-primary/5"

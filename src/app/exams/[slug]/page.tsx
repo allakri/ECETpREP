@@ -1,9 +1,11 @@
 
+
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { ExamDetails } from "@/components/exam/ExamDetails";
 import { exams } from "@/lib/exams";
 import { notFound } from 'next/navigation';
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 interface ExamDetailsPageProps {
   params: {
@@ -22,6 +24,7 @@ export default function ExamDetailsPage({ params }: ExamDetailsPageProps) {
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow bg-background py-12">
+        <Breadcrumbs />
         <ExamDetails examName={exam.name} examSlug={exam.slug} />
       </main>
       <AppFooter />

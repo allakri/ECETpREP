@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import Link from "next/link";
@@ -8,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import type { Course } from "@/lib/courses";
+import { Breadcrumbs } from "../layout/Breadcrumbs";
 
 interface CourseClientPageProps {
   course: Omit<Course, 'icon'>;
@@ -31,23 +33,11 @@ export function CourseClientPage({ course, icon }: CourseClientPageProps) {
   return (
     <div className="flex flex-col min-h-screen bg-secondary/10">
       <main className="flex-grow bg-background py-12 md:py-20">
+        <Breadcrumbs className="mb-0 pt-0" />
         <div className="container mx-auto px-4">
-          {/* Breadcrumbs */}
-          <nav className="flex items-center text-sm text-muted-foreground mb-8">
-            <Link href="/" className="hover:text-primary">
-              <Home className="h-4 w-4" />
-            </Link>
-            <ChevronRight className="h-4 w-4 mx-2" />
-            <Link href="/courses" className="hover:text-primary">
-              Courses
-            </Link>
-            <ChevronRight className="h-4 w-4 mx-2" />
-            <span className="font-medium text-foreground">{course.title}</span>
-          </nav>
-
           {/* Top Banner */}
           <motion.div initial="hidden" animate="visible" variants={itemVariants}>
-            <Card className="mb-12 shadow-lg bg-card border-border">
+            <Card className="mb-12 shadow-lg bg-card border-border mt-8">
                 <CardHeader className="flex flex-col md:flex-row items-start gap-6">
                     <div className="p-4 bg-primary/10 rounded-lg">
                         {icon}
