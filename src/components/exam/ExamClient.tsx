@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -66,13 +67,14 @@ export default function ExamClient() {
   useEffect(() => {
     const customExamKey = searchParams.get('customExamKey');
     const examSlug = searchParams.get('examSlug');
+    const examBoard = searchParams.get('examBoard');
     const year = searchParams.get('year');
     const offlineTestKey = searchParams.get('offlineTestKey');
 
     let currentSessionKey = '';
     if(customExamKey) currentSessionKey = customExamKey;
     else if(offlineTestKey) currentSessionKey = offlineTestKey;
-    else if(examSlug && year) currentSessionKey = `exam-session-${examSlug}-${year}`;
+    else if(examSlug && year && examBoard) currentSessionKey = `exam-session-${examBoard}-${examSlug}-${year}`;
     
     if(!currentSessionKey){
         toast({ title: 'Error', description: 'Invalid exam session. Redirecting...', variant: 'destructive' });
@@ -108,6 +110,7 @@ export default function ExamClient() {
         const examSlug = searchParams.get('examSlug');
         const year = searchParams.get('year');
         const offlineTestKey = searchParams.get('offlineTestKey');
+        const examBoard = searchParams.get('examBoard'); // apecet or tgecet
 
         if (customExamKey) {
             const customQuestionsStr = sessionStorage.getItem(customExamKey);
@@ -128,18 +131,19 @@ export default function ExamClient() {
                  toast({ title: 'Error', description: 'Offline exam data not found.', variant: 'destructive' });
                  router.push('/exams/offline');
              }
-        } else if (examSlug && year) {
+        } else if (examSlug && year && examBoard) {
             setExamName(searchParams.get('examName') || 'ECET Exam');
             try {
+                const examBoardFolder = examBoard.toUpperCase();
                 const folderName = slugToFolderMap[examSlug] || examSlug.toUpperCase();
-                const filePath = `/datasets/TGEAPCET/${folderName}/${year}.json`;
+                const filePath = `/datasets/${examBoardFolder}/${folderName}/${year}.json`;
                 const response = await fetch(filePath);
                 if (!response.ok) throw new Error(`Failed to load questions from ${filePath}. Status: ${response.status}`);
                 const data = await response.json();
                 setQuestions(data);
             } catch (error) {
                 console.error(error);
-                toast({ title: 'Error Loading Questions', description: 'Could not load the question paper.', variant: 'destructive' });
+                toast({ title: 'Error Loading Questions', description: 'Could not load the question paper. It might not be available yet.', variant: 'destructive' });
                 router.push('/exams');
             }
         }
@@ -373,8 +377,7 @@ export default function ExamClient() {
 
       <AlertDialog open={isViolationDialogOpen} onOpenChange={setIsViolationDialogOpen}>
         <AlertDialogContent>
-          <AlertDialogHeader>
-            <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-4">
               <div className="h-16 w-16 rounded-full bg-destructive/10 flex items-center justify-center">
                   <AlertTriangle className="h-10 w-10 text-destructive" />
               </div>
@@ -387,7 +390,6 @@ export default function ExamClient() {
               <br />
               If you switch away again, your exam may be terminated.
             </AlertDialogDescription>
-          </AlertDialogHeader>
           <AlertDialogFooter>
              <AlertDialogAction onClick={() => setIsViolationDialogOpen(false)} className="w-full">
                 I Understand, Continue Exam
