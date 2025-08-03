@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -20,6 +21,11 @@ const QuestionSchema = z.object({
   topic: z.string(),
 });
 
+const SyllabusItemSchema = z.object({
+  subject: z.string(),
+  topics: z.array(z.string()),
+});
+
 const DoubtClearingInputSchema = z.object({
   question: z.string().describe("The student's question or doubt."),
   history: z
@@ -31,7 +37,11 @@ const DoubtClearingInputSchema = z.object({
     )
     .describe('The conversation history.') as z.ZodType<MessageData[]>,
   examQuestions: z.array(QuestionSchema).optional().describe("The list of questions from the user's last exam."),
-  examAnswers: z.record(z.string(), z.string()).optional().describe("A map of question IDs to the user's answers from their last exam.")
+  examAnswers: z.record(z.string(), z.string()).optional().describe("A map of question IDs to the user's answers from their last exam."),
+  courseContext: z.object({
+    title: z.string(),
+    syllabus: z.array(SyllabusItemSchema)
+  }).optional().describe("The course the user is currently viewing."),
 });
 export type DoubtClearingInput = z.infer<typeof DoubtClearingInputSchema>;
 
@@ -55,6 +65,15 @@ You MUST follow these rules strictly:
 2.  If the user asks a question that is NOT related to ECET subjects (e.g., about movies, politics, personal opinions, or other exams), you MUST politely decline to answer. Gently guide them to stay focused on their exam preparation. For example, say: "That's an interesting question, but my purpose is to help you with your ECET preparation. Let's focus on the subjects that will help you succeed. Do you have a question about a specific topic from your exam?"
 3.  Be encouraging and maintain a positive, academic tone.
 4.  If a concept is complex, break it down into smaller, easy-to-understand parts. Use examples or analogies relevant to their field of study.
+
+{{#if courseContext}}
+The user is currently viewing the "{{courseContext.title}}" course. The syllabus includes:
+{{#each courseContext.syllabus}}
+- {{subject}}: {{#each topics}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
+{{/each}}
+Use this context to frame your examples and explanations.
+{{/if}}
+
 
 {{#if examQuestions}}
 The user has just completed a practice exam. You have access to the questions and their answers.
