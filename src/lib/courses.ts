@@ -17,6 +17,56 @@ export interface Course {
   syllabus: SyllabusItem[];
 }
 
+const commonSubjects = {
+    mathematics: { 
+        subject: "Mathematics (50 marks)", 
+        topics: [
+            "Matrices",
+            "Trigonometry",
+            "Analytical Geometry",
+            "Differentiation and its Application",
+            "Integration and its application",
+            "Differential Equation",
+            "Laplace Transforms",
+            "Fourier Series",
+        ] 
+    },
+    physics: { 
+        subject: "Physics (25 marks)", 
+        topics: [
+            "Units, Dimensions and Measurements",
+            "Vectors",
+            "Mechanics",
+            "Properties of Matter",
+            "Conservation Laws and Energy Sources",
+            "Heat",
+            "Simple Harmonic Motion",
+            "Sound",
+            "Magnetism and Electricity",
+            "Optics",
+            "Modern Physics",
+            "Semiconductor Physics",
+        ] 
+    },
+    chemistry: { 
+        subject: "Chemistry (25 marks)", 
+        topics: [
+            "Fundamentals of Chemistry",
+            "Solutions and Colloids",
+            "Acids and Bases",
+            "Environmental Science",
+            "Water Technology",
+            "Electrochemistry",
+            "Metallurgy",
+            "Corrosion",
+            "Polymers",
+            "Fuels and Lubricants",
+            "Electrochemical Cell and Batteries",
+            "Environmental Studies",
+        ] 
+    }
+};
+
 export const courses: Course[] = [
     {
         title: "Civil Engineering",
@@ -25,11 +75,23 @@ export const courses: Course[] = [
         icon: Building,
         tags: ["Strength of Materials", "Hydraulics", "Surveying"],
         syllabus: [
-            { subject: "Strength of Materials", topics: ["Simple Stresses & Strains", "Bending Moments", "Shear Forces"] },
-            { subject: "Theory of Structures", topics: ["Frames", "Trusses", "Arches"] },
-            { subject: "Concrete Technology", topics: ["Cement", "Aggregates", "Mix Design"] },
-            { subject: "Hydraulics", topics: ["Fluid Properties", "Flow Measurement", "Pipe Flow"] },
-            { subject: "Surveying", topics: ["Chain Surveying", "Compass Surveying", "Levelling"] }
+            commonSubjects.mathematics,
+            commonSubjects.physics,
+            commonSubjects.chemistry,
+            {
+                subject: "Civil Engineering (100 marks)",
+                topics: [
+                    "Engineering Mechanics",
+                    "Strength of Materials",
+                    "Reinforced Concrete Structure",
+                    "Surveying",
+                    "Hydraulics",
+                    "Irrigation Engineering",
+                    "Transportation Engineering",
+                    "Water Supply and Sanitary Engineering",
+                    "Building Materials and Construction Practices",
+                ]
+            }
         ]
     },
     {
@@ -39,11 +101,24 @@ export const courses: Course[] = [
         icon: Code,
         tags: ["Data Structures", "Operating Systems", "DBMS"],
         syllabus: [
-            { subject: "Digital Electronics", topics: ["Logic Gates", "Boolean Algebra", "Combinational Circuits"] },
-            { subject: "Data Structures", topics: ["Arrays", "Stacks", "Queues", "Linked Lists", "Trees"] },
-            { subject: "Operating Systems", topics: ["Process Management", "Memory Management", "File Systems"] },
-            { subject: "DBMS", topics: ["ER Model", "SQL", "Normalization"] },
-            { subject: "C/C++ Programming", topics: ["Pointers", "OOPs Concepts", "File Handling"] }
+            commonSubjects.mathematics,
+            commonSubjects.physics,
+            commonSubjects.chemistry,
+            {
+                subject: "Computer Science Engineering (100 marks)",
+                topics: [
+                    "Digital Electronics",
+                    "Computer Architecture",
+                    "Programming and Data Structures",
+                    "Object Oriented Programming Through C++",
+                    "Relational Database Management System",
+                    "Computer Hardware and Networking",
+                    "Operating Systems",
+                    "Java Programming",
+                    "Python Programming",
+                    "Web Technologies",
+                ]
+            }
         ]
     },
     {
@@ -53,64 +128,20 @@ export const courses: Course[] = [
         icon: Radio,
         tags: ["Analog Electronics", "Digital Electronics", "Communication Systems"],
         syllabus: [
+            commonSubjects.mathematics,
+            commonSubjects.physics,
+            commonSubjects.chemistry,
             { 
-                subject: "MATHEMATICS (50 Marks)", 
+                subject: "Electronics and Communication Engineering (100 Marks)", 
                 topics: [
-                    "MATRICES: Matrix types, algebra, determinants, system of linear equations.",
-                    "TRIGONOMETRY: Compound angles, transformations, properties of triangles, inverse trigonometric functions, complex numbers.",
-                    "ANALYTICAL GEOMETRY: Straight lines, circles, conic sections (parabola, ellipse, hyperbola).",
-                    "DIFFERENTIATION AND ITS APPLICATIONS: Functions, limits, standard differentiation techniques, applications in geometry and physics.",
-                    "INTEGRATION AND ITS APPLICATIONS: Indefinite and definite integrals, applications to find areas and volumes.",
-                    "DIFFERENTIAL EQUATIONS: First order and second order linear differential equations with constant coefficients.",
-                    "LAPLACE TRANSFORMS: LT of elementary functions, properties, inverse Laplace transforms, and applications.",
-                    "FOURIER SERIES: Euler’s formulae, series for even and odd functions, half-range series."
-                ] 
-    },
-            { 
-                subject: "PHYSICS (25 Marks)", 
-                topics: [
-                    "UNITS, DIMENSIONS AND MEASUREMENTS: Physical quantities, S.I. units, dimensional analysis.",
-                    "VECTORS: Scalar and vector products, Lami's theorem, parallelogram law.",
-                    "MECHANICS: Friction, projectile motion, circular motion.",
-                    "PROPERTIES OF MATTER: Elasticity, surface tension, viscosity, Bernoulli’s theorem.",
-                    "CONSERVATION LAWS AND ENERGY SOURCES: Work, power, energy, conservation of energy.",
-                    "HEAT: Thermal expansion, gas laws, thermodynamics.",
-                    "SIMPLE HARMONIC MOTION: SHM conditions, expressions, simple pendulum.",
-                    "SOUND: Stationary waves, beats, Doppler effect, acoustics.",
-                    "MAGNETISM AND ELECTRICITY: Coulomb’s law, Kirchhoff’s laws, transformers, magnetic materials.",
-                    "OPTICS: Reflection, refraction, interference, photoelectric effect.",
-                    "MODERN PHYSICS: LASER, optical fibers, nanotechnology, superconductivity.",
-                    "SEMICONDUCTOR PHYSICS: Energy bands, P-type and N-type semiconductors, PN junction diode."
-                ] 
-            },
-            { 
-                subject: "CHEMISTRY (25 Marks)", 
-                topics: [
-                    "FUNDAMENTALS OF CHEMISTRY: Atomic structure, chemical bonding, oxidation-reduction.",
-                    "SOLUTIONS AND COLLOIDS: Molarity, normality, colloids and their properties.",
-                    "ACIDS AND BASES: Theories, pH, buffer solutions.",
-                    "ENVIRONMENTAL SCIENCE: Ecosystems, biodiversity, pollution.",
-                    "WATER TECHNOLOGY: Hardness of water, softening methods, municipal water treatment.",
-                    "ELECTROCHEMISTRY: Electrolysis, Faraday's laws.",
-                    "METALLURGY: Extraction of metals, alloys.",
-                    "CORROSION: Theories and prevention.",
-                    "POLYMERS: Polymerization, plastics, rubbers, fibers.",
-                    "FUELS AND LUBRICANTS: Classification, calorific value, gaseous fuels.",
-                    "ELECTROCHEMICAL CELL AND BATTERIES: Galvanic cell, batteries, fuel cells.",
-                    "ENVIRONMENTAL STUDIES: Air, water, and soil pollution."
-                ] 
-            },
-            { 
-                subject: "ELECTRONICS AND COMMUNICATION ENGINEERING (100 Marks)", 
-                topics: [
-                    "ELECTRONIC DEVICES AND CIRCUITS: Diodes, transistors, amplifiers, oscillators, operational amplifiers.",
-                    "CIRCUIT THEORY: KCL, KVL, network theorems, resonance, transmission lines.",
-                    "INDUSTRIAL ELECTRONICS: Thyristors, UPS, SMPS, transducers, PLCs, SCADA.",
-                    "COMMUNICATION SYSTEMS: Analog and digital modulation, transmitters, receivers, multiplexing.",
-                    "DIGITAL ELECTRONICS: Number systems, logic gates, combinational and sequential circuits, memories.",
-                    "MICROCONTROLLERS, PROGRAMMING, INTERFACING & APPLICATIONS: 8051 architecture, instruction set, interfacing.",
-                    "CONSUMER ELECTRONICS: Television systems (Color, DTH, HDTV), scanning and synchronization.",
-                    "DATA COMMUNICATIONS AND COMPUTER NETWORKS: OSI model, network topologies, TCP/IP, security."
+                    "Electronic Devices and Circuits",
+                    "Circuit Theory",
+                    "Industrial Electronics",
+                    "Communication Systems",
+                    "Digital Electronics",
+                    "Microcontrollers, Programming, Interfacing & Applications",
+                    "Consumer Electronics",
+                    "Data Communications and Computer Networks",
                 ] 
             }
         ]
@@ -122,10 +153,28 @@ export const courses: Course[] = [
         icon: Zap,
         tags: ["Electrical Circuits", "Power Systems", "Control Systems"],
         syllabus: [
-            { subject: "Electric Circuits & Machines", topics: ["DC/AC Circuits", "Transformers", "DC & AC Motors"] },
-            { subject: "Electrical Measurements", topics: ["Bridges", "Potentiometers", "Measuring Instruments"] },
-            { subject: "Power Systems", topics: ["Generation", "Transmission", "Distribution"] },
-            { subject: "Power Electronics", topics: ["Thyristors", "Inverters", "Choppers"] }
+            commonSubjects.mathematics,
+            commonSubjects.physics,
+            commonSubjects.chemistry,
+            {
+                subject: "Electrical & Electronics Engineering (100 marks)",
+                topics: [
+                    "Basic Electrical Engineering",
+                    "Electrical and Electronic Measuring Instrument",
+                    "D.C Machines",
+                    "A.C Circuits",
+                    "A.C Machines",
+                    "A.C Motors",
+                    "Electrical Power Systems",
+                    "Protection of Power Systems",
+                    "Electrical Estimation and Utilization",
+                    "Basic Electronics",
+                    "Digital Electronics",
+                    "Power Electronics",
+                    "PLC and C Language",
+                    "Electrical Vehicles",
+                ]
+            }
         ]
     },
     {
@@ -135,10 +184,25 @@ export const courses: Course[] = [
         icon: HardHat,
         tags: ["Thermodynamics", "Theory of Machines", "Fluid Mechanics"],
         syllabus: [
-            { subject: "Engineering Mechanics", topics: ["Statics", "Dynamics", "Friction"] },
-            { subject: "Thermodynamics", topics: ["Laws of Thermodynamics", "Power Cycles", "Heat Transfer"] },
-            { subject: "Fluid Mechanics", topics: ["Fluid Statics", "Fluid Dynamics", "Hydraulic Machines"] },
-            { subject: "Manufacturing Technology", topics: ["Casting", "Welding", "Machining"] }
+            commonSubjects.mathematics,
+            commonSubjects.physics,
+            commonSubjects.chemistry,
+            {
+                subject: "Mechanical Engineering (100 marks)",
+                topics: [
+                    "Basic Manufacturing Technology",
+                    "Advanced Manufacturing Technology",
+                    "Engineering Materials",
+                    "CAD/CAM",
+                    "Industrial Management",
+                    "Thermodynamics",
+                    "Heat Power Engineering",
+                    "Refrigeration and Air Conditioning",
+                    "Fluid Mechanics and Hydraulic Machinery",
+                    "Solid Mechanics",
+                    "Design of Machine Elements",
+                ]
+            }
         ]
     },
      {
@@ -148,10 +212,10 @@ export const courses: Course[] = [
         icon: FlaskConical,
         tags: ["Pharmaceutics", "Pharmacology", "Chemistry"],
         syllabus: [
-            { subject: "Pharmaceutics", topics: ["Dosage Forms", "Drug Delivery Systems", "Manufacturing Processes"] },
-            { subject: "Pharmaceutical Chemistry", topics: ["Organic Chemistry", "Medicinal Chemistry", "Inorganic Chemistry"] },
-            { subject: "Pharmacognosy", topics: ["Crude Drugs", "Plant Alkaloids", "Herbal Formulations"] },
-            { subject: "Pharmacology", topics: ["Drug Mechanisms", "Toxicology", "Chemotherapy"] }
+            { subject: "Pharmaceutics", topics: [] },
+            { subject: "Pharmaceutical Chemistry", topics: [] },
+            { subject: "Pharmacognosy", topics: [] },
+            { subject: "Pharmacology", topics: [] }
         ]
     },
      {
@@ -161,10 +225,10 @@ export const courses: Course[] = [
         icon: TestTube,
         tags: ["Thermodynamics", "Fluid Mechanics", "Heat Transfer"],
         syllabus: [
-            { subject: "Thermodynamics", topics: ["First & Second Law", "Phase Equilibria", "Reaction Equilibria"] },
-            { subject: "Fluid Mechanics", topics: ["Flow of Fluids", "Transportation of Fluids", "Flow Measurement"] },
-            { subject: "Heat Transfer", topics: ["Conduction", "Convection", "Radiation", "Heat Exchangers"] },
-            { subject: "Mass Transfer", topics: ["Distillation", "Absorption", "Extraction"] }
+            commonSubjects.mathematics,
+            commonSubjects.physics,
+            commonSubjects.chemistry,
+            { subject: "Chemical Engineering (100 marks)", topics: ["Thermodynamics", "Fluid Mechanics", "Heat Transfer", "Mass Transfer"] },
         ]
     },
     {
@@ -174,10 +238,10 @@ export const courses: Course[] = [
         icon: Pickaxe,
         tags: ["Physical Metallurgy", "Mechanical Metallurgy", "Thermodynamics"],
         syllabus: [
-            { subject: "Physical Metallurgy", topics: ["Crystal Structure", "Phase Diagrams", "Solidification"] },
-            { subject: "Mechanical Metallurgy", topics: ["Mechanical Testing", "Deformation", "Fracture"] },
-            { subject: "Extractive Metallurgy", topics: ["Iron Making", "Steel Making", "Non-Ferrous Extraction"] },
-            { subject: "Material Testing", topics: ["Destructive & Non-Destructive Testing", "Microscopy"] }
+            commonSubjects.mathematics,
+            commonSubjects.physics,
+            commonSubjects.chemistry,
+            { subject: "Metallurgical Engineering (100 marks)", topics: ["Physical Metallurgy", "Mechanical Metallurgy", "Extractive Metallurgy", "Material Testing"] },
         ]
     },
     {
@@ -187,11 +251,9 @@ export const courses: Course[] = [
         icon: Sigma,
         tags: ["Algebra", "Calculus", "Differential Equations"],
         syllabus: [
-            { subject: "Matrices", topics: ["Types of Matrices", "Determinants", "Eigenvalues & Eigenvectors"] },
-            { subject: "Trigonometry", topics: ["Trigonometric Ratios", "Complex Numbers", "De Moivre's Theorem"] },
-            { subject: "Analytical Geometry", topics: ["Straight Lines", "Circles", "Conic Sections"] },
-            { subject: "Differential Equations", topics: ["First Order DEs", "Linear DEs", "Higher Order DEs"] },
-            { subject: "Integration", topics: ["Indefinite & Definite Integrals", "Applications of Integration"] }
+            { subject: "Mathematics", topics: [] },
+            { subject: "Analytical Ability", topics: [] },
+            { subject: "Communicative English", topics: [] },
         ]
     },
      {
