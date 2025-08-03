@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -63,7 +62,7 @@ export default function ExamClient() {
     router.replace('/results');
   }, [answers, router, questions, sessionKey]);
   
-  // Effect to set the session key and restore state from local storage
+  // Effect to set the session key
   useEffect(() => {
     const customExamKey = searchParams.get('customExamKey');
     const examSlug = searchParams.get('examSlug');
@@ -82,21 +81,25 @@ export default function ExamClient() {
     }
     
     setSessionKey(currentSessionKey);
-
-    // Restore state from localStorage if it exists
-    const savedStateRaw = localStorage.getItem(currentSessionKey);
-    if(savedStateRaw){
-        try {
-            const savedState = JSON.parse(savedStateRaw);
-            setAnswers(savedState.answers || {});
-            setMarkedForReview(savedState.markedForReview || []);
-            setTimeLeft(savedState.timeLeft || EXAM_DURATION);
-        } catch(e) {
-            console.error("Failed to parse saved exam state", e);
-            localStorage.removeItem(currentSessionKey); // Clear corrupted data
-        }
-    }
   }, [searchParams, router, toast]);
+
+  // Effect to restore state from local storage
+  useEffect(() => {
+      if (!sessionKey) return;
+
+      const savedStateRaw = localStorage.getItem(sessionKey);
+      if(savedStateRaw){
+          try {
+              const savedState = JSON.parse(savedStateRaw);
+              setAnswers(savedState.answers || {});
+              setMarkedForReview(savedState.markedForReview || []);
+              setTimeLeft(savedState.timeLeft || EXAM_DURATION);
+          } catch(e) {
+              console.error("Failed to parse saved exam state", e);
+              localStorage.removeItem(sessionKey); // Clear corrupted data
+          }
+      }
+  }, [sessionKey]);
 
   // Effect to load questions
   useEffect(() => {
@@ -370,7 +373,8 @@ export default function ExamClient() {
 
       <AlertDialog open={isViolationDialogOpen} onOpenChange={setIsViolationDialogOpen}>
         <AlertDialogContent>
-          <div className="flex justify-center mb-4">
+          <AlertDialogHeader>
+            <div className="flex justify-center mb-4">
               <div className="h-16 w-16 rounded-full bg-destructive/10 flex items-center justify-center">
                   <AlertTriangle className="h-10 w-10 text-destructive" />
               </div>
@@ -416,3 +420,5 @@ export default function ExamClient() {
     </div>
   );
 }
+
+    

@@ -1,0 +1,1586 @@
+[
+    {
+      "id": "5105295613",
+      "question": "If A is square matrix of order 3 and if the matrix obtained by replacing the elements of A with their corresponding cofactors is \\(\\begin{vmatrix} 1 & -2 & 1 \\\\ 4 & -5 & -2 \\\\ -2 & 4 & 1 \\end{vmatrix}\\) then determinant of A is",
+      "options": [
+        "9",
+        "16",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295614",
+      "question": "The system of equations x+y+z=6,x+2y+3z=10,x+2y+λz=K is inconsistent for λ=l and K≠m, then (l, m)=",
+      "options": [
+        "(3, 7)",
+        "(3, 10)",
+        "(7, 10)",
+        "(10, 4)"
+      ],
+      "correctAnswer": "(3, 10)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295615",
+      "question": "If A is a square matrix of order n and A=P+Q, where P is symmetric and Q is non symmetric matrices, then P-Q =",
+      "options": [
+        "A",
+        "\\(A^T\\)",
+        "\\(A+A^T\\)",
+        "\\(A-A^T\\)"
+      ],
+      "correctAnswer": "\\(A^T\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295616",
+      "question": "If \\(A = \\begin{pmatrix} 1 & 2 & 2 \\\\ 2 & 1 & x \\\\ -2 & y & -1 \\end{pmatrix}\\) is orthogonal then",
+      "options": [
+        "x=-2, y=2",
+        "x=-2, y=-2",
+        "x=2, y=2",
+        "x=2, y=-2"
+      ],
+      "correctAnswer": "x=-2, y=2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295617",
+      "question": "If \\(X = \\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 3 & k \\end{vmatrix}\\) is singular matrix then k =",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "5",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295618",
+      "question": "If \\(\\frac{7x-17}{(x-1)(x-3)} = \\frac{m}{x-1} + \\frac{k}{x-3}\\), then m-k-1=",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "-2"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295619",
+      "question": "A complex number ‘z ‘ having least modulus value and satisfying |z-2+2i|=1 is",
+      "options": [
+        "\\((2-\\frac{1}{\\sqrt{2}})(1+i)\\)",
+        "\\((2+\\frac{1}{\\sqrt{2}})(1+i)\\)",
+        "\\((2-\\frac{1}{\\sqrt{2}})(1-i)\\)",
+        "\\((2+\\frac{1}{\\sqrt{2}})(1-i)\\)"
+      ],
+      "correctAnswer": "\\((2-\\frac{1}{\\sqrt{2}})(1-i)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295620",
+      "question": "The solution of the simultaneous equations \\(x+y=\\frac{2\\pi}{3}\\) and \\(\\cos x+\\cos y=\\frac{3}{2}\\) where x and y are real is",
+      "options": [
+        "\\(x=\\frac{\\pi}{3}, y=\\pi\\)",
+        "\\(x=\\pi, y=\\frac{\\pi}{3}\\)",
+        "\\(x=\\pi, y=\\frac{\\pi}{2}\\)",
+        "does not exist."
+      ],
+      "correctAnswer": "does not exist.",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295621",
+      "question": "If both the distinct roots of the equation \\(|\\sin x|^2+|\\sin x|+b=0\\) in \\([0,\\pi]\\) are real then all the values of b lie in the interval",
+      "options": [
+        "[-2, 0]",
+        "(-2, 0)",
+        "[-2, 0)",
+        "(-2, 0]"
+      ],
+      "correctAnswer": "[-2, 0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295622",
+      "question": "\\(\\frac{a \\cos A+b \\cos B+c \\cos C}{2s} =\\)",
+      "options": [
+        "\\(\\frac{\\Delta}{R}\\)",
+        "\\(\\frac{1}{R}\\)",
+        "\\(\\frac{r}{R}\\)",
+        "\\(\\frac{\\Delta}{R}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{r}{R}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295623",
+      "question": "If \\(\\cos A=\\frac{3}{4}\\), then the value of \\(32 \\sin\\frac{A}{2}.\\sin\\frac{5A}{2}\\) =",
+      "options": [
+        "11",
+        "36",
+        "27",
+        "10"
+      ],
+      "correctAnswer": "11",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295624",
+      "question": "If \\(z_1 = 3 (\\cos 15^0+ i \\sin 15^0)\\) and \\(z_2= 5 (\\cos 63^0+ i \\sin 63^0)\\) then \\(\\frac{z_1}{z_2} =\\)",
+      "options": [
+        "\\(\\frac{3}{5}[\\cos 48^0+ i \\sin 48^0]\\)",
+        "\\(\\frac{3}{5}[\\cos 48^0- i \\sin 48^0]\\)",
+        "\\(\\frac{3}{5}[\\cos 78^0+ i \\sin 78^0]\\)",
+        "\\(\\frac{5}{3}[\\cos 78^0- i \\sin 78^0]\\)"
+      ],
+      "correctAnswer": "\\(\\frac{3}{5}[\\cos 48^0- i \\sin 48^0]\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295625",
+      "question": "2 Tan⁻¹(1/7) + Tan⁻¹(1/13) =",
+      "options": [
+        "Tan⁻¹(23/61)",
+        "Tan⁻¹(14/61)",
+        "Tan⁻¹(32/61)",
+        "Tan⁻¹(3/51)"
+      ],
+      "correctAnswer": "Tan⁻¹(23/61)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295626",
+      "question": "If \\(\\cos 20^\\circ \\cos 40^\\circ \\cos 80^\\circ = p\\), then p =",
+      "options": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "1"
+      ],
+      "correctAnswer": "1/8",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295627",
+      "question": "\\(\\sin A \\sin(120^\\circ -A) \\sin(120^\\circ +A) =\\)",
+      "options": [
+        "\\(\\frac{1}{4} \\sin A\\)",
+        "\\(\\frac{1}{4} \\sin 3A\\)",
+        "\\(\\frac{1}{4} \\cos A\\)",
+        "\\(\\frac{1}{4} \\cos 3A\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1}{4} \\sin 3A\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295628",
+      "question": "\\(\\cos 5^\\circ - \\sin 25^\\circ =\\)",
+      "options": [
+        "\\(\\sin 30^\\circ\\)",
+        "\\(\\sin 35^\\circ\\)",
+        "\\(\\sin 45^\\circ\\)",
+        "\\(\\sin 55^\\circ\\)"
+      ],
+      "correctAnswer": "\\(\\sin 35^\\circ\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295629",
+      "question": "If n is the length of perpendicular from the point (3,-2) to the straight line L=12x-5y+6=0 and m is distance of that line L=0 from 12x-5y-7=0, then",
+      "options": [
+        "n+m=2",
+        "n=m",
+        "n=2m",
+        "n=4m"
+      ],
+      "correctAnswer": "n=4m",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295630",
+      "question": "The equation of the straight line passing through (2, 3) and perpendicular to the line 4x-3y=10 is",
+      "options": [
+        "3x+4y+18=0",
+        "3x+4y-18=0",
+        "3x-4y-18=0",
+        "3x-4y+18=0"
+      ],
+      "correctAnswer": "3x+4y-18=0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295631",
+      "question": "L is a straight line passing through the point P(1, 2) such that P bisects the portion of the line intercepted between the coordinate axes, then the perpendicular distance of line L from the origin is",
+      "options": [
+        "\\(\\frac{1}{\\sqrt{5}}\\)",
+        "\\(\\frac{2}{\\sqrt{5}}\\)",
+        "\\(\\frac{3}{\\sqrt{5}}\\)",
+        "\\(\\frac{4}{\\sqrt{5}}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{4}{\\sqrt{5}}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295632",
+      "question": "If the focus of the parabola \\((y-2)^2 = 4(x-1)\\) is (a, b), then a+b =",
+      "options": [
+        "(-1, -2)",
+        "(1, 2)",
+        "(2, 1)",
+        "(2, 2)"
+      ],
+      "correctAnswer": "(2, 2)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295633",
+      "question": "The function \\(y = |x|, -\\infty < x < \\infty\\) is",
+      "options": [
+        "Differentiable at x=0",
+        "not continuous at x=0",
+        "continuous and differentiable at x ≠ 0",
+        "continuous but not differentiable at x ≠ 0"
+      ],
+      "correctAnswer": "continuous and differentiable at x ≠ 0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295634",
+      "question": "\\(\\lim_{x\\to 0} \\frac{\\sqrt{1-\\cos 2x}}{x}\\)",
+      "options": [
+        "Does not exist",
+        "1",
+        "-1",
+        "0"
+      ],
+      "correctAnswer": "Does not exist",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295635",
+      "question": "If \\(f(x) = |x^2-3x+2|\\) then \\(\\frac{df}{dx}=\\)",
+      "options": [
+        "2x-3 when x > 2",
+        "3-2x, when x < 1",
+        "3-2x when x > 2",
+        "2x+3, when 1 < x < 2"
+      ],
+      "correctAnswer": "2x-3 when x > 2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295636",
+      "question": "If \\(Z = \\log_e \\frac{xy}{x+y}\\), then \\(x\\frac{\\partial z}{\\partial x} + y\\frac{\\partial z}{\\partial y} =\\)",
+      "options": [
+        "0",
+        "2Z",
+        "1",
+        "Z/2"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295637",
+      "question": "Two cars with equal speed V started from a place are such that one is moving towards East and the other is moving towards North. The rate at which they are separated from each other when they travel same distance is",
+      "options": [
+        "\\(V\\sqrt{2}\\)",
+        "\\(\\frac{V}{\\sqrt{2}}\\)",
+        "\\(\\frac{\\sqrt{2}}{V}\\)",
+        "\\(2V^2\\)"
+      ],
+      "correctAnswer": "\\(V\\sqrt{2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295638",
+      "question": "The derivative of \\(\\sin x^2\\) with respect to \\(x^5\\) is",
+      "options": [
+        "\\(\\frac{\\cos x^2}{5x^4}\\)",
+        "\\(\\frac{2\\cos x^2}{5x^4}\\)",
+        "\\(\\frac{2\\cos x^2}{5x^3}\\)",
+        "\\(\\frac{2\\sin x^2}{5x^4}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{2\\cos x^2}{5x^3}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295639",
+      "question": "If \\(y=x^y\\) then \\(\\frac{dy}{dx}=\\)",
+      "options": [
+        "\\(\\frac{y}{x(1-y\\log x)}\\)",
+        "\\(\\frac{y^2}{x(1-y\\log x)}\\)",
+        "\\(\\frac{y^2}{x(1+y\\log x)}\\)",
+        "\\(\\frac{y}{(1-y\\log x)}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{y^2}{x(1-y\\log x)}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295640",
+      "question": "If \\(x=at^2, y=2at\\), then \\(\\frac{d^2y}{dx^2}=\\)",
+      "options": [
+        "\\(\\frac{1}{t^2}\\)",
+        "\\(-\\frac{1}{2at}\\)",
+        "\\(-\\frac{1}{2at^3}\\)",
+        "\\(-\\frac{1}{2at^4}\\)"
+      ],
+      "correctAnswer": "\\(-\\frac{1}{2at^3}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295641",
+      "question": "If \\(I_n = \\int e^{-x}x^n dx\\), then \\(\\int e^{-x^2}x^{2n+1} dx=\\)",
+      "options": [
+        "0",
+        "\\(I_n/2\\)",
+        "\\(I_n/3\\)",
+        "\\(2I_n\\)"
+      ],
+      "correctAnswer": "\\(I_n/2\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295642",
+      "question": "If \\(\\int \\frac{\\sin 2x}{\\sin 5x \\sin 3x} dx = A \\log \\sin 3x + B \\log \\sin 5x + C\\), then A+B=",
+      "options": [
+        "2/7",
+        "1/3",
+        "-2/5",
+        "2/15"
+      ],
+      "correctAnswer": "2/15",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295643",
+      "question": "The area of the region bounded by the curve \\(y=x^2-x\\), x-axis and the line x=2 is",
+      "options": [
+        "5/4",
+        "5/3",
+        "5/6",
+        "5/2"
+      ],
+      "correctAnswer": "5/6",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295644",
+      "question": "If \\(0<x<\\pi/2\\), then \\(\\int \\frac{\\sin x+\\cos x}{\\sqrt{1+\\sin 2x}} dx=\\)",
+      "options": [
+        "1/x+c",
+        "x+c",
+        "2x+c",
+        "2/x+c"
+      ],
+      "correctAnswer": "x+c",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295645",
+      "question": "\\(\\int \\frac{x^4+1}{x^2+1} dx=\\)",
+      "options": [
+        "\\(\\frac{x^3}{3}+x+2\\tan^{-1}x+c\\)",
+        "\\(\\frac{x^3}{3}+x+\\tan^{-1}x+c\\)",
+        "\\(\\frac{x^3}{3}-x+2\\tan^{-1}x+c\\)",
+        "\\(\\frac{x^3}{3}-x+\\tan^{-1}x+c\\)"
+      ],
+      "correctAnswer": "\\(\\frac{x^3}{3}-x+2\\tan^{-1}x+c\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295646",
+      "question": "\\(\\int \\frac{e^x(1-x)}{x^2} dx=\\)",
+      "options": [
+        "\\(-\\frac{1}{xe^x}+C\\)",
+        "\\(\\frac{1}{xe^x}+C\\)",
+        "\\(-\\frac{1}{x}e^x+C\\)",
+        "\\(xe^x+C\\)"
+      ],
+      "correctAnswer": "\\(-\\frac{1}{x}e^x+C\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295647",
+      "question": "\\(\\int_0^{\\pi/2} \\frac{\\sin x}{\\sin x + \\cos x} dx=\\)",
+      "options": [
+        "\\(\\frac{\\pi}{4}\\)",
+        "\\(\\frac{\\pi}{6}\\)",
+        "\\(\\frac{\\pi}{8}\\)",
+        "\\(\\pi\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi}{4}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295648",
+      "question": "\\(\\int_0^{\\pi/2} \\sin^4 x \\cos^2 x dx=\\)",
+      "options": [
+        "\\(\\frac{\\pi}{12}\\)",
+        "\\(\\frac{\\pi}{32}\\)",
+        "\\(\\frac{\\pi}{42}\\)",
+        "\\(\\frac{\\pi}{2}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi}{32}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295649",
+      "question": "The solution of \\((x+2y^3)\\frac{dy}{dx} = y\\)",
+      "options": [
+        "\\(y=x^3+cx\\)",
+        "\\(x=y^3+cy\\)",
+        "\\(x=y^2+cy\\)",
+        "\\(y=x^3+cy^2\\)"
+      ],
+      "correctAnswer": "\\(x=y^3+cy\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295650",
+      "question": "The general solution of \\(\\frac{dy}{dx} - y = y^2(\\sin x + \\cos x)\\) is",
+      "options": [
+        "\\(y=\\frac{1}{ce^x-\\sin x}\\)",
+        "\\(y=ce^{-x}-e^x\\sin x\\)",
+        "\\(y=ce^x-\\sin x\\)",
+        "\\(y=\\frac{1}{ce^{-x}-\\sin x}\\)"
+      ],
+      "correctAnswer": "\\(y=\\frac{1}{ce^{-x}-\\sin x}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295651",
+      "question": "The differential equation representing the family of curves \\(y^2=2c(x+\\sqrt{c})\\), where c being a positive parameter is of",
+      "options": [
+        "Order 3",
+        "Order 2",
+        "degree 3",
+        "degree 1"
+      ],
+      "correctAnswer": "degree 3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295652",
+      "question": "The differential equation formed by eliminating the arbitrary constants a and b from the Equation \\(\\frac{x}{a}+\\frac{y}{b}=1\\) is",
+      "options": [
+        "x y'=1",
+        "x y''=0",
+        "y''=0",
+        "y''=1"
+      ],
+      "correctAnswer": "y''=0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295653",
+      "question": "The solution of the differential equation \\(\\frac{dy}{dx}=(1+x^2)(1+y^2)\\) is",
+      "options": [
+        "\\(\\tan^{-1}y = x+\\frac{x^3}{3}+c\\)",
+        "\\(\\tan^{-1}y = x-\\frac{x^3}{3}+c\\)",
+        "\\(\\cot^{-1}y = x+\\frac{x^3}{3}+c\\)",
+        "\\(\\sin^{-1}y = x+\\frac{x^3}{3}+c\\)"
+      ],
+      "correctAnswer": "\\(\\tan^{-1}y = x+\\frac{x^3}{3}+c\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295654",
+      "question": "The solution of the differential equation y dx - x dy + log x dx is",
+      "options": [
+        "cx+y+(1-log x)=0",
+        "cx-y-(1+log x)=0",
+        "cy+x+log x-1=0",
+        "cx-y+(1+log x)=0"
+      ],
+      "correctAnswer": "cx-y-(1+log x)=0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295655",
+      "question": "The general solution of the equation \\((D^2-D-2)y=\\sin 2x, (D=\\frac{d}{dx})\\) is",
+      "options": [
+        "\\(y=c_1e^{-x}+c_2e^{2x}+\\frac{1}{20}(\\cos 2x-3\\sin 2x)\\)",
+        "\\(y=c_1e^{-x}+c_2e^{-2x}+\\frac{1}{20}(\\cos 2x+3\\sin 2x)\\)",
+        "\\(y=c_1e^{-x}+c_2e^{2x}+\\frac{1}{20}(\\cos 2x-3\\sin 3x)\\)",
+        "\\(y=c_1e^x+c_2e^{-2x}+\\frac{1}{20}(\\cos 2x+3\\sin 2x)\\)"
+      ],
+      "correctAnswer": "\\(y=c_1e^{-x}+c_2e^{2x}+\\frac{1}{20}(\\cos 2x-3\\sin 2x)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295656",
+      "question": "The particular integral of \\((D^2-5D+6)y = e^{4x}\\) is",
+      "options": [
+        "e^{4x}",
+        "-e^{4x}",
+        "\\(\\frac{1}{2}e^{4x}\\)",
+        "\\(\\frac{1}{4}e^{4x}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1}{2}e^{4x}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295657",
+      "question": "If L[f(t)] denotes the Laplace Transform of f(t), then \\(L[t^2e^{-2t}] =\\)",
+      "options": [
+        "\\(\\frac{1}{(s+2)^2}\\)",
+        "\\(\\frac{2}{(s+2)^3}\\)",
+        "\\(\\frac{1}{(s+2)^3}\\)",
+        "\\(\\frac{2}{(s+2)^2}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{2}{(s+2)^3}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295658",
+      "question": "f: R→R, \\(f(x) = x^2, -\\pi \\le x \\le \\pi\\) and \\(f(x+2\\pi) = f(x), \\forall x \\in R\\). If the Fourier series of f(x) is represented as \\(f(x) = \\sum_{n=0}^\\infty a_n \\cos nx\\), then \\(a_0 =\\)",
+      "options": [
+        "\\(\\frac{2\\pi^2}{3}\\)",
+        "\\(\\frac{\\pi^2}{3}\\)",
+        "\\(\\frac{4\\pi^2}{3}\\)",
+        "\\(\\frac{5\\pi^2}{3}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi^2}{3}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295659",
+      "question": "\\(f(t)=2t^2-5, -2 \\le t \\le 2\\) and \\(f(t+4) = f(t)\\). If \\(2t^2-5 = \\sum_{n=0}^\\infty A_n \\cos(\\frac{n\\pi t}{2})\\), then \\(A_4=\\)",
+      "options": [
+        "0",
+        "\\(-\\frac{32}{\\pi^2}\\)",
+        "\\(\\frac{1-(-1)^n}{n}\\frac{2}{\\pi^2}\\)",
+        "\\(\\frac{16}{\\pi^2}\\)"
+      ],
+      "correctAnswer": "\\(-\\frac{32}{\\pi^2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295660",
+      "question": "If the Laplace transform of a function f(t) is F(S), then \\(\\int_0^\\infty f(t)dt=\\)",
+      "options": [
+        "F(1)",
+        "F(∞)",
+        "F(0)",
+        "F(S-1)"
+      ],
+      "correctAnswer": "F(0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295661",
+      "question": "Mean deviation from median for the data 340, 150, 210, 240, 300, 310, 320 is approximately equal to",
+      "options": [
+        "52.8",
+        "54.8",
+        "53.8",
+        "51.8"
+      ],
+      "correctAnswer": "52.8",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295662",
+      "question": "Two numbers are chosen at random from {1, 2, 3, 4, 5, 6, 7, 8} at a time. The probability that smaller of the two numbers is not more than 3 is",
+      "options": [
+        "7/14",
+        "9/14",
+        "8/14",
+        "10/14"
+      ],
+      "correctAnswer": "9/14",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "5105295663",
+      "question": "The dimensional formula for angular momentum is",
+      "options": [
+        "\\(MLT^{-1}\\)",
+        "\\(ML^{-1}T^{-1}\\)",
+        "\\(ML^2T^{-1}\\)",
+        "\\(M^1L^2T^{-2}\\)"
+      ],
+      "correctAnswer": "\\(ML^2T^{-1}\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295664",
+      "question": "Which of the following has not been expressed in proper unit?",
+      "options": [
+        "stress/strain = N/m²",
+        "surface tension = N/m",
+        "energy = Kg x m/s",
+        "pressure = N/m²"
+      ],
+      "correctAnswer": "energy = Kg x m/s",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295665",
+      "question": "Two adjacent sides of a parallelogram are represented by the two vectors I+2J+3K and 3I-2J+K. What is the area of the parallelogram?",
+      "options": [
+        "8",
+        "8√3",
+        "3√8",
+        "192"
+      ],
+      "correctAnswer": "8√3",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295666",
+      "question": "Given the points A= (0, a) and B= (1, 2), what is the value of a if the magnitude of the vector \\(\\vec{AB}\\) is 1?",
+      "options": [
+        "3",
+        "1",
+        "4",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295667",
+      "question": "If A and B are perpendicular, vector A = 5i+7j-3k and B = 2i+2j-ak. What is the value of a?",
+      "options": [
+        "-2",
+        "8",
+        "-7",
+        "-8"
+      ],
+      "correctAnswer": "-8",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295668",
+      "question": "A block of mass 2 Kg rests on a rough inclined plane making an angle of 30° with the horizontal. The coefficient of static friction between the block and plane is 0.7. The frictional force on the block is",
+      "options": [
+        "9.8 N",
+        "0.7 x 9.8 ×√3 N",
+        "9.8 ×√3 N",
+        "0.7 × 0.9 N"
+      ],
+      "correctAnswer": "0.7 x 9.8 ×√3 N",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295669",
+      "question": "A body sliding on a smooth inclined plane required 4 seconds to reach the bottom starting from rest at the top. How much time does it take to cover one-fourth the distance starting from rest at top?",
+      "options": [
+        "1 second",
+        "2 seconds",
+        "4 seconds",
+        "16 seconds"
+      ],
+      "correctAnswer": "2 seconds",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295670",
+      "question": "A body of mass 2 Kg is hung on a spring balance mounted vertically in a lift. If the lift descends with an acceleration equal to the acceleration due to gravity g, the reading on the spring balance will be changed by",
+      "options": [
+        "2 Kg",
+        "4 Kg",
+        "2/g Kg",
+        "zero"
+      ],
+      "correctAnswer": "zero",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295671",
+      "question": "If g is the acceleration due to gravity at the earth surface, the gain in the potential energy of an object of mass is raised, then the surface of the earth to a height equal to the radius R of earth is",
+      "options": [
+        "(1/2)mgR",
+        "2mgR",
+        "mgR",
+        "(¼)mgR"
+      ],
+      "correctAnswer": "(1/2)mgR",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295672",
+      "question": "A ship of mass 3 × 10⁷Kg initially at rest is pulled by a force of 5 × 10⁴ N through a distance of 3 m. Assume that the resistance due to water is negligible, the speed of the ship is",
+      "options": [
+        "1.5 m/s",
+        "60m/s",
+        "0.1 m/s",
+        "5 m/s"
+      ],
+      "correctAnswer": "0.1 m/s",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295673",
+      "question": "Clock A is based on oscillations of a spring and clock B is based on pendulum motion. Both clocks run at the same rate on earth. On a planet having the same density as earth but twice the radius,",
+      "options": [
+        "A will run faster than B",
+        "B will run faster than A",
+        "both run at the same rate as on earth",
+        "both run at equal rates but not the same as on earth"
+      ],
+      "correctAnswer": "B will run faster than A",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295674",
+      "question": "The potential energy at a point r when a particle is moving under the central force F = -Kr² is",
+      "options": [
+        "K²/r",
+        "K/r",
+        "K/r²",
+        "-K/r"
+      ],
+      "correctAnswer": "K/r",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295675",
+      "question": "When the body is acted upon by a resultant force, then work done by the resultant force is equal to",
+      "options": [
+        "its initial kinetic energy",
+        "its initial potential energy",
+        "change in the kinetic energy",
+        "change in momentum"
+      ],
+      "correctAnswer": "change in the kinetic energy",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295676",
+      "question": "A Jet engine works on the principle of",
+      "options": [
+        "conservation of energy",
+        "conservation of mass",
+        "conservation of linear momentum",
+        "conservation of angular momentum"
+      ],
+      "correctAnswer": "conservation of linear momentum",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295677",
+      "question": "A Particle is vibrating in simple harmonic motion with an amplitude of 4 cm. At what displacement from the equilibrium position is its energy half potential and half kinetic?",
+      "options": [
+        "1 cm",
+        "√2cm",
+        "2 cm",
+        "2√2 cm"
+      ],
+      "correctAnswer": "2√2 cm",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295678",
+      "question": "The walls of Hall built for music concerns should",
+      "options": [
+        "amplify sound",
+        "reflect sound",
+        "transmit sound",
+        "absorb sound"
+      ],
+      "correctAnswer": "absorb sound",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295679",
+      "question": "When a surrounding body and listener approach each other the pitch appears to rise and when they move away from each other pitch appears to decrease. This is known as",
+      "options": [
+        "Doppler's principle",
+        "Newton's formula",
+        "Interference",
+        "Sabine's formula"
+      ],
+      "correctAnswer": "Doppler's principle",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295680",
+      "question": "An engine driver moving towards a wall with a velocity of 50 m/sec., emits a note of 1.2 KHz. Speed of sound in air is 350 m/sec. The frequency of the note after reflection from the wall as heard by the engine driver is",
+      "options": [
+        "1.2 KHz",
+        "1.6 KHz",
+        "0.24 KHz",
+        "2.4 KHz"
+      ],
+      "correctAnswer": "1.6 KHz",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295681",
+      "question": "What is the maximum number of syllables a person can speak in one second?",
+      "options": [
+        "1",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "5",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295682",
+      "question": "The speed of sound in air at NTP is 300m/s, if the air pressure becomes four times then the speed of sound will be",
+      "options": [
+        "150 m/s",
+        "300 m/s",
+        "600 m/s",
+        "1200 m/s"
+      ],
+      "correctAnswer": "300 m/s",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295683",
+      "question": "For the efficiency of the Carnot cycle to be maximum,",
+      "options": [
+        "the temperature of the source should be infinity",
+        "the temperature of the sink should be infinity",
+        "the temperature of the source should be zero",
+        "both should be infinity"
+      ],
+      "correctAnswer": "the temperature of the source should be infinity",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295684",
+      "question": "Specific heat of a gas at constant volume Cᵥ and at constant pressure Cₚ are related as",
+      "options": [
+        "Cₚ/Cᵥ = 1-R/J",
+        "Cₚ - Cᵥ = R/J",
+        "Cₚ - Cᵥ = J/R",
+        "Cₚ + Cᵥ = R/J"
+      ],
+      "correctAnswer": "Cₚ - Cᵥ = R/J",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295685",
+      "question": "If the pressure remains constant the volume of the gas will",
+      "options": [
+        "increase with the increase in temperature",
+        "decrease with the increase in temperature",
+        "not change with the temperature",
+        "become zero"
+      ],
+      "correctAnswer": "increase with the increase in temperature",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295686",
+      "question": "A super conducting material when placed in a magnetic field will",
+      "options": [
+        "attract the magnetic field towards its centre",
+        "attract the magnetic field but transfer it into a concentrated zone",
+        "repel all the magnetic lines of force passing through it",
+        "not influence the magnetic field"
+      ],
+      "correctAnswer": "repel all the magnetic lines of force passing through it",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295687",
+      "question": "For long distance communication",
+      "options": [
+        "grand index fibers are more suitable",
+        "single mode step index fibers are more suitable",
+        "step index fibers are more suitable",
+        "silica fibers are more suitable"
+      ],
+      "correctAnswer": "single mode step index fibers are more suitable",
+      "topic": "Physics"
+    },
+    {
+      "id": "5105295688",
+      "question": "The set of quantum number for the 19th electron in chromium is",
+      "options": [
+        "n=4, l=0, m=0, S=+1/2 or -1/2",
+        "n=3, l=2, m=1, S=+1/2 or -1/2",
+        "n=3, l=2, m=-1, S=+1/2 or -1/2",
+        "n=4, l=1, m=0, S=+1/2 or -1/2"
+      ],
+      "correctAnswer": "n=4, l=0, m=0, S=+1/2 or -1/2",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295689",
+      "question": "In which of the following compounds, is coordinate covalent bond present?",
+      "options": [
+        "PH₃",
+        "H₂O",
+        "NH₄OH",
+        "HBr"
+      ],
+      "correctAnswer": "NH₄OH",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295690",
+      "question": "Variable valency is shown by",
+      "options": [
+        "N and O",
+        "P and S",
+        "F and Cl",
+        "N and S"
+      ],
+      "correctAnswer": "P and S",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295691",
+      "question": "In the following balanced equation\nH₂SO₄ + x HI → H₂S + YI₂ + ZH₂O\nThe values of x, Y, Z would be",
+      "options": [
+        "x=4, Y=8, Z=5",
+        "x=6, Y=3, Z=4",
+        "x=8, Y=4, Z=4",
+        "x=3, Y=5, Z=4"
+      ],
+      "correctAnswer": "x=8, Y=4, Z=4",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295692",
+      "question": "50cc of decinormal NaOH solution will be completely neutralised by ‘x’ ml of decimolar H₂SO₄ solution. The value of ‘x’ is",
+      "options": [
+        "10",
+        "25",
+        "50",
+        "1"
+      ],
+      "correctAnswer": "25",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295693",
+      "question": "Arrange the following in the decreasing order of acidity:\nI) H₂SO₃ II) H₃PO₄ III) HClO₃",
+      "options": [
+        "I > II > III",
+        "II > III > I",
+        "III > II > I",
+        "I > III > II"
+      ],
+      "correctAnswer": "III > II > I",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295694",
+      "question": "Which anion is the weakest conjugate base?",
+      "options": [
+        "C₂H₅O⁻",
+        "F⁻",
+        "CH₃COO⁻",
+        "NO₃⁻"
+      ],
+      "correctAnswer": "NO₃⁻",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295695",
+      "question": "In the preparation of wrought iron from cast iron, the furnace employed is",
+      "options": [
+        "Electrical",
+        "Open hearth",
+        "Reverberatory",
+        "Blast"
+      ],
+      "correctAnswer": "Reverberatory",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295696",
+      "question": "Number of coulombs of current required to convert completely one mole of MnO₄⁻ ions in acid medium to one mole of Mn⁺² ions electrically",
+      "options": [
+        "96500",
+        "96500 x 2",
+        "96500 x 6",
+        "5 x 96500"
+      ],
+      "correctAnswer": "5 x 96500",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295697",
+      "question": "Which of the following elements has the highest value of the electrochemical equivalent?",
+      "options": [
+        "Mg",
+        "Ca",
+        "K",
+        "Na"
+      ],
+      "correctAnswer": "K",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295698",
+      "question": "The standard reduction potential for Zn⁺²/Zn and Cu⁺²/Cu electrodes are -0.76 V and +0.34 V respectively. For the cell reaction Zn + Cu⁺²→Zn⁺²+ Cu the standard e.m.f is",
+      "options": [
+        "+1.10 V",
+        "-0.42 V",
+        "+0.42 V",
+        "-1.10 V"
+      ],
+      "correctAnswer": "+1.10 V",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295699",
+      "question": "The type of protection against corrosion applied to marine piers and water box coolers is",
+      "options": [
+        "Impressed current cathodic protection",
+        "Metal rusting",
+        "Tinning",
+        "Metal painting"
+      ],
+      "correctAnswer": "Impressed current cathodic protection",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295700",
+      "question": "A metal is dipped separately in different pH solutions of 1, 2, 3 and 4. In which pH solution is the metal easily corroded?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295701",
+      "question": "Which of the following statements is true regarding super conductors?",
+      "options": [
+        "super conductors have high resistance at very low temperatures, and they are perfectly diamagnetic",
+        "super conductors have high resistance at very low temperatures, and they are perfectly ferro magnetic",
+        "super conductors have zero resistance at very low temperatures, and they are perfectly para magnetic",
+        "super conductors have zero resistance at very low temperatures, and they are perfectly dia magnetic"
+      ],
+      "correctAnswer": "super conductors have zero resistance at very low temperatures, and they are perfectly dia magnetic",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295702",
+      "question": "Which of the following can enhance the Physical properties of rubber?",
+      "options": [
+        "ZnO",
+        "Zn stearate",
+        "Sulphur",
+        "SiO₂"
+      ],
+      "correctAnswer": "Sulphur",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295703",
+      "question": "The basic component of the smog may be",
+      "options": [
+        "O₃",
+        "O₃ + PAN",
+        "PAN + SO₂",
+        "O₃ + PAN + SO₃"
+      ],
+      "correctAnswer": "O₃ + PAN",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295704",
+      "question": "In Antarctica, Ozone depletion is due to the formation of the following Compound(s)",
+      "options": [
+        "Chlorine nitrate",
+        "PAN",
+        "Acrolein",
+        "SO₂ and SO₃"
+      ],
+      "correctAnswer": "Chlorine nitrate",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295705",
+      "question": "The pollutant responsible for smog formation and acid rain is",
+      "options": [
+        "SO₂",
+        "CH₄",
+        "He",
+        "SO₂Cl₂"
+      ],
+      "correctAnswer": "SO₂",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295706",
+      "question": "The normality of 26% (Wt/Vol) solution of ammonia (d=0.55) is approximately",
+      "options": [
+        "1.5",
+        "15.3",
+        "0.4",
+        "4"
+      ],
+      "correctAnswer": "15.3",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295707",
+      "question": "Wolframite impurity in Cassiterite is removed by",
+      "options": [
+        "Liquation",
+        "Froth flotation",
+        "Electromagnetic separation",
+        "Hand picking"
+      ],
+      "correctAnswer": "Electromagnetic separation",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295708",
+      "question": "The highest ranking coal is",
+      "options": [
+        "Anthracite",
+        "Lignite",
+        "Bituminous",
+        "Peat"
+      ],
+      "correctAnswer": "Anthracite",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "5105295709",
+      "question": "Ductility is a property of the material due to which it can be",
+      "options": [
+        "Rolled into bars",
+        "Drawn into section",
+        "Drawn into wires",
+        "Beaten up into sheets"
+      ],
+      "correctAnswer": "Drawn into wires",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295710",
+      "question": "The temperature stress set up in the materials when",
+      "options": [
+        "It is free to expand or contrast",
+        "Its expansion or contraction is prevented",
+        "It is first heated then cooled",
+        "It is first cooled then heated"
+      ],
+      "correctAnswer": "Its expansion or contraction is prevented",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295711",
+      "question": "In a simply supported beam carrying a load whose intensity varies uniformly from zero at one end to 'w' per unit run at the other end, the maximum support reaction is equal to",
+      "options": [
+        "wl/8",
+        "wl/12",
+        "wl/24",
+        "wl/3"
+      ],
+      "correctAnswer": "wl/3",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295712",
+      "question": "In a simple tension test, Hook’s law is valid up to the",
+      "options": [
+        "Yield point",
+        "Limit of proportionality",
+        "Ultimate point",
+        "Breaking point"
+      ],
+      "correctAnswer": "Limit of proportionality",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295713",
+      "question": "Energy stored in a body, when it is strained within the elastic limit is known as",
+      "options": [
+        "Resilience",
+        "Strain energy",
+        "Toughness",
+        "Proof resilience."
+      ],
+      "correctAnswer": "Strain energy",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295714",
+      "question": "A cantilever of span 4.5 m has a load 40 kN acting at the free end. The bending moment at the free end will be",
+      "options": [
+        "0",
+        "200 kN-m",
+        "180k N-m",
+        "50 kN-m"
+      ],
+      "correctAnswer": "0",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295715",
+      "question": "A simply supported beam of span ‘6m’ carries a concentrated load ‘100 kN’ at the center, the B.M at the mid span point will be",
+      "options": [
+        "150 kNm",
+        "0 kNm",
+        "200 kNm",
+        "120 kNm"
+      ],
+      "correctAnswer": "150 kNm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295716",
+      "question": "The rate of change of Bending moment is known as",
+      "options": [
+        "Shear center",
+        "Section modulus",
+        "Intensity of load",
+        "Shear Force"
+      ],
+      "correctAnswer": "Shear Force",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295717",
+      "question": "A beam of symmetric I-section subjected to transverse shear force ‘S’ the maximum shear stress is developed",
+      "options": [
+        "At mid depth of the Web",
+        "At top edge of the top flange",
+        "At the bottom edge of the top flange",
+        "At top of the flange"
+      ],
+      "correctAnswer": "At mid depth of the Web",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295718",
+      "question": "A rectangular section with width ‘b’ and depth ‘d’ will have section modulus Z as",
+      "options": [
+        "bd³/12",
+        "bd²/16",
+        "bd³/6",
+        "bd²/6"
+      ],
+      "correctAnswer": "bd²/6",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295719",
+      "question": "Beams subjected to Pure bending have",
+      "options": [
+        "Zero Shear force and constant bending moment",
+        "Both Shear force and bending moment constant",
+        "Constant Shear force and zero bending moment",
+        "Both Shear force and bending moment is zero"
+      ],
+      "correctAnswer": "Zero Shear force and constant bending moment",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295720",
+      "question": "A cantilever of length ‘l’ is carrying a uniformly distributed load of ‘w’ per unit run for a distance ‘a’ from fixed end. EI is constant the slope at the free end is given as",
+      "options": [
+        "\\(\\frac{wa^3}{6EI}\\)",
+        "\\(\\frac{wa^3}{8EI}\\)",
+        "\\(\\frac{wa^3}{12EI}\\)",
+        "\\(\\frac{wa^3}{24EI}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{wa^3}{6EI}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295721",
+      "question": "The ratio of maximum shear stress to mean shear stress in the case of a circular beam is",
+      "options": [
+        "1.50",
+        "2.00",
+        "1.33",
+        "1.66"
+      ],
+      "correctAnswer": "1.33",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295722",
+      "question": "The polar modulus of a solid circular shaft of diameter 'D' is",
+      "options": [
+        "\\(\\frac{\\pi D^3}{16}\\)",
+        "\\(\\frac{\\pi D^3}{32}\\)",
+        "\\(\\frac{\\pi D^4}{32}\\)",
+        "\\(\\frac{\\pi D^4}{64}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi D^3}{16}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295723",
+      "question": "The Torque required to produce an angle of twist of one radian in unit length is known as",
+      "options": [
+        "Modulus of Rigidity",
+        "Torsional Rigidity",
+        "Torsional Stiffness",
+        "Flexural Rigidity"
+      ],
+      "correctAnswer": "Torsional Rigidity",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295724",
+      "question": "Two shafts, one is solid circular and the other hollow circular has their external diameters same. The internal diameter of the hollow circular shaft is half of the external diameter. The ratio of strength of solid shaft to hollow shaft is",
+      "options": [
+        "8/7",
+        "15/16",
+        "1",
+        "16/15"
+      ],
+      "correctAnswer": "16/15",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295725",
+      "question": "The radius of gyration of a hollow circular column of internal diameter half of the external diameter is",
+      "options": [
+        "\\(\\frac{\\sqrt{5}D}{16}\\)",
+        "\\(\\frac{\\sqrt{5}D}{8}\\)",
+        "\\(\\frac{5D}{8}\\)",
+        "\\(\\frac{D}{4}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\sqrt{5}D}{8}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295726",
+      "question": "The length of the column which give the same value of Euler’s load and Rankine’s load is (Where E is young’s modulus, K is least radius of gyration, fc permissible compressive stress and α is rankine’s coefficient)",
+      "options": [
+        "\\(\\sqrt{\\frac{\\pi^2 E K^2}{fc - \\pi^2 E \\alpha}}\\)",
+        "\\(\\sqrt{\\frac{\\pi^2 E K^2}{fc + \\pi^2 E \\alpha}}\\)",
+        "\\(\\sqrt{\\frac{\\pi^2 k^2}{fc - \\pi^2 E}}\\)",
+        "\\(\\sqrt{\\frac{\\pi^2 E k^2}{fc E \\alpha}}\\)"
+      ],
+      "correctAnswer": "\\(\\sqrt{\\frac{\\pi^2 E K^2}{fc - \\pi^2 E \\alpha}}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295727",
+      "question": "Compare the ratio of strength of a solid steel column and that of hollow of same length and pinned ends of the same cross sectional area. The internal diameter of hollow column is ¾ of external diameter.",
+      "options": [
+        "16/15",
+        "15/16",
+        "5/3",
+        "25/7"
+      ],
+      "correctAnswer": "25/7",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295728",
+      "question": "A cantilever beam of span 4m is subjected to a maximum deflection of 64 mm at the free end due to a concentrated load at the free end. Find the maximum slope?",
+      "options": [
+        "0.048 radians",
+        "0.024 radians",
+        "0.012 radians",
+        "0.240 radians"
+      ],
+      "correctAnswer": "0.024 radians",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295729",
+      "question": "A simply supported beam of span ‘L’ carries two point loads, W each at points L/3 from A and B. What is the shear force in the Middle one-Third portion of the beam?",
+      "options": [
+        "W/2",
+        "2W",
+        "W",
+        "Zero"
+      ],
+      "correctAnswer": "Zero",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295730",
+      "question": "A Prismatic beam ABC is simply supported at point A and B spaced 8m apart and has an overhang of 2m. A uniformly distributed load of 15kN/m is acting over the entire length 'AC' and a concentrated load of 50kN is acting at 'C'. The bending moment at support B is",
+      "options": [
+        "120 kN-m",
+        "140 kN-m",
+        "130 kN-m",
+        "150 kN-m"
+      ],
+      "correctAnswer": "130 kN-m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295731",
+      "question": "Beam (A) has a width 'b' and depth 'd/2', while Beam (B) has a width 'b/2' and depth (d). If bending moments applied to both beams are the same, maximum bending stresses induced is cases (A) and (B) are related as",
+      "options": [
+        "\\(\\sigma_A = 2\\sigma_B\\)",
+        "\\(\\sigma_A = \\sigma_B/2\\)",
+        "\\(\\sigma_A = 4\\sigma_B\\)",
+        "\\(\\sigma_A = \\sigma_B/4\\)"
+      ],
+      "correctAnswer": "\\(\\sigma_A = 2\\sigma_B\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295732",
+      "question": "The moment of inertia of the 'I' section given below about its major axis",
+      "options": [
+        "492 cm⁴",
+        "464 cm⁴",
+        "488 cm⁴",
+        "512 cm⁴"
+      ],
+      "correctAnswer": "492 cm⁴",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295733",
+      "question": "Relation between three elastic moduli E (Modulus of elasticity), G (Modulus of rigidity) and K (Bulk modulus)",
+      "options": [
+        "E = \\(\\frac{9KG}{3G+K}\\)",
+        "E = \\(\\frac{9KG}{3K+G}\\)",
+        "K = \\(\\frac{9EG}{3E+G}\\)",
+        "G = \\(\\frac{9EK}{3K+7E}\\)"
+      ],
+      "correctAnswer": "E = \\(\\frac{9KG}{3K+G}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295734",
+      "question": "A Cylindrical wire is stretched by a tensile force, such that the volume of wire is constant. Find Poisson's ratio of material of wire",
+      "options": [
+        "0.25",
+        "0.30",
+        "0.40",
+        "0.5"
+      ],
+      "correctAnswer": "0.5",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295735",
+      "question": "What is the proof resilience of a square bar of area 1600mm² and 300mm long. When a load of 320 kw is applied gradually, Take E=2x10⁵ MPa.",
+      "options": [
+        "24 J",
+        "96 J",
+        "48 J",
+        "72 J"
+      ],
+      "correctAnswer": "48 J",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295736",
+      "question": "A simply supported beam of span 'L' is subjected to a uniformly distributed load of w/m over right half of the span. The Bending moment at mid span is",
+      "options": [
+        "Wl²/8",
+        "Wl²/16",
+        "Wl²/12",
+        "Zero"
+      ],
+      "correctAnswer": "Wl²/16",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295737",
+      "question": "Two span continuous beam of each span 8 m subjected to a uniformly distributed load of 20kN/m throughout the length of the beam. The maximum hogging bending moment at the central support",
+      "options": [
+        "128 kN-m",
+        "106.7 kN-m",
+        "160 kN-m",
+        "320 kN-m"
+      ],
+      "correctAnswer": "160 kN-m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295738",
+      "question": "A Prismatic beam ABC is simply supported at point A and B spaced 8m apart and has an overhang of 2m. A uniformly distributed load of 15kN/m is acting over the entire length 'AC' and a concentrated load of 50kN is acting at 'C'. The bending moment at support B is",
+      "options": [
+        "120 kN-m",
+        "140 kN-m",
+        "130 kN-m",
+        "150 kN-m"
+      ],
+      "correctAnswer": "130 kN-m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295739",
+      "question": "In limit state method, which of the following formats is used?",
+      "options": [
+        "single safety factor",
+        "load factor",
+        "wind factor",
+        "multiple safety factors"
+      ],
+      "correctAnswer": "multiple safety factors",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295740",
+      "question": "In limit state method, which of the following criteria is to be satisfied in selection of member?",
+      "options": [
+        "Factored Load > Factored Strength",
+        "Factored Load ≥ Factored Strength",
+        "Factored Load ≤ Factored Strength",
+        "Sometimes Factored Load < Factored Strength (or) Factored Load > Factored Strength"
+      ],
+      "correctAnswer": "Factored Load ≤ Factored Strength",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295741",
+      "question": "Bars and rods are not used as",
+      "options": [
+        "friction resistant members",
+        "tension members in bracing systems",
+        "sag rods to support purlin",
+        "supporting girts in industrial buildings"
+      ],
+      "correctAnswer": "friction resistant members",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295742",
+      "question": "What is the yield point for high yield strength steel?",
+      "options": [
+        "0.5% of offset load",
+        "0.1% of offset load",
+        "1.5% of offset load",
+        "0.2% of offset load"
+      ],
+      "correctAnswer": "0.2% of offset load",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295743",
+      "question": "A steel beam supporting loads from the floor slab as well as from wall is termed as",
+      "options": [
+        "stringer beam",
+        "spandrel beam",
+        "lintel beam",
+        "header beam"
+      ],
+      "correctAnswer": "spandrel beam",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "5105295744",
+      "question": "If a truss consists of 8 joints, 10 members and 4 reaction components, then it is a",
+      "options": [
+        "cantilever truss",
+        "deficient truss",
+        "redundant truss",
+        "simply supported truss"
+      ],
+      "correctAnswer": "deficient truss",
+      "topic": "Civil Engineering"
+    }
+  ]
