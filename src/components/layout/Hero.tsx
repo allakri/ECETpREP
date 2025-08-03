@@ -33,7 +33,7 @@ export function Hero() {
 
   return (
     <div className="relative isolate overflow-hidden bg-background">
-      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:items-center lg:px-8 lg:py-40">
         <motion.div 
           className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8"
           initial="hidden"
@@ -47,13 +47,13 @@ export function Hero() {
             Unlock Your Engineering Future
           </motion.h1>
            <motion.p 
-            className="mt-6 text-xl leading-8 text-muted-foreground"
+            className="mt-6 text-lg leading-8 text-muted-foreground"
             variants={itemVariants}
           >
             From Diploma to Degree, We’ve Got Your Back. Master key concepts with mock tests, instant AI feedback, and 24/7 doubt solving.
           </motion.p>
           <motion.div 
-            className="mt-10 flex items-center gap-x-6"
+            className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4"
             variants={itemVariants}
           >
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl transition-all font-bold shadow-lg" onClick={() => router.push('/register')}>
@@ -64,7 +64,7 @@ export function Hero() {
             </Button>
           </motion.div>
           <motion.div 
-            className="mt-12 grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-foreground sm:grid-cols-3 md:flex lg:gap-x-10"
+            className="mt-12 grid grid-cols-1 gap-x-8 gap-y-4 text-base font-semibold leading-7 text-foreground sm:grid-cols-2 md:flex lg:gap-x-10"
             variants={itemVariants}
           >
               <div className="flex gap-x-2 items-center">
