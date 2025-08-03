@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import { CheckCircle, XCircle, ChevronLeft, ChevronRight, Lightbulb, Home, AlertCircle, Loader2, MessageSquarePlus, Bot, User, Send, HelpCircle } from 'lucide-react';
+import { CheckCircle, XCircle, ChevronLeft, ChevronRight, Lightbulb, Home, AlertCircle, Loader2, MessageSquarePlus, Bot, User, Send, HelpCircle, BarChart } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '../ui/skeleton';
 import { explainAnswer } from '@/ai/flows/explain-answer-flow';
@@ -175,9 +175,12 @@ export default function AnswerReviewClient() {
   return (
     <div className="flex h-[calc(100vh-8rem)] flex-col md:flex-row bg-secondary/10 text-foreground">
       <aside className="w-full md:w-80 lg:w-96 bg-card border-r p-4 flex flex-col gap-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-2 flex-wrap">
             <h2 className="text-xl font-bold font-headline text-primary">Answer Review</h2>
-             <Button variant="outline" size="sm" onClick={() => router.push('/')}><Home className="mr-2 h-4 w-4" /> Home</Button>
+            <div className="flex gap-2">
+                <Button variant="outline" size="sm" onClick={() => router.push('/results')}><BarChart className="mr-2 h-4 w-4" /> View Results</Button>
+                <Button variant="outline" size="sm" onClick={() => router.push('/')}><Home className="mr-2 h-4 w-4" /> Home</Button>
+            </div>
         </div>
         <div className="space-y-2 text-xs">
             <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500"></div><span>Correct</span></div>

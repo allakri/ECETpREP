@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { useEffect, useState, useMemo } from 'react';
@@ -9,7 +10,7 @@ import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { BrainCircuit, Home, UserCheck, ListChecks, Check, X, Target, Clock, Trophy } from 'lucide-react';
+import { BrainCircuit, Home, UserCheck, ListChecks, Check, X, Target, Clock, Trophy, ArrowRight } from 'lucide-react';
 import { ScoreChart } from './ScoreChart';
 import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
@@ -168,6 +169,30 @@ export default function ResultsClient() {
     { title: "Accuracy", value: `${accuracy.toFixed(1)}%`, icon: Target, color: "text-blue-500" },
     { title: "Time Taken", value: "N/A", icon: Clock, color: "text-indigo-500" },
   ];
+  
+  const nextSteps = [
+    {
+      title: "Review Answers & Learn",
+      description: "Go through each question to understand the correct answers and explanations.",
+      icon: ListChecks,
+      action: () => router.push('/exam/review'),
+      color: "bg-primary/10 text-primary"
+    },
+    {
+      title: "Clear Doubts with AI",
+      description: "Have a specific question? Ask our AI Tutor for a detailed explanation.",
+      icon: MessageCircleQuestion,
+      action: () => router.push('/chat'),
+      color: "bg-secondary/10 text-secondary"
+    },
+    {
+      title: "Return to Dashboard",
+      description: "Go back to the main dashboard to see your overall progress.",
+      icon: Home,
+      action: () => router.push('/'),
+      color: "bg-muted/50 text-muted-foreground"
+    }
+  ];
 
 
   return (
@@ -267,19 +292,27 @@ export default function ResultsClient() {
             </motion.div>
         </div>
 
-        <motion.div className="text-center flex items-center justify-center gap-4 pt-4" variants={itemVariants}>
-            <Button onClick={() => router.push('/')} size="lg" variant="outline" className="font-bold shadow-lg">
-                <Home className="mr-2 h-4 w-4"/>
-                Back to Home
-            </Button>
-            <Button onClick={() => router.push('/exam/review')} size="lg" variant="default" className="font-bold shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
-                <ListChecks className="mr-2 h-4 w-4"/>
-                Review Answers & Learn
-            </Button>
-            <Button onClick={() => router.push('/chat')} size="lg" variant="secondary" className="font-bold shadow-lg">
-                <MessageCircleQuestion className="mr-2 h-4 w-4"/>
-                Clear Doubts with AI
-            </Button>
+        <motion.div variants={itemVariants}>
+            <Card>
+                <CardHeader>
+                    <CardTitle className="font-headline text-2xl text-center">What's Next?</CardTitle>
+                    <CardDescription className="text-center">Choose your next action to continue your learning journey.</CardDescription>
+                </CardHeader>
+                <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {nextSteps.map(step => (
+                        <Card key={step.title} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={step.action}>
+                            <CardContent className="pt-6 flex flex-col items-center text-center gap-3">
+                                <div className={`p-3 rounded-full ${step.color}`}>
+                                    <step.icon className="h-6 w-6" />
+                                </div>
+                                <h3 className="font-semibold">{step.title}</h3>
+                                <p className="text-xs text-muted-foreground">{step.description}</p>
+                                <Button variant="link" size="sm" className="mt-2">Go <ArrowRight className="ml-1 h-4 w-4" /></Button>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </CardContent>
+            </Card>
         </motion.div>
       </motion.div>
     </div>
