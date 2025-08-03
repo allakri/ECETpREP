@@ -31,14 +31,14 @@ function ResultsFallback() {
 
 export default function ResultsPage() {
     return (
-      <div className="flex flex-col min-h-screen bg-background">
-        <AppHeader />
-        <main className="flex-grow">
-          <Suspense fallback={<ResultsFallback />}>
+      <Suspense fallback={<ResultsFallback />}>
+          <div className="flex flex-col min-h-screen bg-background">
+            <AppHeader />
+            <main className="flex-grow">
               <ResultsClient />
-          </Suspense>
-        </main>
-        <AppFooter />
-      </div>
+            </main>
+            <AppFooter />
+          </div>
+      </Suspense>
     );
 }
