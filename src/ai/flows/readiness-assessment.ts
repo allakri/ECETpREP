@@ -20,7 +20,7 @@ const ReadinessAssessmentInputSchema = z.object({
 export type ReadinessAssessmentInput = z.infer<typeof ReadinessAssessmentInputSchema>;
 
 const ReadinessAssessmentOutputSchema = z.object({
-  readiness: z.string().describe('A paragraph assessing if the student is ready for the real exam, providing encouragement and specific advice based on their score and weak topics. Use Markdown for formatting.'),
+  readiness: z.string().describe('A single paragraph assessing if the student is ready for the real exam, providing encouragement and specific advice based on their score and weak topics. Use Markdown for formatting.'),
 });
 export type ReadinessAssessmentOutput = z.infer<typeof ReadinessAssessmentOutputSchema>;
 
@@ -32,54 +32,25 @@ const readinessAssessmentPrompt = ai.definePrompt({
   name: 'readinessAssessmentPrompt',
   input: {schema: ReadinessAssessmentInputSchema},
   output: {schema: ReadinessAssessmentOutputSchema},
-  prompt: `You are an experienced and encouraging AI guidance counselor. Your task is to provide a realistic but motivational readiness assessment for a student who just completed a practice exam.
+  prompt: `You are an encouraging AI guidance counselor. A student just scored **{{{score}}}%** on the '{{{examName}}}'. Their weakest topics were: {{#if incorrectTopics}}{{#each incorrectTopics}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}{{else}}None{{/if}}.
 
-**Student's Performance Data:**
-- Exam Name: {{{examName}}}
-- Score: {{{score}}}%
-- Topics with incorrect answers: {{#if incorrectTopics}}{{#each incorrectTopics}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}{{else}}None!{{/if}}
+Your task is to generate a single, concise paragraph with a realistic readiness assessment.
 
-**Your Assessment MUST Follow This Structure:**
+**Follow this structure:**
 
-1.  **Readiness Level:** Start by giving a clear, one-sentence assessment of their current readiness. Use one of these phrases:
-    *   **Score > 85%:** "You are well-prepared and on track for success."
-    *   **Score 60-84%:** "You have a strong foundation, but a few key areas need more focus."
-    *   **Score < 60%:** "You've built a starting point, and with a focused strategy, you can make significant improvements."
+1.  **Start with a readiness statement based on the score:**
+    *   Score > 85%: "You are well-prepared and on track for success."
+    *   Score 60-84%: "You have a strong foundation, but a few key areas need more focus."
+    *   Score < 60%: "You've built a starting point, and with a focused strategy, you can make significant improvements."
 
-2.  **Strengths:** Briefly mention what their score indicates as a strength.
-    *   If score is high, praise their solid understanding.
-    *   If score is mid-range, acknowledge their grasp of core concepts.
-    *   If score is low, praise their effort in attempting the test.
+2.  **Acknowledge their effort and a key strength.** (e.g., "Your score shows a solid grasp of core concepts.")
 
-3.  **Areas for Improvement:**
-    *   Clearly list the topics where they made mistakes: {{#if incorrectTopics}}"Your main areas for improvement are: {{#each incorrectTopics}}**{{{this}}}**{{#unless @last}}, {{/unless}}{{/each}}."{{else}}"You had no incorrect topics, which is outstanding! Focus on revision and time management."{{/if}}
+3.  **Provide ONE clear, actionable next step.** If there are weak topics, focus on the most important one. If not, suggest a different type of practice.
+    *   Example for weak topic: "Your immediate next step should be to review the '{{{incorrectTopics.[0]}}}' questions using the 'Review Answers' feature to solidify your understanding."
+    *   Example for no weak topics: "Your next step should be to take another mock test under stricter time limits to master your speed and consistency."
 
-4.  **Actionable Next Step:** Provide ONE clear, immediate next step.
-    *   Example: "Your next step should be to review the incorrect answers from this test using the 'Review Answers' feature. Pay close attention to the explanations for the '{{{incorrectTopics.[0]}}}' questions."
-    *   If there are no incorrect topics, suggest: "Your next step is to take another mock test under timed conditions to improve speed and consistency."
-
-Keep the entire response to a single, concise paragraph. Be motivational and encouraging.
+Keep the tone motivational.
 `,
-  config: {
-    safetySettings: [
-      {
-        category: 'HARM_CATEGORY_HATE_SPEECH',
-        threshold: 'BLOCK_ONLY_HIGH',
-      },
-      {
-        category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
-        threshold: 'BLOCK_NONE',
-      },
-      {
-        category: 'HARM_CATEGORY_HARASSMENT',
-        threshold: 'BLOCK_MEDIUM_AND_ABOVE',
-      },
-      {
-        category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
-        threshold: 'BLOCK_LOW_AND_ABOVE',
-      },
-    ],
-  },
 });
 
 const readinessAssessmentFlow = ai.defineFlow(
