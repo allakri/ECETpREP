@@ -97,16 +97,16 @@ export default function UserGuidePage() {
           <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
             Your complete walkthrough on how to navigate, learn, and succeed using our platform's powerful features.
           </p>
-          <div className="mt-8 flex justify-center gap-4">
-            <Button size="lg"><PlayCircle className="mr-2 h-5 w-5" /> Watch Quick Demo</Button>
-            <Button size="lg" variant="outline">Start Learning Now <ArrowRight className="ml-2 h-5 w-5" /></Button>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" className="w-full sm:w-auto"><PlayCircle className="mr-2 h-5 w-5" /> Watch Quick Demo</Button>
+            <Button size="lg" variant="outline" className="w-full sm:w-auto">Start Learning Now <ArrowRight className="ml-2 h-5 w-5" /></Button>
           </div>
         </motion.div>
         
         {/* Walkthrough Section */}
         <div className="py-16 md:py-24 px-4 container mx-auto">
              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}

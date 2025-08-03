@@ -105,18 +105,18 @@ export default function CommunityHubPage() {
           <motion.p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground" variants={itemVariants}>
             Connect with aspirants, get expert tips, and stay updated with the latest from ECET & Government Exam Prep.
           </motion.p>
-          <motion.div className="mt-8 flex flex-wrap justify-center gap-4" variants={itemVariants}>
-            <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <motion.div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4" variants={itemVariants}>
+            <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto">
                 <Link href="/chat">
                     <Megaphone className="mr-2 h-5 w-5" /> Start a Conversation
                 </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" asChild className="w-full sm:w-auto">
                 <Link href="#">
                     <Newspaper className="mr-2 h-5 w-5" /> Get Weekly Insights
                 </Link>
             </Button>
-             <Button size="lg" variant="secondary" asChild>
+             <Button size="lg" variant="secondary" asChild className="w-full sm:w-auto">
                 <Link href="/contact">
                     <Users className="mr-2 h-5 w-5" /> Partner With Us
                 </Link>
