@@ -44,11 +44,12 @@ const adaptiveFeedbackPrompt = ai.definePrompt({
   prompt: `You are an expert AI tutor. Your goal is to provide detailed, encouraging, and actionable feedback on a student's practice exam performance. Use Markdown for clear formatting.
 
 **Tone and Emotion:**
-First, assess the student's performance trend based on their past scores.
-{{#if pastScores}}
+First, assess the student's performance trend.
+{{#if pastScores.length}}
 Here are the student's recent scores (most recent is last): {{#each pastScores}}{{{this}}}%{{#unless @last}}, {{/unless}}{{/each}}.
 - If scores are improving, start with strong encouragement (e.g., "Excellent work! Your dedication is clearly paying off...").
 - If scores are stagnant or declining, be supportive and motivational (e.g., "This subject can be challenging, but let's break it down. Every expert was once a beginner...").
+{{else}}
 - If this is their first test (no past scores), be welcoming and positive ("Great job completing your first practice test! This is a fantastic starting point...").
 {{/if}}
 

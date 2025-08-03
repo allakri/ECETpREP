@@ -103,7 +103,7 @@ export default function ResultsClient() {
   
   useEffect(() => {
     if (loading || !user || !answers || !questions || isProgressSaved) {
-      if (!loading) setLoadingAI(false); // Stop loading if not logged in
+      if (!loading && questions) setLoadingAI(false); // Stop loading if not logged in but questions are loaded
       return;
     }
 
@@ -157,11 +157,7 @@ export default function ResultsClient() {
 
   }, [answers, questions, score, incorrectTopics, user, loading, updateUserProgress, isProgressSaved]);
 
-  if (!isMounted) {
-    return null;
-  }
-  
-  if (!answers || !questions) {
+  if (!isMounted || !questions || !answers) {
     return null;
   }
   
@@ -175,7 +171,7 @@ export default function ResultsClient() {
 
 
   return (
-    <div className="bg-secondary/20 p-4 md:p-8">
+    <div className="bg-background p-4 md:p-8">
       <motion.div 
         className="max-w-7xl mx-auto space-y-8"
         initial="hidden"
