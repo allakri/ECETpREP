@@ -53,10 +53,66 @@ export const courses: Course[] = [
         icon: Radio,
         tags: ["Analog Electronics", "Digital Electronics", "Communication Systems"],
         syllabus: [
-            { subject: "Electronic Devices & Circuits", topics: ["Diodes", "Transistors", "Amplifiers"] },
-            { subject: "Communication Systems", topics: ["AM, FM, PM", "Digital Modulation", "Antennas"] },
-            { subject: "Digital Electronics", topics: ["Logic Families", "Sequential Circuits", "ADCs/DACs"] },
-            { subject: "Microcontrollers", topics: ["8051 Architecture", "Assembly Language", "Interfacing"] }
+            { 
+                subject: "MATHEMATICS (50 Marks)", 
+                topics: [
+                    "MATRICES: Matrix types, algebra, determinants, system of linear equations.",
+                    "TRIGONOMETRY: Compound angles, transformations, properties of triangles, inverse trigonometric functions, complex numbers.",
+                    "ANALYTICAL GEOMETRY: Straight lines, circles, conic sections (parabola, ellipse, hyperbola).",
+                    "DIFFERENTIATION AND ITS APPLICATIONS: Functions, limits, standard differentiation techniques, applications in geometry and physics.",
+                    "INTEGRATION AND ITS APPLICATIONS: Indefinite and definite integrals, applications to find areas and volumes.",
+                    "DIFFERENTIAL EQUATIONS: First order and second order linear differential equations with constant coefficients.",
+                    "LAPLACE TRANSFORMS: LT of elementary functions, properties, inverse Laplace transforms, and applications.",
+                    "FOURIER SERIES: Euler’s formulae, series for even and odd functions, half-range series."
+                ] 
+    },
+            { 
+                subject: "PHYSICS (25 Marks)", 
+                topics: [
+                    "UNITS, DIMENSIONS AND MEASUREMENTS: Physical quantities, S.I. units, dimensional analysis.",
+                    "VECTORS: Scalar and vector products, Lami's theorem, parallelogram law.",
+                    "MECHANICS: Friction, projectile motion, circular motion.",
+                    "PROPERTIES OF MATTER: Elasticity, surface tension, viscosity, Bernoulli’s theorem.",
+                    "CONSERVATION LAWS AND ENERGY SOURCES: Work, power, energy, conservation of energy.",
+                    "HEAT: Thermal expansion, gas laws, thermodynamics.",
+                    "SIMPLE HARMONIC MOTION: SHM conditions, expressions, simple pendulum.",
+                    "SOUND: Stationary waves, beats, Doppler effect, acoustics.",
+                    "MAGNETISM AND ELECTRICITY: Coulomb’s law, Kirchhoff’s laws, transformers, magnetic materials.",
+                    "OPTICS: Reflection, refraction, interference, photoelectric effect.",
+                    "MODERN PHYSICS: LASER, optical fibers, nanotechnology, superconductivity.",
+                    "SEMICONDUCTOR PHYSICS: Energy bands, P-type and N-type semiconductors, PN junction diode."
+                ] 
+            },
+            { 
+                subject: "CHEMISTRY (25 Marks)", 
+                topics: [
+                    "FUNDAMENTALS OF CHEMISTRY: Atomic structure, chemical bonding, oxidation-reduction.",
+                    "SOLUTIONS AND COLLOIDS: Molarity, normality, colloids and their properties.",
+                    "ACIDS AND BASES: Theories, pH, buffer solutions.",
+                    "ENVIRONMENTAL SCIENCE: Ecosystems, biodiversity, pollution.",
+                    "WATER TECHNOLOGY: Hardness of water, softening methods, municipal water treatment.",
+                    "ELECTROCHEMISTRY: Electrolysis, Faraday's laws.",
+                    "METALLURGY: Extraction of metals, alloys.",
+                    "CORROSION: Theories and prevention.",
+                    "POLYMERS: Polymerization, plastics, rubbers, fibers.",
+                    "FUELS AND LUBRICANTS: Classification, calorific value, gaseous fuels.",
+                    "ELECTROCHEMICAL CELL AND BATTERIES: Galvanic cell, batteries, fuel cells.",
+                    "ENVIRONMENTAL STUDIES: Air, water, and soil pollution."
+                ] 
+            },
+            { 
+                subject: "ELECTRONICS AND COMMUNICATION ENGINEERING (100 Marks)", 
+                topics: [
+                    "ELECTRONIC DEVICES AND CIRCUITS: Diodes, transistors, amplifiers, oscillators, operational amplifiers.",
+                    "CIRCUIT THEORY: KCL, KVL, network theorems, resonance, transmission lines.",
+                    "INDUSTRIAL ELECTRONICS: Thyristors, UPS, SMPS, transducers, PLCs, SCADA.",
+                    "COMMUNICATION SYSTEMS: Analog and digital modulation, transmitters, receivers, multiplexing.",
+                    "DIGITAL ELECTRONICS: Number systems, logic gates, combinational and sequential circuits, memories.",
+                    "MICROCONTROLLERS, PROGRAMMING, INTERFACING & APPLICATIONS: 8051 architecture, instruction set, interfacing.",
+                    "CONSUMER ELECTRONICS: Television systems (Color, DTH, HDTV), scanning and synchronization.",
+                    "DATA COMMUNICATIONS AND COMPUTER NETWORKS: OSI model, network topologies, TCP/IP, security."
+                ] 
+            }
         ]
     },
     {
