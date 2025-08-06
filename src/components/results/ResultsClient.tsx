@@ -16,6 +16,7 @@ import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import Link from 'next/link';
 
 const quotes = [
   "Believe you can and you're halfway there.",
@@ -101,61 +102,63 @@ export default function ResultsClient() {
   }, [answers, questions]);
   
   
-  useEffect(() => {
+  const getAIInsightsAndSave = useCallback(async () => {
     if (loading || !user || !answers || !questions || isProgressSaved) {
       if (!loading && questions) setLoadingAI(false); // Stop loading if not logged in but questions are loaded
       return;
     }
-
-    const getAIInsightsAndSave = async () => {
-      setLoadingAI(true);
-      try {
-        // Save progress first
-        const newScoreData = {
-            examName: `Test #${(user.tests_taken || 0) + 1}`,
-            score: score,
-            date: format(new Date(), 'yyyy-MM-dd'),
-        };
-        await updateUserProgress(newScoreData);
-        setIsProgressSaved(true); // Mark as saved
-
-        // Then, fetch AI insights
-        const userAnswers: Record<string, string> = {};
-        for (const qId in answers) {
-          userAnswers[qId] = answers[qId]
-        }
-        
-        const pastScoresWithCurrent = [...(user.exam_score_history || []).map(h => h.score), score];
-        
-        const [feedbackResult, readinessResult] = await Promise.all([
-          generateAdaptiveFeedback({
-            examName: 'ECET Practice Exam',
-            questions: questions,
-            userAnswers,
-            pastScores: pastScoresWithCurrent,
-          }),
-          assessReadiness({
-            examName: 'ECET Practice Exam',
-            score: score,
-            incorrectTopics: incorrectTopics
-          })
-        ]);
-        
-        setFeedback(feedbackResult.feedback);
-        setReadiness(readinessResult.readiness);
-
-      } catch (error) {
-        console.error("Error generating AI insights or saving progress:", error);
-        setFeedback("We're sorry, but the AI feedback service is currently unavailable. Please try again later.");
-        setReadiness("We're sorry, but the AI readiness assessment is currently unavailable. Please check your score and try to improve weak topics.");
-      } finally {
-        setLoadingAI(false);
-      }
-    };
     
-    getAIInsightsAndSave();
+    setLoadingAI(true);
+    try {
+      // Save progress first
+      const newScoreData = {
+          examName: `Test #${(user.tests_taken || 0) + 1}`,
+          score: score,
+          date: format(new Date(), 'yyyy-MM-dd'),
+      };
+      await updateUserProgress(newScoreData);
+      setIsProgressSaved(true); // Mark as saved
 
+      // Then, fetch AI insights
+      const userAnswers: Record<string, string> = {};
+      for (const qId in answers) {
+        userAnswers[qId] = answers[qId]
+      }
+      
+      const pastScoresWithCurrent = [...(user.exam_score_history || []).map(h => h.score), score];
+      
+      const [feedbackResult, readinessResult] = await Promise.all([
+        generateAdaptiveFeedback({
+          examName: 'ECET Practice Exam',
+          questions: questions,
+          userAnswers,
+          pastScores: pastScoresWithCurrent,
+        }),
+        assessReadiness({
+          examName: 'ECET Practice Exam',
+          score: score,
+          incorrectTopics: incorrectTopics
+        })
+      ]);
+      
+      setFeedback(feedbackResult.feedback);
+      setReadiness(readinessResult.readiness);
+
+    } catch (error) {
+      console.error("Error generating AI insights or saving progress:", error);
+      setFeedback("We're sorry, but the AI feedback service is currently unavailable. Please try again later.");
+      setReadiness("We're sorry, but the AI readiness assessment is currently unavailable. Please check your score and try to improve weak topics.");
+    } finally {
+      setLoadingAI(false);
+    }
   }, [user, loading, isProgressSaved, answers, questions, score, incorrectTopics, updateUserProgress]);
+  
+  useEffect(() => {
+    if (isMounted && questions && !loading) {
+      getAIInsightsAndSave();
+    }
+  }, [isMounted, questions, loading, getAIInsightsAndSave]);
+
 
   if (!isMounted || !questions || !answers) {
     return null;
@@ -168,31 +171,6 @@ export default function ResultsClient() {
     { title: "Accuracy", value: `${accuracy.toFixed(1)}%`, icon: Target, color: "text-blue-500" },
     { title: "Time Taken", value: "N/A", icon: Clock, color: "text-indigo-500" },
   ];
-  
-  const nextSteps = [
-    {
-      title: "Review Answers & Learn",
-      description: "Go through each question to understand the correct answers and explanations.",
-      icon: ListChecks,
-      action: () => router.push('/exam/review'),
-      color: "bg-primary/10 text-primary"
-    },
-    {
-      title: "Clear Doubts with AI",
-      description: "Have a specific question? Ask our AI Tutor for a detailed explanation.",
-      icon: MessageCircleQuestion,
-      action: () => router.push('/chat'),
-      color: "bg-secondary/10 text-secondary"
-    },
-    {
-      title: "Return to Dashboard",
-      description: "Go back to the main dashboard to see your overall progress.",
-      icon: Home,
-      action: () => router.push('/profile'),
-      color: "bg-muted/50 text-muted-foreground"
-    }
-  ];
-
 
   return (
     <div className="bg-background p-4 md:p-8">
@@ -297,19 +275,34 @@ export default function ResultsClient() {
                     <CardTitle className="font-headline text-2xl text-center">What's Next?</CardTitle>
                     <CardDescription className="text-center">Choose your next action to continue your learning journey.</CardDescription>
                 </CardHeader>
-                <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {nextSteps.map(step => (
-                        <Card key={step.title} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={step.action}>
-                            <CardContent className="pt-6 flex flex-col items-center text-center gap-3">
-                                <div className={`p-3 rounded-full ${step.color}`}>
-                                    <step.icon className="h-6 w-6" />
-                                </div>
-                                <h3 className="font-semibold">{step.title}</h3>
-                                <p className="text-xs text-muted-foreground">{step.description}</p>
-                                <Button variant="link" size="sm" className="mt-2">Go <ArrowRight className="ml-1 h-4 w-4" /></Button>
+                <CardContent className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <Card className="bg-primary/10 border-primary/20 hover:shadow-lg transition-shadow">
+                            <CardContent className="p-6 flex flex-col items-center text-center gap-4">
+                                <ListChecks className="h-10 w-10 text-primary" />
+                                <h3 className="text-xl font-bold font-headline text-primary">Review Your Answers</h3>
+                                <p className="text-sm text-muted-foreground flex-grow">Deep-dive into each question to understand your mistakes and reinforce your knowledge.</p>
+                                <Button size="lg" className="w-full" onClick={() => router.push('/exam/review')}>
+                                    Review Answers <ArrowRight className="ml-2 h-4 w-4" />
+                                </Button>
                             </CardContent>
                         </Card>
-                    ))}
+                        <Card className="bg-accent/10 border-accent/20 hover:shadow-lg transition-shadow">
+                             <CardContent className="p-6 flex flex-col items-center text-center gap-4">
+                                <MessageCircleQuestion className="h-10 w-10 text-accent" />
+                                <h3 className="text-xl font-bold font-headline text-accent">Ask AI Tutor</h3>
+                                <p className="text-sm text-muted-foreground flex-grow">Stuck on a concept from the test? Get an instant, detailed explanation from our AI.</p>
+                                <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => router.push('/chat')}>
+                                    Chat with AI <ArrowRight className="ml-2 h-4 w-4" />
+                                </Button>
+                            </CardContent>
+                        </Card>
+                    </div>
+                    <div className="text-center pt-2">
+                         <Button variant="ghost" onClick={() => router.push('/profile')}>
+                            <Home className="mr-2 h-4 w-4" /> Return to Dashboard
+                        </Button>
+                    </div>
                 </CardContent>
             </Card>
         </motion.div>
