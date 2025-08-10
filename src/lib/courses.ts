@@ -212,10 +212,74 @@ export const courses: Course[] = [
         icon: FlaskConical,
         tags: ["Pharmaceutics", "Pharmacology", "Chemistry"],
         syllabus: [
-            { subject: "Pharmaceutics", topics: [] },
-            { subject: "Pharmaceutical Chemistry", topics: [] },
-            { subject: "Pharmacognosy", topics: [] },
-            { subject: "Pharmacology", topics: [] }
+            { 
+                subject: "Pharmaceutics", 
+                topics: [
+                    "Introduction to dosage forms", 
+                    "Sources of drugs information", 
+                    "Metrology and calculations", 
+                    "Packing of pharmaceuticals", 
+                    "Size reduction and separation",
+                    "Mixing and homogenization",
+                    "Clarification and filtration",
+                    "Extraction and galenicals",
+                    "Heat processes",
+                    "Distillation and concentration",
+                    "Sterilization",
+                    "Processing of tablets and capsules",
+                    "Processing of liquid orals, sterile products and powders"
+                ] 
+            },
+            { 
+                subject: "Pharmaceutical Chemistry", 
+                topics: [
+                    "Acids, bases and buffers",
+                    "Antioxidants and preservatives",
+                    "Gastrointestinal agents",
+                    "Topical agents",
+                    "Dental products",
+                    "Inorganic pharmaceuticals",
+                    "Classification of drugs",
+                    "Drugs acting on central nervous system",
+                    "Drugs acting on autonomic nervous system",
+                    "Cardiovascular drugs",
+                    "Diuretics",
+                    "Hypoglycemic agents",
+                    "Analgesics and anti-inflammatory agents",
+                    "Antibiotics",
+                    "Antiseptics and disinfectants",
+                    "Vitamins and enzymes"
+                ] 
+            },
+            { 
+                subject: "Pharmacognosy", 
+                topics: [
+                    "Definition and scope of Pharmacognosy",
+                    "Classification of crude drugs",
+                    "Quality control of crude drugs",
+                    "Plant products",
+                    "Primary metabolites",
+                    "Secondary metabolites",
+                    "Herbal cosmetics",
+                    "Plant tissue culture",
+                    "Marine drugs",
+                    "Ayurvedic system of medicine"
+                ] 
+            },
+            { 
+                subject: "Pharmacology", 
+                topics: [
+                    "General Pharmacology",
+                    "Drugs acting on the central nervous system",
+                    "Drugs acting on the peripheral nervous system",
+                    "Drugs acting on the cardiovascular system",
+                    "Drugs acting on the respiratory system",
+                    "Drugs acting on the gastrointestinal tract",
+                    "Hormones and hormone antagonists",
+                    "Chemotherapy",
+                    "Toxicology"
+                ] 
+            }
         ]
     },
      {
@@ -228,7 +292,21 @@ export const courses: Course[] = [
             commonSubjects.mathematics,
             commonSubjects.physics,
             commonSubjects.chemistry,
-            { subject: "Chemical Engineering (100 marks)", topics: ["Thermodynamics", "Fluid Mechanics", "Heat Transfer", "Mass Transfer"] },
+            { 
+                subject: "Chemical Engineering (100 marks)", 
+                topics: [
+                    "Fluid Mechanics and Particle Technology", 
+                    "Process Heat Transfer", 
+                    "Chemical Process Calculations", 
+                    "Chemical Engineering Thermodynamics",
+                    "Inorganic Chemical Technology",
+                    "Organic Chemical Technology",
+                    "Mass Transfer Operations",
+                    "Instrumentation and Process Control",
+                    "Chemical Reaction Engineering",
+                    "Environmental Engineering and Pollution Control"
+                ] 
+            },
         ]
     },
     {
@@ -241,7 +319,22 @@ export const courses: Course[] = [
             commonSubjects.mathematics,
             commonSubjects.physics,
             commonSubjects.chemistry,
-            { subject: "Metallurgical Engineering (100 marks)", topics: ["Physical Metallurgy", "Mechanical Metallurgy", "Extractive Metallurgy", "Material Testing"] },
+            { 
+                subject: "Metallurgical Engineering (100 marks)", 
+                topics: [
+                    "Foundry Technology", 
+                    "Welding Technology", 
+                    "Mechanical Working of Metals",
+                    "Heat Treatment Technology",
+                    "Physical Metallurgy",
+                    "Material Testing",
+                    "Fuels, Refractories and Pyrometry",
+                    "Metallurgical Thermodynamics",
+                    "Iron and Steel Making",
+                    "Non-ferrous Extractive Metallurgy",
+                    "Corrosion and its Prevention"
+                ] 
+            },
         ]
     },
     {
@@ -251,9 +344,40 @@ export const courses: Course[] = [
         icon: Sigma,
         tags: ["Algebra", "Calculus", "Differential Equations"],
         syllabus: [
-            { subject: "Mathematics", topics: [] },
-            { subject: "Analytical Ability", topics: [] },
-            { subject: "Communicative English", topics: [] },
+            { 
+                subject: "Mathematics", 
+                topics: [
+                    "Differential Equations of First Order and First Degree",
+                    "Differential Equations of the First Order but not of the First Degree",
+                    "Higher Order Linear Differential Equations",
+                    "System of Linear Equations",
+                    "Complex Numbers",
+                    "Vector Differentiation",
+                    "Vector Integration",
+                    "The Plane",
+                    "The Straight Line",
+                    "The Sphere"
+                ] 
+            },
+            { 
+                subject: "Analytical Ability", 
+                topics: [
+                    "Data Sufficiency",
+                    "Sequences and Series",
+                    "Data Analysis",
+                    "Coding and Decoding Problems",
+                    "Date, Time & Arrangement Problems"
+                ] 
+            },
+            { 
+                subject: "Communicative English", 
+                topics: [
+                    "Grammar",
+                    "Vocabulary",
+                    "Reading Comprehension",
+                    "Idioms and Phrases"
+                ] 
+            },
         ]
     },
      {
