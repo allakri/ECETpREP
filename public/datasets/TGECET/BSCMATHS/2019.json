@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "What is the determinant of a 2x2 matrix [[a, b], [c, d]]?",
+    "options": ["ad-bc", "ac-bd", "ab-cd", "ad+bc"],
+    "correctAnswer": "ad-bc",
+    "topic": "Matrices"
+  },
+  {
+    "id": 2,
+    "question": "What is the value of sin(90 degrees)?",
+    "options": ["0", "1", "-1", "0.5"],
+    "correctAnswer": "1",
+    "topic": "Trigonometry"
+  },
+  {
+    "id": 3,
+    "question": "The derivative of x^2 is:",
+    "options": ["x", "2x", "x^3/3", "2"],
+    "correctAnswer": "2x",
+    "topic": "Calculus"
+  },
+  {
+    "id": 4,
+    "question": "What is the integral of 2x dx?",
+    "options": ["x^2 + C", "2x^2 + C", "x + C", "2 + C"],
+    "correctAnswer": "x^2 + C",
+    "topic": "Calculus"
+  },
+  {
+    "id": 5,
+    "question": "A group in which every element is its own inverse is called:",
+    "options": ["Cyclic group", "Abelian group", "Klein-4 group", "Dihedral group"],
+    "correctAnswer": "Abelian group",
+    "topic": "Abstract Algebra"
+  },
+  {
+    "id": 6,
+    "question": "What is the solution to the differential equation dy/dx = y?",
+    "options": ["y = e^x + C", "y = Cx", "y = Ce^x", "y = x^2 + C"],
+    "correctAnswer": "y = Ce^x",
+    "topic": "Differential Equations"
+  },
+  {
+    "id": 7,
+    "question": "The set of all limit points of a set is called the:",
+    "options": ["Closure", "Interior", "Boundary", "Derived set"],
+    "correctAnswer": "Derived set",
+    "topic": "Real Analysis"
+  },
+  {
+    "id": 8,
+    "question": "What is the dot product of orthogonal vectors?",
+    "options": ["1", "0", "-1", "Infinity"],
+    "correctAnswer": "0",
+    "topic": "Linear Algebra"
+  },
+  {
+    "id": 9,
+    "question": "The equation y = mx + c represents a:",
+    "options": ["Circle", "Parabola", "Straight Line", "Ellipse"],
+    "correctAnswer": "Straight Line",
+    "topic": "Analytical Geometry"
+  },
+  {
+    "id": 10,
+    "question": "How many subgroups does a cyclic group of order 10 have?",
+    "options": ["2", "4", "5", "10"],
+    "correctAnswer": "4",
+    "topic": "Group Theory"
+  }
+]

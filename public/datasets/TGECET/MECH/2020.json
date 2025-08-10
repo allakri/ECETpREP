@@ -1,602 +1,72 @@
 [
-    {
-      "id": "80089422856",
-      "question": "If (\\begin{pmatrix} x+y & z+y \\\\ z-y & x-2y \\end{pmatrix} = \\begin{pmatrix} 12 & 9 \\\\ -1 & -3 \\end{pmatrix}}) then (\\begin{pmatrix} x & y \\\\ z & 2z \\end{pmatrix}}) =",
-      "options": [
-        "(\\begin{pmatrix} 5 & 7 \\\\ 4 & 8 \\end{pmatrix})",
-        "(\\begin{pmatrix} 7 & 5 \\\\ 4 & 8 \\end{pmatrix})",
-        "(\\begin{pmatrix} 6 & 7 \\\\ 3 & 6 \\end{pmatrix})",
-        "(\\begin{pmatrix} 3 & 6 \\\\ 6 & 7 \\end{pmatrix})"
-      ],
-      "correctAnswer": "(\\begin{pmatrix} 7 & 5 \\\\ 4 & 8 \\end{pmatrix})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422857",
-      "question": "If (A = \\begin{pmatrix} x & y & z \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{pmatrix}) and (B = \\begin{pmatrix} x & 2 & 3 \\\\ y & 5 & 6 \\\\ z & 8 & 9 \\end{pmatrix}}), then",
-      "options": [
-        "(det(A-B) = detA - detB)",
-        "(detA - detB = 1)",
-        "(detA + detB = x+y+z)",
-        "(det A = -detB)"
-      ],
-      "correctAnswer": "(det(A-B) = detA - detB)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422858",
-      "question": "If (\\begin{vmatrix} -a^2 & ab & ac \\\\ ab & -b^2 & bc \\\\ ac & bc & -c^2 \\end{vmatrix} = Ka^2b^2c^2), then (K) =",
-      "options": [
-        "4",
-        "6",
-        "8",
-        "2"
-      ],
-      "correctAnswer": "4",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422859",
-      "question": "If the system of equations x + 2y – 3z = 0, 3x – 2y + z = 0, kx – 14y + 15z = 0 has nonzero solutions, then (k^2 – 2k – 3) =",
-      "options": [
-        "12",
-        "18",
-        "5",
-        "0"
-      ],
-      "correctAnswer": "12",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422860",
-      "question": "The partial fractions of (\\frac{x^2+5x+10}{x+2} - \\frac{2+6x+x^2}{x+3}) =",
-      "options": [
-        "(\\frac{4}{x+2} + \\frac{7}{x+3})",
-        "(\\frac{4}{x+2} - \\frac{7}{x+3})",
-        "(\\frac{7}{x+2} - \\frac{4}{x+3})",
-        "(\\frac{4}{x+3} + \\frac{7}{x+2})"
-      ],
-      "correctAnswer": "(\\frac{4}{x+2} + \\frac{7}{x+3})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422861",
-      "question": "If (4^{\\log_2 3} + 9^{\\log_2 4} = 5^{\\log_x 83}), then",
-      "options": [
-        "(x^3 + 4x^2 - 4x - 5=0)",
-        "(x^3 - 4x^2 - 4x + 5=0)",
-        "(x^3 - 4x^2 + 4x - 5=0)",
-        "(x^3 - 4x^2 - 4x - 5=0)"
-      ],
-      "correctAnswer": "(x^3 - 4x^2 - 4x - 5=0)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422862",
-      "question": "(\\log_e x + \\log_e (1+x) = 0 \\implies x=)",
-      "options": [
-        "(\\frac{-1-\\sqrt{5}}{2})",
-        "1",
-        "(\\frac{-1+\\sqrt{5}}{2})",
-        "-2"
-      ],
-      "correctAnswer": "(\\frac{-1+\\sqrt{5}}{2})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422863",
-      "question": "If (\\alpha + \\beta = \\frac{\\pi}{2}) and (\\beta + \\gamma = \\alpha), then (\\tan \\alpha) =",
-      "options": [
-        "(2(\\tan \\beta + \\tan \\gamma))",
-        "(\\tan \\beta + \\tan \\gamma)",
-        "(2\\tan \\beta + \\tan \\gamma)",
-        "(\\tan \\beta + 2\\tan \\gamma)"
-      ],
-      "correctAnswer": "(\\tan \\beta + 2\\tan \\gamma)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422864",
-      "question": "In a triangle ABC, (a^2 \\cos 2B + b^2 \\cos 2A + 2ab \\cos(A-B)) =",
-      "options": [
-        "(a^2)",
-        "(b^2)",
-        "(c^2)",
-        "((a+b+c)^2)"
-      ],
-      "correctAnswer": "(c^2)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422865",
-      "question": "(f(x) = \\sin^{-1} x + \\cos^{-1} x + \\tan^{-1} \\frac{1}{x} + \\tan^{-1} x) then the area (in square units) bounded by y = f(x), y-axis and the line (2y = \\pi(x+1)) is",
-      "options": [
-        "(\\frac{\\pi}{4})",
-        "(\\frac{\\pi}{2})",
-        "(\\frac{\\pi}{3})",
-        "(\\pi)"
-      ],
-      "correctAnswer": "(\\frac{\\pi}{4})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422866",
-      "question": "((\\frac{1+i}{\\sqrt{2}})^8 + (\\frac{1-i}{\\sqrt{2}})^8) =",
-      "options": [
-        "16",
-        "8",
-        "4",
-        "2"
-      ],
-      "correctAnswer": "2",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422867",
-      "question": "The maximum value of |z| satisfying the equation (\\frac{1}{12}(z+\\bar{z})^2 = 1-\\frac{1}{3}|z|^2) is",
-      "options": [
-        "(\\sqrt{2})",
-        "(\\sqrt{3})",
-        "4",
-        "6"
-      ],
-      "correctAnswer": "(\\sqrt{3})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422868",
-      "question": "If n is a positive integer, then ((-i)^{4n+3}) =",
-      "options": [
-        "(2i)",
-        "(-i)",
-        "i",
-        "(4i)"
-      ],
-      "correctAnswer": "i",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422869",
-      "question": "The equation of the line passing through the point (4, 0) and having intercepts in the ratio a: b is",
-      "options": [
-        "(bx + ay = a)",
-        "(bx + ay = 4b)",
-        "(bx + ay = b)",
-        "(bx + ay = 4a)"
-      ],
-      "correctAnswer": "(bx + ay = 4b)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422870",
-      "question": "If (L_1, L_2) are the angular bisectors of the acute and obtuse angles between the lines x-y+2=0 and 7x+y-1=0 then angle between (L_1) and (L_2) is",
-      "options": [
-        "(\\pi)",
-        "(\\frac{\\pi}{3})",
-        "(\\frac{\\pi}{6})",
-        "(\\frac{\\pi}{2})"
-      ],
-      "correctAnswer": "(\\frac{\\pi}{2})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422871",
-      "question": "The equation of the line parallel to the line x-2y+5=0 and passing through the point P(3,5) is",
-      "options": [
-        "(x-2y+15=0)",
-        "(x-2y+6=0)",
-        "(x-2y+8=0)",
-        "(x-2y+7=0)"
-      ],
-      "correctAnswer": "(x-2y+7=0)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422872",
-      "question": "The equation of the circle which touches the coordinate axes is",
-      "options": [
-        "(x^2 + y^2 + 2gx + 2fy + c = 0)",
-        "(x^2 + y^2 + 2ax + 2ay + a^2 = 0)",
-        "(x^2 + y^2 \\pm 2gx \\pm 2fy + c = 0)",
-        "(x^2 + y^2 \\pm 2ax \\pm 2ay + a^2 = 0)"
-      ],
-      "correctAnswer": "(x^2 + y^2 \\pm 2ax \\pm 2ay + a^2 = 0)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422873",
-      "question": "If (\\alpha, \\beta (\\alpha > \\beta)) are roots of the quadratic equation (4x^2-4x-3=0), then the equation of the circle with center ((\\frac{\\alpha+\\beta}{\\alpha-\\beta}, \\frac{\\alpha-\\beta}{\\alpha+\\beta})) and radius (\\alpha^2-\\beta^2) is",
-      "options": [
-        "(9x^2+9y^2+60x+48y+128=0)",
-        "(9x^2+9y^2+60x-48y-128=0)",
-        "(9x^2+9y^2-60x-48y+128=0)",
-        "(9x^2+9y^2-60x+48y-128=0)"
-      ],
-      "correctAnswer": "(9x^2+9y^2+60x+48y+128=0)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422874",
-      "question": "The equation of the tangent to the circle (x^2 + y^2 = 25) at the point P(3,4) is",
-      "options": [
-        "(4x+3y-25=0)",
-        "(4x+3y+25=0)",
-        "(3x+4y-25=0)",
-        "(3x+4y-5=0)"
-      ],
-      "correctAnswer": "(3x+4y-25=0)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422875",
-      "question": "For (x^2 - 9 \\neq 0), if (y = \\log(\\frac{e^{x/2}(x-3)}{x+3})^{3/5}), then (\\frac{dy}{dx}) at x = 1 is equal to",
-      "options": [
-        "(\\frac{7}{10})",
-        "(\\frac{2}{5})",
-        "(\\frac{-1}{10})",
-        "(\\frac{-1}{5})"
-      ],
-      "correctAnswer": "(\\frac{-1}{10})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422876",
-      "question": "For (f(x)=|x^2-3x+2|), then sum of the values of (\\frac{df}{dx}) at x=1.5 and at x=2.5 is",
-      "options": [
-        "2",
-        "6",
-        "4",
-        "8"
-      ],
-      "correctAnswer": "2",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422877",
-      "question": "(\\frac{d^2}{dx^2}(\\frac{1}{5x+3})) =",
-      "options": [
-        "(\\frac{25}{(5x+3)^3})",
-        "(\\frac{50}{(5x+3)^3})",
-        "(\\frac{125}{(5x+3)^3})",
-        "(\\frac{100}{(5x+3)^3})"
-      ],
-      "correctAnswer": "(\\frac{50}{(5x+3)^3})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422878",
-      "question": "The curve represented by (x=t^5-5t^3-20t+7), (y=4t^3-3t^2-18t+3) is increasing for all t in the interval",
-      "options": [
-        "(-2,2)",
-        "(-1,\\frac{3}{2})",
-        "(\\frac{3}{2},2)",
-        "(-1,2)"
-      ],
-      "correctAnswer": "(-1,\\frac{3}{2})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422879",
-      "question": "The equation of tangent to the curve (y^2=4x+5) at P(-1,1) is",
-      "options": [
-        "(2x-y+9=0)",
-        "(2x+y-7=0)",
-        "(2x-y+3=0)",
-        "(x+2y+9=0)"
-      ],
-      "correctAnswer": "(2x-y+3=0)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422880",
-      "question": "If at x=a, the maximum value of ((X^5)(16-X)^{11}) is K. Then (\\frac{K}{a}) =",
-      "options": [
-        "(11^{11}5^4)",
-        "(6^4 10^{11})",
-        "(11^4 5^{11})",
-        "(10^4 6^{11})"
-      ],
-      "correctAnswer": "(11^{11}5^4)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422881",
-      "question": "If (\\sin u = \\frac{x+y}{\\sqrt{x}+\\sqrt{y}}), then (2(x\\frac{\\partial u}{\\partial x} + y\\frac{\\partial u}{\\partial y})\\cos u) =",
-      "options": [
-        "(\\frac{1}{8} \\tan u)",
-        "(\\frac{1}{2} \\tan u)",
-        "(\\frac{1}{4} \\tan u)",
-        "(\\frac{1}{3} \\tan u)"
-      ],
-      "correctAnswer": "(\\frac{1}{2} \\tan u)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422882",
-      "question": "If (\\int \\frac{2x^{18}+7x^{12}}{(x^7+x^4+1)^3}dx = \\frac{x^p}{m(x^7+x^4+1)^n}+c), then (2p-(m+n)^2) =",
-      "options": [
-        "0",
-        "3",
-        "12",
-        "20"
-      ],
-      "correctAnswer": "12",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422883",
-      "question": "If (\\int \\frac{\\sin 2x}{\\sin 5x \\sin 3x}dx = A \\log|\\sin 3x| + B \\log|\\sin 5x| + C), then A+B=",
-      "options": [
-        "2/7",
-        "1/3",
-        "-2/5",
-        "2/15"
-      ],
-      "correctAnswer": "2/15",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422884",
-      "question": "(\\int \\frac{1}{9x^2-4}dx) =",
-      "options": [
-        "(\\frac{1}{3}\\log|\\frac{3x-2}{3x+2}|)",
-        "(\\frac{1}{12}\\log|\\frac{x-2}{x+2}|)",
-        "(\\frac{1}{12}\\log|\\frac{3x-2}{3x+2}|)",
-        "(\\frac{1}{2}\\log|\\frac{3x-2}{3x+2}|)"
-      ],
-      "correctAnswer": "(\\frac{1}{12}\\log|\\frac{3x-2}{3x+2}|)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422885",
-      "question": "If (I_1=\\int_0^1 a^x dx, I_2=\\int_0^1 a^{x^2}dx) and (I_3=\\int_0^1 a^{x^3}dx) then",
-      "options": [
-        "(I_1 > I_2 > I_3), when a>1",
-        "(I_1 < I_2 < I_3), when a>1",
-        "(I_1 > I_2 > I_3), when 0<a<1",
-        "(I_1 < I_2 < I_3), for any a>0"
-      ],
-      "correctAnswer": "(I_1 > I_2 > I_3), when a>1",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422886",
-      "question": "The area (in square units) bounded by the curve (x^2=4y), the x-axis and the line x=2 is",
-      "options": [
-        "(\\frac{1}{3})",
-        "(\\frac{2}{3})",
-        "(\\frac{5}{3})",
-        "(\\frac{7}{3})"
-      ],
-      "correctAnswer": "(\\frac{2}{3})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422887",
-      "question": "(\\lim_{n\\to\\infty}(\\frac{1}{n}+\\frac{1}{n+1}+\\frac{1}{n+2}+.....+\\frac{1}{2n})) =",
-      "options": [
-        "0",
-        "1/2",
-        "(e^2)",
-        "log2"
-      ],
-      "correctAnswer": "log2",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422888",
-      "question": "Using Trapezoidal rule with (h=\\frac{1}{2}), the value of the integral (\\int_0^1\\frac{1}{3+2x}dx) =",
-      "options": [
-        "(\\frac{11}{120})",
-        "(\\frac{21}{120})",
-        "(\\frac{31}{120})",
-        "(\\frac{41}{120})"
-      ],
-      "correctAnswer": "(\\frac{31}{120})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422889",
-      "question": "The differential equation representing the family of curves (y^2=2c(x+\\sqrt{c})) (c is a positive arbitrary Constant) is of",
-      "options": [
-        "degree 1",
-        "order 2",
-        "degree 3",
-        "degree 2"
-      ],
-      "correctAnswer": "degree 3",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422890",
-      "question": "The general solution of (\\frac{dy}{dx} = \\frac{x^2+4x-9}{x+2}) is",
-      "options": [
-        "(y = \\frac{(x+2)^2}{2} - 13\\log|x+2|+c)",
-        "(y = (x+2)^2 - 5\\log|x+2|+c)",
-        "(y = \\frac{x^2}{2} + 2x + 13\\log|x+2|+c)",
-        "(y = \\frac{x^2}{2} + 2x - 5\\log|x+2|+c)"
-      ],
-      "correctAnswer": "(y = \\frac{(x+2)^2}{2} - 13\\log|x+2|+c)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422891",
-      "question": "The general solution of the differential equation (\\frac{dy}{dx}=xe^{\\frac{-y}{x}}+y) is",
-      "options": [
-        "(e^{\\frac{x}{y}}=\\log|cx|)",
-        "(e^{\\frac{y}{x}}=\\log|cx|)",
-        "(e^{\\frac{x^2}{y}}=\\log|cx|)",
-        "(e^{\\frac{y}{x^2}}=\\log|cx|)"
-      ],
-      "correctAnswer": "(e^{\\frac{y}{x}}=\\log|cx|)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422892",
-      "question": "(\\frac{dy}{dx}=\\frac{f(x,y)}{g(x,y)}) is a homogeneous differential equation. The substitution y=Vx (V is a function of x) reduces the given differential equation to (\\frac{dv}{dx} = \\frac{1}{x}G(V)). Then G(V)=",
-      "options": [
-        "(\\frac{f(1,V)}{g(1,V)} - V)",
-        "(\\frac{f(V)}{g(V)} - V)",
-        "(\\frac{f(1,V)}{g(1,V)} + V)",
-        "(\\frac{f(V)}{g(V)} + V)"
-      ],
-      "correctAnswer": "(\\frac{f(1,V)}{g(1,V)} - V)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422893",
-      "question": "The general solution of the differential equation (\\frac{d^2y}{dx^2}+2\\frac{dy}{dx}+y=e^{-x}\\sin x) is",
-      "options": [
-        "(y=e^{-x}(A+Bx)+\\frac{e^{-x}\\sin x}{5})",
-        "(y=e^{-x}(A+Bx-\\sin x))",
-        "(y=e^{-x}(A+Bx)+\\frac{e^{-x}\\cos x}{5})",
-        "(y=e^{-x}(A+B\\log x)+\\frac{e^{-x}\\sin x}{5})"
-      ],
-      "correctAnswer": "(y=e^{-x}(A+Bx-\\sin x))",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422894",
-      "question": "The particular integral of the differential equation (\\frac{d^2y}{dx^2}-2\\frac{dy}{dx}+y=xe^x\\sin x) is",
-      "options": [
-        "(-e^x(x\\sin x+2\\cos x))",
-        "(-e^x(x\\cos x+2\\sin x))",
-        "(e^x(x\\sin x-2\\cos x))",
-        "(e^x(x\\cos x-2\\sin x))"
-      ],
-      "correctAnswer": "(-e^x(x\\sin x+2\\cos x))",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422895",
-      "question": "If (L\\{t^2e^{-2t}\\} = f(s)), then (f(4)) =",
-      "options": [
-        "(\\frac{1}{54})",
-        "(\\frac{1}{27})",
-        "(\\frac{1}{108})",
-        "(\\frac{1}{216})"
-      ],
-      "correctAnswer": "(\\frac{1}{108})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422896",
-      "question": "If (L\\{f(t)\\} = \\frac{9s^2-12s+15}{(s-1)^3}), then (L\\{f(\\frac{t}{3})\\}) =",
-      "options": [
-        "(9[\\frac{27s^2-36s+5}{(3s-1)^3}])",
-        "(9[\\frac{s^2-4s+15}{(s-3)^3}])",
-        "(3[\\frac{27s^2-12s+5}{(3s-1)^3}])",
-        "(27[\\frac{s^2-4s+15}{(s-3)^3}])"
-      ],
-      "correctAnswer": "(9[\\frac{27s^2-36s+5}{(3s-1)^3}])",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422897",
-      "question": "(\\int_0^{\\infty} \\frac{e^{-5t}-e^{-8t}}{t}dt) =",
-      "options": [
-        "(\\log(\\frac{4}{5}))",
-        "(\\log(\\frac{2}{5}))",
-        "(\\log(\\frac{8}{5}))",
-        "(\\log(\\frac{7}{5}))"
-      ],
-      "correctAnswer": "(\\log(\\frac{8}{5}))",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422898",
-      "question": "If (F_a(s) = L(\\sin at)) then, (L(\\frac{e^{-3t}\\sin 2t}{t})) =",
-      "options": [
-        "(\\int_s^\\infty F_2(s)ds)",
-        "(\\int_s^\\infty F_2(s+3)ds)",
-        "(\\int_s^\\infty \\frac{d}{ds}(F_2(s))ds)",
-        "(-\\int_s^\\infty \\frac{d}{ds}(F_2(s-3))ds)"
-      ],
-      "correctAnswer": "(\\int_s^\\infty F_2(s+3)ds)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422899",
-      "question": "(L^{-1}\\{\\frac{6s}{s^2+2s-8}\\}) =",
-      "options": [
-        "(4e^{-4t}+2e^{-2t})",
-        "(4e^{4t}+2e^{-2t})",
-        "(4e^{4t}+2e^{2t})",
-        "(4e^{-4t}+2e^{2t})"
-      ],
-      "correctAnswer": "(4e^{-4t}+2e^{2t})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422900",
-      "question": "If (L(f(t)) = F(s)), (L(g(t)) = G(s)), then (L^{-1}(F(s)G(s)))=",
-      "options": [
-        "(\\int_0^t f(p)g(t-p)dp)",
-        "(\\int_0^t f(t)g(t)dt)",
-        "(\\int_0^t f(t)g(t-p)dp)",
-        "(\\int_0^t f(tp)g(t/p)dt)"
-      ],
-      "correctAnswer": "(\\int_0^t f(p)g(t-p)dp)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422901",
-      "question": "If (y=y(t)) satisfies the differential equation (\\frac{d^2y}{dt^2} - 2\\frac{dy}{dt} + y = e^t) together with the conditions (y(0)=2), (\\frac{dy}{dt}=-1) at t=0, then (y(t))=",
-      "options": [
-        "(e^t(2+3t+\\frac{1}{2}t^2))",
-        "(e^t(2-3t+\\frac{1}{2}t^2))",
-        "(e^t(2-3t-\\frac{1}{2}t^2))",
-        "(e^t(2+3t-\\frac{1}{2}t^2))"
-      ],
-      "correctAnswer": "(e^t(2-3t+\\frac{1}{2}t^2))",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422902",
-      "question": "(\\int_0^{2\\pi} \\cos^2(5x)dx) =",
-      "options": [
-        "(\\pi)",
-        "(2\\pi)",
-        "(4\\pi)",
-        "(5\\pi)"
-      ],
-      "correctAnswer": "(\\pi)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422903",
-      "question": "The Fourier series of (x-x^2) in the interval ((-\\pi, \\pi)) contains",
-      "options": [
-        "only sine terms",
-        "onlycosine terms",
-        "both sine and cosine terms",
-        "negative integral powers of x, but not trigonometric functions"
-      ],
-      "correctAnswer": "both sine and cosine terms",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422904",
-      "question": "If (f(x)=x^2) when (0 \\le x \\le 4), (f(x+4)=f(x)), (\\forall x) and its Fourier series is (f(x)=\\sum_{n=0}^{\\infty}(a_n \\cos\\frac{n\\pi x}{2} + b_n \\sin\\frac{n\\pi x}{2})), then (b_1) =",
-      "options": [
-        "(\\frac{128}{\\pi^2} + \\frac{192}{\\pi^4})",
-        "(\\frac{128}{\\pi^2})",
-        "(\\frac{192}{\\pi^2} + \\frac{192}{\\pi^4})",
-        "(\\frac{96}{\\pi^3} - \\frac{128}{\\pi})"
-      ],
-      "correctAnswer": "(\\frac{96}{\\pi^3} - \\frac{128}{\\pi})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "80089422905",
-      "question": "If (f(x) = \\begin{cases} 0, & -2 \\le x < 0 \\\\ 1, & 0 \\le x < 2 \\end{cases}), (f(x+4)=f(x) \\forall x) and (f(x)=\\sum_{n=0}^{\\infty}(a_n \\cos\\frac{n\\pi x}{2} + b_n \\sin\\frac{n\\pi x}{2})), then (b_2)=",
-      "options": [
-        "(\\frac{2}{\\pi})",
-        "(\\frac{4}{\\pi})",
-        "(\\frac{3}{\\pi})",
-        "0"
-      ],
-      "correctAnswer": "0",
-      "topic": "Mathematics"
-    }
-  ]
+  {
+    "id": 1,
+    "question": "The first law of thermodynamics is based on the principle of conservation of:",
+    "options": ["Mass", "Momentum", "Energy", "Charge"],
+    "correctAnswer": "Energy",
+    "topic": "Thermodynamics"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is a type of gear?",
+    "options": ["Spur", "Bevel", "Helical", "All of the above"],
+    "correctAnswer": "All of the above",
+    "topic": "Theory of Machines"
+  },
+  {
+    "id": 3,
+    "question": "The property of a fluid to resist its own flow is called:",
+    "options": ["Viscosity", "Density", "Surface tension", "Compressibility"],
+    "correctAnswer": "Viscosity",
+    "topic": "Fluid Mechanics"
+  },
+  {
+    "id": 4,
+    "question": "What is the primary purpose of a 'governor' in an engine?",
+    "options": ["To increase speed", "To decrease speed", "To maintain a constant speed", "To stop the engine"],
+    "correctAnswer": "To maintain a constant speed",
+    "topic": "Theory of Machines"
+  },
+  {
+    "id": 5,
+    "question": "Hooke's Law states that stress is directly proportional to:",
+    "options": ["Strain", "Force", "Area", "Length"],
+    "correctAnswer": "Strain",
+    "topic": "Solid Mechanics"
+  },
+  {
+    "id": 6,
+    "question": "Which of these materials is the most ductile?",
+    "options": ["Cast Iron", "Mild Steel", "Glass", "Concrete"],
+    "correctAnswer": "Mild Steel",
+    "topic": "Engineering Materials"
+  },
+  {
+    "id": 7,
+    "question": "The process of joining two metal pieces by heating them to a molten state is called:",
+    "options": ["Welding", "Brazing", "Soldering", "Riveting"],
+    "correctAnswer": "Welding",
+    "topic": "Manufacturing Technology"
+  },
+  {
+    "id": 8,
+    "question": "A Carnot cycle consists of:",
+    "options": ["Two isothermal and two adiabatic processes", "Two constant volume and two constant pressure processes", "Two isothermal and two constant volume processes", "Two adiabatic and two constant pressure processes"],
+    "correctAnswer": "Two isothermal and two adiabatic processes",
+    "topic": "Thermodynamics"
+  },
+  {
+    "id": 9,
+    "question": "What does CAD stand for in the context of engineering?",
+    "options": ["Computer-Aided Design", "Computer-Assisted Drawing", "Car-Aided Driving", "Computer-Aided Database"],
+    "correctAnswer": "Computer-Aided Design",
+    "topic": "CAD/CAM"
+  },
+  {
+    "id": 10,
+    "question": "The efficiency of a heat engine is the ratio of:",
+    "options": ["Work output to heat input", "Heat input to work output", "Work input to heat output", "Heat output to work input"],
+    "correctAnswer": "Work output to heat input",
+    "topic": "Heat Power Engineering"
+  }
+]

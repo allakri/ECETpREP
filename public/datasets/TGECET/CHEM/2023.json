@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "What is the ideal gas law equation?",
+    "options": ["PV=nRT", "P=VRT", "V=PRT", "T=PVR"],
+    "correctAnswer": "PV=nRT",
+    "topic": "Thermodynamics"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is a strong acid?",
+    "options": ["Acetic Acid", "Carbonic Acid", "Hydrochloric Acid", "Formic Acid"],
+    "correctAnswer": "Hydrochloric Acid",
+    "topic": "Acids and Bases"
+  },
+  {
+    "id": 3,
+    "question": "The process of a solid changing directly to a gas is called:",
+    "options": ["Melting", "Freezing", "Evaporation", "Sublimation"],
+    "correctAnswer": "Sublimation",
+    "topic": "States of Matter"
+  },
+  {
+    "id": 4,
+    "question": "What is the main component of natural gas?",
+    "options": ["Methane", "Ethane", "Propane", "Butane"],
+    "correctAnswer": "Methane",
+    "topic": "Organic Chemistry"
+  },
+  {
+    "id": 5,
+    "question": "Which law states that mass is neither created nor destroyed in a chemical reaction?",
+    "options": ["Law of Definite Proportions", "Law of Multiple Proportions", "Law of Conservation of Mass", "Avogadro's Law"],
+    "correctAnswer": "Law of Conservation of Mass",
+    "topic": "Stoichiometry"
+  },
+  {
+    "id": 6,
+    "question": "What is the pH of a neutral solution?",
+    "options": ["0", "7", "14", "1"],
+    "correctAnswer": "7",
+    "topic": "Acids and Bases"
+  },
+  {
+    "id": 7,
+    "question": "The transfer of heat through electromagnetic waves is known as:",
+    "options": ["Conduction", "Convection", "Radiation", "Insulation"],
+    "correctAnswer": "Radiation",
+    "topic": "Heat Transfer"
+  },
+  {
+    "id": 8,
+    "question": "In fluid mechanics, Bernoulli's principle relates:",
+    "options": ["Pressure, velocity, and height", "Mass, volume, and density", "Force, mass, and acceleration", "Temperature, pressure, and volume"],
+    "correctAnswer": "Pressure, velocity, and height",
+    "topic": "Fluid Mechanics"
+  },
+  {
+    "id": 9,
+    "question": "Which of the following is a renewable energy source?",
+    "options": ["Coal", "Natural Gas", "Solar Power", "Petroleum"],
+    "correctAnswer": "Solar Power",
+    "topic": "Energy"
+  },
+  {
+    "id": 10,
+    "question": "The separation of a mixture into its components based on differences in boiling points is called:",
+    "options": ["Filtration", "Distillation", "Crystallization", "Chromatography"],
+    "correctAnswer": "Distillation",
+    "topic": "Mass Transfer"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "Which process is used to improve the hardness of steel?",
+    "options": ["Annealing", "Normalizing", "Quenching", "Tempering"],
+    "correctAnswer": "Quenching",
+    "topic": "Physical Metallurgy"
+  },
+  {
+    "id": 2,
+    "question": "The addition of carbon to iron makes it:",
+    "options": ["Softer", "Harder and stronger", "More ductile", "More malleable"],
+    "correctAnswer": "Harder and stronger",
+    "topic": "Iron-Carbon Diagram"
+  },
+  {
+    "id": 3,
+    "question": "Which of the following is a method for testing the hardness of a material?",
+    "options": ["Tensile test", "Impact test", "Rockwell test", "Fatigue test"],
+    "correctAnswer": "Rockwell test",
+    "topic": "Mechanical Metallurgy"
+  },
+  {
+    "id": 4,
+    "question": "What is the primary ore of aluminum?",
+    "options": ["Hematite", "Bauxite", "Galena", "Sphalerite"],
+    "correctAnswer": "Bauxite",
+    "topic": "Extractive Metallurgy"
+  },
+  {
+    "id": 5,
+    "question": "The process of extracting metal from its ore by heating is called:",
+    "options": ["Smelting", "Leaching", "Electrolysis", "Roasting"],
+    "correctAnswer": "Smelting",
+    "topic": "Extractive Metallurgy"
+  },
+  {
+    "id": 6,
+    "question": "A 'unit cell' in crystallography is:",
+    "options": ["The smallest repeating unit of a crystal lattice", "A single crystal", "A type of defect", "A grain boundary"],
+    "correctAnswer": "The smallest repeating unit of a crystal lattice",
+    "topic": "Physical Metallurgy"
+  },
+  {
+    "id": 7,
+    "question": "Which crystal structure is known for its high ductility?",
+    "options": ["BCC (Body-Centered Cubic)", "FCC (Face-Centered Cubic)", "HCP (Hexagonal Close-Packed)", "Simple Cubic"],
+    "correctAnswer": "FCC (Face-Centered Cubic)",
+    "topic": "Physical Metallurgy"
+  },
+  {
+    "id": 8,
+    "question": "The 'fatigue limit' of a material is its ability to withstand:",
+    "options": ["Sudden impact", "High temperature", "Repeated cyclic loading", "Corrosive environments"],
+    "correctAnswer": "Repeated cyclic loading",
+    "topic": "Mechanical Metallurgy"
+  },
+  {
+    "id": 9,
+    "question": "Stainless steel is an alloy of iron and at least 10.5% of:",
+    "options": ["Chromium", "Nickel", "Manganese", "Carbon"],
+    "correctAnswer": "Chromium",
+    "topic": "Engineering Materials"
+  },
+  {
+    "id": 10,
+    "question": "The process used to remove impurities from molten metal is known as:",
+    "options": ["Refining", "Casting", "Forging", "Rolling"],
+    "correctAnswer": "Refining",
+    "topic": "Extractive Metallurgy"
+  }
+]

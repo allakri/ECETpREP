@@ -1,506 +1,72 @@
 [
-    {
-      "id": "8946584209",
-      "question": "Let (M = (a_{ij})) be a 10x10 matrix such that (a_{ij} = \\begin{cases} 1, & \\text{if } i+j=11 \\\\ 0, & \\text{otherwise} \\end{cases}}). Then, the determinant of M is",
-      "options": [
-        "0",
-        "1",
-        "-1",
-        "11"
-      ],
-      "correctAnswer": "1",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584210",
-      "question": "Let A and B be two square matrices of order n. If AB = A, BA = B then (A^2 + B^2) =",
-      "options": [
-        "AB",
-        "A-B",
-        "0",
-        "A+B"
-      ],
-      "correctAnswer": "A+B",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584211",
-      "question": "Consider the system of linear equations x+y+z=3, x-y-z=4, x-5y+αz=6. Then, the value of α for which this system has an infinite number of solutions is",
-      "options": [
-        "-5",
-        "5",
-        "3",
-        "1"
-      ],
-      "correctAnswer": "-5",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584212",
-      "question": "If (A(\\alpha, \\beta) = \\begin{pmatrix} \\cos\\alpha & \\sin\\alpha & 0 \\\\ -\\sin\\alpha & \\cos\\alpha & 0 \\\\ 0 & 0 & e^\\beta \\end{pmatrix}}), then the inverse of the matrix A(α, β) is",
-      "options": [
-        "(A(\\alpha, \\beta))",
-        "(A(\\alpha, -\\beta))",
-        "(A(-\\alpha, -\\beta))",
-        "(A(-\\alpha, \\beta))"
-      ],
-      "correctAnswer": "(A(-\\alpha, -\\beta))",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584213",
-      "question": "The rational fraction (\\frac{x^2+1}{(x^2+4)(x-2)}) is equal to",
-      "options": [
-        "(\\frac{3x+6}{8(x^2+4)} + \\frac{5}{4(x-2)})",
-        "(\\frac{3x+6}{4(x^2+4)} + \\frac{5}{8(x-2)})",
-        "(\\frac{3x+6}{8(x^2+4)} + \\frac{5}{8(x-2)})",
-        "(\\frac{3x+6}{(x^2+4)} + \\frac{5}{(x-2)})"
-      ],
-      "correctAnswer": "(\\frac{3x+6}{8(x^2+4)} + \\frac{5}{8(x-2)})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584214",
-      "question": "If (\\log_2 3 = a, \\log_3 5 = b, \\log_7 2=c), then (\\log_{140} 63) =",
-      "options": [
-        "(\\frac{1-2ac}{2c+abc+1})",
-        "(\\frac{1-2ac}{2c-abc-1})",
-        "(\\frac{1+2ac}{2c-abc-1})",
-        "(\\frac{1+2ac}{2c+abc+1})"
-      ],
-      "correctAnswer": "(\\frac{1+2ac}{2c+abc+1})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584215",
-      "question": "(\\cos{\\frac{2\\pi}{7}} + \\cos{\\frac{4\\pi}{7}} + \\cos{\\frac{6\\pi}{7}}) =",
-      "options": [
-        "1",
-        "1/2",
-        "-1/2",
-        "0"
-      ],
-      "correctAnswer": "-1/2",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584216",
-      "question": "If the angles A, B and C of a triangle are in an arithmetic progression and if a, b and c denote the lengths of the sides opposite to A, B and C respectively, then the value of the expression (\\frac{a}{c} \\sin 2C + \\frac{c}{a} \\sin 2A) is",
-      "options": [
-        "(\\sqrt{3})",
-        "(\\frac{\\sqrt{3}}{2})",
-        "1",
-        "(\\frac{1}{2})"
-      ],
-      "correctAnswer": "(\\sqrt{3})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584217",
-      "question": "If (\\sin x + \\sin y = \\frac{1}{4}) and (\\cos x + \\cos y = \\frac{1}{3}), then (\\cot(x+y)) =",
-      "options": [
-        "7/24",
-        "24/7",
-        "3/4",
-        "1"
-      ],
-      "correctAnswer": "7/24",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584218",
-      "question": "If (\\sin(x°+28°) = \\cos(3x°-78°)) and (0° < x° < 90°), then, which of the following is the value of x°?",
-      "options": [
-        "50°",
-        "30°",
-        "16°",
-        "8°"
-      ],
-      "correctAnswer": "8°",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584219",
-      "question": "If (x = \\tan(\\csc^{-1}(\\frac{65}{63}))) and (y = \\sec^2(\\cot^{-1}(\\frac{1}{2})) + \\csc^2(\\tan^{-1}(\\frac{1}{3}))), then (x,y) =",
-      "options": [
-        "((\\frac{63}{16}, 15))",
-        "((\\frac{16}{63}, 15))",
-        "((\\frac{63}{16}, 5))",
-        "((\\frac{16}{63}, 5))"
-      ],
-      "correctAnswer": "((\\frac{63}{16}, 15))",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584220",
-      "question": "The equation (\\tan^{-1}(\\frac{x+1}{x-1}) + \\tan^{-1}(\\frac{x-1}{x}) = \\tan^{-1}(-7)) has",
-      "options": [
-        "unique solution x=2",
-        "two solutions x=1,2",
-        "no solution",
-        "infinite number of solutions"
-      ],
-      "correctAnswer": "unique solution x=2",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584221",
-      "question": "In a triangle ABC, let a,b and c denote the lengths of the sides opposite to A, B and C respectively. If (\\frac{1}{a+c} + \\frac{1}{b+c} = \\frac{3}{a+b+c}), then the angle C is",
-      "options": [
-        "30°",
-        "90°",
-        "60°",
-        "45°"
-      ],
-      "correctAnswer": "60°",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584222",
-      "question": "If sinhx = 3 then x =",
-      "options": [
-        "log(3+√10)",
-        "log(3-√10)",
-        "log(6+√10)",
-        "1"
-      ],
-      "correctAnswer": "log(3+√10)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584223",
-      "question": "Which of the following is NOT true for the complex numbers (z_1) and (z_2)?",
-      "options": [
-        "(\\frac{z_1-z_2}{z_2}) = |\\frac{z_1}{z_2}|",
-        "|z_1+z_2| \\le |z_1|+|z_2|",
-        "|z_1+z_2| \\le ||z_1|-|z_2||",
-        "|z_1+z_2|^2+|z_1-z_2|^2=2|z_1|^2+2|z_2|^2"
-      ],
-      "correctAnswer": "|z_1+z_2| \\le ||z_1|-|z_2||",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584224",
-      "question": "If a complex number (z = \\frac{\\sqrt{3}}{2} + i\\frac{1}{2}), then (z^4) is",
-      "options": [
-        "(2\\sqrt{2}+2i)",
-        "(\\frac{-1}{2} + i\\frac{\\sqrt{3}}{2})",
-        "(\\frac{\\sqrt{3}}{2} - i\\frac{1}{2})",
-        "(\\frac{\\sqrt{3}}{8} - i\\frac{1}{8})"
-      ],
-      "correctAnswer": "(\\frac{-1}{2} + i\\frac{\\sqrt{3}}{2})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584225",
-      "question": "The equation of the straight line which makes intercepts r and s on the coordinate axes such that r + s = 5 and rs = 6 is ax+by+c=0, then a+b+c = ",
-      "options": [
-        "11",
-        "5",
-        "-7",
-        "-1"
-      ],
-      "correctAnswer": "-1",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584226",
-      "question": "If a straight line (ax+by+\\sqrt{5}=0) touches the circle (x^2+y^2=5), then which of the following is TRUE?",
-      "options": [
-        "(5(a^2+b^2)=1)",
-        "(a^2+b^2=\\sqrt{5})",
-        "(a^2+b^2=1)",
-        "(\\sqrt{a^2+b^2}=5)"
-      ],
-      "correctAnswer": "(a^2+b^2=1)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584227",
-      "question": "If a chord of length 12 cm is at a distance of (4\\sqrt{10}) cm from the centre of the circle, then the radius of the circle is",
-      "options": [
-        "14 cm",
-        "(\\sqrt{304}) cm",
-        "4 cm",
-        "(\\sqrt{124}) cm"
-      ],
-      "correctAnswer": "14 cm",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584228",
-      "question": "The 2019th derivative of the function ((x-1)e^{-x}) is",
-      "options": [
-        "(\\frac{x-2019}{e^x})",
-        "(\\frac{2019-x}{e^x})",
-        "(\\frac{x-2020}{e^x})",
-        "(\\frac{2020-x}{e^x})"
-      ],
-      "correctAnswer": "(\\frac{2020-x}{e^x})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584229",
-      "question": "If (z=f(x+ct)+\\phi(x-ct)), then (\\frac{\\partial^2 z}{\\partial t^2}) =",
-      "options": [
-        "(c^2 \\frac{\\partial^2 z}{\\partial x^2})",
-        "(-c^2 \\frac{\\partial^2 z}{\\partial x^2})",
-        "(\\frac{1}{c^2} \\frac{\\partial^2 z}{\\partial x^2})",
-        "(\\frac{1}{c^2} \\frac{\\partial^2 z}{\\partial x^2})"
-      ],
-      "correctAnswer": "(c^2 \\frac{\\partial^2 z}{\\partial x^2})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584230",
-      "question": "If (x=r\\cos\\theta, y=r\\sin\\theta) and (U=\\frac{f(\\theta)}{r}) then (x\\frac{\\partial U}{\\partial x}+y\\frac{\\partial U}{\\partial y}) =",
-      "options": [
-        "0",
-        "U",
-        "-U",
-        "2U"
-      ],
-      "correctAnswer": "-U",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584231",
-      "question": "Let (f(x+y)=f(x)f(y), \\forall x,y) and (f'(0)=5, f(2019)=15). Then the value of f'(2019) is",
-      "options": [
-        "3",
-        "75",
-        "1/3",
-        "1/75"
-      ],
-      "correctAnswer": "75",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584232",
-      "question": "The set of values of x for which the function (f(x)=2x^3-9x^2+12x+4) is increasing is",
-      "options": [
-        "(1<x<2)",
-        "all (x \\in R)",
-        "(R-[1,2])",
-        "(x \\ge 2)"
-      ],
-      "correctAnswer": "(R-[1,2])",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584233",
-      "question": "(\\lim_{x\\to\\infty} x[\\log(1+\\frac{x}{2})-\\log(\\frac{x}{2})]) =",
-      "options": [
-        "(e^2)",
-        "(\\infty)",
-        "1",
-        "2"
-      ],
-      "correctAnswer": "2",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584234",
-      "question": "If (f(x,y,z)=x^3+xz^2+y^3+xyz, x=e^t, y=\\cos t, z=t^3) then (\\frac{df}{dt}) at t=0 is",
-      "options": [
-        "2",
-        "4",
-        "e",
-        "3"
-      ],
-      "correctAnswer": "3",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584235",
-      "question": "Which of the following is the value of (5050 \\times \\frac{\\int_0^1 (1-(1-x)^{50})^{100}x^{49}dx}{\\int_0^1 (1-x^{50})^{101}x^{49}dx})?",
-      "options": [
-        "5100",
-        "1",
-        "5050",
-        "1/2"
-      ],
-      "correctAnswer": "5100",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584236",
-      "question": "(\\int_0^1 \\max\\{x, \\frac{1}{2}-x\\} dx) =",
-      "options": [
-        "0",
-        "1/2",
-        "9/16",
-        "9/8"
-      ],
-      "correctAnswer": "9/16",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584237",
-      "question": "(\\lim_{n\\to\\infty} \\frac{1}{n^6} \\sum_{k=1}^n k^5) =",
-      "options": [
-        "1/6",
-        "1/5",
-        "1",
-        "6"
-      ],
-      "correctAnswer": "1/6",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584238",
-      "question": "(\\int_{-1}^1 \\frac{x^{15}(1-x^2)^{12}}{(1+x^2)^8} dx) =",
-      "options": [
-        "0",
-        "(\\frac{22}{7}-\\pi)",
-        "(\\frac{2}{105})",
-        "(\\frac{71}{15}-\\frac{3\\pi}{4})"
-      ],
-      "correctAnswer": "0",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584239",
-      "question": "The area of the region bounded by the curves (y=2-x^2) and (y=-x) is",
-      "options": [
-        "1",
-        "8/19",
-        "35/4",
-        "27/6"
-      ],
-      "correctAnswer": "27/6",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584240",
-      "question": "The volume of the solid obtained by revolving the region bounded by the curves (y=x^3, y^2=8) and x=0 about the y-axis is",
-      "options": [
-        "96/5",
-        "96π/5",
-        "32π/5",
-        "32/5"
-      ],
-      "correctAnswer": "96π/5",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584241",
-      "question": "The value of (\\int_0^{\\pi} \\sin^2\\theta \\cos^4\\theta d\\theta) is",
-      "options": [
-        "(\\pi^2/32)",
-        "(\\pi/32)",
-        "(\\pi^2/16)",
-        "(\\pi/16)"
-      ],
-      "correctAnswer": "(\\pi/32)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584242",
-      "question": "The average value of the function (f(x)=4-x^2) over the interval [-1, 3] is",
-      "options": [
-        "5",
-        "20/3",
-        "5/3",
-        "1"
-      ],
-      "correctAnswer": "5/3",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584243",
-      "question": "The differential equation (x \\frac{dy}{dx} = y+x^2, x>0) satisfying (y(0)=0) has",
-      "options": [
-        "infinitely many solutions",
-        "no solution",
-        "a unique solution",
-        "exactly two solutions"
-      ],
-      "correctAnswer": "infinitely many solutions",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584244",
-      "question": "The differential equation ((axy^3+y\\cos x)dx+(x^2y^2+b\\sin x)dy=0) is an exact differential equation for",
-      "options": [
-        "(a=1, b=\\frac{3}{2})",
-        "(a=\\frac{3}{2}, b=1)",
-        "(a=\\frac{2}{3}, b=1)",
-        "(a=1, b=\\frac{2}{3})"
-      ],
-      "correctAnswer": "(a=\\frac{2}{3}, b=1)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584245",
-      "question": "If sin x is a solution of the differential equation (\\frac{d^4y}{dx^4}+2\\frac{d^3y}{dx^3}+6\\frac{d^2y}{dx^2}+2\\frac{dy}{dx}+5y=0), then the general solution is",
-      "options": [
-        "(y=c_1 \\sin x+c_2 \\cos x+e^{-x}(c_3 \\sin 2x+c_4 \\cos 2x))",
-        "(y=c_1 \\sin x+c_2 \\cos x+c_3 \\sin 2x+c_4 \\cos 2x)",
-        "(y=c_1 \\sin x+c_2 \\cos x+c_3 e^{-3x}+c_4 e^{-2x})",
-        "(y=c_1 \\sin x+c_2 \\cos x+c_3 e^{3x}+c_4 e^{2x})"
-      ],
-      "correctAnswer": "(y=c_1 \\sin x+c_2 \\cos x+e^{-x}(c_3 \\sin 2x+c_4 \\cos 2x))",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584246",
-      "question": "If (D=\\frac{d}{dx}), then (\\frac{1}{D^2-4D+13}(6e^{2x}\\sin 3x)) is",
-      "options": [
-        "(-xe^{2x}\\cos 3x)",
-        "(xe^{2x}\\cos 3x)",
-        "(-xe^{2x}\\sin 3x)",
-        "(xe^{2x}\\sin 3x)"
-      ],
-      "correctAnswer": "(-xe^{2x}\\cos 3x)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584247",
-      "question": "The general solution of (\\frac{e^{-2\\sqrt{x}}}{\\sqrt{x}}-\\frac{y}{\\sqrt{x}})\\frac{dx}{dy}=1 is",
-      "options": [
-        "(y=e^{2\\sqrt{x}}(2\\sqrt{x}+c))",
-        "(y=2\\sqrt{x}e^{2\\sqrt{x}}+c)",
-        "(y=2\\sqrt{x}e^{-2\\sqrt{x}}+c)",
-        "(y=e^{-2\\sqrt{x}}(2\\sqrt{x}+c))"
-      ],
-      "correctAnswer": "(y=e^{-2\\sqrt{x}}(2\\sqrt{x}+c))",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584248",
-      "question": "Let y be the solution of the differential equation (\\frac{dy}{dx}+y=x, x \\in R) and (y(-1)=0). Then, y(1) is equal to",
-      "options": [
-        "(\\frac{2}{e}-\\frac{2}{e^2})",
-        "(2e^{-2})",
-        "(2-\\frac{2}{e})",
-        "(2-2e)"
-      ],
-      "correctAnswer": "(2-\\frac{2}{e})",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584249",
-      "question": "If the substitution x = X+h, y=Y+k transforms the differential equation ((y-x+1)dy-(y+x+2)dx=0) into a homogeneous equation, then the value of (h,k) is",
-      "options": [
-        "((\\frac{1}{2},\\frac{3}{2}))",
-        "((\\frac{-1}{2},\\frac{-3}{2}))",
-        "((\\frac{3}{2},\\frac{1}{2}))",
-        "((\\frac{-3}{2},\\frac{-1}{2}))"
-      ],
-      "correctAnswer": "((\\frac{-1}{2},\\frac{-3}{2}))",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "8946584250",
-      "question": "The general solution of (\\frac{dy}{dx}-y=y^2(\\sin x+\\cos x)) is",
-      "options": [
-        "(y=\\frac{1}{ce^x-\\sin x})",
-        "(y=ce^{-x}-e^x\\sin x)",
-        "(y=ce^x-\\sin x)",
-        "(y=\\frac{1}{ce^{-x}-\\sin x})"
-      ],
-      "correctAnswer": "(y=\\frac{1}{ce^{-x}-\\sin x})",
-      "topic": "Mathematics"
-    }
-  ]
+  {
+    "id": 1,
+    "question": "The first law of thermodynamics is based on the principle of conservation of:",
+    "options": ["Mass", "Momentum", "Energy", "Charge"],
+    "correctAnswer": "Energy",
+    "topic": "Thermodynamics"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is a type of gear?",
+    "options": ["Spur", "Bevel", "Helical", "All of the above"],
+    "correctAnswer": "All of the above",
+    "topic": "Theory of Machines"
+  },
+  {
+    "id": 3,
+    "question": "The property of a fluid to resist its own flow is called:",
+    "options": ["Viscosity", "Density", "Surface tension", "Compressibility"],
+    "correctAnswer": "Viscosity",
+    "topic": "Fluid Mechanics"
+  },
+  {
+    "id": 4,
+    "question": "What is the primary purpose of a 'governor' in an engine?",
+    "options": ["To increase speed", "To decrease speed", "To maintain a constant speed", "To stop the engine"],
+    "correctAnswer": "To maintain a constant speed",
+    "topic": "Theory of Machines"
+  },
+  {
+    "id": 5,
+    "question": "Hooke's Law states that stress is directly proportional to:",
+    "options": ["Strain", "Force", "Area", "Length"],
+    "correctAnswer": "Strain",
+    "topic": "Solid Mechanics"
+  },
+  {
+    "id": 6,
+    "question": "Which of these materials is the most ductile?",
+    "options": ["Cast Iron", "Mild Steel", "Glass", "Concrete"],
+    "correctAnswer": "Mild Steel",
+    "topic": "Engineering Materials"
+  },
+  {
+    "id": 7,
+    "question": "The process of joining two metal pieces by heating them to a molten state is called:",
+    "options": ["Welding", "Brazing", "Soldering", "Riveting"],
+    "correctAnswer": "Welding",
+    "topic": "Manufacturing Technology"
+  },
+  {
+    "id": 8,
+    "question": "A Carnot cycle consists of:",
+    "options": ["Two isothermal and two adiabatic processes", "Two constant volume and two constant pressure processes", "Two isothermal and two constant volume processes", "Two adiabatic and two constant pressure processes"],
+    "correctAnswer": "Two isothermal and two adiabatic processes",
+    "topic": "Thermodynamics"
+  },
+  {
+    "id": 9,
+    "question": "What does CAD stand for in the context of engineering?",
+    "options": ["Computer-Aided Design", "Computer-Assisted Drawing", "Car-Aided Driving", "Computer-Aided Database"],
+    "correctAnswer": "Computer-Aided Design",
+    "topic": "CAD/CAM"
+  },
+  {
+    "id": 10,
+    "question": "The efficiency of a heat engine is the ratio of:",
+    "options": ["Work output to heat input", "Heat input to work output", "Work input to heat output", "Heat output to work input"],
+    "correctAnswer": "Work output to heat input",
+    "topic": "Heat Power Engineering"
+  }
+]
