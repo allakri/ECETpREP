@@ -12,6 +12,7 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 
 interface AIMentorClientProps {
     course: Omit<Course, 'icon'>;
+    children: React.ReactNode;
 }
 
 const LoadingSkeleton = () => (
@@ -33,7 +34,7 @@ const LoadingSkeleton = () => (
     </div>
 )
 
-export function AIMentorClient({ course }: AIMentorClientProps) {
+export function AIMentorClient({ course, children }: AIMentorClientProps) {
     const [guidance, setGuidance] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -67,9 +68,7 @@ export function AIMentorClient({ course }: AIMentorClientProps) {
             <div className="container mx-auto px-4">
                 <Card className="max-w-4xl mx-auto shadow-2xl border-primary/20">
                     <CardHeader className="text-center bg-primary/5 p-8">
-                         <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
-                            <Brain className="h-10 w-10" />
-                        </div>
+                         {children}
                         <CardTitle className="text-3xl font-headline text-primary">
                             AI Mentor for {course.title}
                         </CardTitle>

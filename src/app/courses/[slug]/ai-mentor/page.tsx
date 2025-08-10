@@ -19,13 +19,15 @@ export default function AIMentorPage({ params }: AIMentorPageProps) {
     return notFound();
   }
   
-  // We can pass the whole course object because the icon component won't be serialized.
-  // The client component will receive the serializable parts.
-  const serializableCourse: Omit<Course, 'icon'> = { ...course };
+  const { icon: Icon, ...serializableCourse } = course;
 
   return (
     <AppShell>
-        <AIMentorClient course={serializableCourse} />
+        <AIMentorClient course={serializableCourse}>
+           <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
+                <Icon className="h-10 w-10" />
+            </div>
+        </AIMentorClient>
     </AppShell>
   );
 }
