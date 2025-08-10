@@ -50,12 +50,6 @@ const prepTips = [
 export function CourseClientPage({ course, icon }: CourseClientPageProps) {
   const router = useRouter();
 
-  const handleAskAI = () => {
-    // Save the course context to sessionStorage to be picked up by the chat client
-    sessionStorage.setItem('ai-doubt-course-context', JSON.stringify(course));
-    router.push('/chat');
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-secondary/10">
       <main className="flex-grow bg-background py-12 md:py-16">
@@ -188,12 +182,14 @@ export function CourseClientPage({ course, icon }: CourseClientPageProps) {
                 <motion.div variants={itemVariants}>
                   <Card className="shadow-lg bg-accent/10 border-accent/20">
                       <CardHeader>
-                          <CardTitle className="flex items-center gap-3 text-accent"><Brain /> AI Doubt Corner</CardTitle>
+                          <CardTitle className="flex items-center gap-3 text-accent"><Brain /> AI Mentor</CardTitle>
                       </CardHeader>
                       <CardContent>
-                          <p className="text-sm text-muted-foreground mb-4">Stuck on a topic? Get instant help from our AI tutor.</p>
-                          <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" onClick={handleAskAI}>
-                            Ask AI Assistant
+                          <p className="text-sm text-muted-foreground mb-4">Get a strategic study plan, topic analysis, and expert tips from our AI.</p>
+                          <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                            <Link href={`/courses/${course.slug}/ai-mentor`}>
+                                Get AI Study Plan
+                            </Link>
                           </Button>
                       </CardContent>
                   </Card>
