@@ -52,18 +52,25 @@ const DoubtClearingOutputSchema = z.object({
 });
 export type DoubtClearingOutput = z.infer<typeof DoubtClearingOutputSchema>;
 
+
+// Define a serializable version of the Course type, excluding the non-serializable icon.
+type SerializableCourse = Omit<Course, 'icon'>;
+
 // Agentic Tool: Define a tool for the AI to get course syllabus information.
 const getCourseSyllabus = ai.defineTool(
     {
         name: 'getCourseSyllabus',
         description: 'Get the detailed syllabus for a specific engineering branch/course.',
         inputSchema: z.object({ courseTitle: z.string().describe("The title of the course, e.g., 'Computer Science' or 'Mechanical Engineering'.") }),
-        outputSchema: z.custom<Course>(),
+        outputSchema: z.custom<SerializableCourse>(),
     },
     async ({ courseTitle }) => {
         const course = courses.find(c => c.title.toLowerCase().includes(courseTitle.toLowerCase()));
         if (!course) throw new Error(`Course "${courseTitle}" not found.`);
-        return course;
+        
+        // Destructure to separate the icon from the rest of the serializable data.
+        const { icon, ...serializableCourse } = course;
+        return serializableCourse;
     }
 );
 
