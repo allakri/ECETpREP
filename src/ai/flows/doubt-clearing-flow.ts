@@ -152,6 +152,10 @@ const doubtClearingFlow = ai.defineFlow(
     outputSchema: DoubtClearingOutputSchema,
   },
   async input => {
+    // Remove the courseContext from the input before passing to the prompt if it's not needed for the prompt logic itself.
+    const { courseContext, ...promptInput } = input;
+    
+    // The prompt will use the courseContext if it's present in the original input.
     const {output} = await doubtClearingPrompt(input);
     return output!;
   }

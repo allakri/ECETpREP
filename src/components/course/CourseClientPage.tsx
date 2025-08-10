@@ -50,11 +50,6 @@ const prepTips = [
 export function CourseClientPage({ course, children }: CourseClientPageProps) {
   const router = useRouter();
 
-  const handleAskAI = () => {
-    sessionStorage.setItem('ai-doubt-course-context', JSON.stringify(course));
-    router.push('/chat');
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-secondary/10">
       <main className="flex-grow bg-background py-12 md:py-16">

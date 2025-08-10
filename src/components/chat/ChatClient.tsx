@@ -59,7 +59,6 @@ export default function ChatClient() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [examContext, setExamContext] = useState<{ questions: Question[], answers: AnswerSheet } | null>(null);
-  const [courseContext, setCourseContext] = useState<Omit<Course, 'icon'> | null>(null);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -79,21 +78,12 @@ export default function ChatClient() {
         questions: JSON.parse(storedQuestions),
       });
     }
-
-    // Load course context
-    const storedCourseContext = sessionStorage.getItem('ai-doubt-course-context');
-    if (storedCourseContext) {
-      setCourseContext(JSON.parse(storedCourseContext));
-      // Optionally clear it after loading so it's not stale on next visit
-      // sessionStorage.removeItem('ai-doubt-course-context');
-    }
-
   }, []);
 
 
-  const handleSendMessage = async (e: React.FormEvent, initialMessage?: string) => {
+  const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    const messageToSend = initialMessage || input;
+    const messageToSend = input;
     if (!messageToSend.trim()) return;
 
     const userMessage: ChatMessage = { role: 'user', text: messageToSend };
@@ -113,7 +103,6 @@ export default function ChatClient() {
         history: history,
         examQuestions: examContext?.questions,
         examAnswers: examContext?.answers,
-        courseContext: courseContext || undefined,
       });
 
       const aiMessage: ChatMessage = { role: 'model', text: result.answer };
@@ -130,14 +119,6 @@ export default function ChatClient() {
     }
   };
   
-  // Send an initial message if context is available
-  useEffect(() => {
-    if (courseContext && messages.length === 0) {
-      handleSendMessage({ preventDefault: () => {} } as React.FormEvent, `I need help with my ${courseContext.title} studies.`);
-    }
-  }, [courseContext, messages.length]);
-
-
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTo({
@@ -148,9 +129,6 @@ export default function ChatClient() {
   }, [messages]);
   
   const getWelcomeMessage = () => {
-    if (courseContext) {
-        return `I see you are studying ${courseContext.title}. Ask me anything about it!`;
-    }
     if (examContext) {
       return "I see you've just finished an exam. You can ask me which questions you got wrong or right, and I can help explain the concepts. Or, ask me anything else about ECET subjects!";
     }
@@ -182,7 +160,7 @@ export default function ChatClient() {
           <CardContent className="flex-1 p-0">
             <ScrollArea className="h-full p-6" ref={scrollAreaRef}>
               <div className="space-y-6">
-                {messages.length === 0 && !courseContext && (
+                {messages.length === 0 && (
                   <div className="text-center text-muted-foreground pt-10 px-4">
                     <p>{getWelcomeMessage()}</p>
                   </div>
