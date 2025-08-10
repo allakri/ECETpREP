@@ -3,7 +3,6 @@
 
 import { useState, useEffect } from 'react';
 import type { Course } from '@/lib/courses';
-import { generateStrategicGuidance } from '@/ai/flows/strategic-guidance-flow';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Brain, Sparkles, AlertTriangle } from 'lucide-react';
@@ -44,14 +43,31 @@ export function AIMentorClient({ course, children }: AIMentorClientProps) {
             setIsLoading(true);
             setError(null);
             try {
-                const result = await generateStrategicGuidance({
-                    courseTitle: course.title,
-                    syllabus: course.syllabus,
+                const response = await fetch('/api/ai-mentor', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        courseTitle: course.title,
+                        syllabus: course.syllabus,
+                    }),
                 });
+
+                if (!response.ok) {
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.error) {
+                    throw new Error(result.error);
+                }
+
                 setGuidance(result.guidance);
-            } catch (err) {
+            } catch (err: any) {
                 console.error("Error fetching AI guidance:", err);
-                setError("Failed to generate the study guide. The AI service may be temporarily unavailable. Please try again later.");
+                setError(`Failed to generate the study guide. The AI service may be temporarily unavailable. Please try again later. Details: ${err.message}`);
             } finally {
                 setIsLoading(false);
             }
