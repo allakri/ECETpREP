@@ -198,20 +198,6 @@ export function CourseClientPage({ course, children }: CourseClientPageProps) {
                   </Card>
                 </motion.div>
 
-                 <motion.div variants={itemVariants}>
-                  <Card className="shadow-lg bg-secondary/10 border-secondary/20">
-                      <CardHeader>
-                          <CardTitle className="flex items-center gap-3 text-secondary"><ShieldQuestion /> AI Doubt Corner</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                          <p className="text-sm text-muted-foreground mb-4">Stuck on a specific topic? Ask our AI assistant for a quick explanation.</p>
-                          <Button onClick={handleAskAI} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
-                              Ask AI Assistant
-                          </Button>
-                      </CardContent>
-                  </Card>
-                </motion.div>
-
               </motion.div>
             </aside>
           </div>
