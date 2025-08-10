@@ -4,7 +4,6 @@ import { exams } from "@/lib/exams";
 import { notFound } from "next/navigation";
 import { CustomTestClient } from "@/components/exam/CustomTestClient";
 import { AppShell } from "@/components/layout/AppShell";
-import { Sparkles } from "lucide-react";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 interface CustomTestPageProps {
