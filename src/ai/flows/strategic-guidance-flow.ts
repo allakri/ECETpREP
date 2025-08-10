@@ -13,8 +13,8 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const SyllabusItemSchema = z.object({
-  subject: z.string(),
-  topics: z.array(z.string()),
+  subject: z.string().describe('The name of the subject.'),
+  topics: z.array(z.string()).describe('The topics within the subject.'),
 });
 
 export const StrategicGuidanceInputSchema = z.object({
