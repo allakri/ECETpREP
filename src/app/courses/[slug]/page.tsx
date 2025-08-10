@@ -24,7 +24,11 @@ export default function CourseSubPage({ params }: CourseSubPageProps) {
 
   return (
     <AppShell>
-        <CourseClientPage course={serializableCourseData} icon={<Icon className="h-12 w-12 text-primary" />} />
+        <CourseClientPage course={serializableCourseData}>
+          <div className="p-4 bg-primary/10 rounded-lg">
+            <Icon className="h-12 w-12 text-primary" />
+          </div>
+        </CourseClientPage>
     </AppShell>
   );
 }

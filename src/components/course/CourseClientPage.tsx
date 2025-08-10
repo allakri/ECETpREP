@@ -15,7 +15,7 @@ import { useRouter } from "next/navigation";
 
 interface CourseClientPageProps {
   course: Omit<Course, 'icon'>;
-  icon: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const containerVariants = {
@@ -47,8 +47,13 @@ const prepTips = [
     { icon: Award, title: "Consistent Revision", description: "Regularly revise formulas and key concepts to retain information." },
 ]
 
-export function CourseClientPage({ course, icon }: CourseClientPageProps) {
+export function CourseClientPage({ course, children }: CourseClientPageProps) {
   const router = useRouter();
+
+  const handleAskAI = () => {
+    sessionStorage.setItem('ai-doubt-course-context', JSON.stringify(course));
+    router.push('/chat');
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-secondary/10">
@@ -65,9 +70,7 @@ export function CourseClientPage({ course, icon }: CourseClientPageProps) {
           >
             <Card className="shadow-lg bg-card border-border">
                 <CardHeader className="flex flex-col md:flex-row items-start gap-6">
-                    <div className="p-4 bg-primary/10 rounded-lg">
-                        {icon}
-                    </div>
+                    {children}
                     <div>
                         <CardTitle className="text-3xl lg:text-4xl font-headline text-primary">
                             {course.title} – ECET Syllabus & Course Guide
@@ -194,6 +197,21 @@ export function CourseClientPage({ course, icon }: CourseClientPageProps) {
                       </CardContent>
                   </Card>
                 </motion.div>
+
+                 <motion.div variants={itemVariants}>
+                  <Card className="shadow-lg bg-secondary/10 border-secondary/20">
+                      <CardHeader>
+                          <CardTitle className="flex items-center gap-3 text-secondary"><ShieldQuestion /> AI Doubt Corner</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                          <p className="text-sm text-muted-foreground mb-4">Stuck on a specific topic? Ask our AI assistant for a quick explanation.</p>
+                          <Button onClick={handleAskAI} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                              Ask AI Assistant
+                          </Button>
+                      </CardContent>
+                  </Card>
+                </motion.div>
+
               </motion.div>
             </aside>
           </div>
