@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which data structure uses the First-In, First-Out (FIFO) principle?",
-    "options": ["Stack", "Queue", "Tree", "Graph"],
-    "correctAnswer": "Queue",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 2,
-    "question": "What is the time complexity of a binary search algorithm?",
-    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-    "correctAnswer": "O(log n)",
-    "topic": "Algorithms"
-  },
-  {
-    "id": 3,
-    "question": "In object-oriented programming, what is the concept of bundling data and methods together called?",
-    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
-    "correctAnswer": "Encapsulation",
-    "topic": "OOP"
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is not a type of SQL join?",
-    "options": ["INNER JOIN", "OUTER JOIN", "CROSS JOIN", "SIDE JOIN"],
-    "correctAnswer": "SIDE JOIN",
-    "topic": "DBMS"
-  },
-  {
-    "id": 5,
-    "question": "What is the primary purpose of an Operating System?",
-    "options": ["To provide a user interface", "To manage hardware and software resources", "To run applications", "To connect to the internet"],
-    "correctAnswer": "To manage hardware and software resources",
-    "topic": "Operating Systems"
-  },
-  {
-    "id": 6,
-    "question": "Which layer of the OSI model is responsible for routing?",
-    "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"],
-    "correctAnswer": "Network Layer",
-    "topic": "Computer Networks"
-  },
-  {
-    "id": 7,
-    "question": "What does the '2' in '2-3 tree' represent?",
-    "options": ["The number of keys", "The number of children", "The height of the tree", "The number of nodes"],
-    "correctAnswer": "The number of keys",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 8,
-    "question": "Which logic gate is known as the universal gate?",
-    "options": ["AND", "OR", "NOT", "NAND"],
-    "correctAnswer": "NAND",
-    "topic": "Digital Logic"
-  },
-  {
-    "id": 9,
-    "question": "What is the default port for HTTP?",
-    "options": ["80", "443", "21", "22"],
-    "correctAnswer": "80",
-    "topic": "Web Technologies"
-  },
-  {
-    "id": 10,
-    "question": "In C++, what is a 'constructor'?",
-    "options": ["A function that destroys an object", "A special method for creating and initializing an object", "A method to copy an object", "A private member function"],
-    "correctAnswer": "A special method for creating and initializing an object",
-    "topic": "C++"
-  }
+  { "id": 1, "question": "Which of the following is not an operating system? (CSE 2018)", "options": ["Windows", "Linux", "Oracle", "DOS"], "correctAnswer": "Oracle", "topic": "Operating Systems" },
+  { "id": 2, "question": "What does SQL stand for? (CSE 2018)", "options": ["Structured Query Language", "Strong Question Language", "Structured Question Language", "Simple Query Language"], "correctAnswer": "Structured Query Language", "topic": "DBMS" },
+  { "id": 3, "question": "Which data structure uses LIFO? (CSE 2018)", "options": ["Queue", "Stack", "Array", "Linked List"], "correctAnswer": "Stack", "topic": "Data Structures" },
+  { "id": 4, "question": "What is the time complexity of binary search? (CSE 2018)", "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"], "correctAnswer": "O(log n)", "topic": "Algorithms" },
+  { "id": 5, "question": "Which of these is a valid keyword in Java? (CSE 2018)", "options": ["string", "Float", "unsigned", "super"], "correctAnswer": "super", "topic": "Java Programming" },
+  { "id": 6, "question": "The 'brain' of any computer system is the: (CSE 2018)", "options": ["ALU", "Memory", "CPU", "Control Unit"], "correctAnswer": "CPU", "topic": "Computer Architecture" },
+  { "id": 7, "question": "What is the function of an AND gate? (CSE 2018)", "options": ["Outputs 1 only if all inputs are 1", "Outputs 1 if any input is 1", "Outputs 0 only if all inputs are 0", "Inverts the input"], "correctAnswer": "Outputs 1 only if all inputs are 1", "topic": "Digital Electronics" },
+  { "id": 8, "question": "Which layer of the OSI model is responsible for routing? (CSE 2018)", "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"], "correctAnswer": "Network Layer", "topic": "Computer Networks" },
+  { "id": 9, "question": "In C++, which concept allows a class to have multiple methods with the same name but different parameters? (CSE 2018)", "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"], "correctAnswer": "Polymorphism", "topic": "Object Oriented Programming" },
+  { "id": 10, "question": "Which tag is used to create a hyperlink in HTML? (CSE 2018)", "options": ["<link>", "<a>", "<hlink>", "<href>"], "correctAnswer": "<a>", "topic": "Web Technologies" }
 ]

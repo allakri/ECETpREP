@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the main binding material in cement concrete?",
-    "options": ["Sand", "Cement", "Aggregate", "Water"],
-    "correctAnswer": "Cement",
-    "topic": "Building Materials"
-  },
-  {
-    "id": 2,
-    "question": "Which type of bond is strongest in brick masonry?",
-    "options": ["Stretcher bond", "Header bond", "English bond", "Flemish bond"],
-    "correctAnswer": "English bond",
-    "topic": "Construction Practices"
-  },
-  {
-    "id": 3,
-    "question": "The formula for calculating the area of a trapezoid is:",
-    "options": ["(a+b)/2 * h", "l*w", "pi*r^2", "0.5*b*h"],
-    "correctAnswer": "(a+b)/2 * h",
-    "topic": "Surveying"
-  },
-  {
-    "id": 4,
-    "question": "What does the 'slump test' for concrete measure?",
-    "options": ["Strength", "Workability", "Durability", "Setting time"],
-    "correctAnswer": "Workability",
-    "topic": "Concrete Technology"
-  },
-  {
-    "id": 5,
-    "question": "The 'moment of inertia' is a measure of an object's resistance to:",
-    "options": ["Linear motion", "Bending", "Torsion", "Axial load"],
-    "correctAnswer": "Bending",
-    "topic": "Strength of Materials"
-  },
-  {
-    "id": 6,
-    "question": "In soil mechanics, the 'void ratio' is the ratio of the volume of voids to the volume of:",
-    "options": ["Total volume", "Water", "Air", "Solids"],
-    "correctAnswer": "Solids",
-    "topic": "Geotechnical Engineering"
-  },
-  {
-    "id": 7,
-    "question": "Which of these is a type of deep foundation?",
-    "options": ["Strip footing", "Raft foundation", "Pile foundation", "Isolated footing"],
-    "correctAnswer": "Pile foundation",
-    "topic": "Foundation Engineering"
-  },
-  {
-    "id": 8,
-    "question": "Bernoulli's equation in fluid dynamics relates pressure, velocity, and:",
-    "options": ["Density", "Viscosity", "Elevation", "Temperature"],
-    "correctAnswer": "Elevation",
-    "topic": "Hydraulics"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary purpose of a 'weir' in irrigation engineering?",
-    "options": ["To store water", "To measure flow rate", "To raise the water level", "To generate power"],
-    "correctAnswer": "To raise the water level",
-    "topic": "Irrigation Engineering"
-  },
-  {
-    "id": 10,
-    "question": "The super-elevation on roads is provided to counteract:",
-    "options": ["Gravitational force", "Frictional force", "Centrifugal force", "Wind force"],
-    "correctAnswer": "Centrifugal force",
-    "topic": "Transportation Engineering"
-  }
+  { "id": 1, "question": "Seasoning of timber is done to: (CIVIL 2021)", "options": ["Increase its weight", "Reduce its moisture content", "Make it darker", "Increase its fire resistance"], "correctAnswer": "Reduce its moisture content", "topic": "Building Materials" },
+  { "id": 2, "question": "Creep in concrete is the: (CIVIL 2021)", "options": ["Increase in strength with time", "Decrease in volume due to moisture loss", "Gradual increase in strain under sustained stress", "Cracking due to thermal stress"], "correctAnswer": "Gradual increase in strain under sustained stress", "topic": "Concrete Technology" },
+  { "id": 3, "question": "A Level Book is used in surveying to record: (CIVIL 2021)", "options": ["Horizontal angles", "Bearings", "Staff readings and reduced levels", "Chainage"], "correctAnswer": "Staff readings and reduced levels", "topic": "Surveying" },
+  { "id": 4, "question": "The process of improving soil properties by mechanical means is known as: (CIVIL 2021)", "options": ["Consolidation", "Compaction", "Stabilization", "Permeation"], "correctAnswer": "Compaction", "topic": "Geotechnical Engineering" },
+  { "id": 5, "question": "The maximum bending moment in a simply supported beam with a central point load 'W' is: (CIVIL 2021)", "options": ["WL/2", "WL/4", "WL/8", "WL/6"], "correctAnswer": "WL/4", "topic": "Strength of Materials" },
+  { "id": 6, "question": "Scaffolding is a temporary structure used to: (CIVIL 2021)", "options": ["Support workers and materials during construction", "Support the formwork for slabs", "Cure the concrete", "Protect the building from weather"], "correctAnswer": "Support workers and materials during construction", "topic": "Building Construction" },
+  { "id": 7, "question": "The weir, a structure in a canal, is used to: (CIVIL 2021)", "options": ["Measure flow rate", "Raise the water level", "Prevent silting", "Generate power"], "correctAnswer": "Raise the water level", "topic": "Irrigation Engineering" },
+  { "id": 8, "question": "The minimum cover to reinforcement in a slab should be: (CIVIL 2021)", "options": ["15 mm", "25 mm", "40 mm", "50 mm"], "correctAnswer": "15 mm", "topic": "Reinforced Concrete Structures" },
+  { "id": 9, "question": "Bitumen is a material used for: (CIVIL 2021)", "options": ["Making cement", "Painting walls", "Constructing flexible pavements", "Making bricks"], "correctAnswer": "Constructing flexible pavements", "topic": "Transportation Engineering" },
+  { "id": 10, "question": "A pile foundation is a type of: (CIVIL 2021)", "options": ["Shallow foundation", "Deep foundation", "Raft foundation", "Combined footing"], "correctAnswer": "Deep foundation", "topic": "Geotechnical Engineering" }
 ]

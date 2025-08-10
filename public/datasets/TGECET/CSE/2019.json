@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which data structure uses the First-In, First-Out (FIFO) principle?",
-    "options": ["Stack", "Queue", "Tree", "Graph"],
-    "correctAnswer": "Queue",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 2,
-    "question": "What is the time complexity of a binary search algorithm?",
-    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-    "correctAnswer": "O(log n)",
-    "topic": "Algorithms"
-  },
-  {
-    "id": 3,
-    "question": "In object-oriented programming, what is the concept of bundling data and methods together called?",
-    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
-    "correctAnswer": "Encapsulation",
-    "topic": "OOP"
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is not a type of SQL join?",
-    "options": ["INNER JOIN", "OUTER JOIN", "CROSS JOIN", "SIDE JOIN"],
-    "correctAnswer": "SIDE JOIN",
-    "topic": "DBMS"
-  },
-  {
-    "id": 5,
-    "question": "What is the primary purpose of an Operating System?",
-    "options": ["To provide a user interface", "To manage hardware and software resources", "To run applications", "To connect to the internet"],
-    "correctAnswer": "To manage hardware and software resources",
-    "topic": "Operating Systems"
-  },
-  {
-    "id": 6,
-    "question": "Which layer of the OSI model is responsible for routing?",
-    "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"],
-    "correctAnswer": "Network Layer",
-    "topic": "Computer Networks"
-  },
-  {
-    "id": 7,
-    "question": "What does the '2' in '2-3 tree' represent?",
-    "options": ["The number of keys", "The number of children", "The height of the tree", "The number of nodes"],
-    "correctAnswer": "The number of keys",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 8,
-    "question": "Which logic gate is known as the universal gate?",
-    "options": ["AND", "OR", "NOT", "NAND"],
-    "correctAnswer": "NAND",
-    "topic": "Digital Logic"
-  },
-  {
-    "id": 9,
-    "question": "What is the default port for HTTP?",
-    "options": ["80", "443", "21", "22"],
-    "correctAnswer": "80",
-    "topic": "Web Technologies"
-  },
-  {
-    "id": 10,
-    "question": "In C++, what is a 'constructor'?",
-    "options": ["A function that destroys an object", "A special method for creating and initializing an object", "A method to copy an object", "A private member function"],
-    "correctAnswer": "A special method for creating and initializing an object",
-    "topic": "C++"
-  }
+  { "id": 1, "question": "The process of a process creating another process is called: (CSE 2019)", "options": ["forking", "threading", "spawning", "copying"], "correctAnswer": "forking", "topic": "Operating Systems" },
+  { "id": 2, "question": "Which command is used to remove a table from a database in SQL? (CSE 2019)", "options": ["DELETE TABLE", "REMOVE TABLE", "DROP TABLE", "ERASE TABLE"], "correctAnswer": "DROP TABLE", "topic": "DBMS" },
+  { "id": 3, "question": "Which data structure is ideal for implementing a priority queue? (CSE 2019)", "options": ["Stack", "Array", "Heap", "Linked List"], "correctAnswer": "Heap", "topic": "Data Structures" },
+  { "id": 4, "question": "Dijkstra's algorithm is used to find: (CSE 2019)", "options": ["Minimum Spanning Tree", "Longest Path", "Shortest Path from a single source", "All pairs shortest path"], "correctAnswer": "Shortest Path from a single source", "topic": "Algorithms" },
+  { "id": 5, "question": "What does the 'static' keyword in Java mean? (CSE 2019)", "options": ["The method cannot be changed", "The variable is constant", "The method or variable belongs to the class, not an instance", "The method can only be called once"], "correctAnswer": "The method or variable belongs to the class, not an instance", "topic": "Java Programming" },
+  { "id": 6, "question": "What is a 'bus' in computer architecture? (CSE 2019)", "options": ["A type of memory", "A set of parallel wires connecting components", "A CPU component", "A storage device"], "correctAnswer": "A set of parallel wires connecting components", "topic": "Computer Architecture" },
+  { "id": 7, "question": "A flip-flop is a: (CSE 2019)", "options": ["Combinational circuit", "Sequential circuit", "Memory element that stores one bit", "Logic gate"], "correctAnswer": "Memory element that stores one bit", "topic": "Digital Electronics" },
+  { "id": 8, "question": "What is the default port number for HTTP? (CSE 2019)", "options": ["21", "25", "80", "443"], "correctAnswer": "80", "topic": "Computer Networks" },
+  { "id": 9, "question": "The bundling of data and methods that operate on the data into a single unit is called: (CSE 2019)", "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"], "correctAnswer": "Encapsulation", "topic": "Object Oriented Programming" },
+  { "id": 10, "question": "What does CSS stand for? (CSE 2019)", "options": ["Cascading Style Sheets", "Creative Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"], "correctAnswer": "Cascading Style Sheets", "topic": "Web Technologies" }
 ]

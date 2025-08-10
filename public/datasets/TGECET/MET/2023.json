@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which process is used to improve the hardness of steel?",
-    "options": ["Annealing", "Normalizing", "Quenching", "Tempering"],
-    "correctAnswer": "Quenching",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 2,
-    "question": "The addition of carbon to iron makes it:",
-    "options": ["Softer", "Harder and stronger", "More ductile", "More malleable"],
-    "correctAnswer": "Harder and stronger",
-    "topic": "Iron-Carbon Diagram"
-  },
-  {
-    "id": 3,
-    "question": "Which of the following is a method for testing the hardness of a material?",
-    "options": ["Tensile test", "Impact test", "Rockwell test", "Fatigue test"],
-    "correctAnswer": "Rockwell test",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 4,
-    "question": "What is the primary ore of aluminum?",
-    "options": ["Hematite", "Bauxite", "Galena", "Sphalerite"],
-    "correctAnswer": "Bauxite",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 5,
-    "question": "The process of extracting metal from its ore by heating is called:",
-    "options": ["Smelting", "Leaching", "Electrolysis", "Roasting"],
-    "correctAnswer": "Smelting",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 6,
-    "question": "A 'unit cell' in crystallography is:",
-    "options": ["The smallest repeating unit of a crystal lattice", "A single crystal", "A type of defect", "A grain boundary"],
-    "correctAnswer": "The smallest repeating unit of a crystal lattice",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 7,
-    "question": "Which crystal structure is known for its high ductility?",
-    "options": ["BCC (Body-Centered Cubic)", "FCC (Face-Centered Cubic)", "HCP (Hexagonal Close-Packed)", "Simple Cubic"],
-    "correctAnswer": "FCC (Face-Centered Cubic)",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 8,
-    "question": "The 'fatigue limit' of a material is its ability to withstand:",
-    "options": ["Sudden impact", "High temperature", "Repeated cyclic loading", "Corrosive environments"],
-    "correctAnswer": "Repeated cyclic loading",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 9,
-    "question": "Stainless steel is an alloy of iron and at least 10.5% of:",
-    "options": ["Chromium", "Nickel", "Manganese", "Carbon"],
-    "correctAnswer": "Chromium",
-    "topic": "Engineering Materials"
-  },
-  {
-    "id": 10,
-    "question": "The process used to remove impurities from molten metal is known as:",
-    "options": ["Refining", "Casting", "Forging", "Rolling"],
-    "correctAnswer": "Refining",
-    "topic": "Extractive Metallurgy"
-  }
+  { "id": 1, "question": "Leaching is a metallurgical process used to: (MET 2023)", "options": ["Extract metals by dissolving them in a suitable solvent", "Melt the ore", "Grind the ore", "Heat the ore in air"], "correctAnswer": "Extract metals by dissolving them in a suitable solvent", "topic": "Extractive Metallurgy" },
+  { "id": 2, "question": "A grain boundary in a metal is a type of: (MET 2023)", "options": ["Point defect", "Line defect", "Surface defect", "Volume defect"], "correctAnswer": "Surface defect", "topic": "Physical Metallurgy" },
+  { "id": 3, "question": "What does a stress-strain curve show? (MET 2023)", "options": ["The material's response to an applied load", "The material's hardness", "The material's corrosion resistance", "The material's melting point"], "correctAnswer": "The material's response to an applied load", "topic": "Material Testing" },
+  { "id": 4, "question": "Pitting corrosion is a form of: (MET 2023)", "options": ["Uniform corrosion", "Localized corrosion", "Galvanic corrosion", "Stress corrosion cracking"], "correctAnswer": "Localized corrosion", "topic": "Corrosion" },
+  { "id": 5, "question": "Case hardening is a process used to: (MET 2023)", "options": ["Harden the entire component", "Harden only the surface of a component", "Soften the component", "Improve ductility"], "correctAnswer": "Harden only the surface of a component", "topic": "Heat Treatment" },
+  { "id": 6, "question": "Coke in the blast furnace acts as a: (MET 2023)", "options": ["Fuel", "Reducing agent", "Support for the charge", "All of the above"], "correctAnswer": "All of the above", "topic": "Extractive Metallurgy" },
+  { "id": 7, "question": "Forging is a manufacturing process involving the shaping of metal using: (MET 2023)", "options": ["Localized compressive forces", "Tensile forces", "Abrasive particles", "Molten metal"], "correctAnswer": "Localized compressive forces", "topic": "Mechanical Metallurgy" },
+  { "id": 8, "question": "The phase in the Iron-Carbon diagram that is magnetic at room temperature is: (MET 2023)", "options": ["Austenite", "Ferrite", "Delta-ferrite", "Liquid iron"], "correctAnswer": "Ferrite", "topic": "Physical Metallurgy" },
+  { "id": 9, "question": "Magnetic particle testing is used to detect: (MET 2023)", "options": ["Internal defects in non-magnetic materials", "Surface and near-surface defects in ferromagnetic materials", "Chemical composition", "Grain size"], "correctAnswer": "Surface and near-surface defects in ferromagnetic materials", "topic": "Material Testing" },
+  { "id": 10, "question": "Bainite is a phase in steel formed by cooling at a rate: (MET 2023)", "options": ["Faster than for pearlite but slower than for martensite", "Slower than for pearlite", "Faster than for martensite", "Extremely slowly"], "correctAnswer": "Faster than for pearlite but slower than for martensite", "topic": "Physical Metallurgy" }
 ]

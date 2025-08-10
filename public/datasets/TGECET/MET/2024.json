@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which process is used to improve the hardness of steel?",
-    "options": ["Annealing", "Normalizing", "Quenching", "Tempering"],
-    "correctAnswer": "Quenching",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 2,
-    "question": "The addition of carbon to iron makes it:",
-    "options": ["Softer", "Harder and stronger", "More ductile", "More malleable"],
-    "correctAnswer": "Harder and stronger",
-    "topic": "Iron-Carbon Diagram"
-  },
-  {
-    "id": 3,
-    "question": "Which of the following is a method for testing the hardness of a material?",
-    "options": ["Tensile test", "Impact test", "Rockwell test", "Fatigue test"],
-    "correctAnswer": "Rockwell test",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 4,
-    "question": "What is the primary ore of aluminum?",
-    "options": ["Hematite", "Bauxite", "Galena", "Sphalerite"],
-    "correctAnswer": "Bauxite",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 5,
-    "question": "The process of extracting metal from its ore by heating is called:",
-    "options": ["Smelting", "Leaching", "Electrolysis", "Roasting"],
-    "correctAnswer": "Smelting",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 6,
-    "question": "A 'unit cell' in crystallography is:",
-    "options": ["The smallest repeating unit of a crystal lattice", "A single crystal", "A type of defect", "A grain boundary"],
-    "correctAnswer": "The smallest repeating unit of a crystal lattice",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 7,
-    "question": "Which crystal structure is known for its high ductility?",
-    "options": ["BCC (Body-Centered Cubic)", "FCC (Face-Centered Cubic)", "HCP (Hexagonal Close-Packed)", "Simple Cubic"],
-    "correctAnswer": "FCC (Face-Centered Cubic)",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 8,
-    "question": "The 'fatigue limit' of a material is its ability to withstand:",
-    "options": ["Sudden impact", "High temperature", "Repeated cyclic loading", "Corrosive environments"],
-    "correctAnswer": "Repeated cyclic loading",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 9,
-    "question": "Stainless steel is an alloy of iron and at least 10.5% of:",
-    "options": ["Chromium", "Nickel", "Manganese", "Carbon"],
-    "correctAnswer": "Chromium",
-    "topic": "Engineering Materials"
-  },
-  {
-    "id": 10,
-    "question": "The process used to remove impurities from molten metal is known as:",
-    "options": ["Refining", "Casting", "Forging", "Rolling"],
-    "correctAnswer": "Refining",
-    "topic": "Extractive Metallurgy"
-  }
+  { "id": 1, "question": "Electrolysis is a refining process used for which metal? (MET 2024)", "options": ["Iron", "Copper", "Lead", "Tin"], "correctAnswer": "Copper", "topic": "Extractive Metallurgy" },
+  { "id": 2, "question": "A vacancy in a crystal lattice is a type of: (MET 2024)", "options": ["Point defect", "Line defect", "Surface defect", "Volume defect"], "correctAnswer": "Point defect", "topic": "Physical Metallurgy" },
+  { "id": 3, "question": "The ability of a material to resist wear and abrasion is known as: (MET 2024)", "options": ["Hardness", "Toughness", "Strength", "Stiffness"], "correctAnswer": "Hardness", "topic": "Material Testing" },
+  { "id": 4, "question": "The rate of corrosion is affected by: (MET 2024)", "options": ["Temperature", "Humidity", "Presence of electrolytes", "All of the above"], "correctAnswer": "All of the above", "topic": "Corrosion" },
+  { "id": 5, "question": "Annealing is a heat treatment process used to make a metal: (MET 2024)", "options": ["Harder", "Softer and more ductile", "More brittle", "Stronger"], "correctAnswer": "Softer and more ductile", "topic": "Heat Treatment" },
+  { "id": 6, "question": "What is the main reducing agent in a blast furnace? (MET 2024)", "options": ["Carbon monoxide", "Coke (Carbon)", "Limestone", "Air"], "correctAnswer": "Carbon monoxide", "topic": "Extractive Metallurgy" },
+  { "id": 7, "question": "Extrusion is a process where a material is: (MET 2024)", "options": ["Pulled through a die", "Pushed through a die", "Hammered into shape", "Rolled into sheets"], "correctAnswer": "Pushed through a die", "topic": "Mechanical Metallurgy" },
+  { "id": 8, "question": "A substitutional solid solution is formed when the solute and solvent atoms are: (MET 2024)", "options": ["Of very different sizes", "Of similar sizes", "Chemically bonded", "Non-metallic"], "correctAnswer": "Of similar sizes", "topic": "Physical Metallurgy" },
+  { "id": 9, "question": "The property measured by a Charpy or Izod test is: (MET 2024)", "options": ["Hardness", "Tensile strength", "Impact toughness", "Creep resistance"], "correctAnswer": "Impact toughness", "topic": "Material Testing" },
+  { "id": 10, "question": "The carbon content in high-carbon steel is typically: (MET 2024)", "options": ["< 0.3%", "0.3% - 0.6%", "0.6% - 2.11%", "> 2.11%"], "correctAnswer": "0.6% - 2.11%", "topic": "Physical Metallurgy" }
 ]

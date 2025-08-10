@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the primary function of a Zener diode?",
-    "options": ["Amplification", "Rectification", "Voltage regulation", "Oscillation"],
-    "correctAnswer": "Voltage regulation",
-    "topic": "Electronic Devices"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is an active electronic component?",
-    "options": ["Resistor", "Capacitor", "Inductor", "Transistor"],
-    "correctAnswer": "Transistor",
-    "topic": "Electronic Circuits"
-  },
-  {
-    "id": 3,
-    "question": "In a communication system, what does 'modulation' mean?",
-    "options": ["Superimposing a low-frequency signal on a high-frequency carrier", "Removing noise from a signal", "Converting analog to digital", "Increasing signal power"],
-    "correctAnswer": "Superimposing a low-frequency signal on a high-frequency carrier",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 4,
-    "question": "The Boolean expression A + A'B is equivalent to:",
-    "options": ["A + B", "B", "A", "A' + B"],
-    "correctAnswer": "A + B",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 5,
-    "question": "What is the purpose of an SCR (Silicon Controlled Rectifier)?",
-    "options": ["To amplify weak signals", "To switch high power loads", "To generate high frequencies", "To store charge"],
-    "correctAnswer": "To switch high power loads",
-    "topic": "Industrial Electronics"
-  },
-  {
-    "id": 6,
-    "question": "A microprocessor with a 16-bit address bus can access how much memory?",
-    "options": ["16 KB", "32 KB", "64 KB", "128 KB"],
-    "correctAnswer": "64 KB",
-    "topic": "Microprocessors"
-  },
-  {
-    "id": 7,
-    "question": "What is the main advantage of using optical fiber for communication?",
-    "options": ["Low cost", "High bandwidth", "Easy installation", "Low security"],
-    "correctAnswer": "High bandwidth",
-    "topic": "Data Communications"
-  },
-  {
-    "id": 8,
-    "question": "What does a 'flip-flop' in digital electronics do?",
-    "options": ["It's a clock generator", "It's a 1-bit memory cell", "It's a logic gate", "It's an amplifier"],
-    "correctAnswer": "It's a 1-bit memory cell",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 9,
-    "question": "The 'superheterodyne' principle is used in:",
-    "options": ["Audio amplifiers", "Power supplies", "Radio receivers", "Oscilloscopes"],
-    "correctAnswer": "Radio receivers",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 10,
-    "question": "Which of the following is not a type of modulation?",
-    "options": ["AM", "FM", "PM", "TM"],
-    "correctAnswer": "TM",
-    "topic": "Communication Systems"
-  }
+  { "id": 1, "question": "A full-wave rectifier is more efficient than a half-wave rectifier because: (ECE 2024)", "options": ["It uses fewer diodes", "It has a lower ripple factor", "It works on a lower voltage", "It is smaller in size"], "correctAnswer": "It has a lower ripple factor", "topic": "Electronic Devices" },
+  { "id": 2, "question": "What is the characteristic impedance of a transmission line? (ECE 2024)", "options": ["The impedance at the sending end", "The impedance at the receiving end", "The ratio of voltage to current for a traveling wave", "The resistance of the line per unit length"], "correctAnswer": "The ratio of voltage to current for a traveling wave", "topic": "Circuit Theory" },
+  { "id": 3, "question": "An Uninterruptible Power Supply (UPS) is used to: (ECE 2024)", "options": ["Regulate voltage", "Provide backup power during an outage", "Convert AC to DC", "Increase power capacity"], "correctAnswer": "Provide backup power during an outage", "topic": "Industrial Electronics" },
+  { "id": 4, "question": "Which multiple access technique is used in GSM mobile communication? (ECE 2024)", "options": ["FDMA", "TDMA", "CDMA", "SDMA"], "correctAnswer": "TDMA", "topic": "Communication Systems" },
+  { "id": 5, "question": "The number of inputs in a half adder is: (ECE 2024)", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "topic": "Digital Electronics" },
+  { "id": 6, "question": "Which of the following is a 16-bit register in the 8051? (ECE 2024)", "options": ["A", "B", "R0", "DPTR (Data Pointer)"], "correctAnswer": "DPTR (Data Pointer)", "topic": "Microcontrollers" },
+  { "id": 7, "question": "Smart TVs primarily differ from regular TVs due to their ability to: (ECE 2024)", "options": ["Display in color", "Have a flat screen", "Connect to the internet and run apps", "Receive DTH signals"], "correctAnswer": "Connect to the internet and run apps", "topic": "Consumer Electronics" },
+  { "id": 8, "question": "What is the function of the Transport Layer in the OSI model? (ECE 2024)", "options": ["Routing packets", "Formatting data", "Providing reliable end-to-end communication", "Physical transmission"], "correctAnswer": "Providing reliable end-to-end communication", "topic": "Computer Networks" },
+  { "id": 9, "question": "Kirchhoff's Voltage Law (KVL) is based on the conservation of: (ECE 2024)", "options": ["Charge", "Energy", "Mass", "Momentum"], "correctAnswer": "Energy", "topic": "Circuit Theory" },
+  { "id": 10, "question": "What is the primary purpose of a ROM (Read-Only Memory)? (ECE 2024)", "options": ["To store user data temporarily", "To store the bootstrap loader and firmware", "To act as a fast cache", "To perform arithmetic operations"], "correctAnswer": "To store the bootstrap loader and firmware", "topic": "Digital Electronics" }
 ]

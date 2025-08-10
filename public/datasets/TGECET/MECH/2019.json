@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "The first law of thermodynamics is based on the principle of conservation of:",
-    "options": ["Mass", "Momentum", "Energy", "Charge"],
-    "correctAnswer": "Energy",
-    "topic": "Thermodynamics"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is a type of gear?",
-    "options": ["Spur", "Bevel", "Helical", "All of the above"],
-    "correctAnswer": "All of the above",
-    "topic": "Theory of Machines"
-  },
-  {
-    "id": 3,
-    "question": "The property of a fluid to resist its own flow is called:",
-    "options": ["Viscosity", "Density", "Surface tension", "Compressibility"],
-    "correctAnswer": "Viscosity",
-    "topic": "Fluid Mechanics"
-  },
-  {
-    "id": 4,
-    "question": "What is the primary purpose of a 'governor' in an engine?",
-    "options": ["To increase speed", "To decrease speed", "To maintain a constant speed", "To stop the engine"],
-    "correctAnswer": "To maintain a constant speed",
-    "topic": "Theory of Machines"
-  },
-  {
-    "id": 5,
-    "question": "Hooke's Law states that stress is directly proportional to:",
-    "options": ["Strain", "Force", "Area", "Length"],
-    "correctAnswer": "Strain",
-    "topic": "Solid Mechanics"
-  },
-  {
-    "id": 6,
-    "question": "Which of these materials is the most ductile?",
-    "options": ["Cast Iron", "Mild Steel", "Glass", "Concrete"],
-    "correctAnswer": "Mild Steel",
-    "topic": "Engineering Materials"
-  },
-  {
-    "id": 7,
-    "question": "The process of joining two metal pieces by heating them to a molten state is called:",
-    "options": ["Welding", "Brazing", "Soldering", "Riveting"],
-    "correctAnswer": "Welding",
-    "topic": "Manufacturing Technology"
-  },
-  {
-    "id": 8,
-    "question": "A Carnot cycle consists of:",
-    "options": ["Two isothermal and two adiabatic processes", "Two constant volume and two constant pressure processes", "Two isothermal and two constant volume processes", "Two adiabatic and two constant pressure processes"],
-    "correctAnswer": "Two isothermal and two adiabatic processes",
-    "topic": "Thermodynamics"
-  },
-  {
-    "id": 9,
-    "question": "What does CAD stand for in the context of engineering?",
-    "options": ["Computer-Aided Design", "Computer-Assisted Drawing", "Car-Aided Driving", "Computer-Aided Database"],
-    "correctAnswer": "Computer-Aided Design",
-    "topic": "CAD/CAM"
-  },
-  {
-    "id": 10,
-    "question": "The efficiency of a heat engine is the ratio of:",
-    "options": ["Work output to heat input", "Heat input to work output", "Work input to heat output", "Heat output to work input"],
-    "correctAnswer": "Work output to heat input",
-    "topic": "Heat Power Engineering"
-  }
+  { "id": 1, "question": "Lathe is a machine tool used for which operation? (MECH 2019)", "options": ["Drilling", "Turning", "Milling", "Grinding"], "correctAnswer": "Turning", "topic": "Manufacturing Technology" },
+  { "id": 2, "question": "The ability of a material to be drawn into a wire is called: (MECH 2019)", "options": ["Ductility", "Malleability", "Hardness", "Brittleness"], "correctAnswer": "Ductility", "topic": "Engineering Materials" },
+  { "id": 3, "question": "CAM in CAD/CAM stands for: (MECH 2019)", "options": ["Computer Aided Manufacturing", "Computer Aided Machining", "Computer Aided Modeling", "Computer Aided Management"], "correctAnswer": "Computer Aided Manufacturing", "topic": "CAD/CAM" },
+  { "id": 4, "question": "An Isothermal process is one in which: (MECH 2019)", "options": ["Temperature is constant", "Pressure is constant", "Volume is constant", "Entropy is constant"], "correctAnswer": "Temperature is constant", "topic": "Thermodynamics" },
+  { "id": 5, "question": "The COP (Coefficient of Performance) of a heat pump is always: (MECH 2019)", "options": ["Less than 1", "Equal to 1", "Greater than 1", "Zero"], "correctAnswer": "Greater than 1", "topic": "Refrigeration and Air Conditioning" },
+  { "id": 6, "question": "The instrument used to measure the pressure of a fluid is a: (MECH 2019)", "options": ["Venturimeter", "Orifice meter", "Manometer", "Pitot tube"], "correctAnswer": "Manometer", "topic": "Fluid Mechanics" },
+  { "id": 7, "question": "Hooke's Law states that stress is proportional to: (MECH 2019)", "options": ["Strain", "Force", "Displacement", "Area"], "correctAnswer": "Strain", "topic": "Solid Mechanics" },
+  { "id": 8, "question": "A key is a machine element used to: (MECH 2019)", "options": ["Join two shafts", "Prevent relative rotational motion between a shaft and a hub", "Support a rotating shaft", "Lubricate a bearing"], "correctAnswer": "Prevent relative rotational motion between a shaft and a hub", "topic": "Design of Machine Elements" },
+  { "id": 9, "question": "Which of the following is a finishing operation? (MECH 2019)", "options": ["Forging", "Casting", "Turning", "Grinding"], "correctAnswer": "Grinding", "topic": "Advanced Manufacturing Technology" },
+  { "id": 10, "question": "The efficiency of a Carnot cycle depends only on: (MECH 2019)", "options": ["The working fluid", "The engine speed", "The temperature limits", "The pressure limits"], "correctAnswer": "The temperature limits", "topic": "Heat Power Engineering" }
 ]

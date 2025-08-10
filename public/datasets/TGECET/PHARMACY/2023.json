@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which of the following is an example of a solid dosage form?",
-    "options": ["Syrup", "Tablet", "Suspension", "Elixir"],
-    "correctAnswer": "Tablet",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 2,
-    "question": "Aspirin is also known as:",
-    "options": ["Acetylsalicylic acid", "Paracetamol", "Ibuprofen", "Naproxen"],
-    "correctAnswer": "Acetylsalicylic acid",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 3,
-    "question": "Pharmacognosy is the study of:",
-    "options": ["Drugs from natural sources", "Synthetic drugs", "Drug dosage forms", "Drug action on the body"],
-    "correctAnswer": "Drugs from natural sources",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 4,
-    "question": "Pharmacology is the study of:",
-    "options": ["How drugs are made", "How drugs affect the body", "Drugs from plants", "The chemistry of drugs"],
-    "correctAnswer": "How drugs affect the body",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 5,
-    "question": "The process of reducing particle size of a powder is called:",
-    "options": ["Milling", "Drying", "Filtration", "Granulation"],
-    "correctAnswer": "Milling",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 6,
-    "question": "Which of these is an antacid?",
-    "options": ["Ranitidine", "Omeprazole", "Aluminum hydroxide", "Loperamide"],
-    "correctAnswer": "Aluminum hydroxide",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 7,
-    "question": "Digitalis, a drug used for heart conditions, is obtained from which plant?",
-    "options": ["Cinchona", "Opium poppy", "Foxglove", "Belladonna"],
-    "correctAnswer": "Foxglove",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 8,
-    "question": "The term 'bioavailability' refers to:",
-    "options": ["The dose of a drug", "The rate and extent to which a drug is absorbed", "The excretion of a drug", "The side effects of a drug"],
-    "correctAnswer": "The rate and extent to which a drug is absorbed",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary use of a 'suppository'?",
-    "options": ["Oral administration", "Rectal or vaginal administration", "Intravenous injection", "Topical application"],
-    "correctAnswer": "Rectal or vaginal administration",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 10,
-    "question": "A drug that relieves pain is called an:",
-    "options": ["Antipyretic", "Analgesic", "Antibiotic", "Antiseptic"],
-    "correctAnswer": "Analgesic",
-    "topic": "Pharmacology"
-  }
+  { "id": 1, "question": "Syrups are concentrated aqueous preparations of: (PHARMACY 2023)", "options": ["A sugar or sugar substitute", "Salt", "Alcohol", "Oil"], "correctAnswer": "A sugar or sugar substitute", "topic": "Pharmaceutics" },
+  { "id": 2, "question": "Ranitidine is a drug used to treat peptic ulcers. It is a(n): (PHARMACY 2023)", "options": ["H1 receptor antagonist", "H2 receptor antagonist", "Proton pump inhibitor", "Antacid"], "correctAnswer": "H2 receptor antagonist", "topic": "Pharmaceutical Chemistry" },
+  { "id": 3, "question": "Vinca alkaloids, used in cancer chemotherapy, are obtained from: (PHARMACY 2023)", "options": ["Rauwolfia serpentina", "Catharanthus roseus", "Digitalis purpurea", "Atropa belladonna"], "correctAnswer": "Catharanthus roseus", "topic": "Pharmacognosy" },
+  { "id": 4, "question": "The therapeutic index of a drug is the ratio of: (PHARMACY 2023)", "options": ["Toxic dose to effective dose", "Effective dose to toxic dose", "Absorption rate to excretion rate", "Half-life to dosage interval"], "correctAnswer": "Toxic dose to effective dose", "topic": "Pharmacology" },
+  { "id": 5, "question": "A 'glidant' is an excipient used in tablet formulation to: (PHARMACY 2023)", "options": ["Improve the flow of the powder", "Bind the particles together", "Help the tablet break apart", "Give color"], "correctAnswer": "Improve the flow of the powder", "topic": "Pharmaceutics" },
+  { "id": 6, "question": "Which of these is a heterocyclic compound? (PHARMACY 2023)", "options": ["Benzene", "Cyclohexane", "Pyridine", "Naphthalene"], "correctAnswer": "Pyridine", "topic": "Pharmaceutical Chemistry" },
+  { "id": 7, "question": "The biological source of Turmeric is: (PHARMACY 2023)", "options": ["The rhizome of Curcuma longa", "The leaf of Mentha piperita", "The seed of Foeniculum vulgare", "The bark of Cinnamomum zeylanicum"], "correctAnswer": "The rhizome of Curcuma longa", "topic": "Pharmacognosy" },
+  { "id": 8, "question": "An antipyretic drug is one that: (PHARMACY 2023)", "options": ["Reduces pain", "Reduces fever", "Reduces inflammation", "Reduces coughing"], "correctAnswer": "Reduces fever", "topic": "Pharmacology" },
+  { "id": 9, "question": "An elixir is a clear, sweetened, hydroalcoholic solution intended for: (PHARMACY 2023)", "options": ["External use", "Oral use", "Parenteral use", "Topical use"], "correctAnswer": "Oral use", "topic": "Pharmaceutics" },
+  { "id": 10, "question": "The process of converting an optically active compound into a racemic mixture is called: (PHARMACY 2023)", "options": ["Resolution", "Racemization", "Isomerization", "Esterification"], "correctAnswer": "Racemization", "topic": "Pharmaceutical Chemistry" }
 ]

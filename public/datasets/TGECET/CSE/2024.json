@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which data structure uses the First-In, First-Out (FIFO) principle?",
-    "options": ["Stack", "Queue", "Tree", "Graph"],
-    "correctAnswer": "Queue",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 2,
-    "question": "What is the time complexity of a binary search algorithm?",
-    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-    "correctAnswer": "O(log n)",
-    "topic": "Algorithms"
-  },
-  {
-    "id": 3,
-    "question": "In object-oriented programming, what is the concept of bundling data and methods together called?",
-    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
-    "correctAnswer": "Encapsulation",
-    "topic": "OOP"
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is not a type of SQL join?",
-    "options": ["INNER JOIN", "OUTER JOIN", "CROSS JOIN", "SIDE JOIN"],
-    "correctAnswer": "SIDE JOIN",
-    "topic": "DBMS"
-  },
-  {
-    "id": 5,
-    "question": "What is the primary purpose of an Operating System?",
-    "options": ["To provide a user interface", "To manage hardware and software resources", "To run applications", "To connect to the internet"],
-    "correctAnswer": "To manage hardware and software resources",
-    "topic": "Operating Systems"
-  },
-  {
-    "id": 6,
-    "question": "Which layer of the OSI model is responsible for routing?",
-    "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"],
-    "correctAnswer": "Network Layer",
-    "topic": "Computer Networks"
-  },
-  {
-    "id": 7,
-    "question": "What does the '2' in '2-3 tree' represent?",
-    "options": ["The number of keys", "The number of children", "The height of the tree", "The number of nodes"],
-    "correctAnswer": "The number of keys",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 8,
-    "question": "Which logic gate is known as the universal gate?",
-    "options": ["AND", "OR", "NOT", "NAND"],
-    "correctAnswer": "NAND",
-    "topic": "Digital Logic"
-  },
-  {
-    "id": 9,
-    "question": "What is the default port for HTTP?",
-    "options": ["80", "443", "21", "22"],
-    "correctAnswer": "80",
-    "topic": "Web Technologies"
-  },
-  {
-    "id": 10,
-    "question": "In C++, what is a 'constructor'?",
-    "options": ["A function that destroys an object", "A special method for creating and initializing an object", "A method to copy an object", "A private member function"],
-    "correctAnswer": "A special method for creating and initializing an object",
-    "topic": "C++"
-  }
+  { "id": 1, "question": "What is a 'Semaphore' used for in operating systems? (CSE 2024)", "options": ["Memory management", "File system management", "Process synchronization", "CPU scheduling"], "correctAnswer": "Process synchronization", "topic": "Operating Systems" },
+  { "id": 2, "question": "What does the 'JOIN' clause do in SQL? (CSE 2024)", "options": ["Combines rows from two or more tables based on a related column", "Adds a new row", "Deletes a table", "Filters results"], "correctAnswer": "Combines rows from two or more tables based on a related column", "topic": "DBMS" },
+  { "id": 3, "question": "Which data structure is typically used to implement a graph? (CSE 2024)", "options": ["Stack", "Queue", "Adjacency Matrix or Adjacency List", "Tree"], "correctAnswer": "Adjacency Matrix or Adjacency List", "topic": "Data Structures" },
+  { "id": 4, "question": "Kruskal's algorithm is used to find: (CSE 2024)", "options": ["Shortest path", "Maximum flow", "Minimum Spanning Tree", "Topological sort"], "correctAnswer": "Minimum Spanning Tree", "topic": "Algorithms" },
+  { "id": 5, "question": "An 'interface' in Java contains: (CSE 2024)", "options": ["Concrete methods only", "Abstract methods and constants", "Instance variables", "Constructors"], "correctAnswer": "Abstract methods and constants", "topic": "Java Programming" },
+  { "id": 6, "question": "What is pipelining in a CPU? (CSE 2024)", "options": ["A technique to improve instruction throughput by overlapping execution", "A type of memory", "A cooling system", "A bus architecture"], "correctAnswer": "A technique to improve instruction throughput by overlapping execution", "topic": "Computer Architecture" },
+  { "id": 7, "question": "The binary equivalent of the decimal number 10 is: (CSE 2024)", "options": ["1010", "1100", "0011", "1001"], "correctAnswer": "1010", "topic": "Digital Electronics" },
+  { "id": 8, "question": "What is DHCP used for? (CSE 2024)", "options": ["Resolving domain names to IP addresses", "Automatically assigning IP addresses to devices", "Secure file transfer", "Sending emails"], "correctAnswer": "Automatically assigning IP addresses to devices", "topic": "Computer Networks" },
+  { "id": 9, "question": "The process of hiding the internal details and showing only the functionality is known as: (CSE 2024)", "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"], "correctAnswer": "Abstraction", "topic": "Object Oriented Programming" },
+  { "id": 10, "question": "In Python, what is a list comprehension? (CSE 2024)", "options": ["A way to understand lists", "A concise way to create lists", "A built-in list function", "A type of list sorting"], "correctAnswer": "A concise way to create lists", "topic": "Python Programming" }
 ]

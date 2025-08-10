@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which of the following is an example of a solid dosage form?",
-    "options": ["Syrup", "Tablet", "Suspension", "Elixir"],
-    "correctAnswer": "Tablet",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 2,
-    "question": "Aspirin is also known as:",
-    "options": ["Acetylsalicylic acid", "Paracetamol", "Ibuprofen", "Naproxen"],
-    "correctAnswer": "Acetylsalicylic acid",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 3,
-    "question": "Pharmacognosy is the study of:",
-    "options": ["Drugs from natural sources", "Synthetic drugs", "Drug dosage forms", "Drug action on the body"],
-    "correctAnswer": "Drugs from natural sources",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 4,
-    "question": "Pharmacology is the study of:",
-    "options": ["How drugs are made", "How drugs affect the body", "Drugs from plants", "The chemistry of drugs"],
-    "correctAnswer": "How drugs affect the body",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 5,
-    "question": "The process of reducing particle size of a powder is called:",
-    "options": ["Milling", "Drying", "Filtration", "Granulation"],
-    "correctAnswer": "Milling",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 6,
-    "question": "Which of these is an antacid?",
-    "options": ["Ranitidine", "Omeprazole", "Aluminum hydroxide", "Loperamide"],
-    "correctAnswer": "Aluminum hydroxide",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 7,
-    "question": "Digitalis, a drug used for heart conditions, is obtained from which plant?",
-    "options": ["Cinchona", "Opium poppy", "Foxglove", "Belladonna"],
-    "correctAnswer": "Foxglove",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 8,
-    "question": "The term 'bioavailability' refers to:",
-    "options": ["The dose of a drug", "The rate and extent to which a drug is absorbed", "The excretion of a drug", "The side effects of a drug"],
-    "correctAnswer": "The rate and extent to which a drug is absorbed",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary use of a 'suppository'?",
-    "options": ["Oral administration", "Rectal or vaginal administration", "Intravenous injection", "Topical application"],
-    "correctAnswer": "Rectal or vaginal administration",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 10,
-    "question": "A drug that relieves pain is called an:",
-    "options": ["Antipyretic", "Analgesic", "Antibiotic", "Antiseptic"],
-    "correctAnswer": "Analgesic",
-    "topic": "Pharmacology"
-  }
+  { "id": 1, "question": "An emulsion is a mixture of: (PHARMACY 2019)", "options": ["Two miscible liquids", "Two immiscible liquids", "A solid in a liquid", "A gas in a liquid"], "correctAnswer": "Two immiscible liquids", "topic": "Pharmaceutics" },
+  { "id": 2, "question": "Paracetamol is also known as: (PHARMACY 2019)", "options": ["Ibuprofen", "Aspirin", "Acetaminophen", "Nimesulide"], "correctAnswer": "Acetaminophen", "topic": "Pharmaceutical Chemistry" },
+  { "id": 3, "question": "The main chemical constituent of Cinchona bark is: (PHARMACY 2019)", "options": ["Morphine", "Quinine", "Strychnine", "Atropine"], "correctAnswer": "Quinine", "topic": "Pharmacognosy" },
+  { "id": 4, "question": "Pharmacodynamics refers to the study of: (PHARMACY 2019)", "options": ["Drug absorption", "Drug distribution", "The mechanism of drug action", "Drug excretion"], "correctAnswer": "The mechanism of drug action", "topic": "Pharmacology" },
+  { "id": 5, "question": "Capsules are made of: (PHARMACY 2019)", "options": ["Gelatin", "Starch", "Cellulose", "Wax"], "correctAnswer": "Gelatin", "topic": "Pharmaceutics" },
+  { "id": 6, "question": "A functional group present in alcohols is: (PHARMACY 2019)", "options": ["-COOH", "-CHO", "-OH", "-CO-"], "correctAnswer": "-OH", "topic": "Pharmaceutical Chemistry" },
+  { "id": 7, "question": "Volatile oils are also known as: (PHARMACY 2019)", "options": ["Essential oils", "Fixed oils", "Fats", "Waxes"], "correctAnswer": "Essential oils", "topic": "Pharmacognosy" },
+  { "id": 8, "question": "An antibiotic is a substance that: (PHARMACY 2019)", "options": ["Relieves pain", "Reduces fever", "Inhibits or kills microorganisms", "Lowers blood pressure"], "correctAnswer": "Inhibits or kills microorganisms", "topic": "Pharmacology" },
+  { "id": 9, "question": "The term 'parenteral' refers to a route of administration that: (PHARMACY 2019)", "options": ["Is via the gastrointestinal tract", "Bypasses the gastrointestinal tract (e.g., injection)", "Is applied to the skin", "Is inhaled"], "correctAnswer": "Bypasses the gastrointestinal tract (e.g., injection)", "topic": "Pharmaceutics" },
+  { "id": 10, "question": "Titration is a technique used in: (PHARMACY 2019)", "options": ["Qualitative analysis", "Quantitative analysis", "Separation", "Purification"], "correctAnswer": "Quantitative analysis", "topic": "Pharmaceutical Chemistry" }
 ]

@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which process is used to improve the hardness of steel?",
-    "options": ["Annealing", "Normalizing", "Quenching", "Tempering"],
-    "correctAnswer": "Quenching",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 2,
-    "question": "The addition of carbon to iron makes it:",
-    "options": ["Softer", "Harder and stronger", "More ductile", "More malleable"],
-    "correctAnswer": "Harder and stronger",
-    "topic": "Iron-Carbon Diagram"
-  },
-  {
-    "id": 3,
-    "question": "Which of the following is a method for testing the hardness of a material?",
-    "options": ["Tensile test", "Impact test", "Rockwell test", "Fatigue test"],
-    "correctAnswer": "Rockwell test",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 4,
-    "question": "What is the primary ore of aluminum?",
-    "options": ["Hematite", "Bauxite", "Galena", "Sphalerite"],
-    "correctAnswer": "Bauxite",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 5,
-    "question": "The process of extracting metal from its ore by heating is called:",
-    "options": ["Smelting", "Leaching", "Electrolysis", "Roasting"],
-    "correctAnswer": "Smelting",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 6,
-    "question": "A 'unit cell' in crystallography is:",
-    "options": ["The smallest repeating unit of a crystal lattice", "A single crystal", "A type of defect", "A grain boundary"],
-    "correctAnswer": "The smallest repeating unit of a crystal lattice",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 7,
-    "question": "Which crystal structure is known for its high ductility?",
-    "options": ["BCC (Body-Centered Cubic)", "FCC (Face-Centered Cubic)", "HCP (Hexagonal Close-Packed)", "Simple Cubic"],
-    "correctAnswer": "FCC (Face-Centered Cubic)",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 8,
-    "question": "The 'fatigue limit' of a material is its ability to withstand:",
-    "options": ["Sudden impact", "High temperature", "Repeated cyclic loading", "Corrosive environments"],
-    "correctAnswer": "Repeated cyclic loading",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 9,
-    "question": "Stainless steel is an alloy of iron and at least 10.5% of:",
-    "options": ["Chromium", "Nickel", "Manganese", "Carbon"],
-    "correctAnswer": "Chromium",
-    "topic": "Engineering Materials"
-  },
-  {
-    "id": 10,
-    "question": "The process used to remove impurities from molten metal is known as:",
-    "options": ["Refining", "Casting", "Forging", "Rolling"],
-    "correctAnswer": "Refining",
-    "topic": "Extractive Metallurgy"
-  }
+  { "id": 1, "question": "Which process is used to produce high-purity metals like silicon for the semiconductor industry? (MET 2025)", "options": ["Smelting", "Zone refining", "Leaching", "Roasting"], "correctAnswer": "Zone refining", "topic": "Extractive Metallurgy" },
+  { "id": 2, "question": "The number of nearest neighbors for an atom in a crystal structure is called the: (MET 2025)", "options": ["Atomic packing factor", "Coordination number", "Unit cell number", "Lattice parameter"], "correctAnswer": "Coordination number", "topic": "Physical Metallurgy" },
+  { "id": 3, "question": "The stress level below which a material has an 'infinite' life when subjected to cyclic loading is the: (MET 2025)", "options": ["Yield strength", "Ultimate strength", "Endurance limit", "Proportional limit"], "correctAnswer": "Endurance limit", "topic": "Material Testing" },
+  { "id": 4, "question": "Anodizing is a corrosion protection process commonly used for: (MET 2025)", "options": ["Steel", "Copper", "Aluminum", "Zinc"], "correctAnswer": "Aluminum", "topic": "Corrosion" },
+  { "id": 5, "question": "The purpose of tempering is to: (MET 2025)", "options": ["Increase hardness", "Reduce brittleness and relieve stresses after hardening", "Soften the steel", "Refine the grain structure"], "correctAnswer": "Reduce brittleness and relieve stresses after hardening", "topic": "Heat Treatment" },
+  { "id": 6, "question": "Pig iron is the product of which furnace? (MET 2025)", "options": ["Blast furnace", "Electric arc furnace", "Reverberatory furnace", "Cupola furnace"], "correctAnswer": "Blast furnace", "topic": "Extractive Metallurgy" },
+  { "id": 7, "question": "The failure of a material under repeated cyclic stress is known as: (MET 2025)", "options": ["Creep", "Fatigue", "Brittle fracture", "Ductile fracture"], "correctAnswer": "Fatigue", "topic": "Mechanical Metallurgy" },
+  { "id": 8, "question": "An interstitial solid solution is formed when the solute atoms are: (MET 2025)", "options": ["Larger than the solvent atoms", "Much smaller than the solvent atoms", "Of the same size as solvent atoms", "Ions"], "correctAnswer": "Much smaller than the solvent atoms", "topic": "Physical Metallurgy" },
+  { "id": 9, "question": "Which NDT method is best for detecting internal cracks in a steel casting? (MET 2025)", "options": ["Dye penetrant", "Magnetic particle", "Visual inspection", "Ultrasonic testing"], "correctAnswer": "Ultrasonic testing", "topic": "Material Testing" },
+  { "id": 10, "question": "Which is the softest phase on the Iron-Carbon diagram? (MET 2025)", "options": ["Ferrite", "Austenite", "Cementite", "Martensite"], "correctAnswer": "Ferrite", "topic": "Physical Metallurgy" }
 ]

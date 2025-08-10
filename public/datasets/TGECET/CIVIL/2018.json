@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the main binding material in cement concrete?",
-    "options": ["Sand", "Cement", "Aggregate", "Water"],
-    "correctAnswer": "Cement",
-    "topic": "Building Materials"
-  },
-  {
-    "id": 2,
-    "question": "Which type of bond is strongest in brick masonry?",
-    "options": ["Stretcher bond", "Header bond", "English bond", "Flemish bond"],
-    "correctAnswer": "English bond",
-    "topic": "Construction Practices"
-  },
-  {
-    "id": 3,
-    "question": "The formula for calculating the area of a trapezoid is:",
-    "options": ["(a+b)/2 * h", "l*w", "pi*r^2", "0.5*b*h"],
-    "correctAnswer": "(a+b)/2 * h",
-    "topic": "Surveying"
-  },
-  {
-    "id": 4,
-    "question": "What does the 'slump test' for concrete measure?",
-    "options": ["Strength", "Workability", "Durability", "Setting time"],
-    "correctAnswer": "Workability",
-    "topic": "Concrete Technology"
-  },
-  {
-    "id": 5,
-    "question": "The 'moment of inertia' is a measure of an object's resistance to:",
-    "options": ["Linear motion", "Bending", "Torsion", "Axial load"],
-    "correctAnswer": "Bending",
-    "topic": "Strength of Materials"
-  },
-  {
-    "id": 6,
-    "question": "In soil mechanics, the 'void ratio' is the ratio of the volume of voids to the volume of:",
-    "options": ["Total volume", "Water", "Air", "Solids"],
-    "correctAnswer": "Solids",
-    "topic": "Geotechnical Engineering"
-  },
-  {
-    "id": 7,
-    "question": "Which of these is a type of deep foundation?",
-    "options": ["Strip footing", "Raft foundation", "Pile foundation", "Isolated footing"],
-    "correctAnswer": "Pile foundation",
-    "topic": "Foundation Engineering"
-  },
-  {
-    "id": 8,
-    "question": "Bernoulli's equation in fluid dynamics relates pressure, velocity, and:",
-    "options": ["Density", "Viscosity", "Elevation", "Temperature"],
-    "correctAnswer": "Elevation",
-    "topic": "Hydraulics"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary purpose of a 'weir' in irrigation engineering?",
-    "options": ["To store water", "To measure flow rate", "To raise the water level", "To generate power"],
-    "correctAnswer": "To raise the water level",
-    "topic": "Irrigation Engineering"
-  },
-  {
-    "id": 10,
-    "question": "The super-elevation on roads is provided to counteract:",
-    "options": ["Gravitational force", "Frictional force", "Centrifugal force", "Wind force"],
-    "correctAnswer": "Centrifugal force",
-    "topic": "Transportation Engineering"
-  }
+  { "id": 1, "question": "What is the main purpose of a lintel in construction? (CIVIL 2018)", "options": ["Decorative element", "To support the load above an opening", "To provide insulation", "To anchor the roof"], "correctAnswer": "To support the load above an opening", "topic": "Building Materials" },
+  { "id": 2, "question": "Which type of cement is suitable for mass concrete work? (CIVIL 2018)", "options": ["Ordinary Portland Cement", "Rapid Hardening Cement", "Low Heat Cement", "White Cement"], "correctAnswer": "Low Heat Cement", "topic": "Concrete Technology" },
+  { "id": 3, "question": "A benchmark in surveying is a: (CIVIL 2018)", "options": ["Point of unknown elevation", "Point of known elevation", "A temporary station point", "A type of survey instrument"], "correctAnswer": "Point of known elevation", "topic": "Surveying" },
+  { "id": 4, "question": "The property of a soil that allows water to pass through it is called: (CIVIL 2018)", "options": ["Permeability", "Porosity", "Capillarity", "Compressibility"], "correctAnswer": "Permeability", "topic": "Geotechnical Engineering" },
+  { "id": 5, "question": "What does a Shear Force Diagram (SFD) represent? (CIVIL 2018)", "options": ["The bending moment along a beam", "The deflection of a beam", "The internal shear force along a beam", "The axial stress in a beam"], "correctAnswer": "The internal shear force along a beam", "topic": "Strength of Materials" },
+  { "id": 6, "question": "The most common type of bond in brick masonry in India is: (CIVIL 2018)", "options": ["Stretcher bond", "Header bond", "English bond", "Flemish bond"], "correctAnswer": "English bond", "topic": "Building Construction" },
+  { "id": 7, "question": "In fluid mechanics, Bernoulli's principle relates: (CIVIL 2018)", "options": ["Pressure, velocity, and elevation", "Mass, volume, and density", "Force, pressure, and area", "Viscosity and temperature"], "correctAnswer": "Pressure, velocity, and elevation", "topic": "Hydraulics" },
+  { "id": 8, "question": "What is the primary purpose of reinforcement in concrete? (CIVIL 2018)", "options": ["To increase compressive strength", "To increase tensile strength", "To improve workability", "To reduce cost"], "correctAnswer": "To increase tensile strength", "topic": "Reinforced Concrete Structures" },
+  { "id": 9, "question": "Camber in roads is provided for: (CIVIL 2018)", "options": ["Super-elevation", "Effective drainage", "Improving sight distance", "Aesthetic purposes"], "correctAnswer": "Effective drainage", "topic": "Transportation Engineering" },
+  { "id": 10, "question": "The process of levelling in surveying is used to determine: (CIVIL 2018)", "options": ["Horizontal distances", "Horizontal angles", "Relative heights or elevations", "Bearing of lines"], "correctAnswer": "Relative heights or elevations", "topic": "Surveying" }
 ]

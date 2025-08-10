@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the main binding material in cement concrete?",
-    "options": ["Sand", "Cement", "Aggregate", "Water"],
-    "correctAnswer": "Cement",
-    "topic": "Building Materials"
-  },
-  {
-    "id": 2,
-    "question": "Which type of bond is strongest in brick masonry?",
-    "options": ["Stretcher bond", "Header bond", "English bond", "Flemish bond"],
-    "correctAnswer": "English bond",
-    "topic": "Construction Practices"
-  },
-  {
-    "id": 3,
-    "question": "The formula for calculating the area of a trapezoid is:",
-    "options": ["(a+b)/2 * h", "l*w", "pi*r^2", "0.5*b*h"],
-    "correctAnswer": "(a+b)/2 * h",
-    "topic": "Surveying"
-  },
-  {
-    "id": 4,
-    "question": "What does the 'slump test' for concrete measure?",
-    "options": ["Strength", "Workability", "Durability", "Setting time"],
-    "correctAnswer": "Workability",
-    "topic": "Concrete Technology"
-  },
-  {
-    "id": 5,
-    "question": "The 'moment of inertia' is a measure of an object's resistance to:",
-    "options": ["Linear motion", "Bending", "Torsion", "Axial load"],
-    "correctAnswer": "Bending",
-    "topic": "Strength of Materials"
-  },
-  {
-    "id": 6,
-    "question": "In soil mechanics, the 'void ratio' is the ratio of the volume of voids to the volume of:",
-    "options": ["Total volume", "Water", "Air", "Solids"],
-    "correctAnswer": "Solids",
-    "topic": "Geotechnical Engineering"
-  },
-  {
-    "id": 7,
-    "question": "Which of these is a type of deep foundation?",
-    "options": ["Strip footing", "Raft foundation", "Pile foundation", "Isolated footing"],
-    "correctAnswer": "Pile foundation",
-    "topic": "Foundation Engineering"
-  },
-  {
-    "id": 8,
-    "question": "Bernoulli's equation in fluid dynamics relates pressure, velocity, and:",
-    "options": ["Density", "Viscosity", "Elevation", "Temperature"],
-    "correctAnswer": "Elevation",
-    "topic": "Hydraulics"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary purpose of a 'weir' in irrigation engineering?",
-    "options": ["To store water", "To measure flow rate", "To raise the water level", "To generate power"],
-    "correctAnswer": "To raise the water level",
-    "topic": "Irrigation Engineering"
-  },
-  {
-    "id": 10,
-    "question": "The super-elevation on roads is provided to counteract:",
-    "options": ["Gravitational force", "Frictional force", "Centrifugal force", "Wind force"],
-    "correctAnswer": "Centrifugal force",
-    "topic": "Transportation Engineering"
-  }
+  { "id": 1, "question": "What is the function of Alumina in brick earth? (CIVIL 2022)", "options": ["To impart plasticity", "To provide color", "To increase strength", "To prevent shrinkage"], "correctAnswer": "To impart plasticity", "topic": "Building Materials" },
+  { "id": 2, "question": "Segregation in concrete means: (CIVIL 2022)", "options": ["Separation of coarse aggregate from the mix", "Expulsion of water from the mix", "Formation of cracks", "Increase in volume"], "correctAnswer": "Separation of coarse aggregate from the mix", "topic": "Concrete Technology" },
+  { "id": 3, "question": "The 'Whole to Part' is a fundamental principle of: (CIVIL 2022)", "options": ["Surveying", "Estimating", "Structural Design", "Fluid Mechanics"], "correctAnswer": "Surveying", "topic": "Surveying" },
+  { "id": 4, "question": "The Atterberg limits are used to classify: (CIVIL 2022)", "options": ["Coarse-grained soils", "Fine-grained soils", "Organic soils", "Sands"], "correctAnswer": "Fine-grained soils", "topic": "Geotechnical Engineering" },
+  { "id": 5, "question": "The unit of Moment of Inertia is: (CIVIL 2022)", "options": ["m^2", "m^3", "m^4", "kg-m"], "correctAnswer": "m^4", "topic": "Strength of Materials" },
+  { "id": 6, "question": "The vertical members fixed between the top and bottom of a door frame are called: (CIVIL 2022)", "options": ["Sills", "Lintels", "Jambs", "Posts"], "correctAnswer": "Posts", "topic": "Building Construction" },
+  { "id": 7, "question": "A canal that is aligned roughly parallel to the contours of the country is called a: (CIVIL 2022)", "options": ["Ridge canal", "Contour canal", "Side-slope canal", "Feeder canal"], "correctAnswer": "Contour canal", "topic": "Irrigation Engineering" },
+  { "id": 8, "question": "Stirrups in a beam are provided to resist: (CIVIL 2022)", "options": ["Bending moment", "Shear force", "Torsion", "Axial compression"], "correctAnswer": "Shear force", "topic": "Reinforced Concrete Structures" },
+  { "id": 9, "question": "The 'ruling gradient' on a highway is the: (CIVIL 2022)", "options": ["Maximum gradient allowed", "Minimum gradient allowed", "Gradient at which vehicle stops", "Design gradient"], "correctAnswer": "Design gradient", "topic": "Transportation Engineering" },
+  { "id": 10, "question": "The Standard Penetration Test (SPT) is used to measure the: (CIVIL 2022)", "options": ["Permeability of soil", "Shear strength of soil", "Relative density of sands", "Compressibility of clay"], "correctAnswer": "Relative density of sands", "topic": "Geotechnical Engineering" }
 ]

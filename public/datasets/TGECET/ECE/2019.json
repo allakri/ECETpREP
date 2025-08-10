@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the primary function of a Zener diode?",
-    "options": ["Amplification", "Rectification", "Voltage regulation", "Oscillation"],
-    "correctAnswer": "Voltage regulation",
-    "topic": "Electronic Devices"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is an active electronic component?",
-    "options": ["Resistor", "Capacitor", "Inductor", "Transistor"],
-    "correctAnswer": "Transistor",
-    "topic": "Electronic Circuits"
-  },
-  {
-    "id": 3,
-    "question": "In a communication system, what does 'modulation' mean?",
-    "options": ["Superimposing a low-frequency signal on a high-frequency carrier", "Removing noise from a signal", "Converting analog to digital", "Increasing signal power"],
-    "correctAnswer": "Superimposing a low-frequency signal on a high-frequency carrier",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 4,
-    "question": "The Boolean expression A + A'B is equivalent to:",
-    "options": ["A + B", "B", "A", "A' + B"],
-    "correctAnswer": "A + B",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 5,
-    "question": "What is the purpose of an SCR (Silicon Controlled Rectifier)?",
-    "options": ["To amplify weak signals", "To switch high power loads", "To generate high frequencies", "To store charge"],
-    "correctAnswer": "To switch high power loads",
-    "topic": "Industrial Electronics"
-  },
-  {
-    "id": 6,
-    "question": "A microprocessor with a 16-bit address bus can access how much memory?",
-    "options": ["16 KB", "32 KB", "64 KB", "128 KB"],
-    "correctAnswer": "64 KB",
-    "topic": "Microprocessors"
-  },
-  {
-    "id": 7,
-    "question": "What is the main advantage of using optical fiber for communication?",
-    "options": ["Low cost", "High bandwidth", "Easy installation", "Low security"],
-    "correctAnswer": "High bandwidth",
-    "topic": "Data Communications"
-  },
-  {
-    "id": 8,
-    "question": "What does a 'flip-flop' in digital electronics do?",
-    "options": ["It's a clock generator", "It's a 1-bit memory cell", "It's a logic gate", "It's an amplifier"],
-    "correctAnswer": "It's a 1-bit memory cell",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 9,
-    "question": "The 'superheterodyne' principle is used in:",
-    "options": ["Audio amplifiers", "Power supplies", "Radio receivers", "Oscilloscopes"],
-    "correctAnswer": "Radio receivers",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 10,
-    "question": "Which of the following is not a type of modulation?",
-    "options": ["AM", "FM", "PM", "TM"],
-    "correctAnswer": "TM",
-    "topic": "Communication Systems"
-  }
+  { "id": 1, "question": "A transistor in the cutoff region acts like a(n): (ECE 2019)", "options": ["Open switch", "Closed switch", "Amplifier", "Resistor"], "correctAnswer": "Open switch", "topic": "Electronic Devices" },
+  { "id": 2, "question": "What happens to the impedance of a series RLC circuit at resonance? (ECE 2019)", "options": ["It is maximum", "It is minimum", "It is equal to R", "It becomes zero"], "correctAnswer": "It is minimum", "topic": "Circuit Theory" },
+  { "id": 3, "question": "A TRIAC is equivalent to: (ECE 2019)", "options": ["Two SCRs in parallel", "Two SCRs in anti-parallel", "Two diodes in parallel", "A transistor and a diode"], "correctAnswer": "Two SCRs in anti-parallel", "topic": "Industrial Electronics" },
+  { "id": 4, "question": "The process of converting an analog signal to a digital signal is called: (ECE 2019)", "options": ["Modulation", "Demodulation", "Quantization", "Sampling and Quantization"], "correctAnswer": "Sampling and Quantization", "topic": "Communication Systems" },
+  { "id": 5, "question": "What is the main advantage of CMOS logic over TTL? (ECE 2019)", "options": ["Higher speed", "Lower power consumption", "Higher noise immunity", "Simpler fabrication"], "correctAnswer": "Lower power consumption", "topic": "Digital Electronics" },
+  { "id": 6, "question": "The 8051 microcontroller has how many I/O ports? (ECE 2019)", "options": ["1", "2", "3", "4"], "correctAnswer": "4", "topic": "Microcontrollers" },
+  { "id": 7, "question": "In color TV, what are the primary colors of light? (ECE 2019)", "options": ["Red, Yellow, Blue", "Red, Green, Blue", "Cyan, Magenta, Yellow", "Red, Green, Yellow"], "correctAnswer": "Red, Green, Blue", "topic": "Consumer Electronics" },
+  { "id": 8, "question": "The OSI model consists of how many layers? (ECE 2019)", "options": ["5", "6", "7", "8"], "correctAnswer": "7", "topic": "Computer Networks" },
+  { "id": 9, "question": "Kirchhoff's Current Law (KCL) is based on the conservation of: (ECE 2019)", "options": ["Energy", "Charge", "Momentum", "Mass"], "correctAnswer": "Charge", "topic": "Circuit Theory" },
+  { "id": 10, "question": "A flip-flop is a bistable multivibrator, which means it has: (ECE 2019)", "options": ["One stable state", "Two stable states", "No stable states", "Three stable states"], "correctAnswer": "Two stable states", "topic": "Digital Electronics" }
 ]

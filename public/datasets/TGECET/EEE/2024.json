@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Ohm's law states that:",
-    "options": ["V = IR", "V = I/R", "I = V/R", "R = VI"],
-    "correctAnswer": "V = IR",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is used to measure current?",
-    "options": ["Voltmeter", "Ammeter", "Ohmmeter", "Wattmeter"],
-    "correctAnswer": "Ammeter",
-    "topic": "Measuring Instruments"
-  },
-  {
-    "id": 3,
-    "question": "A transformer is used to:",
-    "options": ["Change AC to DC", "Change DC to AC", "Step up or step down AC voltage", "Step up or step down DC voltage"],
-    "correctAnswer": "Step up or step down AC voltage",
-    "topic": "AC Machines"
-  },
-  {
-    "id": 4,
-    "question": "The unit of electrical power is:",
-    "options": ["Volt", "Ampere", "Ohm", "Watt"],
-    "correctAnswer": "Watt",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 5,
-    "question": "In a three-phase system, the phase difference between each phase is:",
-    "options": ["90 degrees", "120 degrees", "180 degrees", "360 degrees"],
-    "correctAnswer": "120 degrees",
-    "topic": "Power Systems"
-  },
-  {
-    "id": 6,
-    "question": "The function of a fuse is to:",
-    "options": ["Increase current", "Decrease current", "Protect the circuit from overcurrent", "Regulate voltage"],
-    "correctAnswer": "Protect the circuit from overcurrent",
-    "topic": "Protection of Power Systems"
-  },
-  {
-    "id": 7,
-    "question": "What is the function of a diode?",
-    "options": ["To allow current to flow in one direction only", "To amplify signals", "To store charge", "To resist current flow"],
-    "correctAnswer": "To allow current to flow in one direction only",
-    "topic": "Basic Electronics"
-  },
-  {
-    "id": 8,
-    "question": "Which motor is commonly used in household refrigerators?",
-    "options": ["DC series motor", "Induction motor", "Synchronous motor", "Stepper motor"],
-    "correctAnswer": "Induction motor",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 9,
-    "question": "The 'slip' of an induction motor is defined as:",
-    "options": ["(Ns-Nr)/Ns", "(Nr-Ns)/Ns", "Ns/Nr", "Nr/Ns"],
-    "correctAnswer": "(Ns-Nr)/Ns",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 10,
-    "question": "What does PLC stand for?",
-    "options": ["Programmable Logic Controller", "Power Line Carrier", "Program Load Control", "Power Level Controller"],
-    "correctAnswer": "Programmable Logic Controller",
-    "topic": "PLC"
-  }
+  { "id": 1, "question": "The unit of capacitance is: (EEE 2024)", "options": ["Henry", "Farad", "Ohm", "Weber"], "correctAnswer": "Farad", "topic": "Basic Electrical Engineering" },
+  { "id": 2, "question": "A megger is used to measure: (EEE 2024)", "options": ["Low resistance", "Medium resistance", "High insulation resistance", "Current"], "correctAnswer": "High insulation resistance", "topic": "Measuring Instruments" },
+  { "id": 3, "question": "Fleming's left-hand rule is applicable to: (EEE 2024)", "options": ["DC generators", "DC motors", "Transformers", "Alternators"], "correctAnswer": "DC motors", "topic": "DC Machines" },
+  { "id": 4, "question": "The reciprocal of impedance is called: (EEE 2024)", "options": ["Conductance", "Susceptance", "Admittance", "Reactance"], "correctAnswer": "Admittance", "topic": "AC Circuits" },
+  { "id": 5, "question": "An autotransformer has how many windings? (EEE 2024)", "options": ["One", "Two", "Three", "Four"], "correctAnswer": "One", "topic": "AC Machines" },
+  { "id": 6, "question": "A synchronous motor can operate at: (EEE 2024)", "options": ["Lagging power factor only", "Leading power factor only", "Unity power factor only", "Lagging, leading, and unity power factor"], "correctAnswer": "Lagging, leading, and unity power factor", "topic": "AC Motors" },
+  { "id": 7, "question": "The voltage of high-tension (HT) transmission lines in India is typically above: (EEE 2024)", "options": ["1 kV", "11 kV", "33 kV", "220 V"], "correctAnswer": "33 kV", "topic": "Power Systems" },
+  { "id": 8, "question": "Which of the following is a renewable energy source? (EEE 2024)", "options": ["Coal", "Natural Gas", "Solar", "Nuclear"], "correctAnswer": "Solar", "topic": "Power Systems" },
+  { "id": 9, "question": "A chopper is a DC to DC converter, also known as a: (EEE 2024)", "options": ["Inverter", "Rectifier", "DC transformer", "Cycloconverter"], "correctAnswer": "DC transformer", "topic": "Power Electronics" },
+  { "id": 10, "question": "In C language, which symbol is used to terminate a statement? (EEE 2024)", "options": [":", ";", ".", ","], "correctAnswer": ";", "topic": "C Language" }
 ]

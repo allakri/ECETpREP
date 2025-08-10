@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which of the following is an example of a solid dosage form?",
-    "options": ["Syrup", "Tablet", "Suspension", "Elixir"],
-    "correctAnswer": "Tablet",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 2,
-    "question": "Aspirin is also known as:",
-    "options": ["Acetylsalicylic acid", "Paracetamol", "Ibuprofen", "Naproxen"],
-    "correctAnswer": "Acetylsalicylic acid",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 3,
-    "question": "Pharmacognosy is the study of:",
-    "options": ["Drugs from natural sources", "Synthetic drugs", "Drug dosage forms", "Drug action on the body"],
-    "correctAnswer": "Drugs from natural sources",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 4,
-    "question": "Pharmacology is the study of:",
-    "options": ["How drugs are made", "How drugs affect the body", "Drugs from plants", "The chemistry of drugs"],
-    "correctAnswer": "How drugs affect the body",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 5,
-    "question": "The process of reducing particle size of a powder is called:",
-    "options": ["Milling", "Drying", "Filtration", "Granulation"],
-    "correctAnswer": "Milling",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 6,
-    "question": "Which of these is an antacid?",
-    "options": ["Ranitidine", "Omeprazole", "Aluminum hydroxide", "Loperamide"],
-    "correctAnswer": "Aluminum hydroxide",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 7,
-    "question": "Digitalis, a drug used for heart conditions, is obtained from which plant?",
-    "options": ["Cinchona", "Opium poppy", "Foxglove", "Belladonna"],
-    "correctAnswer": "Foxglove",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 8,
-    "question": "The term 'bioavailability' refers to:",
-    "options": ["The dose of a drug", "The rate and extent to which a drug is absorbed", "The excretion of a drug", "The side effects of a drug"],
-    "correctAnswer": "The rate and extent to which a drug is absorbed",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary use of a 'suppository'?",
-    "options": ["Oral administration", "Rectal or vaginal administration", "Intravenous injection", "Topical application"],
-    "correctAnswer": "Rectal or vaginal administration",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 10,
-    "question": "A drug that relieves pain is called an:",
-    "options": ["Antipyretic", "Analgesic", "Antibiotic", "Antiseptic"],
-    "correctAnswer": "Analgesic",
-    "topic": "Pharmacology"
-  }
+  { "id": 1, "question": "What does the term 'bioequivalence' mean? (PHARMACY 2025)", "options": ["Two drugs have the same chemical structure", "Two drug products have a similar bioavailability and produce the same effect", "Two drugs are made by the same company", "Two drugs have the same price"], "correctAnswer": "Two drug products have a similar bioavailability and produce the same effect", "topic": "Pharmaceutics" },
+  { "id": 2, "question": "Omeprazole is a drug that treats acid reflux by: (PHARMACY 2025)", "options": ["Neutralizing acid", "Blocking H2 receptors", "Inhibiting the proton pump", "Coating the stomach lining"], "correctAnswer": "Inhibiting the proton pump", "topic": "Pharmaceutical Chemistry" },
+  { "id": 3, "question": "Ginseng is a well-known medicinal plant primarily used as a(n): (PHARMACY 2025)", "options": ["Adaptogen and general tonic", "Laxative", "Pain reliever", "Antibiotic"], "correctAnswer": "Adaptogen and general tonic", "topic": "Pharmacognosy" },
+  { "id": 4, "question": "A drug's 'half-life' (t1/2) is the time it takes for: (PHARMACY 2025)", "options": ["The drug to start working", "The drug's concentration in the plasma to reduce by half", "The drug to be completely eliminated", "The peak effect to be reached"], "correctAnswer": "The drug's concentration in the plasma to reduce by half", "topic": "Pharmacology" },
+  { "id": 5, "question": "Aerosols are pharmaceutical dosage forms that are packaged under: (PHARMACY 2025)", "options": ["Vacuum", "Pressure", "High temperature", "Low humidity"], "correctAnswer": "Pressure", "topic": "Pharmaceutics" },
+  { "id": 6, "question": "Fats and oils are triesters of glycerol and: (PHARMACY 2025)", "options": ["Amino acids", "Fatty acids", "Carbohydrates", "Alcohols"], "correctAnswer": "Fatty acids", "topic": "Pharmaceutical Chemistry" },
+  { "id": 7, "question": "The part of a medicinal plant that contains the active constituents is known as the: (PHARMACY 2025)", "options": ["Crude drug", "Extract", "Tincture", "Resin"], "correctAnswer": "Crude drug", "topic": "Pharmacognosy" },
+  { "id": 8, "question": "An antiemetic drug is used to prevent or relieve: (PHARMACY 2025)", "options": ["Vomiting and nausea", "Allergies", "High cholesterol", "Anxiety"], "correctAnswer": "Vomiting and nausea", "topic": "Pharmacology" },
+  { "id": 9, "question": "The dissolution test for a tablet measures the: (PHARMACY 2025)", "options": ["Rate at which the drug substance goes into solution", "Hardness of the tablet", "Purity of the drug", "Weight variation"], "correctAnswer": "Rate at which the drug substance goes into solution", "topic": "Pharmaceutics" },
+  { "id": 10, "question": "What is the primary purpose of a 'prodrug'? (PHARMACY 2025)", "options": ["To be active itself", "To be converted into an active drug in the body", "To have a longer shelf life", "To be cheaper to produce"], "correctAnswer": "To be converted into an active drug in the body", "topic": "Pharmaceutical Chemistry" }
 ]

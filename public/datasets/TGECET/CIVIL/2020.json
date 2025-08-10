@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the main binding material in cement concrete?",
-    "options": ["Sand", "Cement", "Aggregate", "Water"],
-    "correctAnswer": "Cement",
-    "topic": "Building Materials"
-  },
-  {
-    "id": 2,
-    "question": "Which type of bond is strongest in brick masonry?",
-    "options": ["Stretcher bond", "Header bond", "English bond", "Flemish bond"],
-    "correctAnswer": "English bond",
-    "topic": "Construction Practices"
-  },
-  {
-    "id": 3,
-    "question": "The formula for calculating the area of a trapezoid is:",
-    "options": ["(a+b)/2 * h", "l*w", "pi*r^2", "0.5*b*h"],
-    "correctAnswer": "(a+b)/2 * h",
-    "topic": "Surveying"
-  },
-  {
-    "id": 4,
-    "question": "What does the 'slump test' for concrete measure?",
-    "options": ["Strength", "Workability", "Durability", "Setting time"],
-    "correctAnswer": "Workability",
-    "topic": "Concrete Technology"
-  },
-  {
-    "id": 5,
-    "question": "The 'moment of inertia' is a measure of an object's resistance to:",
-    "options": ["Linear motion", "Bending", "Torsion", "Axial load"],
-    "correctAnswer": "Bending",
-    "topic": "Strength of Materials"
-  },
-  {
-    "id": 6,
-    "question": "In soil mechanics, the 'void ratio' is the ratio of the volume of voids to the volume of:",
-    "options": ["Total volume", "Water", "Air", "Solids"],
-    "correctAnswer": "Solids",
-    "topic": "Geotechnical Engineering"
-  },
-  {
-    "id": 7,
-    "question": "Which of these is a type of deep foundation?",
-    "options": ["Strip footing", "Raft foundation", "Pile foundation", "Isolated footing"],
-    "correctAnswer": "Pile foundation",
-    "topic": "Foundation Engineering"
-  },
-  {
-    "id": 8,
-    "question": "Bernoulli's equation in fluid dynamics relates pressure, velocity, and:",
-    "options": ["Density", "Viscosity", "Elevation", "Temperature"],
-    "correctAnswer": "Elevation",
-    "topic": "Hydraulics"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary purpose of a 'weir' in irrigation engineering?",
-    "options": ["To store water", "To measure flow rate", "To raise the water level", "To generate power"],
-    "correctAnswer": "To raise the water level",
-    "topic": "Irrigation Engineering"
-  },
-  {
-    "id": 10,
-    "question": "The super-elevation on roads is provided to counteract:",
-    "options": ["Gravitational force", "Frictional force", "Centrifugal force", "Wind force"],
-    "correctAnswer": "Centrifugal force",
-    "topic": "Transportation Engineering"
-  }
+  { "id": 1, "question": "Which of these is a field test for the quality of cement? (CIVIL 2020)", "options": ["Fineness test", "Soundness test", "Color test", "Compressive strength test"], "correctAnswer": "Color test", "topic": "Building Materials" },
+  { "id": 2, "question": "The grade M20 concrete has a characteristic compressive strength of: (CIVIL 2020)", "options": ["20 N/mm²", "25 N/mm²", "15 N/mm²", "30 N/mm²"], "correctAnswer": "20 N/mm²", "topic": "Concrete Technology" },
+  { "id": 3, "question": "The line joining points of equal elevation on the ground surface is a: (CIVIL 2020)", "options": ["Contour line", "Level line", "Horizontal line", "Datum line"], "correctAnswer": "Contour line", "topic": "Surveying" },
+  { "id": 4, "question": "What is the liquid limit in soil mechanics? (CIVIL 2020)", "options": ["The water content at which soil changes from liquid to plastic state", "The water content at which soil starts to crumble", "The maximum water content a soil can hold", "The water content at which soil has minimum volume"], "correctAnswer": "The water content at which soil changes from liquid to plastic state", "topic": "Geotechnical Engineering" },
+  { "id": 5, "question": "Young's Modulus is the ratio of: (CIVIL 2020)", "options": ["Shear stress to shear strain", "Normal stress to normal strain", "Bulk stress to bulk strain", "Force to area"], "correctAnswer": "Normal stress to normal strain", "topic": "Strength of Materials" },
+  { "id": 6, "question": "Damp Proof Course (DPC) is generally provided at: (CIVIL 2020)", "options": ["Roof level", "Lintel level", "Plinth level", "Foundation level"], "correctAnswer": "Plinth level", "topic": "Building Construction" },
+  { "id": 7, "question": "The 'duty' of water in irrigation is the: (CIVIL 2020)", "options": ["Volume of water required per unit area", "Area of land irrigated per unit volume of water", "Depth of water applied to the land", "Rate of water flow in the canal"], "correctAnswer": "Area of land irrigated per unit volume of water", "topic": "Irrigation Engineering" },
+  { "id": 8, "question": "The minimum percentage of longitudinal reinforcement in a column is: (CIVIL 2020)", "options": ["0.4%", "0.8%", "1.0%", "1.2%"], "correctAnswer": "0.8%", "topic": "Reinforced Concrete Structures" },
+  { "id": 9, "question": "The purpose of a transition curve in a highway is to: (CIVIL 2020)", "options": ["Connect a straight and a circular curve gradually", "Provide for super-elevation", "Increase the sight distance", "Reduce the gradient"], "correctAnswer": "Connect a straight and a circular curve gradually", "topic": "Transportation Engineering" },
+  { "id": 10, "question": "The bearing capacity of a soil refers to its ability to: (CIVIL 2020)", "options": ["Hold water", "Support loads from foundations", "Resist erosion", "Undergo compaction"], "correctAnswer": "Support loads from foundations", "topic": "Geotechnical Engineering" }
 ]

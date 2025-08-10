@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which data structure uses the First-In, First-Out (FIFO) principle?",
-    "options": ["Stack", "Queue", "Tree", "Graph"],
-    "correctAnswer": "Queue",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 2,
-    "question": "What is the time complexity of a binary search algorithm?",
-    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-    "correctAnswer": "O(log n)",
-    "topic": "Algorithms"
-  },
-  {
-    "id": 3,
-    "question": "In object-oriented programming, what is the concept of bundling data and methods together called?",
-    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
-    "correctAnswer": "Encapsulation",
-    "topic": "OOP"
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is not a type of SQL join?",
-    "options": ["INNER JOIN", "OUTER JOIN", "CROSS JOIN", "SIDE JOIN"],
-    "correctAnswer": "SIDE JOIN",
-    "topic": "DBMS"
-  },
-  {
-    "id": 5,
-    "question": "What is the primary purpose of an Operating System?",
-    "options": ["To provide a user interface", "To manage hardware and software resources", "To run applications", "To connect to the internet"],
-    "correctAnswer": "To manage hardware and software resources",
-    "topic": "Operating Systems"
-  },
-  {
-    "id": 6,
-    "question": "Which layer of the OSI model is responsible for routing?",
-    "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"],
-    "correctAnswer": "Network Layer",
-    "topic": "Computer Networks"
-  },
-  {
-    "id": 7,
-    "question": "What does the '2' in '2-3 tree' represent?",
-    "options": ["The number of keys", "The number of children", "The height of the tree", "The number of nodes"],
-    "correctAnswer": "The number of keys",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 8,
-    "question": "Which logic gate is known as the universal gate?",
-    "options": ["AND", "OR", "NOT", "NAND"],
-    "correctAnswer": "NAND",
-    "topic": "Digital Logic"
-  },
-  {
-    "id": 9,
-    "question": "What is the default port for HTTP?",
-    "options": ["80", "443", "21", "22"],
-    "correctAnswer": "80",
-    "topic": "Web Technologies"
-  },
-  {
-    "id": 10,
-    "question": "In C++, what is a 'constructor'?",
-    "options": ["A function that destroys an object", "A special method for creating and initializing an object", "A method to copy an object", "A private member function"],
-    "correctAnswer": "A special method for creating and initializing an object",
-    "topic": "C++"
-  }
+  { "id": 1, "question": "Which of these is a non-preemptive scheduling algorithm? (CSE 2025)", "options": ["Round Robin", "Shortest Remaining Time First", "First-Come, First-Served", "Priority (Preemptive)"], "correctAnswer": "First-Come, First-Served", "topic": "Operating Systems" },
+  { "id": 2, "question": "Which of the following is a NoSQL database? (CSE 2025)", "options": ["MySQL", "PostgreSQL", "MongoDB", "SQLite"], "correctAnswer": "MongoDB", "topic": "DBMS" },
+  { "id": 3, "question": "A data structure where elements can be added or removed from either end, but not from the middle, is called a: (CSE 2025)", "options": ["Queue", "Stack", "Dequeue", "Heap"], "correctAnswer": "Dequeue", "topic": "Data Structures" },
+  { "id": 4, "question": "The 'Traveling Salesman Problem' is an example of which type of problem? (CSE 2025)", "options": ["P class", "NP-Hard", "Polynomial time solvable", "Logarithmic time solvable"], "correctAnswer": "NP-Hard", "topic": "Algorithms" },
+  { "id": 5, "question": "What is the purpose of the 'super' keyword in Java? (CSE 2025)", "options": ["To call the constructor of the superclass", "To refer to the current object", "To declare a final variable", "To create a static method"], "correctAnswer": "To call the constructor of the superclass", "topic": "Java Programming" },
+  { "id": 6, "question": "CISC stands for: (CSE 2025)", "options": ["Complex Instruction Set Computer", "Complete Instruction Set Computer", "Controlled Instruction Set Computer", "Central Instruction Set Computer"], "correctAnswer": "Complex Instruction Set Computer", "topic": "Computer Architecture" },
+  { "id": 7, "question": "An encoder is a digital circuit that performs the reverse operation of a: (CSE 2025)", "options": ["Multiplexer", "Decoder", "Flip-flop", "Register"], "correctAnswer": "Decoder", "topic": "Digital Electronics" },
+  { "id": 8, "question": "Which layer of the OSI model deals with frames? (CSE 2025)", "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"], "correctAnswer": "Data Link Layer", "topic": "Computer Networks" },
+  { "id": 9, "question": "A class that cannot be instantiated is called: (CSE 2025)", "options": ["A friend class", "A derived class", "A base class", "An abstract class"], "correctAnswer": "An abstract class", "topic": "Object Oriented Programming" },
+  { "id": 10, "question": "What is the purpose of the 'box model' in CSS? (CSE 2025)", "options": ["To create 3D boxes", "To define the layout and spacing of elements", "To store data in boxes", "A type of color model"], "correctAnswer": "To define the layout and spacing of elements", "topic": "Web Technologies" }
 ]

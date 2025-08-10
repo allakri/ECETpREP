@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the main binding material in cement concrete?",
-    "options": ["Sand", "Cement", "Aggregate", "Water"],
-    "correctAnswer": "Cement",
-    "topic": "Building Materials"
-  },
-  {
-    "id": 2,
-    "question": "Which type of bond is strongest in brick masonry?",
-    "options": ["Stretcher bond", "Header bond", "English bond", "Flemish bond"],
-    "correctAnswer": "English bond",
-    "topic": "Construction Practices"
-  },
-  {
-    "id": 3,
-    "question": "The formula for calculating the area of a trapezoid is:",
-    "options": ["(a+b)/2 * h", "l*w", "pi*r^2", "0.5*b*h"],
-    "correctAnswer": "(a+b)/2 * h",
-    "topic": "Surveying"
-  },
-  {
-    "id": 4,
-    "question": "What does the 'slump test' for concrete measure?",
-    "options": ["Strength", "Workability", "Durability", "Setting time"],
-    "correctAnswer": "Workability",
-    "topic": "Concrete Technology"
-  },
-  {
-    "id": 5,
-    "question": "The 'moment of inertia' is a measure of an object's resistance to:",
-    "options": ["Linear motion", "Bending", "Torsion", "Axial load"],
-    "correctAnswer": "Bending",
-    "topic": "Strength of Materials"
-  },
-  {
-    "id": 6,
-    "question": "In soil mechanics, the 'void ratio' is the ratio of the volume of voids to the volume of:",
-    "options": ["Total volume", "Water", "Air", "Solids"],
-    "correctAnswer": "Solids",
-    "topic": "Geotechnical Engineering"
-  },
-  {
-    "id": 7,
-    "question": "Which of these is a type of deep foundation?",
-    "options": ["Strip footing", "Raft foundation", "Pile foundation", "Isolated footing"],
-    "correctAnswer": "Pile foundation",
-    "topic": "Foundation Engineering"
-  },
-  {
-    "id": 8,
-    "question": "Bernoulli's equation in fluid dynamics relates pressure, velocity, and:",
-    "options": ["Density", "Viscosity", "Elevation", "Temperature"],
-    "correctAnswer": "Elevation",
-    "topic": "Hydraulics"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary purpose of a 'weir' in irrigation engineering?",
-    "options": ["To store water", "To measure flow rate", "To raise the water level", "To generate power"],
-    "correctAnswer": "To raise the water level",
-    "topic": "Irrigation Engineering"
-  },
-  {
-    "id": 10,
-    "question": "The super-elevation on roads is provided to counteract:",
-    "options": ["Gravitational force", "Frictional force", "Centrifugal force", "Wind force"],
-    "correctAnswer": "Centrifugal force",
-    "topic": "Transportation Engineering"
-  }
+  { "id": 1, "question": "Which stone is known for its high resistance to fire? (CIVIL 2025)", "options": ["Granite", "Limestone", "Sandstone", "Marble"], "correctAnswer": "Sandstone", "topic": "Building Materials" },
+  { "id": 2, "question": "What does a workability agent or admixture do for concrete? (CIVIL 2025)", "options": ["Increases strength", "Reduces setting time", "Improves ease of placement and compaction", "Increases density"], "correctAnswer": "Improves ease of placement and compaction", "topic": "Concrete Technology" },
+  { "id": 3, "question": "The operation of revolving the telescope in a vertical plane about its horizontal axis is called: (CIVIL 2025)", "options": ["Swinging", "Centering", "Transiting", "Levelling"], "correctAnswer": "Transiting", "topic": "Surveying" },
+  { "id": 4, "question": "The term 'effective stress' in soil mechanics was introduced by: (CIVIL 2025)", "options": ["Darcy", "Terzaghi", "Rankine", "Coulomb"], "correctAnswer": "Terzaghi", "topic": "Geotechnical Engineering" },
+  { "id": 5, "question": "The point in a beam where the bending moment is maximum, the shear force is: (CIVIL 2025)", "options": ["Maximum", "Minimum", "Zero", "Uniform"], "correctAnswer": "Zero", "topic": "Strength of Materials" },
+  { "id": 6, "question": "A queen closer is a brick cut: (CIVIL 2025)", "options": ["Lengthwise into two halves", "Widthwise into two halves", "Diagonally", "To form a bevel"], "correctAnswer": "Lengthwise into two halves", "topic": "Building Construction" },
+  { "id": 7, "question": "The specific gravity of water at 4°C is: (CIVIL 2025)", "options": ["0.9", "1.0", "1.1", "0.98"], "correctAnswer": "1.0", "topic": "Hydraulics" },
+  { "id": 8, "question": "The development length of a reinforcement bar is the length required to: (CIVIL 2025)", "options": ["Transfer the stress from the bar to the concrete", "Lap with another bar", "Bend the bar at an angle", "Anchor the bar in a support"], "correctAnswer": "Transfer the stress from the bar to the concrete", "topic": "Reinforced Concrete Structures" },
+  { "id": 9, "question": "The design of super-elevation for a road depends on: (CIVIL 2025)", "options": ["Design speed and radius of curve", "Gradient of the road", "Width of the pavement", "Type of vehicle"], "correctAnswer": "Design speed and radius of curve", "topic": "Transportation Engineering" },
+  { "id": 10, "question": "The shear strength of a soil is primarily a function of: (CIVIL 2025)", "options": ["Cohesion and internal friction", "Permeability and porosity", "Density and water content", "Plasticity and compressibility"], "correctAnswer": "Cohesion and internal friction", "topic": "Geotechnical Engineering" }
 ]

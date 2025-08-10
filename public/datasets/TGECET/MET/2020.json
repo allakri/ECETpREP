@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which process is used to improve the hardness of steel?",
-    "options": ["Annealing", "Normalizing", "Quenching", "Tempering"],
-    "correctAnswer": "Quenching",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 2,
-    "question": "The addition of carbon to iron makes it:",
-    "options": ["Softer", "Harder and stronger", "More ductile", "More malleable"],
-    "correctAnswer": "Harder and stronger",
-    "topic": "Iron-Carbon Diagram"
-  },
-  {
-    "id": 3,
-    "question": "Which of the following is a method for testing the hardness of a material?",
-    "options": ["Tensile test", "Impact test", "Rockwell test", "Fatigue test"],
-    "correctAnswer": "Rockwell test",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 4,
-    "question": "What is the primary ore of aluminum?",
-    "options": ["Hematite", "Bauxite", "Galena", "Sphalerite"],
-    "correctAnswer": "Bauxite",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 5,
-    "question": "The process of extracting metal from its ore by heating is called:",
-    "options": ["Smelting", "Leaching", "Electrolysis", "Roasting"],
-    "correctAnswer": "Smelting",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 6,
-    "question": "A 'unit cell' in crystallography is:",
-    "options": ["The smallest repeating unit of a crystal lattice", "A single crystal", "A type of defect", "A grain boundary"],
-    "correctAnswer": "The smallest repeating unit of a crystal lattice",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 7,
-    "question": "Which crystal structure is known for its high ductility?",
-    "options": ["BCC (Body-Centered Cubic)", "FCC (Face-Centered Cubic)", "HCP (Hexagonal Close-Packed)", "Simple Cubic"],
-    "correctAnswer": "FCC (Face-Centered Cubic)",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 8,
-    "question": "The 'fatigue limit' of a material is its ability to withstand:",
-    "options": ["Sudden impact", "High temperature", "Repeated cyclic loading", "Corrosive environments"],
-    "correctAnswer": "Repeated cyclic loading",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 9,
-    "question": "Stainless steel is an alloy of iron and at least 10.5% of:",
-    "options": ["Chromium", "Nickel", "Manganese", "Carbon"],
-    "correctAnswer": "Chromium",
-    "topic": "Engineering Materials"
-  },
-  {
-    "id": 10,
-    "question": "The process used to remove impurities from molten metal is known as:",
-    "options": ["Refining", "Casting", "Forging", "Rolling"],
-    "correctAnswer": "Refining",
-    "topic": "Extractive Metallurgy"
-  }
+  { "id": 1, "question": "The process of removing impurities from molten metal is called: (MET 2020)", "options": ["Smelting", "Roasting", "Refining", "Calcination"], "correctAnswer": "Refining", "topic": "Extractive Metallurgy" },
+  { "id": 2, "question": "A unit cell is the: (MET 2020)", "options": ["Smallest repeating unit of a crystal lattice", "Entire crystal", "A single atom in a crystal", "A defect in a crystal"], "correctAnswer": "Smallest repeating unit of a crystal lattice", "topic": "Physical Metallurgy" },
+  { "id": 3, "question": "A fatigue test measures a material's resistance to: (MET 2020)", "options": ["Sudden impact", "Static loads", "Cyclic loads", "Abrasive wear"], "correctAnswer": "Cyclic loads", "topic": "Material Testing" },
+  { "id": 4, "question": "The mechanism by which an anode, cathode, and electrolyte cause metal deterioration is known as: (MET 2020)", "options": ["Erosion", "Wear", "Electrochemical corrosion", "Mechanical failure"], "correctAnswer": "Electrochemical corrosion", "topic": "Corrosion" },
+  { "id": 5, "question": "Normalizing of steel is done to: (MET 2020)", "options": ["Refine the grain structure and improve mechanical properties", "Make the steel soft", "Increase hardness to maximum", "Induce brittleness"], "correctAnswer": "Refine the grain structure and improve mechanical properties", "topic": "Heat Treatment" },
+  { "id": 6, "question": "Roasting is a process of heating an ore in the presence of: (MET 2020)", "options": ["Air", "Absence of air", "Water", "A reducing agent"], "correctAnswer": "Air", "topic": "Extractive Metallurgy" },
+  { "id": 7, "question": "The ability of a material to be deformed plastically without fracturing is: (MET 2020)", "options": ["Elasticity", "Plasticity", "Stiffness", "Hardness"], "correctAnswer": "Plasticity", "topic": "Mechanical Metallurgy" },
+  { "id": 8, "question": "The Eutectoid reaction in the Iron-Carbon diagram results in the formation of: (MET 2020)", "options": ["Cementite", "Ferrite", "Austenite", "Pearlite"], "correctAnswer": "Pearlite", "topic": "Physical Metallurgy" },
+  { "id": 9, "question": "Non-destructive testing (NDT) includes which method? (MET 2020)", "options": ["Tensile test", "Hardness test", "Ultrasonic testing", "Impact test"], "correctAnswer": "Ultrasonic testing", "topic": "Material Testing" },
+  { "id": 10, "question": "An alloy is a: (MET 2020)", "options": ["Pure metal", "Mixture of a metal with other elements", "Non-metallic material", "Ceramic"], "correctAnswer": "Mixture of a metal with other elements", "topic": "Physical Metallurgy" }
 ]

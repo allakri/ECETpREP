@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the primary function of a Zener diode?",
-    "options": ["Amplification", "Rectification", "Voltage regulation", "Oscillation"],
-    "correctAnswer": "Voltage regulation",
-    "topic": "Electronic Devices"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is an active electronic component?",
-    "options": ["Resistor", "Capacitor", "Inductor", "Transistor"],
-    "correctAnswer": "Transistor",
-    "topic": "Electronic Circuits"
-  },
-  {
-    "id": 3,
-    "question": "In a communication system, what does 'modulation' mean?",
-    "options": ["Superimposing a low-frequency signal on a high-frequency carrier", "Removing noise from a signal", "Converting analog to digital", "Increasing signal power"],
-    "correctAnswer": "Superimposing a low-frequency signal on a high-frequency carrier",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 4,
-    "question": "The Boolean expression A + A'B is equivalent to:",
-    "options": ["A + B", "B", "A", "A' + B"],
-    "correctAnswer": "A + B",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 5,
-    "question": "What is the purpose of an SCR (Silicon Controlled Rectifier)?",
-    "options": ["To amplify weak signals", "To switch high power loads", "To generate high frequencies", "To store charge"],
-    "correctAnswer": "To switch high power loads",
-    "topic": "Industrial Electronics"
-  },
-  {
-    "id": 6,
-    "question": "A microprocessor with a 16-bit address bus can access how much memory?",
-    "options": ["16 KB", "32 KB", "64 KB", "128 KB"],
-    "correctAnswer": "64 KB",
-    "topic": "Microprocessors"
-  },
-  {
-    "id": 7,
-    "question": "What is the main advantage of using optical fiber for communication?",
-    "options": ["Low cost", "High bandwidth", "Easy installation", "Low security"],
-    "correctAnswer": "High bandwidth",
-    "topic": "Data Communications"
-  },
-  {
-    "id": 8,
-    "question": "What does a 'flip-flop' in digital electronics do?",
-    "options": ["It's a clock generator", "It's a 1-bit memory cell", "It's a logic gate", "It's an amplifier"],
-    "correctAnswer": "It's a 1-bit memory cell",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 9,
-    "question": "The 'superheterodyne' principle is used in:",
-    "options": ["Audio amplifiers", "Power supplies", "Radio receivers", "Oscilloscopes"],
-    "correctAnswer": "Radio receivers",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 10,
-    "question": "Which of the following is not a type of modulation?",
-    "options": ["AM", "FM", "PM", "TM"],
-    "correctAnswer": "TM",
-    "topic": "Communication Systems"
-  }
+  { "id": 1, "question": "What type of feedback is used in an oscillator circuit? (ECE 2025)", "options": ["Positive feedback", "Negative feedback", "No feedback", "Both positive and negative"], "correctAnswer": "Positive feedback", "topic": "Electronic Devices" },
+  { "id": 2, "question": "A high-pass filter can be made using which components? (ECE 2025)", "options": ["Resistor and Inductor in series", "Resistor and Capacitor in series", "Resistor and Capacitor in parallel", "Inductor and Capacitor in parallel"], "correctAnswer": "Resistor and Capacitor in series", "topic": "Circuit Theory" },
+  { "id": 3, "question": "The term SCADA stands for: (ECE 2025)", "options": ["Supervisory Control and Data Acquisition", "System Control and Data Analysis", "Signal Conditioning and Data Access", "Software Control and Digital Analysis"], "correctAnswer": "Supervisory Control and Data Acquisition", "topic": "Industrial Electronics" },
+  { "id": 4, "question": "In satellite communication, an 'uplink' is a signal from: (ECE 2025)", "options": ["Satellite to Earth station", "Earth station to satellite", "Satellite to satellite", "Earth station to Earth station"], "correctAnswer": "Earth station to satellite", "topic": "Communication Systems" },
+  { "id": 5, "question": "A comparator is a digital circuit that: (ECE 2025)", "options": ["Compares two binary numbers", "Adds two binary numbers", "Stores a binary number", "Selects a binary number"], "correctAnswer": "Compares two binary numbers", "topic": "Digital Electronics" },
+  { "id": 6, "question": "What is an 'interrupt' in a microcontroller? (ECE 2025)", "options": ["A signal that temporarily halts the main program to service an event", "An error in the program", "A memory location", "A type of instruction"], "correctAnswer": "A signal that temporarily halts the main program to service an event", "topic": "Microcontrollers" },
+  { "id": 7, "question": "The aspect ratio of an HDTV screen is typically: (ECE 2025)", "options": ["4:3", "3:2", "16:9", "5:4"], "correctAnswer": "16:9", "topic": "Consumer Electronics" },
+  { "id": 8, "question": "What does a DNS (Domain Name System) do? (ECE 2025)", "options": ["Assigns IP addresses", "Translates domain names to IP addresses", "Secures network traffic", "Transfers files"], "correctAnswer": "Translates domain names to IP addresses", "topic": "Computer Networks" },
+  { "id": 9, "question": "A Delta-Star transformation is used to: (ECE 2025)", "options": ["Simplify a network", "Amplify a signal", "Measure impedance", "Store energy"], "correctAnswer": "Simplify a network", "topic": "Circuit Theory" },
+  { "id": 10, "question": "The main difference between a latch and a flip-flop is that: (ECE 2025)", "options": ["Latches are faster", "Flip-flops are clock-triggered", "Latches have more states", "Flip-flops use more gates"], "correctAnswer": "Flip-flops are clock-triggered", "topic": "Digital Electronics" }
 ]

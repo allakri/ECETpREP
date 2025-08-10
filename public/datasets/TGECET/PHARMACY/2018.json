@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which of the following is an example of a solid dosage form?",
-    "options": ["Syrup", "Tablet", "Suspension", "Elixir"],
-    "correctAnswer": "Tablet",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 2,
-    "question": "Aspirin is also known as:",
-    "options": ["Acetylsalicylic acid", "Paracetamol", "Ibuprofen", "Naproxen"],
-    "correctAnswer": "Acetylsalicylic acid",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 3,
-    "question": "Pharmacognosy is the study of:",
-    "options": ["Drugs from natural sources", "Synthetic drugs", "Drug dosage forms", "Drug action on the body"],
-    "correctAnswer": "Drugs from natural sources",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 4,
-    "question": "Pharmacology is the study of:",
-    "options": ["How drugs are made", "How drugs affect the body", "Drugs from plants", "The chemistry of drugs"],
-    "correctAnswer": "How drugs affect the body",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 5,
-    "question": "The process of reducing particle size of a powder is called:",
-    "options": ["Milling", "Drying", "Filtration", "Granulation"],
-    "correctAnswer": "Milling",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 6,
-    "question": "Which of these is an antacid?",
-    "options": ["Ranitidine", "Omeprazole", "Aluminum hydroxide", "Loperamide"],
-    "correctAnswer": "Aluminum hydroxide",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 7,
-    "question": "Digitalis, a drug used for heart conditions, is obtained from which plant?",
-    "options": ["Cinchona", "Opium poppy", "Foxglove", "Belladonna"],
-    "correctAnswer": "Foxglove",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 8,
-    "question": "The term 'bioavailability' refers to:",
-    "options": ["The dose of a drug", "The rate and extent to which a drug is absorbed", "The excretion of a drug", "The side effects of a drug"],
-    "correctAnswer": "The rate and extent to which a drug is absorbed",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary use of a 'suppository'?",
-    "options": ["Oral administration", "Rectal or vaginal administration", "Intravenous injection", "Topical application"],
-    "correctAnswer": "Rectal or vaginal administration",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 10,
-    "question": "A drug that relieves pain is called an:",
-    "options": ["Antipyretic", "Analgesic", "Antibiotic", "Antiseptic"],
-    "correctAnswer": "Analgesic",
-    "topic": "Pharmacology"
-  }
+  { "id": 1, "question": "Tablets are which type of dosage form? (PHARMACY 2018)", "options": ["Liquid", "Solid", "Semi-solid", "Gaseous"], "correctAnswer": "Solid", "topic": "Pharmaceutics" },
+  { "id": 2, "question": "Aspirin is chemically known as: (PHARMACY 2018)", "options": ["Acetylsalicylic acid", "Paracetamol", "Ibuprofen", "Diclofenac"], "correctAnswer": "Acetylsalicylic acid", "topic": "Pharmaceutical Chemistry" },
+  { "id": 3, "question": "Digitalis is obtained from which part of the plant? (PHARMACY 2018)", "options": ["Root", "Stem", "Leaf", "Flower"], "correctAnswer": "Leaf", "topic": "Pharmacognosy" },
+  { "id": 4, "question": "Pharmacokinetics is the study of: (PHARMACY 2018)", "options": ["What the drug does to the body", "What the body does to the drug", "The chemical structure of the drug", "The source of the drug"], "correctAnswer": "What the body does to the drug", "topic": "Pharmacology" },
+  { "id": 5, "question": "Which of these is a binder used in tablet formulation? (PHARMACY 2018)", "options": ["Talc", "Starch", "Lactose", "Magnesium stearate"], "correctAnswer": "Starch", "topic": "Pharmaceutics" },
+  { "id": 6, "question": "An antacid is a substance that neutralizes: (PHARMACY 2018)", "options": ["Stomach acid", "Blood pH", "Alkaline substances", "Infections"], "correctAnswer": "Stomach acid", "topic": "Pharmaceutical Chemistry" },
+  { "id": 7, "question": "Alkaloids are nitrogen-containing compounds obtained from: (PHARMACY 2018)", "options": ["Plants", "Animals", "Minerals", "Synthetic sources"], "correctAnswer": "Plants", "topic": "Pharmacognosy" },
+  { "id": 8, "question": "An analgesic drug is used to relieve: (PHARMACY 2018)", "options": ["Fever", "Pain", "Infection", "Cough"], "correctAnswer": "Pain", "topic": "Pharmacology" },
+  { "id": 9, "question": "Sterilization is the process of: (PHARMACY 2018)", "options": ["Cleaning a surface", "Removing all microorganisms", "Reducing the number of microorganisms", "Preventing microbial growth"], "correctAnswer": "Removing all microorganisms", "topic": "Pharmaceutics" },
+  { "id": 10, "question": "The 'Benzene ring' is a classic example of what type of compound? (PHARMACY 2018)", "options": ["Aliphatic", "Aromatic", "Alicyclic", "Heterocyclic"], "correctAnswer": "Aromatic", "topic": "Pharmaceutical Chemistry" }
 ]

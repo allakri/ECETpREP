@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which process is used to improve the hardness of steel?",
-    "options": ["Annealing", "Normalizing", "Quenching", "Tempering"],
-    "correctAnswer": "Quenching",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 2,
-    "question": "The addition of carbon to iron makes it:",
-    "options": ["Softer", "Harder and stronger", "More ductile", "More malleable"],
-    "correctAnswer": "Harder and stronger",
-    "topic": "Iron-Carbon Diagram"
-  },
-  {
-    "id": 3,
-    "question": "Which of the following is a method for testing the hardness of a material?",
-    "options": ["Tensile test", "Impact test", "Rockwell test", "Fatigue test"],
-    "correctAnswer": "Rockwell test",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 4,
-    "question": "What is the primary ore of aluminum?",
-    "options": ["Hematite", "Bauxite", "Galena", "Sphalerite"],
-    "correctAnswer": "Bauxite",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 5,
-    "question": "The process of extracting metal from its ore by heating is called:",
-    "options": ["Smelting", "Leaching", "Electrolysis", "Roasting"],
-    "correctAnswer": "Smelting",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 6,
-    "question": "A 'unit cell' in crystallography is:",
-    "options": ["The smallest repeating unit of a crystal lattice", "A single crystal", "A type of defect", "A grain boundary"],
-    "correctAnswer": "The smallest repeating unit of a crystal lattice",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 7,
-    "question": "Which crystal structure is known for its high ductility?",
-    "options": ["BCC (Body-Centered Cubic)", "FCC (Face-Centered Cubic)", "HCP (Hexagonal Close-Packed)", "Simple Cubic"],
-    "correctAnswer": "FCC (Face-Centered Cubic)",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 8,
-    "question": "The 'fatigue limit' of a material is its ability to withstand:",
-    "options": ["Sudden impact", "High temperature", "Repeated cyclic loading", "Corrosive environments"],
-    "correctAnswer": "Repeated cyclic loading",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 9,
-    "question": "Stainless steel is an alloy of iron and at least 10.5% of:",
-    "options": ["Chromium", "Nickel", "Manganese", "Carbon"],
-    "correctAnswer": "Chromium",
-    "topic": "Engineering Materials"
-  },
-  {
-    "id": 10,
-    "question": "The process used to remove impurities from molten metal is known as:",
-    "options": ["Refining", "Casting", "Forging", "Rolling"],
-    "correctAnswer": "Refining",
-    "topic": "Extractive Metallurgy"
-  }
+  { "id": 1, "question": "Bauxite is the primary ore of which metal? (MET 2021)", "options": ["Iron", "Copper", "Aluminum", "Zinc"], "correctAnswer": "Aluminum", "topic": "Extractive Metallurgy" },
+  { "id": 2, "question": "A dislocation in a crystal is a type of: (MET 2021)", "options": ["Point defect", "Line defect", "Surface defect", "Volume defect"], "correctAnswer": "Line defect", "topic": "Physical Metallurgy" },
+  { "id": 3, "question": "A creep test is conducted at: (MET 2021)", "options": ["Room temperature", "Elevated temperature and constant load", "Low temperature", "Varying load"], "correctAnswer": "Elevated temperature and constant load", "topic": "Material Testing" },
+  { "id": 4, "question": "Cathodic protection is a method to: (MET 2021)", "options": ["Increase corrosion", "Control corrosion by making the structure a cathode", "Clean a corroded surface", "Measure corrosion rate"], "correctAnswer": "Control corrosion by making the structure a cathode", "topic": "Corrosion" },
+  { "id": 5, "question": "Tempering is a heat treatment process that follows: (MET 2021)", "options": ["Annealing", "Normalizing", "Quenching", "Casting"], "correctAnswer": "Quenching", "topic": "Heat Treatment" },
+  { "id": 6, "question": "The purpose of a flux in smelting is to: (MET 2021)", "options": ["Lower the melting point and combine with impurities to form slag", "Increase the temperature", "Act as a fuel", "Oxidize the metal"], "correctAnswer": "Lower the melting point and combine with impurities to form slag", "topic": "Extractive Metallurgy" },
+  { "id": 7, "question": "Work hardening, or strain hardening, is the process of: (MET 2021)", "options": ["Softening a metal by working it", "Strengthening a metal by plastic deformation", "Heating a metal to change its properties", "Making a metal brittle"], "correctAnswer": "Strengthening a metal by plastic deformation", "topic": "Mechanical Metallurgy" },
+  { "id": 8, "question": "The Body-Centered Cubic (BCC) crystal structure has how many atoms per unit cell? (MET 2021)", "options": ["1", "2", "4", "8"], "correctAnswer": "2", "topic": "Physical Metallurgy" },
+  { "id": 9, "question": "Radiography is a non-destructive testing method that uses: (MET 2021)", "options": ["Sound waves", "Magnetic particles", "X-rays or Gamma rays", "Liquid penetrants"], "correctAnswer": "X-rays or Gamma rays", "topic": "Material Testing" },
+  { "id": 10, "question": "Pearlite is a mixture of: (MET 2021)", "options": ["Ferrite and Austenite", "Ferrite and Cementite", "Austenite and Cementite", "Ferrite and Martensite"], "correctAnswer": "Ferrite and Cementite", "topic": "Physical Metallurgy" }
 ]

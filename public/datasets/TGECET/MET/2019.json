@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which process is used to improve the hardness of steel?",
-    "options": ["Annealing", "Normalizing", "Quenching", "Tempering"],
-    "correctAnswer": "Quenching",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 2,
-    "question": "The addition of carbon to iron makes it:",
-    "options": ["Softer", "Harder and stronger", "More ductile", "More malleable"],
-    "correctAnswer": "Harder and stronger",
-    "topic": "Iron-Carbon Diagram"
-  },
-  {
-    "id": 3,
-    "question": "Which of the following is a method for testing the hardness of a material?",
-    "options": ["Tensile test", "Impact test", "Rockwell test", "Fatigue test"],
-    "correctAnswer": "Rockwell test",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 4,
-    "question": "What is the primary ore of aluminum?",
-    "options": ["Hematite", "Bauxite", "Galena", "Sphalerite"],
-    "correctAnswer": "Bauxite",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 5,
-    "question": "The process of extracting metal from its ore by heating is called:",
-    "options": ["Smelting", "Leaching", "Electrolysis", "Roasting"],
-    "correctAnswer": "Smelting",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 6,
-    "question": "A 'unit cell' in crystallography is:",
-    "options": ["The smallest repeating unit of a crystal lattice", "A single crystal", "A type of defect", "A grain boundary"],
-    "correctAnswer": "The smallest repeating unit of a crystal lattice",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 7,
-    "question": "Which crystal structure is known for its high ductility?",
-    "options": ["BCC (Body-Centered Cubic)", "FCC (Face-Centered Cubic)", "HCP (Hexagonal Close-Packed)", "Simple Cubic"],
-    "correctAnswer": "FCC (Face-Centered Cubic)",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 8,
-    "question": "The 'fatigue limit' of a material is its ability to withstand:",
-    "options": ["Sudden impact", "High temperature", "Repeated cyclic loading", "Corrosive environments"],
-    "correctAnswer": "Repeated cyclic loading",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 9,
-    "question": "Stainless steel is an alloy of iron and at least 10.5% of:",
-    "options": ["Chromium", "Nickel", "Manganese", "Carbon"],
-    "correctAnswer": "Chromium",
-    "topic": "Engineering Materials"
-  },
-  {
-    "id": 10,
-    "question": "The process used to remove impurities from molten metal is known as:",
-    "options": ["Refining", "Casting", "Forging", "Rolling"],
-    "correctAnswer": "Refining",
-    "topic": "Extractive Metallurgy"
-  }
+  { "id": 1, "question": "The main raw materials for a blast furnace are iron ore, coke, and: (MET 2019)", "options": ["Limestone", "Silica", "Bauxite", "Slag"], "correctAnswer": "Limestone", "topic": "Extractive Metallurgy" },
+  { "id": 2, "question": "The Iron-Carbon equilibrium diagram is a: (MET 2019)", "options": ["Unary phase diagram", "Binary phase diagram", "Ternary phase diagram", "Quaternary phase diagram"], "correctAnswer": "Binary phase diagram", "topic": "Physical Metallurgy" },
+  { "id": 3, "question": "A tensile test is used to determine which property of a material? (MET 2019)", "options": ["Hardness", "Toughness", "Yield strength and Ultimate Tensile Strength", "Fatigue strength"], "correctAnswer": "Yield strength and Ultimate Tensile Strength", "topic": "Material Testing" },
+  { "id": 4, "question": "Galvanizing is the process of coating steel with: (MET 2019)", "options": ["Tin", "Zinc", "Copper", "Nickel"], "correctAnswer": "Zinc", "topic": "Corrosion" },
+  { "id": 5, "question": "The purpose of quenching steel is to: (MET 2019)", "options": ["Increase hardness", "Increase softness", "Relieve internal stresses", "Improve machinability"], "correctAnswer": "Increase hardness", "topic": "Heat Treatment" },
+  { "id": 6, "question": "Froth flotation is a process used for: (MET 2019)", "options": ["Concentrating sulphide ores", "Roasting ores", "Smelting ores", "Refining metals"], "correctAnswer": "Concentrating sulphide ores", "topic": "Extractive Metallurgy" },
+  { "id": 7, "question": "The phenomenon of slow and progressive deformation of a material under constant stress is called: (MET 2019)", "options": ["Fatigue", "Creep", "Ductility", "Brittleness"], "correctAnswer": "Creep", "topic": "Mechanical Metallurgy" },
+  { "id": 8, "question": "A solid solution is a: (MET 2019)", "options": ["Mixture of two solids", "Solid with a liquid dissolved in it", "Crystal structure containing a mixture of elements", "A type of alloy"], "correctAnswer": "Crystal structure containing a mixture of elements", "topic": "Physical Metallurgy" },
+  { "id": 9, "question": "Rockwell hardness test measures hardness based on the: (MET 2019)", "options": ["Diameter of indentation", "Depth of indentation", "Area of indentation", "Force required for indentation"], "correctAnswer": "Depth of indentation", "topic": "Material Testing" },
+  { "id": 10, "question": "Martensite is a very hard and brittle phase in steel formed by: (MET 2019)", "options": ["Slow cooling", "Rapid cooling (quenching)", "Annealing", "Tempering"], "correctAnswer": "Rapid cooling (quenching)", "topic": "Physical Metallurgy" }
 ]

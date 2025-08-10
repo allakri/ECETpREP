@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the primary function of a Zener diode?",
-    "options": ["Amplification", "Rectification", "Voltage regulation", "Oscillation"],
-    "correctAnswer": "Voltage regulation",
-    "topic": "Electronic Devices"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is an active electronic component?",
-    "options": ["Resistor", "Capacitor", "Inductor", "Transistor"],
-    "correctAnswer": "Transistor",
-    "topic": "Electronic Circuits"
-  },
-  {
-    "id": 3,
-    "question": "In a communication system, what does 'modulation' mean?",
-    "options": ["Superimposing a low-frequency signal on a high-frequency carrier", "Removing noise from a signal", "Converting analog to digital", "Increasing signal power"],
-    "correctAnswer": "Superimposing a low-frequency signal on a high-frequency carrier",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 4,
-    "question": "The Boolean expression A + A'B is equivalent to:",
-    "options": ["A + B", "B", "A", "A' + B"],
-    "correctAnswer": "A + B",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 5,
-    "question": "What is the purpose of an SCR (Silicon Controlled Rectifier)?",
-    "options": ["To amplify weak signals", "To switch high power loads", "To generate high frequencies", "To store charge"],
-    "correctAnswer": "To switch high power loads",
-    "topic": "Industrial Electronics"
-  },
-  {
-    "id": 6,
-    "question": "A microprocessor with a 16-bit address bus can access how much memory?",
-    "options": ["16 KB", "32 KB", "64 KB", "128 KB"],
-    "correctAnswer": "64 KB",
-    "topic": "Microprocessors"
-  },
-  {
-    "id": 7,
-    "question": "What is the main advantage of using optical fiber for communication?",
-    "options": ["Low cost", "High bandwidth", "Easy installation", "Low security"],
-    "correctAnswer": "High bandwidth",
-    "topic": "Data Communications"
-  },
-  {
-    "id": 8,
-    "question": "What does a 'flip-flop' in digital electronics do?",
-    "options": ["It's a clock generator", "It's a 1-bit memory cell", "It's a logic gate", "It's an amplifier"],
-    "correctAnswer": "It's a 1-bit memory cell",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 9,
-    "question": "The 'superheterodyne' principle is used in:",
-    "options": ["Audio amplifiers", "Power supplies", "Radio receivers", "Oscilloscopes"],
-    "correctAnswer": "Radio receivers",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 10,
-    "question": "Which of the following is not a type of modulation?",
-    "options": ["AM", "FM", "PM", "TM"],
-    "correctAnswer": "TM",
-    "topic": "Communication Systems"
-  }
+  { "id": 1, "question": "The doping level in the emitter of a BJT is: (ECE 2020)", "options": ["Light", "Moderate", "Heavy", "Same as the base"], "correctAnswer": "Heavy", "topic": "Electronic Devices" },
+  { "id": 2, "question": "A low-pass filter passes signals with: (ECE 2020)", "options": ["Frequencies below a cutoff frequency", "Frequencies above a cutoff frequency", "Frequencies within a specific band", "All frequencies"], "correctAnswer": "Frequencies below a cutoff frequency", "topic": "Circuit Theory" },
+  { "id": 3, "question": "A transducer is a device that converts: (ECE 2020)", "options": ["AC to DC", "One form of energy to another", "High voltage to low voltage", "Electrical signal to light"], "correctAnswer": "One form of energy to another", "topic": "Industrial Electronics" },
+  { "id": 4, "question": "The bandwidth of an AM signal is given by: (ECE 2020)", "options": ["fm", "2*fm", "fc + fm", "fc - fm"], "correctAnswer": "2*fm", "topic": "Communication Systems" },
+  { "id": 5, "question": "The Boolean expression for an OR gate is: (ECE 2020)", "options": ["A.B", "A+B", "A'", "A XOR B"], "correctAnswer": "A+B", "topic": "Digital Electronics" },
+  { "id": 6, "question": "How much on-chip RAM does the 8051 microcontroller have? (ECE 2020)", "options": ["64 bytes", "128 bytes", "256 bytes", "512 bytes"], "correctAnswer": "128 bytes", "topic": "Microcontrollers" },
+  { "id": 7, "question": "The term 'pixel' in television stands for: (ECE 2020)", "options": ["Picture extension", "Picture element", "Picture exit", "Picture entry"], "correctAnswer": "Picture element", "topic": "Consumer Electronics" },
+  { "id": 8, "question": "Which of these is a guided transmission medium? (ECE 2020)", "options": ["Radio waves", "Microwaves", "Infrared", "Optical fiber"], "correctAnswer": "Optical fiber", "topic": "Computer Networks" },
+  { "id": 9, "question": "Norton's theorem simplifies a circuit into a: (ECE 2020)", "options": ["Voltage source and series resistor", "Current source and parallel resistor", "Voltage source and parallel resistor", "Current source and series resistor"], "correctAnswer": "Current source and parallel resistor", "topic": "Circuit Theory" },
+  { "id": 10, "question": "A demultiplexer (DEMUX) has: (ECE 2020)", "options": ["One input, many outputs", "Many inputs, one output", "Many inputs, many outputs", "One input, one output"], "correctAnswer": "One input, many outputs", "topic": "Digital Electronics" }
 ]

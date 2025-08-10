@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Ohm's law states that:",
-    "options": ["V = IR", "V = I/R", "I = V/R", "R = VI"],
-    "correctAnswer": "V = IR",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is used to measure current?",
-    "options": ["Voltmeter", "Ammeter", "Ohmmeter", "Wattmeter"],
-    "correctAnswer": "Ammeter",
-    "topic": "Measuring Instruments"
-  },
-  {
-    "id": 3,
-    "question": "A transformer is used to:",
-    "options": ["Change AC to DC", "Change DC to AC", "Step up or step down AC voltage", "Step up or step down DC voltage"],
-    "correctAnswer": "Step up or step down AC voltage",
-    "topic": "AC Machines"
-  },
-  {
-    "id": 4,
-    "question": "The unit of electrical power is:",
-    "options": ["Volt", "Ampere", "Ohm", "Watt"],
-    "correctAnswer": "Watt",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 5,
-    "question": "In a three-phase system, the phase difference between each phase is:",
-    "options": ["90 degrees", "120 degrees", "180 degrees", "360 degrees"],
-    "correctAnswer": "120 degrees",
-    "topic": "Power Systems"
-  },
-  {
-    "id": 6,
-    "question": "The function of a fuse is to:",
-    "options": ["Increase current", "Decrease current", "Protect the circuit from overcurrent", "Regulate voltage"],
-    "correctAnswer": "Protect the circuit from overcurrent",
-    "topic": "Protection of Power Systems"
-  },
-  {
-    "id": 7,
-    "question": "What is the function of a diode?",
-    "options": ["To allow current to flow in one direction only", "To amplify signals", "To store charge", "To resist current flow"],
-    "correctAnswer": "To allow current to flow in one direction only",
-    "topic": "Basic Electronics"
-  },
-  {
-    "id": 8,
-    "question": "Which motor is commonly used in household refrigerators?",
-    "options": ["DC series motor", "Induction motor", "Synchronous motor", "Stepper motor"],
-    "correctAnswer": "Induction motor",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 9,
-    "question": "The 'slip' of an induction motor is defined as:",
-    "options": ["(Ns-Nr)/Ns", "(Nr-Ns)/Ns", "Ns/Nr", "Nr/Ns"],
-    "correctAnswer": "(Ns-Nr)/Ns",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 10,
-    "question": "What does PLC stand for?",
-    "options": ["Programmable Logic Controller", "Power Line Carrier", "Program Load Control", "Power Level Controller"],
-    "correctAnswer": "Programmable Logic Controller",
-    "topic": "PLC"
-  }
+  { "id": 1, "question": "Ohm's Law states that: (EEE 2018)", "options": ["V = I/R", "V = I*R", "P = V*I", "I = V*R"], "correctAnswer": "V = I*R", "topic": "Basic Electrical Engineering" },
+  { "id": 2, "question": "An ammeter is used to measure: (EEE 2018)", "options": ["Voltage", "Current", "Resistance", "Power"], "correctAnswer": "Current", "topic": "Measuring Instruments" },
+  { "id": 3, "question": "The function of a commutator in a DC machine is to: (EEE 2018)", "options": ["Convert AC to DC", "Provide cooling", "Reduce friction", "Increase speed"], "correctAnswer": "Convert AC to DC", "topic": "DC Machines" },
+  { "id": 4, "question": "The power factor in a purely inductive circuit is: (EEE 2018)", "options": ["1", "0", "0.5 leading", "0.5 lagging"], "correctAnswer": "0", "topic": "AC Circuits" },
+  { "id": 5, "question": "A transformer works on the principle of: (EEE 2018)", "options": ["Self induction", "Mutual induction", "Static electricity", "Ohm's law"], "correctAnswer": "Mutual induction", "topic": "AC Machines" },
+  { "id": 6, "question": "The speed of an induction motor depends on: (EEE 2018)", "options": ["Supply frequency", "Number of poles", "Both A and B", "Rotor resistance"], "correctAnswer": "Both A and B", "topic": "AC Motors" },
+  { "id": 7, "question": "Which of these is a part of the power transmission system? (EEE 2018)", "options": ["Generator", "Transmission lines", "Motor", "Load"], "correctAnswer": "Transmission lines", "topic": "Power Systems" },
+  { "id": 8, "question": "A fuse is a: (EEE 2018)", "options": ["Switching device", "Protective device", "Measuring device", "Controlling device"], "correctAnswer": "Protective device", "topic": "Protection of Power Systems" },
+  { "id": 9, "question": "A diode is a device that allows current to flow in: (EEE 2018)", "options": ["One direction", "Both directions", "No direction", "Depends on voltage"], "correctAnswer": "One direction", "topic": "Basic Electronics" },
+  { "id": 10, "question": "Which logic gate is known as an inverter? (EEE 2018)", "options": ["AND", "OR", "NOT", "XOR"], "correctAnswer": "NOT", "topic": "Digital Electronics" }
 ]

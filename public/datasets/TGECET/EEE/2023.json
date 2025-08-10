@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Ohm's law states that:",
-    "options": ["V = IR", "V = I/R", "I = V/R", "R = VI"],
-    "correctAnswer": "V = IR",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is used to measure current?",
-    "options": ["Voltmeter", "Ammeter", "Ohmmeter", "Wattmeter"],
-    "correctAnswer": "Ammeter",
-    "topic": "Measuring Instruments"
-  },
-  {
-    "id": 3,
-    "question": "A transformer is used to:",
-    "options": ["Change AC to DC", "Change DC to AC", "Step up or step down AC voltage", "Step up or step down DC voltage"],
-    "correctAnswer": "Step up or step down AC voltage",
-    "topic": "AC Machines"
-  },
-  {
-    "id": 4,
-    "question": "The unit of electrical power is:",
-    "options": ["Volt", "Ampere", "Ohm", "Watt"],
-    "correctAnswer": "Watt",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 5,
-    "question": "In a three-phase system, the phase difference between each phase is:",
-    "options": ["90 degrees", "120 degrees", "180 degrees", "360 degrees"],
-    "correctAnswer": "120 degrees",
-    "topic": "Power Systems"
-  },
-  {
-    "id": 6,
-    "question": "The function of a fuse is to:",
-    "options": ["Increase current", "Decrease current", "Protect the circuit from overcurrent", "Regulate voltage"],
-    "correctAnswer": "Protect the circuit from overcurrent",
-    "topic": "Protection of Power Systems"
-  },
-  {
-    "id": 7,
-    "question": "What is the function of a diode?",
-    "options": ["To allow current to flow in one direction only", "To amplify signals", "To store charge", "To resist current flow"],
-    "correctAnswer": "To allow current to flow in one direction only",
-    "topic": "Basic Electronics"
-  },
-  {
-    "id": 8,
-    "question": "Which motor is commonly used in household refrigerators?",
-    "options": ["DC series motor", "Induction motor", "Synchronous motor", "Stepper motor"],
-    "correctAnswer": "Induction motor",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 9,
-    "question": "The 'slip' of an induction motor is defined as:",
-    "options": ["(Ns-Nr)/Ns", "(Nr-Ns)/Ns", "Ns/Nr", "Nr/Ns"],
-    "correctAnswer": "(Ns-Nr)/Ns",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 10,
-    "question": "What does PLC stand for?",
-    "options": ["Programmable Logic Controller", "Power Line Carrier", "Program Load Control", "Power Level Controller"],
-    "correctAnswer": "Programmable Logic Controller",
-    "topic": "PLC"
-  }
+  { "id": 1, "question": "A closed path made for an electric current is called a(n): (EEE 2023)", "options": ["Circuit", "Junction", "Branch", "Loop"], "correctAnswer": "Circuit", "topic": "Basic Electrical Engineering" },
+  { "id": 2, "question": "A moving iron (MI) instrument can be used to measure: (EEE 2023)", "options": ["AC only", "DC only", "Both AC and DC", "Pulses only"], "correctAnswer": "Both AC and DC", "topic": "Measuring Instruments" },
+  { "id": 3, "question": "The purpose of a starter in a DC motor is to: (EEE 2023)", "options": ["Limit the starting current", "Increase the starting torque", "Control the speed", "Reverse the direction of rotation"], "correctAnswer": "Limit the starting current", "topic": "DC Machines" },
+  { "id": 4, "question": "What is the condition for resonance in a parallel RLC circuit? (EEE 2023)", "options": ["XL = XC", "The net susceptance is zero", "The impedance is maximum", "All of the above"], "correctAnswer": "All of the above", "topic": "AC Circuits" },
+  { "id": 5, "question": "The efficiency of an ideal transformer is: (EEE 2023)", "options": ["90%", "95%", "98%", "100%"], "correctAnswer": "100%", "topic": "AC Machines" },
+  { "id": 6, "question": "An alternator is a machine that converts: (EEE 2023)", "options": ["Mechanical energy into electrical energy (AC)", "Electrical energy into mechanical energy", "AC to DC", "DC to AC"], "correctAnswer": "Mechanical energy into electrical energy (AC)", "topic": "AC Machines" },
+  { "id": 7, "question": "What is the function of a substation in a power system? (EEE 2023)", "options": ["To generate power", "To step up or step down voltage", "To distribute power to consumers", "To store energy"], "correctAnswer": "To step up or step down voltage", "topic": "Power Systems" },
+  { "id": 8, "question": "The unit of illumination is: (EEE 2023)", "options": ["Lumen", "Candela", "Lux", "Watt"], "correctAnswer": "Lux", "topic": "Electrical Utilization" },
+  { "id": 9, "question": "An SCR (Silicon Controlled Rectifier) is a type of: (EEE 2023)", "options": ["Diode", "Transistor", "Thyristor", "MOSFET"], "correctAnswer": "Thyristor", "topic": "Power Electronics" },
+  { "id": 10, "question": "An electric vehicle (EV) uses a(n) ______ to power its motor. (EEE 2023)", "options": ["Internal combustion engine", "Battery pack", "Gas turbine", "Solar panel"], "correctAnswer": "Battery pack", "topic": "Electric Vehicles" }
 ]

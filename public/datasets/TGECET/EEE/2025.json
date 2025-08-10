@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Ohm's law states that:",
-    "options": ["V = IR", "V = I/R", "I = V/R", "R = VI"],
-    "correctAnswer": "V = IR",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is used to measure current?",
-    "options": ["Voltmeter", "Ammeter", "Ohmmeter", "Wattmeter"],
-    "correctAnswer": "Ammeter",
-    "topic": "Measuring Instruments"
-  },
-  {
-    "id": 3,
-    "question": "A transformer is used to:",
-    "options": ["Change AC to DC", "Change DC to AC", "Step up or step down AC voltage", "Step up or step down DC voltage"],
-    "correctAnswer": "Step up or step down AC voltage",
-    "topic": "AC Machines"
-  },
-  {
-    "id": 4,
-    "question": "The unit of electrical power is:",
-    "options": ["Volt", "Ampere", "Ohm", "Watt"],
-    "correctAnswer": "Watt",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 5,
-    "question": "In a three-phase system, the phase difference between each phase is:",
-    "options": ["90 degrees", "120 degrees", "180 degrees", "360 degrees"],
-    "correctAnswer": "120 degrees",
-    "topic": "Power Systems"
-  },
-  {
-    "id": 6,
-    "question": "The function of a fuse is to:",
-    "options": ["Increase current", "Decrease current", "Protect the circuit from overcurrent", "Regulate voltage"],
-    "correctAnswer": "Protect the circuit from overcurrent",
-    "topic": "Protection of Power Systems"
-  },
-  {
-    "id": 7,
-    "question": "What is the function of a diode?",
-    "options": ["To allow current to flow in one direction only", "To amplify signals", "To store charge", "To resist current flow"],
-    "correctAnswer": "To allow current to flow in one direction only",
-    "topic": "Basic Electronics"
-  },
-  {
-    "id": 8,
-    "question": "Which motor is commonly used in household refrigerators?",
-    "options": ["DC series motor", "Induction motor", "Synchronous motor", "Stepper motor"],
-    "correctAnswer": "Induction motor",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 9,
-    "question": "The 'slip' of an induction motor is defined as:",
-    "options": ["(Ns-Nr)/Ns", "(Nr-Ns)/Ns", "Ns/Nr", "Nr/Ns"],
-    "correctAnswer": "(Ns-Nr)/Ns",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 10,
-    "question": "What does PLC stand for?",
-    "options": ["Programmable Logic Controller", "Power Line Carrier", "Program Load Control", "Power Level Controller"],
-    "correctAnswer": "Programmable Logic Controller",
-    "topic": "PLC"
-  }
+  { "id": 1, "question": "The unit of magnetic flux is: (EEE 2025)", "options": ["Tesla", "Weber", "Henry", "Gauss"], "correctAnswer": "Weber", "topic": "Basic Electrical Engineering" },
+  { "id": 2, "question": "A CRO (Cathode Ray Oscilloscope) can be used to measure: (EEE 2025)", "options": ["Voltage", "Frequency", "Phase difference", "All of the above"], "correctAnswer": "All of the above", "topic": "Measuring Instruments" },
+  { "id": 3, "question": "The efficiency of a DC generator is maximum when: (EEE 2025)", "options": ["Variable losses = Constant losses", "Armature copper loss = 0", "Field copper loss = 0", "Mechanical losses = 0"], "correctAnswer": "Variable losses = Constant losses", "topic": "DC Machines" },
+  { "id": 4, "question": "The average value of a sinusoidal AC current over a full cycle is: (EEE 2025)", "options": ["Im/pi", "2*Im/pi", "Im/sqrt(2)", "Zero"], "correctAnswer": "Zero", "topic": "AC Circuits" },
+  { "id": 5, "question": "The core of a transformer is laminated to reduce: (EEE 2025)", "options": ["Hysteresis loss", "Eddy current loss", "Copper loss", "Stray loss"], "correctAnswer": "Eddy current loss", "topic": "AC Machines" },
+  { "id": 6, "question": "The direction of rotation of a three-phase induction motor can be reversed by: (EEE 2025)", "options": ["Increasing the voltage", "Decreasing the frequency", "Interchanging any two supply phases", "Adding resistance to the rotor"], "correctAnswer": "Interchanging any two supply phases", "topic": "AC Motors" },
+  { "id": 7, "question": "Which power plant has the highest running cost? (EEE 2025)", "options": ["Hydroelectric", "Nuclear", "Thermal (Coal)", "Diesel"], "correctAnswer": "Diesel", "topic": "Power Systems" },
+  { "id": 8, "question": "In lighting design, the term 'lumen' refers to the: (EEE 2025)", "options": ["Power consumed by the lamp", "Total light flux emitted by a source", "Intensity of light on a surface", "Color of the light"], "correctAnswer": "Total light flux emitted by a source", "topic": "Electrical Utilization" },
+  { "id": 9, "question": "A TRIAC is a: (EEE 2025)", "options": ["Unidirectional device", "Bidirectional device", "Four-quadrant switch", "Voltage-controlled device"], "correctAnswer": "Bidirectional device", "topic": "Power Electronics" },
+  { "id": 10, "question": "What is the function of a charger in an Electric Vehicle? (EEE 2025)", "options": ["To drive the motor", "To convert AC from the grid to DC to charge the battery", "To cool the battery", "To monitor the vehicle's speed"], "correctAnswer": "To convert AC from the grid to DC to charge the battery", "topic": "Electric Vehicles" }
 ]

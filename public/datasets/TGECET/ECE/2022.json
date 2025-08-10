@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the primary function of a Zener diode?",
-    "options": ["Amplification", "Rectification", "Voltage regulation", "Oscillation"],
-    "correctAnswer": "Voltage regulation",
-    "topic": "Electronic Devices"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is an active electronic component?",
-    "options": ["Resistor", "Capacitor", "Inductor", "Transistor"],
-    "correctAnswer": "Transistor",
-    "topic": "Electronic Circuits"
-  },
-  {
-    "id": 3,
-    "question": "In a communication system, what does 'modulation' mean?",
-    "options": ["Superimposing a low-frequency signal on a high-frequency carrier", "Removing noise from a signal", "Converting analog to digital", "Increasing signal power"],
-    "correctAnswer": "Superimposing a low-frequency signal on a high-frequency carrier",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 4,
-    "question": "The Boolean expression A + A'B is equivalent to:",
-    "options": ["A + B", "B", "A", "A' + B"],
-    "correctAnswer": "A + B",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 5,
-    "question": "What is the purpose of an SCR (Silicon Controlled Rectifier)?",
-    "options": ["To amplify weak signals", "To switch high power loads", "To generate high frequencies", "To store charge"],
-    "correctAnswer": "To switch high power loads",
-    "topic": "Industrial Electronics"
-  },
-  {
-    "id": 6,
-    "question": "A microprocessor with a 16-bit address bus can access how much memory?",
-    "options": ["16 KB", "32 KB", "64 KB", "128 KB"],
-    "correctAnswer": "64 KB",
-    "topic": "Microprocessors"
-  },
-  {
-    "id": 7,
-    "question": "What is the main advantage of using optical fiber for communication?",
-    "options": ["Low cost", "High bandwidth", "Easy installation", "Low security"],
-    "correctAnswer": "High bandwidth",
-    "topic": "Data Communications"
-  },
-  {
-    "id": 8,
-    "question": "What does a 'flip-flop' in digital electronics do?",
-    "options": ["It's a clock generator", "It's a 1-bit memory cell", "It's a logic gate", "It's an amplifier"],
-    "correctAnswer": "It's a 1-bit memory cell",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 9,
-    "question": "The 'superheterodyne' principle is used in:",
-    "options": ["Audio amplifiers", "Power supplies", "Radio receivers", "Oscilloscopes"],
-    "correctAnswer": "Radio receivers",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 10,
-    "question": "Which of the following is not a type of modulation?",
-    "options": ["AM", "FM", "PM", "TM"],
-    "correctAnswer": "TM",
-    "topic": "Communication Systems"
-  }
+  { "id": 1, "question": "An operational amplifier (Op-Amp) has a very high: (ECE 2022)", "options": ["Output impedance", "Input impedance", "Bandwidth", "Slew rate"], "correctAnswer": "Input impedance", "topic": "Electronic Devices" },
+  { "id": 2, "question": "The unit of reactance is: (ECE 2022)", "options": ["Henry", "Farad", "Ohm", "Siemens"], "correctAnswer": "Ohm", "topic": "Circuit Theory" },
+  { "id": 3, "question": "What is the primary function of a PLC (Programmable Logic Controller)? (ECE 2022)", "options": ["To perform complex calculations", "To automate industrial processes", "To store large amounts of data", "To manage computer networks"], "correctAnswer": "To automate industrial processes", "topic": "Industrial Electronics" },
+  { "id": 4, "question": "Pulse Code Modulation (PCM) involves: (ECE 2022)", "options": ["Sampling, Quantizing, and Encoding", "Modulating, Demodulating, and Filtering", "Multiplexing and Demultiplexing", "Amplitude, Frequency, and Phase shifting"], "correctAnswer": "Sampling, Quantizing, and Encoding", "topic": "Communication Systems" },
+  { "id": 5, "question": "A JK flip-flop is a refinement of which flip-flop to avoid the indeterminate state? (ECE 2022)", "options": ["D flip-flop", "T flip-flop", "SR flip-flop", "Master-Slave flip-flop"], "correctAnswer": "SR flip-flop", "topic": "Digital Electronics" },
+  { "id": 6, "question": "In the 8051, the 'MOV A, #34H' instruction is an example of which addressing mode? (ECE 2022)", "options": ["Register", "Direct", "Immediate", "Indirect"], "correctAnswer": "Immediate", "topic": "Microcontrollers" },
+  { "id": 7, "question": "DTH (Direct-To-Home) television service uses which type of satellite? (ECE 2022)", "options": ["LEO (Low Earth Orbit)", "MEO (Medium Earth Orbit)", "GEO (Geostationary Earth Orbit)", "Polar orbit"], "correctAnswer": "GEO (Geostationary Earth Orbit)", "topic": "Consumer Electronics" },
+  { "id": 8, "question": "Which protocol provides a connection-oriented service in the TCP/IP suite? (ECE 2022)", "options": ["IP", "UDP", "TCP", "ICMP"], "correctAnswer": "TCP", "topic": "Computer Networks" },
+  { "id": 9, "question": "The reciprocity theorem is applicable to: (ECE 2022)", "options": ["Unilateral networks only", "Bilateral networks only", "Both unilateral and bilateral networks", "Networks with dependent sources only"], "correctAnswer": "Bilateral networks only", "topic": "Circuit Theory" },
+  { "id": 10, "question": "An A/D converter converts: (ECE 2022)", "options": ["Analog signal to digital signal", "Digital signal to analog signal", "High frequency to low frequency", "AC to DC"], "correctAnswer": "Analog signal to digital signal", "topic": "Digital Electronics" }
 ]

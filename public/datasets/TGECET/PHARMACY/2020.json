@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which of the following is an example of a solid dosage form?",
-    "options": ["Syrup", "Tablet", "Suspension", "Elixir"],
-    "correctAnswer": "Tablet",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 2,
-    "question": "Aspirin is also known as:",
-    "options": ["Acetylsalicylic acid", "Paracetamol", "Ibuprofen", "Naproxen"],
-    "correctAnswer": "Acetylsalicylic acid",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 3,
-    "question": "Pharmacognosy is the study of:",
-    "options": ["Drugs from natural sources", "Synthetic drugs", "Drug dosage forms", "Drug action on the body"],
-    "correctAnswer": "Drugs from natural sources",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 4,
-    "question": "Pharmacology is the study of:",
-    "options": ["How drugs are made", "How drugs affect the body", "Drugs from plants", "The chemistry of drugs"],
-    "correctAnswer": "How drugs affect the body",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 5,
-    "question": "The process of reducing particle size of a powder is called:",
-    "options": ["Milling", "Drying", "Filtration", "Granulation"],
-    "correctAnswer": "Milling",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 6,
-    "question": "Which of these is an antacid?",
-    "options": ["Ranitidine", "Omeprazole", "Aluminum hydroxide", "Loperamide"],
-    "correctAnswer": "Aluminum hydroxide",
-    "topic": "Pharmaceutical Chemistry"
-  },
-  {
-    "id": 7,
-    "question": "Digitalis, a drug used for heart conditions, is obtained from which plant?",
-    "options": ["Cinchona", "Opium poppy", "Foxglove", "Belladonna"],
-    "correctAnswer": "Foxglove",
-    "topic": "Pharmacognosy"
-  },
-  {
-    "id": 8,
-    "question": "The term 'bioavailability' refers to:",
-    "options": ["The dose of a drug", "The rate and extent to which a drug is absorbed", "The excretion of a drug", "The side effects of a drug"],
-    "correctAnswer": "The rate and extent to which a drug is absorbed",
-    "topic": "Pharmacology"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary use of a 'suppository'?",
-    "options": ["Oral administration", "Rectal or vaginal administration", "Intravenous injection", "Topical application"],
-    "correctAnswer": "Rectal or vaginal administration",
-    "topic": "Pharmaceutics"
-  },
-  {
-    "id": 10,
-    "question": "A drug that relieves pain is called an:",
-    "options": ["Antipyretic", "Analgesic", "Antibiotic", "Antiseptic"],
-    "correctAnswer": "Analgesic",
-    "topic": "Pharmacology"
-  }
+  { "id": 1, "question": "A suspension is a: (PHARMACY 2020)", "options": ["Clear liquid", "Biphasic liquid dosage form with insoluble solid particles", "Mixture of two liquids", "Solid dosage form"], "correctAnswer": "Biphasic liquid dosage form with insoluble solid particles", "topic": "Pharmaceutics" },
+  { "id": 2, "question": "Sulphonamides are primarily: (PHARMACY 2020)", "options": ["Antiviral agents", "Antifungal agents", "Antibacterial agents", "Antiprotozoal agents"], "correctAnswer": "Antibacterial agents", "topic": "Pharmaceutical Chemistry" },
+  { "id": 3, "question": "Senna leaf is used as a: (PHARMACY 2020)", "options": ["Cardiotonic", "Laxative", "Antitussive", "Antimalarial"], "correctAnswer": "Laxative", "topic": "Pharmacognosy" },
+  { "id": 4, "question": "The 'First Pass Effect' relates to drug metabolism in the: (PHARMACY 2020)", "options": ["Kidney", "Lungs", "Liver", "Stomach"], "correctAnswer": "Liver", "topic": "Pharmacology" },
+  { "id": 5, "question": "The process of reducing particle size of a solid is known as: (PHARMACY 2020)", "options": ["Milling", "Mixing", "Drying", "Filtration"], "correctAnswer": "Milling", "topic": "Pharmaceutics" },
+  { "id": 6, "question": "An ester is formed by the reaction between an alcohol and a(n): (PHARMACY 2020)", "options": ["Aldehyde", "Ketone", "Carboxylic acid", "Amine"], "correctAnswer": "Carboxylic acid", "topic": "Pharmaceutical Chemistry" },
+  { "id": 7, "question": "Glycosides are compounds that upon hydrolysis yield: (PHARMACY 2020)", "options": ["A sugar and a non-sugar part (aglycone)", "Only amino acids", "Only proteins", "Only fats"], "correctAnswer": "A sugar and a non-sugar part (aglycone)", "topic": "Pharmacognosy" },
+  { "id": 8, "question": "A diuretic is a drug that: (PHARMACY 2020)", "options": ["Increases urine output", "Decreases urine output", "Stops coughing", "Induces sleep"], "correctAnswer": "Increases urine output", "topic": "Pharmacology" },
+  { "id": 9, "question": "An ointment is a: (PHARMACY 2020)", "options": ["Liquid dosage form", "Solid dosage form", "Semi-solid dosage form", "Gaseous dosage form"], "correctAnswer": "Semi-solid dosage form", "topic": "Pharmaceutics" },
+  { "id": 10, "question": "A buffer solution: (PHARMACY 2020)", "options": ["Changes pH rapidly", "Resists changes in pH", "Is always neutral", "Is always acidic"], "correctAnswer": "Resists changes in pH", "topic": "Pharmaceutical Chemistry" }
 ]

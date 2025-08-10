@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which data structure uses the First-In, First-Out (FIFO) principle?",
-    "options": ["Stack", "Queue", "Tree", "Graph"],
-    "correctAnswer": "Queue",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 2,
-    "question": "What is the time complexity of a binary search algorithm?",
-    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-    "correctAnswer": "O(log n)",
-    "topic": "Algorithms"
-  },
-  {
-    "id": 3,
-    "question": "In object-oriented programming, what is the concept of bundling data and methods together called?",
-    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
-    "correctAnswer": "Encapsulation",
-    "topic": "OOP"
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is not a type of SQL join?",
-    "options": ["INNER JOIN", "OUTER JOIN", "CROSS JOIN", "SIDE JOIN"],
-    "correctAnswer": "SIDE JOIN",
-    "topic": "DBMS"
-  },
-  {
-    "id": 5,
-    "question": "What is the primary purpose of an Operating System?",
-    "options": ["To provide a user interface", "To manage hardware and software resources", "To run applications", "To connect to the internet"],
-    "correctAnswer": "To manage hardware and software resources",
-    "topic": "Operating Systems"
-  },
-  {
-    "id": 6,
-    "question": "Which layer of the OSI model is responsible for routing?",
-    "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"],
-    "correctAnswer": "Network Layer",
-    "topic": "Computer Networks"
-  },
-  {
-    "id": 7,
-    "question": "What does the '2' in '2-3 tree' represent?",
-    "options": ["The number of keys", "The number of children", "The height of the tree", "The number of nodes"],
-    "correctAnswer": "The number of keys",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 8,
-    "question": "Which logic gate is known as the universal gate?",
-    "options": ["AND", "OR", "NOT", "NAND"],
-    "correctAnswer": "NAND",
-    "topic": "Digital Logic"
-  },
-  {
-    "id": 9,
-    "question": "What is the default port for HTTP?",
-    "options": ["80", "443", "21", "22"],
-    "correctAnswer": "80",
-    "topic": "Web Technologies"
-  },
-  {
-    "id": 10,
-    "question": "In C++, what is a 'constructor'?",
-    "options": ["A function that destroys an object", "A special method for creating and initializing an object", "A method to copy an object", "A private member function"],
-    "correctAnswer": "A special method for creating and initializing an object",
-    "topic": "C++"
-  }
+  { "id": 1, "question": "The 'Round Robin' scheduling algorithm is most suitable for: (CSE 2023)", "options": ["Batch systems", "Real-time systems", "Time-sharing systems", "Embedded systems"], "correctAnswer": "Time-sharing systems", "topic": "Operating Systems" },
+  { "id": 2, "question": "Which of the following is a DDL (Data Definition Language) command? (CSE 2023)", "options": ["SELECT", "UPDATE", "CREATE", "INSERT"], "correctAnswer": "CREATE", "topic": "DBMS" },
+  { "id": 3, "question": "What is the height of a balanced binary tree with 'n' nodes? (CSE 2023)", "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"], "correctAnswer": "O(log n)", "topic": "Data Structures" },
+  { "id": 4, "question": "An algorithm that always makes the choice that looks best at the moment is known as a: (CSE 2023)", "options": ["Greedy algorithm", "Dynamic programming algorithm", "Divide and conquer algorithm", "Brute-force algorithm"], "correctAnswer": "Greedy algorithm", "topic": "Algorithms" },
+  { "id": 5, "question": "The 'this' keyword in Java refers to: (CSE 2023)", "options": ["The superclass object", "The current instance of the class", "A static method", "A null object"], "correctAnswer": "The current instance of the class", "topic": "Java Programming" },
+  { "id": 6, "question": "The part of the CPU that performs arithmetic and logical operations is the: (CSE 2023)", "options": ["Control Unit", "Registers", "ALU (Arithmetic Logic Unit)", "Cache"], "correctAnswer": "ALU (Arithmetic Logic Unit)", "topic": "Computer Architecture" },
+  { "id": 7, "question": "Which logic gate is known as a universal gate? (CSE 2023)", "options": ["AND", "OR", "XOR", "NAND"], "correctAnswer": "NAND", "topic": "Digital Electronics" },
+  { "id": 8, "question": "The TCP/IP model has how many layers? (CSE 2023)", "options": ["7", "5", "4", "3"], "correctAnswer": "4", "topic": "Computer Networks" },
+  { "id": 9, "question": "The mechanism by which one class acquires the properties of another class is called: (CSE 2023)", "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"], "correctAnswer": "Inheritance", "topic": "Object Oriented Programming" },
+  { "id": 10, "question": "Which data type is used to store true/false values in Python? (CSE 2023)", "options": ["int", "string", "bool", "float"], "correctAnswer": "bool", "topic": "Python Programming" }
 ]

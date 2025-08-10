@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the main binding material in cement concrete?",
-    "options": ["Sand", "Cement", "Aggregate", "Water"],
-    "correctAnswer": "Cement",
-    "topic": "Building Materials"
-  },
-  {
-    "id": 2,
-    "question": "Which type of bond is strongest in brick masonry?",
-    "options": ["Stretcher bond", "Header bond", "English bond", "Flemish bond"],
-    "correctAnswer": "English bond",
-    "topic": "Construction Practices"
-  },
-  {
-    "id": 3,
-    "question": "The formula for calculating the area of a trapezoid is:",
-    "options": ["(a+b)/2 * h", "l*w", "pi*r^2", "0.5*b*h"],
-    "correctAnswer": "(a+b)/2 * h",
-    "topic": "Surveying"
-  },
-  {
-    "id": 4,
-    "question": "What does the 'slump test' for concrete measure?",
-    "options": ["Strength", "Workability", "Durability", "Setting time"],
-    "correctAnswer": "Workability",
-    "topic": "Concrete Technology"
-  },
-  {
-    "id": 5,
-    "question": "The 'moment of inertia' is a measure of an object's resistance to:",
-    "options": ["Linear motion", "Bending", "Torsion", "Axial load"],
-    "correctAnswer": "Bending",
-    "topic": "Strength of Materials"
-  },
-  {
-    "id": 6,
-    "question": "In soil mechanics, the 'void ratio' is the ratio of the volume of voids to the volume of:",
-    "options": ["Total volume", "Water", "Air", "Solids"],
-    "correctAnswer": "Solids",
-    "topic": "Geotechnical Engineering"
-  },
-  {
-    "id": 7,
-    "question": "Which of these is a type of deep foundation?",
-    "options": ["Strip footing", "Raft foundation", "Pile foundation", "Isolated footing"],
-    "correctAnswer": "Pile foundation",
-    "topic": "Foundation Engineering"
-  },
-  {
-    "id": 8,
-    "question": "Bernoulli's equation in fluid dynamics relates pressure, velocity, and:",
-    "options": ["Density", "Viscosity", "Elevation", "Temperature"],
-    "correctAnswer": "Elevation",
-    "topic": "Hydraulics"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary purpose of a 'weir' in irrigation engineering?",
-    "options": ["To store water", "To measure flow rate", "To raise the water level", "To generate power"],
-    "correctAnswer": "To raise the water level",
-    "topic": "Irrigation Engineering"
-  },
-  {
-    "id": 10,
-    "question": "The super-elevation on roads is provided to counteract:",
-    "options": ["Gravitational force", "Frictional force", "Centrifugal force", "Wind force"],
-    "correctAnswer": "Centrifugal force",
-    "topic": "Transportation Engineering"
-  }
+  { "id": 1, "question": "Plywood is made by bonding thin layers of wood called: (CIVIL 2023)", "options": ["Veneers", "Planks", "Battens", "Sleepers"], "correctAnswer": "Veneers", "topic": "Building Materials" },
+  { "id": 2, "question": "What is bleeding in concrete? (CIVIL 2023)", "options": ["Separation of aggregates", "Rise of water to the surface", "Formation of honeycombs", "Shrinkage cracks"], "correctAnswer": "Rise of water to the surface", "topic": "Concrete Technology" },
+  { "id": 3, "question": "The magnetic bearing of a line is the angle it makes with: (CIVIL 2023)", "options": ["True North", "Magnetic North", "Grid North", "Arbitrary North"], "correctAnswer": "Magnetic North", "topic": "Surveying" },
+  { "id": 4, "question": "The plasticity index is the numerical difference between: (CIVIL 2023)", "options": ["Liquid limit and plastic limit", "Plastic limit and shrinkage limit", "Liquid limit and shrinkage limit", "Void ratio and porosity"], "correctAnswer": "Liquid limit and plastic limit", "topic": "Geotechnical Engineering" },
+  { "id": 5, "question": "The section modulus (Z) is given by: (CIVIL 2023)", "options": ["I/y", "y/I", "A/I", "I/A"], "correctAnswer": "I/y", "topic": "Strength of Materials" },
+  { "id": 6, "question": "The horizontal member at the bottom of a door frame is called a: (CIVIL 2023)", "options": ["Sill", "Jamb", "Head", "Transom"], "correctAnswer": "Sill", "topic": "Building Construction" },
+  { "id": 7, "question": "A cross drainage work in which a canal passes over a natural drain is called: (CIVIL 2023)", "options": ["Aqueduct", "Super passage", "Level crossing", "Canal syphon"], "correctAnswer": "Aqueduct", "topic": "Irrigation Engineering" },
+  { "id": 8, "question": "In a singly reinforced beam, the effective depth is the distance from the compression edge to the: (CIVIL 2023)", "options": ["Neutral axis", "Center of tensile reinforcement", "Bottom of the beam", "Top of tensile reinforcement"], "correctAnswer": "Center of tensile reinforcement", "topic": "Reinforced Concrete Structures" },
+  { "id": 9, "question": "What is the primary objective of traffic engineering? (CIVIL 2023)", "options": ["To build more roads", "To ensure safe and efficient movement of people and goods", "To increase vehicle speeds", "To reduce travel time only"], "correctAnswer": "To ensure safe and efficient movement of people and goods", "topic": "Transportation Engineering" },
+  { "id": 10, "question": "A plate load test is used to determine the: (CIVIL 2023)", "options": ["Ultimate bearing capacity of soil", "Permeability of soil", "Water content of soil", "Compressibility of soil"], "correctAnswer": "Ultimate bearing capacity of soil", "topic": "Geotechnical Engineering" }
 ]

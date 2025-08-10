@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the main binding material in cement concrete?",
-    "options": ["Sand", "Cement", "Aggregate", "Water"],
-    "correctAnswer": "Cement",
-    "topic": "Building Materials"
-  },
-  {
-    "id": 2,
-    "question": "Which type of bond is strongest in brick masonry?",
-    "options": ["Stretcher bond", "Header bond", "English bond", "Flemish bond"],
-    "correctAnswer": "English bond",
-    "topic": "Construction Practices"
-  },
-  {
-    "id": 3,
-    "question": "The formula for calculating the area of a trapezoid is:",
-    "options": ["(a+b)/2 * h", "l*w", "pi*r^2", "0.5*b*h"],
-    "correctAnswer": "(a+b)/2 * h",
-    "topic": "Surveying"
-  },
-  {
-    "id": 4,
-    "question": "What does the 'slump test' for concrete measure?",
-    "options": ["Strength", "Workability", "Durability", "Setting time"],
-    "correctAnswer": "Workability",
-    "topic": "Concrete Technology"
-  },
-  {
-    "id": 5,
-    "question": "The 'moment of inertia' is a measure of an object's resistance to:",
-    "options": ["Linear motion", "Bending", "Torsion", "Axial load"],
-    "correctAnswer": "Bending",
-    "topic": "Strength of Materials"
-  },
-  {
-    "id": 6,
-    "question": "In soil mechanics, the 'void ratio' is the ratio of the volume of voids to the volume of:",
-    "options": ["Total volume", "Water", "Air", "Solids"],
-    "correctAnswer": "Solids",
-    "topic": "Geotechnical Engineering"
-  },
-  {
-    "id": 7,
-    "question": "Which of these is a type of deep foundation?",
-    "options": ["Strip footing", "Raft foundation", "Pile foundation", "Isolated footing"],
-    "correctAnswer": "Pile foundation",
-    "topic": "Foundation Engineering"
-  },
-  {
-    "id": 8,
-    "question": "Bernoulli's equation in fluid dynamics relates pressure, velocity, and:",
-    "options": ["Density", "Viscosity", "Elevation", "Temperature"],
-    "correctAnswer": "Elevation",
-    "topic": "Hydraulics"
-  },
-  {
-    "id": 9,
-    "question": "What is the primary purpose of a 'weir' in irrigation engineering?",
-    "options": ["To store water", "To measure flow rate", "To raise the water level", "To generate power"],
-    "correctAnswer": "To raise the water level",
-    "topic": "Irrigation Engineering"
-  },
-  {
-    "id": 10,
-    "question": "The super-elevation on roads is provided to counteract:",
-    "options": ["Gravitational force", "Frictional force", "Centrifugal force", "Wind force"],
-    "correctAnswer": "Centrifugal force",
-    "topic": "Transportation Engineering"
-  }
+  { "id": 1, "question": "What is the standard size of a modular brick? (CIVIL 2019)", "options": ["19cm x 9cm x 9cm", "20cm x 10cm x 10cm", "22cm x 11cm x 7cm", "23cm x 11.5cm x 7.5cm"], "correctAnswer": "19cm x 9cm x 9cm", "topic": "Building Materials" },
+  { "id": 2, "question": "The slump test is used to measure the: (CIVIL 2019)", "options": ["Workability of concrete", "Compressive strength of concrete", "Tensile strength of concrete", "Setting time of cement"], "correctAnswer": "Workability of concrete", "topic": "Concrete Technology" },
+  { "id": 3, "question": "The instrument used for setting out right angles in surveying is a: (CIVIL 2019)", "options": ["Theodolite", "Dumpy level", "Cross staff", "Prismatic compass"], "correctAnswer": "Cross staff", "topic": "Surveying" },
+  { "id": 4, "question": "The ratio of the volume of voids to the total volume of the soil mass is called: (CIVIL 2019)", "options": ["Void ratio", "Porosity", "Degree of saturation", "Air content"], "correctAnswer": "Porosity", "topic": "Geotechnical Engineering" },
+  { "id": 5, "question": "The point of contraflexure is a point where: (CIVIL 2019)", "options": ["Shear force is zero", "Bending moment is zero", "Bending moment changes sign", "Deflection is maximum"], "correctAnswer": "Bending moment changes sign", "topic": "Strength of Materials" },
+  { "id": 6, "question": "What is the minimum curing period for concrete? (CIVIL 2019)", "options": ["3 days", "7 days", "14 days", "28 days"], "correctAnswer": "7 days", "topic": "Building Construction" },
+  { "id": 7, "question": "A hydraulic jump occurs when: (CIVIL 2019)", "options": ["Flow changes from subcritical to supercritical", "Flow changes from supercritical to subcritical", "Flow is uniform", "Flow is laminar"], "correctAnswer": "Flow changes from supercritical to subcritical", "topic": "Hydraulics" },
+  { "id": 8, "question": "The main function of columns in a building is to transfer loads from: (CIVIL 2019)", "options": ["Slabs to beams", "Beams to foundations", "Foundations to soil", "Walls to foundation"], "correctAnswer": "Beams to foundations", "topic": "Reinforced Concrete Structures" },
+  { "id": 9, "question": "The process of turning the telescope about the vertical axis in the horizontal plane is known as: (CIVIL 2019)", "options": ["Swinging", "Transiting", "Plunging", "Reversing"], "correctAnswer": "Swinging", "topic": "Surveying" },
+  { "id": 10, "question": "Which type of foundation is used for structures on weak soils? (CIVIL 2019)", "options": ["Strip footing", "Isolated footing", "Raft foundation", "Combined footing"], "correctAnswer": "Raft foundation", "topic": "Geotechnical Engineering" }
 ]

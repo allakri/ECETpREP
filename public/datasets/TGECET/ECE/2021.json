@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the primary function of a Zener diode?",
-    "options": ["Amplification", "Rectification", "Voltage regulation", "Oscillation"],
-    "correctAnswer": "Voltage regulation",
-    "topic": "Electronic Devices"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is an active electronic component?",
-    "options": ["Resistor", "Capacitor", "Inductor", "Transistor"],
-    "correctAnswer": "Transistor",
-    "topic": "Electronic Circuits"
-  },
-  {
-    "id": 3,
-    "question": "In a communication system, what does 'modulation' mean?",
-    "options": ["Superimposing a low-frequency signal on a high-frequency carrier", "Removing noise from a signal", "Converting analog to digital", "Increasing signal power"],
-    "correctAnswer": "Superimposing a low-frequency signal on a high-frequency carrier",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 4,
-    "question": "The Boolean expression A + A'B is equivalent to:",
-    "options": ["A + B", "B", "A", "A' + B"],
-    "correctAnswer": "A + B",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 5,
-    "question": "What is the purpose of an SCR (Silicon Controlled Rectifier)?",
-    "options": ["To amplify weak signals", "To switch high power loads", "To generate high frequencies", "To store charge"],
-    "correctAnswer": "To switch high power loads",
-    "topic": "Industrial Electronics"
-  },
-  {
-    "id": 6,
-    "question": "A microprocessor with a 16-bit address bus can access how much memory?",
-    "options": ["16 KB", "32 KB", "64 KB", "128 KB"],
-    "correctAnswer": "64 KB",
-    "topic": "Microprocessors"
-  },
-  {
-    "id": 7,
-    "question": "What is the main advantage of using optical fiber for communication?",
-    "options": ["Low cost", "High bandwidth", "Easy installation", "Low security"],
-    "correctAnswer": "High bandwidth",
-    "topic": "Data Communications"
-  },
-  {
-    "id": 8,
-    "question": "What does a 'flip-flop' in digital electronics do?",
-    "options": ["It's a clock generator", "It's a 1-bit memory cell", "It's a logic gate", "It's an amplifier"],
-    "correctAnswer": "It's a 1-bit memory cell",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 9,
-    "question": "The 'superheterodyne' principle is used in:",
-    "options": ["Audio amplifiers", "Power supplies", "Radio receivers", "Oscilloscopes"],
-    "correctAnswer": "Radio receivers",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 10,
-    "question": "Which of the following is not a type of modulation?",
-    "options": ["AM", "FM", "PM", "TM"],
-    "correctAnswer": "TM",
-    "topic": "Communication Systems"
-  }
+  { "id": 1, "question": "In a CE (Common Emitter) amplifier, the output is: (ECE 2021)", "options": ["In phase with the input", "180 degrees out of phase with the input", "90 degrees out of phase with the input", "45 degrees out of phase with the input"], "correctAnswer": "180 degrees out of phase with the input", "topic": "Electronic Devices" },
+  { "id": 2, "question": "The time constant of an RL series circuit is: (ECE 2021)", "options": ["R/L", "L/R", "R*L", "1/(R*L)"], "correctAnswer": "L/R", "topic": "Circuit Theory" },
+  { "id": 3, "question": "An LVDT (Linear Variable Differential Transformer) is used to measure: (ECE 2021)", "options": ["Temperature", "Pressure", "Displacement", "Flow"], "correctAnswer": "Displacement", "topic": "Industrial Electronics" },
+  { "id": 4, "question": "Multiplexing is the process of: (ECE 2021)", "options": ["Sending multiple signals over a single channel", "Sending a single signal over multiple channels", "Modulating a signal", "Detecting a signal"], "correctAnswer": "Sending multiple signals over a single channel", "topic": "Communication Systems" },
+  { "id": 5, "question": "A full adder circuit adds: (ECE 2021)", "options": ["Two bits", "Three bits", "Four bits", "Two numbers of any length"], "correctAnswer": "Three bits", "topic": "Digital Electronics" },
+  { "id": 6, "question": "Which register in the 8051 is not bit-addressable? (ECE 2021)", "options": ["Port 0", "Port 1", "Accumulator (A)", "All are bit-addressable"], "correctAnswer": "Accumulator (A)", "topic": "Microcontrollers" },
+  { "id": 7, "question": "The PAL television system is used in which region? (ECE 2021)", "options": ["North America", "Japan", "Europe and India", "Russia"], "correctAnswer": "Europe and India", "topic": "Consumer Electronics" },
+  { "id": 8, "question": "The physical address of a network interface card is called its: (ECE 2021)", "options": ["IP Address", "MAC Address", "Port Address", "Network Address"], "correctAnswer": "MAC Address", "topic": "Computer Networks" },
+  { "id": 9, "question": "The superposition theorem is applicable to: (ECE 2021)", "options": ["Linear circuits only", "Non-linear circuits only", "Both linear and non-linear circuits", "Circuits with active elements only"], "correctAnswer": "Linear circuits only", "topic": "Circuit Theory" },
+  { "id": 10, "question": "A counter is a type of: (ECE 2021)", "options": ["Combinational circuit", "Sequential circuit", "Memory", "Logic gate"], "correctAnswer": "Sequential circuit", "topic": "Digital Electronics" }
 ]

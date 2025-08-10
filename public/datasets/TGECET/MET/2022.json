@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which process is used to improve the hardness of steel?",
-    "options": ["Annealing", "Normalizing", "Quenching", "Tempering"],
-    "correctAnswer": "Quenching",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 2,
-    "question": "The addition of carbon to iron makes it:",
-    "options": ["Softer", "Harder and stronger", "More ductile", "More malleable"],
-    "correctAnswer": "Harder and stronger",
-    "topic": "Iron-Carbon Diagram"
-  },
-  {
-    "id": 3,
-    "question": "Which of the following is a method for testing the hardness of a material?",
-    "options": ["Tensile test", "Impact test", "Rockwell test", "Fatigue test"],
-    "correctAnswer": "Rockwell test",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 4,
-    "question": "What is the primary ore of aluminum?",
-    "options": ["Hematite", "Bauxite", "Galena", "Sphalerite"],
-    "correctAnswer": "Bauxite",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 5,
-    "question": "The process of extracting metal from its ore by heating is called:",
-    "options": ["Smelting", "Leaching", "Electrolysis", "Roasting"],
-    "correctAnswer": "Smelting",
-    "topic": "Extractive Metallurgy"
-  },
-  {
-    "id": 6,
-    "question": "A 'unit cell' in crystallography is:",
-    "options": ["The smallest repeating unit of a crystal lattice", "A single crystal", "A type of defect", "A grain boundary"],
-    "correctAnswer": "The smallest repeating unit of a crystal lattice",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 7,
-    "question": "Which crystal structure is known for its high ductility?",
-    "options": ["BCC (Body-Centered Cubic)", "FCC (Face-Centered Cubic)", "HCP (Hexagonal Close-Packed)", "Simple Cubic"],
-    "correctAnswer": "FCC (Face-Centered Cubic)",
-    "topic": "Physical Metallurgy"
-  },
-  {
-    "id": 8,
-    "question": "The 'fatigue limit' of a material is its ability to withstand:",
-    "options": ["Sudden impact", "High temperature", "Repeated cyclic loading", "Corrosive environments"],
-    "correctAnswer": "Repeated cyclic loading",
-    "topic": "Mechanical Metallurgy"
-  },
-  {
-    "id": 9,
-    "question": "Stainless steel is an alloy of iron and at least 10.5% of:",
-    "options": ["Chromium", "Nickel", "Manganese", "Carbon"],
-    "correctAnswer": "Chromium",
-    "topic": "Engineering Materials"
-  },
-  {
-    "id": 10,
-    "question": "The process used to remove impurities from molten metal is known as:",
-    "options": ["Refining", "Casting", "Forging", "Rolling"],
-    "correctAnswer": "Refining",
-    "topic": "Extractive Metallurgy"
-  }
+  { "id": 1, "question": "Smelting is a process that: (MET 2022)", "options": ["Uses heat and a reducing agent to extract a metal from its ore", "Concentrates the ore", "Removes moisture from the ore", "Grinds the ore into a fine powder"], "correctAnswer": "Uses heat and a reducing agent to extract a metal from its ore", "topic": "Extractive Metallurgy" },
+  { "id": 2, "question": "Allotropy refers to the ability of an element to: (MET 2022)", "options": ["Exist in more than one crystal structure", "Dissolve in another metal", "Resist corrosion", "Be easily deformed"], "correctAnswer": "Exist in more than one crystal structure", "topic": "Physical Metallurgy" },
+  { "id": 3, "question": "The 'endurance limit' of a material is determined by which test? (MET 2022)", "options": ["Tensile test", "Hardness test", "Fatigue test", "Impact test"], "correctAnswer": "Fatigue test", "topic": "Material Testing" },
+  { "id": 4, "question": "Stainless steel is resistant to corrosion due to the formation of a passive layer of: (MET 2022)", "options": ["Iron oxide", "Chromium oxide", "Nickel oxide", "Carbon film"], "correctAnswer": "Chromium oxide", "topic": "Corrosion" },
+  { "id": 5, "question": "Spheroidizing is an annealing process used to: (MET 2022)", "options": ["Maximize hardness", "Improve machinability in high-carbon steels", "Increase strength", "Refine grain size"], "correctAnswer": "Improve machinability in high-carbon steels", "topic": "Heat Treatment" },
+  { "id": 6, "question": "In the context of metallurgy, 'gangue' refers to: (MET 2022)", "options": ["The desired metal in the ore", "The worthless material mixed with the ore", "The flux added to the furnace", "The molten metal"], "correctAnswer": "The worthless material mixed with the ore", "topic": "Extractive Metallurgy" },
+  { "id": 7, "question": "The rolling process in metallurgy is used to: (MET 2022)", "options": ["Reduce the thickness of a workpiece", "Create a hole", "Join two pieces", "Cut a metal"], "correctAnswer": "Reduce the thickness of a workpiece", "topic": "Mechanical Metallurgy" },
+  { "id": 8, "question": "The Face-Centered Cubic (FCC) crystal structure has how many atoms per unit cell? (MET 2022)", "options": ["1", "2", "4", "8"], "correctAnswer": "4", "topic": "Physical Metallurgy" },
+  { "id": 9, "question": "Dye penetrant testing is used to detect: (MET 2022)", "options": ["Internal defects", "Surface-breaking defects", "Changes in thickness", "Chemical composition"], "correctAnswer": "Surface-breaking defects", "topic": "Material Testing" },
+  { "id": 10, "question": "Cementite (Fe3C) is a compound that is: (MET 2022)", "options": ["Soft and ductile", "Hard and brittle", "Magnetic", "Liquid at room temperature"], "correctAnswer": "Hard and brittle", "topic": "Physical Metallurgy" }
 ]

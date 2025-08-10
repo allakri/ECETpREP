@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Ohm's law states that:",
-    "options": ["V = IR", "V = I/R", "I = V/R", "R = VI"],
-    "correctAnswer": "V = IR",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is used to measure current?",
-    "options": ["Voltmeter", "Ammeter", "Ohmmeter", "Wattmeter"],
-    "correctAnswer": "Ammeter",
-    "topic": "Measuring Instruments"
-  },
-  {
-    "id": 3,
-    "question": "A transformer is used to:",
-    "options": ["Change AC to DC", "Change DC to AC", "Step up or step down AC voltage", "Step up or step down DC voltage"],
-    "correctAnswer": "Step up or step down AC voltage",
-    "topic": "AC Machines"
-  },
-  {
-    "id": 4,
-    "question": "The unit of electrical power is:",
-    "options": ["Volt", "Ampere", "Ohm", "Watt"],
-    "correctAnswer": "Watt",
-    "topic": "Basic Electrical Engineering"
-  },
-  {
-    "id": 5,
-    "question": "In a three-phase system, the phase difference between each phase is:",
-    "options": ["90 degrees", "120 degrees", "180 degrees", "360 degrees"],
-    "correctAnswer": "120 degrees",
-    "topic": "Power Systems"
-  },
-  {
-    "id": 6,
-    "question": "The function of a fuse is to:",
-    "options": ["Increase current", "Decrease current", "Protect the circuit from overcurrent", "Regulate voltage"],
-    "correctAnswer": "Protect the circuit from overcurrent",
-    "topic": "Protection of Power Systems"
-  },
-  {
-    "id": 7,
-    "question": "What is the function of a diode?",
-    "options": ["To allow current to flow in one direction only", "To amplify signals", "To store charge", "To resist current flow"],
-    "correctAnswer": "To allow current to flow in one direction only",
-    "topic": "Basic Electronics"
-  },
-  {
-    "id": 8,
-    "question": "Which motor is commonly used in household refrigerators?",
-    "options": ["DC series motor", "Induction motor", "Synchronous motor", "Stepper motor"],
-    "correctAnswer": "Induction motor",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 9,
-    "question": "The 'slip' of an induction motor is defined as:",
-    "options": ["(Ns-Nr)/Ns", "(Nr-Ns)/Ns", "Ns/Nr", "Nr/Ns"],
-    "correctAnswer": "(Ns-Nr)/Ns",
-    "topic": "AC Motors"
-  },
-  {
-    "id": 10,
-    "question": "What does PLC stand for?",
-    "options": ["Programmable Logic Controller", "Power Line Carrier", "Program Load Control", "Power Level Controller"],
-    "correctAnswer": "Programmable Logic Controller",
-    "topic": "PLC"
-  }
+  { "id": 1, "question": "Kirchhoff's Current Law (KCL) is applicable at a: (EEE 2019)", "options": ["Loop", "Junction", "Resistor", "Source"], "correctAnswer": "Junction", "topic": "Basic Electrical Engineering" },
+  { "id": 2, "question": "A voltmeter is connected in ______ with the component across which voltage is to be measured. (EEE 2019)", "options": ["Series", "Parallel", "Series-Parallel", "Any way"], "correctAnswer": "Parallel", "topic": "Measuring Instruments" },
+  { "id": 3, "question": "The back EMF in a DC motor: (EEE 2019)", "options": ["Aids the applied voltage", "Opposes the applied voltage", "Is always zero", "Is maximum at starting"], "correctAnswer": "Opposes the applied voltage", "topic": "DC Machines" },
+  { "id": 4, "question": "The RMS value of a sinusoidal AC voltage is given by: (EEE 2019)", "options": ["Vm", "Vm/2", "Vm/sqrt(2)", "2*Vm"], "correctAnswer": "Vm/sqrt(2)", "topic": "AC Circuits" },
+  { "id": 5, "question": "The efficiency of a transformer is maximum when: (EEE 2019)", "options": ["Iron losses = 0", "Copper losses = 0", "Iron losses = Copper losses", "Hysteresis losses = Eddy current losses"], "correctAnswer": "Iron losses = Copper losses", "topic": "AC Machines" },
+  { "id": 6, "question": "The slip of a synchronous motor is: (EEE 2019)", "options": ["1", "0", "-1", "Varies with load"], "correctAnswer": "0", "topic": "AC Motors" },
+  { "id": 7, "question": "In India, the standard frequency for AC power supply is: (EEE 2019)", "options": ["60 Hz", "50 Hz", "100 Hz", "25 Hz"], "correctAnswer": "50 Hz", "topic": "Power Systems" },
+  { "id": 8, "question": "A circuit breaker is a device that can: (EEE 2019)", "options": ["Make a circuit", "Break a circuit automatically", "Both make and break a circuit", "Measure current"], "correctAnswer": "Both make and break a circuit", "topic": "Protection of Power Systems" },
+  { "id": 9, "question": "A transistor has how many PN junctions? (EEE 2019)", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "topic": "Basic Electronics" },
+  { "id": 10, "question": "A flip-flop is a: (EEE 2019)", "options": ["Combinational circuit", "Sequential circuit", "Memory element", "Both B and C"], "correctAnswer": "Both B and C", "topic": "Digital Electronics" }
 ]

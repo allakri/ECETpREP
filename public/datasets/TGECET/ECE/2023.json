@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "What is the primary function of a Zener diode?",
-    "options": ["Amplification", "Rectification", "Voltage regulation", "Oscillation"],
-    "correctAnswer": "Voltage regulation",
-    "topic": "Electronic Devices"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is an active electronic component?",
-    "options": ["Resistor", "Capacitor", "Inductor", "Transistor"],
-    "correctAnswer": "Transistor",
-    "topic": "Electronic Circuits"
-  },
-  {
-    "id": 3,
-    "question": "In a communication system, what does 'modulation' mean?",
-    "options": ["Superimposing a low-frequency signal on a high-frequency carrier", "Removing noise from a signal", "Converting analog to digital", "Increasing signal power"],
-    "correctAnswer": "Superimposing a low-frequency signal on a high-frequency carrier",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 4,
-    "question": "The Boolean expression A + A'B is equivalent to:",
-    "options": ["A + B", "B", "A", "A' + B"],
-    "correctAnswer": "A + B",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 5,
-    "question": "What is the purpose of an SCR (Silicon Controlled Rectifier)?",
-    "options": ["To amplify weak signals", "To switch high power loads", "To generate high frequencies", "To store charge"],
-    "correctAnswer": "To switch high power loads",
-    "topic": "Industrial Electronics"
-  },
-  {
-    "id": 6,
-    "question": "A microprocessor with a 16-bit address bus can access how much memory?",
-    "options": ["16 KB", "32 KB", "64 KB", "128 KB"],
-    "correctAnswer": "64 KB",
-    "topic": "Microprocessors"
-  },
-  {
-    "id": 7,
-    "question": "What is the main advantage of using optical fiber for communication?",
-    "options": ["Low cost", "High bandwidth", "Easy installation", "Low security"],
-    "correctAnswer": "High bandwidth",
-    "topic": "Data Communications"
-  },
-  {
-    "id": 8,
-    "question": "What does a 'flip-flop' in digital electronics do?",
-    "options": ["It's a clock generator", "It's a 1-bit memory cell", "It's a logic gate", "It's an amplifier"],
-    "correctAnswer": "It's a 1-bit memory cell",
-    "topic": "Digital Electronics"
-  },
-  {
-    "id": 9,
-    "question": "The 'superheterodyne' principle is used in:",
-    "options": ["Audio amplifiers", "Power supplies", "Radio receivers", "Oscilloscopes"],
-    "correctAnswer": "Radio receivers",
-    "topic": "Communication Systems"
-  },
-  {
-    "id": 10,
-    "question": "Which of the following is not a type of modulation?",
-    "options": ["AM", "FM", "PM", "TM"],
-    "correctAnswer": "TM",
-    "topic": "Communication Systems"
-  }
+  { "id": 1, "question": "A photodiode works in: (ECE 2023)", "options": ["Forward bias", "Reverse bias", "Both forward and reverse bias", "No bias"], "correctAnswer": "Reverse bias", "topic": "Electronic Devices" },
+  { "id": 2, "question": "The power factor of a purely resistive circuit is: (ECE 2023)", "options": ["0", "1", "0.5", "Lagging"], "correctAnswer": "1", "topic": "Circuit Theory" },
+  { "id": 3, "question": "A strain gauge measures: (ECE 2023)", "options": ["Force or strain", "Temperature", "Light intensity", "Pressure"], "correctAnswer": "Force or strain", "topic": "Industrial Electronics" },
+  { "id": 4, "question": "What is the purpose of a 'repeater' in a communication system? (ECE 2023)", "options": ["To modulate the signal", "To filter noise", "To regenerate and retransmit the signal", "To store the signal"], "correctAnswer": "To regenerate and retransmit the signal", "topic": "Communication Systems" },
+  { "id": 5, "question": "Which of these represents De Morgan's theorem? (ECE 2023)", "options": ["(A.B)' = A' + B'", "A+A' = 1", "A.(A+B) = A", "A+AB = A"], "correctAnswer": "(A.B)' = A' + B'", "topic": "Digital Electronics" },
+  { "id": 6, "question": "What does the instruction 'LJMP' stand for in 8051 assembly? (ECE 2023)", "options": ["Local Jump", "Long Jump", "Loop Jump", "Latch Jump"], "correctAnswer": "Long Jump", "topic": "Microcontrollers" },
+  { "id": 7, "question": "The audio signal in television is: (ECE 2023)", "options": ["Amplitude Modulated (AM)", "Frequency Modulated (FM)", "Phase Modulated (PM)", "Pulse Code Modulated (PCM)"], "correctAnswer": "Frequency Modulated (FM)", "topic": "Consumer Electronics" },
+  { "id": 8, "question": "The term 'Bluetooth' refers to a: (ECE 2023)", "options": ["Long-range wireless technology", "Short-range wireless technology", "Wired networking standard", "Satellite communication protocol"], "correctAnswer": "Short-range wireless technology", "topic": "Computer Networks" },
+  { "id": 9, "question": "Maximum Power Transfer Theorem states that maximum power is delivered to a load when the load resistance is: (ECE 2023)", "options": ["Zero", "Infinite", "Equal to the source resistance", "Half the source resistance"], "correctAnswer": "Equal to the source resistance", "topic": "Circuit Theory" },
+  { "id": 10, "question": "A register is a group of: (ECE 2023)", "options": ["Logic gates", "Flip-flops", "Capacitors", "Transistors"], "correctAnswer": "Flip-flops", "topic": "Digital Electronics" }
 ]

@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "The first law of thermodynamics is based on the principle of conservation of:",
-    "options": ["Mass", "Momentum", "Energy", "Charge"],
-    "correctAnswer": "Energy",
-    "topic": "Thermodynamics"
-  },
-  {
-    "id": 2,
-    "question": "Which of the following is a type of gear?",
-    "options": ["Spur", "Bevel", "Helical", "All of the above"],
-    "correctAnswer": "All of the above",
-    "topic": "Theory of Machines"
-  },
-  {
-    "id": 3,
-    "question": "The property of a fluid to resist its own flow is called:",
-    "options": ["Viscosity", "Density", "Surface tension", "Compressibility"],
-    "correctAnswer": "Viscosity",
-    "topic": "Fluid Mechanics"
-  },
-  {
-    "id": 4,
-    "question": "What is the primary purpose of a 'governor' in an engine?",
-    "options": ["To increase speed", "To decrease speed", "To maintain a constant speed", "To stop the engine"],
-    "correctAnswer": "To maintain a constant speed",
-    "topic": "Theory of Machines"
-  },
-  {
-    "id": 5,
-    "question": "Hooke's Law states that stress is directly proportional to:",
-    "options": ["Strain", "Force", "Area", "Length"],
-    "correctAnswer": "Strain",
-    "topic": "Solid Mechanics"
-  },
-  {
-    "id": 6,
-    "question": "Which of these materials is the most ductile?",
-    "options": ["Cast Iron", "Mild Steel", "Glass", "Concrete"],
-    "correctAnswer": "Mild Steel",
-    "topic": "Engineering Materials"
-  },
-  {
-    "id": 7,
-    "question": "The process of joining two metal pieces by heating them to a molten state is called:",
-    "options": ["Welding", "Brazing", "Soldering", "Riveting"],
-    "correctAnswer": "Welding",
-    "topic": "Manufacturing Technology"
-  },
-  {
-    "id": 8,
-    "question": "A Carnot cycle consists of:",
-    "options": ["Two isothermal and two adiabatic processes", "Two constant volume and two constant pressure processes", "Two isothermal and two constant volume processes", "Two adiabatic and two constant pressure processes"],
-    "correctAnswer": "Two isothermal and two adiabatic processes",
-    "topic": "Thermodynamics"
-  },
-  {
-    "id": 9,
-    "question": "What does CAD stand for in the context of engineering?",
-    "options": ["Computer-Aided Design", "Computer-Assisted Drawing", "Car-Aided Driving", "Computer-Aided Database"],
-    "correctAnswer": "Computer-Aided Design",
-    "topic": "CAD/CAM"
-  },
-  {
-    "id": 10,
-    "question": "The efficiency of a heat engine is the ratio of:",
-    "options": ["Work output to heat input", "Heat input to work output", "Work input to heat output", "Heat output to work input"],
-    "correctAnswer": "Work output to heat input",
-    "topic": "Heat Power Engineering"
-  }
+  { "id": 1, "question": "Milling is a machining process that uses a: (MECH 2022)", "options": ["Single-point cutting tool", "Multi-point rotating cutter", "Abrasive wheel", "Broaching tool"], "correctAnswer": "Multi-point rotating cutter", "topic": "Manufacturing Technology" },
+  { "id": 2, "question": "The ability of a material to be hammered or rolled into thin sheets is called: (MECH 2022)", "options": ["Ductility", "Malleability", "Plasticity", "Elasticity"], "correctAnswer": "Malleability", "topic": "Engineering Materials" },
+  { "id": 3, "question": "The term 'break-even point' in industrial management refers to the point where: (MECH 2202)", "options": ["Total revenue equals total cost", "Profit is maximum", "Sales are highest", "Costs are minimum"], "correctAnswer": "Total revenue equals total cost", "topic": "Industrial Management" },
+  { "id": 4, "question": "Entropy is a measure of the: (MECH 2022)", "options": ["Heat content of a system", "Disorder or randomness of a system", "Work done by a system", "Temperature of a system"], "correctAnswer": "Disorder or randomness of a system", "topic": "Thermodynamics" },
+  { "id": 5, "question": "The process of removing moisture from air is called: (MECH 2022)", "options": ["Humidification", "Dehumidification", "Cooling", "Heating"], "correctAnswer": "Dehumidification", "topic": "Refrigeration and Air Conditioning" },
+  { "id": 6, "question": "A turbine is a device that converts: (MECH 2022)", "options": ["Kinetic energy of a fluid into mechanical energy", "Mechanical energy into kinetic energy of a fluid", "Pressure energy into heat energy", "Heat energy into pressure energy"], "correctAnswer": "Kinetic energy of a fluid into mechanical energy", "topic": "Fluid Mechanics" },
+  { "id": 7, "question": "The point in a beam where the bending moment is zero is called the: (MECH 2022)", "options": ["Point of contraflexure", "Point of inflection", "Point of zero shear", "Both A and B"], "correctAnswer": "Both A and B", "topic": "Solid Mechanics" },
+  { "id": 8, "question": "A V-belt drive is used for: (MECH 2022)", "options": ["Transmitting power over long distances", "Transmitting power between parallel shafts at high speeds", "Transmitting power between non-parallel shafts", "High torque transmission at low speeds"], "correctAnswer": "Transmitting power between parallel shafts at high speeds", "topic": "Design of Machine Elements" },
+  { "id": 9, "question": "The 'draft' in forging is a: (MECH 2022)", "options": "Taper given to the sides of the die cavity", "Lubricant used in the process", "Defect in the final product", "Tool used for hammering"], "correctAnswer": "Taper given to the sides of the die cavity", "topic": "Manufacturing Technology" },
+  { "id": 10, "question": "The Diesel cycle is the ideal cycle for: (MECH 2022)", "options": ["Petrol engines", "Diesel engines", "Gas turbines", "Steam engines"], "correctAnswer": "Diesel engines", "topic": "Heat Power Engineering" }
 ]

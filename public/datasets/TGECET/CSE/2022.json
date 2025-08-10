@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which data structure uses the First-In, First-Out (FIFO) principle?",
-    "options": ["Stack", "Queue", "Tree", "Graph"],
-    "correctAnswer": "Queue",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 2,
-    "question": "What is the time complexity of a binary search algorithm?",
-    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-    "correctAnswer": "O(log n)",
-    "topic": "Algorithms"
-  },
-  {
-    "id": 3,
-    "question": "In object-oriented programming, what is the concept of bundling data and methods together called?",
-    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
-    "correctAnswer": "Encapsulation",
-    "topic": "OOP"
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is not a type of SQL join?",
-    "options": ["INNER JOIN", "OUTER JOIN", "CROSS JOIN", "SIDE JOIN"],
-    "correctAnswer": "SIDE JOIN",
-    "topic": "DBMS"
-  },
-  {
-    "id": 5,
-    "question": "What is the primary purpose of an Operating System?",
-    "options": ["To provide a user interface", "To manage hardware and software resources", "To run applications", "To connect to the internet"],
-    "correctAnswer": "To manage hardware and software resources",
-    "topic": "Operating Systems"
-  },
-  {
-    "id": 6,
-    "question": "Which layer of the OSI model is responsible for routing?",
-    "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"],
-    "correctAnswer": "Network Layer",
-    "topic": "Computer Networks"
-  },
-  {
-    "id": 7,
-    "question": "What does the '2' in '2-3 tree' represent?",
-    "options": ["The number of keys", "The number of children", "The height of the tree", "The number of nodes"],
-    "correctAnswer": "The number of keys",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 8,
-    "question": "Which logic gate is known as the universal gate?",
-    "options": ["AND", "OR", "NOT", "NAND"],
-    "correctAnswer": "NAND",
-    "topic": "Digital Logic"
-  },
-  {
-    "id": 9,
-    "question": "What is the default port for HTTP?",
-    "options": ["80", "443", "21", "22"],
-    "correctAnswer": "80",
-    "topic": "Web Technologies"
-  },
-  {
-    "id": 10,
-    "question": "In C++, what is a 'constructor'?",
-    "options": ["A function that destroys an object", "A special method for creating and initializing an object", "A method to copy an object", "A private member function"],
-    "correctAnswer": "A special method for creating and initializing an object",
-    "topic": "C++"
-  }
+  { "id": 1, "question": "A deadlock in an operating system is: (CSE 2022)", "options": ["A situation where processes are waiting indefinitely for each other", "A process that has terminated", "An error in the kernel", "A process hogging CPU time"], "correctAnswer": "A situation where processes are waiting indefinitely for each other", "topic": "Operating Systems" },
+  { "id": 2, "question": "The 'SELECT' statement in SQL is used to: (CSE 2022)", "options": ["Insert data", "Update data", "Delete data", "Query data"], "correctAnswer": "Query data", "topic": "DBMS" },
+  { "id": 3, "question": "Which of the following is a non-linear data structure? (CSE 2022)", "options": ["Array", "Stack", "Queue", "Tree"], "correctAnswer": "Tree", "topic": "Data Structures" },
+  { "id": 4, "question": "What is the worst-case time complexity of Bubble Sort? (CSE 2022)", "options": ["O(n)", "O(log n)", "O(n^2)", "O(n log n)"], "correctAnswer": "O(n^2)", "topic": "Algorithms" },
+  { "id": 5, "question": "What is the main purpose of the 'finally' block in a Java try-catch statement? (CSE 2022)", "options": ["To handle the exception", "To execute code regardless of whether an exception occurs", "To re-throw the exception", "To log errors"], "correctAnswer": "To execute code regardless of whether an exception occurs", "topic": "Java Programming" },
+  { "id": 6, "question": "What is virtual memory? (CSE 2022)", "options": ["A part of RAM used as a cache", "A memory management technique that provides an 'idealized' abstraction of storage resources", "A type of ROM", "A special-purpose CPU register"], "correctAnswer": "A memory management technique that provides an 'idealized' abstraction of storage resources", "topic": "Computer Architecture" },
+  { "id": 7, "question": "A decoder is a combinational circuit that converts: (CSE 2022)", "options": ["Binary code to a single output line", "Binary information from 'n' input lines to a maximum of 2^n unique output lines", "Multiple input lines to a single output line", "Analog signals to digital signals"], "correctAnswer": "Binary information from 'n' input lines to a maximum of 2^n unique output lines", "topic": "Digital Electronics" },
+  { "id": 8, "question": "What is an IP address? (CSE 2022)", "options": ["A hardware address", "A unique string of numbers that identifies each computer on a network", "A name for a website", "A physical port on a router"], "correctAnswer": "A unique string of numbers that identifies each computer on a network", "topic": "Computer Networks" },
+  { "id": 9, "question": "In C++, what is a 'virtual function'? (CSE 2022)", "options": ["A member function that you expect to be redefined in derived classes", "A function that does not exist", "A static function", "A friend function"], "correctAnswer": "A member function that you expect to be redefined in derived classes", "topic": "Object Oriented Programming" },
+  { "id": 10, "question": "In Python, which keyword is used to define a function? (CSE 2022)", "options": ["function", "def", "fun", "define"], "correctAnswer": "def", "topic": "Python Programming" }
 ]

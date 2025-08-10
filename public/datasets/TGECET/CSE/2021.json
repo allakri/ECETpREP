@@ -1,72 +1,12 @@
 [
-  {
-    "id": 1,
-    "question": "Which data structure uses the First-In, First-Out (FIFO) principle?",
-    "options": ["Stack", "Queue", "Tree", "Graph"],
-    "correctAnswer": "Queue",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 2,
-    "question": "What is the time complexity of a binary search algorithm?",
-    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
-    "correctAnswer": "O(log n)",
-    "topic": "Algorithms"
-  },
-  {
-    "id": 3,
-    "question": "In object-oriented programming, what is the concept of bundling data and methods together called?",
-    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
-    "correctAnswer": "Encapsulation",
-    "topic": "OOP"
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is not a type of SQL join?",
-    "options": ["INNER JOIN", "OUTER JOIN", "CROSS JOIN", "SIDE JOIN"],
-    "correctAnswer": "SIDE JOIN",
-    "topic": "DBMS"
-  },
-  {
-    "id": 5,
-    "question": "What is the primary purpose of an Operating System?",
-    "options": ["To provide a user interface", "To manage hardware and software resources", "To run applications", "To connect to the internet"],
-    "correctAnswer": "To manage hardware and software resources",
-    "topic": "Operating Systems"
-  },
-  {
-    "id": 6,
-    "question": "Which layer of the OSI model is responsible for routing?",
-    "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"],
-    "correctAnswer": "Network Layer",
-    "topic": "Computer Networks"
-  },
-  {
-    "id": 7,
-    "question": "What does the '2' in '2-3 tree' represent?",
-    "options": ["The number of keys", "The number of children", "The height of the tree", "The number of nodes"],
-    "correctAnswer": "The number of keys",
-    "topic": "Data Structures"
-  },
-  {
-    "id": 8,
-    "question": "Which logic gate is known as the universal gate?",
-    "options": ["AND", "OR", "NOT", "NAND"],
-    "correctAnswer": "NAND",
-    "topic": "Digital Logic"
-  },
-  {
-    "id": 9,
-    "question": "What is the default port for HTTP?",
-    "options": ["80", "443", "21", "22"],
-    "correctAnswer": "80",
-    "topic": "Web Technologies"
-  },
-  {
-    "id": 10,
-    "question": "In C++, what is a 'constructor'?",
-    "options": ["A function that destroys an object", "A special method for creating and initializing an object", "A method to copy an object", "A private member function"],
-    "correctAnswer": "A special method for creating and initializing an object",
-    "topic": "C++"
-  }
+  { "id": 1, "question": "What is 'thrashing' in the context of operating systems? (CSE 2021)", "options": ["High CPU utilization", "High I/O activity", "Excessive paging activity", "A security attack"], "correctAnswer": "Excessive paging activity", "topic": "Operating Systems" },
+  { "id": 2, "question": "Which normalization form deals with transitive dependencies? (CSE 2021)", "options": ["1NF", "2NF", "3NF", "BCNF"], "correctAnswer": "3NF", "topic": "DBMS" },
+  { "id": 3, "question": "The number of edges in a complete graph with 'n' vertices is: (CSE 2021)", "options": ["n-1", "n", "n*(n-1)/2", "n^2"], "correctAnswer": "n*(n-1)/2", "topic": "Data Structures" },
+  { "id": 4, "question": "Which algorithm design technique is used in the Floyd-Warshall algorithm? (CSE 2021)", "options": ["Greedy method", "Divide and Conquer", "Dynamic Programming", "Backtracking"], "correctAnswer": "Dynamic Programming", "topic": "Algorithms" },
+  { "id": 5, "question": "In Java, which collection class allows duplicate elements? (CSE 2021)", "options": ["HashSet", "TreeSet", "ArrayList", "HashMap"], "correctAnswer": "ArrayList", "topic": "Java Programming" },
+  { "id": 6, "question": "Cache memory acts between: (CSE 2021)", "options": ["CPU and RAM", "RAM and Hard Disk", "CPU and Hard Disk", "All of the above"], "correctAnswer": "CPU and RAM", "topic": "Computer Architecture" },
+  { "id": 7, "question": "The expression A + A'B simplifies to: (CSE 2021)", "options": ["A + B", "A' + B", "A", "B"], "correctAnswer": "A + B", "topic": "Digital Electronics" },
+  { "id": 8, "question": "What is a firewall in computer networks? (CSE 2021)", "options": ["A system that prevents unauthorized access", "A web browser", "An antivirus software", "A type of physical cable"], "correctAnswer": "A system that prevents unauthorized access", "topic": "Computer Networks" },
+  { "id": 9, "question": "The ability of an object to take on many forms is known as: (CSE 2021)", "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"], "correctAnswer": "Polymorphism", "topic": "Object Oriented Programming" },
+  { "id": 10, "question": "What is the purpose of the 'DOCTYPE' declaration in HTML? (CSE 2021)", "options": ["To create a new document", "To link a stylesheet", "To inform the browser about the HTML version", "To add a comment"], "correctAnswer": "To inform the browser about the HTML version", "topic": "Web Technologies" }
 ]
