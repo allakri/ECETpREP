@@ -1,9 +1,8 @@
 
-
 "use client";
 
 import Link from "next/link";
-import { Download, Brain, Clock, ShieldQuestion, BookCopy, BookOpen, ChevronsRight, Award, Trophy } from "lucide-react";
+import { Download, Brain, Clock, ShieldQuestion, BookCopy, BookOpen, ChevronsRight, Award, Trophy, MessageCircleQuestion } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -49,6 +48,16 @@ const prepTips = [
 
 export function CourseClientPage({ course, children }: CourseClientPageProps) {
   const router = useRouter();
+
+  const handleAskAIAssistant = () => {
+    // Set course context for the chat bot
+    const courseContextForAI = {
+      title: course.title,
+      syllabus: course.syllabus,
+    };
+    sessionStorage.setItem('courseContext', JSON.stringify(courseContextForAI));
+    router.push('/chat');
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-secondary/10">
@@ -148,36 +157,6 @@ export function CourseClientPage({ course, children }: CourseClientPageProps) {
                 className="space-y-8"
               >
                 <motion.div variants={itemVariants}>
-                  <Card className="shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-3"><Clock/> Study Plan</CardTitle>
-                      <CardDescription>A suggested 4-week roadmap.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-3">
-                      {["Week 1: Core Concepts", "Week 2: Advanced Topics", "Week 3: Practice & Mocks", "Week 4: Revision"].map((item, i) => (
-                          <div key={i} className="flex items-center text-sm p-3 bg-muted/50 rounded-md">
-                              <ChevronsRight className="h-4 w-4 mr-2 text-primary"/>
-                              <span>{item}</span>
-                          </div>
-                      ))}
-                    </CardContent>
-                  </Card>
-                </motion.div>
-
-                <motion.div variants={itemVariants}>
-                  <Card className="shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-3"><Download/> Downloadables</CardTitle>
-                      <CardDescription>Get useful resources.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-3">
-                      <Button variant="outline" className="w-full justify-start gap-2"><Download className="h-4 w-4"/> Syllabus PDF</Button>
-                      <Button variant="outline" className="w-full justify-start gap-2"><Download className="h-4 w-4"/> Practice MCQs</Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-                
-                <motion.div variants={itemVariants}>
                   <Card className="shadow-lg bg-accent/10 border-accent/20">
                       <CardHeader>
                           <CardTitle className="flex items-center gap-3 text-accent"><Brain /> AI Mentor</CardTitle>
@@ -188,6 +167,20 @@ export function CourseClientPage({ course, children }: CourseClientPageProps) {
                             <Link href={`/courses/${course.slug}/ai-mentor`}>
                                 Get AI Study Plan
                             </Link>
+                          </Button>
+                      </CardContent>
+                  </Card>
+                </motion.div>
+
+                 <motion.div variants={itemVariants}>
+                  <Card className="shadow-lg bg-secondary/10 border-secondary/20">
+                      <CardHeader>
+                          <CardTitle className="flex items-center gap-3 text-secondary"><MessageCircleQuestion/> AI Doubt Corner</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                          <p className="text-sm text-muted-foreground mb-4">Stuck on a specific topic? Ask our AI assistant for a quick explanation.</p>
+                          <Button onClick={handleAskAIAssistant} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                            Ask AI Assistant
                           </Button>
                       </CardContent>
                   </Card>

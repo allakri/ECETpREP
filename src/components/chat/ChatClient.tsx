@@ -11,14 +11,14 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Home, Send, Bot, User, Loader2, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Home, Send, Bot, User, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { AppHeader } from '../layout/AppHeader';
 import { AppFooter } from '../layout/AppFooter';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/use-auth';
 import { Skeleton } from '../ui/skeleton';
-import { Course } from '@/lib/courses';
+import type { Course } from '@/lib/courses';
 
 type ChatMessage = {
   role: 'user' | 'model';
@@ -59,6 +59,7 @@ export default function ChatClient() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [examContext, setExamContext] = useState<{ questions: Question[], answers: AnswerSheet } | null>(null);
+  const [courseContext, setCourseContext] = useState<Omit<Course, 'icon' | 'description' | 'slug' | 'tags'> | null>(null);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -69,14 +70,20 @@ export default function ChatClient() {
 
 
   useEffect(() => {
-    // Load exam results from local storage to provide context to the chat
+    // Load exam results and course context from storage to provide context to the chat
     const storedAnswers = localStorage.getItem('ecetExamAnswers');
     const storedQuestions = localStorage.getItem('ecetExamQuestions');
+    const storedCourseContext = sessionStorage.getItem('courseContext');
+    
     if (storedAnswers && storedQuestions) {
       setExamContext({
         answers: JSON.parse(storedAnswers),
         questions: JSON.parse(storedQuestions),
       });
+    }
+
+    if(storedCourseContext) {
+      setCourseContext(JSON.parse(storedCourseContext));
     }
   }, []);
 
@@ -103,6 +110,7 @@ export default function ChatClient() {
         history: history,
         examQuestions: examContext?.questions,
         examAnswers: examContext?.answers,
+        courseContext: courseContext || undefined,
       });
 
       const aiMessage: ChatMessage = { role: 'model', text: result.answer };
@@ -129,6 +137,9 @@ export default function ChatClient() {
   }, [messages]);
   
   const getWelcomeMessage = () => {
+    if (courseContext) {
+      return `Welcome! As an AI expert for ${courseContext.title}, I'm here to help you master your subjects. Ask me anything from syllabus details to complex concepts.`;
+    }
     if (examContext) {
       return "I see you've just finished an exam. You can ask me which questions you got wrong or right, and I can help explain the concepts. Or, ask me anything else about ECET subjects!";
     }
