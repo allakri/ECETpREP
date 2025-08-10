@@ -12,6 +12,8 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 import {MessageData} from 'genkit/experimental/ai';
+import {courses} from '@/lib/courses';
+import type {Course} from '@/lib/courses';
 
 const QuestionSchema = z.object({
   id: z.number(),
@@ -50,6 +52,22 @@ const DoubtClearingOutputSchema = z.object({
 });
 export type DoubtClearingOutput = z.infer<typeof DoubtClearingOutputSchema>;
 
+// Agentic Tool: Define a tool for the AI to get course syllabus information.
+const getCourseSyllabus = ai.defineTool(
+    {
+        name: 'getCourseSyllabus',
+        description: 'Get the detailed syllabus for a specific engineering branch/course.',
+        inputSchema: z.object({ courseTitle: z.string().describe("The title of the course, e.g., 'Computer Science' or 'Mechanical Engineering'.") }),
+        outputSchema: z.custom<Course>(),
+    },
+    async ({ courseTitle }) => {
+        const course = courses.find(c => c.title.toLowerCase().includes(courseTitle.toLowerCase()));
+        if (!course) throw new Error(`Course "${courseTitle}" not found.`);
+        return course;
+    }
+);
+
+
 export async function clearDoubt(input: DoubtClearingInput): Promise<DoubtClearingOutput> {
   return doubtClearingFlow(input);
 }
@@ -58,6 +76,7 @@ const doubtClearingPrompt = ai.definePrompt({
   name: 'doubtClearingPrompt',
   input: {schema: DoubtClearingInputSchema},
   output: {schema: DoubtClearingOutputSchema},
+  tools: [getCourseSyllabus],
   prompt: `You are an expert AI tutor for the ECET (Engineering Common Entrance Test).
 {{#if courseContext}}
 You are a domain-specific expert for the "{{courseContext.title}}" course. Your persona should reflect deep knowledge in this area.
@@ -66,43 +85,27 @@ Your one and only goal is to help students clear their doubts about ECET subject
 {{/if}}
 
 You MUST follow these rules strictly:
-1.  ONLY answer questions related to ECET subjects (like Mathematics, Physics, Chemistry, and specific engineering disciplines like Electronics, Computer Science, etc.).
-2.  If the user asks a question that is NOT related to ECET subjects (e.g., about movies, politics, personal opinions, or other exams), you MUST politely decline to answer. Gently guide them to stay focused on their exam preparation. For example, say: "That's an interesting question, but my purpose is to help you with your ECET preparation. Let's focus on the subjects that will help you succeed. Do you have a question about a specific topic from your exam?"
+1.  ONLY answer questions related to ECET subjects (like Mathematics, Physics, Chemistry, and specific engineering disciplines).
+2.  If the user asks a question that is NOT related to ECET subjects (e.g., movies, politics), politely decline. Gently guide them to stay focused. For example: "My purpose is to help you with ECET preparation. Let's focus on subjects that will help you succeed. Do you have a question about a specific topic?"
 3.  Be encouraging and maintain a positive, academic tone.
-4.  If a concept is complex, break it down into smaller, easy-to-understand parts. Use examples or analogies relevant to their field of study.
+4.  If a concept is complex, break it down. Use examples or analogies relevant to their field of study.
+5.  **TOOL USAGE**: If a student asks for information about a course's syllabus, topics, or subjects (e.g., "What are the hardest topics in Civil Engineering?"), you MUST use the \`getCourseSyllabus\` tool to fetch the information and provide an accurate answer. Do not guess.
 
 {{#if courseContext}}
 The user is currently viewing the "{{courseContext.title}}" course. The syllabus includes:
 {{#each courseContext.syllabus}}
 - {{subject}}: {{#each topics}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
 {{/each}}
-Use this context to frame your examples and explanations. If the chat history is empty, your first message should be an introduction acknowledging the user's course. For example: "I am an expert AI tutor for {{courseContext.title}}. How can I help you with your studies in this branch?"
+Use this context to frame your examples. If the chat history is empty, your first message must be an introduction acknowledging the user's course. Example: "I am an expert AI tutor for {{courseContext.title}}. How can I help you with your studies in this branch?"
 {{/if}}
 
 
 {{#if examQuestions}}
-The user has just completed a practice exam. You have access to the questions and their answers.
+The user just completed a practice exam. You have their results.
 The primary topics from their exam were: {{#each examQuestions}}{{topic}}{{#unless @last}}, {{/unless}}{{/each}}.
-Use this context. For example, if they ask a general physics question and you see they took an Electronics exam, use an electronics-based example to explain the concept.
+Use this context. If they ask a general physics question and you see they took an Electronics exam, use an electronics-based example.
 
-If they ask about their performance (e.g., "Which questions did I get wrong?", "What was the answer to question 3?"), use the provided exam data to answer them accurately. Explain WHY the correct answer is right, especially for the ones they got wrong.
-
-Here is the exam data:
-Total Questions: {{examQuestions.length}}
-
-Questions:
-{{#each examQuestions}}
-  ID: {{id}}
-  Question: {{question}}
-  Options: {{#each options}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
-  Correct Answer: {{correctAnswer}}
-  Topic: {{topic}}
-{{/each}}
-
-Student's Answers (Question ID: Answer):
-{{#each examAnswers}}
-  {{@key}}: {{{this}}}
-{{/each}}
+If they ask about their performance (e.g., "Which questions did I get wrong?"), use the provided exam data to answer accurately. Explain WHY the correct answer is right.
 {{/if}}
 
 Converse with the user based on the history and their latest question, following all the rules above.
@@ -125,22 +128,10 @@ Your Answer:
 `,
   config: {
     safetySettings: [
-      {
-        category: 'HARM_CATEGORY_HATE_SPEECH',
-        threshold: 'BLOCK_ONLY_HIGH',
-      },
-      {
-        category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
-        threshold: 'BLOCK_NONE',
-      },
-      {
-        category: 'HARM_CATEGORY_HARASSMENT',
-        threshold: 'BLOCK_MEDIUM_AND_ABOVE',
-      },
-      {
-        category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
-        threshold: 'BLOCK_LOW_AND_ABOVE',
-      },
+      { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_ONLY_HIGH' },
+      { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_NONE' },
+      { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_MEDIUM_AND_ABOVE' },
+      { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_LOW_AND_ABOVE' },
     ],
   },
 });
@@ -152,10 +143,6 @@ const doubtClearingFlow = ai.defineFlow(
     outputSchema: DoubtClearingOutputSchema,
   },
   async input => {
-    // Remove the courseContext from the input before passing to the prompt if it's not needed for the prompt logic itself.
-    const { courseContext, ...promptInput } = input;
-    
-    // The prompt will use the courseContext if it's present in the original input.
     const {output} = await doubtClearingPrompt(input);
     return output!;
   }

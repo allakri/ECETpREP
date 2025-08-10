@@ -12,9 +12,9 @@ import {z} from 'genkit';
 
 const QuestionSchema = z.object({
   id: z.number().describe("A unique numeric ID for the question."),
-  question: z.string().describe("The question text. Should use LaTeX for math, e.g., \\\\frac{1}{2}."),
-  options: z.array(z.string()).length(4).describe("An array of exactly four string options. Use LaTeX for math."),
-  correctAnswer: z.string().describe("The correct answer, which must be one of the provided options. Use LaTeX for math."),
+  question: z.string().describe("The question text. MUST use LaTeX for all math, e.g., \\\\frac{1}{2}."),
+  options: z.array(z.string()).length(4).describe("An array of exactly four string options. MUST use LaTeX for all math."),
+  correctAnswer: z.string().describe("The correct answer, which must be one of the provided options. MUST use LaTeX for math."),
   topic: z.string().describe("The specific topic this question relates to."),
   difficulty: z.enum(['Easy', 'Medium', 'Hard']).describe("The difficulty level of the question.")
 });
@@ -48,12 +48,13 @@ const generateQuizPrompt = ai.definePrompt({
   prompt: `You are an expert Question Paper Generator for ECET-level competitive exams. Your task is to generate a unique, high-quality quiz based on the user's specifications.
 
 You MUST adhere to the following rules:
-1.  Generate the exact number of questions for each difficulty level as specified in the input.
-2.  All questions should be relevant to the given subjects and, if provided, the specific topics.
-3.  All mathematical formulas, variables, and symbols MUST be formatted using LaTeX syntax (e.g., \\\\frac{1}{2}, x^2 should be x^2, \\\\sin(\\theta)). Double backslashes are critical.
-4.  Each question must have exactly four options.
+1.  Generate the exact number of questions for each difficulty level as specified.
+2.  All questions must be relevant to the given subjects and, if provided, the specific topics.
+3.  **CRITICAL**: All mathematical formulas, variables, and symbols MUST be formatted using LaTeX syntax (e.g., \\\\frac{1}{2}, x^2, \\\\sin(\\theta)). Double backslashes are essential.
+4.  Each question MUST have exactly four options.
 5.  The 'correctAnswer' field MUST be an exact match to one of the strings in the 'options' array.
-6.  Generate a unique ID for each question.
+6.  Generate a unique numeric ID for each question.
+7.  Do not repeat questions.
 
 User's Quiz Specifications:
 -   Subjects: {{{subjects}}}

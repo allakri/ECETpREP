@@ -22,7 +22,7 @@ const ExplainAnswerInputSchema = z.object({
 export type ExplainAnswerInput = z.infer<typeof ExplainAnswerInputSchema>;
 
 const ExplainAnswerOutputSchema = z.object({
-  explanation: z.string().describe("A clear, concise explanation of why the user's answer was incorrect and why the correct answer is right. Use LaTeX for mathematical equations, enclosed in single dollar signs for inline and double for block, e.g., $...$ or $$...$$"),
+  explanation: z.string().describe("A clear, concise explanation of why the user's answer was incorrect and why the correct answer is right. Use LaTeX for mathematical equations, enclosed in double backslashes, e.g., \\\\frac{1}{2} or x^2."),
 });
 export type ExplainAnswerOutput = z.infer<typeof ExplainAnswerOutputSchema>;
 
@@ -36,11 +36,12 @@ const explainAnswerPrompt = ai.definePrompt({
   output: {schema: ExplainAnswerOutputSchema},
   prompt: `You are an expert AI tutor. A student has answered a multiple-choice question incorrectly. Your task is to provide a clear and helpful explanation.
 
-Follow these steps:
+**CRITICAL RULE**: All mathematical formulas, variables, and symbols MUST be formatted using LaTeX syntax (e.g., for fractions use \\\\frac{1}{2}, for powers use x^2, for symbols use \\\\sin(\\theta)). Double backslashes are required.
+
+**Follow these steps:**
 1.  Acknowledge the student's answer and state clearly why it is incorrect. Refer to the specific concept they might have misunderstood.
 2.  State the correct answer and provide a step-by-step explanation of why it is correct.
 3.  Briefly summarize the core concept of the topic to reinforce learning.
-4.  If there are mathematical equations in the question or explanation, format them using LaTeX. Use single dollar signs ($...$) for inline equations and double dollar signs ($$ ... $$) for block equations.
 
 Keep the tone supportive and educational.
 

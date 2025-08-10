@@ -24,7 +24,7 @@ const AdaptiveFeedbackInputSchema = z.object({
   examName: z.string().describe('The name of the exam the user took.'),
   questions: z.array(QuestionSchema).describe('The full list of questions from the exam.'),
   userAnswers: z.record(z.string(), z.string()).describe('A map of question IDs to the user\'s answers.'),
-  pastScores: z.array(z.number()).optional().describe("An array of the user's past scores (as percentages) on previous tests, including the current one."),
+  pastScores: z.array(z.number()).optional().describe("An array of the user's past scores (as percentages) on previous tests, including the current one. The last score in the array is the most recent one."),
 });
 export type AdaptiveFeedbackInput = z.infer<typeof AdaptiveFeedbackInputSchema>;
 
@@ -52,13 +52,18 @@ const adaptiveFeedbackPrompt = ai.definePrompt({
 -   **Questions**: The full list of questions, including correct answers and topics.
 -   **User Answers**: A map of question IDs to the student's selected answers.
 {{#if pastScores}}
--   **Past Scores**: An array of previous scores, with the most recent score last. ({{pastScores}})
+-   **Performance Trend**: Analyze the student's past scores: [{{#each pastScores}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}]. The last score is the most recent.
 {{/if}}
 
 **Follow this exact structure for your response:**
 
 1.  **Greeting & Overall Performance:**
-    - Start with an encouraging sentence. If past scores show improvement, mention it. If not, be motivational. If no past scores, give a general positive opening.
+    - Start with an encouraging sentence.
+    {{#if pastScores}}
+    - If past scores show improvement (e.g., the last score is higher than the one before it), mention it specifically: "Great job on improving your score!".
+    - If scores are declining, be motivational: "It looks like this was a tough one, but don't worry. Every test is a learning opportunity."
+    - If there are no past scores, give a general positive opening.
+    {{/if}}
     - State their overall performance on this exam.
 
 2.  **Strengths:**
