@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "What is the main binding material in cement?",
+        "options": ["Silica", "Alumina", "Lime", "Iron oxide"],
+        "correctAnswer": "Lime",
+        "topic": "Building Materials"
+    },
+    {
+        "id": 2,
+        "question": "Which type of beam is supported at more than two points?",
+        "options": ["Cantilever beam", "Simply supported beam", "Overhanging beam", "Continuous beam"],
+        "correctAnswer": "Continuous beam",
+        "topic": "Strength of Materials"
+    },
+    {
+        "id": 3,
+        "question": "The art of determining the relative positions of points on, above, or beneath the surface of the earth is called:",
+        "options": ["Leveling", "Surveying", "Contouring", "Mapping"],
+        "correctAnswer": "Surveying",
+        "topic": "Surveying"
+    },
+    {
+        "id": 4,
+        "question": "A fluid which has no viscosity is called:",
+        "options": ["Real fluid", "Ideal fluid", "Newtonian fluid", "Non-Newtonian fluid"],
+        "correctAnswer": "Ideal fluid",
+        "topic": "Hydraulics"
+    },
+    {
+        "id": 5,
+        "question": "The most common type of reinforcement used in concrete is:",
+        "options": ["Steel", "Aluminum", "Copper", "Wood"],
+        "correctAnswer": "Steel",
+        "topic": "Reinforced Concrete Structure"
+    },
+    {
+        "id": 6,
+        "question": "The science of water in motion is known as:",
+        "options": ["Hydrostatics", "Hydrokinetics", "Hydrodynamics", "Hydraulics"],
+        "correctAnswer": "Hydrodynamics",
+        "topic": "Hydraulics"
+    },
+    {
+        "id": 7,
+        "question": "Which type of irrigation is also called trickle irrigation?",
+        "options": ["Sprinkler irrigation", "Drip irrigation", "Furrow irrigation", "Basin irrigation"],
+        "correctAnswer": "Drip irrigation",
+        "topic": "Irrigation Engineering"
+    },
+    {
+        "id": 8,
+        "question": "The ability of a material to resist fracture due to high impact loads is called:",
+        "options": ["Strength", "Stiffness", "Toughness", "Hardness"],
+        "correctAnswer": "Toughness",
+        "topic": "Strength of Materials"
+    },
+    {
+        "id": 9,
+        "question": "The force per unit area is called:",
+        "options": ["Strain", "Stress", "Modulus of elasticity", "Pressure"],
+        "correctAnswer": "Stress",
+        "topic": "Engineering Mechanics"
+    },
+    {
+        "id": 10,
+        "question": "Bitumen is a common material used for:",
+        "options": ["Building walls", "Paving roads", "Making pipes", "Painting"],
+        "correctAnswer": "Paving roads",
+        "topic": "Transportation Engineering"
+    }
+]

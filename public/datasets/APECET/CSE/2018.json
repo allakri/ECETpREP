@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "Which of the following is not a type of computer network?",
+        "options": ["LAN", "WAN", "MAN", "NAN"],
+        "correctAnswer": "NAN",
+        "topic": "Computer Networks"
+    },
+    {
+        "id": 2,
+        "question": "What does CPU stand for?",
+        "options": ["Central Process Unit", "Central Processing Unit", "Computer Personal Unit", "Central Processor Unit"],
+        "correctAnswer": "Central Processing Unit",
+        "topic": "Computer Architecture"
+    },
+    {
+        "id": 3,
+        "question": "Which data structure uses a LIFO (Last-In, First-Out) approach?",
+        "options": ["Queue", "Stack", "Linked List", "Tree"],
+        "correctAnswer": "Stack",
+        "topic": "Data Structures"
+    },
+    {
+        "id": 4,
+        "question": "What is the main function of an operating system?",
+        "options": ["Manage hardware resources", "Provide a user interface", "Execute application programs", "All of the above"],
+        "correctAnswer": "All of the above",
+        "topic": "Operating Systems"
+    },
+    {
+        "id": 5,
+        "question": "In object-oriented programming, what is encapsulation?",
+        "options": ["Hiding the complexity", "Wrapping data and methods together", "Inheriting properties from other classes", "Creating multiple forms of a method"],
+        "correctAnswer": "Wrapping data and methods together",
+        "topic": "Object Oriented Programming"
+    },
+    {
+        "id": 6,
+        "question": "Which of the following is a non-volatile memory?",
+        "options": ["RAM", "ROM", "Cache", "SRAM"],
+        "correctAnswer": "ROM",
+        "topic": "Computer Architecture"
+    },
+    {
+        "id": 7,
+        "question": "What does SQL stand for?",
+        "options": ["Structured Query Language", "Standard Query Language", "Simple Query Language", "Sequential Query Language"],
+        "correctAnswer": "Structured Query Language",
+        "topic": "DBMS"
+    },
+    {
+        "id": 8,
+        "question": "Which logic gate is a universal gate?",
+        "options": ["AND", "OR", "NAND", "XOR"],
+        "correctAnswer": "NAND",
+        "topic": "Digital Electronics"
+    },
+    {
+        "id": 9,
+        "question": "What is Python primarily known as?",
+        "options": ["A low-level language", "A high-level, interpreted language", "A compiled language", "A machine language"],
+        "correctAnswer": "A high-level, interpreted language",
+        "topic": "Python Programming"
+    },
+    {
+        "id": 10,
+        "question": "HTML is used to create:",
+        "options": ["Web servers", "Web pages", "Databases", "Operating systems"],
+        "correctAnswer": "Web pages",
+        "topic": "Web Technologies"
+    }
+]

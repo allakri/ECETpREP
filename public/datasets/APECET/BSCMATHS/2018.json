@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "If A is a 3x3 matrix and det(A) = 5, what is det(2A)?",
+        "options": ["10", "25", "30", "40"],
+        "correctAnswer": "40",
+        "topic": "Matrices"
+    },
+    {
+        "id": 2,
+        "question": "What is the derivative of x^x?",
+        "options": ["x * x^(x-1)", "x^x * (1 + log(x))", "1", "log(x) * x^x"],
+        "correctAnswer": "x^x * (1 + log(x))",
+        "topic": "Calculus"
+    },
+    {
+        "id": 3,
+        "question": "Which of the following is a field?",
+        "options": ["Integers (Z)", "Natural Numbers (N)", "Rational Numbers (Q)", "Whole Numbers (W)"],
+        "correctAnswer": "Rational Numbers (Q)",
+        "topic": "Algebra"
+    },
+    {
+        "id": 4,
+        "question": "What is the general solution of the differential equation dy/dx = y?",
+        "options": ["y = cx", "y = ce^x", "y = x^2 + c", "y = sin(x) + c"],
+        "correctAnswer": "y = ce^x",
+        "topic": "Differential Equations"
+    },
+    {
+        "id": 5,
+        "question": "The sequence 1/n as n approaches infinity converges to?",
+        "options": ["0", "1", "Infinity", "Does not converge"],
+        "correctAnswer": "0",
+        "topic": "Real Analysis"
+    },
+    {
+        "id": 6,
+        "question": "A group (G, *) is called Abelian if...",
+        "options": ["It is cyclic", "It has a finite number of elements", "The operation is commutative", "Every element is its own inverse"],
+        "correctAnswer": "The operation is commutative",
+        "topic": "Algebra"
+    },
+    {
+        "id": 7,
+        "question": "The integral of sin(x) from 0 to pi is?",
+        "options": ["0", "1", "2", "-2"],
+        "correctAnswer": "2",
+        "topic": "Calculus"
+    },
+    {
+        "id": 8,
+        "question": "What is the rank of a zero matrix?",
+        "options": ["0", "1", "Undefined", "Depends on dimensions"],
+        "correctAnswer": "0",
+        "topic": "Linear Algebra"
+    },
+    {
+        "id": 9,
+        "question": "Which theorem connects differentiation and integration?",
+        "options": ["Rolle's Theorem", "Mean Value Theorem", "Fundamental Theorem of Calculus", "Green's Theorem"],
+        "correctAnswer": "Fundamental Theorem of Calculus",
+        "topic": "Calculus"
+    },
+    {
+        "id": 10,
+        "question": "The set of all limit points of a set is called?",
+        "options": ["Closure of the set", "Interior of the set", "Boundary of the set", "Derived set"],
+        "correctAnswer": "Derived set",
+        "topic": "Real Analysis"
+    }
+]

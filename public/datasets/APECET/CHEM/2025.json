@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "What is the main component of natural gas?",
+        "options": ["Methane", "Ethane", "Propane", "Butane"],
+        "correctAnswer": "Methane",
+        "topic": "Fuels"
+    },
+    {
+        "id": 2,
+        "question": "Which of the following is a strong acid?",
+        "options": ["Acetic Acid", "Hydrochloric Acid", "Carbonic Acid", "Citric Acid"],
+        "correctAnswer": "Hydrochloric Acid",
+        "topic": "Acids and Bases"
+    },
+    {
+        "id": 3,
+        "question": "The process of converting a liquid into a gas is called?",
+        "options": ["Evaporation", "Condensation", "Sublimation", "Freezing"],
+        "correctAnswer": "Evaporation",
+        "topic": "Thermodynamics"
+    },
+    {
+        "id": 4,
+        "question": "What type of reaction is A + B -> AB?",
+        "options": ["Decomposition", "Synthesis", "Single Replacement", "Double Replacement"],
+        "correctAnswer": "Synthesis",
+        "topic": "Chemical Reactions"
+    },
+    {
+        "id": 5,
+        "question": "What is the unit of heat transfer?",
+        "options": ["Watt", "Joule", "Pascal", "Newton"],
+        "correctAnswer": "Watt",
+        "topic": "Heat Transfer"
+    },
+    {
+        "id": 6,
+        "question": "What does a catalyst do in a reaction?",
+        "options": ["Increases activation energy", "Decreases activation energy", "Is consumed in the reaction", "Changes the equilibrium constant"],
+        "correctAnswer": "Decreases activation energy",
+        "topic": "Chemical Kinetics"
+    },
+    {
+        "id": 7,
+        "question": "Which principle describes the behavior of fluids?",
+        "options": ["Bernoulli's Principle", "Pascal's Principle", "Archimedes' Principle", "All of the above"],
+        "correctAnswer": "All of the above",
+        "topic": "Fluid Mechanics"
+    },
+    {
+        "id": 8,
+        "question": "Which of these is a polymer?",
+        "options": ["Glucose", "Sucrose", "Starch", "Fructose"],
+        "correctAnswer": "Starch",
+        "topic": "Polymers"
+    },
+    {
+        "id": 9,
+        "question": "What is the first law of thermodynamics also known as?",
+        "options": ["Law of Conservation of Mass", "Law of Conservation of Energy", "Law of Entropy", "Law of Definite Proportions"],
+        "correctAnswer": "Law of Conservation of Energy",
+        "topic": "Thermodynamics"
+    },
+    {
+        "id": 10,
+        "question": "Mass transfer occurs from a region of ___ concentration to ___ concentration.",
+        "options": ["high, low", "low, high", "equal, equal", "It depends on temperature"],
+        "correctAnswer": "high, low",
+        "topic": "Mass Transfer"
+    }
+]

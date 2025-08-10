@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "What is the primary function of a rectifier?",
+        "options": ["Convert AC to DC", "Convert DC to AC", "Amplify signals", "Store charge"],
+        "correctAnswer": "Convert AC to DC",
+        "topic": "Electronic Devices and Circuits"
+    },
+    {
+        "id": 2,
+        "question": "A transistor has how many terminals?",
+        "options": ["1", "2", "3", "4"],
+        "correctAnswer": "3",
+        "topic": "Electronic Devices and Circuits"
+    },
+    {
+        "id": 3,
+        "question": "What does a capacitor do in an electronic circuit?",
+        "options": ["Resist current flow", "Store electrical energy", "Amplify voltage", "Act as a switch"],
+        "correctAnswer": "Store electrical energy",
+        "topic": "Circuit Theory"
+    },
+    {
+        "id": 4,
+        "question": "Which modulation is used in commercial radio broadcasting?",
+        "options": ["AM", "FM", "PM", "All of the above"],
+        "correctAnswer": "AM",
+        "topic": "Communication Systems"
+    },
+    {
+        "id": 5,
+        "question": "The binary equivalent of decimal 10 is:",
+        "options": ["1010", "1100", "1001", "1011"],
+        "correctAnswer": "1010",
+        "topic": "Digital Electronics"
+    },
+    {
+        "id": 6,
+        "question": "Which of the following is a type of thyristor?",
+        "options": ["Diode", "Transistor", "SCR", "FET"],
+        "correctAnswer": "SCR",
+        "topic": "Industrial Electronics"
+    },
+    {
+        "id": 7,
+        "question": "What is the purpose of an antenna?",
+        "options": ["To transmit and receive electromagnetic waves", "To store data", "To process signals", "To supply power"],
+        "correctAnswer": "To transmit and receive electromagnetic waves",
+        "topic": "Communication Systems"
+    },
+    {
+        "id": 8,
+        "question": "What is the heart of the 8051 microcontroller?",
+        "options": ["ALU", "CPU", "RAM", "ROM"],
+        "correctAnswer": "CPU",
+        "topic": "Microcontrollers"
+    },
+    {
+        "id": 9,
+        "question": "What does LCD stand for?",
+        "options": ["Liquid Crystal Display", "Light Crystal Display", "Liquid Cathode Display", "Light Cathode Display"],
+        "correctAnswer": "Liquid Crystal Display",
+        "topic": "Consumer Electronics"
+    },
+    {
+        "id": 10,
+        "question": "What is the standard protocol for the internet?",
+        "options": ["HTTP", "FTP", "TCP/IP", "SMTP"],
+        "correctAnswer": "TCP/IP",
+        "topic": "Data Communications and Computer Networks"
+    }
+]

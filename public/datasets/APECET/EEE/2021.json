@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "What is Ohm's Law?",
+        "options": ["V = IR", "P = VI", "V = I/R", "I = V/R^2"],
+        "correctAnswer": "V = IR",
+        "topic": "Basic Electrical Engineering"
+    },
+    {
+        "id": 2,
+        "question": "A transformer is used to...",
+        "options": ["Change AC to DC", "Change DC to AC", "Step up or step down AC voltage", "Step up or step down DC voltage"],
+        "correctAnswer": "Step up or step down AC voltage",
+        "topic": "A.C Machines"
+    },
+    {
+        "id": 3,
+        "question": "The unit of electrical power is:",
+        "options": ["Volt", "Ampere", "Watt", "Ohm"],
+        "correctAnswer": "Watt",
+        "topic": "Basic Electrical Engineering"
+    },
+    {
+        "id": 4,
+        "question": "Which motor is commonly used in ceiling fans?",
+        "options": ["DC Series Motor", "Synchronous Motor", "Single-phase Induction Motor", "Universal Motor"],
+        "correctAnswer": "Single-phase Induction Motor",
+        "topic": "A.C Motors"
+    },
+    {
+        "id": 5,
+        "question": "What does a fuse do in a circuit?",
+        "options": ["Increases current", "Decreases current", "Protects from overcurrent", "Stores energy"],
+        "correctAnswer": "Protects from overcurrent",
+        "topic": "Protection of Power Systems"
+    },
+    {
+        "id": 6,
+        "question": "A device that converts electrical energy into mechanical energy is a:",
+        "options": ["Generator", "Motor", "Transformer", "Inverter"],
+        "correctAnswer": "Motor",
+        "topic": "D.C Machines"
+    },
+    {
+        "id": 7,
+        "question": "What is the frequency of AC mains in India?",
+        "options": ["60 Hz", "50 Hz", "100 Hz", "120 Hz"],
+        "correctAnswer": "50 Hz",
+        "topic": "A.C Circuits"
+    },
+    {
+        "id": 8,
+        "question": "A diode allows current to flow in:",
+        "options": ["One direction", "Both directions", "No direction", "Depends on voltage"],
+        "correctAnswer": "One direction",
+        "topic": "Basic Electronics"
+    },
+    {
+        "id": 9,
+        "question": "What does PLC stand for?",
+        "options": ["Programmable Logic Controller", "Program Logic Control", "Power Line Carrier", "Programmable Lighting Control"],
+        "correctAnswer": "Programmable Logic Controller",
+        "topic": "PLC and C Language"
+    },
+    {
+        "id": 10,
+        "question": "The primary source of power in an Electric Vehicle is:",
+        "options": ["Engine", "Battery", "Solar Panel", "Generator"],
+        "correctAnswer": "Battery",
+        "topic": "Electrical Vehicles"
+    }
+]

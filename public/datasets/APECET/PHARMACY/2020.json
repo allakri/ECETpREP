@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "Which of the following is a solid dosage form?",
+        "options": ["Syrup", "Tablet", "Suspension", "Elixir"],
+        "correctAnswer": "Tablet",
+        "topic": "Pharmaceutics"
+    },
+    {
+        "id": 2,
+        "question": "Paracetamol is primarily used as an:",
+        "options": ["Antibiotic", "Analgesic", "Antacid", "Antiseptic"],
+        "correctAnswer": "Analgesic",
+        "topic": "Pharmacology"
+    },
+    {
+        "id": 3,
+        "question": "Which of the following is an example of a natural drug source?",
+        "options": ["Aspirin", "Morphine", "Ibuprofen", "Paracetamol"],
+        "correctAnswer": "Morphine",
+        "topic": "Pharmacognosy"
+    },
+    {
+        "id": 4,
+        "question": "What is the study of the absorption, distribution, metabolism, and excretion of drugs?",
+        "options": ["Pharmacodynamics", "Pharmacokinetics", "Pharmacognosy", "Pharmaceutics"],
+        "correctAnswer": "Pharmacokinetics",
+        "topic": "Pharmacology"
+    },
+    {
+        "id": 5,
+        "question": "Which of these is an antacid?",
+        "options": ["Ranitidine", "Omeprazole", "Aluminum hydroxide", "Loperamide"],
+        "correctAnswer": "Aluminum hydroxide",
+        "topic": "Pharmaceutical Chemistry"
+    },
+    {
+        "id": 6,
+        "question": "The process of reducing particle size of a powder is called:",
+        "options": ["Milling", "Drying", "Mixing", "Granulation"],
+        "correctAnswer": "Milling",
+        "topic": "Pharmaceutics"
+    },
+    {
+        "id": 7,
+        "question": "Which part of the plant is usually used to get caffeine?",
+        "options": ["Leaves", "Seeds", "Flowers", "Roots"],
+        "correctAnswer": "Seeds",
+        "topic": "Pharmacognosy"
+    },
+    {
+        "id": 8,
+        "question": "A drug that kills bacteria is called:",
+        "options": ["Antiviral", "Antifungal", "Antibiotic", "Antiprotozoal"],
+        "correctAnswer": "Antibiotic",
+        "topic": "Pharmacology"
+    },
+    {
+        "id": 9,
+        "question": "What is the chemical name for Vitamin C?",
+        "options": ["Retinol", "Ascorbic acid", "Tocopherol", "Calciferol"],
+        "correctAnswer": "Ascorbic acid",
+        "topic": "Pharmaceutical Chemistry"
+    },
+    {
+        "id": 10,
+        "question": "What are suppositories?",
+        "options": ["Oral tablets", "Rectal dosage forms", "Injectable solutions", "Topical creams"],
+        "correctAnswer": "Rectal dosage forms",
+        "topic": "Pharmaceutics"
+    }
+]

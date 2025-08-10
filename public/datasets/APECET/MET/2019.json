@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "Which process is used to extract iron from its ore?",
+        "options": ["Smelting", "Roasting", "Calcination", "Leaching"],
+        "correctAnswer": "Smelting",
+        "topic": "Extractive Metallurgy"
+    },
+    {
+        "id": 2,
+        "question": "The ability of a metal to be beaten into thin sheets is called:",
+        "options": ["Ductility", "Malleability", "Hardness", "Toughness"],
+        "correctAnswer": "Malleability",
+        "topic": "Physical Metallurgy"
+    },
+    {
+        "id": 3,
+        "question": "An alloy of copper and zinc is known as:",
+        "options": ["Bronze", "Brass", "Solder", "Steel"],
+        "correctAnswer": "Brass",
+        "topic": "Physical Metallurgy"
+    },
+    {
+        "id": 4,
+        "question": "Which test is used to measure the hardness of a material?",
+        "options": ["Tensile test", "Impact test", "Rockwell test", "Fatigue test"],
+        "correctAnswer": "Rockwell test",
+        "topic": "Material Testing"
+    },
+    {
+        "id": 5,
+        "question": "The crystal structure of most metals at room temperature is:",
+        "options": ["BCC", "FCC", "HCP", "All of the above"],
+        "correctAnswer": "All of the above",
+        "topic": "Physical Metallurgy"
+    },
+    {
+        "id": 6,
+        "question": "Heat treatment process to increase toughness is called:",
+        "options": ["Annealing", "Normalizing", "Tempering", "Quenching"],
+        "correctAnswer": "Tempering",
+        "topic": "Physical Metallurgy"
+    },
+    {
+        "id": 7,
+        "question": "What is the primary component of stainless steel?",
+        "options": ["Iron and Carbon", "Iron and Chromium", "Iron and Nickel", "Iron and Manganese"],
+        "correctAnswer": "Iron and Chromium",
+        "topic": "Physical Metallurgy"
+    },
+    {
+        "id": 8,
+        "question": "The process of coating a metal with a layer of zinc is called:",
+        "options": ["Galvanizing", "Anodizing", "Electroplating", "Painting"],
+        "correctAnswer": "Galvanizing",
+        "topic": "Extractive Metallurgy"
+    },
+    {
+        "id": 9,
+        "question": "What is the study of the deformation and fracture of materials?",
+        "options": ["Physical Metallurgy", "Mechanical Metallurgy", "Extractive Metallurgy", "Welding Metallurgy"],
+        "correctAnswer": "Mechanical Metallurgy",
+        "topic": "Mechanical Metallurgy"
+    },
+    {
+        "id": 10,
+        "question": "Which of these is a noble metal?",
+        "options": ["Iron", "Aluminum", "Gold", "Lead"],
+        "correctAnswer": "Gold",
+        "topic": "Physical Metallurgy"
+    }
+]

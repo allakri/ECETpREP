@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "question": "Which of the following is a primary manufacturing process?",
+        "options": ["Welding", "Casting", "Milling", "Grinding"],
+        "correctAnswer": "Casting",
+        "topic": "Basic Manufacturing Technology"
+    },
+    {
+        "id": 2,
+        "question": "The first law of thermodynamics is related to:",
+        "options": ["Conservation of energy", "Conservation of mass", "Conservation of momentum", "Direction of heat flow"],
+        "correctAnswer": "Conservation of energy",
+        "topic": "Thermodynamics"
+    },
+    {
+        "id": 3,
+        "question": "What is the main purpose of a lubricant?",
+        "options": ["Increase friction", "Reduce friction", "Increase heat", "Cause corrosion"],
+        "correctAnswer": "Reduce friction",
+        "topic": "Industrial Management"
+    },
+    {
+        "id": 4,
+        "question": "Bernoulli's equation is applicable to:",
+        "options": ["Compressible flow", "Incompressible flow", "Viscous flow", "Solid mechanics"],
+        "correctAnswer": "Incompressible flow",
+        "topic": "Fluid Mechanics and Hydraulic Machinery"
+    },
+    {
+        "id": 5,
+        "question": "What does CAD stand for?",
+        "options": ["Computer-Aided Design", "Computer-Assisted Drawing", "Car-Aided Design", "Computer-Aided Drafting"],
+        "correctAnswer": "Computer-Aided Design",
+        "topic": "CAD/CAM"
+    },
+    {
+        "id": 6,
+        "question": "The ability of a material to be drawn into a wire is called:",
+        "options": ["Malleability", "Ductility", "Brittleness", "Hardness"],
+        "correctAnswer": "Ductility",
+        "topic": "Engineering Materials"
+    },
+    {
+        "id": 7,
+        "question": "A refrigerator works on the principle of:",
+        "options": ["First law of thermodynamics", "Second law of thermodynamics", "Zeroth law of thermodynamics", "Newton's law of cooling"],
+        "correctAnswer": "Second law of thermodynamics",
+        "topic": "Refrigeration and Air Conditioning"
+    },
+    {
+        "id": 8,
+        "question": "The study of forces on bodies at rest is called:",
+        "options": ["Statics", "Dynamics", "Kinetics", "Kinematics"],
+        "correctAnswer": "Statics",
+        "topic": "Solid Mechanics"
+    },
+    {
+        "id": 9,
+        "question": "Which of the following is a type of gear?",
+        "options": ["Spur gear", "Belt drive", "Chain drive", "Rope drive"],
+        "correctAnswer": "Spur gear",
+        "topic": "Design of Machine Elements"
+    },
+    {
+        "id": 10,
+        "question": "The process of joining two metal pieces by heating them to a molten state is called:",
+        "options": ["Soldering", "Brazing", "Welding", "Riveting"],
+        "correctAnswer": "Welding",
+        "topic": "Advanced Manufacturing Technology"
+    }
+]
