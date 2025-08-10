@@ -5,14 +5,12 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Search, XCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { courses } from "@/lib/courses";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
 import { AppShell } from "@/components/layout/AppShell";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { useState } from "react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -38,17 +36,6 @@ const itemVariants = {
 };
 
 export default function CoursesPage() {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const filteredCourses = courses.filter(course => {
-    const query = searchQuery.toLowerCase();
-    return (
-      course.title.toLowerCase().includes(query) ||
-      course.description.toLowerCase().includes(query) ||
-      course.tags.some(tag => tag.toLowerCase().includes(query))
-    );
-  });
-
   return (
     <AppShell>
         <div className="flex-grow bg-background">
@@ -66,22 +53,10 @@ export default function CoursesPage() {
             <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
                 Choose your branch, access structured learning paths, and prepare with confidence using our expert-curated content.
             </p>
-            <div className="mt-8 max-w-lg mx-auto">
-                <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                <Input 
-                    placeholder="Search for a course or branch..." 
-                    className="pl-10 h-12 text-base"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                />
-                </div>
-            </div>
             </motion.div>
 
             {/* Courses Grid */}
             <div className="py-16 md:py-24 px-4 container mx-auto">
-            {filteredCourses.length > 0 ? (
                 <motion.div 
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                     initial="hidden"
@@ -89,7 +64,7 @@ export default function CoursesPage() {
                     viewport={{ once: true, amount: 0.1 }}
                     variants={containerVariants}
                 >
-                    {filteredCourses.map((course) => {
+                    {courses.map((course) => {
                     const Icon = course.icon;
                     return (
                         <motion.div key={course.slug} variants={itemVariants}>
@@ -120,13 +95,6 @@ export default function CoursesPage() {
                     )
                     })}
                 </motion.div>
-            ) : (
-                <div className="text-center py-10 border-2 border-dashed rounded-lg">
-                    <XCircle className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-                    <p className="font-semibold text-xl">No Courses Found</p>
-                    <p className="text-muted-foreground">Your search for "{searchQuery}" did not match any courses.</p>
-                </div>
-            )}
             </div>
         </div>
     </AppShell>
