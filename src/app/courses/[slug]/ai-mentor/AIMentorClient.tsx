@@ -56,7 +56,9 @@ export function AIMentorClient({ course }: AIMentorClientProps) {
             }
         };
 
-        fetchGuidance();
+        if (course) {
+          fetchGuidance();
+        }
     }, [course]);
 
     return (
