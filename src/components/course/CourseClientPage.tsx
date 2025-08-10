@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import type { Course } from "@/lib/courses";
 import { Breadcrumbs } from "../layout/Breadcrumbs";
 import { Badge } from "../ui/badge";
+import { useRouter } from "next/navigation";
 
 interface CourseClientPageProps {
   course: Omit<Course, 'icon'>;
@@ -47,6 +48,13 @@ const prepTips = [
 ]
 
 export function CourseClientPage({ course, icon }: CourseClientPageProps) {
+  const router = useRouter();
+
+  const handleAskAI = () => {
+    // Save the course context to sessionStorage to be picked up by the chat client
+    sessionStorage.setItem('ai-doubt-course-context', JSON.stringify(course));
+    router.push('/chat');
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-secondary/10">
@@ -184,8 +192,8 @@ export function CourseClientPage({ course, icon }: CourseClientPageProps) {
                       </CardHeader>
                       <CardContent>
                           <p className="text-sm text-muted-foreground mb-4">Stuck on a topic? Get instant help from our AI tutor.</p>
-                          <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" asChild>
-                              <Link href="/chat">Ask AI Assistant</Link>
+                          <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" onClick={handleAskAI}>
+                            Ask AI Assistant
                           </Button>
                       </CardContent>
                   </Card>

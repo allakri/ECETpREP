@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
@@ -17,6 +18,7 @@ import { AppFooter } from '../layout/AppFooter';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/use-auth';
 import { Skeleton } from '../ui/skeleton';
+import { Course } from '@/lib/courses';
 
 type ChatMessage = {
   role: 'user' | 'model';
@@ -57,6 +59,7 @@ export default function ChatClient() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [examContext, setExamContext] = useState<{ questions: Question[], answers: AnswerSheet } | null>(null);
+  const [courseContext, setCourseContext] = useState<Omit<Course, 'icon'> | null>(null);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -76,14 +79,24 @@ export default function ChatClient() {
         questions: JSON.parse(storedQuestions),
       });
     }
+
+    // Load course context
+    const storedCourseContext = sessionStorage.getItem('ai-doubt-course-context');
+    if (storedCourseContext) {
+      setCourseContext(JSON.parse(storedCourseContext));
+      // Optionally clear it after loading so it's not stale on next visit
+      // sessionStorage.removeItem('ai-doubt-course-context');
+    }
+
   }, []);
 
 
-  const handleSendMessage = async (e: React.FormEvent) => {
+  const handleSendMessage = async (e: React.FormEvent, initialMessage?: string) => {
     e.preventDefault();
-    if (!input.trim()) return;
+    const messageToSend = initialMessage || input;
+    if (!messageToSend.trim()) return;
 
-    const userMessage: ChatMessage = { role: 'user', text: input };
+    const userMessage: ChatMessage = { role: 'user', text: messageToSend };
     setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
@@ -96,10 +109,11 @@ export default function ChatClient() {
       }));
       
       const result = await clearDoubt({
-        question: input,
+        question: messageToSend,
         history: history,
         examQuestions: examContext?.questions,
         examAnswers: examContext?.answers,
+        courseContext: courseContext || undefined,
       });
 
       const aiMessage: ChatMessage = { role: 'model', text: result.answer };
@@ -115,6 +129,14 @@ export default function ChatClient() {
       setIsLoading(false);
     }
   };
+  
+  // Send an initial message if context is available
+  useEffect(() => {
+    if (courseContext && messages.length === 0) {
+      handleSendMessage({ preventDefault: () => {} } as React.FormEvent, `I need help with my ${courseContext.title} studies.`);
+    }
+  }, [courseContext, messages.length]);
+
 
   useEffect(() => {
     if (scrollAreaRef.current) {
@@ -126,11 +148,13 @@ export default function ChatClient() {
   }, [messages]);
   
   const getWelcomeMessage = () => {
-    const baseMessage = "Have a question? Ask me anything about ECET subjects! For example: \"Explain the difference between series and parallel circuits.\"";
+    if (courseContext) {
+        return `I see you are studying ${courseContext.title}. Ask me anything about it!`;
+    }
     if (examContext) {
       return "I see you've just finished an exam. You can ask me which questions you got wrong or right, and I can help explain the concepts. Or, ask me anything else about ECET subjects!";
     }
-    return baseMessage;
+    return "Have a question? Ask me anything about ECET subjects! For example: \"Explain the difference between series and parallel circuits.\"";
   }
 
   if (loading || !user) {
@@ -138,10 +162,9 @@ export default function ChatClient() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <AppHeader />
+    <div className="flex flex-col min-h-[calc(100vh-8rem)] bg-background">
       <main className="flex-grow flex items-center justify-center p-4">
-        <Card className="w-full max-w-2xl h-[80vh] flex flex-col shadow-2xl">
+        <Card className="w-full max-w-2xl h-[calc(80vh-2rem)] flex flex-col shadow-2xl">
           <CardHeader className="flex flex-row items-center justify-between border-b">
             <div className="flex items-center gap-3">
               <div className="p-2 bg-primary/10 rounded-full">
@@ -159,7 +182,7 @@ export default function ChatClient() {
           <CardContent className="flex-1 p-0">
             <ScrollArea className="h-full p-6" ref={scrollAreaRef}>
               <div className="space-y-6">
-                {messages.length === 0 && (
+                {messages.length === 0 && !courseContext && (
                   <div className="text-center text-muted-foreground pt-10 px-4">
                     <p>{getWelcomeMessage()}</p>
                   </div>
@@ -224,7 +247,6 @@ export default function ChatClient() {
           </CardFooter>
         </Card>
       </main>
-      <AppFooter />
     </div>
   );
 }
