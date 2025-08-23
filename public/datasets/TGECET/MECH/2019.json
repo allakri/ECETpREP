@@ -1,12 +1,602 @@
 [
-  { "id": 1, "question": "Lathe is a machine tool used for which operation? (MECH 2019)", "options": ["Drilling", "Turning", "Milling", "Grinding"], "correctAnswer": "Turning", "topic": "Manufacturing Technology" },
-  { "id": 2, "question": "The ability of a material to be drawn into a wire is called: (MECH 2019)", "options": ["Ductility", "Malleability", "Hardness", "Brittleness"], "correctAnswer": "Ductility", "topic": "Engineering Materials" },
-  { "id": 3, "question": "CAM in CAD/CAM stands for: (MECH 2019)", "options": ["Computer Aided Manufacturing", "Computer Aided Machining", "Computer Aided Modeling", "Computer Aided Management"], "correctAnswer": "Computer Aided Manufacturing", "topic": "CAD/CAM" },
-  { "id": 4, "question": "An Isothermal process is one in which: (MECH 2019)", "options": ["Temperature is constant", "Pressure is constant", "Volume is constant", "Entropy is constant"], "correctAnswer": "Temperature is constant", "topic": "Thermodynamics" },
-  { "id": 5, "question": "The COP (Coefficient of Performance) of a heat pump is always: (MECH 2019)", "options": ["Less than 1", "Equal to 1", "Greater than 1", "Zero"], "correctAnswer": "Greater than 1", "topic": "Refrigeration and Air Conditioning" },
-  { "id": 6, "question": "The instrument used to measure the pressure of a fluid is a: (MECH 2019)", "options": ["Venturimeter", "Orifice meter", "Manometer", "Pitot tube"], "correctAnswer": "Manometer", "topic": "Fluid Mechanics" },
-  { "id": 7, "question": "Hooke's Law states that stress is proportional to: (MECH 2019)", "options": ["Strain", "Force", "Displacement", "Area"], "correctAnswer": "Strain", "topic": "Solid Mechanics" },
-  { "id": 8, "question": "A key is a machine element used to: (MECH 2019)", "options": ["Join two shafts", "Prevent relative rotational motion between a shaft and a hub", "Support a rotating shaft", "Lubricate a bearing"], "correctAnswer": "Prevent relative rotational motion between a shaft and a hub", "topic": "Design of Machine Elements" },
-  { "id": 9, "question": "Which of the following is a finishing operation? (MECH 2019)", "options": ["Forging", "Casting", "Turning", "Grinding"], "correctAnswer": "Grinding", "topic": "Advanced Manufacturing Technology" },
-  { "id": 10, "question": "The efficiency of a Carnot cycle depends only on: (MECH 2019)", "options": ["The working fluid", "The engine speed", "The temperature limits", "The pressure limits"], "correctAnswer": "The temperature limits", "topic": "Heat Power Engineering" }
-]
+    {
+      "id": "76439010825",
+      "question": "Let M = (a_ij) be a 10x10 matrix such that a_ij = {1, if i+j=11; 0, otherwise}. Then, the determinant of M is",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010826",
+      "question": "Let A and B be two square matrices of order n. If AB = A, BA = B then A² + B² =",
+      "options": [
+        "AB",
+        "A-B",
+        "0",
+        "A+B"
+      ],
+      "correctAnswer": "A+B",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010827",
+      "question": "If A is a square matrix of order 4, then |adj(adjA²)| =",
+      "options": [
+        "|A|³",
+        "|A|⁶",
+        "|A|²⁷",
+        "|A|¹⁸"
+      ],
+      "correctAnswer": "|A|¹⁸",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010828",
+      "question": "If the system of equations x = cy + bz, y = az + cx, z = bx + ay has a non-zero solution, then a² + b² + c² + 2abc =",
+      "options": [
+        "0",
+        "2",
+        "1",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010829",
+      "question": "If (\\frac{x^2+x+1}{x^2+2x+1} = A + \\frac{B}{x+1} + \\frac{C}{(x+1)^2}) then (A,B,C) =",
+      "options": [
+        "(1,-1,1)",
+        "(1,-1,-1)",
+        "(-1,1,-1)",
+        "(-1,-1,-1)"
+      ],
+      "correctAnswer": "(1,-1,1)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010830",
+      "question": "If x, y, z are three distinct positive real numbers and (\\frac{\\log x}{y-z} = \\frac{\\log y}{z-x} = \\frac{\\log z}{x-y}), then xyz =",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010831",
+      "question": "In Δ ABC, if (\\cot \\frac{A}{2} = \\frac{b+c}{a}), then (∠A+∠C)=",
+      "options": [
+        "60°",
+        "90°",
+        "120°",
+        "150°"
+      ],
+      "correctAnswer": "90°",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010832",
+      "question": "In Δ ABC, if (\\cot \\frac{A}{2} : \\cot \\frac{B}{2} : \\cot \\frac{C}{2} = 3:5:7), then a:b:c=",
+      "options": [
+        "5:4:6",
+        "6:5:4",
+        "4:6:5",
+        "12:5:4"
+      ],
+      "correctAnswer": "6:5:4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010833",
+      "question": "If (A-B = \\frac{3\\pi}{4}), then (1-\\tan A)(1+\\tan B) =",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010834",
+      "question": "(\\sqrt{3} \\csc 20° - \\sec 20°) =",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010835",
+      "question": "(cos A cos 2A cos 4A cos 8A) =",
+      "options": [
+        "(\\frac{\\sin 16A}{16 \\sin A})",
+        "(\\frac{\\sin 32A}{32 \\sin A})",
+        "(\\frac{\\sin 48A}{48 \\sin A})",
+        "(\\frac{\\sin 64A}{64 \\sin A})"
+      ],
+      "correctAnswer": "(\\frac{\\sin 16A}{16 \\sin A})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010836",
+      "question": "The general solution set of (\\sin 2x + \\sin 4x = 2\\sin 3x) is",
+      "options": [
+        "(\\{\\frac{n\\pi}{3} / n \\in Z\\})",
+        "(\\{2n\\pi / n \\in Z\\})",
+        "(\\{n\\pi / n \\in Z\\})",
+        "(\\{\\frac{n\\pi}{3} + 2n\\pi / n \\in Z\\})"
+      ],
+      "correctAnswer": "(\\{\\frac{n\\pi}{3} / n \\in Z\\})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010837",
+      "question": "If x, y, z have same sign such that (xy + yz + zx <1) and (\\tan^{-1} x + \\tan^{-1} y + \\tan^{-1} z = \\pi), then (\\frac{1}{xy} + \\frac{1}{yz} + \\frac{1}{zx}) =",
+      "options": [
+        "(\\frac{1}{xyz})",
+        "1",
+        "xyz",
+        "(\\frac{1}{x^2y^2z^2})"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010838",
+      "question": "If sinh x = 5, then (e^x) =",
+      "options": [
+        "(5-\\sqrt{26})",
+        "(5+\\sqrt{26})",
+        "(5\\pm\\sqrt{26})",
+        "(\\sqrt{26}-5)"
+      ],
+      "correctAnswer": "(5+\\sqrt{26})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010839",
+      "question": "If (\\alpha) and (\\beta) are two distinct complex numbers such that |(\\frac{\\beta-\\alpha}{1-\\bar{\\alpha}\\beta})| = 1, then",
+      "options": [
+        "|\\alpha| = 1",
+        "|\\beta| = 1",
+        "|\\alpha| = 1 or |\\beta| = 1",
+        "|\\alpha| = 1 and |\\beta| = 1"
+      ],
+      "correctAnswer": "|\\alpha| = 1 or |\\beta| = 1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010840",
+      "question": "If ((\\frac{1+\\sin\\theta+i\\cos\\theta}{1+\\sin\\theta-i\\cos\\theta})^n = \\cos k\\theta + i \\sin k\\theta), then k =",
+      "options": [
+        "(\\frac{n\\pi}{2}-\\theta)",
+        "(\\frac{n\\pi}{2}-n\\theta)",
+        "(n\\pi-n\\theta)",
+        "(\\frac{1}{2\\theta}(n\\pi-2n\\theta))"
+      ],
+      "correctAnswer": "(\\frac{1}{2\\theta}(n\\pi-2n\\theta))",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010841",
+      "question": "If the perpendicular distance of the straight line (\\frac{x}{a} + \\frac{y}{b}=1), a > 0,b > 0 from the origin is p, then",
+      "options": [
+        "(\\frac{1}{p^2} = \\frac{1}{a^2} - \\frac{1}{b^2})",
+        "(p^2 = b^2 - a^2)",
+        "(\\frac{1}{p^2} = \\frac{1}{a^2} + \\frac{1}{b^2})",
+        "(p^2 = a^2 + b^2)"
+      ],
+      "correctAnswer": "(\\frac{1}{p^2} = \\frac{1}{a^2} + \\frac{1}{b^2})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010842",
+      "question": "The line (lx+my+n=0) is a normal to the circle (x^2+y^2-4x-6y+11=0) if",
+      "options": [
+        "(2l+3m+n=0)",
+        "(2l+3m-n=0)",
+        "(2l-3m-n=0)",
+        "(2l-3m+n=0)"
+      ],
+      "correctAnswer": "(2l-3m+n=0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010843",
+      "question": "The centre of the circle passing through origin and (0,4) & (4,0) is",
+      "options": [
+        "(4,4)",
+        "(4,2)",
+        "(2,4)",
+        "(2,2)"
+      ],
+      "correctAnswer": "(2,2)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010844",
+      "question": "( \\lim_{x \\to \\frac{\\pi}{2}} \\frac{e^{\\cos x}-1}{x-\\frac{\\pi}{2}} )",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "(\\pi/2)"
+      ],
+      "correctAnswer": "-1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010845",
+      "question": "The derivative of (\\log_a x), with respect to (a^x) is",
+      "options": [
+        "1",
+        "(xa^x)",
+        "(\\frac{1}{xa^x(\\log a)^2})",
+        "(\\frac{1}{xa^x})"
+      ],
+      "correctAnswer": "(\\frac{1}{xa^x(\\log a)^2})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010846",
+      "question": "If y=x+ tanx, then (\\cos^2 x \\frac{d^2y}{dx^2} + 2x) =",
+      "options": [
+        "(2y')",
+        "2y",
+        "y'",
+        "y"
+      ],
+      "correctAnswer": "2y",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010847",
+      "question": "The set of all points at which the curve y=sin x has horizontal tangents are",
+      "options": [
+        "((2n+1)\\frac{\\pi}{2}(-1)^n), n \\in Z",
+        "((n\\pi)(-1)^n), n \\in Z",
+        "((n\\frac{\\pi}{2})(-1)^n), n \\in Z",
+        "((2n+1)\\pi(-1)^n), n \\in Z"
+      ],
+      "correctAnswer": "((2n+1)\\frac{\\pi}{2}(-1)^n), n \\in Z",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010848",
+      "question": "The interval in which (f(x) = x^x), (x>0) is increasing is",
+      "options": [
+        "((0,\\frac{1}{e}))",
+        "((0,e))",
+        "((e,\\infty))",
+        "((\\frac{1}{e},\\infty))"
+      ],
+      "correctAnswer": "((\\frac{1}{e},\\infty))",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010849",
+      "question": "The extreme values of (f(x) = 4x - \\frac{x^2}{2}) on ([-2, \\frac{9}{2}]) are",
+      "options": [
+        "absolute minimum = -10; absolute maximum = 8",
+        "absolute minimum = 8; absolute maximum = 12",
+        "absolute minimum = -10; absolute maximum = 12",
+        "absolute minimum = -2; absolute maximum = 9/2"
+      ],
+      "correctAnswer": "absolute minimum = -10; absolute maximum = 8",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010850",
+      "question": "If (\\sin u = \\frac{x+y}{\\sqrt{x}+\\sqrt{y}}), then (2(x\\frac{\\partial u}{\\partial x} + y\\frac{\\partial u}{\\partial y})\\cos u) =",
+      "options": [
+        "sin u",
+        "(\\frac{1}{2}\\sin u)",
+        "tan u",
+        "sin 2u"
+      ],
+      "correctAnswer": "sin u",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010851",
+      "question": "(\\int \\frac{\\sin 2x}{(\\sin 5x)(\\sin 3x)} dx) =",
+      "options": [
+        "(\\log|\\sin 3x| - \\log|\\sin 5x|) + C",
+        "(\\frac{1}{3}\\log|\\sin 3x| + \\frac{1}{5}\\log|\\sin 5x|) + C",
+        "(\\frac{1}{3}\\log|\\sin 3x| - \\frac{1}{5}\\log|\\sin 5x|) + C",
+        "(3\\log|\\sin 3x| - 5\\log|\\sin 5x|) + C"
+      ],
+      "correctAnswer": "(\\frac{1}{3}\\log|\\sin 3x| - \\frac{1}{5}\\log|\\sin 5x|) + C",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010852",
+      "question": "(\\int x(\\sin x)(\\sec^3 x)dx) =",
+      "options": [
+        "(\\frac{1}{2}[\\sec^2 x - \\tan x] + C)",
+        "(\\frac{1}{2}[x \\sec^2 x - \\tan x] + C)",
+        "(\\frac{1}{2}[x \\sec^2 x + \\tan x] + C)",
+        "(\\frac{1}{2}[\\sec^2 x + \\tan x] + C)"
+      ],
+      "correctAnswer": "(\\frac{1}{2}[x \\sec^2 x - \\tan x] + C)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010853",
+      "question": "(\\int \\sqrt{e^x-1} dx) =",
+      "options": [
+        "(2[\\sqrt{e^x-1} - \\tan^{-1}{\\sqrt{e^x-1}}] + C)",
+        "(\\sqrt{e^x-1} - \\tan^{-1}{\\sqrt{e^x-1}} + C)",
+        "(\\sqrt{e^x-1} + \\tan^{-1}{\\sqrt{e^x-1}} + C)",
+        "(2[\\sqrt{e^x-1} + \\tan^{-1}{\\sqrt{e^x-1}}] + C)"
+      ],
+      "correctAnswer": "(2[\\sqrt{e^x-1} - \\tan^{-1}{\\sqrt{e^x-1}}] + C)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010854",
+      "question": "(\\int \\frac{\\ln(\\tan x)}{\\sin x \\cos x} dx) =",
+      "options": [
+        "(\\frac{1}{2} \\ln(\\tan x) + C)",
+        "(\\frac{1}{2} \\ln(\\tan^2 x) + C)",
+        "(\\frac{1}{2} [\\ln(\\tan x)]^2 + C)",
+        "0"
+      ],
+      "correctAnswer": "(\\frac{1}{2} [\\ln(\\tan x)]^2 + C)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010855",
+      "question": "The area of the region (in square units) bounded by the parabola (y = x^2+1) and the straight-line x+y=3 is",
+      "options": [
+        "(\\frac{9}{2})",
+        "3",
+        "(\\frac{9}{4})",
+        "0"
+      ],
+      "correctAnswer": "(\\frac{9}{2})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010856",
+      "question": "The values of a function f at different points are given in the following table. x -4 -3 -2 -1 0 1 2 f(x) 0 4 5 3 10 11 2 The approximate value of (\\int_{-4}^2 f(x)dx) is",
+      "options": [
+        "32",
+        "34",
+        "26",
+        "40"
+      ],
+      "correctAnswer": "34",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010857",
+      "question": "The degree of the differential equation ((1+x^2)(\\frac{dy}{dx})^2-2xy\\frac{dy}{dx}+(1+y^2)=0) is",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010858",
+      "question": "Solution of (\\frac{dy}{dx}+\\frac{1+y^2}{1+x^2}=0) is",
+      "options": [
+        "(\\sin^{-1}x+\\sin^{-1}y=C)",
+        "(\\tan^{-1}x-\\tan^{-1}y=C)",
+        "(\\tan^{-1}x+\\tan^{-1}y=C)",
+        "(\\sin^{-1}x-\\sin^{-1}y=C)"
+      ],
+      "correctAnswer": "(\\tan^{-1}x+\\tan^{-1}y=C)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010859",
+      "question": "Solution of ((1+x^2)\\frac{dy}{dx}+2xy = \\cos x) is",
+      "options": [
+        "((1+x^2)y+\\sin x=C)",
+        "((1+x^2)y=\\cos x+C)",
+        "((1+x^2)y=\\sin x+C)",
+        "((1+x^2)y+\\cos x=C)"
+      ],
+      "correctAnswer": "((1+x^2)y=\\sin x+C)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010860",
+      "question": "A particular integral of ((D^2-1)=\\cosh x)",
+      "options": [
+        "(\\frac{x}{2}\\sinh x)",
+        "(\\frac{x}{2}\\cosh x)",
+        "sinh x",
+        "cosh x"
+      ],
+      "correctAnswer": "(\\frac{x}{2}\\sinh x)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010861",
+      "question": "A particular integral of ((D^3+4D)y=\\sin 2x) is",
+      "options": [
+        "(\\frac{x\\sin 2x}{2})",
+        "(\\frac{x\\sin 2x}{4})",
+        "(\\frac{x\\sin 2x}{8})",
+        "(\\frac{-x\\sin 2x}{8})"
+      ],
+      "correctAnswer": "(\\frac{-x\\sin 2x}{8})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010862",
+      "question": "A particular integral of ((D^2-2D+4)y=x^2) is",
+      "options": [
+        "(\\frac{1}{4}(x^2-x))",
+        "(\\frac{1}{4}(x^2+x))",
+        "(\\frac{1}{4}(x^2+x+1))",
+        "(\\frac{1}{4}(x^2+x-1))"
+      ],
+      "correctAnswer": "(\\frac{1}{4}(x^2+x))",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010863",
+      "question": "A particular integral of ((D^2-4)y=\\cos^2 x) is",
+      "options": [
+        "(\\frac{-1}{8}-\\frac{\\cos 2x}{16})",
+        "(\\frac{1}{8}-\\frac{\\cos 2x}{16})",
+        "(\\frac{-1}{8}+\\frac{\\cos 2x}{16})",
+        "(\\frac{1}{8}+\\frac{\\cos 2x}{16})"
+      ],
+      "correctAnswer": "(\\frac{-1}{8}-\\frac{\\cos 2x}{16})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010864",
+      "question": "Complementary function of ((D^3-D^2+D-1)y=0) is",
+      "options": [
+        "(y_c = c_1e^{-x} + c_2\\cos x + c_3\\sin x)",
+        "(y_c = c_1\\cos x + c_2\\sin x)",
+        "(y_c = c_1e^x + c_2\\cos x + c_3\\sin x)",
+        "(y_c = c_1e^{2x} + c_2\\cos 2x + c_3\\sin 2x)"
+      ],
+      "correctAnswer": "(y_c = c_1e^x + c_2\\cos x + c_3\\sin x)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010865",
+      "question": "A differential equation formed by eliminating the constants a and b in y = ae^(bx) is",
+      "options": [
+        "(y \\frac{d^2y}{dx^2} = \\frac{dy}{dx})",
+        "(y (\\frac{d^2y}{dx^2})^2 = (\\frac{dy}{dx})^2)",
+        "(y \\frac{dy}{dx} = (\\frac{d^2y}{dx^2})^2)",
+        "(y \\frac{d^2y}{dx^2} = (\\frac{dy}{dx})^2)"
+      ],
+      "correctAnswer": "(y \\frac{d^2y}{dx^2} = (\\frac{dy}{dx})^2)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010866",
+      "question": "Solution of the differential equation (x \\frac{dy}{dx} = y(\\log y - \\log x + 1)) is",
+      "options": [
+        "(y=xe^{cx})",
+        "(y=x^2e^{cx})",
+        "(x=ye^{cy})",
+        "(x=y^2e^{cy})"
+      ],
+      "correctAnswer": "(y=xe^{cx})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010867",
+      "question": "If F(s) denotes the Laplace transform of t sin t, then F(2) =",
+      "options": [
+        "4/25",
+        "-4/25",
+        "4/5",
+        "-4/5"
+      ],
+      "correctAnswer": "4/25",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010868",
+      "question": "If F(s) denotes the Laplace transform of (\\frac{\\sin t}{t}), then F(1) =",
+      "options": [
+        "(\\pi/2)",
+        "(\\pi/4)",
+        "(-\\pi/2)",
+        "(-\\pi/4)"
+      ],
+      "correctAnswer": "(\\pi/4)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010869",
+      "question": "If F(s) denotes the Laplace transform of (e^{-t}\\sin t), then (\\lim_{s \\to \\infty} F(s)) =",
+      "options": [
+        "0",
+        "2",
+        "1/2",
+        "-1/2"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010870",
+      "question": "If f(t) denotes the inverse Laplace transform of [(\\frac{s+2}{(s+1)(s-2)})], then (\\lim_{t \\to \\infty} f(t)) =",
+      "options": [
+        "-1",
+        "0",
+        "1/2",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010871",
+      "question": "The inverse Laplace transform of (\\log{\\frac{s+1}{s-1}}) is",
+      "options": [
+        "(\\frac{e^t+e^{-t}}{t})",
+        "(\\frac{-e^t-e^{-t}}{t})",
+        "(\\frac{e^{-t}-e^t}{t})",
+        "(\\frac{e^t-e^{-t}}{t})"
+      ],
+      "correctAnswer": "(\\frac{e^t-e^{-t}}{t})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010872",
+      "question": "The inverse Laplace Transform of (\\frac{1}{s^2(s+5)}) is",
+      "options": [
+        "(t*t*e^t)",
+        "(1*1*e^{-5t})",
+        "(\\int_0^\\tau (1-e^{-5\\sigma})d\\sigma)",
+        "(\\int_0^t (\\int_0^\\sigma e^{-5\\tau}d\\tau)d\\sigma)"
+      ],
+      "correctAnswer": "(1*1*e^{-5t})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010873",
+      "question": "Assertion (A): (\\frac{1}{1^2}+\\frac{1}{2^2}+\\frac{1}{3^2}+\\frac{1}{4^2}+....=\\frac{\\pi^2}{12}) Reason (R): The Fourier series to represent x-x² from x=-π to x=π is (\\frac{\\pi^2}{3}+4[\\frac{\\cos x}{1^2}-\\frac{\\cos 2x}{2^2}+\\frac{\\cos 3x}{3^2}-.........]+2[\\frac{\\sin x}{1}-\\frac{\\sin 2x}{2}+\\frac{\\sin 3x}{3}-.........])",
+      "options": [
+        "Both A and (R) are true and (R) is correct explanation of (A)",
+        "Both A and (R) are true but (R) is not correct explanation of (A)",
+        "Statement (A) is true, Statement (R) is false",
+        "Statement (A) is false, Statement (R) is true"
+      ],
+      "correctAnswer": "Both A and (R) are true but (R) is not correct explanation of (A)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "76439010874",
+      "question": "The coefficient of cosx in the Fourier expansion of f(x) = |cosx|, x∈[-π,π] is",
+      "options": [
+        "4/π",
+        "-4/π",
+        "2/π",
+        "0"
+      ],
+      "correctAnswer": "4/π",
+      "topic": "Mathematics"
+    }
+  ]

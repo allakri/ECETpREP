@@ -1,12 +1,2402 @@
 [
-  { "id": 1, "question": "What is the function of Alumina in brick earth? (CIVIL 2022)", "options": ["To impart plasticity", "To provide color", "To increase strength", "To prevent shrinkage"], "correctAnswer": "To impart plasticity", "topic": "Building Materials" },
-  { "id": 2, "question": "Segregation in concrete means: (CIVIL 2022)", "options": ["Separation of coarse aggregate from the mix", "Expulsion of water from the mix", "Formation of cracks", "Increase in volume"], "correctAnswer": "Separation of coarse aggregate from the mix", "topic": "Concrete Technology" },
-  { "id": 3, "question": "The 'Whole to Part' is a fundamental principle of: (CIVIL 2022)", "options": ["Surveying", "Estimating", "Structural Design", "Fluid Mechanics"], "correctAnswer": "Surveying", "topic": "Surveying" },
-  { "id": 4, "question": "The Atterberg limits are used to classify: (CIVIL 2022)", "options": ["Coarse-grained soils", "Fine-grained soils", "Organic soils", "Sands"], "correctAnswer": "Fine-grained soils", "topic": "Geotechnical Engineering" },
-  { "id": 5, "question": "The unit of Moment of Inertia is: (CIVIL 2022)", "options": ["m^2", "m^3", "m^4", "kg-m"], "correctAnswer": "m^4", "topic": "Strength of Materials" },
-  { "id": 6, "question": "The vertical members fixed between the top and bottom of a door frame are called: (CIVIL 2022)", "options": ["Sills", "Lintels", "Jambs", "Posts"], "correctAnswer": "Posts", "topic": "Building Construction" },
-  { "id": 7, "question": "A canal that is aligned roughly parallel to the contours of the country is called a: (CIVIL 2022)", "options": ["Ridge canal", "Contour canal", "Side-slope canal", "Feeder canal"], "correctAnswer": "Contour canal", "topic": "Irrigation Engineering" },
-  { "id": 8, "question": "Stirrups in a beam are provided to resist: (CIVIL 2022)", "options": ["Bending moment", "Shear force", "Torsion", "Axial compression"], "correctAnswer": "Shear force", "topic": "Reinforced Concrete Structures" },
-  { "id": 9, "question": "The 'ruling gradient' on a highway is the: (CIVIL 2022)", "options": ["Maximum gradient allowed", "Minimum gradient allowed", "Gradient at which vehicle stops", "Design gradient"], "correctAnswer": "Design gradient", "topic": "Transportation Engineering" },
-  { "id": 10, "question": "The Standard Penetration Test (SPT) is used to measure the: (CIVIL 2022)", "options": ["Permeability of soil", "Shear strength of soil", "Relative density of sands", "Compressibility of clay"], "correctAnswer": "Relative density of sands", "topic": "Geotechnical Engineering" }
-]
+    {
+      "id": "81959913636",
+      "question": "If \\(A = \\begin{pmatrix} a^2 & ab & ac \\\\ ab & b^2 & bc \\\\ ac & bc & c^2 \\end{pmatrix}\\) and \\(a^2 + b^2 + c^2 = 1\\) then \\(A^2 =\\)",
+      "options": [
+        "I",
+        "A",
+        "\\(A^{-1}\\)",
+        "\\(A^3\\)"
+      ],
+      "correctAnswer": "A",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913637",
+      "question": "If \\(adjA = \\begin{pmatrix} 1 & -1 & 0 \\\\ 2 & 3 & 1 \\\\ 2 & 1 & -1 \\end{pmatrix}\\) then \\(adj \\ 2A =\\)",
+      "options": [
+        "\\(\\begin{pmatrix} 1 & -1 & 0 \\\\ 2 & 3 & 1 \\\\ 2 & 1 & -1 \\end{pmatrix}\\)",
+        "\\(\\begin{pmatrix} 2 & -2 & 0 \\\\ 4 & 6 & 2 \\\\ 4 & 2 & -2 \\end{pmatrix}\\)",
+        "\\(\\begin{pmatrix} 4 & -4 & 0 \\\\ 8 & 12 & 4 \\\\ 8 & 4 & -4 \\end{pmatrix}\\)",
+        "\\(\\begin{pmatrix} 8 & -8 & 0 \\\\ 16 & 24 & 8 \\\\ 16 & 8 & -8 \\end{pmatrix}\\)"
+      ],
+      "correctAnswer": "\\(\\begin{pmatrix} 4 & -4 & 0 \\\\ 8 & 12 & 4 \\\\ 8 & 4 & -4 \\end{pmatrix}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913638",
+      "question": "If a, b and c are distinct and \\(\\begin{vmatrix} a & a^2 & a^3-1 \\\\ b & b^2 & b^3-1 \\\\ c & c^2 & c^3-1 \\end{vmatrix} = 0\\) then",
+      "options": [
+        "a+b+c = 1",
+        "a+b+c = 0",
+        "ab+bc+ca = 0",
+        "abc = 1"
+      ],
+      "correctAnswer": "abc = 1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913639",
+      "question": "The System of linear equations x + y + z = 2, 2x + y - z = 3 and 3x + 2y + kz = 4 has a unique solution if",
+      "options": [
+        "k ≠ 0",
+        "-1 < k < 1",
+        "-2 < k < 2",
+        "k = 0"
+      ],
+      "correctAnswer": "k ≠ 0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913640",
+      "question": "If \\(\\frac{1-x+6x^2}{x-x^3} = \\frac{A}{x} + \\frac{B}{1-x} + \\frac{C}{1+x}\\) then A - B =",
+      "options": [
+        "-1",
+        "-4",
+        "-3",
+        "-2"
+      ],
+      "correctAnswer": "-2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913641",
+      "question": "If \\(\\frac{ax+b}{(3x+4)^2} = \\frac{1}{3x+4} - \\frac{3}{(3x+4)^2}\\) then a + b =",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913642",
+      "question": "The Period of cos(x + 2x + 3x + ... + nx)",
+      "options": [
+        "\\(2\\pi(n+1)\\)",
+        "\\(\\frac{4\\pi}{n(n+1)}\\)",
+        "\\(\\frac{2\\pi}{n(n+1)}\\)",
+        "\\(2\\pi\\)"
+      ],
+      "correctAnswer": "\\(\\frac{4\\pi}{n(n+1)}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913643",
+      "question": "If 3sinα = 5sinβ then \\(\\frac{\\tan(\\frac{\\alpha+\\beta}{2})}{\\tan(\\frac{\\alpha-\\beta}{2})} = \\)",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913644",
+      "question": "If x = sin(2tan⁻¹2) and y = sin(\\(\\frac{1}{2}\\)tan⁻¹(\\(\\frac{4}{3}\\))) then",
+      "options": [
+        "x > y and y² = 1 - x",
+        "x < y",
+        "x > y and y² = x",
+        "y² = 1 + x"
+      ],
+      "correctAnswer": "x > y and y² = 1 - x",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913645",
+      "question": "General solution of tan5θtan2θ = 1 is",
+      "options": [
+        "\\(\\frac{2n\\pi}{7} \\pm \\frac{\\pi}{14}, n \\in Z\\)",
+        "\\(\\frac{n\\pi}{7}, n \\in Z\\)",
+        "\\(n\\pi \\pm \\frac{\\pi}{2}, n \\in Z\\)",
+        "\\(\\frac{n\\pi}{2} \\pm \\frac{\\pi}{14}, n \\in Z\\)"
+      ],
+      "correctAnswer": "\\(\\frac{2n\\pi}{7} \\pm \\frac{\\pi}{14}, n \\in Z\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913646",
+      "question": "In a ΔABC, if (a + b + c)(b + c - a) = 3bc then ∠A =",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "135°"
+      ],
+      "correctAnswer": "60°",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913647",
+      "question": "If \\((\\sqrt{3} + i)^{100} = 2^{99}(a+ib)\\), then \\(a^2+b^2=\\)",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913648",
+      "question": "The value of 'x' so that the line through (3,x) and (2,7) is parallel to the line through (-1,4) and (0,6) is",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "8"
+      ],
+      "correctAnswer": "9",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913649",
+      "question": "The Equation of the circle with centre (\\(\\frac{a}{2},\\frac{b}{2}\\)) and radius \\(\\sqrt{\\frac{a^2+b^2}{4}}\\) is",
+      "options": [
+        "\\(x^2+y^2-ax-by = (a+b)^2\\)",
+        "\\(x^2+y^2-ax-by = 0\\)",
+        "\\(x^2+y^2-ax-by = (a-b)^2\\)",
+        "\\(x^2+y^2-ax-by = \\frac{a^2+b^2}{4}\\)"
+      ],
+      "correctAnswer": "\\(x^2+y^2-ax-by = 0\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913650",
+      "question": "If the parabola \\(y^2 = 4ax\\) passes through the point (-3,2), then the length of its latus rectum is ______ units",
+      "options": [
+        "2/3",
+        "4/3",
+        "1/3",
+        "4"
+      ],
+      "correctAnswer": "4/3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913651",
+      "question": "The Equation of the ellipse whose latus rectum is 15units and the distance between the foci is 10 units with axes being co ordinate axes is",
+      "options": [
+        "\\(3x^2+4y^2=300\\)",
+        "\\(4x^2+3y^2=300\\)",
+        "\\(x^2+4y^2=300\\)",
+        "\\(3x^2+y^2=300\\)"
+      ],
+      "correctAnswer": "\\(3x^2+4y^2=300\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913652",
+      "question": "The eccentricity of the Hyperbola xy = 10 is",
+      "options": [
+        "\\(\\sqrt{2}\\)",
+        "2",
+        "\\(\\sqrt{3}\\)",
+        "\\(\\frac{3}{2}\\)"
+      ],
+      "correctAnswer": "\\(\\sqrt{2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913653",
+      "question": "\\(Lt_{x\\to1} \\frac{1+\\log x-x}{1-2x+x^2}\\)",
+      "options": [
+        "0",
+        "\\(-\\frac{1}{2}\\)",
+        "1",
+        "-1"
+      ],
+      "correctAnswer": "\\(-\\frac{1}{2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913654",
+      "question": "If \\(2^x + 2^y = 2^{x+y}\\) then \\(\\frac{dy}{dx}=\\)",
+      "options": [
+        "0",
+        "1",
+        "\\(-2^{y-x}\\)",
+        "\\(2^{x-y}\\)"
+      ],
+      "correctAnswer": "\\(-2^{y-x}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913655",
+      "question": "If \\(y=\\sqrt{\\cos 2x}\\) then \\(y\\frac{d^2y}{dx^2}+2y^2=\\)",
+      "options": [
+        "0",
+        "\\((\\frac{dy}{dx})^2\\)",
+        "\\(-(\\frac{dy}{dx})^2\\)",
+        "\\(y(\\frac{dy}{dx})^2\\)"
+      ],
+      "correctAnswer": "\\(-(\\frac{dy}{dx})^2\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913656",
+      "question": "If \\(u=e^x \\cos y\\), and \\(v=e^x \\sin y\\) then \\(\\frac{\\partial u}{\\partial x}=\\)",
+      "options": [
+        "\\(\\frac{\\partial u}{\\partial y}\\)",
+        "\\(-\\frac{\\partial u}{\\partial y}\\)",
+        "\\(-\\frac{\\partial v}{\\partial y}\\)",
+        "\\(\\frac{\\partial v}{\\partial y}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\partial v}{\\partial y}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913657",
+      "question": "Area of the triangle formed by a tangent to the curve \\(2xy=a^2\\) and coordinate axes is ______ units",
+      "options": [
+        "\\(a^2\\)",
+        "\\(2a^2\\)",
+        "\\(3a^2\\)",
+        "\\(4a^2\\)"
+      ],
+      "correctAnswer": "\\(a^2\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913658",
+      "question": "The Maximum value of \\(x^{-x}\\) is",
+      "options": [
+        "\\(e^{\\frac{1}{e}}\\)",
+        "\\(e^{1/e}\\)",
+        "\\(e^{-1/e}\\)",
+        "e"
+      ],
+      "correctAnswer": "\\(e^{1/e}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913659",
+      "question": "The rate of change of volume of a sphere is equal to the rate of change of its radius. Then its radius is",
+      "options": [
+        "\\(\\frac{1}{2\\pi}\\)",
+        "\\(2\\sqrt{\\pi}\\)",
+        "\\(\\sqrt{2\\pi}\\)",
+        "\\(\\frac{1}{2\\sqrt{\\pi}}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1}{2\\sqrt{\\pi}}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913660",
+      "question": "\\(\\int \\cos\\sqrt{x} \\ dx\\)",
+      "options": [
+        "\\(2(\\sqrt{x}\\sin\\sqrt{x} + \\cos\\sqrt{x})\\)",
+        "\\(\\sqrt{x}\\sin\\sqrt{x} - \\cos\\sqrt{x}\\)",
+        "\\(2(\\sqrt{x}\\sin\\sqrt{x} - \\cos\\sqrt{x})\\)",
+        "\\(\\frac{\\cos\\sqrt{x}}{2\\sqrt{x}}\\)"
+      ],
+      "correctAnswer": "\\(2(\\sqrt{x}\\sin\\sqrt{x} + \\cos\\sqrt{x})\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913661",
+      "question": "\\(\\int_0^\\pi \\frac{e^{\\cos\\theta}}{e^{\\cos\\theta}+e^{\\sin\\theta}} d\\theta\\)",
+      "options": [
+        "\\(\\frac{\\pi}{4}\\)",
+        "\\(e^{\\pi}\\)",
+        "\\(\\frac{\\pi}{2}\\)",
+        "0"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi}{4}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913662",
+      "question": "The area of the region enclosed by the curve \\(y=e^{x/a}+e^{-x/a}\\) the x-axis and the lines \\(x=\\pm a\\) is ______ sq. units",
+      "options": [
+        "\\((e-\\frac{1}{e})\\)",
+        "\\(2a(e-\\frac{1}{e})\\)",
+        "\\(\\frac{a}{2}(e-\\frac{1}{e})\\)",
+        "\\(a(e-\\frac{1}{e})\\)"
+      ],
+      "correctAnswer": "\\(2a(e-\\frac{1}{e})\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913663",
+      "question": "The volume generated by the rotation of the area bounded by the curve \\(y^2=x^3\\), the y-axis and the lines \\(y=0, y=8\\) about y-axis is ______ cu. units",
+      "options": [
+        "\\(192\\pi\\)",
+        "\\(\\frac{384\\pi}{7}\\)",
+        "\\(\\frac{384\\pi^2}{7}\\)",
+        "\\(\\frac{384\\pi}{5}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{384\\pi}{7}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913664",
+      "question": "The Mean Square Value of \\(f(x) = \\tan x\\) as 'x' varies from 0 to \\(\\frac{\\pi}{3}\\)",
+      "options": [
+        "\\(\\frac{1}{\\pi}(\\sqrt{3}-\\frac{\\pi}{3})\\)",
+        "\\(\\frac{1}{\\pi}(\\sqrt{3}+\\frac{\\pi}{3})\\)",
+        "\\(\\frac{1}{\\pi}(3\\sqrt{3}-\\pi)\\)",
+        "\\(\\frac{\\pi}{3}(\\sqrt{3}-\\frac{\\pi}{3})\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1}{\\pi}(3\\sqrt{3}-\\pi)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913665",
+      "question": "The Values of function f(x) at 5 discrete points are given below\n| x | 0 | 0.1 | 0.2 | 0.3 | 0.4 |\n|---|---|---|---|---|---|\n| f(x) | 0 | 10 | 40 | 90 | 160 |\nthen the value of \\(\\int_0^4 f(x)dx\\)",
+      "options": [
+        "24",
+        "23",
+        "22",
+        "20"
+      ],
+      "correctAnswer": "22",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913666",
+      "question": "The order and degree of the differential equation \\(\\frac{d^2y}{dx^2}=(y+(\\frac{dy}{dx})^2)^{1/4}\\) is",
+      "options": [
+        "2, 4",
+        "4, 2",
+        "2, 2",
+        "2, 1"
+      ],
+      "correctAnswer": "2, 4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913667",
+      "question": "The differential equation associated with the primitive \\(Ax^2+By^2=1\\) is",
+      "options": [
+        "\\(xy\\frac{d^2y}{dx^2}+(\\frac{dy}{dx})^2-x(\\frac{dy}{dx})=0\\)",
+        "\\(x\\frac{d^2y}{dx^2}+x(\\frac{dy}{dx})^2-y(\\frac{dy}{dx})=0\\)",
+        "\\(xy\\frac{d^2y}{dx^2}+x(\\frac{dy}{dx})^2-y(\\frac{dy}{dx})=0\\)",
+        "\\(xy\\frac{d^2y}{dx^2}-x(\\frac{dy}{dx})^2+y(\\frac{dy}{dx})=0\\)"
+      ],
+      "correctAnswer": "\\(xy\\frac{d^2y}{dx^2}+x(\\frac{dy}{dx})^2-y(\\frac{dy}{dx})=0\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913668",
+      "question": "Solution of the differential equation \\((3e^{3x}y-2x)dx+e^{3x}dy=0\\) is",
+      "options": [
+        "\\(ye^{-3x}=x^2+C\\)",
+        "\\(ye^{3x}=x^2+C\\)",
+        "\\(ye^{3x}=-x^2+C\\)",
+        "\\(ye^{3x}=\\frac{1}{2}x^2+C\\)"
+      ],
+      "correctAnswer": "\\(ye^{3x}=x^2+C\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913669",
+      "question": "The Integrating Factor for the differential equation \\(\\frac{dp}{dt}+k_2p=k_1e^{-k_1t}\\) is",
+      "options": [
+        "\\(e^{-k_1t}\\)",
+        "\\(e^{-k_2t}\\)",
+        "\\(e^{k_1t}\\)",
+        "\\(e^{k_2t}\\)"
+      ],
+      "correctAnswer": "\\(e^{k_2t}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913670",
+      "question": "The Solution of \\(4\\frac{d^2y}{dx^2}-4\\frac{dy}{dx}+y=0\\) is",
+      "options": [
+        "\\(y=(A+Bx)e^{-x/2}\\)",
+        "\\(y=(A+Bx)e^{x/2}\\)",
+        "\\(y=Ae^{x/2}+Be^{x/2}\\)",
+        "\\(y=(A+Bx)e^x\\)"
+      ],
+      "correctAnswer": "\\(y=(A+Bx)e^{x/2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913671",
+      "question": "The particular integral of \\(2\\frac{d^2y}{dx^2}+\\frac{dy}{dx}-6y=e^{-2x}\\) is",
+      "options": [
+        "\\(-\\frac{x}{7}e^{-2x}\\)",
+        "\\(\\frac{x}{7}e^{-2x}\\)",
+        "\\(\\frac{1}{7}e^{-2x}\\)",
+        "\\(-\\frac{1}{7}e^{-2x}\\)"
+      ],
+      "correctAnswer": "\\(-\\frac{x}{7}e^{-2x}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913672",
+      "question": "The Particular Integral of \\(\\frac{d^3y}{dx^3}-1=\\sin 3x\\) is",
+      "options": [
+        "\\(\\frac{1}{730}(27\\cos 3x+\\sin 3x)\\)",
+        "\\(\\frac{1}{730}(27\\cos 3x-\\sin 3x)\\)",
+        "\\(\\frac{-1}{730}(27\\cos 3x+\\sin 3x)\\)",
+        "\\(\\frac{-1}{730}(27\\cos 3x-\\sin 3x)\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1}{730}(27\\cos 3x-\\sin 3x)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913673",
+      "question": "The Particular Integral of \\(\\frac{d^2y}{dx^2}-3\\frac{dy}{dx}+2y=x+x^2\\) is",
+      "options": [
+        "\\(\\frac{1}{2}(x^2+4x+5)\\)",
+        "\\(\\frac{1}{2}(x^2-4x-5)\\)",
+        "\\(\\frac{1}{2}(x^2-4x+5)\\)",
+        "\\(-\\frac{1}{2}(x^2+4x+5)\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1}{2}(x^2+4x+5)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913674",
+      "question": "L{cos4tsin2t} =",
+      "options": [
+        "\\(\\frac{4}{s^2+4}+\\frac{s}{s^2+36}\\)",
+        "\\(\\frac{3}{s^2+36}-\\frac{1}{s^2+4}\\)",
+        "\\(\\frac{2}{s^2+4}+\\frac{3s}{s^2+36}\\)",
+        "\\(\\frac{3}{s^2+36}+\\frac{1}{s^2+4}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{3}{s^2+36}-\\frac{1}{s^2+4}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913675",
+      "question": "L{\\(\\frac{\\sin t}{t}\\)} = \\(\\tan^{-1}(\\frac{1}{s})\\) then L{\\(\\frac{\\sin at}{t}\\)}",
+      "options": [
+        "\\(\\tan^{-1}(\\frac{s}{a})\\)",
+        "\\(\\tan^{-1}(\\frac{a}{s})\\)",
+        "\\(\\frac{1}{a}\\tan^{-1}(\\frac{a}{s})\\)",
+        "\\(\\frac{1}{a}\\tan^{-1}(\\frac{s}{a})\\)"
+      ],
+      "correctAnswer": "\\(\\tan^{-1}(\\frac{a}{s})\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913676",
+      "question": "L{tcos3t} =",
+      "options": [
+        "\\(\\frac{9}{(s^2+9)^2}\\)",
+        "\\(\\frac{s^2}{(s^2+9)^2}\\)",
+        "\\(\\frac{s^2+9}{(s^2-9)^2}\\)",
+        "\\(\\frac{s^2-9}{(s^2+9)^2}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{s^2-9}{(s^2+9)^2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913677",
+      "question": "L{\\(\\frac{1-\\cos t}{t}\\)} =",
+      "options": [
+        "\\(\\log{\\frac{\\sqrt{s^2+1}}{s^2}}\\)",
+        "\\(\\log{(\\frac{s^2+1}{s^2}})\\)",
+        "\\(\\log{(\\frac{\\sqrt{s^2+1}}{s}})\\)",
+        "\\(\\log{\\sqrt{\\frac{s^2}{s^2+1}}}\\)"
+      ],
+      "correctAnswer": "\\(\\log{\\sqrt{\\frac{s^2}{s^2+1}}}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913678",
+      "question": "\\(L^{-1}\\{\\frac{s}{(s+1)^2}}\\} =\\)",
+      "options": [
+        "\\(e^{-t}(1-t)\\)",
+        "\\(e^t(t-1)\\)",
+        "\\(e^{-t}(t-1)\\)",
+        "\\(e^t(1-t)\\)"
+      ],
+      "correctAnswer": "\\(e^{-t}(1-t)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913679",
+      "question": "If \\(L^{-1}\\{F(s)\\} = f(t)\\) then \\(L^{-1}\\{\\int_s^\\infty F(s)ds\\} =\\)",
+      "options": [
+        "f'(t)",
+        "tf'(t)",
+        "tf(t)",
+        "f(t)/t"
+      ],
+      "correctAnswer": "f(t)/t",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913680",
+      "question": "A system is described by the differential equation \\(\\frac{d^2y}{dt^2}+4\\frac{dy}{dt}+5y=0\\) assuming \\(y(0)=0, y'(0)=0\\) then L{y(t)}",
+      "options": [
+        "\\(\\frac{1}{s(s^2+4s+5)}\\)",
+        "\\(\\frac{s}{(s^2+4s+5)}\\)",
+        "\\(\\frac{5}{(s^2+4s+5)}\\)",
+        "\\(\\frac{5}{s(s^2+4s+5)}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{5}{s(s^2+4s+5)}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913681",
+      "question": "\\(L^{-1}\\{\\frac{1}{s(s^2+a^2)}\\} =\\)",
+      "options": [
+        "\\(\\frac{1-\\sin at}{a^2}\\)",
+        "\\(\\frac{1+\\cos at}{a^2}\\)",
+        "\\(\\frac{1-\\cos at}{a^2}\\)",
+        "\\(\\frac{1+\\sin at}{a^2}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1-\\cos at}{a^2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913682",
+      "question": "The Fourier series expansion of f(x) = |sinx| over (–l, l), the value of bn =",
+      "options": [
+        "0",
+        "\\(\\frac{2}{l(n^2-1)}\\)",
+        "\\(\\frac{4}{l(n^2-1)}\\)",
+        "\\(\\frac{4}{l(1-n^2)}\\)"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913683",
+      "question": "If \\(f(x) = \\begin{cases} 0, & -\\pi < x < 0 \\\\ x^2, & 0 < x < \\pi \\end{cases}\\) and \\(f(x) = \\frac{a_0}{2} + \\sum_{n=1}^\\infty (a_n \\cos nx + b_n \\sin nx)\\) then \\(a_0 =\\)",
+      "options": [
+        "\\(\\frac{\\pi}{3}\\)",
+        "\\(\\frac{3}{\\pi}\\)",
+        "\\(\\frac{\\pi^2}{3}\\)",
+        "\\(\\frac{\\pi^2}{2}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi^2}{3}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913684",
+      "question": "The Half range cosine series expansion of the function f(x) = x - x², 0 < x < 1 is represented by a₂ =",
+      "options": [
+        "\\(-\\frac{4}{\\pi^2}\\)",
+        "\\(\\frac{4}{\\pi^2}\\)",
+        "\\(\\frac{1}{\\pi^2}\\)",
+        "\\(-\\frac{1}{\\pi^2}\\)"
+      ],
+      "correctAnswer": "\\(-\\frac{4}{\\pi^2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913685",
+      "question": "The value of 'b₄' in the Fourier series expansion of f(x) = 3x² – 2 in (–3,3) is",
+      "options": [
+        "14",
+        "\\(-\\frac{108}{\\pi^2}\\)",
+        "\\(\\frac{108}{\\pi^2}\\)",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "81959913686",
+      "question": "The dimensional formula for kinetic energy is",
+      "options": [
+        "\\(M^0L^0T^0\\)",
+        "\\(M^1L^2T^{-2}\\)",
+        "\\(M^1L^2T^{-1}\\)",
+        "\\(M^1L^1T^{-2}\\)"
+      ],
+      "correctAnswer": "\\(M^1L^2T^{-2}\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913687",
+      "question": "In photoelectric effect, the photo current",
+      "options": [
+        "depends both on intensity and frequency of incident light",
+        "does not depends on the frequency of photon but depends only on intensity of incident light",
+        "decreases with increase of frequency of incident photon",
+        "increases with increase of frequency of incident photon"
+      ],
+      "correctAnswer": "does not depends on the frequency of photon but depends only on intensity of incident light",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913688",
+      "question": "Optical fibers uses the phenomenon of",
+      "options": [
+        "total internal reflection",
+        "refraction",
+        "dispersion",
+        "scattering"
+      ],
+      "correctAnswer": "total internal reflection",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913689",
+      "question": "The volume of 1 mole of an ideal gas at STP",
+      "options": [
+        "\\(2.24 \\times 10^{-2} m^3\\)",
+        "\\(2.24 \\times 10^{-3} m^3\\)",
+        "\\(2.42 \\times 10^{-3} m^3\\)",
+        "\\(24.2 \\times 10^{-3} m^3\\)"
+      ],
+      "correctAnswer": "\\(2.24 \\times 10^{-2} m^3\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913690",
+      "question": "Which of the following statement is correct in the case of an isothermal process of a gas",
+      "options": [
+        "Temperature changes",
+        "Exchange of heat takes place between gas and surroundings",
+        "Boyle's law does not valid",
+        "It is a quick process"
+      ],
+      "correctAnswer": "Exchange of heat takes place between gas and surroundings",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913691",
+      "question": "What is the angle between P and the resultant of (P + Q) and (P - Q)",
+      "options": [
+        "\\(\\tan^{-1}(\\frac{P-Q}{P+Q})\\)",
+        "\\(\\tan^{-1}(\\frac{P}{Q})\\)",
+        "\\(\\tan^{-1}(\\frac{Q}{P})\\)",
+        "Zero"
+      ],
+      "correctAnswer": "Zero",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913692",
+      "question": "If the magnitudes of scalar and vector products of two vectors are 6 and 6√3 respectively, then the angle between the vectors",
+      "options": [
+        "15°",
+        "30°",
+        "60°",
+        "75°"
+      ],
+      "correctAnswer": "60°",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913693",
+      "question": "Two equal forces (F each) act at a point inclined to each other at an angle of 120°. The magnitude of their resultant is",
+      "options": [
+        "F/2",
+        "F/4",
+        "F",
+        "2F"
+      ],
+      "correctAnswer": "F",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913694",
+      "question": "The quantity which remains unchanged during the flight of an oblique projectile is",
+      "options": [
+        "Horizontal distance",
+        "Vertical distance",
+        "Vertical component of velocity",
+        "Horizontal component of velocity"
+      ],
+      "correctAnswer": "Horizontal component of velocity",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913695",
+      "question": "An object is thrown along a direction inclined at angle of 45° with the horizontal. If 'R' represents horizontal range and 'H' represents vertical height of object, which of the following is correct",
+      "options": [
+        "R=H",
+        "R=2H",
+        "R=3H",
+        "R=4H"
+      ],
+      "correctAnswer": "R=4H",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913696",
+      "question": "A bullet is fired with a velocity 10 m/s making an angle of 60º with the horizontal plane. The horizontal component of the velocity of bullet when it reaches maximum height is",
+      "options": [
+        "10 m/s",
+        "0",
+        "8 m/s",
+        "5 m/s"
+      ],
+      "correctAnswer": "5 m/s",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913697",
+      "question": "If μs, μk, μr are coefficients of static friction, sliding friction and rolling friction, then",
+      "options": [
+        "μr< μk< μs",
+        "μk< μr< μs",
+        "μk< μs< μr",
+        "μs= μk =μr"
+      ],
+      "correctAnswer": "μr< μk< μs",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913698",
+      "question": "A body falling from a height of 10 metre rebounds from a hard floor. If it loses 20% of its energy in impact, it will rise",
+      "options": [
+        "10m",
+        "8m",
+        "5m",
+        "12m"
+      ],
+      "correctAnswer": "8m",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913699",
+      "question": "A body of mass 10 kg is travelling with uniform speed of 5m/s. Its kinetic energy is",
+      "options": [
+        "25 J",
+        "125 J",
+        "1250 J",
+        "1000 J"
+      ],
+      "correctAnswer": "125 J",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913700",
+      "question": "If a stone is thrown up vertically and returns to ground, its potential energy is maximum",
+      "options": [
+        "During upward journey",
+        "At the maximum height",
+        "During return journey",
+        "On the ground"
+      ],
+      "correctAnswer": "At the maximum height",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913701",
+      "question": "A second's pendulum is taken from earth to moon. If it is to act as a second's pendulum there also, the length of the pendulum",
+      "options": [
+        "Should be increased",
+        "Should be decreased",
+        "Need not be changed",
+        "Difficult to imagine"
+      ],
+      "correctAnswer": "Should be decreased",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913702",
+      "question": "In a simple harmonic motion, the maximum acceleration and maximum velocity are 31.4m/s² and 10m/s. The time period is",
+      "options": [
+        "4s",
+        "3s",
+        "2s",
+        "0.5s"
+      ],
+      "correctAnswer": "2s",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913703",
+      "question": "A person standing between two hills fires a gun. He hears first echo after 1 second and second echo after 2 second. If velocity of sound in air is 340m/s, the distance between the hills is",
+      "options": [
+        "170m",
+        "340m",
+        "510m",
+        "1020m"
+      ],
+      "correctAnswer": "510m",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913704",
+      "question": "Two tuning forks of frequencies 256 and 258 vibrations /second are sounded together. Then the time interval between two consecutive maxima heard by an observer is",
+      "options": [
+        "2 s",
+        "0.5 s",
+        "250 s",
+        "252 s"
+      ],
+      "correctAnswer": "0.5 s",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913705",
+      "question": "According to Hooks law, the relation between stress and strain is",
+      "options": [
+        "Stress ∝ Strain",
+        "Stress ∝ 1/Strain",
+        "Stress ∝ (Strain)²",
+        "Stress ∝ (Strain)¹/²"
+      ],
+      "correctAnswer": "Stress ∝ Strain",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913706",
+      "question": "An iron needle slowly placed on surface of water floats on it because",
+      "options": [
+        "of elasticity",
+        "of viscosity",
+        "of surface tension",
+        "of its shape"
+      ],
+      "correctAnswer": "of surface tension",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913707",
+      "question": "What happens to the force between magnetic poles when their pole strength and the distance between them are both doubled",
+      "options": [
+        "Force increases by two times",
+        "Force remains unchanged",
+        "Force becomes halved",
+        "Force increases by four times"
+      ],
+      "correctAnswer": "Force remains unchanged",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913708",
+      "question": "Substances which when placed in a magnetic field acquire feeble magnetisation in a direction opposite to that of the applied field are called",
+      "options": [
+        "Diamagnetic substances",
+        "Paramagnetic substances",
+        "Ferromagnetic substances",
+        "Ferrimagnetic substances"
+      ],
+      "correctAnswer": "Diamagnetic substances",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913709",
+      "question": "The resistance of wire of length 'L' and diameter 'D' is R Ω. The resistance of another wire of same material having length 'L' and diameter D/2 is _____ Ω.",
+      "options": [
+        "R/2",
+        "2R",
+        "4R",
+        "16R"
+      ],
+      "correctAnswer": "4R",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913710",
+      "question": "To balance the bridge in the circuit, the value of R is",
+      "options": [
+        "8 Ω",
+        "4 Ω",
+        "20 Ω",
+        "12 Ω"
+      ],
+      "correctAnswer": "8 Ω",
+      "topic": "Physics"
+    },
+    {
+      "id": "81959913711",
+      "question": "Number of electrons present in outermost shell of copper atom is",
+      "options": [
+        "2",
+        "1",
+        "18",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913712",
+      "question": "The bond exists between NH₃ and H⁺ in NH₄⁺ is",
+      "options": [
+        "Ionic",
+        "Covalent",
+        "Coordinate covalent",
+        "Metallic"
+      ],
+      "correctAnswer": "Coordinate covalent",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913713",
+      "question": "Possible all oxidation numbers of hydrogen are",
+      "options": [
+        "-1 and 0",
+        "+1 and 0",
+        "+1 and -1",
+        "+1, -1 and 0"
+      ],
+      "correctAnswer": "+1, -1 and 0",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913714",
+      "question": "Molecular weight of a dibasic acid is M. Its equivalent weight is",
+      "options": [
+        "M",
+        "M/2",
+        "2M",
+        "M+2"
+      ],
+      "correctAnswer": "M/2",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913715",
+      "question": "Lyophobic colloids are",
+      "options": [
+        "required stabilisers",
+        "prepared by direct mixing",
+        "more stable",
+        "solvent attracting colloids"
+      ],
+      "correctAnswer": "required stabilisers",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913716",
+      "question": "Which one of the following is not a Lewis acid",
+      "options": [
+        "HCl",
+        "BF₃",
+        "Mg²⁺",
+        "SO₂"
+      ],
+      "correctAnswer": "HCl",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913717",
+      "question": "The solution with more pH value",
+      "options": [
+        "0.1 M HCl",
+        "0.5 M HCl",
+        "0.1 M NaOH",
+        "0.5 M NaOH"
+      ],
+      "correctAnswer": "0.5 M NaOH",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913718",
+      "question": "Froth floatation is used concentrate ____ ores",
+      "options": [
+        "oxide",
+        "carbonate",
+        "sulphide",
+        "chloride"
+      ],
+      "correctAnswer": "sulphide",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913719",
+      "question": "Which one of the following element is not present in German silver",
+      "options": [
+        "Fe",
+        "Ni",
+        "Cu",
+        "Zn"
+      ],
+      "correctAnswer": "Fe",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913720",
+      "question": "A device that converts the energy of combustion of fuels like hydrogen and methane directly into electrical energy is known as",
+      "options": [
+        "Electrolytic cell",
+        "Leclanche cell",
+        "Fuel cell",
+        "Ni-Cd cell"
+      ],
+      "correctAnswer": "Fuel cell",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913721",
+      "question": "Anode used in the electrolytic refining of copper is",
+      "options": [
+        "Pt",
+        "Impure Cu",
+        "Graphite",
+        "pure copper"
+      ],
+      "correctAnswer": "Impure Cu",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913722",
+      "question": "Number of Faradays of current required to decompose 36 grams of water completely",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913723",
+      "question": "The atomic weight of Cu is x, the electrochemical equivalent of Cu in the solution of copper sulphate is",
+      "options": [
+        "2x/F",
+        "x/2F",
+        "x/F",
+        "xF"
+      ],
+      "correctAnswer": "x/2F",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913724",
+      "question": "Rate of corrosion increases with",
+      "options": [
+        "decrease of temperature",
+        "decrease of humidity",
+        "reactivity of metal",
+        "purity of metal"
+      ],
+      "correctAnswer": "reactivity of metal",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913725",
+      "question": "Chemical formula of the rust is",
+      "options": [
+        "Fe₂O₃.XH₂O",
+        "Fe₃O₄",
+        "Fe₂(C₂O₄)₃",
+        "FeCl₃"
+      ],
+      "correctAnswer": "Fe₂O₃.XH₂O",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913726",
+      "question": "Exhausted permutit is regenerated by using",
+      "options": [
+        "CaCl₂",
+        "HCl",
+        "NaCl",
+        "MgSO₄"
+      ],
+      "correctAnswer": "NaCl",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913727",
+      "question": "Temporary hardness of water containing 16.2 mg of Ca (HCO₃)₂ and 7.3 mg of Mg (HCO₃)₂ per litre",
+      "options": [
+        "10 mg/lit",
+        "5 mg/lit",
+        "15 mg/lit",
+        "20 mg/lit"
+      ],
+      "correctAnswer": "15 mg/lit",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913728",
+      "question": "Bakelite is an example of",
+      "options": [
+        "thermosetting plastic",
+        "fibre",
+        "thermoplastic",
+        "elastomer"
+      ],
+      "correctAnswer": "thermosetting plastic",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913729",
+      "question": "Which of the following are monomers of butyl rubber",
+      "options": [
+        "Butadiene and styrene",
+        "Chloroprene",
+        "Phenol and formaldehyde",
+        "Isobutylene and isoprene"
+      ],
+      "correctAnswer": "Isobutylene and isoprene",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913730",
+      "question": "Main gases present in producer gas",
+      "options": [
+        "CO & H₂",
+        "CH₄ & CO₂",
+        "CO & N₂",
+        "H₂ & CH₄"
+      ],
+      "correctAnswer": "CO & N₂",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913731",
+      "question": "Number of moles of oxygen required for combustion of 30 grams of ethane is",
+      "options": [
+        "7",
+        "2",
+        "2.5",
+        "3.5"
+      ],
+      "correctAnswer": "3.5",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913732",
+      "question": "Which layer of the atmosphere contains the ozone layer that absorbs of UV light?",
+      "options": [
+        "Stratosphere",
+        "Troposphere",
+        "Mesosphere",
+        "Ionosphere"
+      ],
+      "correctAnswer": "Stratosphere",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913733",
+      "question": "The contaminant among the following",
+      "options": [
+        "SO₂",
+        "MIC",
+        "CO₂",
+        "CH₄"
+      ],
+      "correctAnswer": "MIC",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913734",
+      "question": "Gases responsible for depletion of Ozone layer are",
+      "options": [
+        "CO₂, CFC, CH₄",
+        "SO₂, NO₂, CH₄",
+        "CFC, NO, Cl₂",
+        "CO, SO₂, CH₄"
+      ],
+      "correctAnswer": "CFC, NO, Cl₂",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913735",
+      "question": "The most harmful air pollutant produced by automobiles is",
+      "options": [
+        "SO₂",
+        "NO",
+        "CO",
+        "Cl₂"
+      ],
+      "correctAnswer": "CO",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "81959913736",
+      "question": "The minimum grade of concrete used for R.C.C. as per IS:456 is",
+      "options": [
+        "M15",
+        "M20",
+        "M25",
+        "M30"
+      ],
+      "correctAnswer": "M20",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913737",
+      "question": "The failure of an over-reinforced beam is due to",
+      "options": [
+        "Yielding of steel in the tension zone.",
+        "Crushing of concrete in the compression zone.",
+        "May be due to concrete or steel.",
+        "Unpredictable."
+      ],
+      "correctAnswer": "Crushing of concrete in the compression zone.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913738",
+      "question": "The minimum longitudinal reinforcement in a R.C.C column should not be less than",
+      "options": [
+        "0.8% of gross area of the column.",
+        "6.0% of gross area of the column.",
+        "0.6% of gross area of the column.",
+        "0.12% of gross area of the column."
+      ],
+      "correctAnswer": "0.8% of gross area of the column.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913739",
+      "question": "Distribution steel is provided in the case of slabs, to take care of",
+      "options": [
+        "Tension",
+        "Compression",
+        "Bending",
+        "Temperature & shrinkage stresses."
+      ],
+      "correctAnswer": "Temperature & shrinkage stresses.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913740",
+      "question": "The maximum diameter of reinforcing bar used in slabs shall not be more than",
+      "options": [
+        "10 mm",
+        "12 mm",
+        "1/4th of thickness of slab.",
+        "1/8th of the thickness of slab."
+      ],
+      "correctAnswer": "1/8th of the thickness of slab.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913741",
+      "question": "The shear contribution of bent up bars towards shear resistance shall not be more than",
+      "options": [
+        "25% of shear at the section.",
+        "50% of shear at the section.",
+        "75% of shear at the section",
+        "100% of shear at the section."
+      ],
+      "correctAnswer": "50% of shear at the section.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913742",
+      "question": "The critical section for one way shear in footing is considered at a distance of",
+      "options": [
+        "'d' from the face of column.",
+        "'d/2' from the face of column.",
+        "'d/2' around the periphery of the column.",
+        "'d/4' around the periphery of the column."
+      ],
+      "correctAnswer": "'d' from the face of column.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913743",
+      "question": "An electrical pole of length 'L' m is to be lifted safely like a double overhanging beam. Suggest the suitable position of hooks from the ends of pole for maximum bending moment to be least.",
+      "options": [
+        "0.207 L",
+        "0.25 L",
+        "0.15 L",
+        "0.20 L"
+      ],
+      "correctAnswer": "0.207 L",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913744",
+      "question": "A simply supported beam of span 'L' m carries uniformly distributed load of 'w' N/m over the middle half of the length. What is the maximum bending moment at the center of the span?",
+      "options": [
+        "\\(\\frac{w L^2}{8}\\)",
+        "\\(\\frac{w L^2}{16}\\)",
+        "\\(\\frac{3w L^2}{32}\\)",
+        "\\(\\frac{w L^2}{4}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{3w L^2}{32}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913745",
+      "question": "A cantilever beam of span 'L' m carries Uniformly Distributed Load (UDL) of 'w' N/m over half of the length from the free end. The maximum Bending Moment at the fixed end is",
+      "options": [
+        "\\(\\frac{-3w L^2}{8}\\)",
+        "\\(\\frac{-w L^2}{8}\\)",
+        "\\(\\frac{-w L^2}{4}\\)",
+        "\\(\\frac{-w L^2}{16}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{-3w L^2}{8}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913746",
+      "question": "The moment of resistance of a rectangular beam of breadth 200 mm and depth of 400 mm, if the bending stress is limited 12 N/mm² is",
+      "options": [
+        "12 KN-m",
+        "64 KN-m",
+        "32 KN-m",
+        "24 KN-m"
+      ],
+      "correctAnswer": "64 KN-m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913747",
+      "question": "The modulus of section of a hollow circular beam of external diameter 'D' and internal diameter 'D/2' is",
+      "options": [
+        "\\(\\frac{\\pi D^3}{32}\\)",
+        "\\(\\frac{15\\pi D^3}{256}\\)",
+        "\\(\\frac{15\\pi D^3}{512}\\)",
+        "\\(\\frac{\\pi D^3}{64}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{15\\pi D^3}{512}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913748",
+      "question": "The ratio of maximum shear stress to mean shear stress in the case of a circular beam is",
+      "options": [
+        "1.50",
+        "2.00",
+        "1.33",
+        "1.66"
+      ],
+      "correctAnswer": "1.33",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913749",
+      "question": "The polar modulus of a solid circular shaft of diameter 'D' is",
+      "options": [
+        "\\(\\frac{\\pi D^3}{16}\\)",
+        "\\(\\frac{\\pi D^3}{32}\\)",
+        "\\(\\frac{\\pi D^4}{32}\\)",
+        "\\(\\frac{\\pi D^4}{64}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi D^3}{16}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913750",
+      "question": "The Torque required to produce an angle of twist of one radian in unit length is known as",
+      "options": [
+        "Modulus of Rigidity",
+        "Torsional Rigidity",
+        "Torsional Stiffness",
+        "Flexural Rigidity"
+      ],
+      "correctAnswer": "Torsional Rigidity",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913751",
+      "question": "Two shafts, one is solid circular and the other hollow circular has their external diameters same. The internal diameter of the hollow circular shaft is half of the external diameter. The ratio of strength of solid shaft to hollow shaft is",
+      "options": [
+        "8/7",
+        "15/16",
+        "1",
+        "16/15"
+      ],
+      "correctAnswer": "16/15",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913752",
+      "question": "The radius of gyration of a hollow circular column of internal diameter half of the external diameter is",
+      "options": [
+        "\\(\\frac{\\sqrt{5}D}{16}\\)",
+        "\\(\\frac{\\sqrt{5}D}{8}\\)",
+        "\\(\\frac{5D}{8}\\)",
+        "\\(\\frac{D}{4}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\sqrt{5}D}{8}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913753",
+      "question": "The length of the column which give the same value of Euler’s load and Rankine’s load is (Where E is young’s modulus, K is least radius of gyration, fc permissible compressive stress and α is rankine’s coefficient)",
+      "options": [
+        "\\(\\sqrt{\\frac{\\pi^2 E K^2}{fc - \\pi^2 E \\alpha}}\\)",
+        "\\(\\sqrt{\\frac{\\pi^2 E K^2}{fc + \\pi^2 E \\alpha}}\\)",
+        "\\(\\sqrt{\\frac{\\pi^2 k^2}{fc - \\pi^2 E}}\\)",
+        "\\(\\sqrt{\\frac{\\pi^2 E k^2}{fc E \\alpha}}\\)"
+      ],
+      "correctAnswer": "\\(\\sqrt{\\frac{\\pi^2 E K^2}{fc - \\pi^2 E \\alpha}}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913754",
+      "question": "Compare the ratio of strength of a solid steel column and that of hollow of same length and pinned ends of the same cross sectional area. The internal diameter of hollow column is ¾ of external diameter.",
+      "options": [
+        "16/15",
+        "15/16",
+        "5/3",
+        "25/7"
+      ],
+      "correctAnswer": "25/7",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913755",
+      "question": "A cantilever beam of span 4m is subjected to a maximum deflection of 64 mm at the free end due to a concentrated load at the free end. Find the maximum slope?",
+      "options": [
+        "0.048 radians",
+        "0.024 radians",
+        "0.012 radians",
+        "0.240 radians"
+      ],
+      "correctAnswer": "0.024 radians",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913756",
+      "question": "A cantilever beam of span 'L' m carries uniformly distributed load of 'w' N/m up to half span from the fixed end. Find the maximum deflection at the free end.",
+      "options": [
+        "\\(\\frac{w L^4}{48 E I}\\)",
+        "\\(\\frac{w L^4}{384 E I}\\)",
+        "\\(\\frac{7 w L^4}{384 E I}\\)",
+        "\\(\\frac{7 w L^4}{48 E I}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{7 w L^4}{384 E I}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913757",
+      "question": "When a beam deflects into a circular arc because of pure bending the slope at the ends is given by",
+      "options": [
+        "L/2R",
+        "L/8R",
+        "L²/2R",
+        "L²/8R"
+      ],
+      "correctAnswer": "L/2R",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913758",
+      "question": "The total depth of water required by a crop during the entire period the crop is in the field, is known as",
+      "options": [
+        "Crop Period",
+        "Duty",
+        "Base Period",
+        "Delta"
+      ],
+      "correctAnswer": "Delta",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913759",
+      "question": "If wheat requires 7.5 cm of water after every 28 days of interval for a base period of 140 days. What is Delta for wheat?",
+      "options": [
+        "375 cm",
+        "37.50 cm",
+        "56 cm",
+        "750 cm"
+      ],
+      "correctAnswer": "37.50 cm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913760",
+      "question": "A sprinkler irrigation system is suitable when",
+      "options": [
+        "The land gradient is steep and the soil is easily erodible.",
+        "The soil is having low permeability.",
+        "The water table is low.",
+        "The crops to be grown have deep roots."
+      ],
+      "correctAnswer": "The land gradient is steep and the soil is easily erodible.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913761",
+      "question": "The rise in water level on the upstream side due to the construction of a diversion structure across of river is called as",
+      "options": [
+        "Degradation",
+        "Afflux",
+        "Free board",
+        "Uplift"
+      ],
+      "correctAnswer": "Afflux",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913762",
+      "question": "Ryve’s formula for maximum flood discharge is",
+      "options": [
+        "CA³/⁴",
+        "CA⁴/³",
+        "CA²/³",
+        "CA³/²"
+      ],
+      "correctAnswer": "CA²/³",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913763",
+      "question": "An isohyet is a line joining points having",
+      "options": [
+        "Equal snowfall",
+        "Equal evaporation rate",
+        "Equal height above sea level",
+        "Equal rainfall depth in given location."
+      ],
+      "correctAnswer": "Equal rainfall depth in given location.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913764",
+      "question": "The term piping, used in connection with weirs on alluvial rivers, means",
+      "options": [
+        "The system of pipes provided for drainage of the seepage flow.",
+        "The progressive undermining of the foundation due to dislodging of the soil particles by the seepage water at its point at emergence.",
+        "Vertical pressure exerted by the seepage at various points on the impervious floor.",
+        "The progressive consolidation of the foundation due to water pressure."
+      ],
+      "correctAnswer": "The progressive undermining of the foundation due to dislodging of the soil particles by the seepage water at its point at emergence.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913765",
+      "question": "Line of seepage is also called as",
+      "options": [
+        "porous line",
+        "phreatic line",
+        "shear line",
+        "total energy line"
+      ],
+      "correctAnswer": "phreatic line",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913766",
+      "question": "The elementary profile of a gravity dam is 20 m height and built of material of specific gravity 2.25 and resists only hydrostatic force. To avoid tension, the minimum base width should be",
+      "options": [
+        "10 m",
+        "8.89 m",
+        "17.89 m",
+        "13.33 m"
+      ],
+      "correctAnswer": "13.33 m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913767",
+      "question": "The line which joins the points in a dam section at which pressure is equal to atmospheric pressure",
+      "options": [
+        "Saturation line",
+        "Phreatic line",
+        "Isobar",
+        "Hydraulic Gradient"
+      ],
+      "correctAnswer": "Phreatic line",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913768",
+      "question": "A canal which can irrigate only on one side of the canal",
+      "options": [
+        "Contour canal",
+        "Water shed canal",
+        "Side slope canal",
+        "Inundation canal"
+      ],
+      "correctAnswer": "Contour canal",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913769",
+      "question": "In Lacey's silt theory, perimeter (P) of the channel is determined by",
+      "options": [
+        "P = 4.75 √Q",
+        "P = 1.5 √Q",
+        "P = 4.75 Q¹/⁶",
+        "P = 140 Q¹/⁶"
+      ],
+      "correctAnswer": "P = 4.75 √Q",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913770",
+      "question": "A groyne pointing upstream in a river is known as",
+      "options": [
+        "Attracting groyne",
+        "Repelling groyne",
+        "Ordinary groyne",
+        "Denehy's groyne"
+      ],
+      "correctAnswer": "Repelling groyne",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913771",
+      "question": "Principle of Transmissibility of Forces states that, when a force acts upon a body, its effect is",
+      "options": [
+        "Maximum if it acts at the center of gravity of the body",
+        "Different at different points on its line of action",
+        "same at every point on its line of action",
+        "Minimum if it acts at the C.G of the body"
+      ],
+      "correctAnswer": "same at every point on its line of action",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913772",
+      "question": "Lami's theorem states that",
+      "options": [
+        "three forces acting at a point are always in equilibrium.",
+        "if three forces acting on a point can be represented in magnitude and direction by the sides of a triangle, the point will be in the state of equilibrium.",
+        "three coplanar forces action at a point will be in equilibrium, if each force is proportional to the sine of the angle between the other two.",
+        "three coplanar forces acting at a point will be in equilibrium if each force is inversely proportional to the sine of the angle between the other two."
+      ],
+      "correctAnswer": "three coplanar forces action at a point will be in equilibrium, if each force is proportional to the sine of the angle between the other two.",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913773",
+      "question": "The forces which meet at one point and have their lines of action in different planes are",
+      "options": [
+        "coplanar non-current forces",
+        "non-coplanar concurrent forces",
+        "non-coplanar non-current forces",
+        "intersecting forces"
+      ],
+      "correctAnswer": "non-coplanar concurrent forces",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913774",
+      "question": "The centroid (x̄) of a trapezium of top width ‘a’, base width ‘b’ and height ‘h’ with left face vertical",
+      "options": [
+        "\\(\\frac{a^2+ab+b^2}{3(a+b)}\\)",
+        "\\(\\frac{a^2+2ab+b^2}{3(a+b)}\\)",
+        "\\(\\frac{[2a+b]h}{[a+b]3}\\)",
+        "\\(\\frac{[a+2b]h}{[a+b]3}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{a^2+ab+b^2}{3(a+b)}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913775",
+      "question": "The centroid of a T-Section of flange size 20cm x 4cm and web size 4cm x 20cm above the base (ȳ) is",
+      "options": [
+        "12cm from the base",
+        "10cm from the base",
+        "16cm from the base",
+        "8cm from the base"
+      ],
+      "correctAnswer": "16cm from the base",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913776",
+      "question": "The moment of inertia of a triangular section of base width ‘b’ and height ‘h’ about the plane passing through the base is",
+      "options": [
+        "bh³/48",
+        "bh³/24",
+        "bh³/36",
+        "bh³/12"
+      ],
+      "correctAnswer": "bh³/12",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913777",
+      "question": "The least radius of gyration of a square section of size ‘a’ x ‘a’ unit is",
+      "options": [
+        "\\(2a/\\sqrt{3}\\)",
+        "\\(a/2\\sqrt{3}\\)",
+        "\\(a/3\\sqrt{2}\\)",
+        "\\(a/\\sqrt{2}\\)"
+      ],
+      "correctAnswer": "\\(a/2\\sqrt{3}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913778",
+      "question": "The relation between modulus of elasticity (E), modulus of rigidity (C) and bulk modulus (K) is",
+      "options": [
+        "E = 3KC / (9K+C)",
+        "E = KC / (3K+C)",
+        "E = 9KC / (3K+C)",
+        "E = 9KC / (3C+K)"
+      ],
+      "correctAnswer": "E = 9KC / (3K+C)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913779",
+      "question": "If a material has identical properties in all directions, it is said to be",
+      "options": [
+        "homogeneous",
+        "isotropic",
+        "elastic",
+        "orthotropic"
+      ],
+      "correctAnswer": "isotropic",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913780",
+      "question": "Permanent set is",
+      "options": [
+        "the force which acts permanently on the body",
+        "irrecoverable deformation in the body",
+        "the shape of the member just after completion of construction",
+        "ratio of Poisson’s ratio to young’s modulus"
+      ],
+      "correctAnswer": "irrecoverable deformation in the body",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913781",
+      "question": "The property of the material by virtue of which the material withstands varying, repeated and reverse loads is called",
+      "options": [
+        "Creep",
+        "Endurance",
+        "Tenacity",
+        "Fatigue"
+      ],
+      "correctAnswer": "Fatigue",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913782",
+      "question": "Priming of the pump is done by",
+      "options": [
+        "Driving the air out from the suction pipe, pump and a part of delivery pipe up to delivery valve by pouring water",
+        "Filling the suction pipe only",
+        "Lubricating the pump, using water as a lubricant",
+        "Lubricating the driving mechanism with lubricant oil"
+      ],
+      "correctAnswer": "Driving the air out from the suction pipe, pump and a part of delivery pipe up to delivery valve by pouring water",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913783",
+      "question": "A circular body of diameter ‘D’ is immersed vertically such that the top coincides with the free liquid surface. Calculate the position of center of pressure (h̅)",
+      "options": [
+        "5D/4",
+        "5D/8",
+        "D/2",
+        "D/8"
+      ],
+      "correctAnswer": "5D/8",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913784",
+      "question": "Reynolds number (Re) is given by _______. (Where, ρ = density constant, V = velocity of fluid, D = diameter of pipe and μ = viscosity of fluid)",
+      "options": [
+        "Re = ρVμ/D",
+        "Re = VD/ρμ",
+        "Re = ρVD/μ",
+        "Re = μVD/ρ"
+      ],
+      "correctAnswer": "Re = ρVD/μ",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913785",
+      "question": "The formula for discharge through a venturi meter of inlet area ‘a₁’ and throat area ‘a₂’. If the pressure head difference between inlet and throat is ‘h’ m of flowing liquid.",
+      "options": [
+        "\\(Q = \\frac{K a_1 a_2 \\sqrt{2gh}}{\\sqrt{a_1^2 - a_2^2}}\\)",
+        "\\(Q = \\frac{K a_1 a_2 \\sqrt{a_1^2 - a_2^2}}{\\sqrt{2gh}}\\)",
+        "\\(Q = \\frac{K a_1 a_2 \\sqrt{2gh}}{\\sqrt{a_2^2 - a_1^2}}\\)",
+        "\\(Q = \\frac{K a_1 a_2 \\sqrt{2gh}}{\\sqrt{a_1^2 + a_2^2}}\\)"
+      ],
+      "correctAnswer": "\\(Q = \\frac{K a_1 a_2 \\sqrt{2gh}}{\\sqrt{a_1^2 - a_2^2}}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913786",
+      "question": "The relation between the actual discharge and theoretical discharge in a small orifice is",
+      "options": [
+        "\\(C_c * C_v\\)",
+        "\\(C_c / C_v\\)",
+        "\\(C_v / C_c\\)",
+        "\\(C_d / C_c\\)"
+      ],
+      "correctAnswer": "\\(C_c * C_v\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913787",
+      "question": "The diameter ratio in a convergent and divergent mouthpiece to avoid separation at vena contracta with usual notation is (dₒ is diameter at the inlet, d𝒸 is diameter at vena contacta, Hₐ is atmospheric pressure head, H𝒸 is pressure head at vena contacta and H is head above the center of mouth piece)",
+      "options": [
+        "\\(\\sqrt{1+\\frac{H_a+H_c}{H}}\\)",
+        "\\(\\sqrt{1-\\frac{H}{H_a-H_c}}\\)",
+        "\\(\\sqrt{1+\\frac{H_a-H_c}{H}}\\)",
+        "\\(\\sqrt{1+\\frac{H}{H_a-H_c}}\\)"
+      ],
+      "correctAnswer": "\\(\\sqrt{1+\\frac{H_a-H_c}{H}}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913788",
+      "question": "A rectangular notch is 1 cm wide and the head causing flow is 8 cm. If the width is increased to 8 cm, to have the same discharge the head should be decreased to",
+      "options": [
+        "1 cm",
+        "2 cm",
+        "6 cm",
+        "8 cm"
+      ],
+      "correctAnswer": "2 cm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913789",
+      "question": "The discharge over a V-notch of angle 'θ', head 'H' and coefficient of discharge 'Cd' is",
+      "options": [
+        "\\(\\frac{8}{15} C_d \\sqrt{2g} \\tan(\\theta/4) H^{5/2}\\)",
+        "\\(\\frac{8}{15} C_d \\sqrt{2g} \\tan(\\theta/2) H^{3/2}\\)",
+        "\\(\\frac{8}{15} C_d \\sqrt{2g} \\tan(\\theta/2) H^{5/2}\\)",
+        "\\(\\frac{8}{15} C_d \\sqrt{2g} \\tan(\\theta) H^{3/2}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{8}{15} C_d \\sqrt{2g} \\tan(\\theta/2) H^{5/2}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913790",
+      "question": "A Cipolletti weir has side slope of",
+      "options": [
+        "1 Vertical to 4 Horizontal",
+        "1 Vertical to 3 Horizontal",
+        "3 Vertical to 1 Horizontal",
+        "4 Vertical to 1 Horizontal"
+      ],
+      "correctAnswer": "4 Vertical to 1 Horizontal",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913791",
+      "question": "If 'l' is the length of a pipe, 'f' is the coefficient of friction, 'v' is the velocity, 'd' is the diameter, 'g' is the acceleration due to gravity, then the loss of pressure head due to friction is",
+      "options": [
+        "\\(\\frac{4flv^2}{\\sqrt{2gd}}\\)",
+        "\\(\\frac{flv^2}{\\sqrt{2gd}}\\)",
+        "\\(\\frac{4flv^2}{2gd}\\)",
+        "\\(\\frac{4fl}{v^2gd}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{4flv^2}{2gd}\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913792",
+      "question": "A rectangular channel of best section discharges 50 m³/s of water with a velocity of 1 m/s. Then the depth of flow is",
+      "options": [
+        "√50 m",
+        "5 m",
+        "2.5 m",
+        "√5 m"
+      ],
+      "correctAnswer": "5 m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913793",
+      "question": "The best form of trapezoidal section satisfies the condition that",
+      "options": [
+        "base wide is double the depth",
+        "top width is double the depth",
+        "sloping side is half the bottom width",
+        "sloping side is half the top width"
+      ],
+      "correctAnswer": "sloping side is half the top width",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913794",
+      "question": "A high specific speed turbine is generally recommended in a project",
+      "options": [
+        "where head and output are low",
+        "where head is low and output is large",
+        "where head and output are large",
+        "where head and output are fluctuating"
+      ],
+      "correctAnswer": "where head is low and output is large",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913795",
+      "question": "The central part of tree is called",
+      "options": [
+        "Heart wood",
+        "Pith",
+        "Sap wood",
+        "Cambium layer"
+      ],
+      "correctAnswer": "Pith",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913796",
+      "question": "The nominal size of modular brick is",
+      "options": [
+        "19 cm x 9 cm x 8 cm",
+        "19 cm x 19 cm x 9 cm",
+        "20 cm x 20 cm x 10 cm",
+        "20 cm x 10 cm x 10 cm"
+      ],
+      "correctAnswer": "20 cm x 10 cm x 10 cm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913797",
+      "question": "The following compound is responsible for the early strength of cement",
+      "options": [
+        "Tricalcium aluminate",
+        "Dicalcium aluminate",
+        "Gypsum",
+        "Tricalcium silicate"
+      ],
+      "correctAnswer": "Tricalcium silicate",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913798",
+      "question": "The soundness of cement is tested by",
+      "options": [
+        "Air permeability test",
+        "Le-Chatelier method",
+        "Vicats apparatus",
+        "Vee bee test"
+      ],
+      "correctAnswer": "Le-Chatelier method",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913799",
+      "question": "The compacting factor test of cement concrete is conducted to find",
+      "options": [
+        "Strength",
+        "Porosity",
+        "Degree of compaction under loads",
+        "Workability of concrete"
+      ],
+      "correctAnswer": "Workability of concrete",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913800",
+      "question": "Putty is made up of",
+      "options": [
+        "White lead and turpentine",
+        "Powdered chalk and raw linseed oil",
+        "Red lead and linseed oil",
+        "Zinc oxide and boiled linseed oil."
+      ],
+      "correctAnswer": "Powdered chalk and raw linseed oil",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913801",
+      "question": "With usual notations, the formula to calculate the minimum depth of foundation. (Where, 'Ø' is the angle of repose, 'p' is bearing capacity of the soil in kN/m² and 'w' is unit weight of the soil kN/m³",
+      "options": [
+        "\\(h = \\frac{p}{w} [\\frac{1-\\sin\\phi}{1+\\sin\\phi}]^2\\)",
+        "\\(h = \\frac{p}{w} [\\frac{1+\\sin\\phi}{1-\\sin\\phi}]^2\\)",
+        "\\(h = \\frac{p}{w} [\\frac{1-(\\sin\\phi)^2}{1+(\\sin\\phi)^2}]\\)",
+        "\\(h = \\frac{p}{w} [\\frac{1+(\\sin\\phi)^2}{1-(\\sin\\phi)^2}]\\)"
+      ],
+      "correctAnswer": "\\(h = \\frac{p}{w} [\\frac{1-\\sin\\phi}{1+\\sin\\phi}]^2\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913802",
+      "question": "The bonding having header and stretches laid alternatively in the same course is called",
+      "options": [
+        "English bond",
+        "Flemish bond",
+        "Header bond",
+        "Stretcher bond"
+      ],
+      "correctAnswer": "Flemish bond",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913803",
+      "question": "In our country, as per IS 1172 - 1963, water consumption per capita per day (LPCD) for domestic purpose is",
+      "options": [
+        "135 Litres per capita per day",
+        "115 Litres per capita per day",
+        "100 Litres per capita per day",
+        "95 Litres per capita per day"
+      ],
+      "correctAnswer": "135 Litres per capita per day",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913804",
+      "question": "The sewer appurtenance meant for releasing water into sewer for the purpose of removal of deposited matter is called",
+      "options": [
+        "Catch basin",
+        "Inlet",
+        "Flushing tank",
+        "Inverted syphon"
+      ],
+      "correctAnswer": "Flushing tank",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913805",
+      "question": "The horizontal tunnels constructed at shallow depths along the banks of a river to intercept the ground water table are called",
+      "options": [
+        "Canals",
+        "Infiltration galleries",
+        "Springs",
+        "Lakes"
+      ],
+      "correctAnswer": "Infiltration galleries",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913806",
+      "question": "The water of a river has an important property known as",
+      "options": [
+        "Turbidity",
+        "Permeability",
+        "Self purification",
+        "Infiltration capacity"
+      ],
+      "correctAnswer": "Self purification",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913807",
+      "question": "Bio-chemical Oxygen Demand (BOD) of safe drinking water must be",
+      "options": [
+        "15 ppm",
+        "10 ppm",
+        "5 ppm",
+        "Zero"
+      ],
+      "correctAnswer": "Zero",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913808",
+      "question": "The percentage of bacterial content removed by a rapid sand filter is",
+      "options": [
+        "60 to 70",
+        "70 to 80",
+        "80 to 90",
+        "90 to 99"
+      ],
+      "correctAnswer": "80 to 90",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913809",
+      "question": "For an area developed in a haphazard way, the type of layout recommended for distribution of filtered water will be",
+      "options": [
+        "A dead-end system",
+        "A ring system",
+        "A radial system",
+        "A grid iron system"
+      ],
+      "correctAnswer": "A radial system",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913810",
+      "question": "The minimum velocity in a sewer which avoids silting is known as",
+      "options": [
+        "Self cleansing velocity",
+        "Peak velocity",
+        "Non scouring velocity",
+        "Scouring velocity"
+      ],
+      "correctAnswer": "Self cleansing velocity",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913811",
+      "question": "The type of bacteria responsible for biological oxidation of dissolved solids in trickling filter are",
+      "options": [
+        "Pathogenic bacteria",
+        "Facultative bacteria",
+        "Anaerobic bacteria",
+        "Aerobic bacteria"
+      ],
+      "correctAnswer": "Aerobic bacteria",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913812",
+      "question": "When two sewers meet at different levels the appurtenances used is",
+      "options": [
+        "Inverted system",
+        "Catch basin",
+        "Inlet",
+        "Drop man hole"
+      ],
+      "correctAnswer": "Drop man hole",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913813",
+      "question": "On the recommendations of Indian Road Congress, the ruling gradient in plains is",
+      "options": [
+        "1 in 15",
+        "1 in 20",
+        "1 in 30",
+        "1 in 45"
+      ],
+      "correctAnswer": "1 in 30",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913814",
+      "question": "With usual abbreviations, what is the superelevation of highway? (Assume coefficient of friction to be zero, ‘V’ is the speed of vehicle in Kmph and R is the curve radius in metre)",
+      "options": [
+        "V²/127R",
+        "V²/127gR",
+        "V²/9.81R",
+        "V²/127"
+      ],
+      "correctAnswer": "V²/127R",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913815",
+      "question": "The type of transition curves generally provided on hill roads is",
+      "options": [
+        "Circular",
+        "Cubic parabola",
+        "Lemniscate",
+        "Spiral"
+      ],
+      "correctAnswer": "Spiral",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913816",
+      "question": "Speed regulation on roads is decided on the basis of",
+      "options": [
+        "60 percentile cumulative frequency",
+        "85 percentile cumulative frequency",
+        "80 percentile cumulative frequency",
+        "65 percentile cumulative frequency"
+      ],
+      "correctAnswer": "85 percentile cumulative frequency",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913817",
+      "question": "Which interchange is used when two high volume and high-speed road facilities intersect each other?",
+      "options": [
+        "Cloverleaf interchange",
+        "Diamond interchange",
+        "T interchange",
+        "Half cloverleaf interchanges"
+      ],
+      "correctAnswer": "Cloverleaf interchange",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913818",
+      "question": "The signs which give information to the driver about the impending road conditions are",
+      "options": [
+        "Informative signs",
+        "Warning signs",
+        "Regulatory signs",
+        "Mandatory signs"
+      ],
+      "correctAnswer": "Warning signs",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913819",
+      "question": "The minimum gauge distance in broad gauge railway track is",
+      "options": [
+        "1.767 m",
+        "1.000 m",
+        "1.676 m",
+        "0.762 m"
+      ],
+      "correctAnswer": "1.676 m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913820",
+      "question": "Staggered rail joints are generally provided",
+      "options": [
+        "on curves",
+        "on tangents",
+        "on bridges",
+        "in tunnels"
+      ],
+      "correctAnswer": "on curves",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913821",
+      "question": "Arrangement made to divert the trains from one track to another is known as",
+      "options": [
+        "Railway point",
+        "Turnout",
+        "Railway Crossing",
+        "Railway Junction"
+      ],
+      "correctAnswer": "Turnout",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913822",
+      "question": "The rails get out of their original positions due to insufficient expansion gap. This phenomenon is known as",
+      "options": [
+        "hogging",
+        "buckling",
+        "creeping",
+        "fatigue"
+      ],
+      "correctAnswer": "buckling",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913823",
+      "question": "Bottom most component of a flexible pavement is",
+      "options": [
+        "Subgrade",
+        "Subbase",
+        "Base",
+        "Wearing Coat"
+      ],
+      "correctAnswer": "Subgrade",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913824",
+      "question": "The main principle of survey is to",
+      "options": [
+        "Work from part to whole",
+        "Work from whole to part",
+        "Work from center of the area",
+        "Fixing positions of new location by precise instruments"
+      ],
+      "correctAnswer": "Work from whole to part",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913825",
+      "question": "The type of surveying wherein curvature of earth is also accounted for is known as",
+      "options": [
+        "Plain surveying",
+        "Hydrographic surveying",
+        "Geodetic surveying",
+        "Aerial surveying"
+      ],
+      "correctAnswer": "Geodetic surveying",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913826",
+      "question": "Isogenic lines passes through points of",
+      "options": [
+        "Zero declination",
+        "Equal declination",
+        "Qual dip",
+        "Zero dip"
+      ],
+      "correctAnswer": "Equal declination",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913827",
+      "question": "The whole circle bearing of a line is 327° 20'. The quadrantal bearing of the line is",
+      "options": [
+        "N 32° 40' W",
+        "N 32° 40' E",
+        "S 32° 40' W",
+        "S 32° 40' E"
+      ],
+      "correctAnswer": "N 32° 40' W",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913828",
+      "question": "The angle of intersection of a contour and a ridge line is",
+      "options": [
+        "30°",
+        "60°",
+        "45°",
+        "90°"
+      ],
+      "correctAnswer": "90°",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913829",
+      "question": "The size of theodolite is defined according to the",
+      "options": [
+        "length of telescope",
+        "diameter of graduated horizontal circle",
+        "height of standard",
+        "vernier plane diameter"
+      ],
+      "correctAnswer": "diameter of graduated horizontal circle",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913830",
+      "question": "The backsight on a Bench Mark of 102.50 is 2.250 m. The inverted staff reading at the bottom of the roof is 1.515 m. The Reduced Level at bottom of roof is",
+      "options": [
+        "103.235 m",
+        "101.765 m",
+        "106.265 m",
+        "98.735 m"
+      ],
+      "correctAnswer": "106.265 m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913831",
+      "question": "The stadia method of Tacheometry is used to determine",
+      "options": [
+        "Vertical angles",
+        "Horizontal angles",
+        "Horizontal distances",
+        "Horizontal and vertical distances"
+      ],
+      "correctAnswer": "Horizontal and vertical distances",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913832",
+      "question": "The method of tacheometry commonly used is",
+      "options": [
+        "Subtense bar method",
+        "Movable stadia system",
+        "Fixed stadia system",
+        "Tangential system"
+      ],
+      "correctAnswer": "Fixed stadia system",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913833",
+      "question": "The process of revolving the telescope about its vertical axis in the horizontal plane is",
+      "options": [
+        "Transiting",
+        "Swinging",
+        "Transmitting",
+        "Face left"
+      ],
+      "correctAnswer": "Swinging",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913834",
+      "question": "The apex distance of a circular curve of radius ‘R’ and deflection angle ‘Ø’ is given by",
+      "options": [
+        "\\(R(\\sec\\frac{\\emptyset}{2}-1)\\)",
+        "\\(R(\\tan\\frac{\\emptyset}{2})\\)",
+        "\\(2R(\\tan\\frac{\\emptyset}{2})\\)",
+        "\\(R(\\csc\\frac{\\emptyset}{2}-1)\\)"
+      ],
+      "correctAnswer": "\\(R(\\sec\\frac{\\emptyset}{2}-1)\\)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "81959913835",
+      "question": "Total Station is the combination of",
+      "options": [
+        "Compass and theodolite",
+        "Electronic theodolite and E.D.M",
+        "Levelling and E.D.M",
+        "E.D.M only"
+      ],
+      "correctAnswer": "Electronic theodolite and E.D.M",
+      "topic": "Civil Engineering"
+    }
+  ]

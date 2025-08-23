@@ -1,12 +1,2402 @@
 [
-  { "id": 1, "question": "Which of the following is not an operating system? (CSE 2018)", "options": ["Windows", "Linux", "Oracle", "DOS"], "correctAnswer": "Oracle", "topic": "Operating Systems" },
-  { "id": 2, "question": "What does SQL stand for? (CSE 2018)", "options": ["Structured Query Language", "Strong Question Language", "Structured Question Language", "Simple Query Language"], "correctAnswer": "Structured Query Language", "topic": "DBMS" },
-  { "id": 3, "question": "Which data structure uses LIFO? (CSE 2018)", "options": ["Queue", "Stack", "Array", "Linked List"], "correctAnswer": "Stack", "topic": "Data Structures" },
-  { "id": 4, "question": "What is the time complexity of binary search? (CSE 2018)", "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"], "correctAnswer": "O(log n)", "topic": "Algorithms" },
-  { "id": 5, "question": "Which of these is a valid keyword in Java? (CSE 2018)", "options": ["string", "Float", "unsigned", "super"], "correctAnswer": "super", "topic": "Java Programming" },
-  { "id": 6, "question": "The 'brain' of any computer system is the: (CSE 2018)", "options": ["ALU", "Memory", "CPU", "Control Unit"], "correctAnswer": "CPU", "topic": "Computer Architecture" },
-  { "id": 7, "question": "What is the function of an AND gate? (CSE 2018)", "options": ["Outputs 1 only if all inputs are 1", "Outputs 1 if any input is 1", "Outputs 0 only if all inputs are 0", "Inverts the input"], "correctAnswer": "Outputs 1 only if all inputs are 1", "topic": "Digital Electronics" },
-  { "id": 8, "question": "Which layer of the OSI model is responsible for routing? (CSE 2018)", "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"], "correctAnswer": "Network Layer", "topic": "Computer Networks" },
-  { "id": 9, "question": "In C++, which concept allows a class to have multiple methods with the same name but different parameters? (CSE 2018)", "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"], "correctAnswer": "Polymorphism", "topic": "Object Oriented Programming" },
-  { "id": 10, "question": "Which tag is used to create a hyperlink in HTML? (CSE 2018)", "options": ["<link>", "<a>", "<hlink>", "<href>"], "correctAnswer": "<a>", "topic": "Web Technologies" }
-]
+    {
+      "id": "8946583809",
+      "question": "If A is square matrix of order 3 and if the matrix obtained by replacing the elements of A with their corresponding cofactors is \\(\\begin{bmatrix} 1 & -2 & 1 \\\\ 4 & -5 & -2 \\\\ -2 & 4 & 1 \\end{bmatrix}\\) then determinant of A is __________",
+      "options": [
+        "9",
+        "16",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583810",
+      "question": "Let A and B be two square matrices of order n. If AB = A, BA = B then A² + B² =",
+      "options": [
+        "AB",
+        "A - B",
+        "0",
+        "A + B"
+      ],
+      "correctAnswer": "A + B",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583811",
+      "question": "Consider the system of linear equations x+y+z=3, x-y-z = 4, x-5y+αz = 6. Then, the value of α for which this system has an infinite number of solutions is",
+      "options": [
+        "-5",
+        "5",
+        "3",
+        "1"
+      ],
+      "correctAnswer": "-5",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583812",
+      "question": "If \\(A(\\alpha, \\beta) = \\begin{pmatrix} \\cos\\alpha & \\sin\\alpha & 0 \\\\ -\\sin\\alpha & \\cos\\alpha & 0 \\\\ 0 & 0 & e^{\\beta} \\end{pmatrix}\\), then the inverse of the matrix \\(A(\\alpha, \\beta)\\) is",
+      "options": [
+        "\\(A(\\alpha, \\beta)\\)",
+        "\\(A(\\alpha, -\\beta)\\)",
+        "\\(A(-\\alpha, -\\beta)\\)",
+        "\\(A(-\\alpha, \\beta)\\)"
+      ],
+      "correctAnswer": "\\(A(-\\alpha, -\\beta)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583813",
+      "question": "The rational fraction \\(\\frac{x^2+1}{(x^2+4)(x-2)}\\) is equal to",
+      "options": [
+        "\\(\\frac{3x+6}{8(x^2+4)} + \\frac{5}{4(x-2)}\\)",
+        "\\(\\frac{3x+6}{4(x^2+4)} + \\frac{5}{8(x-2)}\\)",
+        "\\(\\frac{3x+6}{8(x^2+4)} + \\frac{5}{8(x-2)}\\)",
+        "\\(\\frac{3x+6}{(x^2+4)} + \\frac{5}{(x-2)}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{3x+6}{8(x^2+4)} + \\frac{5}{8(x-2)}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583814",
+      "question": "If \\(log_2 3 = a, log_3 5 = b, log_7 2 = c\\), then \\(log_{140} 63 =\\)",
+      "options": [
+        "\\(\\frac{1-2ac}{2c+abc+1}\\)",
+        "\\(\\frac{1-2ac}{2c-abc-1}\\)",
+        "\\(\\frac{1+2ac}{2c-abc-1}\\)",
+        "\\(\\frac{1+2ac}{2c+abc+1}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1+2ac}{2c+abc+1}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583815",
+      "question": "\\(cos \\frac{2\\pi}{7} + cos \\frac{4\\pi}{7} + cos \\frac{6\\pi}{7} =\\)",
+      "options": [
+        "1",
+        "\\(\\frac{1}{2}\\)",
+        "\\(-\\frac{1}{2}\\)",
+        "0"
+      ],
+      "correctAnswer": "\\(-\\frac{1}{2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583816",
+      "question": "If the angles A, B and C of a triangle are in an arithmetic progression and if a,b and c denote the lengths of the sides opposite to A, B and C respectively, then the value of the expression \\(\\frac{a}{c} \\sin 2C + \\frac{c}{a} \\sin 2A\\) is__",
+      "options": [
+        "\\(\\sqrt{3}\\)",
+        "\\(\\frac{\\sqrt{3}}{2}\\)",
+        "1",
+        "\\(\\frac{1}{2}\\)"
+      ],
+      "correctAnswer": "\\(\\sqrt{3}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583817",
+      "question": "If \\(sin x + sin y = \\frac{1}{4}\\) and \\(cos x + cos y = \\frac{1}{3}\\) then \\(cot(x+y) =\\)",
+      "options": [
+        "\\(\\frac{7}{24}\\)",
+        "\\(\\frac{24}{7}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "1"
+      ],
+      "correctAnswer": "\\(\\frac{7}{24}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583818",
+      "question": "If sin(x° +28°) = cos(3x° -78°) and 0° <x° <90°, then, which of the following is the value of x°?",
+      "options": [
+        "50°",
+        "30°",
+        "16°",
+        "8°"
+      ],
+      "correctAnswer": "8°",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583819",
+      "question": "If \\(x = \\tan(\\text{Cosec}^{-1} \\frac{65}{63})\\) and \\(y = \\sec^2(\\cot^{-1} \\frac{1}{2}) + \\csc^2(\\tan^{-1} \\frac{1}{3})\\), then (x,y) =",
+      "options": [
+        "\\((\\frac{63}{16}, 15)\\)",
+        "\\((\\frac{16}{63}, 15)\\)",
+        "\\((\\frac{63}{16}, 5)\\)",
+        "\\((\\frac{16}{63}, 5)\\)"
+      ],
+      "correctAnswer": "\\((\\frac{63}{16}, 15)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583820",
+      "question": "The equation \\(Tan^{-1}(\\frac{x+1}{x-1}) + Tan^{-1}(\\frac{x-1}{x}) = Tan^{-1}(-7)\\) has",
+      "options": [
+        "unique solution x = 2",
+        "two solutions x = 1, 2",
+        "no solution",
+        "infinite number of solutions"
+      ],
+      "correctAnswer": "unique solution x = 2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583821",
+      "question": "In a triangle ABC, let a,b and c denote the lengths of the sides opposite to A, B and C respectively. If \\(\\frac{1}{a+c} + \\frac{1}{b+c} = \\frac{3}{a+b+c}\\), then the angle C is",
+      "options": [
+        "30°",
+        "90°",
+        "60°",
+        "45°"
+      ],
+      "correctAnswer": "60°",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583822",
+      "question": "If \\(sin hx = 3\\) then x =",
+      "options": [
+        "\\(log(3+\\sqrt{10})\\)",
+        "\\(log(3-\\sqrt{10})\\)",
+        "\\(log(6+\\sqrt{10})\\)",
+        "1"
+      ],
+      "correctAnswer": "\\(log(3+\\sqrt{10})\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583823",
+      "question": "Which of the following is NOT true for the complex numbers \\(z_1\\) and \\(z_2\\)?",
+      "options": [
+        "\\(\\frac{z_1-z_2}{z_2} = \\frac{z_1}{z_2} - \\frac{z_2}{z_2}\\)",
+        "\\(|z_1+z_2| \\le |z_1|+|z_2|\\)",
+        "\\(|z_1+z_2| \\le ||z_1|-|z_2||\\)",
+        "\\(|z_1+z_2|^2+|z_1-z_2|^2 = 2|z_1|^2+2|z_2|^2\\)"
+      ],
+      "correctAnswer": "\\(|z_1+z_2| \\le ||z_1|-|z_2||\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583824",
+      "question": "If a complex number \\(z = -\\frac{\\sqrt{3}}{2} + i\\frac{1}{2}\\), then \\(z^4\\) is",
+      "options": [
+        "\\(2\\sqrt{2}+2i\\)",
+        "\\(-\\frac{1}{2} + i\\frac{\\sqrt{3}}{2}\\)",
+        "\\(\\frac{\\sqrt{3}}{2} - i\\frac{1}{2}\\)",
+        "\\(\\frac{\\sqrt{3}}{8} - i\\frac{1}{8}\\)"
+      ],
+      "correctAnswer": "\\(-\\frac{1}{2} + i\\frac{\\sqrt{3}}{2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583825",
+      "question": "The equation of the straight line which makes intercepts r and s on the coordinate axes such that r + s = 5 and rs = 6 is ax+by+c=0, then a+b+c=",
+      "options": [
+        "11",
+        "5",
+        "-7",
+        "-1"
+      ],
+      "correctAnswer": "-1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583826",
+      "question": "If a straight line ax + by + \\(\\sqrt{5}\\) = 0 touches the circle \\(x^2 + y^2 = 5\\), then which of the following is TRUE?",
+      "options": [
+        "\\(5(a^2+b^2)=1\\)",
+        "\\(a^2+b^2 = \\sqrt{5}\\)",
+        "\\(a^2+b^2=1\\)",
+        "\\(\\sqrt{a^2+b^2}=5\\)"
+      ],
+      "correctAnswer": "\\(a^2+b^2=1\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583827",
+      "question": "If a chord of length 12 cm is at a distance of \\(4\\sqrt{10}\\) cm from the centre of the circle, then the radius of the circle is",
+      "options": [
+        "14 cm",
+        "\\(\\sqrt{304}\\) cm",
+        "4 cm",
+        "\\(\\sqrt{124}\\) cm"
+      ],
+      "correctAnswer": "14 cm",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583828",
+      "question": "The 2019th derivative of the function \\((x-1)e^{-x}\\) is",
+      "options": [
+        "\\(\\frac{x-2019}{e^x}\\)",
+        "\\(\\frac{2019-x}{e^x}\\)",
+        "\\(\\frac{x-2020}{e^x}\\)",
+        "\\(\\frac{2020-x}{e^x}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{2020-x}{e^x}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583829",
+      "question": "If \\(z = f(x+ct) + \\phi(x-ct)\\), then \\(\\frac{\\partial^2z}{\\partial t^2} =\\)",
+      "options": [
+        "\\(c^2 \\frac{\\partial^2z}{\\partial x^2}\\)",
+        "\\(-c^2 \\frac{\\partial^2z}{\\partial x^2}\\)",
+        "\\(\\frac{1}{c^2} \\frac{\\partial^2z}{\\partial x^2}\\)",
+        "\\(-\\frac{1}{c^2} \\frac{\\partial^2z}{\\partial x^2}\\)"
+      ],
+      "correctAnswer": "\\(c^2 \\frac{\\partial^2z}{\\partial x^2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583830",
+      "question": "If \\(x=r\\cos\\theta, y=r\\sin\\theta\\) and \\(U = \\frac{f(\\theta)}{r}\\) then \\(x\\frac{\\partial U}{\\partial x} + y\\frac{\\partial U}{\\partial y}=\\)",
+      "options": [
+        "0",
+        "U",
+        "-U",
+        "2U"
+      ],
+      "correctAnswer": "-U",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583831",
+      "question": "Let \\(f(x+y) = f(x)f(y), \\forall x,y\\) and \\(f'(0)=5, f(2019)=15\\). Then the value of \\(f'(2019)\\) is",
+      "options": [
+        "3",
+        "75",
+        "\\(\\frac{1}{3}\\)",
+        "\\(\\frac{1}{75}\\)"
+      ],
+      "correctAnswer": "75",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583832",
+      "question": "The set of values of x for which the function \\(f(x) = 2x^3 - 9x^2 + 12x + 4\\) is increasing is",
+      "options": [
+        "1 < x < 2",
+        "all x ∈ R",
+        "R - [1, 2]",
+        "x ≥ 2"
+      ],
+      "correctAnswer": "R - [1, 2]",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583833",
+      "question": "\\(\\lim_{x\\to\\infty} x(log(1+\\frac{x}{2}) - log(\\frac{x}{2})) =\\)",
+      "options": [
+        "\\(e^2\\)",
+        "\\(\\infty\\)",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583834",
+      "question": "If \\(f(x, y, z) = x^3+xz^2+y^3+xyz, x=e^t, y=cos t, z=t^3\\) then \\(\\frac{df}{dt}\\) at t = 0 is",
+      "options": [
+        "2",
+        "4",
+        "e",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583835",
+      "question": "Which of the following is the value of \\(5050 \\times \\frac{\\int_0^1 (1-(1-x)^{50})^{100} x^{49} dx}{\\int_0^1 (1-x^{50})^{101} x^{49} dx}\\)?",
+      "options": [
+        "5100",
+        "1",
+        "5050",
+        "\\(\\frac{1}{2}\\)"
+      ],
+      "correctAnswer": "5100",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583836",
+      "question": "\\(\\int_0^1 max\\{x, \\frac{1}{2}-x\\} dx = \\)",
+      "options": [
+        "0",
+        "\\(\\frac{1}{2}\\)",
+        "\\(\\frac{9}{16}\\)",
+        "\\(\\frac{9}{8}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{9}{16}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583837",
+      "question": "\\(\\lim_{n \\to \\infty} \\frac{1}{n^6} \\sum_{k=1}^n k^5 =\\)",
+      "options": [
+        "\\(\\frac{1}{6}\\)",
+        "\\(\\frac{1}{5}\\)",
+        "1",
+        "6"
+      ],
+      "correctAnswer": "\\(\\frac{1}{6}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583838",
+      "question": "\\(\\int_{-1}^1 \\frac{x^{15}(1-x^2)^{12}}{(1+x^2)^8} dx = \\)",
+      "options": [
+        "0",
+        "\\(\\frac{22}{7} - \\pi\\)",
+        "\\(\\frac{2}{105}\\)",
+        "\\(\\frac{71}{15} - \\frac{3\\pi}{4}\\)"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583839",
+      "question": "The area of the region bounded by the curves \\(y = 2-x^2\\) and \\(y=-x\\) is",
+      "options": [
+        "1",
+        "\\(\\frac{8}{19}\\)",
+        "\\(\\frac{35}{4}\\)",
+        "\\(\\frac{27}{6}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{27}{6}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583840",
+      "question": "The volume of the solid obtained by revolving the region bounded by the curves \\(y=x^3, y=8\\) and \\(x=0\\) about the y-axis is",
+      "options": [
+        "\\(\\frac{96}{5}\\)",
+        "\\(\\frac{96\\pi}{5}\\)",
+        "\\(\\frac{32\\pi}{5}\\)",
+        "\\(\\frac{32}{5}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{96\\pi}{5}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583841",
+      "question": "The value of \\(\\int_0^{\\pi} \\theta \\sin^4\\theta \\cos^4\\theta d\\theta\\) is",
+      "options": [
+        "\\(\\frac{\\pi^2}{32}\\)",
+        "\\(\\frac{\\pi}{32}\\)",
+        "\\(\\frac{\\pi^2}{16}\\)",
+        "\\(\\frac{\\pi}{16}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi^2}{32}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583842",
+      "question": "The average value of the function \\(f(x) = 4-x^2\\) over the interval [-1, 3] is",
+      "options": [
+        "5",
+        "\\(\\frac{20}{3}\\)",
+        "\\(\\frac{5}{3}\\)",
+        "1"
+      ],
+      "correctAnswer": "\\(\\frac{5}{3}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583843",
+      "question": "The differential equation \\(x \\frac{dy}{dx} = y+x^2, x>0\\) satisfying \\(y(0)=0\\) has",
+      "options": [
+        "infinitely many solutions",
+        "no solution",
+        "a unique solution",
+        "exactly two solutions"
+      ],
+      "correctAnswer": "infinitely many solutions",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583844",
+      "question": "The differential equation \\((axy^3+y \\cos x)dx + (x^2y^2+b \\sin x)dy = 0\\) is an exact differential equation for",
+      "options": [
+        "\\(a=1, b=\\frac{3}{2}\\)",
+        "\\(a=\\frac{3}{2}, b=1\\)",
+        "\\(a=\\frac{2}{3}, b=1\\)",
+        "\\(a=1, b=\\frac{2}{3}\\)"
+      ],
+      "correctAnswer": "\\(a=\\frac{2}{3}, b=1\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583845",
+      "question": "If sin x is a solution of the differential equation \\(\\frac{d^4y}{dx^4} + 2\\frac{d^3y}{dx^3} + 6\\frac{d^2y}{dx^2} + 2\\frac{dy}{dx} + 5y = 0\\), then the general solution is",
+      "options": [
+        "\\(y=c_1 \\sin x + c_2 \\cos x + e^{-x}(c_3 \\sin 2x + c_4 \\cos 2x)\\)",
+        "\\(y=c_1 \\sin x + c_2 \\cos x + c_3 \\sin 2x + c_4 \\cos 2x\\)",
+        "\\(y=c_1 \\sin x + c_2 \\cos x + c_3 e^{-3x} + c_4 e^{-2x}\\)",
+        "\\(y=c_1 \\sin x + c_2 \\cos x + c_3 e^{3x} + c_4 e^{2x}\\)"
+      ],
+      "correctAnswer": "\\(y=c_1 \\sin x + c_2 \\cos x + e^{-x}(c_3 \\sin 2x + c_4 \\cos 2x)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583846",
+      "question": "If \\(D=\\frac{d}{dx}\\), then \\(\\frac{1}{D^2-4D+13}(6e^{2x} \\sin 3x)\\) is",
+      "options": [
+        "\\(-xe^{2x} \\cos 3x\\)",
+        "\\(xe^{2x} \\cos 3x\\)",
+        "\\(-xe^{2x} \\sin 3x\\)",
+        "\\(xe^{2x} \\sin 3x\\)"
+      ],
+      "correctAnswer": "\\(-xe^{2x} \\cos 3x\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583847",
+      "question": "The general solution of \\((\\frac{e^{-2\\sqrt{x}}}{\\sqrt{x}} - \\frac{y}{\\sqrt{x}})\\frac{dx}{dy}=1\\) is",
+      "options": [
+        "\\(y=e^{2\\sqrt{x}}(2\\sqrt{x}+c)\\)",
+        "\\(y=2\\sqrt{x} e^{2\\sqrt{x}}+c\\)",
+        "\\(y=2\\sqrt{x} e^{-2\\sqrt{x}}+c\\)",
+        "\\(y=e^{-2\\sqrt{x}}(2\\sqrt{x}+c)\\)"
+      ],
+      "correctAnswer": "\\(y=e^{-2\\sqrt{x}}(2\\sqrt{x}+c)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583848",
+      "question": "Let y be the solution of the differential equation \\(\\frac{dy}{dx}+y=x, x \\in R\\) and \\(y(-1)=0\\). Then, y(1) is equal to",
+      "options": [
+        "\\(\\frac{2}{e} - \\frac{2}{e^2}\\)",
+        "\\(2e^{-2}\\)",
+        "\\(2-\\frac{2}{e}\\)",
+        "\\(2-2e\\)"
+      ],
+      "correctAnswer": "\\(2e^{-2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583849",
+      "question": "The solution of the differential equation \\(x \\frac{dy}{dx} = y+x^2, x>0\\) satisfying \\(y(0)=0\\) has",
+      "options": [
+        "infinitely many solutions",
+        "no solution",
+        "a unique solution",
+        "exactly two solutions"
+      ],
+      "correctAnswer": "infinitely many solutions",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583850",
+      "question": "The general solution of \\(\\frac{dy}{dx} - y = y^2(\\sin x + \\cos x)\\) is",
+      "options": [
+        "\\(y = \\frac{1}{ce^x - \\sin x}\\)",
+        "\\(y=ce^x - e^x \\sin x\\)",
+        "\\(y=ce^x - \\sin x\\)",
+        "\\(y=\\frac{1}{ce^{-x} - \\sin x}\\)"
+      ],
+      "correctAnswer": "\\(y=\\frac{1}{ce^{-x} - \\sin x}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583851",
+      "question": "The Laplace transform of the function \\(f(t) = \\begin{cases} \\sin t, & \\text{for } 0 \\le t \\le \\pi \\\\ 0, & \\text{for } t > \\pi \\end{cases}\\) is",
+      "options": [
+        "\\(\\frac{1}{(1+s^2)}\\) for all s > 0",
+        "\\(\\frac{1}{(1+s^2)}\\) for all s < \\(\\pi\\)",
+        "\\(\\frac{(1+e^{-\\pi s})}{(1+s^2)}\\) for all s > 0",
+        "\\(\\frac{e^{-\\pi s}}{(1+s^2)}\\) for all s > 0"
+      ],
+      "correctAnswer": "\\(\\frac{(1+e^{-\\pi s})}{(1+s^2)}\\) for all s > 0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583852",
+      "question": "The inverse Laplace transform of \\(\\frac{5}{s} - \\frac{3e^{-3s}}{s} - \\frac{2e^{-7s}}{s}\\) is",
+      "options": [
+        "\\(f(x) = \\begin{cases} 5, & 0<x<3 \\\\ 0, & 3<x<7 \\\\ 2, & x>7 \\end{cases}\\)",
+        "\\(f(x) = \\begin{cases} 5, & 0<x<7 \\\\ 2, & x>7 \\end{cases}\\)",
+        "\\(f(x) = \\begin{cases} 5, & 0<x<3 \\\\ 2, & 3<x<7 \\\\ 0, & x>7 \\end{cases}\\)",
+        "\\(f(x) = \\begin{cases} 5, & 0<x<7 \\\\ 0, & x>7 \\end{cases}\\)"
+      ],
+      "correctAnswer": "\\(f(x) = \\begin{cases} 5, & 0<x<3 \\\\ 2, & 3<x<7 \\\\ 0, & x>7 \\end{cases}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583853",
+      "question": "The Laplace transform of a function \\(f(x)\\) is \\(F(s) = \\frac{1}{s^3+2s^2+2s}\\). Then, \\(\\lim_{x \\to 0} f(x) =\\)",
+      "options": [
+        "0",
+        "3",
+        "\\(\\infty\\)",
+        "\\(\\frac{1}{2}\\)"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583854",
+      "question": "The Laplace transform of the solution of the differential equation \\(\\frac{dy}{dx} - 2y = e^{5x}\\) with the initial condition y(0) = 3 is",
+      "options": [
+        "\\(\\frac{1}{3(s-2)} + \\frac{1}{3(s-5)}\\)",
+        "\\(\\frac{8}{3(s-2)} + \\frac{1}{s-5}\\)",
+        "\\(\\frac{8}{3(s-2)} + \\frac{1}{3(s-5)}\\)",
+        "\\(\\frac{8}{s-2} + \\frac{1}{3(s-5)}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{8}{3(s-2)} + \\frac{1}{3(s-5)}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583855",
+      "question": "If \\(L(y(x)) = Y(s)\\) and \\(y(x) = x^3 + \\int_0^x \\sin(x-t)y(t)dt\\) then \\(\\frac{1}{6}Y(s) =\\)",
+      "options": [
+        "\\(\\frac{1}{s^4} + \\frac{1}{s^6}\\)",
+        "\\(\\frac{1}{s^3} + \\frac{1}{s^5}\\)",
+        "\\(\\frac{1}{s^3} + \\frac{1}{s^7}\\)",
+        "\\(\\frac{1}{s} + \\frac{1}{s^3}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1}{s^4} + \\frac{1}{s^6}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583856",
+      "question": "For x > 0, \\(\\int_0^x \\frac{\\sin xt}{t} dt\\) is",
+      "options": [
+        "0",
+        "\\(\\frac{\\pi}{2x}\\)",
+        "\\(\\frac{1}{x}\\)",
+        "\\(\\frac{\\pi}{2}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi}{2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583857",
+      "question": "If \\(f(x) = \\frac{1}{2}a_0 + \\sum_{n=1}^\\infty (a_n \\cos nx + b_n \\sin nx)\\) is the Fourier series of the function \\(f(x) = \\begin{cases} 0, & -\\pi \\le x < 0 \\\\ \\pi, & 0 \\le x \\le \\pi \\end{cases}\\), then, which of the following is TURE?",
+      "options": [
+        "\\(a_n = 0\\), for all \\(n \\ge 0\\)",
+        "\\(a_0 = \\frac{\\pi}{2}\\) and \\(a_n = 0\\), for all \\(n \\ge 1\\)",
+        "\\(b_n \\ne 0\\), for all \\(n \\ge 1\\)",
+        "\\(a_0 = \\pi\\) and \\(a_n = 0\\), for all \\(n \\ge 1\\)"
+      ],
+      "correctAnswer": "\\(a_0 = \\pi\\) and \\(a_n = 0\\), for all \\(n \\ge 1\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583858",
+      "question": "A function f(x) is such that \\(f(x+2\\pi) = f(x)\\) and \\(f(x) = x, -\\pi \\le x \\le \\pi\\). The Fourier series of f(x) is",
+      "options": [
+        "\\(2(\\sin x - \\frac{1}{2}\\sin 2x + \\frac{1}{3}\\sin 3x - ...)\\)",
+        "\\(2(\\sin x + \\frac{1}{2}\\sin 2x + \\frac{1}{3}\\sin 3x + ...)\\)",
+        "\\(2(\\cos x - \\frac{1}{2}\\cos 2x + \\frac{1}{3}\\cos 3x - ...)\\)",
+        "\\(2(\\cos x + \\frac{1}{2}\\cos 2x + \\frac{1}{3}\\cos 3x + ...)\\)"
+      ],
+      "correctAnswer": "\\(2(\\sin x - \\frac{1}{2}\\sin 2x + \\frac{1}{3}\\sin 3x - ...)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "8946583859",
+      "question": "The dimensional formula for gravitational constant is",
+      "options": [
+        "\\(L^3T^{-2}M^{-1}\\)",
+        "\\(L^3T^2M^{-1}\\)",
+        "\\(L^2T^3M^{-2}\\)",
+        "\\(L^3T^1M^{-3}\\)"
+      ],
+      "correctAnswer": "\\(L^3T^{-2}M^{-1}\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583860",
+      "question": "The dimensions of the quantities in one of the following pairs are same. Identify the pairs.",
+      "options": [
+        "torque and work",
+        "angular momentum and work",
+        "energy and Young's modules",
+        "light year and wavelength"
+      ],
+      "correctAnswer": "torque and work",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583861",
+      "question": "Which of the following is not correct?",
+      "options": [
+        "j x i = -k",
+        "k x j = -i",
+        "i x k = -j",
+        "k x i = -j"
+      ],
+      "correctAnswer": "k x i = -j",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583862",
+      "question": "If 0.5 i + 0.8 j + c k is a unit vector then c is",
+      "options": [
+        "\\(\\sqrt{0.89}\\)",
+        "0.2",
+        "0.3",
+        "\\(\\sqrt{0.11}\\)"
+      ],
+      "correctAnswer": "\\(\\sqrt{0.11}\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583863",
+      "question": "Which of the following is correct?",
+      "options": [
+        "A.B ≠ B.A",
+        "A.(B+C) = A.B+C.A",
+        "A.B = A.B-A.C",
+        "A.B = -B.A"
+      ],
+      "correctAnswer": "A.(B+C) = A.B+C.A",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583864",
+      "question": "The acceleration due to gravity on the surface of the earth is given by",
+      "options": [
+        "G",
+        "GM/R²",
+        "GM/R",
+        "GM"
+      ],
+      "correctAnswer": "GM/R²",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583865",
+      "question": "The value of g is maximum at",
+      "options": [
+        "equator",
+        "Pole",
+        "higher altitudes",
+        "at the centre of the earth"
+      ],
+      "correctAnswer": "Pole",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583866",
+      "question": "When the speed of rotation of earth increases your weight",
+      "options": [
+        "increases",
+        "decreases",
+        "remains constant",
+        "becomes zero"
+      ],
+      "correctAnswer": "decreases",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583867",
+      "question": "The value of G is zero at",
+      "options": [
+        "nowhere",
+        "the centre of the earth",
+        "surface of the earth",
+        "pole"
+      ],
+      "correctAnswer": "nowhere",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583868",
+      "question": "If the linear momentum is increased by 50%, the kinetic energy will be increased by",
+      "options": [
+        "50%",
+        "100%",
+        "125%",
+        "25%"
+      ],
+      "correctAnswer": "125%",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583869",
+      "question": "A metallic block slides down a smooth inclined plane when released from the top, while the other falls freely from the same point, then",
+      "options": [
+        "both will reach the ground with the same velocity",
+        "both will reach the ground together",
+        "both will reach the ground travelling with same acceleration",
+        "the block sliding down the plane will strike earlier"
+      ],
+      "correctAnswer": "both will reach the ground with the same velocity",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583870",
+      "question": "A long spring is stretched by 2 cm and its potential energy is u. If the spring is stretched by 10 cm, then the potential energy stored in it will be",
+      "options": [
+        "u/24",
+        "u/5",
+        "5u",
+        "25u"
+      ],
+      "correctAnswer": "25u",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583871",
+      "question": "Two masses of 1 gm and 4 gm are moving with equal kinetic energies. The ratio of the magnitudes of their linear momentum is",
+      "options": [
+        "4:1",
+        "\\(\\sqrt{2}:1\\)",
+        "1:2",
+        "1:16"
+      ],
+      "correctAnswer": "1:2",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583872",
+      "question": "A body is dropped from rest at height 0.5 m. What will be its velocity when it just strikes the ground?",
+      "options": [
+        "7 m/s",
+        "9.8 m/s",
+        "4.9 m/s",
+        "\\(\\sqrt{9.8}\\) m/s"
+      ],
+      "correctAnswer": "\\(\\sqrt{9.8}\\) m/s",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583873",
+      "question": "A particle moves such that its acceleration a is given by a = -bx where x is the displacement from equilibrium and b is a constant. The period of Oscillation is",
+      "options": [
+        "2Πb",
+        "2Π/√b",
+        "2Π/b",
+        "2√Π/b"
+      ],
+      "correctAnswer": "2Π/√b",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583874",
+      "question": "A particle is vibrating in simple harmonic motion with amplitude of 4 cm. At what displacement from the equilibrium position is its energy half potential and half kinetic?",
+      "options": [
+        "1 cm",
+        "√2cm",
+        "2 cm",
+        "2√2 cm"
+      ],
+      "correctAnswer": "2√2 cm",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583875",
+      "question": "When a star approaches the earth, the waves are shifted towards",
+      "options": [
+        "green colour",
+        "yellow colour",
+        "blue end",
+        "red end"
+      ],
+      "correctAnswer": "blue end",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583876",
+      "question": "If a tuning fork of frequency 90 is sounded and moved towards an observer with a velocity equal to one tenth the velocity of sound, then the note heard by the observer will have frequency",
+      "options": [
+        "100",
+        "90",
+        "80",
+        "900"
+      ],
+      "correctAnswer": "100",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583877",
+      "question": "What is the most important factor which helps to recognise a person by his/her voice alone",
+      "options": [
+        "quality",
+        "pitch",
+        "intensity",
+        "quality, pitch and intensity"
+      ],
+      "correctAnswer": "quality",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583878",
+      "question": "The quality of tone",
+      "options": [
+        "decreases with loudness",
+        "varies inversely as amplitude",
+        "varies directly as pitch",
+        "depends on the overtones present"
+      ],
+      "correctAnswer": "depends on the overtones present",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583879",
+      "question": "The conduction of heat from hot body to cold body is an example of",
+      "options": [
+        "reversible process",
+        "irreversible process",
+        "isothermal process",
+        "isobaric process"
+      ],
+      "correctAnswer": "irreversible process",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583880",
+      "question": "From the isothermal drawn from Andrews experiment, it can be inferred that",
+      "options": [
+        "CO₂ is a perfect gas",
+        "there is continuity of state",
+        "there is discontinuity of state",
+        "gases like CO₂ and H₂ cannot be liquefied"
+      ],
+      "correctAnswer": "there is continuity of state",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583881",
+      "question": "A diesel cycle works at",
+      "options": [
+        "constant volume",
+        "constant pressure",
+        "constant temperature",
+        "both constant volume and constant temperature"
+      ],
+      "correctAnswer": "constant pressure",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583882",
+      "question": "The transition temperature of most low temperature superconducting elements is in the range of",
+      "options": [
+        "zero to 10 k",
+        "10 k to 20 k",
+        "20 k to 50 k",
+        "50 k alone"
+      ],
+      "correctAnswer": "zero to 10 k",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583883",
+      "question": "Propagation of light through fiber core is due to",
+      "options": [
+        "diffraction",
+        "interference",
+        "total internal reflection",
+        "reflection"
+      ],
+      "correctAnswer": "total internal reflection",
+      "topic": "Physics"
+    },
+    {
+      "id": "8946583884",
+      "question": "Which of the following energy orders is correct?",
+      "options": [
+        "6s<4f<5d<6p",
+        "4f<5d<6s<6p",
+        "4f<6s<6p<5d",
+        "6s<6p<5d<4f"
+      ],
+      "correctAnswer": "6s<4f<5d<6p",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583885",
+      "question": "An element A of atomic number 11 combines with an element B of atomic number 17. The compound formed is",
+      "options": [
+        "Covalent AB",
+        "Ionic AB",
+        "Covalent AB₂",
+        "Ionic AB₂"
+      ],
+      "correctAnswer": "Ionic AB",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583886",
+      "question": "The oxidation number of 'S' in S₈, S₂F₂, H₂S respectively are",
+      "options": [
+        "0, +1 and -2",
+        "+2, +1 and-2",
+        "0, +1 and +2",
+        "-2, +1 and -2"
+      ],
+      "correctAnswer": "0, +1 and -2",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583887",
+      "question": "The elements A, B, C and D have the following electronic configurations:\nA: 1S², 2S², 2P¹\nB: 1S², 2S², 2P⁶, 3S², 3P¹\nC: 1S², 2S², 2P⁶, 3S², 3P³\nD: 1S², 2S², 2P⁶, 3S², 3P⁵\nThe elements that belong to same group are",
+      "options": [
+        "A and C",
+        "C and D",
+        "A and D",
+        "A and B"
+      ],
+      "correctAnswer": "A and B",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583888",
+      "question": "4.9 gm of H₂SO₄ is present in 2 lit of its solution. The molarity of the solution is",
+      "options": [
+        "0.1 M",
+        "0.025 M",
+        "0.25 M",
+        "0.01 M"
+      ],
+      "correctAnswer": "0.025 M",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583889",
+      "question": "The molecular weight of H₃PO₄ is 98. The equivalent weight is gram / equivalents.",
+      "options": [
+        "98",
+        "49",
+        "32.66",
+        "24.5"
+      ],
+      "correctAnswer": "32.66",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583890",
+      "question": "Which of the following is the Bronsted acid?",
+      "options": [
+        "Cl⁻",
+        "NH₂⁻",
+        "CH₃COO⁻",
+        "NH₄⁺"
+      ],
+      "correctAnswer": "NH₄⁺",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583891",
+      "question": "The pH of 1 M KOH is",
+      "options": [
+        "12",
+        "11",
+        "14",
+        "13"
+      ],
+      "correctAnswer": "14",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583892",
+      "question": "Froth floatation process is used for the",
+      "options": [
+        "Oxide ores",
+        "Sulphide ores",
+        "Chloride ores",
+        "Oxide ores and Chloride ores"
+      ],
+      "correctAnswer": "Sulphide ores",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583893",
+      "question": "The composition of brass is",
+      "options": [
+        "Cu and Zn",
+        "Cu and Ni",
+        "Cu and Mn",
+        "Cu and Fe"
+      ],
+      "correctAnswer": "Cu and Zn",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583894",
+      "question": "Which of the following statements is correct?",
+      "options": [
+        "Cathode is positive terminal in an electrolytic cell",
+        "Cathode is negative terminal in a galvanic cell",
+        "Reduction occurs at cathode in either of cells",
+        "Oxidation occurs at cathode in either of cells"
+      ],
+      "correctAnswer": "Reduction occurs at cathode in either of cells",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583895",
+      "question": "In the electrolysis of CuCl₂ solution using copper electrode, if 2.5 gm of Cu is deposited at cathode, then at anode",
+      "options": [
+        "890 mL of Cl₂ at STP is liberated",
+        "445 mL of O₂ at STP is liberated",
+        "2.5 gm of copper is deposited",
+        "a decrease of 2.5 gm of mass takes place"
+      ],
+      "correctAnswer": "a decrease of 2.5 gm of mass takes place",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583896",
+      "question": "The unit of resistivity is",
+      "options": [
+        "Ω",
+        "Ωm",
+        "Ω/m",
+        "Ωm²"
+      ],
+      "correctAnswer": "Ωm",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583897",
+      "question": "Which of the following metals provide cathodic protection to iron?",
+      "options": [
+        "Cu and Ni",
+        "Al and Zn",
+        "Al and Cu",
+        "Co and Ni"
+      ],
+      "correctAnswer": "Al and Zn",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583898",
+      "question": "The chemical composition of rust is",
+      "options": [
+        "Fe₃O₄",
+        "Fe₂O₃",
+        "Fe₂O₃. nH₂O",
+        "Fe₂O₃. xH₂O"
+      ],
+      "correctAnswer": "Fe₂O₃. nH₂O",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583899",
+      "question": "1 ppm of hardness of water is equal to",
+      "options": [
+        "1 part of CaCO₃ hardness in 10⁶ parts of water",
+        "1 part of CaCO₃ hardness in 10⁸ parts of water",
+        "1 part of CaCO₃ hardness in 10⁷ parts of water",
+        "1 part of CaCO₃ hardness in 10⁵ parts of water"
+      ],
+      "correctAnswer": "1 part of CaCO₃ hardness in 10⁶ parts of water",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583900",
+      "question": "The temporary hardness of water is due to the presence of",
+      "options": [
+        "MgCl₂ and CaCl₂",
+        "Ca(NO₃)₂ and Mg(NO₃)₂",
+        "CaSO₄ and MgSO₄",
+        "Ca(HCO₃)₂ and Mg(HCO₃)₂"
+      ],
+      "correctAnswer": "Ca(HCO₃)₂ and Mg(HCO₃)₂",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583901",
+      "question": "The basic buffer solution is a mixture of",
+      "options": [
+        "NH₃ + NH₄Cl",
+        "HCl+NH₄Cl",
+        "NaCl + NH₄Cl",
+        "KOH + NH₄Cl"
+      ],
+      "correctAnswer": "NH₃ + NH₄Cl",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583902",
+      "question": "Which of the following polymers has amide linkage?",
+      "options": [
+        "Terylene",
+        "Bakelite",
+        "Nylon",
+        "PVC"
+      ],
+      "correctAnswer": "Nylon",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583903",
+      "question": "The monomer of natural rubber is",
+      "options": [
+        "Butadiene",
+        "Chloroprene",
+        "2-methyl 1,2 butadiene",
+        "2-methyl 1,3 butadiene"
+      ],
+      "correctAnswer": "2-methyl 1,3 butadiene",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583904",
+      "question": "Which of the following is a thermo setting?",
+      "options": [
+        "Bakelite",
+        "Polyethylene",
+        "Nylon-6",
+        "Natural rubber"
+      ],
+      "correctAnswer": "Bakelite",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583905",
+      "question": "The composition of water gas is",
+      "options": [
+        "CO and H₂ are combustible gases and CO₂ and N₂ are non-combustible gases",
+        "CO + CO₂ are combustible gases and H₂O and N₂ non-combustible gases",
+        "CO + N₂ are combustible gases and H₂O and H₂ are non-combustible gases",
+        "N₂+H₂ are combustible gases and CO + H₂O are non-combustible gases"
+      ],
+      "correctAnswer": "CO and H₂ are combustible gases and CO₂ and N₂ are non-combustible gases",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583906",
+      "question": "Earth is protected from UV radiation by",
+      "options": [
+        "Nitrogen layer",
+        "Ozone layer",
+        "Carbon dioxide layer",
+        "Oxygen layer"
+      ],
+      "correctAnswer": "Ozone layer",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583907",
+      "question": "Which of following statements is not correct?",
+      "options": [
+        "CO is the main air pollutant",
+        "All pollutants are not wastes",
+        "Water is polluted by dissolved Oxygen",
+        "Lichens are pollution indicators"
+      ],
+      "correctAnswer": "Water is polluted by dissolved Oxygen",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583908",
+      "question": "Minamata disease is caused due to the presence of",
+      "options": [
+        "Cd",
+        "Pb",
+        "As",
+        "Hg"
+      ],
+      "correctAnswer": "Hg",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "8946583909",
+      "question": "Match the following:\nList I\n(a) 8251A\n(b) 8255A\n(c) 8259A\nList II\n(i) Programmable Peripheral Interface\n(ii) Programmable Interface Controller\n(iii) Programmable Communication Interface",
+      "options": [
+        "a-i, b-iii, c-ii",
+        "a-iii, b-ii, c-i",
+        "a-i, b-ii, c-iii",
+        "a-iii, b-i, c-ii"
+      ],
+      "correctAnswer": "a-iii, b-i, c-ii",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583910",
+      "question": "Choose the correct pair of instructions designed to aid the sign-extension process",
+      "options": [
+        "CBW and CWD",
+        "INC and DEC",
+        "NEG and POS",
+        "CMP and XGHS"
+      ],
+      "correctAnswer": "CBW and CWD",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583911",
+      "question": "When J = K = 1, then JK flip-flop functions like a/an",
+      "options": [
+        "D flip-flop",
+        "S-R flip-flop",
+        "NAND gate",
+        "T flip-flop"
+      ],
+      "correctAnswer": "T flip-flop",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583912",
+      "question": "Two numbers with digits X and Y and radix 3 and 4 have following relationship: (XY)₃ = (YX)₄, then what are the values of X and Y?",
+      "options": [
+        "X=3 and Y=2",
+        "X = 5 and Y=4",
+        "X=1 and Y = 2",
+        "X = 3 and Y=1"
+      ],
+      "correctAnswer": "X=3 and Y=2",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583913",
+      "question": "Which of the following are employed in digital computers for generating binary control decisions?",
+      "options": [
+        "combinational circuits",
+        "sequential circuits",
+        "binary counters",
+        "segment registers"
+      ],
+      "correctAnswer": "combinational circuits",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583914",
+      "question": "Which of the following is the maximum number of prime implicants possible for an n-variable Boolean function?",
+      "options": [
+        "2ⁿ⁻¹",
+        "2n",
+        "2ⁿ⁺¹",
+        "2ⁿ"
+      ],
+      "correctAnswer": "2ⁿ⁻¹",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583915",
+      "question": "A simplified form of the Boolean function F(A, B, C) = Σ(0, 2, 4, 5, 6) is",
+      "options": [
+        "F = BC + AC'",
+        "F = C' + AB'",
+        "F = BC + AC",
+        "F = A' + BC"
+      ],
+      "correctAnswer": "F = C' + AB'",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583916",
+      "question": "Which digital logic family is suitable for circuits that need high component density?",
+      "options": [
+        "TTL",
+        "ECL",
+        "MOS",
+        "CMOS"
+      ],
+      "correctAnswer": "MOS",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583917",
+      "question": "According to Flynn's classification, MISD stands for",
+      "options": [
+        "Multiple Input Sequential Data",
+        "Multiple Instruction stream Single data stream",
+        "Multiple Input Single Data output",
+        "Multiple Input Single Data stream"
+      ],
+      "correctAnswer": "Multiple Instruction stream Single data stream",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583918",
+      "question": "A three-input decoder has ______ outputs.",
+      "options": [
+        "4",
+        "8",
+        "12",
+        "6"
+      ],
+      "correctAnswer": "8",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583919",
+      "question": "What is the maximum possible range of sequence for Mod-16 binary up-counter?",
+      "options": [
+        "0 to 256",
+        "0 to 255",
+        "0 to 15",
+        "0 to 16"
+      ],
+      "correctAnswer": "0 to 15",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583920",
+      "question": "Which is an implementation technique where the phases of a computer instruction cycle overlap in execution?",
+      "options": [
+        "context switching",
+        "vector processing",
+        "array processing",
+        "Pipelining"
+      ],
+      "correctAnswer": "Pipelining",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583921",
+      "question": "The Intel 8086 processor has ________ bit address space.",
+      "options": [
+        "8",
+        "16",
+        "20",
+        "32"
+      ],
+      "correctAnswer": "20",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583922",
+      "question": "The Intel 8086 processor has ________ segment registers to point to segments of memory.",
+      "options": [
+        "8",
+        "4",
+        "6",
+        "2"
+      ],
+      "correctAnswer": "4",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583923",
+      "question": "Which of the following is correct during mode-2 operation of 8255?",
+      "options": [
+        "port A can be configured as 8-bit I/O port",
+        "port A can be configured as bidirectional port",
+        "port B can be configured as bidirectional port",
+        "port C can be configured as bidirectional port"
+      ],
+      "correctAnswer": "port A can be configured as bidirectional port",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583924",
+      "question": "What are the address lines of the interrupts RST 7 and 8?",
+      "options": [
+        "0036 H and 0038H",
+        "0030H and 0030H",
+        "0032 H and 0034H",
+        "0030 H and 0038H"
+      ],
+      "correctAnswer": "0036 H and 0038H",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583925",
+      "question": "In 80486 processor a __________ way set-associative cache is used for instructions and data.",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583926",
+      "question": "For 80386 processor, __________ allows the application programmer to organize the main memory in logical modules.",
+      "options": [
+        "protection",
+        "input/ output",
+        "bus",
+        "segmentation"
+      ],
+      "correctAnswer": "segmentation",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583927",
+      "question": "When the word read from memory is an operand, the computer is in __________ cycle.",
+      "options": [
+        "fetch",
+        "execute",
+        "Indirect",
+        "Empty"
+      ],
+      "correctAnswer": "execute",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583928",
+      "question": "What is the content of the simplest type of dynamic RAM cell?",
+      "options": [
+        "one transistor and one flip-flop",
+        "only one register and one transistor",
+        "only one transistor and one capacitor",
+        "one capacitor and one inductor"
+      ],
+      "correctAnswer": "only one transistor and one capacitor",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583929",
+      "question": "What is the purpose of having combinational gates in registers?",
+      "options": [
+        "to perform data-processing tasks",
+        "to encode the data",
+        "to decode the data",
+        "to encrypt the data"
+      ],
+      "correctAnswer": "to perform data-processing tasks",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583930",
+      "question": "In the __________ mode, the content of the program counter is added to the address part of the instruction to obtain the effective address.",
+      "options": [
+        "absolute address",
+        "indexed address",
+        "auto decrement",
+        "relative-address"
+      ],
+      "correctAnswer": "relative-address",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583931",
+      "question": "Memory mapped I/O allows the use of __________ type instructions to access I/O data.",
+      "options": [
+        "I/O",
+        "Memory",
+        "Key board",
+        "Register"
+      ],
+      "correctAnswer": "Memory",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583932",
+      "question": "In _________ controlled I/O, the processor repeatedly polls I/O device.",
+      "options": [
+        "I/O",
+        "DMA",
+        "Program",
+        "Interrupt"
+      ],
+      "correctAnswer": "Program",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583933",
+      "question": "In direct memory access the interface transfers data into and out of the memory unit through the __________ bus.",
+      "options": [
+        "CPU",
+        "Input",
+        "Output",
+        "Memory"
+      ],
+      "correctAnswer": "Memory",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583934",
+      "question": "The terms DTE and DCE are connected with which interface device?",
+      "options": [
+        "8255",
+        "8251",
+        "8257",
+        "8259"
+      ],
+      "correctAnswer": "8251",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583935",
+      "question": "What is the decimal equivalent of the octal number 736.4?",
+      "options": [
+        "487.5",
+        "463.5",
+        "478.5",
+        "352.5"
+      ],
+      "correctAnswer": "478.5",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583936",
+      "question": "__________ memory systems permit user to construct his/her programs as though he/she had a memory space equal to the totality of the auxiliary memory.",
+      "options": [
+        "Cache",
+        "Register",
+        "I/O",
+        "Virtual"
+      ],
+      "correctAnswer": "Virtual",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583937",
+      "question": "A __________ is a collection of one or more variables, possibly of different types grouped together under single name.",
+      "options": [
+        "structure",
+        "class",
+        "object",
+        "Pointer"
+      ],
+      "correctAnswer": "structure",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583938",
+      "question": "The number of values returned by a function is __________.",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "correctAnswer": "1",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583939",
+      "question": "What is the output of the following program?\n#include <stdio.h>\nint jumble(int x, int y){\nx=2*x+y;\nreturn x; }\nint main()\n{ int x=2, y=5;\nx=jumble(y, x); y=jumble(y, x);\nprintf(\"%d \\n\", y);\nreturn 0; }",
+      "options": [
+        "5",
+        "2",
+        "22",
+        "26"
+      ],
+      "correctAnswer": "22",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583940",
+      "question": "Consider the following program:\n#include<stdio.h>\nint main()\n{ int i = 0;\nint j = sizeof(i++);\nprintf(\"%d %d\", i, j);\nreturn 0;}\nWhat is the output of the program?",
+      "options": [
+        "0 4",
+        "1 1",
+        "0 1",
+        "4 0"
+      ],
+      "correctAnswer": "0 4",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583941",
+      "question": "Which of the following is not used as a keyword for storage classes?",
+      "options": [
+        "auto",
+        "static",
+        "dynamic",
+        "extern"
+      ],
+      "correctAnswer": "dynamic",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583942",
+      "question": "Which of the following registers is a 6-byte queue in 8086?",
+      "options": [
+        "base pointer",
+        "instruction register",
+        "programme counter",
+        "stack segment register"
+      ],
+      "correctAnswer": "instruction register",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583943",
+      "question": "Consider the following program:\n#include<stdio.h>\nint main()\n{\nint a=25, b;\nb = a<<1>>2<<2>>3;\nprintf(\"%d\", b);\nreturn 0;}\nWhat is the output of the program?",
+      "options": [
+        "25",
+        "6",
+        "24",
+        "7"
+      ],
+      "correctAnswer": "6",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583944",
+      "question": "The result of evaluating the postfix expression 5 4 + 6 * 8 - 6 + 7 * is",
+      "options": [
+        "280",
+        "364",
+        "481",
+        "502"
+      ],
+      "correctAnswer": "364",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583945",
+      "question": "What is the time complexity of the following algorithm when n = 2ᵏ, for some k≥ 0?\nAlgorithm Display(n)\nfor (i=1; i < n; i=i+4)\n for (j=1; j < n; j=j*2)\n print \"All the Best.\"",
+      "options": [
+        "Θ(n²)",
+        "O(n¹·⁵)",
+        "Θ(n log n)",
+        "Θ((log n)²)"
+      ],
+      "correctAnswer": "Θ(n log n)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583946",
+      "question": "The best-case, the average-case and the worst-case running time of binary search algorithm is __________ respectively.",
+      "options": [
+        "Θ(1), Θ(log n), Θ(n)",
+        "Θ(log n), Θ(log n), Θ(log n)",
+        "Θ(1), Θ(1), Θ(log n)",
+        "Θ(1), Θ(log n), Θ(log n)"
+      ],
+      "correctAnswer": "Θ(1), Θ(log n), Θ(log n)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583947",
+      "question": "Which of the following recurrences describes the worst-case running time of quicksort algorithm?",
+      "options": [
+        "T(n) = T(n-1) + Θ(n) for n≥2 and T(1) = O(1)",
+        "T(n) = 2T(n/2) + Θ(n) for n≥2 and T(1) = O(1)",
+        "T(n) = 2T(n-1) + Θ(n) for n≥2 and T(1) = O(1)",
+        "T(n) = T(n/2) + Θ(n) for n≥2 and T(1) = O(1)"
+      ],
+      "correctAnswer": "T(n) = T(n-1) + Θ(n) for n≥2 and T(1) = O(1)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583948",
+      "question": "Let A[1..n] be an integer array with n elements such that each element of A is at most four positions away from its original position in the sorted order. Which of the following sorting algorithms sorts array A efficiently?",
+      "options": [
+        "merge sort",
+        "insertion sort",
+        "selection sort",
+        "bubble sort"
+      ],
+      "correctAnswer": "insertion sort",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583949",
+      "question": "In the OSI reference model, a __________ layer manages and synchronizes the conversation between two different applications.",
+      "options": [
+        "Network",
+        "session",
+        "data link",
+        "Presentation"
+      ],
+      "correctAnswer": "session",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583950",
+      "question": "How many number of bits for Networks IDs and Host IDs will be available in Class C Network?",
+      "options": [
+        "24 and 8",
+        "16 and 16",
+        "16 and 8",
+        "8 and 24"
+      ],
+      "correctAnswer": "24 and 8",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583951",
+      "question": "The main function of the network layer is routing of ________ from the source machine to the destination machine.",
+      "options": [
+        "frames",
+        "wireless",
+        "packets",
+        "bit stream"
+      ],
+      "correctAnswer": "packets",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583952",
+      "question": "IPv6 addresses are ________ bits long.",
+      "options": [
+        "32",
+        "64",
+        "128",
+        "256"
+      ],
+      "correctAnswer": "128",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583953",
+      "question": "In the OSI reference model, Network layer deals with",
+      "options": [
+        "IP addressing and subnetting",
+        "Flow control and IP addressing",
+        "Classful addressing and congestion control",
+        "Reliable data transmission and subnetting"
+      ],
+      "correctAnswer": "IP addressing and subnetting",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583954",
+      "question": "User Datagram Protocol (UDP) is an unreliable, __________ protocol for applications that do not want TCPs sequencing.",
+      "options": [
+        "secure",
+        "connection less",
+        "connection oriented",
+        "control"
+      ],
+      "correctAnswer": "connection less",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583955",
+      "question": "Which protocol is used for E-Mail server to send a mail?",
+      "options": [
+        "FTP",
+        "POP",
+        "SMTP",
+        "SNMP"
+      ],
+      "correctAnswer": "SMTP",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583956",
+      "question": "The most common application of the twisted pair is the ________ system.",
+      "options": [
+        "LAN",
+        "Wireless",
+        "Telephone",
+        "Radio"
+      ],
+      "correctAnswer": "Telephone",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583957",
+      "question": "A __________ cable consists of a stiff copper wire surrounded by an insulated material.",
+      "options": [
+        "optical",
+        "coaxial",
+        "electrical",
+        "Fibre"
+      ],
+      "correctAnswer": "coaxial",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583958",
+      "question": "Using __________ technique, every incoming packet is sent out on every outgoing line except the one it arrived on.",
+      "options": [
+        "flow based",
+        "distance vector",
+        "flooding",
+        "link state"
+      ],
+      "correctAnswer": "flooding",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583959",
+      "question": "The shortest Job First scheduling algorithm is provably",
+      "options": [
+        "optimal",
+        "difficult",
+        "easy",
+        "Average"
+      ],
+      "correctAnswer": "optimal",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583960",
+      "question": "The degree of multiprogramming is",
+      "options": [
+        "the number of processes executed per unit time",
+        "the number of processes in the ready queue",
+        "the number of processes in the memory",
+        "the number of processes in the i/o queue"
+      ],
+      "correctAnswer": "the number of processes in the memory",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583961",
+      "question": "Number of i-nodes in use of Unix file system represents",
+      "options": [
+        "number of files",
+        "number of directions",
+        "number of internal users",
+        "number of indices"
+      ],
+      "correctAnswer": "number of files",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583962",
+      "question": "Given a logical address with the following format:\n2 bits Seg | 16 bits Page # | 8 bits Page offset\nWhat is the maximum size of each segment and maximum number of pages per segment?",
+      "options": [
+        "16 MB and 64 K",
+        "8 MB and 64K",
+        "16 MB and 32K",
+        "8 MB and 32 K"
+      ],
+      "correctAnswer": "16 MB and 64 K",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583963",
+      "question": "When a device/ system attempts to perform two or more operations at the same time on the shared data, the result depends on the order of the usage shared data is called",
+      "options": [
+        "critical section",
+        "starvation",
+        "race condition",
+        "deadlock"
+      ],
+      "correctAnswer": "race condition",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583964",
+      "question": "A process is in __________ state, if it is waiting for an event that will never occur.",
+      "options": [
+        "deadlock",
+        "safe",
+        "unsafe",
+        "Starvation"
+      ],
+      "correctAnswer": "deadlock",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583965",
+      "question": "Resource __________ is one of the methods for eliminating deadlocks.",
+      "options": [
+        "allocation",
+        "preemption",
+        "execution",
+        "elimination"
+      ],
+      "correctAnswer": "preemption",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583966",
+      "question": "Operating System performs the following actions when a new process is created:\n(1) Allocate the memory and other resources to the process\n(2) Assign process id and priority\n(3) Create a process control block (PCB) for the process\n(4) Set up the process environment\n(5) Initialize resource accounting information for the process.\nWhat would be the correct sequence of the above actions?",
+      "options": [
+        "4, 3, 1, 2, 5",
+        "4, 3, 5, 2, 1",
+        "2, 1, 3, 4, 5",
+        "3, 4, 2, 5, 1"
+      ],
+      "correctAnswer": "2, 1, 3, 4, 5",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583967",
+      "question": "In which of the following page replacement policies Belady's anomaly occurs?",
+      "options": [
+        "FIFO",
+        "LRU",
+        "LFU",
+        "NRU"
+      ],
+      "correctAnswer": "FIFO",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583968",
+      "question": "A state is in __________ state if the system can allocate resources to each process in some order and still avoid a deadlock.",
+      "options": [
+        "locked",
+        "concurrent",
+        "safe",
+        "unsafe"
+      ],
+      "correctAnswer": "safe",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583969",
+      "question": "'Alter table' in SQL is one of the following types of command.",
+      "options": [
+        "DCL command",
+        "DDL command",
+        "DML command",
+        "DAL command"
+      ],
+      "correctAnswer": "DDL command",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583970",
+      "question": "A relation schema R is in __________ normal form if, whenever a nontrivial functional dependency X → A holds in R, either (a) X is a super key of R or (b) A is a prime attribute of R.",
+      "options": [
+        "4NF",
+        "BCNF",
+        "3NF",
+        "5NF"
+      ],
+      "correctAnswer": "3NF",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583971",
+      "question": "Which normal form is not based on the concept of functional dependency?",
+      "options": [
+        "Third normal form",
+        "Second normal form",
+        "First normal form",
+        "Boyce-Codd normal form"
+      ],
+      "correctAnswer": "First normal form",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583972",
+      "question": "A relation R is in Boyce-Codd Normal Form (BCNF) if and only if every determinant is a __________ key.",
+      "options": [
+        "primary",
+        "candidate",
+        "secondary",
+        "Auxiliary"
+      ],
+      "correctAnswer": "candidate",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583973",
+      "question": "The conceptual schema insulates users from changes in the physical storage of the data. This property is referred to as",
+      "options": [
+        "data consistency",
+        "data insulation",
+        "logical data independence",
+        "physical data independence"
+      ],
+      "correctAnswer": "physical data independence",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583974",
+      "question": "In an E-R diagram, double ellipse is used to represent",
+      "options": [
+        "multivalued attribute",
+        "composite attribute",
+        "weak entity set",
+        "identifying relationship set"
+      ],
+      "correctAnswer": "multivalued attribute",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583975",
+      "question": "The __________ operation between two relations 'r' and 's' produces a relation with tuples which are in 'r' but not in 's'?",
+      "options": [
+        "intersection",
+        "set difference",
+        "cartesian product",
+        "division"
+      ],
+      "correctAnswer": "set difference",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583976",
+      "question": "What will be the result of the following SQL query? SELECT S.sid FROM sailors S WHERE S.rating >= ALL (SELECT S2.sid FROM sailors S2)",
+      "options": [
+        "the sailors' id with the highest rating",
+        "the sailors' id with the minimum rating diamonds",
+        "the sailors' id whose rating is greater than the second set of sailors",
+        "the sailors' id with a rating equal to the second set of sailors"
+      ],
+      "correctAnswer": "the sailors' id with the highest rating",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583977",
+      "question": "Which of the following mechanisms allows us to retrieve rows one at a time from a relation?",
+      "options": [
+        "view",
+        "cursor",
+        "trigger",
+        "assertion"
+      ],
+      "correctAnswer": "cursor",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583978",
+      "question": "A relation R is in __________ normal form if and only if all underlying domains contain atomic values only.",
+      "options": [
+        "second",
+        "first",
+        "third",
+        "Fifth"
+      ],
+      "correctAnswer": "first",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583979",
+      "question": "What is the output of the following (when embedded in a complete program)? int n=5; while (--n > 0) { if(n = = 2) exit(0); cout<<n<<\" \"; } cout<<\"End of loop\";",
+      "options": [
+        "2 3",
+        "4 3",
+        "3 4",
+        "4 5"
+      ],
+      "correctAnswer": "4 3",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583980",
+      "question": "What is the output of the following (when embedded in a complete program)? int n=1: do cout<< n <<\" \"; while (+ + n <=3);",
+      "options": [
+        "1 2 3",
+        "4 3 2",
+        "2 3 4",
+        "3 4 5"
+      ],
+      "correctAnswer": "1 2 3",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583981",
+      "question": "A __________ member of the class is accessible by the member functions within its class and any class immediately derived from it.",
+      "options": [
+        "Private",
+        "Protected",
+        "Public",
+        "Global"
+      ],
+      "correctAnswer": "Public",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583982",
+      "question": "Which of the following is the syntactically correct and complete function?",
+      "options": [
+        "int func(int a, int b) { cout<< \"Hello\"}",
+        "func (int c) {cin>>\"c\" }",
+        "int func( int a, int b) { a = a+b; return (a);}",
+        "int func();"
+      ],
+      "correctAnswer": "int func( int a, int b) { a = a+b; return (a);}",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583983",
+      "question": "Combining a number of items such as variables and functions into an object of a class is called",
+      "options": [
+        "abstraction",
+        "polymorphism",
+        "encapsulation",
+        "structure"
+      ],
+      "correctAnswer": "encapsulation",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583984",
+      "question": "Which of the following statements is a valid syntax for typecast in C++?",
+      "options": [
+        "(char) a;",
+        "char (a);",
+        "type char(a);",
+        "char type(a);"
+      ],
+      "correctAnswer": "(char) a;",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583985",
+      "question": "Which header file does contain the methods setw() and get_time()?",
+      "options": [
+        "iomanip.h",
+        "iomanip.h, stdio.h",
+        "iostream.h",
+        "iostream.h, iomanip.h"
+      ],
+      "correctAnswer": "iomanip.h",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583986",
+      "question": "__________ refers to the ability to associate multiple meanings to one function name.",
+      "options": [
+        "Abstraction",
+        "Polymorphism",
+        "Encapsulation",
+        "Structure"
+      ],
+      "correctAnswer": "Polymorphism",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583987",
+      "question": "A/An __________ function of a class is not a member function of the class but has access to the private members of the class just as a member function does.",
+      "options": [
+        "Member",
+        "Constructor",
+        "Overloaded",
+        "Friend"
+      ],
+      "correctAnswer": "Friend",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583988",
+      "question": "The technique of waiting until run time to determine the implementation of a procedure is called __________ binding.",
+      "options": [
+        "static",
+        "early",
+        "dynamic",
+        "positive"
+      ],
+      "correctAnswer": "dynamic",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583989",
+      "question": "Which of the following methods of String class is used to obtain character at a specified index?",
+      "options": [
+        "char()",
+        "Charat()",
+        "charat()",
+        "charAt()"
+      ],
+      "correctAnswer": "charAt()",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583990",
+      "question": "Which of the following methods of String class can be used to test strings for equality?",
+      "options": [
+        "isequal()",
+        "isequals()",
+        "equal()",
+        "equals()"
+      ],
+      "correctAnswer": "equals()",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583991",
+      "question": "Which of the following statements is not correct?",
+      "options": [
+        "string is a class",
+        "strings in java are mutable.",
+        "every string is an object of class string.",
+        "java defines a peer class of string, called string buffer, which allows string to be altered."
+      ],
+      "correctAnswer": "strings in java are mutable.",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583992",
+      "question": "Which interface in Java threads is used to create?",
+      "options": [
+        "thread",
+        "thread. create",
+        "run",
+        "runnable"
+      ],
+      "correctAnswer": "runnable",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583993",
+      "question": "Which Java keyword is used to prevent inheritance?",
+      "options": [
+        "stop",
+        "finally",
+        "final",
+        "finalize"
+      ],
+      "correctAnswer": "final",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583994",
+      "question": "Which of the following constructs is mandatory to handle user-defined exceptions?",
+      "options": [
+        "finally",
+        "final",
+        "throws",
+        "Throw"
+      ],
+      "correctAnswer": "Throw",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583995",
+      "question": "What is the output of this program?\nClass string_class{\npublic static void main(String args[])\n{\nString obj=\"hello\";\nString obj1 =\"world\";\nString obj2 =obj;\nstring obj2 =\" world\";\nSystem.out.println(obj+\" \"+ obj2);\n}\n}",
+      "options": [
+        "hello hello",
+        "world world",
+        "hello world",
+        "world hello"
+      ],
+      "correctAnswer": "hello world",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583996",
+      "question": "Which of these jump statements can skip processing remainder of code in its body for a particular iteration?",
+      "options": [
+        "break",
+        "return",
+        "exit",
+        "continue"
+      ],
+      "correctAnswer": "continue",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583997",
+      "question": "What is the output of this program?\nClass selection_statements\n{\nPublic static void main(String args[])\n{\nint var1 = 5;\nint var2 = 6;\nif ((var2 = 1) == var1)\nSystem.out.print(var2);\nelse\nSystem.out.print(++var2);\n}\n}",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583998",
+      "question": "What is the output of this program?\nClass string_demo {\npublic static void main(String args[])\n{\nString obj=\"I\"+\"like\"+\"Java\";\nSystem.out.println(obj);\n}\n}",
+      "options": [
+        "I",
+        "Like",
+        "Java",
+        "IlikeJava"
+      ],
+      "correctAnswer": "IlikeJava",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946583999",
+      "question": "Which of the following JavaScript statements is the correct definition of an array?",
+      "options": [
+        "var a = new Array[100]",
+        "a = new Array[1, 2, 3, 4]",
+        "a = new Array(1, 2, 3, 4)",
+        "a = new Array[]"
+      ],
+      "correctAnswer": "a = new Array(1, 2, 3, 4)",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946584000",
+      "question": "JavaScript is contained inside the __________ tags.",
+      "options": [
+        "<font>...</font>",
+        "<script>...</script>",
+        "<head>...</head>",
+        "<body>...</body>"
+      ],
+      "correctAnswer": "<script>...</script>",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946584001",
+      "question": "What is the output of the following PHP code?\n<?php\n$username=\"ECET2019\";\nif(ereg(\"([^a-z])\",$userName))\necho\"Username must be all lowercase!\";\nelse\necho\"Username is all lowercase!\";\n?>",
+      "options": [
+        "error",
+        "username must be all lowercase!",
+        "username is all lowercase!",
+        "no output is returned"
+      ],
+      "correctAnswer": "username must be all lowercase!",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946584002",
+      "question": "Which of the following PHP functions can be used to get the current memory usage?",
+      "options": [
+        "get_usage()",
+        "get_peak_usage()",
+        "get_memory_usage()",
+        "get_memory_peak_usage()"
+      ],
+      "correctAnswer": "get_memory_usage()",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946584003",
+      "question": "Choose the correct option for PHP:\nS1: echo () is capable of outputting multiple strings\nS2: echo () cannot be used as part of a complex expression because it returns void\nS3: Print () return a Boolean",
+      "options": [
+        "Only S1",
+        "S1 and S2 only",
+        "S1, S2 and S3",
+        "S1 and S3 only"
+      ],
+      "correctAnswer": "S1, S2 and S3",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946584004",
+      "question": "Which of the following HTML codes displays the content in bold face?",
+      "options": [
+        "<b> This text is big<b>",
+        "<b> This text is big</b>",
+        "<b/> This text is bold</b>",
+        "<b> This text is bold<\\b>"
+      ],
+      "correctAnswer": "<b> This text is big</b>",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946584005",
+      "question": "In HTML document to insert images, we use the __________ tag.",
+      "options": [
+        "Picture",
+        "Pic",
+        "Img",
+        "Image"
+      ],
+      "correctAnswer": "Img",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946584006",
+      "question": "Which of the following tags is used to add a row to a table?",
+      "options": [
+        "<td> and </td>",
+        "<row> and <row>",
+        "<tablerow> and </tablerow>",
+        "<tr> and </tr>"
+      ],
+      "correctAnswer": "<tr> and </tr>",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946584007",
+      "question": "Which are the compound data types of PHP?",
+      "options": [
+        "array and object",
+        "array and map",
+        "array and vector",
+        "array and hash table"
+      ],
+      "correctAnswer": "array and object",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "8946584008",
+      "question": "Which PHP's super global variable offers information regarding the PHP parser's underlying server environment?",
+      "options": [
+        "$ - SEVER",
+        "$ - ENV",
+        "$ - PARSER",
+        "$-COOKIES"
+      ],
+      "correctAnswer": "$ - ENV",
+      "topic": "Computer Science and Engineering"
+    }
+  ]

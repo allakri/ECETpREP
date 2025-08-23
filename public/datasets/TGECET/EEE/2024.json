@@ -1,12 +1,2402 @@
 [
-  { "id": 1, "question": "The unit of capacitance is: (EEE 2024)", "options": ["Henry", "Farad", "Ohm", "Weber"], "correctAnswer": "Farad", "topic": "Basic Electrical Engineering" },
-  { "id": 2, "question": "A megger is used to measure: (EEE 2024)", "options": ["Low resistance", "Medium resistance", "High insulation resistance", "Current"], "correctAnswer": "High insulation resistance", "topic": "Measuring Instruments" },
-  { "id": 3, "question": "Fleming's left-hand rule is applicable to: (EEE 2024)", "options": ["DC generators", "DC motors", "Transformers", "Alternators"], "correctAnswer": "DC motors", "topic": "DC Machines" },
-  { "id": 4, "question": "The reciprocal of impedance is called: (EEE 2024)", "options": ["Conductance", "Susceptance", "Admittance", "Reactance"], "correctAnswer": "Admittance", "topic": "AC Circuits" },
-  { "id": 5, "question": "An autotransformer has how many windings? (EEE 2024)", "options": ["One", "Two", "Three", "Four"], "correctAnswer": "One", "topic": "AC Machines" },
-  { "id": 6, "question": "A synchronous motor can operate at: (EEE 2024)", "options": ["Lagging power factor only", "Leading power factor only", "Unity power factor only", "Lagging, leading, and unity power factor"], "correctAnswer": "Lagging, leading, and unity power factor", "topic": "AC Motors" },
-  { "id": 7, "question": "The voltage of high-tension (HT) transmission lines in India is typically above: (EEE 2024)", "options": ["1 kV", "11 kV", "33 kV", "220 V"], "correctAnswer": "33 kV", "topic": "Power Systems" },
-  { "id": 8, "question": "Which of the following is a renewable energy source? (EEE 2024)", "options": ["Coal", "Natural Gas", "Solar", "Nuclear"], "correctAnswer": "Solar", "topic": "Power Systems" },
-  { "id": 9, "question": "A chopper is a DC to DC converter, also known as a: (EEE 2024)", "options": ["Inverter", "Rectifier", "DC transformer", "Cycloconverter"], "correctAnswer": "DC transformer", "topic": "Power Electronics" },
-  { "id": 10, "question": "In C language, which symbol is used to terminate a statement? (EEE 2024)", "options": [":", ";", ".", ","], "correctAnswer": ";", "topic": "C Language" }
-]
+    {
+      "id": "7614461411",
+      "question": "If A = \\(\\begin{pmatrix} k & 1 \\\\ 1 & k \\end{pmatrix}\\) and \\(|A^3| = 27\\), then k =",
+      "options": [
+        "±1",
+        "±2",
+        "±4",
+        "±5"
+      ],
+      "correctAnswer": "±2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461412",
+      "question": "If A = \\(\\begin{pmatrix} -1 & -1 \\\\ 2 & 1 \\end{pmatrix}\\) satisfies \\(aA^2 + bA + cI = 0\\), then \\(b+2c=\\)",
+      "options": [
+        "4",
+        "2",
+        "-4",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461413",
+      "question": "Let (x,y,z) be the solution of the system of equations \\(x+3y+z=3\\), \\(x+4y+2z=3\\), \\(-x-2y+3z=-6\\) .Then \\(x^2+y^2+z^2=\\)",
+      "options": [
+        "12",
+        "9",
+        "6",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461414",
+      "question": "If A = \\(\\begin{pmatrix} 2 & x+9 \\\\ 1 & 2x \\end{pmatrix}\\) is invertible,then x ≠",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461415",
+      "question": "The value of x satisfying \\(3^{\\log_5(x-5)} = \\log_5(125)\\) is",
+      "options": [
+        "10",
+        "5",
+        "9",
+        "3"
+      ],
+      "correctAnswer": "10",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461416",
+      "question": "If \\(\\frac{4x^2+1}{x^3-1} = \\frac{A}{x-1} + \\frac{Bx+C}{x^2+x+1}\\) , then \\(A-B+C=\\)",
+      "options": [
+        "-3",
+        "0",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461417",
+      "question": "The diameter of the circle \\((x-1)^2 + (y+3)^2 = 3\\) is",
+      "options": [
+        "\\(\\sqrt{3}\\)",
+        "\\(4\\sqrt{3}\\)",
+        "\\(2\\sqrt{3}\\)",
+        "3"
+      ],
+      "correctAnswer": "\\(2\\sqrt{3}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461418",
+      "question": "If the circle \\(x^2+y^2-3x-2y+c=0\\) passes through origin, then c =",
+      "options": [
+        "-1",
+        "1",
+        "0",
+        "∞"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461419",
+      "question": "The latus rectum of parabola \\(x^2 = 4y\\) is",
+      "options": [
+        "4",
+        "8",
+        "12",
+        "2"
+      ],
+      "correctAnswer": "4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461420",
+      "question": "The centre of the circle \\(45x^2+45y^2-60x+36y+19=0\\) is",
+      "options": [
+        "(0,0)",
+        "(60,36)",
+        "(-60,36)",
+        "\\((\\frac{2}{3}, -\\frac{2}{5})\\)"
+      ],
+      "correctAnswer": "\\((\\frac{2}{3}, -\\frac{2}{5})\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461421",
+      "question": "Homogeneous second degree equation \\(ax^2+2hxy+by^2=0\\) represents two real and distinct lines through origin if",
+      "options": [
+        "\\(h^2 > ab\\)",
+        "\\(h^2 = ab\\)",
+        "\\(h^2 < ab\\)",
+        "\\(h^2 = a+b\\)"
+      ],
+      "correctAnswer": "\\(h^2 > ab\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461422",
+      "question": "The equation of the circle with extremities (1,3) and (5, 7) of the diameter is",
+      "options": [
+        "\\(x^2+y^2+6x+10y+26=0\\)",
+        "\\(x^2+y^2-6x-10y+26=0\\)",
+        "\\(x^2+y^2-6x+10y+26=0\\)",
+        "\\(x^2+y^2-6x-10y-26=0\\)"
+      ],
+      "correctAnswer": "\\(x^2+y^2-6x-10y+26=0\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461423",
+      "question": "If the line passing through the points (a,6a) and (5,6) is perpendicular to the line \\(3x+4y+5=0\\), then \\(7a=\\)",
+      "options": [
+        "-5",
+        "-3",
+        "-1",
+        "-2"
+      ],
+      "correctAnswer": "-1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461424",
+      "question": "If (0, k), (1,3) and (82,30) are collinear, then k =",
+      "options": [
+        "\\(\\frac{8}{3}\\)",
+        "\\(\\frac{9}{4}\\)",
+        "\\(\\frac{10}{7}\\)",
+        "\\(\\frac{11}{6}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{8}{3}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461425",
+      "question": "If the two parallel sides of a square are 2x+y+7 = 0,2x+y+5=0,then the area of that square is (in square units)",
+      "options": [
+        "\\(\\frac{3}{5}\\)",
+        "\\(\\frac{4}{5}\\)",
+        "\\(\\frac{6}{5}\\)",
+        "\\(\\frac{7}{5}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{4}{5}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461426",
+      "question": "The point at two circles \\(x^2+y^2-4x-2y-4=0, x^2+y^2-12x-8y-12=0\\) touches is",
+      "options": [
+        "\\((-\\frac{2}{5}, -\\frac{4}{5})\\)",
+        "\\((\\frac{2}{5}, \\frac{4}{5})\\)",
+        "\\((\\frac{2}{5}, -\\frac{4}{5})\\)",
+        "\\((-\\frac{2}{5}, \\frac{4}{5})\\)"
+      ],
+      "correctAnswer": "\\((-\\frac{2}{5}, -\\frac{4}{5})\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461427",
+      "question": "If \\(x+y=k\\) is a normal to the parabola \\(y^2=12x\\),then k =",
+      "options": [
+        "5",
+        "9",
+        "7",
+        "3"
+      ],
+      "correctAnswer": "9",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461428",
+      "question": "The set of all points where the function \\(f(x) = x|x|\\) is differentiable is",
+      "options": [
+        "\\((0, \\infty)\\)",
+        "\\((-\\infty, \\infty)\\)",
+        "\\((-\\infty, 0) \\cup (0, \\infty)\\)",
+        "\\((-\\infty, 0)\\)"
+      ],
+      "correctAnswer": "\\((-\\infty, \\infty)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461429",
+      "question": "\\(\\lim_{x \\to 1} \\frac{1+x+x^2+...+x^{n-1}-n}{x-1} = \\)",
+      "options": [
+        "\\(n^2+n\\)",
+        "\\(\\frac{n^2+n}{2}\\)",
+        "\\(\\frac{n^2-n}{2}\\)",
+        "\\(n^2-n\\)"
+      ],
+      "correctAnswer": "\\(\\frac{n^2-n}{2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461430",
+      "question": "If \\(x=2\\cos t, y=2\\sin t\\) ,then \\(\\frac{d^2y}{dx^2}\\) at \\(t=\\frac{\\pi}{4}\\) is",
+      "options": [
+        "\\(\\frac{1}{\\sqrt{2}}\\)",
+        "\\(-\\sqrt{2}\\)",
+        "\\(\\sqrt{3}\\)",
+        "\\(-\\frac{1}{\\sqrt{3}}\\)"
+      ],
+      "correctAnswer": "\\(-\\sqrt{2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461431",
+      "question": "The equation of the tangent to the curve \\(y = x^3 - 3x + 2\\) at the point (2, 4) is",
+      "options": [
+        "9x - y - 14 = 0",
+        "9x + y - 14 = 0",
+        "9x - y + 14 = 0",
+        "9x + y = 0"
+      ],
+      "correctAnswer": "9x - y - 14 = 0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461432",
+      "question": "If \\(y = a \\log x + bx^2 + x\\) has its extreme values at \\(x=-1\\) and \\(x=2\\), then the values of a and b are respectively are",
+      "options": [
+        "-2, 2",
+        "-4, 4",
+        "\\(-\\frac{1}{3}, 4\\)",
+        "\\(-\\frac{1}{2}, 2\\)"
+      ],
+      "correctAnswer": "\\(-\\frac{1}{2}, 2\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461433",
+      "question": "If the curves \\(y^2=2x\\) and \\(2xy=k\\) cut at right angle,then \\(k^2=\\)",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "9"
+      ],
+      "correctAnswer": "8",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461434",
+      "question": "If \\(x^y y^x = 1\\), then \\(\\frac{dy}{dx}=\\)",
+      "options": [
+        "\\(-\\frac{y}{x} (\\frac{x+y\\log x}{y+x\\log y})\\)",
+        "\\(\\frac{y}{x} (\\frac{x-\\log x}{y+\\log y})\\)",
+        "\\(\\frac{y}{x} (\\frac{y-x\\log y}{x+y\\log x})\\)",
+        "\\(-\\frac{y}{x} (\\frac{y+x\\log y}{x+y\\log x})\\)"
+      ],
+      "correctAnswer": "\\(-\\frac{y}{x} (\\frac{y+x\\log y}{x+y\\log x})\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461435",
+      "question": "If \\(u = \\tan^{-1}(\\frac{x^3+y^3}{x-y})\\) and if \\(x \\neq y\\) and if \\(x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} - \\sin ku = 0\\) ,then k=",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461436",
+      "question": "The slope of the tangent to the curve xy=1 at (1,1) is",
+      "options": [
+        "-2",
+        "-1",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "-1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461437",
+      "question": "The function \\(f(x) = xe^{-x} (x \\in R)\\) attains a maximum value at x =",
+      "options": [
+        "2",
+        "1/e",
+        "1",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461438",
+      "question": "The integral value of \\(\\int \\frac{\\cos 2x}{\\sin^2 x \\cos^2 x} dx =\\)",
+      "options": [
+        "\\(\\csc^2 x - \\sec^2 x + c\\)",
+        "\\(\\cot x + \\tan x + c\\)",
+        "\\(-\\cot x - \\tan x + c\\)",
+        "\\(\\csc x - \\sec x + c\\)"
+      ],
+      "correctAnswer": "\\(-\\cot x - \\tan x + c\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461439",
+      "question": "\\(\\int e^{x \\csc x} \\csc x (1-x \\cot x) dx =\\)",
+      "options": [
+        "\\(e^{x \\cot x} + c\\)",
+        "\\(e^{x \\csc x} + c\\)",
+        "\\(-e^{-x \\cot x} + c\\)",
+        "\\(-e^{-x \\cos ecx} + c\\)"
+      ],
+      "correctAnswer": "\\(e^{x \\csc x} + c\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461440",
+      "question": "The integral value of \\(\\int_{0}^{\\pi} x \\sin x \\cos^4 x dx\\) is",
+      "options": [
+        "\\(\\frac{\\pi}{10}\\)",
+        "\\(\\frac{\\pi}{5}\\)",
+        "\\(-\\frac{\\pi}{5}\\)",
+        "\\(-\\frac{\\pi}{10}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi}{5}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461441",
+      "question": "The area enclosed between the curves \\(y^2=x\\) and \\(y=|x|\\) is",
+      "options": [
+        "1/3",
+        "1",
+        "2/3",
+        "1/6"
+      ],
+      "correctAnswer": "1/6",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461442",
+      "question": "The differential equation of the family of curves \\(xy=c_1e^x+c_2e^{-x}\\) is",
+      "options": [
+        "\\(x\\frac{d^2y}{dx^2}-2\\frac{dy}{dx}-y=0\\)",
+        "\\(x\\frac{d^2y}{dx^2}+2\\frac{dy}{dx}-xy=0\\)",
+        "\\(x\\frac{d^2y}{dx^2}-2\\frac{dy}{dx}-y=0\\)",
+        "\\(x^2\\frac{d^2y}{dx^2}+2\\frac{dy}{dx}-y=0\\)"
+      ],
+      "correctAnswer": "\\(x\\frac{d^2y}{dx^2}+2\\frac{dy}{dx}-xy=0\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461443",
+      "question": "The general solution of the differential equation \\(\\frac{dy}{dx} - x \\tan(y-x) = 1\\) is",
+      "options": [
+        "\\(\\sin(y-x)=ce^{\\frac{x^2}{2}}\\)",
+        "\\(\\cos(y-x)=ce^{\\frac{-x^2}{2}}\\)",
+        "\\(\\sin(y+x)=ce^{\\frac{-x^2}{2}}\\)",
+        "\\(\\tan(y-x)=ce^{\\frac{x^2}{2}}\\)"
+      ],
+      "correctAnswer": "\\(\\sin(y-x)=ce^{\\frac{x^2}{2}}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461444",
+      "question": "The general solution of the differential equation \\(xy \\frac{dy}{dx} = \\frac{1+y^2}{1+x^2}\\) is",
+      "options": [
+        "\\((1+x)(1+y)=cx^2y^2\\)",
+        "\\((1+x^2)(1+y^2)=cx^2\\)",
+        "\\((1+x^2)(1+y^2)=cy\\)",
+        "\\((1+x^2)(1+y^2)=cxy\\)"
+      ],
+      "correctAnswer": "\\((1+x^2)(1+y^2)=cx^2\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461445",
+      "question": "The general solution of the differential equation \\(\\frac{dy}{dx}-\\frac{2}{x}y=2x^3+x\\) is",
+      "options": [
+        "\\(y=x^4+x^2\\log x+cx^2\\)",
+        "\\(y=x^3+x^2\\log x+cx^2\\)",
+        "\\(y=x^3+x\\log x+cx^2\\)",
+        "\\(y=x^2+x\\log x+cx^3\\)"
+      ],
+      "correctAnswer": "\\(y=x^4+x^2\\log x+cx^2\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461446",
+      "question": "The general solution of the differential equation \\(\\sec^2 y \\frac{dy}{dx} + x \\tan y = x^3\\) is",
+      "options": [
+        "\\(\\sin y = x^2+2+ce^{\\frac{-x^2}{2}}\\)",
+        "\\(\\cos y = 2x^2-1+ce^{\\frac{-x^2}{2}}\\)",
+        "\\(\\cot y = x^2-2+ce^{\\frac{x^2}{2}}\\)",
+        "\\(\\tan y = x^2-2+ce^{\\frac{-x^2}{2}}\\)"
+      ],
+      "correctAnswer": "\\(\\tan y = x^2-2+ce^{\\frac{-x^2}{2}}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461447",
+      "question": "The particular integral of the differential equation \\(\\frac{d^2y}{dx^2}+16y=e^{-3x}+\\cos 4x\\) is",
+      "options": [
+        "\\(\\frac{1}{7}e^{-3x}+\\frac{x}{8}\\cos 4x\\)",
+        "\\(\\frac{1}{23}e^{-3x}+\\frac{x}{8}\\cos 4x\\)",
+        "\\(\\frac{1}{25}e^{-3x}+\\frac{x}{8}\\sin 4x\\)",
+        "\\(\\frac{1}{36}e^{-3x}+\\frac{x}{9}\\sin 4x\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1}{25}e^{-3x}+\\frac{x}{8}\\sin 4x\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461448",
+      "question": "A particular integral of the differential equation \\(\\frac{d^2y}{dx^2}+\\frac{dy}{dx}+y=x^2\\) is",
+      "options": [
+        "\\(x^2+4x\\)",
+        "\\(2x^2-x\\)",
+        "\\(x^2-8x\\)",
+        "\\(x^2-2x\\)"
+      ],
+      "correctAnswer": "\\(x^2-2x\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461449",
+      "question": "The solution of the differential equation \\(\\frac{d^2y}{dx^2}-2\\frac{dy}{dx}-15y=0\\) subject to the conditions \\(y(0)=0, y'(0)=2\\) is",
+      "options": [
+        "\\(y=\\frac{1}{20}e^{3x}+\\frac{1}{12}e^{5x}\\)",
+        "\\(y=\\frac{1}{20}e^{5x}+\\frac{1}{12}e^{-3x}\\)",
+        "\\(y=\\frac{1}{12}e^{5x}+\\frac{1}{20}e^{-3x}\\)",
+        "\\(y=\\frac{1}{20}e^{-5x}+\\frac{1}{12}e^{-3x}\\)"
+      ],
+      "correctAnswer": "\\(y=\\frac{1}{20}e^{5x}+\\frac{1}{12}e^{-3x}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461450",
+      "question": "\\(L\\{\\int_{0}^{t} e^{-u} \\sin u du\\} = \\)",
+      "options": [
+        "\\(\\frac{1}{s^2+2s+2}\\)",
+        "\\(\\frac{s}{s^2+2s+2}\\)",
+        "\\(\\frac{1}{s(s^2+2s+2)}\\)",
+        "\\(\\frac{1}{s(s^2+2)}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{1}{s(s^2+2s+2)}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461451",
+      "question": "If \\(L\\{f(t)\\} = \\log (\\frac{s-1}{s})\\), then \\(f(1)=\\)",
+      "options": [
+        "\\(1-e\\)",
+        "\\(e-1\\)",
+        "\\(e\\)",
+        "\\(e+1\\)"
+      ],
+      "correctAnswer": "\\(1-e\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461452",
+      "question": "\\(\\int_{0}^{\\infty} \\frac{\\sin 2t}{t} dt = \\)",
+      "options": [
+        "\\(\\pi\\)",
+        "0",
+        "\\(2\\pi\\)",
+        "\\(\\frac{\\pi}{2}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\pi}{2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461453",
+      "question": "If \\(L\\{t \\sinh kt\\} = \\frac{4s}{(s^2-4)^2}\\) ,then k=",
+      "options": [
+        "1",
+        "4",
+        "2",
+        "1/2"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461454",
+      "question": "Let \\(L^{-1} \\{\\frac{e^{-s}}{s^2+4s+5}\\} = f(t)\\). If t > 1, then \\(f(t)=\\)",
+      "options": [
+        "\\(e^{-2t} \\sin t\\)",
+        "\\(e^{-2(t-1)} \\sin (t-1)\\)",
+        "\\(e^{-2(t+1)} \\sin (t+1)\\)",
+        "\\(e^{2t} \\sin t\\)"
+      ],
+      "correctAnswer": "\\(e^{-2(t-1)} \\sin (t-1)\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461455",
+      "question": "If \\(L\\{f(t)\\} = \\frac{2s-1}{(s+1)(s-2)}\\), then \\(L\\{f(4t)\\} =\\)",
+      "options": [
+        "\\(\\frac{2(s+2)}{(s-4)(s+8)}\\)",
+        "\\(\\frac{2(s-1)}{(4s+1)(4s-2)}\\)",
+        "\\(\\frac{s-2}{(s-4)(s+8)}\\)",
+        "\\(\\frac{2(s-2)}{(s+4)(s-8)}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{2(s-2)}{(s+4)(s-8)}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461456",
+      "question": "If \\(Y(s)\\) is the Laplace transform of the solution \\(y(t)\\) of \\(y''+y=\\sin 3t\\), \\(y(0)=0, y'(0)=0\\), then \\(Y(0)=\\)",
+      "options": [
+        "0",
+        "3",
+        "1/3",
+        "1/9"
+      ],
+      "correctAnswer": "1/3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461457",
+      "question": "The value of the Fourier coefficient \\(a_n\\) in the series expansion of \\(f(x)=|x|\\) in \\((-\\pi,\\pi)\\) when n is odd is",
+      "options": [
+        "\\(\\frac{4}{\\pi n^2}\\)",
+        "\\(\\frac{-4}{\\pi n^2}\\)",
+        "\\(\\frac{2}{\\pi n^2}\\)",
+        "0"
+      ],
+      "correctAnswer": "\\(\\frac{-4}{\\pi n^2}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461458",
+      "question": "The value of the Fourier coefficient \\(b_0\\) in the series expansion of \\(f(x)=|x\\sin x|\\) in \\((-\\pi,\\pi)\\) is",
+      "options": [
+        "0",
+        "-2",
+        "2",
+        "-1"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461459",
+      "question": "If \\(f(x)=\\sin x\\) is expressed as Fourier Cosine series in the interval \\((0,\\pi)\\), then the value of \\(a_0\\) is",
+      "options": [
+        "\\(\\frac{2}{\\pi}\\)",
+        "\\(\\frac{1}{\\pi}\\)",
+        "\\(\\frac{4}{\\pi}\\)",
+        "\\(\\frac{-2}{\\pi}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{4}{\\pi}\\)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461460",
+      "question": "\\(\\int_{0}^{\\pi} \\sin 6x \\sin 4x dx =\\)",
+      "options": [
+        "\\(\\frac{\\pi}{2}\\)",
+        "\\(\\pi\\)",
+        "1",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "7614461461",
+      "question": "Which one of the following equation is dimensionally incorrect for the expression representing displacement ‘y’ and amplitude ‘A’ of a particle executing Simple Harmonic Motion with time period ‘T’?",
+      "options": [
+        "\\(y=\\frac{A}{\\sqrt{2}}(\\sin \\omega t + \\cos \\omega t)\\)",
+        "\\(y=A \\sin \\omega t\\)",
+        "\\(y=\\frac{A}{T} \\sin (\\frac{t}{A})\\)",
+        "\\(y=A \\sin (\\frac{4\\pi t}{T})\\)"
+      ],
+      "correctAnswer": "\\(y=\\frac{A}{T} \\sin (\\frac{t}{A})\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461462",
+      "question": "The resultant of two equal forces acting at right angles to each other is 1224 N. Then the magnitude of each force in Newtons.",
+      "options": [
+        "612, 612",
+        "1224, 1224",
+        "865, 865",
+        "432, 432"
+      ],
+      "correctAnswer": "865, 865",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461463",
+      "question": "The magnitude of three vectors \\(\\vec{A}, \\vec{B} \\& \\vec{C}\\) are in order 12,5,13 units and \\(\\vec{A}+\\vec{B}=\\vec{C}\\), then what will be the angle between the vectors \\(\\vec{A} \\& \\vec{B}\\)",
+      "options": [
+        "\\(90^0\\)",
+        "\\(60^0\\)",
+        "\\(30^0\\)",
+        "\\(45^0\\)"
+      ],
+      "correctAnswer": "\\(90^0\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461464",
+      "question": "A boy pulls a body of mass 50 kg resting on a flat horizontal surface. Calculate the frictional force if the coefficient of friction is 0.2",
+      "options": [
+        "\\(98.1 \\text{ kg.m.s}^{-2}\\)",
+        "15 kg",
+        "\\(98.1 \\times 10^3 \\text{ g.cm.s}^{-2}\\)",
+        "1500 g"
+      ],
+      "correctAnswer": "\\(98.1 \\text{ kg.m.s}^{-2}\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461465",
+      "question": "If a projectile is thrown with a velocity u at an angle of θ with the horizontal, then the velocity at maximum height during the projectile motion will be:",
+      "options": [
+        "\\(2u \\sin \\theta\\)",
+        "\\(u \\sin \\theta\\)",
+        "\\(2u \\cos \\theta\\)",
+        "\\(u \\cos \\theta\\)"
+      ],
+      "correctAnswer": "\\(u \\cos \\theta\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461466",
+      "question": "A child of mass 5 kg is going round a merry-go-round that makes 1 rotation in 3.14 seconds. If the radius of the merry-go-round is 2 m then the centrifugal force on the child will be",
+      "options": [
+        "10 Newton",
+        "20 Newton",
+        "30 Newton",
+        "40 Newton"
+      ],
+      "correctAnswer": "40 Newton",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461467",
+      "question": "A metal plate of area \\(100 \\text{ cm}^2\\) is placed on the surface of a liquid and a force of \\(1\\mu N\\) is required to move the plate so as to produce a velocity change \\(1 \\text{ cms}^{-1}\\) between two successive layers separated by 1 cm. The coefficient of viscosity of the liquid is",
+      "options": [
+        "\\(10^{-4} \\text{ Pa s}\\)",
+        "\\(10^{-3} \\text{ Pa s}\\)",
+        "\\(10^{-1} \\text{ Pa s}\\)",
+        "\\(10 \\text{ Pa s}\\)"
+      ],
+      "correctAnswer": "\\(10^{-4} \\text{ Pa s}\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461468",
+      "question": "Water rises to a height ‘h’ in a capillary tube of radius ‘r’ when immersed in water. The mass of the water in the capillary tube is ‘m’. The mass of water that will rise in another capillary tube of radius \\(\\frac{r}{2}\\) when immersed in water is",
+      "options": [
+        "m",
+        "2m",
+        "\\(\\frac{m}{2}\\)",
+        "4m"
+      ],
+      "correctAnswer": "\\(\\frac{m}{2}\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461469",
+      "question": "The continuity equation for compressible fluid is (the quantities carry their usual meaning)",
+      "options": [
+        "\\(\\rho_2 A_1 V_1 = \\rho_1 A_2 V_2\\)",
+        "\\(A_1 V_1 = A_2 V_2\\)",
+        "\\(\\rho_1 V_1 = \\rho_2 V_2\\)",
+        "\\(\\rho_1 A_1 V_1 = \\rho_2 A_2 V_2\\)"
+      ],
+      "correctAnswer": "\\(\\rho_1 A_1 V_1 = \\rho_2 A_2 V_2\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461470",
+      "question": "A block of mass ‘m’ is moving on frictionless horizontal surface with velocity 5m/sec, compresses an ideal spring by 2m and comes to rest. The ratio of mass ‘m’ of the block to spring constant ‘k’ is.",
+      "options": [
+        "25: 4",
+        "4 : 25",
+        "1 : 25",
+        "4 : 1"
+      ],
+      "correctAnswer": "4 : 25",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461471",
+      "question": "Match the following: a) Adiabatic Process i) no volume change takes place. b) Isochoric Process ii) no pressure change takes place. c) Isobaric Process iii) no temperature change takes place. d) Isothermal Process iv) no heat transfer takes place.",
+      "options": [
+        "a-iv, b-iii, c-ii, d-i",
+        "a-i, b-iv, c-ii, d-iii",
+        "a-iv, b-i, c-ii, d-iii",
+        "a-i, b-ii, c-iii, d-iv"
+      ],
+      "correctAnswer": "a-iv, b-i, c-ii, d-iii",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461472",
+      "question": "First law of thermodynamics represents conservation of",
+      "options": [
+        "Pressure",
+        "Momentum",
+        "Entropy",
+        "Energy"
+      ],
+      "correctAnswer": "Energy",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461473",
+      "question": "The displacement of a particle executing Simple Harmonic Motion is given by \\(x=a \\cos \\frac{\\pi t}{2}\\) where ‘x’ and ‘a’ are in metre. The distance covered by it in the time interval between t = 0 sec to t = 4 sec in metre is",
+      "options": [
+        "0",
+        "2a",
+        "4a",
+        "3a"
+      ],
+      "correctAnswer": "4a",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461474",
+      "question": "A simple pendulum 80 cm long oscillates with amplitude of 0.02 m. The acceleration at the ends of its path is (take \\(g = 10 \\text{ ms}^{-2}\\))",
+      "options": [
+        "\\(0 \\text{ ms}^{-2}\\)",
+        "\\(0.25 \\text{ ms}^{-2}\\)",
+        "\\(2.5 \\text{ ms}^{-2}\\)",
+        "\\(10 \\text{ ms}^{-2}\\)"
+      ],
+      "correctAnswer": "\\(0.25 \\text{ ms}^{-2}\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461475",
+      "question": "A particle undergoing Simple Harmonic Motion passes through the mean position with a velocity of \\(2 \\text{ ms}^{-1}\\). The velocity of the particle at the point where its displacement is half the amplitude is",
+      "options": [
+        "\\(2\\sqrt{3} \\text{ ms}^{-1}\\)",
+        "\\(4\\sqrt{3} \\text{ ms}^{-1}\\)",
+        "\\(0 \\text{ ms}^{-1}\\)",
+        "\\(\\sqrt{3} \\text{ ms}^{-1}\\)"
+      ],
+      "correctAnswer": "\\(\\sqrt{3} \\text{ ms}^{-1}\\)",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461476",
+      "question": "A boy standing between two parallel walls fires a gun. He hears the first echo after 4 sec and next after 6 sec. The distance between the two walls is (take velocity of sound in air as 340 m/s)",
+      "options": [
+        "680 m",
+        "1020 m",
+        "1700 m",
+        "340 m"
+      ],
+      "correctAnswer": "1700 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461477",
+      "question": "In a good acoustic hall the distribution of sound should be",
+      "options": [
+        "Gradually increasing",
+        "Exponentially increasing",
+        "Randomly change",
+        "Uniform"
+      ],
+      "correctAnswer": "Uniform",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461478",
+      "question": "Two magnetic poles placed 5cm apart in air attract each other with a force of 100 dyne. How far from each other should they be placed to get the force of attraction 25 dyne?",
+      "options": [
+        "10 cm",
+        "4 cm",
+        "2 cm",
+        "6 cm"
+      ],
+      "correctAnswer": "10 cm",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461479",
+      "question": "In a Wheatstone bridge, the four arms have each a resistance of 50 ohm. The galvanometer current is:",
+      "options": [
+        "0.05 A",
+        "0.5 A",
+        "0 A",
+        "5 A"
+      ],
+      "correctAnswer": "0 A",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461480",
+      "question": "In a transformer, the number of turns in secondary and primary coils are 50 and 200 respectively. If 4 A of current is flowing through the primary, the current flowing through the secondary coil is",
+      "options": [
+        "1 A",
+        "2 A",
+        "3 A",
+        "4 A"
+      ],
+      "correctAnswer": "1 A",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461481",
+      "question": "Electrons are ejected when a photosensitive material is illuminated by violet light but not by blue light. Would electrons come out from the same material when it is illuminated by red light?",
+      "options": [
+        "Yes",
+        "No",
+        "Yes, if intensity of incident light is increased",
+        "Yes, if material is illuminated for a long time"
+      ],
+      "correctAnswer": "No",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461482",
+      "question": "Optical fibres are electrically",
+      "options": [
+        "Conductors",
+        "Superconductors",
+        "Semiconductors",
+        "Insulators"
+      ],
+      "correctAnswer": "Insulators",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461483",
+      "question": "In superconducting state the material behaves as",
+      "options": [
+        "Perfect diamagnetic",
+        "Weak diamagnetic",
+        "Perfect ferromagnetic",
+        "Weak paramagnetic"
+      ],
+      "correctAnswer": "Perfect diamagnetic",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461484",
+      "question": "In semiconductors at room temperature",
+      "options": [
+        "The conduction band is completely empty",
+        "The valence band is partially empty and the conduction band is partially filled",
+        "The valence band is completely filled and the conduction band is partially filled",
+        "The valence band is completely filled"
+      ],
+      "correctAnswer": "The valence band is partially empty and the conduction band is partially filled",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461485",
+      "question": "Semiconductors are doped",
+      "options": [
+        "To increase the resistivity",
+        "To get the desired level of conductivity",
+        "To reduce the conductivity",
+        "To get the positive temperature coefficient of resistance"
+      ],
+      "correctAnswer": "To get the desired level of conductivity",
+      "topic": "Physics"
+    },
+    {
+      "id": "7614461486",
+      "question": "Number of neutrons present in an element with atomic number 19 and mass number 39.",
+      "options": [
+        "19",
+        "58",
+        "39",
+        "20"
+      ],
+      "correctAnswer": "20",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461487",
+      "question": "The dative bond is present in",
+      "options": [
+        "Ammonia",
+        "Ammonium ion",
+        "Urea",
+        "Nitrogen"
+      ],
+      "correctAnswer": "Ammonium ion",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461488",
+      "question": "Which of the following molecules contains coordinate covalent bond?",
+      "options": [
+        "\\(NH_2^-\\",
+        "\\(N_2H_4\\)",
+        "\\(H_3O^+\\)",
+        "\\(H_2O_2\\)"
+      ],
+      "correctAnswer": "\\(H_3O^+\\)",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461489",
+      "question": "Concentrated hydrochloric acid contains 37% (by mass) HCL. The density of its solution is 1.18 g/mL. The molarity of HCl is",
+      "options": [
+        "12.0",
+        "16.03",
+        "6.0",
+        "1.20"
+      ],
+      "correctAnswer": "12.0",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461490",
+      "question": "A colloidal solution can be purified by the method of",
+      "options": [
+        "Peptization",
+        "Dialysis",
+        "Mechanical Dispersion",
+        "Oxidation"
+      ],
+      "correctAnswer": "Dialysis",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461491",
+      "question": "The compound that does not act as a Lewis acid.",
+      "options": [
+        "\\(BaCl_2\\)",
+        "\\(AlCl_3\\)",
+        "\\(BF_3\\)",
+        "\\(BeCl_2\\)"
+      ],
+      "correctAnswer": "\\(BaCl_2\\)",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461492",
+      "question": "The pH value of 0.001 M NaOH solution is",
+      "options": [
+        "3",
+        "9",
+        "7",
+        "11"
+      ],
+      "correctAnswer": "11",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461493",
+      "question": "The solvent not used for green synthesis is",
+      "options": [
+        "Aniline",
+        "Room temperature ionic liquids",
+        "Bio solvents",
+        "Supercritical fluids"
+      ],
+      "correctAnswer": "Aniline",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461494",
+      "question": "Which of these days is celebrated in the form of World Environment Day all around the world?",
+      "options": [
+        "July 5th",
+        "June 10th",
+        "October 20th",
+        "June 5th"
+      ],
+      "correctAnswer": "June 5th",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461495",
+      "question": "Extra pure water can be obtained by using",
+      "options": [
+        "Lime – Soda process",
+        "Permutit process",
+        "Ion-exchange process",
+        "Electrodialysis process"
+      ],
+      "correctAnswer": "Electrodialysis process",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461496",
+      "question": "Sterilization of water can be done by using",
+      "options": [
+        "Ozone",
+        "Oxygen",
+        "Caustic Potash",
+        "Hydrogen peroxide"
+      ],
+      "correctAnswer": "Ozone",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461497",
+      "question": "The product formed at cathode when Pt electrodes are used in the electrolysis of Fused NaCl.",
+      "options": [
+        "Cl₂",
+        "NaOH",
+        "HCl",
+        "Na"
+      ],
+      "correctAnswer": "Na",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461498",
+      "question": "What is the electrochemical equivalent (z) of copper, when 0.3950 g of copper is deposited by a current of 0.5 amperes in 40 minutes.",
+      "options": [
+        "0.0003292 g",
+        "0.003950 g",
+        "0.0001646 g",
+        "0.00164 g"
+      ],
+      "correctAnswer": "0.0003292 g",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461499",
+      "question": "Extraction of zinc from zinc blende is achieved by",
+      "options": [
+        "Electrolytic reduction",
+        "Roasting followed by reduction with carbon",
+        "Roasting followed by reduction with another metal",
+        "Roasting followed by self-reduction"
+      ],
+      "correctAnswer": "Roasting followed by reduction with carbon",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461500",
+      "question": "In blast furnace iron oxide is reduced by",
+      "options": [
+        "Silica",
+        "Carbon monoxide",
+        "Carbon",
+        "Limestone"
+      ],
+      "correctAnswer": "Carbon monoxide",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461501",
+      "question": "During electrochemical corrosion in acidic environment",
+      "options": [
+        "Oxygen evolution occurs",
+        "Hydrogen evolution takes place",
+        "Oxygen absorption occurs",
+        "Hydrogen absorption takes place"
+      ],
+      "correctAnswer": "Hydrogen evolution takes place",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461502",
+      "question": "The process of cementation of iron with zinc powder is known as",
+      "options": [
+        "Sheradising",
+        "Galvanizing",
+        "Zincing",
+        "Tinning"
+      ],
+      "correctAnswer": "Sheradising",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461503",
+      "question": "Bakelite is manufactured by the reaction between",
+      "options": [
+        "Urea and formaldehyde",
+        "Phthalic acid and ethylene glycol",
+        "Ethylene glycol and formaldehyde",
+        "Phenol and formaldehyde"
+      ],
+      "correctAnswer": "Phenol and formaldehyde",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461504",
+      "question": "Which of the following is an elastomer",
+      "options": [
+        "Polystyrene",
+        "Buna-S rubber",
+        "Melamine",
+        "Dacron"
+      ],
+      "correctAnswer": "Buna-S rubber",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461505",
+      "question": "A good fuel has",
+      "options": [
+        "Moderate ignition temperature and high calorific value",
+        "High ignition temperature and high calorific value",
+        "Low ignition temperature and low calorific value",
+        "Low ignition temperature and high calorific value"
+      ],
+      "correctAnswer": "Moderate ignition temperature and high calorific value",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461506",
+      "question": "The best example of splash lubrication is",
+      "options": [
+        "Wick feed lubricator",
+        "Ring lubricator",
+        "Grease Gun",
+        "Pump lubricator"
+      ],
+      "correctAnswer": "Ring lubricator",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461507",
+      "question": "Saturated calomel electrode standard reduction potential value in Volts is",
+      "options": [
+        "0",
+        "0.6990",
+        "– 0. 242",
+        "+ 0.242"
+      ],
+      "correctAnswer": "+ 0.242",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461508",
+      "question": "For the following cell reaction, E° for the cell is \\(Zn_{(s)} + 2Fe^{3+}_{(aq)} \\rightleftharpoons 2Fe^{2+}_{(aq)} + Zn^{2+}_{(aq)}\\) (Standard Reduction potentials of Zn and Fe electrodes are – 0.76V and + 0.77V respectively)",
+      "options": [
+        "1.53 V",
+        "0.01 V",
+        "– 1.53 V",
+        "0.78 V"
+      ],
+      "correctAnswer": "1.53 V",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461509",
+      "question": "The gas that is responsible for Bhopal gas tragedy is",
+      "options": [
+        "Methyl isocyanate",
+        "Methyl chloroformate",
+        "Methyl isopropyl ether",
+        "Methyl isobutyrate"
+      ],
+      "correctAnswer": "Methyl isocyanate",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461510",
+      "question": "Which of the following gases is largely responsible for acid – rain?",
+      "options": [
+        "CO and CO₂",
+        "NO and NO₂",
+        "SO₂ and NO₂",
+        "N₂ and O₂"
+      ],
+      "correctAnswer": "SO₂ and NO₂",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "7614461511",
+      "question": "For the circuit shown below, the voltage across the current source is",
+      "options": [
+        "20 V",
+        "Zero",
+        "50 V",
+        "60 V"
+      ],
+      "correctAnswer": "60 V",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461512",
+      "question": "For a given voltage, three heating coils of each resistance of 600 Ω will produce maximum heat in a given time when connected",
+      "options": [
+        "All in series",
+        "Two parallel resistances in series with the other",
+        "All in parallel",
+        "Two series resistances in parallel with the other"
+      ],
+      "correctAnswer": "All in parallel",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461513",
+      "question": "The coefficient of coupling between two magnetically coupled coils depend upon A) Number of turns of the coils B) Self inductance of the coils C) Mutual inductance of the coils",
+      "options": [
+        "A and B only",
+        "B and C only",
+        "C and A only",
+        "A,B and C"
+      ],
+      "correctAnswer": "A,B and C",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461514",
+      "question": "A parallel plate capacitor with fixed dimensions has air as dielectric. It is connected to supply of potential difference of “V” volts and then isolated. The air is then replaced by a dielectric medium of relative permittivity “X”.",
+      "options": [
+        "The capacitance decreases by “X” times",
+        "The capacitance increases by “X” times",
+        "The capacitance remains constant",
+        "The charge decreases by “X” times"
+      ],
+      "correctAnswer": "The capacitance increases by “X” times",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461515",
+      "question": "A wire is bent into a plane to form of square of “2a” m side and a current of “I” amps is passed through it. The field strength set up at the centre of the square is ______ AT / m",
+      "options": [
+        "\\(\\frac{I}{2a}\\)",
+        "\\(\\frac{\\sqrt{2}I}{\\pi a}\\)",
+        "\\(\\frac{I}{2\\pi a}\\)",
+        "\\(\\frac{I}{\\sqrt{2}\\pi a}\\)"
+      ],
+      "correctAnswer": "\\(\\frac{\\sqrt{2}I}{\\pi a}\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461516",
+      "question": "The capacitance between the terminals X and Y of the figure shown below is",
+      "options": [
+        "C",
+        "2C",
+        "\\(\\frac{C}{2}\\)",
+        "4C"
+      ],
+      "correctAnswer": "C",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461517",
+      "question": "Which of the following batteries are used in communication equipment and portable radar sets in military applications?",
+      "options": [
+        "Lead –Acid battery",
+        "Nickel - Iron battery",
+        "Silver– Zinc battery",
+        "Nickel- Cadmium battery"
+      ],
+      "correctAnswer": "Silver– Zinc battery",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461518",
+      "question": "The full scale deflection of an ammeter having a resistance RA is 5 mA and a shunt resistance RSH is connected to increase the range to 100 mA. What is the ratio of RA to RSH?",
+      "options": [
+        "1/19",
+        "19",
+        "21",
+        "1/21"
+      ],
+      "correctAnswer": "19",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461519",
+      "question": "Instrumental error arise mainly due to",
+      "options": [
+        "Gross errors",
+        "Random errors",
+        "Residual errors",
+        "Loading effects"
+      ],
+      "correctAnswer": "Loading effects",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461520",
+      "question": "If ‘M’ is mutual inductance between current coil & pressure coil of an Electrodynamometer wattmeter and ‘θ’ is deflection angle, then the scale is linear when",
+      "options": [
+        "dM/dθ is proportional to θ",
+        "M is constant with θ",
+        "dM/dθ is constant with θ",
+        "dθ/dM is proportional to θ"
+      ],
+      "correctAnswer": "dM/dθ is constant with θ",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461521",
+      "question": "The type of transducer which requires external power is",
+      "options": [
+        "Photovoltaic",
+        "Thermistor",
+        "Piezoelectric pickup",
+        "Thermocouple"
+      ],
+      "correctAnswer": "Thermistor",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461522",
+      "question": "If the resolution of a digital voltmeter on 10 V range is 0.001 V, then 1.346 V on 1 V range will be displayed as",
+      "options": [
+        "1.3460 V",
+        "1.346 V",
+        "1.34 V",
+        "1.35 V"
+      ],
+      "correctAnswer": "1.3460 V",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461523",
+      "question": "In a digital frequency meter, a Schmitt trigger is connected between______ and ______ for frequency triggering",
+      "options": [
+        "Gate control Flip-flop and Main gate",
+        "Amplifier and Main gate",
+        "Crystal oscillator and Amplifier",
+        "Time-base selector and Gate control Flip-flop"
+      ],
+      "correctAnswer": "Amplifier and Main gate",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461524",
+      "question": "For a progressive simplex lap winding of a commutator machine with “ C” coils and “ P” poles, the commutator pitch is",
+      "options": [
+        "+ 1",
+        "-1",
+        "\\(\\frac{2(C+1)}{P}\\)",
+        "\\(\\frac{2(C-1)}{P}\\)"
+      ],
+      "correctAnswer": "+ 1",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461525",
+      "question": "The approximate resistance of the load which takes a power of 5 KW from a d.c shunt generator whose external characteristic is given by the equation; \\(V=250-0.5I_L\\)",
+      "options": [
+        "12 Ω",
+        "24 Ω",
+        "8 Ω",
+        "15 Ω"
+      ],
+      "correctAnswer": "12 Ω",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461526",
+      "question": "A six pole, 12 KW, 240 V D.C machine is wave connected. If the same machine is lap connected, the voltage and current ratings of the machine are respectively",
+      "options": [
+        "240 V and 50 A",
+        "80 V and 150 A",
+        "120 V and 100 A",
+        "60 V and 200 A"
+      ],
+      "correctAnswer": "80 V and 150 A",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461527",
+      "question": "Which type of D.C Generator is preferred in welding purposes?",
+      "options": [
+        "Series Generator",
+        "Shunt Generator",
+        "Cumulatively Compound Generator",
+        "Differentially Compound Generator"
+      ],
+      "correctAnswer": "Differentially Compound Generator",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461528",
+      "question": "Which of the following D.C motors is a constant speed motor?",
+      "options": [
+        "Shunt motor only",
+        "Series motor only",
+        "Differentially compound motor only",
+        "Both series motor and shunt motor"
+      ],
+      "correctAnswer": "Shunt motor only",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461529",
+      "question": "A 250 V, 100 A, 500 r.p.m, d.c shunt motor has armature resistance of 0.1 Ω. The speed of the motor when the field flux is reduced to 75% of its normal value with an armature current of 50 A is",
+      "options": [
+        "510 r.p.m",
+        "680 r.p.m",
+        "653 r.p.m",
+        "720 r.p.m"
+      ],
+      "correctAnswer": "680 r.p.m",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461530",
+      "question": "Match the following: Type of Test A) Field Test B) Hopkinson’s Test C) Swinburne’s Test D)Brake test. Machines P) Small rating machines Q) D.C shunt machine R) Identical D.C series motors S) Identical D.C shunt machines",
+      "options": [
+        "A --- R ; B --- P; C ---- Q; D --- S",
+        "A --- S ; B --- R; C ---- Q; D --- P",
+        "A --- P ; B ---S; C --- R; D --- Q",
+        "A --- R ; B ---S; C --- Q; D --- P"
+      ],
+      "correctAnswer": "A --- R ; B ---S; C --- Q; D --- P",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461531",
+      "question": "A commutator in a D.C motor converts",
+      "options": [
+        "A.C to D.C",
+        "D.C to D.C",
+        "D.C to A.C",
+        "A.C to Half Wave Rectification"
+      ],
+      "correctAnswer": "D.C to A.C",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461532",
+      "question": "The periodic waveform in which the peak value and rms value are same is",
+      "options": [
+        "Square waveform",
+        "Triangular waveform",
+        "Saw-tooth waveform",
+        "Sinusoidal waveform"
+      ],
+      "correctAnswer": "Square waveform",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461533",
+      "question": "Which one of the following statements is correct on the following two sinusoidal waves? \\(v_A = 222\\sin(\\omega t - 36^0)\\) and \\(v_B = 220\\sin(\\omega t - 54^0)\\)",
+      "options": [
+        "Magnitude of both the waveforms are same",
+        "Voltage \\(v_A\\) leads voltage \\(v_B\\) by 18°",
+        "Voltage \\(v_A\\) lags voltage \\(v_B\\) by 18°",
+        "Frequencies of both the waveforms are not same"
+      ],
+      "correctAnswer": "Voltage \\(v_A\\) leads voltage \\(v_B\\) by 18°",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461534",
+      "question": "A 1-ϕ, 100 V series R-L-C circuit consists of R = 1 Ω, L = 1 H, C = 1 μF. At resonant frequency,",
+      "options": [
+        "\\(V_L = V_R\\)",
+        "\\(V_C < V_R\\)",
+        "\\(V_L > V_R\\)",
+        "\\(V_C = V_R\\)"
+      ],
+      "correctAnswer": "\\(V_L > V_R\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461535",
+      "question": "The frequency of a 3-ϕ, 50 Hz system is increased by 10%. Then its time period is",
+      "options": [
+        "Decreased by 10%",
+        "Equal to 22 ms",
+        "Equal to 18 ms",
+        "Decreased by 9.1%"
+      ],
+      "correctAnswer": "Decreased by 9.1%",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461536",
+      "question": "The equations of power (P) and phase angle (ϕ) measured by two-wattmeter method of a 3-ϕ system are valid respectively for",
+      "options": [
+        "Balanced & unbalanced loads for P & balanced loads for ϕ",
+        "Balanced & unbalanced loads for both P and ϕ",
+        "Balanced loads for P & unbalanced loads for ϕ",
+        "Unbalanced loads for P & unbalanced loads for ϕ"
+      ],
+      "correctAnswer": "Balanced & unbalanced loads for P & balanced loads for ϕ",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461537",
+      "question": "Two impedances Z₁ and Z₂ are in parallel. If Z₁ = (3 + j4) Ω and the equivalent impedance Zeq = [(25/6) + j0] Ω, find Z₂.",
+      "options": [
+        "(4 – j3) Ω",
+        "(3 – j4) Ω",
+        "(3 + j4) Ω",
+        "(4 + j3) Ω"
+      ],
+      "correctAnswer": "(3 – j4) Ω",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461538",
+      "question": "A single phase transformer has leakage impedance of (3+j4) Ω. At what power factor, Zero voltage regulation occurs ?",
+      "options": [
+        "0.6 leading",
+        "0.6 lagging",
+        "0.8 leading",
+        "0.8 lagging"
+      ],
+      "correctAnswer": "0.8 leading",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461539",
+      "question": "The supply voltage to a transformer is kept constant, but its frequency is decreased. Then the magnetising current",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains constant",
+        "First decrease and then increases"
+      ],
+      "correctAnswer": "Increases",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461540",
+      "question": "Which of the following 3-phase transformer connection is used for large L.V transformers?",
+      "options": [
+        "Star – Delta",
+        "Delta – Star",
+        "Star- Star",
+        "Delta -Delta"
+      ],
+      "correctAnswer": "Delta -Delta",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461541",
+      "question": "The % weight of conductor in Auto transformer to a 2- winding transformer with the transformation ratio of 0.9 is",
+      "options": [
+        "90 %",
+        "10 %",
+        "100 %",
+        "50 %"
+      ],
+      "correctAnswer": "10 %",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461542",
+      "question": "The percentage change in eddy current losses in a single phase transformer when the supply voltage and frequency are both increased by 10 % is",
+      "options": [
+        "10 %",
+        "20 %",
+        "21 %",
+        "5 %"
+      ],
+      "correctAnswer": "21 %",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461543",
+      "question": "When a Z.P.F lagging load is connected on a 3- phase alternator, the",
+      "options": [
+        "Armature m.m.f lags field m.m.f by 180⁰",
+        "Armature m.m.f lags field m.m.f by 90⁰",
+        "Armature m.m.f lags field m.m.f by 45⁰",
+        "Armature m.m.f is in phase with field m.m.f"
+      ],
+      "correctAnswer": "Armature m.m.f lags field m.m.f by 180⁰",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461544",
+      "question": "A 3-phase Synchronous Generator connected to an Infinite bus is operating at leading power factor for constant power. If the field excitation is increased , the operating p.f will",
+      "options": [
+        "Change from leading to lagging",
+        "Remains constant",
+        "Change from leading to zero power factor leading",
+        "Change from leading to zero power factor lagging"
+      ],
+      "correctAnswer": "Change from leading to lagging",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461545",
+      "question": "Pick up the correct statement from the following with respect to synchronous generators",
+      "options": [
+        "Cylindrical rotor type synchronous generators are used in low speed turbo generators",
+        "Salient pole type synchronous generators are used in high speed hydro electric generators",
+        "In cylindrical rotor type synchronous generators, the rotors are of large length and small diameters",
+        "In salient pole type synchronous generators, the rotors are of large length and large diameters"
+      ],
+      "correctAnswer": "In cylindrical rotor type synchronous generators, the rotors are of large length and small diameters",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461546",
+      "question": "The maximum power (Pm) developed by a synchronous motor with fixed voltage (V), armature resistance (Ra), synchronous impedance (Zs) and variable excitation, is proportional to",
+      "options": [
+        "\\(P_m \\propto \\frac{V^2}{Z_s}\\)",
+        "\\(P_m \\propto \\frac{V^2 R_a}{Z_s^2}\\)",
+        "\\(P_m \\propto \\frac{V^2}{R_a}\\)",
+        "\\(P_m \\propto \\frac{V^2 Z_s}{R_a^2}\\)"
+      ],
+      "correctAnswer": "\\(P_m \\propto \\frac{V^2}{R_a}\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461547",
+      "question": "A 3-ϕ synchronous motor operates at u.p.f. The locus of minimum armature current from no-load to full-load as a function of field current is nearly",
+      "options": [
+        "Parallel to y-axis",
+        "Linear with negative slope",
+        "Parallel to x-axis",
+        "Linear with positive slope"
+      ],
+      "correctAnswer": "Linear with positive slope",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461548",
+      "question": "If a reduced 3-ϕ supply is fed to synchronous motor using auto-transformer by short circuiting the main field winding then the",
+      "options": [
+        "Motor will start",
+        "Motor will not start",
+        "Motor will run into synchronism",
+        "Field winding will burn"
+      ],
+      "correctAnswer": "Motor will start",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461549",
+      "question": "The resultant rotating magnetic flux when 3-ϕ supply is fed to 2-pole stator winding is \\(\\phi_{3r}\\). If 2-ϕ supply is fed, then the resultant rotating magnetic flux \\(\\phi_{2r}\\) is",
+      "options": [
+        "\\(\\phi_{2r} = \\frac{3\\phi_{3r}}{2}\\)",
+        "\\(\\phi_{2r} = \\frac{2\\phi_{3r}}{3}\\)",
+        "\\(\\phi_{2r} = \\phi_{3r}\\)",
+        "\\(\\phi_{2r} = \\frac{\\sqrt{3}\\phi_{3r}}{2}\\)"
+      ],
+      "correctAnswer": "\\(\\phi_{2r} = \\frac{2\\phi_{3r}}{3}\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461550",
+      "question": "In the non-operating region of torque (T) - slip (s) characteristics of 3-ϕ induction motor, the approximate relation is",
+      "options": [
+        "\\(T \\propto s\\)",
+        "\\(T \\propto \\frac{1}{s^2}\\)",
+        "\\(T \\propto \\frac{1}{s}\\)",
+        "\\(T \\propto s^2\\)"
+      ],
+      "correctAnswer": "\\(T \\propto \\frac{1}{s}\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461551",
+      "question": "The maximum torque of a 3-ϕ, 440 V, 50 Hz induction motor is 150 Nm. At the same air-gap flux, if the supply is changed to 3-ϕ, 396 V, 45 Hz, then maximum torque is",
+      "options": [
+        "121.5 Nm",
+        "166.7 Nm",
+        "135 Nm",
+        "150 Nm"
+      ],
+      "correctAnswer": "150 Nm",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461552",
+      "question": "The Output line in circle diagram of 3-ϕ induction motor is ______ the Torque line and ______ to it.",
+      "options": [
+        "above ……………….not parallel",
+        "below ……………….not parallel",
+        "above ………………parallel",
+        "below ………………parallel"
+      ],
+      "correctAnswer": "above ……………….not parallel",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461553",
+      "question": "If \\(T_F\\) and \\(T_B\\) are respective forward and backward torques of 1-ϕ induction motor, then",
+      "options": [
+        "\\(T_F > T_B\\) under starting condition",
+        "\\(T_F > T_B\\) under running condition",
+        "\\(T_F = T_B\\) under running condition",
+        "\\(T_F < T_B\\) under starting condition"
+      ],
+      "correctAnswer": "\\(T_F > T_B\\) under running condition",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461554",
+      "question": "Which of the following motors has highest speed under normal running operation?",
+      "options": [
+        "Capacitor start & capacitor run induction motor",
+        "Stepper motor",
+        "Universal motor",
+        "Shaded pole motor"
+      ],
+      "correctAnswer": "Universal motor",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461555",
+      "question": "Which of the following generating stations has minimum operating cost?",
+      "options": [
+        "Nuclear",
+        "Coal",
+        "Diesel",
+        "Hydro electric"
+      ],
+      "correctAnswer": "Hydro electric",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461556",
+      "question": "In the thermal generating station which of the following device raises the temperature of steam above boiling point of water?",
+      "options": [
+        "Super heater",
+        "Feed water pump",
+        "Condenser",
+        "Turbine"
+      ],
+      "correctAnswer": "Super heater",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461557",
+      "question": "Match the following with respect to nuclear power station. (A) Moderator i) Cadmium (B) Control rods j) Sodium Metal (C) Coolant k) Graphite l) Uranium",
+      "options": [
+        "A-l ; B-i ; C-j",
+        "A-k ; B-i ; C-j",
+        "A-k ; B-j ; C-i",
+        "A-l ; B-j ; C-i"
+      ],
+      "correctAnswer": "A-k ; B-i ; C-j",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461558",
+      "question": "For which of the following conditions, a hydro-electric generating station will produce more electrical energy in kwh? Q=Volume of water; H=Water head; and η=Overall efficiency",
+      "options": [
+        "Q=5x10⁶ m³ ; H=100m ; η=0.75",
+        "Q=10x10⁶ m³ ; H=50m ; η=0.8",
+        "Q=15x10⁶ m³ ; H=50m ; η=0.9",
+        "Q=20x10⁶ m³ ; H=25m ; η=0.9"
+      ],
+      "correctAnswer": "Q=15x10⁶ m³ ; H=50m ; η=0.9",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461559",
+      "question": "Which of the following statements are correct? Statement (I): The tendency of the flow of current to only the outermost part of the conductor at high frequency is called skin effect Statement(II): Due to skin effect, the apparent resistance of the conductor decreases",
+      "options": [
+        "Only statement (I) is correct",
+        "Only statement (II) is correct",
+        "Both statements are correct",
+        "Both statements are wrong"
+      ],
+      "correctAnswer": "Only statement (I) is correct",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461560",
+      "question": "The capacitance between two conductors of a single phase line is 20μF/m. The Capacitance to neutral (or) ground of each phase conductor is",
+      "options": [
+        "20 μF/m",
+        "10 μF/m",
+        "40 μF/m",
+        "5 μF/m"
+      ],
+      "correctAnswer": "40 μF/m",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461561",
+      "question": "An overhead transmission line has a span of 100m, weight of the conductor is 0.5 kg/m, breaking tension 1000 kg, the factor of safety is 2. The sag is",
+      "options": [
+        "2.5 m",
+        "5 m",
+        "0.625 m",
+        "1.25 m"
+      ],
+      "correctAnswer": "1.25 m",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461562",
+      "question": "Which of the following type of insulators are used for transmission lines at river crossings?",
+      "options": [
+        "Pin",
+        "Suspension",
+        "Strain",
+        "Disc"
+      ],
+      "correctAnswer": "Strain",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461563",
+      "question": "For a D.C distributor fed from both ends and uniformly loaded, the maximum voltage drop in terms of the total current (I) and the total resistance (R) of the distributor is",
+      "options": [
+        "\\(\\frac{IR}{8}\\)",
+        "\\(\\frac{IR}{4}\\)",
+        "\\(\\frac{IR}{2}\\)",
+        "IR"
+      ],
+      "correctAnswer": "\\(\\frac{IR}{8}\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461564",
+      "question": "Match the following with respect to substation equipment: Equipment L) Station Transformer M) Wave trap N) Isolator O) ON load tap changer. Purpose P) Disconnector switch on no-load Q) Voltage control R) Communication S) Auxiliary power supply T) Disconnector switch on any-load",
+      "options": [
+        "L-S ; M-R ; N-T ; O-Q",
+        "L-S ; M-R ; N-P ; O-Q",
+        "L-Q ; M-T ; N-P ; O-S",
+        "L-Q ; M-T ; N-S ; O-P"
+      ],
+      "correctAnswer": "L-S ; M-R ; N-P ; O-Q",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461565",
+      "question": "Which of the following type of dc link has two conductors of opposite polarity of same magnitude?",
+      "options": [
+        "Monoplar only",
+        "Bipolar only",
+        "Homopolar only",
+        "Bipolar and homopolar"
+      ],
+      "correctAnswer": "Bipolar only",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461566",
+      "question": "If the length of the cable is tripled, its capacitance is",
+      "options": [
+        "Increased to 1.732 times",
+        "Remains constant",
+        "Tripled",
+        "Reduced by three times"
+      ],
+      "correctAnswer": "Tripled",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461567",
+      "question": "A solar cell is basically",
+      "options": [
+        "A voltage source, controlled by flux of radiation",
+        "A Current source, controlled by flux of radiation",
+        "An uncontrolled current source",
+        "An uncontrolled voltage source"
+      ],
+      "correctAnswer": "A Current source, controlled by flux of radiation",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461568",
+      "question": "The range of wind speed suitable for wind power generation is",
+      "options": [
+        "1 to 4 m/sec",
+        "26 to 50 m/sec",
+        "5 to 25 m/sec",
+        "51 to 75 m/sec"
+      ],
+      "correctAnswer": "5 to 25 m/sec",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461569",
+      "question": "In a circuit breaker arrangement with current transformer, relay coil and trip coil, which of the following is correct when fault is occurred?",
+      "options": [
+        "Trip coil is energized by CT primary and fixed contacts open circuits the moving contacts of CB",
+        "Trip coil is energized by CT primary and moving contacts open circuits the fixed contacts of CB",
+        "Trip coil is energized by CT secondary and moving contacts open circuits the fixed contacts of CB",
+        "Trip coil is energized by CT secondary and fixed contacts open circuits the moving contacts of CB"
+      ],
+      "correctAnswer": "Trip coil is energized by CT secondary and moving contacts open circuits the fixed contacts of CB",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461570",
+      "question": "A fuse wire of circular cross-section has a radius of 0.8 mm. The wire blows off at a current of 16 A. Calculate diameter of the wire that will blow off at a current of 2 A.",
+      "options": [
+        "0.2 mm",
+        "0.1 mm",
+        "0.4 mm",
+        "0.8 mm"
+      ],
+      "correctAnswer": "0.2 mm",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461571",
+      "question": "Plug setting multiplier is defined as the ratio of",
+      "options": [
+        "Fault current in relay coil to Rated secondary current of CT",
+        "Pick-up current to Fault current in relay coil",
+        "Fault current in relay coil to Pick-up current",
+        "Rated secondary current of CT to Fault current in relay coil"
+      ],
+      "correctAnswer": "Fault current in relay coil to Pick-up current",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461572",
+      "question": "In a Distance relay, the",
+      "options": [
+        "Torque produced by current element is opposed by the torque produced by voltage element.",
+        "Relay will operate when the ratio V/I is more than a predetermined value",
+        "Relay will operate when the ratio V/I is equal to a predetermined value",
+        "The torque produced by current element is aided by the torque produced by voltage element."
+      ],
+      "correctAnswer": "Torque produced by current element is opposed by the torque produced by voltage element.",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461573",
+      "question": "Match the following relays with their symbolic representations",
+      "options": [
+        "(a) – (i); (b) – (iii); (c) – (ii)",
+        "(a) – (iii); (b) – (i); (c) – (ii)",
+        "(a) – (iii); (b) – (ii); (c) – (i)",
+        "(a) – (i); (b) – (ii); (c) – (iii)"
+      ],
+      "correctAnswer": "(a) – (iii); (b) – (i); (c) – (ii)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461574",
+      "question": "A lightning arrestor consists of a",
+      "options": [
+        "Spark-gap in parallel with a linear resistor",
+        "Spark-gap in parallel with a non-linear resistor",
+        "Spark-gap in series with a linear resistor",
+        "Spark-gap in series with a non-linear resistor"
+      ],
+      "correctAnswer": "Spark-gap in series with a non-linear resistor",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461575",
+      "question": "The great majority of faults on the power system are of",
+      "options": [
+        "Symmetrical nature with 3-phase line fault",
+        "Unsymmetrical nature with Single line-to-ground fault",
+        "Unsymmetrical nature with Line-to-line fault",
+        "Unsymmetrical nature with Double line-to-ground fault"
+      ],
+      "correctAnswer": "Unsymmetrical nature with Single line-to-ground fault",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461576",
+      "question": "The current rating of miniature Circuit Breaker (M.C.B) used for \\(1\\frac{1}{2}\\) Ton Air conditioner at 230 V, 50Hz, A.C single phase is",
+      "options": [
+        "10 / 15 Amps",
+        "10 Amps",
+        "15 / 20 Amps",
+        "15 / 30 Amps"
+      ],
+      "correctAnswer": "15 / 20 Amps",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461577",
+      "question": "Size of earth continuity conductor in S.W.G of copper wire used for electrical apparatus of 10 KVA rating is",
+      "options": [
+        "8",
+        "6",
+        "5",
+        "3"
+      ],
+      "correctAnswer": "8",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461578",
+      "question": "Which of the following lamp gives the same colour as that of neon lamp at the time of starting?",
+      "options": [
+        "Mercury Vapour lamp",
+        "Fluorescent lamp",
+        "Sodium Vapour lamp",
+        "Tungsten filament lamp"
+      ],
+      "correctAnswer": "Sodium Vapour lamp",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461579",
+      "question": "Which of the following welding method is used for welding of stainless steel and moist non- ferrous metals?",
+      "options": [
+        "Atomic hydrogen arc welding",
+        "Carbon arc welding",
+        "Helium arc welding",
+        "Argon arc welding"
+      ],
+      "correctAnswer": "Atomic hydrogen arc welding",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461580",
+      "question": "The dielectric heating is used to heat (H) a slab of insulating material by an a.c supply of “V” volts and frequency of “f” Hz. If the supply voltage is doubled and frequency is halved, the heat produced will be____ time(s) of the earlier heat",
+      "options": [
+        "One",
+        "Two",
+        "Four",
+        "Eight"
+      ],
+      "correctAnswer": "Two",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461581",
+      "question": "A train has schedule speed of 30 Kmph over a level track, distance between stations being 1 km. For station stopping time is 20 seconds, braking retardation of 3 kmphps and maximum speed 25 % greater than average speed, the acceleration required to run the service is",
+      "options": [
+        "1.2 kmphps",
+        "2.4 kmphps",
+        "3.6 kmphps",
+        "1.8 kmphps"
+      ],
+      "correctAnswer": "1.8 kmphps",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461582",
+      "question": "Assertion (A): Specific energy consumption for suburban service is less compared to main line service Reason (R): The distance between the stops in suburban service is less compared to main line service",
+      "options": [
+        "A is true, but R is false",
+        "A is false, but R is true",
+        "Both A and R are false",
+        "Both A and R are true"
+      ],
+      "correctAnswer": "A is false, but R is true",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461583",
+      "question": "A Bipolar junction transistor can act as (switch)",
+      "options": [
+        "Open circuit in saturation region and closed circuit in cut-off region",
+        "Open circuit in cut-off region and closed circuit in saturation region",
+        "Open circuit in active region and closed circuit in saturation region",
+        "Open circuit in active region and closed circuit in cut-off region"
+      ],
+      "correctAnswer": "Open circuit in cut-off region and closed circuit in saturation region",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461584",
+      "question": "The correct circuit symbol of IGBT is",
+      "options": [
+        "[Image of IGBT symbol with arrow on emitter pointing in]",
+        "[Image of IGBT symbol with arrow on collector pointing out]",
+        "[Image of IGBT symbol with arrow on collector pointing in]",
+        "[Image of IGBT symbol with arrow on emitter pointing out]"
+      ],
+      "correctAnswer": "[Image of IGBT symbol with arrow on emitter pointing in]",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461585",
+      "question": "A 1-ϕ voltage of \\(v=70.7\\sin\\omega t\\) is fed to a bridge rectifier. The peak inverse voltage (|PIV|) across each diode is",
+      "options": [
+        "141.4 V",
+        "200 V",
+        "100 V",
+        "70.7 V"
+      ],
+      "correctAnswer": "70.7 V",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461586",
+      "question": "In a half-wave rectifier with a resistive load, the diode is replaced by a zener diode and its reverse breakdown voltage is more than input ac peak voltage of Vm. The average output voltage is",
+      "options": [
+        "\\(V_m / 2\\pi\\)",
+        "Zero",
+        "\\(V_m / \\pi\\)",
+        "\\(2V_m / \\pi\\)"
+      ],
+      "correctAnswer": "\\(V_m / \\pi\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461587",
+      "question": "An OpAmp is used as Schmitt trigger. If input signal is an arbitrary periodic waveform, then the output signal is a",
+      "options": [
+        "Saw-tooth wave",
+        "Square wave",
+        "Sinusoidal wave",
+        "Triangular wave"
+      ],
+      "correctAnswer": "Square wave",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461588",
+      "question": "If current gains of two transistors of Darlington pair are \\(\\beta_1=50\\) and \\(\\beta_2=100\\), then the overall current gain \\(\\beta\\) is",
+      "options": [
+        "5150",
+        "150",
+        "2500",
+        "4850"
+      ],
+      "correctAnswer": "5150",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461589",
+      "question": "A shunt voltage type of feedback configuration provides",
+      "options": [
+        "Low input resistance and high output resistance",
+        "Low input resistance and low output resistance",
+        "High input resistance and high output resistance",
+        "High input resistance and low output resistance"
+      ],
+      "correctAnswer": "Low input resistance and low output resistance",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461590",
+      "question": "In sinusoidal oscillators using amplifiers of gain A with positive feedback factor \\(\\beta\\), the value of the loop gain \\(A\\beta\\) is given by:",
+      "options": [
+        "\\(A\\beta = 0\\)",
+        "\\(0 < A\\beta < 0.5\\)",
+        "\\(0.5 < A\\beta < 1.0\\)",
+        "\\(A\\beta = 1\\)"
+      ],
+      "correctAnswer": "\\(A\\beta = 1\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461591",
+      "question": "The class of transistor amplifier in which transistor is biased near centre of its load line is",
+      "options": [
+        "Class A",
+        "Class B",
+        "Class AB",
+        "Class C"
+      ],
+      "correctAnswer": "Class A",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461592",
+      "question": "In common collector configuration of transistor amplifier",
+      "options": [
+        "Voltage is amplified",
+        "Power is amplified",
+        "Current is amplified",
+        "Energy is amplified"
+      ],
+      "correctAnswer": "Current is amplified",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461593",
+      "question": "The minimized logic gate for the given logic circuit is",
+      "options": [
+        "NOR Gate",
+        "OR Gate",
+        "AND Gate",
+        "No logic gate"
+      ],
+      "correctAnswer": "No logic gate",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461594",
+      "question": "Represent the decimal number 27 in Excess: 3 code",
+      "options": [
+        "11011",
+        "0110010 0110111",
+        "11110",
+        "10110"
+      ],
+      "correctAnswer": "11110",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461595",
+      "question": "A five-bit binary counter starts in the 00000 state. The counter state after 182 pulses is",
+      "options": [
+        "10110",
+        "10111",
+        "10001",
+        "10101"
+      ],
+      "correctAnswer": "10110",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461596",
+      "question": "A Full Adder can be constructed by using",
+      "options": [
+        "2 AND gates, 3 XOR gates and an OR gate",
+        "3 AND gates, 2 XOR gates and 2 OR gates",
+        "3 AND gates, 2 XOR gates and an OR gate",
+        "2 AND gates, 2 XOR gates and 3 OR gates"
+      ],
+      "correctAnswer": "3 AND gates, 2 XOR gates and an OR gate",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461597",
+      "question": "Identify the correct statement from the following:",
+      "options": [
+        "A J-K flip flop is in the toggle condition when J = 1; K = 0",
+        "A J-K flip flop is in the toggle condition when J = 1; K = 1",
+        "Full adder is a sequential circuit",
+        "An Astable multivibrator has one stable state"
+      ],
+      "correctAnswer": "A J-K flip flop is in the toggle condition when J = 1; K = 1",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461598",
+      "question": "A 10 bit D / A converter has a step size of 10 mV. The full scale output voltage is",
+      "options": [
+        "10.24 V",
+        "10.23 V",
+        "10.25 V",
+        "10.3 V"
+      ],
+      "correctAnswer": "10.23 V",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461599",
+      "question": "Express the following Boolean function into SOP (Sum Of Products) in terms of min terms: Y(A, B, C) = AB + AC + B\\(\\bar{C}\\)",
+      "options": [
+        "\\(A\\bar{B}C + AB\\bar{C} + ABC + \\bar{A}B\\bar{C}\\)",
+        "\\(ABC + A\\bar{B}C + AB\\bar{C} + \\bar{A}B\\bar{C}\\)",
+        "\\(\\bar{A}BC + AB\\bar{C} + ABC + \\bar{A}B\\bar{C}\\)",
+        "\\(\\bar{A}B\\bar{C} + AB\\bar{C} + \\bar{A}BC + ABC\\)"
+      ],
+      "correctAnswer": "\\(A\\bar{B}C + AB\\bar{C} + ABC + \\bar{A}B\\bar{C}\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461600",
+      "question": "If \\(V_{BO}\\) is forward break-over voltage and \\(V_{BR}\\) is reverse break-down voltage of an SCR when it is triggered by a gate pulse, then",
+      "options": [
+        "\\(V_{BO} < V_{BR}\\)",
+        "\\(V_{BR} < V_{BO}\\)",
+        "\\(V_{BO} = 0\\)",
+        "\\(V_{BO} = V_{BR}\\)"
+      ],
+      "correctAnswer": "\\(V_{BO} < V_{BR}\\)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461601",
+      "question": "Three terminals of Uni-junction transistor (UJT) are",
+      "options": [
+        "Collector₁, Collector₂ & Base",
+        "Emitter, Base₁ & Base₂",
+        "Emitter₁, Emitter₂ & Base",
+        "Collector, Base₁ & Base₂"
+      ],
+      "correctAnswer": "Emitter, Base₁ & Base₂",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461602",
+      "question": "If frequency of Type A chopper is 2500 Hz. and non-conducting period is 100 μs, find the duty ratio ‘α’.",
+      "options": [
+        "α = 0.75",
+        "α = 0.33",
+        "α = 0.25",
+        "α = 0.50"
+      ],
+      "correctAnswer": "α = 0.75",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461603",
+      "question": "A current source inverter (CSI) has a",
+      "options": [
+        "High input impedance and output current is effected by load",
+        "Low input impedance and output current is not effected by load",
+        "Low input impedance and output current is effected by load",
+        "High input impedance and output current is not effected by load"
+      ],
+      "correctAnswer": "High input impedance and output current is not effected by load",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461604",
+      "question": "A 1-ϕ ac voltage controller using a Triac is suitable for",
+      "options": [
+        "High power applications with highly resistive load",
+        "High power applications with highly inductive load",
+        "Low power applications with highly resistive load",
+        "Low power applications with highly inductive load"
+      ],
+      "correctAnswer": "Low power applications with highly resistive load",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461605",
+      "question": "If \\(I_D, V_{GS}\\) and \\(V_{DS}\\) represent collector current, gate to source voltage and drain to source voltage respectively of MOSFET, then the transfer characteristic is a plot of",
+      "options": [
+        "\\(I_D\\) (y-axis) versus \\(V_{GS}\\) (x-axis)",
+        "\\(V_{DS}\\) (y-axis) versus \\(I_D\\) (x-axis)",
+        "\\(I_D\\) (y-axis) versus \\(V_{DS}\\) (x-axis)",
+        "\\(V_{GS}\\) (y-axis) versus \\(I_D\\) (x-axis)"
+      ],
+      "correctAnswer": "\\(I_D\\) (y-axis) versus \\(V_{GS}\\) (x-axis)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461606",
+      "question": "What is PLC?",
+      "options": [
+        "Programmable logic computer",
+        "Personal logic computer",
+        "Programmable logic controller",
+        "Personal logic Controller"
+      ],
+      "correctAnswer": "Programmable logic controller",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461607",
+      "question": "Every Input and Output Devices connected to discrete I/O module is addressed to a specific ______ in the PLCs memory.",
+      "options": [
+        "Bit",
+        "Instruction",
+        "Term",
+        "Word"
+      ],
+      "correctAnswer": "Bit",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461608",
+      "question": "Two basic types of analog input modules of PLCs are ____ and ____",
+      "options": [
+        "Physical and Remote",
+        "Voltage sensing and current sensing",
+        "Distributed and lumped",
+        "Linear sensing and nonlinear sensing"
+      ],
+      "correctAnswer": "Voltage sensing and current sensing",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461609",
+      "question": "In which of the following configurations of drive trains of Hybrid electric vehicle, mechanical coupler is not used?",
+      "options": [
+        "Series-parallel configuration",
+        "Complex configuration",
+        "Series configuration",
+        "Parallel configuration"
+      ],
+      "correctAnswer": "Series configuration",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "7614461610",
+      "question": "Normally, Internal combustion engine is not used in",
+      "options": [
+        "Electric vehicle",
+        "Hybrid electric vehicle",
+        "Plug-in Hybrid electric vehicle",
+        "Complex Hybrid electric vehicle"
+      ],
+      "correctAnswer": "Electric vehicle",
+      "topic": "Electrical and Electronics Engineering"
+    }
+  ]

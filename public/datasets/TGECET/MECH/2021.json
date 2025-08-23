@@ -1,12 +1,2402 @@
 [
-  { "id": 1, "question": "Which machining process produces the best surface finish? (MECH 2021)", "options": ["Turning", "Milling", "Grinding", "Lapping"], "correctAnswer": "Lapping", "topic": "Advanced Manufacturing Technology" },
-  { "id": 2, "question": "The main alloying element in stainless steel is: (MECH 2021)", "options": ["Chromium", "Carbon", "Manganese", "Silicon"], "correctAnswer": "Chromium", "topic": "Engineering Materials" },
-  { "id": 3, "question": "The G-codes in CNC programming are used for: (MECH 2021)", "options": ["Preparatory functions (motion commands)", "Miscellaneous functions (spindle on/off)", "Tool selection", "Feed rate control"], "correctAnswer": "Preparatory functions (motion commands)", "topic": "CAD/CAM" },
-  { "id": 4, "question": "An adiabatic process is one in which: (MECH 2021)", "options": ["There is no heat transfer", "Temperature is constant", "Pressure is constant", "Volume is constant"], "correctAnswer": "There is no heat transfer", "topic": "Thermodynamics" },
-  { "id": 5, "question": "The refrigerant used in domestic refrigerators is typically: (MECH 2021)", "options": ["Ammonia", "R-134a", "Carbon Dioxide", "Sulphur Dioxide"], "correctAnswer": "R-134a", "topic": "Refrigeration and Air Conditioning" },
-  { "id": 6, "question": "Pascal's Law states that pressure in a fluid at rest is: (MECH 2021)", "options": ["The same in all directions", "Highest at the bottom", "Lowest at the top", "Dependent on the fluid's velocity"], "correctAnswer": "The same in all directions", "topic": "Fluid Mechanics" },
-  { "id": 7, "question": "The ratio of lateral strain to longitudinal strain is called: (MECH 2021)", "options": ["Young's Modulus", "Shear Modulus", "Bulk Modulus", "Poisson's Ratio"], "correctAnswer": "Poisson's Ratio", "topic": "Solid Mechanics" },
-  { "id": 8, "question": "A cotter joint is used to connect two rods which are in: (MECH 2021)", "options": ["Tension only", "Compression only", "Shear only", "Tension or Compression"], "correctAnswer": "Tension or Compression", "topic": "Design of Machine Elements" },
-  { "id": 9, "question": "The process of improving the hardness and toughness of steel by heating and then cooling is called: (MECH 2021)", "options": ["Annealing", "Normalizing", "Hardening", "Tempering"], "correctAnswer": "Hardening", "topic": "Manufacturing Technology" },
-  { "id": 10, "question": "A four-stroke engine completes its cycle in: (MECH 2021)", "options": ["One revolution of the crankshaft", "Two revolutions of the crankshaft", "Three revolutions of the crankshaft", "Four revolutions of the crankshaft"], "correctAnswer": "Two revolutions of the crankshaft", "topic": "Heat Power Engineering" }
-]
+    {
+      "id": "80089422856",
+      "question": "If (\\begin{pmatrix} x+y & z+y \\\\ z-y & x-2y \\end{pmatrix} = \\begin{pmatrix} 12 & 9 \\\\ -1 & -3 \\end{pmatrix}}) then (\\begin{pmatrix} x & y \\\\ z & 2z \\end{pmatrix}) =",
+      "options": [
+        "(\\begin{pmatrix} 5 & 7 \\\\ 4 & 8 \\end{pmatrix})",
+        "(\\begin{pmatrix} 7 & 5 \\\\ 4 & 8 \\end{pmatrix})",
+        "(\\begin{pmatrix} 6 & 7 \\\\ 3 & 6 \\end{pmatrix})",
+        "(\\begin{pmatrix} 3 & 6 \\\\ 6 & 7 \\end{pmatrix})"
+      ],
+      "correctAnswer": "(\\begin{pmatrix} 7 & 5 \\\\ 4 & 8 \\end{pmatrix})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422857",
+      "question": "If (A = \\begin{pmatrix} x & y & z \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{pmatrix}) and (B = \\begin{pmatrix} x & 2 & 3 \\\\ y & 5 & 6 \\\\ z & 8 & 9 \\end{pmatrix}}), then",
+      "options": [
+        "(det(A-B) = detA - detB)",
+        "(detA - detB = 1)",
+        "(detA + detB = x + y + z)",
+        "(det A = -detB)"
+      ],
+      "correctAnswer": "(det(A-B) = detA - detB)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422858",
+      "question": "If (\\begin{vmatrix} -a^2 & ab & ac \\\\ ab & -b^2 & bc \\\\ ac & bc & -c^2 \\end{vmatrix} = Ka^2b^2c^2), then K =",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "2"
+      ],
+      "correctAnswer": "4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422859",
+      "question": "If the system of equations (x+2y-3z=0, 3x-2y+z=0, kx-14y+15z=0) has nonzero solutions, then (k^2 - 2k - 3) =",
+      "options": [
+        "12",
+        "18",
+        "5",
+        "0"
+      ],
+      "correctAnswer": "12",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422860",
+      "question": "The partial fractions of (\\frac{x^2+5x+10}{x+2} - \\frac{2+6x+x^2}{x+3}) =",
+      "options": [
+        "(\\frac{4}{x+2} + \\frac{7}{x+3})",
+        "(\\frac{4}{x+2} - \\frac{7}{x+3})",
+        "(\\frac{7}{x+2} - \\frac{4}{x+3})",
+        "(\\frac{4}{x+3} + \\frac{7}{x+2})"
+      ],
+      "correctAnswer": "(\\frac{4}{x+2} + \\frac{7}{x+3})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422861",
+      "question": "If (4^{\\log_2 3} + 9^{\\log_2 4} = 5^{\\log_x 83}), then",
+      "options": [
+        "(x^3 + 4x^2 - 4x - 5 = 0)",
+        "(x^3 - 4x^2 - 4x + 5 = 0)",
+        "(x^3 - 4x^2 + 4x - 5 = 0)",
+        "(x^3 - 4x^2 - 4x - 5 = 0)"
+      ],
+      "correctAnswer": "(x^3 - 4x^2 - 4x - 5 = 0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422862",
+      "question": "(\\log_e x + \\log_e (1+x) = 0 \\implies x=)",
+      "options": [
+        "(\\frac{-1-\\sqrt{5}}{2})",
+        "1",
+        "(\\frac{-1+\\sqrt{5}}{2})",
+        "-2"
+      ],
+      "correctAnswer": "(\\frac{-1+\\sqrt{5}}{2})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422863",
+      "question": "If (\\alpha + \\beta = \\frac{\\pi}{2}) and (\\beta + \\gamma = \\alpha), then (\\tan \\alpha) =",
+      "options": [
+        "(2(\\tan \\beta + \\tan \\gamma))",
+        "(\\tan \\beta + \\tan \\gamma)",
+        "(2 \\tan \\beta + \\tan \\gamma)",
+        "(\\tan \\beta + 2\\tan \\gamma)"
+      ],
+      "correctAnswer": "(\\tan \\beta + 2\\tan \\gamma)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422864",
+      "question": "In a triangle ABC, (a^2 \\cos^2 B + b^2 \\cos 2A + 2ab \\cos(A-B)) =",
+      "options": [
+        "(a^2)",
+        "(b^2)",
+        "(c^2)",
+        "((a+b+c)^2)"
+      ],
+      "correctAnswer": "(c^2)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422865",
+      "question": "(f(x) = \\sin^{-1}x + \\cos^{-1}x + \\tan^{-1}\\frac{1}{x} + \\tan^{-1}x) then the area (in square units) bounded by y=f(x), y-axis and the line 2y=(x+1) is",
+      "options": [
+        "(\\frac{\\pi}{4})",
+        "(\\frac{\\pi}{2})",
+        "(\\frac{\\pi}{3})",
+        "(\\pi)"
+      ],
+      "correctAnswer": "(\\frac{\\pi}{4})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422866",
+      "question": "((\\frac{1+i}{\\sqrt{2}})^8 + (\\frac{1-i}{\\sqrt{2}})^8) =",
+      "options": [
+        "16",
+        "8",
+        "4",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422867",
+      "question": "The maximum value of |z| satisfying the equation (\\frac{1}{12}(z+\\bar{z})^2=1-\\frac{1}{3}|z|^2) is",
+      "options": [
+        "(\\sqrt{2})",
+        "(\\sqrt{3})",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "(\\sqrt{3})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422868",
+      "question": "If n is a positive integer, then ((-i)^{4n+3}) =",
+      "options": [
+        "(2i)",
+        "(-i)",
+        "(i)",
+        "(4i)"
+      ],
+      "correctAnswer": "(i)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422869",
+      "question": "The equation of the line passing through the point (4, 0) and having intercepts in the ratio a: b is",
+      "options": [
+        "(bx + ay = a)",
+        "(bx + ay = 4b)",
+        "(bx + ay = b)",
+        "(bx + ay = 4a)"
+      ],
+      "correctAnswer": "(bx + ay = 4b)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422870",
+      "question": "If (L_1, L_2) are the angular bisectors of the acute and obtuse angles between the lines (x-y+2=0) and (7x+y-1=0) then angle between (L_1) and (L_2) is",
+      "options": [
+        "(\\pi)",
+        "(\\frac{\\pi}{3})",
+        "(\\frac{\\pi}{6})",
+        "(\\frac{\\pi}{2})"
+      ],
+      "correctAnswer": "(\\frac{\\pi}{2})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422871",
+      "question": "The equation of the line parallel to the line x-2y+5=0 and passing through the point P(3,5) is",
+      "options": [
+        "(x-2y+15=0)",
+        "(x-2y+6=0)",
+        "(x-2y+8=0)",
+        "(x-2y+7=0)"
+      ],
+      "correctAnswer": "(x-2y+7=0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422872",
+      "question": "The equation of the circle which touches the coordinate axes is",
+      "options": [
+        "(x^2 + y^2 + 2gx + 2fy + c = 0)",
+        "(x^2 + y^2 + 2ax + 2ay + a^2 = 0)",
+        "(x^2 + y^2 \\pm 2gx \\pm 2fy + c = 0)",
+        "(x^2 + y^2 \\pm 2ax \\pm 2ay + a^2 = 0)"
+      ],
+      "correctAnswer": "(x^2 + y^2 \\pm 2ax \\pm 2ay + a^2 = 0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422873",
+      "question": "If (\\alpha, \\beta (\\alpha > \\beta)) are roots of the quadratic equation (4x^2 - 4x - 3 = 0), then the equation of the circle with center ((\\frac{\\alpha+\\beta}{\\alpha-\\beta}, \\frac{\\alpha-\\beta}{\\alpha+\\beta})) and radius (\\alpha^2-\\beta^2) is",
+      "options": [
+        "(9x^2+9y^2+60x+48y+128=0)",
+        "(9x^2+9y^2+60x-48y-128=0)",
+        "(9x^2+9y^2-60x-48y+128=0)",
+        "(9x^2+9y^2-60x+48y-128=0)"
+      ],
+      "correctAnswer": "(9x^2+9y^2+60x+48y+128=0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422874",
+      "question": "The equation of the tangent to the circle (x^2 + y^2 = 25) at the point P(3,4) is",
+      "options": [
+        "(4x+3y-25=0)",
+        "(4x+3y+25=0)",
+        "(3x+4y-25=0)",
+        "(3x+4y-5=0)"
+      ],
+      "correctAnswer": "(3x+4y-25=0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422875",
+      "question": "For (x^2-9 \\neq 0), if (y = \\log (\\frac{e^{x/2}(x-3)}{x+3})^{3/5}), then (\\frac{dy}{dx}) at x=1 is equal to",
+      "options": [
+        "(\\frac{7}{10})",
+        "(\\frac{2}{5})",
+        "(\\frac{-1}{10})",
+        "(\\frac{-1}{5})"
+      ],
+      "correctAnswer": "(\\frac{-1}{10})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422876",
+      "question": "For (f(x) = |x^2 - 3x + 2|), then sum of the values of (\\frac{df}{dx}) at x=1.5 and at x=2.5 is",
+      "options": [
+        "2",
+        "6",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422877",
+      "question": "(\\frac{d^2}{dx^2}(\\frac{1}{5x+3})) =",
+      "options": [
+        "(\\frac{25}{(5x+3)^3})",
+        "(\\frac{50}{(5x+3)^3})",
+        "(\\frac{125}{(5x+3)^3})",
+        "(\\frac{100}{(5x+3)^3})"
+      ],
+      "correctAnswer": "(\\frac{50}{(5x+3)^3})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422878",
+      "question": "The curve represented by (x=t^5-5t^3-20t+7), (y=4t^3-3t^2-18t+3) is increasing for all t in the interval",
+      "options": [
+        "(-2,2)",
+        "(-1,\\frac{3}{2})",
+        "(\\frac{3}{2},2)",
+        "(-1,2)"
+      ],
+      "correctAnswer": "(-1,\\frac{3}{2})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422879",
+      "question": "The equation of tangent to the curve (y^2 = 4x+5) at P(-1,1) is",
+      "options": [
+        "(2x-y+9=0)",
+        "(2x+y-7=0)",
+        "(2x-y+3=0)",
+        "(x+2y+9=0)"
+      ],
+      "correctAnswer": "(2x-y+3=0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422880",
+      "question": "If at (x=a), the maximum value of ((X^5)(16-X)^{11}) is (K). Then (\\frac{K}{a}) =",
+      "options": [
+        "(11^11 5^4)",
+        "(6^4 10^{11})",
+        "(11^4 5^{11})",
+        "(10^4 6^{11})"
+      ],
+      "correctAnswer": "(11^11 5^4)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422881",
+      "question": "If (u(x,y) = \\sin^{-1}(\\frac{x+y}{\\sqrt{x}+\\sqrt{y}})), then (x\\frac{\\partial u}{\\partial x} + y\\frac{\\partial u}{\\partial y}) =",
+      "options": [
+        "(\\frac{1}{8} \\tan u)",
+        "(\\frac{1}{2} \\tan u)",
+        "(\\frac{1}{4} \\tan u)",
+        "(\\frac{1}{3} \\tan u)"
+      ],
+      "correctAnswer": "(\\frac{1}{2} \\tan u)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422882",
+      "question": "If (\\int \\frac{2x^{18}+7x^{12}}{(x^7+x^4+1)^3} dx = \\frac{x^p}{m(x^7+x^4+1)^n} + c), then (2p-(m+n)^2) =",
+      "options": [
+        "0",
+        "3",
+        "12",
+        "20"
+      ],
+      "correctAnswer": "12",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422883",
+      "question": "If (\\int \\frac{\\sin 2x}{\\sin 5x \\sin 3x} dx = A \\log \\sin 3x + B \\log \\sin 5x + C), then (A+B) =",
+      "options": [
+        "2/7",
+        "1/3",
+        "-2/5",
+        "2/15"
+      ],
+      "correctAnswer": "2/15",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422884",
+      "question": "(\\int \\frac{1}{9x^2-4} dx) =",
+      "options": [
+        "(\\frac{1}{3} \\log|\\frac{3x-2}{3x+2}|)",
+        "(\\frac{1}{12} \\log|\\frac{x-2}{x+2}|)",
+        "(\\frac{1}{12} \\log|\\frac{3x-2}{3x+2}|)",
+        "(\\frac{1}{2} \\log|\\frac{3x-2}{3x+2}|)"
+      ],
+      "correctAnswer": "(\\frac{1}{12} \\log|\\frac{3x-2}{3x+2}|)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422885",
+      "question": "If (I_1 = \\int_0^1 a^x dx), (I_2 = \\int_0^1 a^{x^2} dx) and (I_3 = \\int_0^1 a^{x^3} dx) then",
+      "options": [
+        "(I_1 > I_2 > I_3), when (a>1)",
+        "(I_1 < I_2 < I_3), when (a>1)",
+        "(I_1 > I_2 > I_3), when (0<a<1)",
+        "(I_1 < I_2 < I_3), for any (a>0)"
+      ],
+      "correctAnswer": "(I_1 > I_2 > I_3), when (a>1)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422886",
+      "question": "The area (in square units) bounded by the curve (x^2=4y), the x-axis and the line (x=2) is",
+      "options": [
+        "(\\frac{1}{3})",
+        "(\\frac{2}{3})",
+        "(\\frac{5}{3})",
+        "(\\frac{7}{3})"
+      ],
+      "correctAnswer": "(\\frac{2}{3})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422887",
+      "question": "(\\lim_{n \\to \\infty}(\\frac{1}{n} + \\frac{1}{n+1} + \\frac{1}{n+2} + \\dots + \\frac{1}{2n})) =",
+      "options": [
+        "0",
+        "1/2",
+        "(e^2)",
+        "(\\log 2)"
+      ],
+      "correctAnswer": "(\\log 2)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422888",
+      "question": "Using Trapezoidal rule with (h=\\frac{1}{2}), the value of the integral (\\int_0^1 \\frac{1}{3+2x} dx) =",
+      "options": [
+        "(\\frac{11}{120})",
+        "(\\frac{21}{120})",
+        "(\\frac{31}{120})",
+        "(\\frac{41}{120})"
+      ],
+      "correctAnswer": "(\\frac{31}{120})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422889",
+      "question": "The differential equation representing the family of curves (y^2 = 2c(x+\\sqrt{c})) (c is a positive arbitrary Constant) is of",
+      "options": [
+        "degree 1",
+        "order 2",
+        "degree 3",
+        "degree 2"
+      ],
+      "correctAnswer": "degree 3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422890",
+      "question": "The general solution of (\\frac{dy}{dx} = \\frac{x^2+4x-9}{x+2}) is",
+      "options": [
+        "(y = \\frac{(x+2)^2}{2} - 13\\log|x+2|+c)",
+        "(y = (x+2)^2 - 5\\log|x+2|+c)",
+        "(y = \\frac{x^2}{2} + 2x + 13\\log|x+2|+c)",
+        "(y = \\frac{x^2}{2} + 2x - 5\\log|x+2|+c)"
+      ],
+      "correctAnswer": "(y = \\frac{(x+2)^2}{2} - 13\\log|x+2|+c)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422891",
+      "question": "The general solution of the differential equation (\\frac{dy}{dx} = xe^{\\frac{-y}{x}} + y) is",
+      "options": [
+        "(e^{\\frac{x}{y}} = \\log{|cx|})",
+        "(e^{\\frac{y}{x}} = \\log{|cx|})",
+        "(e^{\\frac{x^2}{y}} = \\log{|cx|})",
+        "(e^{\\frac{y}{x^2}} = \\log{|cx|})"
+      ],
+      "correctAnswer": "(e^{\\frac{y}{x}} = \\log{|cx|})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422892",
+      "question": "(\\frac{dy}{dx} = \\frac{f(x,y)}{g(x,y)}) is a homogeneous differential equation. The substitution (y = Vx) (V is a function of x) reduces the given differential equation to (\\frac{dv}{dx} = \\frac{1}{x} G(V)). Then G(V)=",
+      "options": [
+        "(\\frac{f(1,V)}{g(1,V)} - V)",
+        "(\\frac{f(V)}{g(V)} - V)",
+        "(\\frac{f(1,V)}{g(1,V)} + V)",
+        "(\\frac{f(V)}{g(V)} + V)"
+      ],
+      "correctAnswer": "(\\frac{f(1,V)}{g(1,V)} - V)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422893",
+      "question": "The general solution of the differential equation (\\frac{d^2y}{dx^2} + 2\\frac{dy}{dx} + y = e^{-x} \\sin x) is",
+      "options": [
+        "(y = e^{-x}(A+Bx) + \\frac{e^{-x}\\sin x}{5})",
+        "(y = e^{-x}(A+Bx-\\sin x))",
+        "(y = e^{-x}(A+Bx) + \\frac{e^{-x}\\cos x}{5})",
+        "(y = e^{-x}(A+B\\log x) + \\frac{e^{-x}\\sin x}{5})"
+      ],
+      "correctAnswer": "(y = e^{-x}(A+Bx-\\sin x))",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422894",
+      "question": "The particular integral of the differential equation (\\frac{d^2y}{dx^2} - 2\\frac{dy}{dx} + y = xe^x \\sin x) is",
+      "options": [
+        "(-e^x(x \\sin x + 2 \\cos x))",
+        "(-e^x(x \\cos x + 2 \\sin x))",
+        "(e^x(x \\sin x - 2 \\cos x))",
+        "(e^x(x \\cos x - 2 \\sin x))"
+      ],
+      "correctAnswer": "(-e^x(x \\sin x + 2 \\cos x))",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422895",
+      "question": "If (L\\{t^2e^{-2t}\\} = f(s)), then (f(4)) =",
+      "options": [
+        "(\\frac{1}{54})",
+        "(\\frac{1}{27})",
+        "(\\frac{1}{108})",
+        "(\\frac{1}{216})"
+      ],
+      "correctAnswer": "(\\frac{1}{108})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422896",
+      "question": "If (L\\{f(t)\\} = \\frac{9s^2-12s+15}{(s-1)^3}), then (L\\{f(\\frac{t}{3})\\}) =",
+      "options": [
+        "(9[\\frac{27s^2-36s+5}{(3s-1)^3}])",
+        "(9[\\frac{s^2-4s+15}{(s-3)^3}])",
+        "(3[\\frac{27s^2-12s+5}{(3s-1)^3}])",
+        "(27[\\frac{s^2-4s+15}{(s-3)^3}])"
+      ],
+      "correctAnswer": "(9[\\frac{27s^2-36s+5}{(3s-1)^3}])",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422897",
+      "question": "(\\int_0^\\infty \\frac{e^{-5t}-e^{-8t}}{t}dt) =",
+      "options": [
+        "(\\log(\\frac{4}{5}))",
+        "(\\log(\\frac{2}{5}))",
+        "(\\log(\\frac{8}{5}))",
+        "(\\log(\\frac{7}{5}))"
+      ],
+      "correctAnswer": "(\\log(\\frac{8}{5}))",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422898",
+      "question": "If (F_a(s) = L(\\sin at)) then, (L(\\frac{e^{-3t}\\sin 2t}{t})) =",
+      "options": [
+        "(\\int_s^\\infty F_2(s)ds)",
+        "(\\int_s^\\infty F_2(s+3)ds)",
+        "(\\int_s^\\infty \\frac{d}{ds}(F_2(s))ds)",
+        "(-\\int_s^\\infty \\frac{d}{ds}(F_2(s-3))ds)"
+      ],
+      "correctAnswer": "(\\int_s^\\infty F_2(s+3)ds)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422899",
+      "question": "(L^{-1}\\{\\frac{6s}{s^2+2s-8}\\} ) =",
+      "options": [
+        "(4e^{-4t}+2e^{-2t})",
+        "(4e^{4t}+2e^{-2t})",
+        "(4e^{4t}+2e^{2t})",
+        "(4e^{-4t}+2e^{2t})"
+      ],
+      "correctAnswer": "(4e^{-4t}+2e^{2t})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422900",
+      "question": "If (L(f(t)) = F(s)), (L(g(t)) = G(s)), then (L^{-1}(F(s)G(s)))=",
+      "options": [
+        "(\\int_0^t f(p)g(t-p)dp)",
+        "(\\int_0^t f(t)g(t)dt)",
+        "(\\int_0^t f(t)g(t-p)dp)",
+        "(\\int_0^t f(tp)g(t/p)dt)"
+      ],
+      "correctAnswer": "(\\int_0^t f(p)g(t-p)dp)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422901",
+      "question": "If (y=y(t)) satisfies the differential equation (\\frac{d^2y}{dt^2} - 2\\frac{dy}{dt} + y = e^t) together with the conditions (y(0)=2, \\frac{dy}{dt}=-1) at (t=0), then (y(t))=",
+      "options": [
+        "(e^t(2+3t+\\frac{1}{2}t^2))",
+        "(e^t(2-3t+\\frac{1}{2}t^2))",
+        "(e^t(2-3t-\\frac{1}{2}t^2))",
+        "(e^t(2+3t-\\frac{1}{2}t^2))"
+      ],
+      "correctAnswer": "(e^t(2-3t+\\frac{1}{2}t^2))",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422902",
+      "question": "(\\int_0^{2\\pi} \\cos^2(5x) dx) =",
+      "options": [
+        "(\\pi)",
+        "(2\\pi)",
+        "(4\\pi)",
+        "(5\\pi)"
+      ],
+      "correctAnswer": "(\\pi)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422903",
+      "question": "The Fourier series of (x-x^2) in the interval ((-\\pi,\\pi)) contains",
+      "options": [
+        "only sine terms",
+        "onlycosine terms",
+        "both sine and cosine terms",
+        "negative integral powers of x, but not trigonometric functions"
+      ],
+      "correctAnswer": "both sine and cosine terms",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422904",
+      "question": "If (f(x)=x^2) when (0 \\le x \\le 4), (f(x+4)=f(x)), (\\forall x) and its Fourier series is (f(x) = \\sum_{n=0}^\\infty (a_n \\cos\\frac{n\\pi x}{2} + b_n \\sin\\frac{n\\pi x}{2})), then (b_1) =",
+      "options": [
+        "(\\frac{128}{\\pi^2} + \\frac{192}{\\pi^4})",
+        "(\\frac{128}{\\pi^2})",
+        "(\\frac{192}{\\pi^2} + \\frac{192}{\\pi^4})",
+        "(\\frac{96}{\\pi^3} - \\frac{128}{\\pi})"
+      ],
+      "correctAnswer": "(\\frac{96}{\\pi^3} - \\frac{128}{\\pi})",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422905",
+      "question": "If (f(x) = \\begin{cases} 0, & -2 \\le x < 0 \\\\ 1, & 0 \\le x < 2 \\end{cases}), (f(x+4) = f(x) \\forall x) and (f(x) = \\sum_{n=0}^\\infty (a_n \\cos \\frac{n\\pi x}{2} + b_n \\sin \\frac{n\\pi x}{2})), then (b_2) =",
+      "options": [
+        "(\\frac{2}{\\pi})",
+        "(\\frac{4}{\\pi})",
+        "(\\frac{3}{\\pi})",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "80089422906",
+      "question": "The Dimensional formula of potential energy is",
+      "options": [
+        "(MLT^{-2})",
+        "(ML^2T^{-2})",
+        "(ML^2T^{-1})",
+        "(MLT^{-1})"
+      ],
+      "correctAnswer": "(ML^2T^{-2})",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422907",
+      "question": "In case of a superconductor one among the following statement is incorrect",
+      "options": [
+        "The resistivity drops suddenly at transition temperature",
+        "It is paramagnetic below it's transition temperature",
+        "Specific heat discontinuity occurs at transition temperature",
+        "It will become diamagnetic below it's transition temperature"
+      ],
+      "correctAnswer": "It is paramagnetic below it's transition temperature",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422908",
+      "question": "Which of the following statements is true regarding super conductors?",
+      "options": [
+        "super conductors have high resistance at very low temperatures, and they are perfectly diamagnetic",
+        "super conductors have high resistance at very low temperatures, and they are perfectly ferro magnetic",
+        "super conductors have zero resistance at very low temperatures, and they are perfectly para magnetic",
+        "super conductors have zero resistance at very low temperatures, and they are perfectly dia magnetic"
+      ],
+      "correctAnswer": "super conductors have zero resistance at very low temperatures, and they are perfectly dia magnetic",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422909",
+      "question": "If the temperature remains constant the volume of the gas will",
+      "options": [
+        "Increase with decrease in pressure",
+        "Decrease with decrease in pressure",
+        "Not change with change in pressure",
+        "Increase with increase in pressure"
+      ],
+      "correctAnswer": "Increase with decrease in pressure",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422910",
+      "question": "A gas at a pressure of (150 \\text{ Nm}^{-2}) is compressed to half its original volume. If the expansion is isothermal, the final pressure will be",
+      "options": [
+        "(100 \\text{ Nm}^{-2})",
+        "(150 \\text{ Nm}^{-2})",
+        "(200 \\text{ Nm}^{-2})",
+        "(300 \\text{ Nm}^{-2})"
+      ],
+      "correctAnswer": "(300 \\text{ Nm}^{-2})",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422911",
+      "question": "The first law of thermodynamics is the law of",
+      "options": [
+        "Conservation of mass",
+        "Conservation of momentum",
+        "Conservation of energy",
+        "Conservation of temperature"
+      ],
+      "correctAnswer": "Conservation of energy",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422912",
+      "question": "Two equal vectors have a resultant equal to either. The angle between them will be",
+      "options": [
+        "30°",
+        "90°",
+        "120°",
+        "180°"
+      ],
+      "correctAnswer": "120°",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422913",
+      "question": "The vectors (\\vec{A}) and (\\vec{B}) are such that if (|\\vec{A} + \\vec{B}| = |\\vec{A} - \\vec{B}|) then the angle between (\\vec{A}) and (\\vec{B}) will be",
+      "options": [
+        "90°",
+        "0°",
+        "180°",
+        "(\\cos \\theta)"
+      ],
+      "correctAnswer": "90°",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422914",
+      "question": "The value of (\\lambda) for which the two vectors: (3\\hat{i} - \\hat{j} + \\lambda\\hat{k}) and (2\\hat{i} + \\lambda\\hat{j} + 2\\hat{k}) are perpendicular is",
+      "options": [
+        "-8",
+        "8",
+        "4",
+        "2"
+      ],
+      "correctAnswer": "8",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422915",
+      "question": "In case of an oblique projection, which statement is true with regard to its velocity components?",
+      "options": [
+        "Vertical and horizontal components change",
+        "Vertical and horizontal components do not change",
+        "Vertical component changes but horizontal component remains constant",
+        "Vertical component remains constant but horizontal component changes"
+      ],
+      "correctAnswer": "Vertical component changes but horizontal component remains constant",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422916",
+      "question": "An insect can jump a maximum horizontal distance of 20 cm. If it spends negligible time on the ground, with what speed can it travel along the road.",
+      "options": [
+        "0.1 m/s",
+        "1.0 m/s",
+        "0.14 m/s",
+        "1.4 m/s"
+      ],
+      "correctAnswer": "1.0 m/s",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422917",
+      "question": "A person holds a book weighing 1 kg between his hands and keeps it from falling by pressing his hands together. If the minimum force exerted by each hand horizontally is 49 N, what will be the coefficient of friction between the book and his hands",
+      "options": [
+        "1",
+        "10",
+        "0.1",
+        "0.01"
+      ],
+      "correctAnswer": "0.1",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422918",
+      "question": "A ball rolled on ice with a velocity of (8 \\text{ms}^{-1}) comes to rest after travelling 40 m. If the value of (g = 9.8 \\text{ms}^{-2}), the coefficient of friction is",
+      "options": [
+        "0.328",
+        "0.0816",
+        "0.0416",
+        "0.258"
+      ],
+      "correctAnswer": "0.0816",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422919",
+      "question": "Which one of the following is not the unit of energy?",
+      "options": [
+        "Kilowatt",
+        "Kilowatt hour",
+        "Joule",
+        "Newton meter"
+      ],
+      "correctAnswer": "Kilowatt",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422920",
+      "question": "The principle of conservation of energy states that",
+      "options": [
+        "Sum of all types of energies is conserved",
+        "Total mechanical energy is conserved",
+        "Total kinetic energy is conserved",
+        "Total potential energy is conserved"
+      ],
+      "correctAnswer": "Sum of all types of energies is conserved",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422921",
+      "question": "For a body moving with simple harmonic motion, the number of cycles per second, is known as its",
+      "options": [
+        "Oscillation",
+        "Amplitude",
+        "Periodic time",
+        "Frequency"
+      ],
+      "correctAnswer": "Frequency",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422922",
+      "question": "The acceleration of particle executing S.H.M. when it is at mean position is",
+      "options": [
+        "Infinite",
+        "Zero",
+        "Maximum",
+        "Unity"
+      ],
+      "correctAnswer": "Zero",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422923",
+      "question": "If the length of a simple pendulum executing simple harmonic motion is increased by 69% then the percentage increases in the time period of the simple pendulum of increased length will be",
+      "options": [
+        "30 %",
+        "330 %",
+        "3.0 %",
+        "33 %"
+      ],
+      "correctAnswer": "30 %",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422924",
+      "question": "The longitudinal waves can not",
+      "options": [
+        "Have a unique wave velocity",
+        "Be polarized",
+        "Have a unique wavelength",
+        "Transmit energy"
+      ],
+      "correctAnswer": "Be polarized",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422925",
+      "question": "A cinema hall has a volume of 2800 m³ and total surface absorption is 225 O.W.U. The reverberation time will be",
+      "options": [
+        "1.90 s",
+        "1.99 s",
+        "2.25 s",
+        "2.40 s"
+      ],
+      "correctAnswer": "1.99 s",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422926",
+      "question": "Stress is",
+      "options": [
+        "External force",
+        "Internal resistive force",
+        "Axial force",
+        "Radial force"
+      ],
+      "correctAnswer": "Internal resistive force",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422927",
+      "question": "Which of the following statements is false?",
+      "options": [
+        "Viscosity is independent of the surface area of liquid layers in contact",
+        "Viscosity of a fluid changes with temperature",
+        "The dimensions of viscosity is same as that of the product of pressure and time",
+        "The viscous force is directed opposite to the direction of motion of liquid"
+      ],
+      "correctAnswer": "Viscosity is independent of the surface area of liquid layers in contact",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422928",
+      "question": "A wire having uniform diameter (d) and length (l) has a resistance R. Another wire having same material but having diameter 2d and length 4l, then it's resistance will be",
+      "options": [
+        "R",
+        "R/2",
+        "R/4",
+        "2R"
+      ],
+      "correctAnswer": "R",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422929",
+      "question": "In a meter bridge experiment, the ratio of the left gap resistance to right gap resistance is 2:3. The balance point from left is",
+      "options": [
+        "40 cm",
+        "45 cm",
+        "60 cm",
+        "65 cm"
+      ],
+      "correctAnswer": "40 cm",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422930",
+      "question": "A magnet when placed at right angles to the earth's horizontal magnetic induction (2 X 10^{-5} \\text{Wb/m}^2) experiences a couple of (2 X 10^{-5} \\text{Nm}). Then, the magnetic moment of magnet is",
+      "options": [
+        "(1 \\text{ Am}^2)",
+        "(1.5 \\text{ Am}^2)",
+        "(5 \\text{ Am}^2)",
+        "(7.5 \\text{ Am}^2)"
+      ],
+      "correctAnswer": "(1 \\text{ Am}^2)",
+      "topic": "Physics"
+    },
+    {
+      "id": "80089422931",
+      "question": "When an electron drops from 4s orbital to 2s orbital in an hydrogen atom, the frequency of radiation emitted belong to which region (Rydberg constant = (1.097 \\times 10^7 m^{-1}))",
+      "options": [
+        "Ultraviolet region",
+        "Visible region",
+        "Infrared region",
+        "Microwave region"
+      ],
+      "correctAnswer": "Visible region",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422932",
+      "question": "Which of the following is true about ionic compounds?",
+      "options": [
+        "Ionic compounds conduct electricity when dissolved in water",
+        "Ionic compounds are not soluble in water.",
+        "Ionic compounds are crystalline solids.",
+        "Ionic compounds conduct electricity when dissolved in water & Ionic compounds are crystalline solids."
+      ],
+      "correctAnswer": "Ionic compounds conduct electricity when dissolved in water & Ionic compounds are crystalline solids.",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422933",
+      "question": "Oxidation state of Fe in (Fe_3O_4) is",
+      "options": [
+        "8/3",
+        "3/8",
+        "3/2",
+        "- 3/8"
+      ],
+      "correctAnswer": "8/3",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422934",
+      "question": "In a sample of salt water, NaCl would be considered as?",
+      "options": [
+        "Solution",
+        "Solute",
+        "Solvent",
+        "Solvation"
+      ],
+      "correctAnswer": "Solute",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422935",
+      "question": "30 mL of 0.1 M Mohr's salt solution is titrated in acid medium against 0.1M (K_2Cr_2O_7) solution taken in the burette. The volume of (K_2Cr_2O_7) solution required at the end point after the addition of suitable indicator is",
+      "options": [
+        "30 mL",
+        "5 mL",
+        "10 mL",
+        "15 mL"
+      ],
+      "correctAnswer": "5 mL",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422936",
+      "question": "What volume of 12.6 M HCl must be added to enough water to prepare 5.00 liters of 3.00M HCl?",
+      "options": [
+        "21.0 L",
+        "0.840 L",
+        "1.19 L",
+        "7.56 L"
+      ],
+      "correctAnswer": "1.19 L",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422937",
+      "question": "Choose the correct statement from given options below for the equilibrium reaction (HClO_4+H_2O \\rightarrow H_3O^++Cl O_4^-)",
+      "options": [
+        "(HClO_4) is the conjugate acid of (H_2O)",
+        "(H_3O^+) is the conjugate base of (H_2O)",
+        "(H_2O) is the conjugate acid of (H_3O^+)",
+        "(Cl O_4^-) is the conjugate base of (HClO_4)"
+      ],
+      "correctAnswer": "(Cl O_4^-) is the conjugate base of (HClO_4)",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422938",
+      "question": "Three unknown solutions are given with pH value of 6, 8 & 9.5 respectively. Which solution will contain the maximum (OH^-) ion?",
+      "options": [
+        "Solution sample-1",
+        "Solution sample-2",
+        "Solution sample-3",
+        "Data are insufficient"
+      ],
+      "correctAnswer": "Solution sample-3",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422939",
+      "question": "An example of acidic buffer solution is a mixture of",
+      "options": [
+        "(NH_4OH, NH_4Cl)",
+        "(HCl, NaCl)",
+        "(CH_3COOH, NH_4OH)",
+        "(CH_3COOH, CH_3COONa)"
+      ],
+      "correctAnswer": "(CH_3COOH, CH_3COONa)",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422940",
+      "question": "A mineral is called an ore if?",
+      "options": [
+        "Metal present in mineral is precious",
+        "Metal can be extracted profitably from mineral",
+        "Metal cannot be extracted",
+        "metal has good malleability"
+      ],
+      "correctAnswer": "Metal can be extracted profitably from mineral",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422941",
+      "question": "Concentration of sulphide ore will be done by",
+      "options": [
+        "Froth floatation",
+        "Roasting",
+        "Sedimentation",
+        "Smelting"
+      ],
+      "correctAnswer": "Froth floatation",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422942",
+      "question": "One of the following will be occurred at the anode, during the electrolysis of fused NaCl.",
+      "options": [
+        "(Na^-) gets reduced",
+        "(Cl^-) gets oxidized",
+        "(Na^-) gets oxidized",
+        "(Na^+) gets oxidized"
+      ],
+      "correctAnswer": "(Cl^-) gets oxidized",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422943",
+      "question": "Electrolysis of dilute aqueous NaCl solution was carried out by passing 10 milliampere current. The time required to liberate 0.01 mol of (H_2) gas at the cathode is?",
+      "options": [
+        "(9.65 x 10^4 s)",
+        "(28.95 x 10^4 s)",
+        "(19.3 x 10^4 s)",
+        "(38.6 x 10^4 s)"
+      ],
+      "correctAnswer": "(19.3 x 10^4 s)",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422944",
+      "question": "Standard reduction potential value of saturated calomel electrode is",
+      "options": [
+        "+ 0.268",
+        "+ 0.6994",
+        "+ 0.0242",
+        "+ 0.2415"
+      ],
+      "correctAnswer": "+ 0.2415",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422945",
+      "question": "In the protection of Iron structure by sacrificial anode method, the metal used as anode",
+      "options": [
+        "Silver",
+        "Zinc",
+        "Magnesium",
+        "Lead"
+      ],
+      "correctAnswer": "Magnesium",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422946",
+      "question": "In electrolytic conductors, the conductance is due to",
+      "options": [
+        "Free movement of electrons",
+        "Restricted movement of electrons",
+        "Restricted movement of ions",
+        "Free movement of ions"
+      ],
+      "correctAnswer": "Free movement of ions",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422947",
+      "question": "Choose the incorrect statement from the following options.",
+      "options": [
+        "In hard water, the detergent values of soap are decreased",
+        "In the presence of dissolved hardness producing salts, the boiling point of water is decreased",
+        "The water which does not form lather with soap is called hard water",
+        "The hard water consists of calcium and magnesium salts in dissolved state"
+      ],
+      "correctAnswer": "In the presence of dissolved hardness producing salts, the boiling point of water is decreased",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422948",
+      "question": "In high pressure boilers, scale formation can be avoided by adding",
+      "options": [
+        "Na2CO3",
+        "Sodium phosphate",
+        "NaOH",
+        "Sodium meta Aluminate"
+      ],
+      "correctAnswer": "Sodium phosphate",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422949",
+      "question": "The basis of reverse osmosis is",
+      "options": [
+        "Osmotic pressure is greater than the hydrostatic pressure",
+        "Osmotic pressure is equal to the hydrostatic pressure",
+        "Hydrostatic pressure is greater than the osmotic pressure",
+        "Osmotic pressure does not exist"
+      ],
+      "correctAnswer": "Hydrostatic pressure is greater than the osmotic pressure",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422950",
+      "question": "A thermoplastic is formed by the phenomenon of",
+      "options": [
+        "Chain polymerization",
+        "Condensation polymerization",
+        "Chlorination",
+        "Nitration"
+      ],
+      "correctAnswer": "Chain polymerization",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422951",
+      "question": "Natural rubber is a polymer of?",
+      "options": [
+        "1, 1-Dimethylbutadiene",
+        "2-Methyl-1, 3-butadiene",
+        "2-Chlorobuta-1,3-diene",
+        "2-Chlorobut-2-ene"
+      ],
+      "correctAnswer": "2-Methyl-1, 3-butadiene",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422952",
+      "question": "Identify the correct statement from the following",
+      "options": [
+        "A good fuel should undergo spontaneous combustion",
+        "A good fuel should have high moisture content",
+        "A good fuel should have high calorific value",
+        "A good fuel should have high content of non-combustible matter"
+      ],
+      "correctAnswer": "A good fuel should have high calorific value",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422953",
+      "question": "Laboratory gas is obtained by cracking",
+      "options": [
+        "Coal",
+        "Diesel oil",
+        "Petrol",
+        "Kerosene oil"
+      ],
+      "correctAnswer": "Kerosene oil",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422954",
+      "question": "In sewage when the concentration of decomposable organic matter is large, then",
+      "options": [
+        "BOD value is high",
+        "COD value is high",
+        "BOD value is low",
+        "COD value is low"
+      ],
+      "correctAnswer": "BOD value is high",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422955",
+      "question": "From the following options given below, what is the major non-renewable energy usage in India ?",
+      "options": [
+        "Coal",
+        "Petroleum and other liquids",
+        "Natural gas",
+        "Nuclear"
+      ],
+      "correctAnswer": "Coal",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "80089422956",
+      "question": "The gouge in carpentry is a type of",
+      "options": [
+        "Chisel",
+        "Hammer",
+        "Saw",
+        "Screw Driver"
+      ],
+      "correctAnswer": "Chisel",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422957",
+      "question": "A mortise gauge is a",
+      "options": [
+        "Striking tool.",
+        "Single marking point marking tool.",
+        "Planning tool.",
+        "Two marking point marking tool."
+      ],
+      "correctAnswer": "Two marking point marking tool.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422958",
+      "question": "Which of the following forging operation is used to increase the cross-sectional area of the stock at the expense of its length ?",
+      "options": [
+        "Fullering",
+        "Punching",
+        "Drawing out",
+        "Upsetting"
+      ],
+      "correctAnswer": "Upsetting",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422959",
+      "question": "The operation of smoothing and squaring the surface around a hole is known as",
+      "options": [
+        "Trepanning.",
+        "Under cutting.",
+        "Counter sinking.",
+        "Spot facing."
+      ],
+      "correctAnswer": "Spot facing.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422960",
+      "question": "Which of the following material will have a recrystallisation temperature below or near to the room temperature?",
+      "options": [
+        "Tin",
+        "Copper",
+        "Nickel",
+        "Tungsten"
+      ],
+      "correctAnswer": "Tin",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422961",
+      "question": "The increase in hardness due to cold working, is called",
+      "options": [
+        "Induction hardening.",
+        "Age-hardening.",
+        "Work-hardening.",
+        "Flame hardening."
+      ],
+      "correctAnswer": "Work-hardening.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422962",
+      "question": "The intermediate moulding flask used in sand casting is called",
+      "options": [
+        "Cope",
+        "Drag",
+        "Cheek",
+        "Core"
+      ],
+      "correctAnswer": "Cheek",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422963",
+      "question": "In pattern making, the shrinkage allowance is provided mainly to compensate",
+      "options": [
+        "Solid contraction.",
+        "Liquid contraction.",
+        "thermal expansion",
+        "Gasses removal"
+      ],
+      "correctAnswer": "Solid contraction.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422964",
+      "question": "In a vernier calliper, the main scale reads in millimetres with a least count of 0.1 mm. Ten divisions on the vernier correspond to nine divisions of the main scale. The least count of the calliper is",
+      "options": [
+        "0.9 mm",
+        "0.1 mm",
+        "0.01 mm",
+        "0.09 mm"
+      ],
+      "correctAnswer": "0.01 mm",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422965",
+      "question": "The instrument used for measuring the height of shoulder is",
+      "options": [
+        "Inside micrometer.",
+        "Vernier depth gauge.",
+        "Telescopic gauge.",
+        "Micrometer calipers."
+      ],
+      "correctAnswer": "Vernier depth gauge.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422966",
+      "question": "The arrangement of dimensions on a drawing is as given in the following figure . Name the type of dimensioning. All the dimensions are in mm only",
+      "options": [
+        "Parallel Dimensioning",
+        "Chain Dimensioning",
+        "Combined Dimensioning",
+        "Co-Ordinated Dimensioning"
+      ],
+      "correctAnswer": "Chain Dimensioning",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422967",
+      "question": "Castle nut is an example of",
+      "options": [
+        "Hexagonal nut.",
+        "Capstan nut.",
+        "Dome nut.",
+        "Lock nut."
+      ],
+      "correctAnswer": "Lock nut.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422968",
+      "question": "In a Body-centered Cubic (BCC) structure, total number of atoms per unit cell are",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422969",
+      "question": "The total area under the stress-strain curve of a mild steel specimen tested up to failure under tension is a measure of",
+      "options": [
+        "Ductility",
+        "Toughness",
+        "Ultimate strength",
+        "Stiffness"
+      ],
+      "correctAnswer": "Toughness",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422970",
+      "question": "The impurity present in the ore is called as",
+      "options": [
+        "Mineral",
+        "Flux",
+        "Slag",
+        "Gangue"
+      ],
+      "correctAnswer": "Gangue",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422971",
+      "question": "Austenite is a solid solution of carbon in which of the following ?",
+      "options": [
+        "Alpha iron",
+        "Gamma iron",
+        "Delta iron",
+        "Beta iron"
+      ],
+      "correctAnswer": "Gamma iron",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422972",
+      "question": "In which of the following heat treatment process, a steel part is heated to the maximum temperature and cooling takes place in the presence of air?",
+      "options": [
+        "Annealing",
+        "Hardening",
+        "Normalizing",
+        "Spheroidizing"
+      ],
+      "correctAnswer": "Normalizing",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422973",
+      "question": "When carbon content increases in the plain carbon steels, which of the following properties are raising ?",
+      "options": [
+        "Ductility and ultimate tensile strength",
+        "Tensile strength and hardness",
+        "Tensile strength and malleability",
+        "Ductility and melting temperature"
+      ],
+      "correctAnswer": "Tensile strength and hardness",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422974",
+      "question": "The sequence of operations involved in the powder metallurgy process is",
+      "options": [
+        "Blending – Compaction – Sintering – Heat treatment",
+        "Compaction - Blending – Sintering – Heat treatment",
+        "Blending – Compaction – Heat treatment - Sintering",
+        "Blending – Sintering – Compaction – Heat treatment"
+      ],
+      "correctAnswer": "Blending – Compaction – Sintering – Heat treatment",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422975",
+      "question": "A stone of mass m at the end of a string of length L is whirled in a vertical circle at a constant speed. The tension in the string will be maximum when the stone is",
+      "options": [
+        "At the top of the circle",
+        "At the bottom of the circle",
+        "Half-way down from the top",
+        "Quarter way down from the top"
+      ],
+      "correctAnswer": "At the bottom of the circle",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422976",
+      "question": "Five equal forces each of 20 N are acting at a point in the same plane. If the angle between them are same, then the resultant of these forces is",
+      "options": [
+        "100 N",
+        "40 N",
+        "20 N",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422977",
+      "question": "The area moment of inertia of a square of size 1 unit about its diagonal is",
+      "options": [
+        "0.5",
+        "0.33",
+        "0.24",
+        "0.167"
+      ],
+      "correctAnswer": "0.167",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422978",
+      "question": "The D’Alembert’s principle",
+      "options": [
+        "is equivalent to Newton’s first law of motion",
+        "explains the conservation of momentum of a system",
+        "is used to convert dynamic equilibrium to static equilibrium",
+        "Is used only when the inertia force is zero."
+      ],
+      "correctAnswer": "is used to convert dynamic equilibrium to static equilibrium",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422979",
+      "question": "A bar of length L uniformly heated from 0°C to a temperature of t °C. E is the modulus of elasticity and coefficient of linear expansion is α. The stress in the bar is",
+      "options": [
+        "α t E",
+        "αtE/2",
+        "Zero",
+        "αtE/L"
+      ],
+      "correctAnswer": "α t E",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422980",
+      "question": "A cantilever beam of span L carries a clockwise moment M at the free end. The shear force is",
+      "options": [
+        "Zero throughout the span",
+        "Uniform throughout the span",
+        "Varies linearly from free end to fixed end",
+        "Varies linearly from fixed end to free end"
+      ],
+      "correctAnswer": "Zero throughout the span",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422981",
+      "question": "The shape of the bending moment diagram for a uniform cantilever beam carrying a uniformly distributed load over its length is",
+      "options": [
+        "a straight line",
+        "a hyperbola",
+        "an ellipse",
+        "a parabola"
+      ],
+      "correctAnswer": "a parabola",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422982",
+      "question": "A beam said to be loaded in pure bending, if",
+      "options": [
+        "The shear force varies and bending moment is uniform throughout the span",
+        "Both the shear force and bending moment are uniform throughout the span",
+        "The shear force is zero and bending moment is uniform throughout the span",
+        "Both the shear force and bending moment are zero throughout the span"
+      ],
+      "correctAnswer": "The shear force is zero and bending moment is uniform throughout the span",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422983",
+      "question": "A steel cantilever 2 m long is to carry a concentrated load of 3 kN at the free end. If the maximum stress due to bending is not to exceed 120 N/mm² and the cross-section of the beam is circular, find its diameter",
+      "options": [
+        "10 mm",
+        "20 mm",
+        "40 mm",
+        "80 mm"
+      ],
+      "correctAnswer": "80 mm",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422984",
+      "question": "The magnitude of shear stress induced in a circular shaft due to torsion",
+      "options": [
+        "Varies from zero at the centre to the maximum at the circumference",
+        "Varies from Maximum at the centre to the zero at the circumference",
+        "Remains constant from the centre to the circumference",
+        "Is inversely proportional to torque and angle of twist"
+      ],
+      "correctAnswer": "Varies from zero at the centre to the maximum at the circumference",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422985",
+      "question": "A metal pipe of 1 m diameter, contains a fluid having a pressure of 1 N/mm². If the permissible tensile stress in the material is 20 N/mm², then the thickness of the metal required for making the pipe would be",
+      "options": [
+        "25 mm",
+        "20 mm",
+        "10 mm",
+        "5 mm"
+      ],
+      "correctAnswer": "25 mm",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422986",
+      "question": "In a CNC vertical milling machine, for carrying out an operation like end milling the spindle head is to be positioned along the",
+      "options": [
+        "X-axis",
+        "Y-axis",
+        "Z-axis",
+        "S-axis"
+      ],
+      "correctAnswer": "Z-axis",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422987",
+      "question": "Which of the following options is correct for the control unit and panel of NC (Numerical Control) and CNC (Computer Numerical Control) machine tools?",
+      "options": [
+        "The control unit of NC machine tool works in ON-line mode and the control unit of CNC machine tool works in batch processing mode",
+        "The control unit of NC machine tool works in batch processing mode and the control unit of CNC machine tool works in ON-line mode",
+        "The control units of both NC and CNC machines work in ON-line mode",
+        "The control units of both NC and CNC machines work in batch processing mode"
+      ],
+      "correctAnswer": "The control unit of NC machine tool works in batch processing mode and the control unit of CNC machine tool works in ON-line mode",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422988",
+      "question": "In a CNC program, the word address format used for preparatory functions is",
+      "options": [
+        "M",
+        "N",
+        "G",
+        "P"
+      ],
+      "correctAnswer": "G",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422989",
+      "question": "Flexible Manufacturing Systems (FMS) can be better explained as",
+      "options": [
+        "it moves materials between operations",
+        "it moves and manipulates products, parts or tolls",
+        "it completely manufactures a range of components without significant human intervention during the processing",
+        "it co-ordinates the whole process of manufacturing and manufactures a part, component or product"
+      ],
+      "correctAnswer": "it completely manufactures a range of components without significant human intervention during the processing",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422990",
+      "question": "Creep is important factor in the design of",
+      "options": [
+        "Flywheel of steam engine",
+        "Cycle Chain",
+        "Cast Iron pipes",
+        "Gas Turbine Blades"
+      ],
+      "correctAnswer": "Gas Turbine Blades",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422991",
+      "question": "A bolt which is threaded on both ends can be generally known as",
+      "options": [
+        "Set Screw",
+        "Tap bolt",
+        "Through Bolt",
+        "Stud Bolt"
+      ],
+      "correctAnswer": "Stud Bolt",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422992",
+      "question": "Self-locking in a power screw is better achieved by increasing the coefficient of friction and",
+      "options": [
+        "Decreasing the Angle of friction",
+        "Increasing the helix angle of screw",
+        "Decreasing the helix angle of screw",
+        "Increasing the angle of friction"
+      ],
+      "correctAnswer": "Decreasing the helix angle of screw",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422993",
+      "question": "A cold rolled steel shaft designed on the basis of maximum shear stress theory. The principal stresses induced at its critical section are 60 Mpa and -60 Mpa respectively. If the yield stress for shaft material is 360 MPa, the factor of safety (N) of the design",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422994",
+      "question": "A key which transmits power through frictional resistance only is",
+      "options": [
+        "Woodruff key",
+        "Saddle key",
+        "Kennedy key",
+        "Sunk key"
+      ],
+      "correctAnswer": "Saddle key",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422995",
+      "question": "Generally for the Sunk key, the standard height in terms of shaft diameter ‘d’ is given by",
+      "options": [
+        "d/2",
+        "d",
+        "d/4",
+        "d/6"
+      ],
+      "correctAnswer": "d/6",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422996",
+      "question": "When the bearing is subjected to large fluctuations of load and heavy impacts, the ratio of bearing characteristic number to the bearing modulus should be",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "correctAnswer": "15",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422997",
+      "question": "The angle between the direction of follower motion and normal to the pitch curve is known as",
+      "options": [
+        "Pressure angle",
+        "Pitch angle",
+        "Prime angle",
+        "Base angle"
+      ],
+      "correctAnswer": "Pressure angle",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422998",
+      "question": "The total slip will occur in a belt drive when",
+      "options": [
+        "Angle of rest > angle of creep",
+        "Angle of creep > angle of rest",
+        "Angle of creep is zero",
+        "Angle of rest is zero"
+      ],
+      "correctAnswer": "Angle of rest is zero",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089422999",
+      "question": "The relation between circular pitch ‘Pc’ and diametral pitch ‘Pd’ is given by",
+      "options": [
+        "(P_d = \\frac{1}{P_c})",
+        "(P_c = \\frac{2}{P_d})",
+        "(P_d = \\frac{\\pi}{P_c})",
+        "(P_c = \\pi P_d)"
+      ],
+      "correctAnswer": "(P_d = \\frac{\\pi}{P_c})",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423000",
+      "question": "In a lathe, taper turning means to produce a _________ surface by gradually decreasing the value of diameter from a cylindrical work piece.",
+      "options": [
+        "conical",
+        "flat",
+        "Cylindrical",
+        "Square"
+      ],
+      "correctAnswer": "conical",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423001",
+      "question": "Enlarging an existing circular hole with a rotating single point tool is called",
+      "options": [
+        "Internal Turning",
+        "Boring",
+        "Drilling",
+        "Reaming"
+      ],
+      "correctAnswer": "Boring",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423002",
+      "question": "-----------------mechanism is used in quick return motion mechanism for shaper",
+      "options": [
+        "Crank and slotted lever mechanism",
+        "Fast pulley mechanism",
+        "With worth quick return mechanism",
+        "Slow and Loose pulley mechanism"
+      ],
+      "correctAnswer": "Crank and slotted lever mechanism",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423003",
+      "question": "In a shaper machine, the forward stroke is completed in 240°. The value of speed ratio is",
+      "options": [
+        "2",
+        "3/2",
+        "1/2",
+        "1/3"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423004",
+      "question": "The rear teeth of a broach",
+      "options": [
+        "remove minimum metal.",
+        "perform burnishing operation.",
+        "remove maximum metal.",
+        "remove no metal."
+      ],
+      "correctAnswer": "remove no metal.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423005",
+      "question": "Which of the following processes is used for good surface finish and fine dimensional tolerances?",
+      "options": [
+        "Boring",
+        "Broaching",
+        "Drilling",
+        "Reaming"
+      ],
+      "correctAnswer": "Broaching",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423006",
+      "question": "The welding set up is said to have straight polarity, when",
+      "options": [
+        "work is connected to the positive terminal and the electrode holder to the negative terminal.",
+        "work is connected to the positive terminal and the electrode holder is earthed.",
+        "work is connected to the negative terminal and the electrode holder to the positive terminal.",
+        "work is connected to the negative terminal and the electrode holder is earthed."
+      ],
+      "correctAnswer": "work is connected to the positive terminal and the electrode holder to the negative terminal.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423007",
+      "question": "In a welding process, the arc is obtained between two tungsten electrodes rather than between the tungsten electrode and the work piece. Name the welding process.",
+      "options": [
+        "Plasma arc welding",
+        "Gas Tungsten Arc Welding",
+        "Stud arc welding",
+        "Atomic hydrogen welding"
+      ],
+      "correctAnswer": "Atomic hydrogen welding",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423008",
+      "question": "The most important quality of any lubricant is",
+      "options": [
+        "Specific heat.",
+        "Specific gravity.",
+        "Viscosity.",
+        "Emulsification."
+      ],
+      "correctAnswer": "Viscosity.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423009",
+      "question": "The process used for cutting a gear on a milling machine is called",
+      "options": [
+        "Hobbing",
+        "Forming",
+        "Grinding",
+        "Burnishing"
+      ],
+      "correctAnswer": "Forming",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423010",
+      "question": "Honing is used for finishing.",
+      "options": [
+        "External cylindrical surfaces and flat surfaces",
+        "Internal cylindrical surfaces and flat surfaces",
+        "Flat surfaces and hexagonal surfaces",
+        "External cylindrical surfaces and Internal cylindrical surfaces"
+      ],
+      "correctAnswer": "Internal cylindrical surfaces and flat surfaces",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423011",
+      "question": "Which of the following metals cannot be electroplated?",
+      "options": [
+        "Palladium",
+        "Nickel",
+        "Silver",
+        "Tungsten"
+      ],
+      "correctAnswer": "Tungsten",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423012",
+      "question": "Which of the following statement is wrong about ultra-sonic machining?",
+      "options": [
+        "It cuts materials at very slow speeds.",
+        "It removes large amount of material.",
+        "It is best suited for machining hard and brittle materials.",
+        "It produces good surface finish."
+      ],
+      "correctAnswer": "It removes large amount of material.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423013",
+      "question": "Which of the following unconventional machining process uses thermoelectric energy in the material removal?",
+      "options": [
+        "Ultrasonic Machining",
+        "Electric Discharge Machining",
+        "Electrochemical Machining",
+        "Abrasive Flow Machining"
+      ],
+      "correctAnswer": "Electric Discharge Machining",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423014",
+      "question": "Temperature of a gas is produced due to",
+      "options": [
+        "its heating value",
+        "kinetic energy of molecules",
+        "repulsion of molecules",
+        "attraction of molecules"
+      ],
+      "correctAnswer": "kinetic energy of molecules",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423015",
+      "question": "A thermodynamic relation in terms of specific volume and temperatures for the polytropic process of perfect gas is given by",
+      "options": [
+        "(\\frac{T_2}{T_1} = (\\frac{V_1}{V_2})^{\\frac{n-1}{n}})",
+        "(\\frac{T_2}{T_1} = (\\frac{V_1}{V_2})^{n-1})",
+        "(\\frac{T_2}{T_1} = (\\frac{V_1}{V_2})^{\\frac{n}{n-1}})",
+        "(\\frac{T_2}{T_1} = (\\frac{V_1}{V_2})^{\\frac{1}{n}})"
+      ],
+      "correctAnswer": "(\\frac{T_2}{T_1} = (\\frac{V_1}{V_2})^{n-1})",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423016",
+      "question": "A heat engine is supplied with 260 kJ/s of heat at a constant fixed temperature of 260 K and heat rejection takes place at 110 K temperature. If the engine is reversible, the heat rejected (kJ/s) would be approximately equal to",
+      "options": [
+        "85",
+        "140",
+        "110",
+        "155"
+      ],
+      "correctAnswer": "110",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423017",
+      "question": "In a Carnot cycle, heat is transferred at",
+      "options": [
+        "constant pressure",
+        "constant temperature",
+        "constant volume",
+        "constant entropy"
+      ],
+      "correctAnswer": "constant temperature",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423018",
+      "question": "For the same maximum pressure and maximum temperature, the comparison among the Otto, Diesel and dual internal combustion engine cycles is given by",
+      "options": [
+        "(\\eta_{otto} > \\eta_{dual} > \\eta_{diesel})",
+        "(\\eta_{dual} > \\eta_{diesel} > \\eta_{otto})",
+        "(\\eta_{otto} > \\eta_{diesel} > \\eta_{dual})",
+        "(\\eta_{diesel} > \\eta_{dual} > \\eta_{otto})"
+      ],
+      "correctAnswer": "(\\eta_{diesel} > \\eta_{dual} > \\eta_{otto})",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423019",
+      "question": "Ultimate analysis of fuel is determination of percentage of",
+      "options": [
+        "carbon, hydrogen, nitrogen, sulphur and moisture",
+        "fixed carbon, ash, volatile matter, moisture",
+        "higher calorific value",
+        "lower calorific value"
+      ],
+      "correctAnswer": "carbon, hydrogen, nitrogen, sulphur and moisture",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423020",
+      "question": "If one kg of CO requires 4/7 kg of Oxygen for the chemical reaction. Then the mass of carbon dioxide produced is",
+      "options": [
+        "7/3 kg",
+        "8/3 kg",
+        "11/3 kg",
+        "11/7 kg"
+      ],
+      "correctAnswer": "11/7 kg",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423021",
+      "question": "An ideal air standard Otto cycle has a compression ratio of 8.5. If the adiabatic index is 1.4, then what is the thermal efficiency in percentage of the Otto cycle",
+      "options": [
+        "57.5",
+        "45.7",
+        "52.5",
+        "95"
+      ],
+      "correctAnswer": "57.5",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423022",
+      "question": "By providing better lubrication in internal combustion engine, which of the following efficiency will be improved?",
+      "options": [
+        "Volumetric efficiency",
+        "Indicated thermal efficiency",
+        "Relative efficiency",
+        "Mechanical efficiency"
+      ],
+      "correctAnswer": "Mechanical efficiency",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423023",
+      "question": "The output of a diesel engine can be increased without increasing the engine revolution or size in following way",
+      "options": [
+        "feeding more fuel",
+        "increasing flywheel size",
+        "supercharging",
+        "scavenging"
+      ],
+      "correctAnswer": "supercharging",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423024",
+      "question": "A rope brake dynamometer was used to measure the brake power of single cylinder four stroke petrol engine. It was found that the torque due to brake load is 600 N-m and the engine makes 500 rpm. The brake power of the engine is",
+      "options": [
+        "31.4 kW",
+        "15.7 kW",
+        "62.8 kW",
+        "24.0 kW"
+      ],
+      "correctAnswer": "31.4 kW",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423025",
+      "question": "During a Morse test on 4- cylinder engine, the following measurements of brake power were taken at constant speed.\nAll cylinders firing 3037 kW\n1st cylinder not firing 2102 kW\n2nd cylinder not firing 2102 kW\n3rd cylinder not firing 2100 kW\n4th cylinder not firing 2098 kW\nThe mechanical efficiency of the engine is",
+      "options": [
+        "91.53%",
+        "85.07%",
+        "81.07%",
+        "61.22%"
+      ],
+      "correctAnswer": "81.07%",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423026",
+      "question": "During the compression process, the work required is maximum if the thermodynamic process follow",
+      "options": [
+        "Isentropic process",
+        "Isothermal process",
+        "Polytropic process",
+        "Isochoric process"
+      ],
+      "correctAnswer": "Isentropic process",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423027",
+      "question": "Optimum intermediate pressure in two stage compressor is",
+      "options": [
+        "average of suction and delivery pressure",
+        "50% of difference of two pressures",
+        "geometric mean of two pressures",
+        "one fourth of sum of suction and delivery pressure"
+      ],
+      "correctAnswer": "geometric mean of two pressures",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423028",
+      "question": "In a centrifugal compressor, the degree of reaction is being defined as",
+      "options": [
+        "the ratio of pressure rise in impeller and pressure rise in the compressor",
+        "the ratio of pressure rise in the diffuser and pressure rise in the compressor",
+        "the ratio of pressure rise in the impeller and pressure rise in the diffuser",
+        "the ratio of pressure rise in the diffuser and pressure rise in the impeller"
+      ],
+      "correctAnswer": "the ratio of pressure rise in impeller and pressure rise in the compressor",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423029",
+      "question": "The number of compressors and turbines required for Ramjet engine are ____ and ____ respectively.",
+      "options": [
+        "One, Zero",
+        "Zero, One",
+        "One, One",
+        "Zero, Zero"
+      ],
+      "correctAnswer": "Zero, Zero",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423030",
+      "question": "The values of enthalpy of steam at the inlet and outlet of a steam turbine in a Rankine cycle are 3000 kJ/kg and 2000 kJ/kg respectively. Neglect the pump work, the specific steam consumption in kg/kW-hour is",
+      "options": [
+        "3.6",
+        "0.36",
+        "0.06",
+        "0.01"
+      ],
+      "correctAnswer": "3.6",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423031",
+      "question": "Latent heat of steam with increase in pressure",
+      "options": [
+        "increases",
+        "remains same",
+        "decreases",
+        "behave unpredictably"
+      ],
+      "correctAnswer": "decreases",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423032",
+      "question": "The component which is used to heat the feed water by using the waste hot gases before leaving through chimney is known as",
+      "options": [
+        "Air pre-heater",
+        "Re-heater",
+        "Super-heater",
+        "Economiser"
+      ],
+      "correctAnswer": "Economiser",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423033",
+      "question": "The maximum discharge through a chimney occurs when the height of chimney is",
+      "options": [
+        "infinitely long",
+        "around 200 meters",
+        "equal to the height of the hot gas column producing the draught",
+        "more than the tallest building nearby"
+      ],
+      "correctAnswer": "equal to the height of the hot gas column producing the draught",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423034",
+      "question": "The total enthalpy drop in the steam nozzle is 100 kJ/kg. If the steam velocity at the entry of the nozzle is neglected, then the velocity at the exit of the steam nozzle is",
+      "options": [
+        "100 m/s",
+        "447.2 m/s",
+        "44.72 m/s",
+        "0 m/s"
+      ],
+      "correctAnswer": "447.2 m/s",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423035",
+      "question": "In an impulse turbine, the energy supplied to the blades per kg of steam equals to",
+      "options": [
+        "work done by steam",
+        "sum of kinetic and potential energy at inlet",
+        "reaction energy of steam",
+        "kinetic energy of steam jet at entrance per kg of steam"
+      ],
+      "correctAnswer": "kinetic energy of steam jet at entrance per kg of steam",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423036",
+      "question": "In the velocity triangles of steam turbine, the tangential component of the absolute velocity can be called as",
+      "options": [
+        "relative velocity",
+        "whirl velocity",
+        "flow velocity",
+        "blade velocity"
+      ],
+      "correctAnswer": "whirl velocity",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423037",
+      "question": "In surface condenser used in steam power plant",
+      "options": [
+        "water flows through tubes and steam surrounds tubes",
+        "steam flows through tubes and water surrounds tubes",
+        "steam and water get mixed",
+        "steam simply exhaust to atmosphere"
+      ],
+      "correctAnswer": "water flows through tubes and steam surrounds tubes",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423038",
+      "question": "“The liquids transmit the pressure equally in all directions”. This statement was given by",
+      "options": [
+        "Archimedes",
+        "Boyle",
+        "Newton",
+        "Pascal"
+      ],
+      "correctAnswer": "Pascal",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423039",
+      "question": "The flow in which the velocity vector is identical in magnitude and direction at every point, for any given instant, is known as",
+      "options": [
+        "steady flow",
+        "uniform flow",
+        "streamline flow",
+        "one dimensional flow"
+      ],
+      "correctAnswer": "uniform flow",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423040",
+      "question": "The area of pipe at two different sections P and Q are (10 \\text{ mm}^2) and (20 \\text{ mm}^2) respectively. If the velocity at section P is 5 m/s, then the velocity and discharge at section Q are",
+      "options": [
+        "(5.0 \\text{ m/s and } 100 \\times 10^{-6} \\text{ m}^3/\\text{s})",
+        "(1.25 \\text{ m/s and } 25 \\times 10^{-6} \\text{ m}^3/\\text{s})",
+        "(2.5 \\text{ m/s and } 50 \\times 10^{-6} \\text{ m}^3/\\text{s})",
+        "(10.0 \\text{ m/s and } 10 \\times 10^{-6} \\text{ m}^3/\\text{s})"
+      ],
+      "correctAnswer": "(2.5 \\text{ m/s and } 50 \\times 10^{-6} \\text{ m}^3/\\text{s})",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423041",
+      "question": "In Navier-stokes equation, the forces considered are",
+      "options": [
+        "pressure, viscous and turbulence",
+        "gravity, pressure and viscous",
+        "gravity, pressure and turbulence",
+        "rotational flow"
+      ],
+      "correctAnswer": "gravity, pressure and viscous",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423042",
+      "question": "In order to estimate the loss of head due to friction in pipes using Chezy's formula, the hydraulic mean depth is calculated as the ratio of",
+      "options": [
+        "Area of the flow and wetted perimeter",
+        "Wetted perimeter and area of the flow",
+        "Area of the flow and diameter of the pipe",
+        "Wetted perimeter and diameter of the pipe"
+      ],
+      "correctAnswer": "Area of the flow and wetted perimeter",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423043",
+      "question": "A hydraulic turbine develops 1000 kW power for a head of 40 m. If the head is reduced to 20 m, the power developed in kW is",
+      "options": [
+        "177.77",
+        "353.55",
+        "500.90",
+        "707.77"
+      ],
+      "correctAnswer": "353.55",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423044",
+      "question": "The shape of the buckets used in Pelton turbine is _________________",
+      "options": [
+        "Semicircular",
+        "Hemispherical",
+        "Aerofoil",
+        "Cylindrical"
+      ],
+      "correctAnswer": "Hemispherical",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423045",
+      "question": "If D is the diameter of Pelton wheel and d is the diameter of the jet, then number of buckets on the periphery of a Pelton wheel is equal to",
+      "options": [
+        "(D/2d)",
+        "(D/2d)+10",
+        "(D/2d)+15",
+        "(D/2d)+20"
+      ],
+      "correctAnswer": "(D/2d)+15",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423046",
+      "question": "The manometric efficiency (ηₘₐₙₒ) of a centrifugal pump is given by ______________ where Hm = manometric head g = acceleration gue to gravity Vw₂ = whirl velocity at the exit u₂ = blade velocity at the exit",
+      "options": [
+        "(H_m / g V_{w_2} u_2)",
+        "(g H_m / V_{w_2} u_2)",
+        "(V_{w_2} u_2 / g H_m)",
+        "(g V_{w_2} u_2 / H_m)"
+      ],
+      "correctAnswer": "(g H_m / V_{w_2} u_2)",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423047",
+      "question": "A fast centrifugal pump impeller will have",
+      "options": [
+        "forwarding facing blades",
+        "radial blades",
+        "backward facing blades",
+        "propeller type blades"
+      ],
+      "correctAnswer": "backward facing blades",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423048",
+      "question": "Which of the following activity is part of the production management?",
+      "options": [
+        "Inventory and store management",
+        "Selection of appropriate sources of funds",
+        "Manpower planning",
+        "Need recognition and expectation of consumers"
+      ],
+      "correctAnswer": "Inventory and store management",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423049",
+      "question": "The father of principles of management was",
+      "options": [
+        "Henry Fayol.",
+        "Gilbreth.",
+        "F.W. Taylor.",
+        "Robert Owen."
+      ],
+      "correctAnswer": "Henry Fayol.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423050",
+      "question": "A firm has demand rate of the material as 40 units per week and lead time of supply of the raw material is two weeks. The reorder point at the inventory level is",
+      "options": [
+        "10 units",
+        "20 units",
+        "40 units",
+        "80 units"
+      ],
+      "correctAnswer": "80 units",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423051",
+      "question": "A feasible solution to the linear programming problem should",
+      "options": [
+        "optimize the objective function.",
+        "satisfy the non-negativity restrictions.",
+        "satisfy the problem constraints.",
+        "satisfy the problem constraints and non-negativity restrictions."
+      ],
+      "correctAnswer": "satisfy the problem constraints and non-negativity restrictions.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423052",
+      "question": "The cost of training to the employee for quality improvement belongs to",
+      "options": [
+        "Internal Failure Cost",
+        "Appraisal Cost",
+        "Prevention Cost",
+        "Capital Cost"
+      ],
+      "correctAnswer": "Prevention Cost",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423053",
+      "question": "Trademarks relate to",
+      "options": [
+        "Practice and knowledge acquired through experience.",
+        "Brand identity.",
+        "The right to reproduce own original work.",
+        "The protection of proprietary information of commercial value."
+      ],
+      "correctAnswer": "Brand identity.",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423054",
+      "question": "An individual who initiates, creates and manages a new business can be called",
+      "options": [
+        "A manager",
+        "An entrepreneur",
+        "A leader",
+        "A professional"
+      ],
+      "correctAnswer": "An entrepreneur",
+      "topic": "Mechanical Engineering"
+    },
+    {
+      "id": "80089423055",
+      "question": "In a machine shop, a color code “Blue” is used to represent the source of hazard for",
+      "options": [
+        "A warning against starting of equipment after repair",
+        "Points in machinery that cause potential injury",
+        "Radiation hazards",
+        "Fire prevention"
+      ],
+      "correctAnswer": "A warning against starting of equipment after repair",
+      "topic": "Mechanical Engineering"
+    }
+  ]
