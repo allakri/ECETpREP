@@ -21,6 +21,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'Diploma Prep Hub',
   description: 'Your AI-Powered Partner for Diploma and Government Exams',
+  icons: {
+    icon: '/images/logo.png',
+  },
 };
 
 export default function RootLayout({
