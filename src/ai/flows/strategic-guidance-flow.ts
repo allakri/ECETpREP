@@ -82,4 +82,10 @@ const strategicGuidanceFlow = ai.defineFlow(
   {
     name: 'strategicGuidanceFlow',
     inputSchema: StrategicGuidanceInputSchema,
-    outputSchema: StrategicG
+    outputSchema: StrategicGuidanceOutputSchema,
+  },
+  async input => {
+    const {output} = await strategicGuidancePrompt(input);
+    return output!;
+  }
+);
