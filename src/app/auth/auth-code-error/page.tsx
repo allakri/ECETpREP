@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { AppHeader } from '@/components/layout/AppHeader';
@@ -32,3 +33,4 @@ export default function AuthCodeErrorPage() {
       <AppFooter />
     </div>
   );
+}
