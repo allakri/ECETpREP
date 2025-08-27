@@ -5,8 +5,6 @@
  * @fileOverview AI-powered strategic guidance generator for specific courses.
  *
  * - generateStrategicGuidance - A function that generates a study guide.
- * - StrategicGuidanceInput - The input type for the function.
- * - StrategicGuidanceOutput - The return type for the function.
  */
 
 import {ai} from '@/ai/genkit';
@@ -17,16 +15,16 @@ const SyllabusItemSchema = z.object({
   topics: z.array(z.string()).describe('The topics within the subject.'),
 });
 
-export const StrategicGuidanceInputSchema = z.object({
+const StrategicGuidanceInputSchema = z.object({
   courseTitle: z.string().describe('The title of the course.'),
   syllabus: z.array(SyllabusItemSchema).describe('The structured syllabus for the course.'),
 });
-export type StrategicGuidanceInput = z.infer<typeof StrategicGuidanceInputSchema>;
+type StrategicGuidanceInput = z.infer<typeof StrategicGuidanceInputSchema>;
 
-export const StrategicGuidanceOutputSchema = z.object({
+const StrategicGuidanceOutputSchema = z.object({
   guidance: z.string().describe('A comprehensive, well-structured study guide in Markdown format. It should include topic difficulty breakdown, study strategies, and mentorship advice.'),
 });
-export type StrategicGuidanceOutput = z.infer<typeof StrategicGuidanceOutputSchema>;
+type StrategicGuidanceOutput = z.infer<typeof StrategicGuidanceOutputSchema>;
 
 
 export async function generateStrategicGuidance(input: StrategicGuidanceInput): Promise<StrategicGuidanceOutput> {
@@ -84,10 +82,4 @@ const strategicGuidanceFlow = ai.defineFlow(
   {
     name: 'strategicGuidanceFlow',
     inputSchema: StrategicGuidanceInputSchema,
-    outputSchema: StrategicGuidanceOutputSchema,
-  },
-  async input => {
-    const {output} = await strategicGuidancePrompt(input);
-    return output!;
-  }
-);
+    outputSchema: StrategicG
