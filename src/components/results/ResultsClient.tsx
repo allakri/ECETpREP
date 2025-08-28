@@ -203,71 +203,15 @@ export default function ResultsClient() {
             })}
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            <motion.div className="lg:col-span-1 h-full" variants={itemVariants}>
-              <ScoreChart 
-                score={score}
-                correctCount={correctCount}
-                incorrectCount={incorrectCount}
-                unansweredCount={unansweredCount}
-                totalQuestions={totalQuestions}
-              />
-            </motion.div>
-
-            <motion.div className="lg:col-span-2 space-y-8" variants={itemVariants}>
-              <Card className="h-full shadow-lg">
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <BrainCircuit className="h-6 w-6 text-primary"/>
-                  </div>
-                  <div>
-                    <CardTitle className="text-primary font-headline">AI Topic Feedback</CardTitle>
-                    <CardDescription>Personalized analysis to guide your next steps.</CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  {loadingAI ? (
-                    <div className="space-y-3">
-                      <Skeleton className="h-4 w-full" />
-                      <Skeleton className="h-4 w-full" />
-                      <Skeleton className="h-4 w-3/4" />
-                      <Skeleton className="h-4 w-full" />
-                      <Skeleton className="h-4 w-1/2" />
-                    </div>
-                  ) : (
-                    <div className="prose prose-sm dark:prose-invert max-w-none text-foreground prose-headings:text-primary">
-                        <ReactMarkdown>{feedback || 'Log in to receive personalized AI feedback based on your performance history.'}</ReactMarkdown>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-
-              <Card className="h-full shadow-lg">
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <UserCheck className="h-6 w-6 text-accent"/>
-                  </div>
-                  <div>
-                    <CardTitle className="text-accent font-headline">AI Readiness Guide</CardTitle>
-                    <CardDescription>An assessment of your preparedness for the final exam.</CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  {loadingAI ? (
-                    <div className="space-y-3">
-                      <Skeleton className="h-4 w-full" />
-                      <Skeleton className="h-4 w-full" />
-                      <Skeleton className="h-4 w-3/4" />
-                    </div>
-                  ) : (
-                     <div className="prose prose-sm dark:prose-invert max-w-none text-foreground">
-                        <ReactMarkdown>{readiness || 'Log in to receive a personalized readiness assessment.'}</ReactMarkdown>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            </motion.div>
-        </div>
+        <motion.div className="grid grid-cols-1" variants={itemVariants}>
+          <ScoreChart
+            score={score}
+            correctCount={correctCount}
+            incorrectCount={incorrectCount}
+            unansweredCount={unansweredCount}
+            totalQuestions={totalQuestions}
+          />
+        </motion.div>
 
         <motion.div variants={itemVariants}>
             <Card>
