@@ -4,7 +4,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
 import {
   Carousel,
   CarouselContent,
@@ -45,17 +44,6 @@ const testimonials = [
   }
 ];
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
 export function Testimonials() {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -70,12 +58,8 @@ export function Testimonials() {
   return (
     <section className="bg-card py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <div 
             className="text-center mb-12"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={itemVariants}
         >
             <h2 className="text-3xl font-extrabold font-headline text-foreground tracking-tight">
                 Trusted by Students Like You
@@ -83,7 +67,7 @@ export function Testimonials() {
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
                 Don't just take our word for it. Here's what some of our students have to say about their experience.
             </p>
-        </motion.div>
+        </div>
         
         <Carousel
           opts={{

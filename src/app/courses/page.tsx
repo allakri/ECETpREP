@@ -7,33 +7,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { courses } from "@/lib/courses";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { AppShell } from "@/components/layout/AppShell";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
 
 export default function CoursesPage() {
   return (
@@ -41,11 +17,8 @@ export default function CoursesPage() {
         <div className="flex-grow bg-background">
             <Breadcrumbs className="pt-8" />
             {/* Hero Section */}
-            <motion.div 
+            <div 
             className="text-center py-16 md:py-24 px-4 bg-primary/5"
-            initial="hidden"
-            animate="visible"
-            variants={itemVariants}
             >
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary font-headline">
                 Explore ECET & Govt. Exam Courses
@@ -53,21 +26,17 @@ export default function CoursesPage() {
             <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
                 Choose your branch, access structured learning paths, and prepare with confidence using our expert-curated content.
             </p>
-            </motion.div>
+            </div>
 
             {/* Courses Grid */}
             <div className="py-16 md:py-24 px-4 container mx-auto">
-                <motion.div 
+                <div 
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.1 }}
-                    variants={containerVariants}
                 >
                     {courses.map((course) => {
                     const Icon = course.icon;
                     return (
-                        <motion.div key={course.slug} variants={itemVariants}>
+                        <div key={course.slug}>
                         <Card className="h-full flex flex-col shadow-lg hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300">
                             <CardHeader className="flex-row items-start gap-4">
                             <div className="p-3 bg-primary/10 rounded-lg">
@@ -91,10 +60,10 @@ export default function CoursesPage() {
                             </Button>
                             </div>
                         </Card>
-                        </motion.div>
+                        </div>
                     )
                     })}
-                </motion.div>
+                </div>
             </div>
         </div>
     </AppShell>

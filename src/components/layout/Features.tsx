@@ -2,7 +2,6 @@
 "use client";
 
 import { BrainCircuit, BookCheck, MessageSquareHeart } from "lucide-react";
-import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
@@ -24,38 +23,12 @@ const features = [
   },
 ]
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
-
 export function Features() {
   return (
     <div className="bg-card py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <motion.div 
+        <div 
           className="mx-auto max-w-2xl lg:text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={itemVariants}
         >
           <h2 className="text-base font-semibold leading-7 text-accent">Your Path to Success</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">
@@ -64,16 +37,12 @@ export function Features() {
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             Our platform is packed with features designed to give you the ultimate advantage in your exam preparation.
           </p>
-        </motion.div>
-        <motion.dl 
+        </div>
+        <dl 
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={containerVariants}
         >
             {features.map((feature) => (
-              <motion.div key={feature.name} className="flex flex-col items-center text-center p-6 rounded-lg border border-transparent hover:border-primary/20 hover:shadow-lg transition-all" variants={itemVariants}>
+              <div key={feature.name} className="flex flex-col items-center text-center p-6 rounded-lg border border-transparent hover:border-primary/20 hover:shadow-lg transition-all">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary mb-4">
                   <feature.icon className="h-7 w-7 text-primary-foreground" aria-hidden="true" />
                 </div>
@@ -84,9 +53,9 @@ export function Features() {
                 <Button asChild variant="link" className="mt-4">
                   <Link href="/about">Learn More →</Link>
                 </Button>
-              </motion.div>
+              </div>
             ))}
-        </motion.dl>
+        </dl>
       </div>
     </div>
   )

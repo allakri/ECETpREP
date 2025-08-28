@@ -6,7 +6,6 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { motion } from "framer-motion";
 import { ArrowRight, FileText, Megaphone, Newspaper, PlayCircle, Trophy, Users, Star, BrainCircuit } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,49 +62,22 @@ const testimonials = [
   }
 ]
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    },
-  },
-};
-
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.2,
-        },
-    },
-};
-
-
 export default function CommunityHubPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow">
         {/* Hero Section */}
-        <motion.section 
+        <section 
           className="bg-primary/5 text-center py-16 md:py-24 px-4"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
         >
-          <motion.h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-primary font-headline" variants={itemVariants}>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-primary font-headline">
             Join the Learning Revolution 🚀
-          </motion.h1>
-          <motion.p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground" variants={itemVariants}>
+          </h1>
+          <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
             Connect with aspirants, get expert tips, and stay updated with the latest from ECET & Government Exam Prep.
-          </motion.p>
-          <motion.div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4" variants={itemVariants}>
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto">
                 <Link href="/chat">
                     <Megaphone className="mr-2 h-5 w-5" /> Start a Conversation
@@ -121,8 +93,8 @@ export default function CommunityHubPage() {
                     <Users className="mr-2 h-5 w-5" /> Partner With Us
                 </Link>
             </Button>
-          </motion.div>
-        </motion.section>
+          </div>
+        </section>
 
         {/* Pinned Announcement Banner */}
         <section className="bg-secondary/10 py-4">
@@ -156,27 +128,19 @@ export default function CommunityHubPage() {
         {/* Popular Topics Section */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
-            <motion.div 
+            <div 
                 className="text-center mb-12"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                variants={itemVariants}
             >
               <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">Popular Topics & Guides</h2>
               <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">Hand-picked articles and strategies to boost your preparation.</p>
-            </motion.div>
-            <motion.div 
+            </div>
+            <div 
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={containerVariants}
             >
               {popularTopics.map((topic) => {
                 const Icon = topic.icon
                 return (
-                <motion.div key={topic.title} variants={itemVariants}>
+                <div key={topic.title}>
                     <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
                         <Image src={topic.image} alt={topic.title} data-ai-hint={topic.imageHint} width={600} height={400} className="w-full h-48 object-cover"/>
                         <CardHeader className="flex-row gap-4 items-start">
@@ -192,25 +156,21 @@ export default function CommunityHubPage() {
                             <Button variant="link" className="p-0">Read More <ArrowRight className="ml-2 h-4 w-4" /></Button>
                         </CardContent>
                     </Card>
-                </motion.div>
+                </div>
               )})}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Student Voice Section */}
         <section className="py-16 md:py-24 bg-primary/5">
             <div className="container mx-auto px-4">
-                 <motion.div 
+                 <div 
                     className="text-center mb-12"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    variants={itemVariants}
                 >
                     <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">From Our Students</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">Real stories from students who are on their journey to success with us.</p>
-                </motion.div>
+                </div>
                 <Carousel
                     opts={{ align: "start", loop: true, }}
                     className="w-full max-w-5xl mx-auto"
@@ -252,22 +212,13 @@ export default function CommunityHubPage() {
         {/* Featured Video */}
         <section className="py-16 md:py-24 bg-background">
             <div className="container mx-auto px-4">
-                 <motion.div 
+                 <div 
                     className="text-center mb-12"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    variants={itemVariants}
                 >
                     <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">See How It Works</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">Take a quick 2-minute tour of our platform and see how we can help you succeed.</p>
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                >
+                </div>
+                <div>
                     <Card className="max-w-4xl mx-auto shadow-2xl overflow-hidden">
                         <div className="aspect-video relative group">
                             <Image src="https://placehold.co/1280x720.png" alt="Platform demo video" data-ai-hint="dashboard futuristic" layout="fill" objectFit="cover" />
@@ -278,7 +229,7 @@ export default function CommunityHubPage() {
                             </div>
                         </div>
                     </Card>
-                </motion.div>
+                </div>
             </div>
         </section>
 

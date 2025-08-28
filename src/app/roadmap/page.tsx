@@ -6,7 +6,6 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, CheckCircle2, Download, Lightbulb, Target, BookCopy, ShieldQuestion, Medal, Brain, Clock, Users, CalendarCheck, Repeat, Beaker, HeartPulse } from "lucide-react";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -154,28 +153,6 @@ const guideSections = [
   }
 ];
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    },
-  },
-};
-
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-        },
-    },
-};
-
 export default function RoadmapPage() {
   const [activeSection, setActiveSection] = useState(guideSections[0].id);
 
@@ -232,11 +209,8 @@ export default function RoadmapPage() {
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow bg-background">
-        <motion.div 
+        <div 
             className="text-center py-20 px-4 bg-primary/5"
-            initial="hidden"
-            animate="visible"
-            variants={itemVariants}
           >
             <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl font-headline">
                 Your Personalized Path to Success
@@ -244,7 +218,7 @@ export default function RoadmapPage() {
             <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground">
               A step-by-step, time-tested guide built by exam experts and toppers to help you ace the ECET & other government exams.
             </p>
-        </motion.div>
+        </div>
         
         <div className="container mx-auto px-4 py-16">
             <div className="flex flex-col lg:flex-row gap-12">
@@ -278,15 +252,11 @@ export default function RoadmapPage() {
 
                 {/* Main Content */}
                 <div className="lg:w-3/4 space-y-12">
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.1 }}
-                        variants={containerVariants}
+                    <div
                         className="space-y-12"
                     >
                         {guideSections.map((section) => (
-                          <motion.div id={section.id} key={section.id} variants={itemVariants}>
+                          <div id={section.id} key={section.id}>
                             <Card className="shadow-lg bg-card border-border scroll-mt-24">
                                 <CardHeader className="flex flex-row items-center gap-4">
                                      <div className="p-3 bg-accent/10 rounded-lg">
@@ -298,16 +268,11 @@ export default function RoadmapPage() {
                                     {section.content}
                                 </CardContent>
                               </Card>
-                          </motion.div>
+                          </div>
                         ))}
-                    </motion.div>
+                    </div>
                     
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
-                        variants={itemVariants}
-                       >
+                    <div>
                          <Card className="bg-secondary/10 border-secondary/20">
                             <CardHeader>
                                 <CardTitle className="font-headline text-secondary">Downloadable Resources</CardTitle>
@@ -319,7 +284,7 @@ export default function RoadmapPage() {
                                 <Button variant="outline" onClick={() => handleDownload('subject-checklist.pdf')}><Download className="mr-2 h-4 w-4" /> Subject Checklist</Button>
                             </CardContent>
                          </Card>
-                      </motion.div>
+                      </div>
                 </div>
             </div>
         </div>

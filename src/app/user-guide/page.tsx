@@ -6,7 +6,6 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { PlayCircle, ArrowRight, Lightbulb, CheckCircle, Smartphone, Tablet, Laptop, HelpCircle, FileSignature, BarChart, Bot } from "lucide-react";
 import Image from "next/image";
 
@@ -56,40 +55,14 @@ const faqs = [
     }
 ];
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    },
-  },
-};
-
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-        },
-    },
-};
-
-
 export default function UserGuidePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow">
         {/* Hero Section */}
-        <motion.div 
+        <div 
             className="text-center py-16 md:py-24 px-4 bg-primary/5"
-            initial="hidden"
-            animate="visible"
-            variants={itemVariants}
         >
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary font-headline">
             🚀 Get the Most Out of Your Prep Journey
@@ -101,19 +74,15 @@ export default function UserGuidePage() {
             <Button size="lg" className="w-full sm:w-auto"><PlayCircle className="mr-2 h-5 w-5" /> Watch Quick Demo</Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto">Start Learning Now <ArrowRight className="ml-2 h-5 w-5" /></Button>
           </div>
-        </motion.div>
+        </div>
         
         {/* Walkthrough Section */}
         <div className="py-16 md:py-24 px-4 container mx-auto">
-             <motion.div 
+             <div 
                 className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.1 }}
-                variants={containerVariants}
             >
                 {guideSteps.map((step, index) => (
-                    <motion.div key={step.title} variants={itemVariants}>
+                    <div key={step.title}>
                         <Card className="shadow-lg hover:shadow-primary/20 transition-shadow duration-300 border-none overflow-hidden">
                             <CardContent className="p-0">
                                <Image src={step.image} alt={step.title} data-ai-hint={step.imageHint} width={600} height={400} className="w-full h-56 object-cover" />
@@ -134,21 +103,16 @@ export default function UserGuidePage() {
                                </div>
                             </CardContent>
                         </Card>
-                    </motion.div>
+                    </div>
                 ))}
-            </motion.div>
+            </div>
         </div>
 
         {/* FAQs and Compatibility Section */}
         <div className="py-16 md:py-24 bg-primary/5">
             <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-5 gap-12">
                 <div className="lg:col-span-3">
-                    <motion.div 
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
-                        variants={itemVariants}
-                    >
+                    <div>
                         <h2 className="text-3xl font-bold text-primary font-headline mb-6">Frequently Asked Questions</h2>
                         <Accordion type="single" collapsible className="w-full bg-card p-4 rounded-lg shadow-md">
                         {faqs.map((faq, index) => (
@@ -160,15 +124,10 @@ export default function UserGuidePage() {
                             </AccordionItem>
                         ))}
                         </Accordion>
-                    </motion.div>
+                    </div>
                 </div>
                 <div className="lg:col-span-2">
-                     <motion.div 
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
-                        variants={itemVariants}
-                    >
+                     <div>
                         <Card className="shadow-md">
                             <CardHeader>
                                 <CardTitle className="font-headline text-primary">Fully Responsive</CardTitle>
@@ -189,7 +148,7 @@ export default function UserGuidePage() {
                                 </div>
                             </CardContent>
                         </Card>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </div>
