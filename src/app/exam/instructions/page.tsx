@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
@@ -7,8 +6,20 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
-import { Check, AlertTriangle, Clock, MousePointerSquareDashed, ArrowRight } from "lucide-react";
+import { Check, AlertTriangle, Clock, MousePointerSquareDashed, ArrowRight, Fullscreen } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+
 
 const instructions = [
   { icon: Clock, text: "The exam has a duration of 2 hours. The timer will start as soon as you click 'Start Exam'." },
@@ -22,8 +33,12 @@ export default function ExamInstructionsPage() {
   const searchParams = useSearchParams();
 
   const handleStartExam = () => {
-    // Forward the existing search params to the exam page
-    router.push(`/exam?${searchParams.toString()}`);
+    // Request fullscreen, then navigate
+    document.documentElement.requestFullscreen().catch(err => {
+      console.warn(`Fullscreen request failed: ${err.message}. Proceeding without fullscreen.`);
+    }).finally(() => {
+        router.push(`/exam?${searchParams.toString()}`);
+    });
   };
 
   return (
@@ -63,9 +78,29 @@ export default function ExamInstructionsPage() {
               </div>
             </CardContent>
             <div className="p-6 flex justify-center">
-              <Button onClick={handleStartExam} size="lg" className="font-bold text-lg">
-                Start Exam <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+               <AlertDialog>
+                <AlertDialogTrigger asChild>
+                    <Button size="lg" className="font-bold text-lg">
+                        Start Exam <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                    <AlertDialogHeader>
+                    <AlertDialogTitle className="flex items-center gap-2">
+                        <Fullscreen className="h-6 w-6" /> Fullscreen Exam Mode
+                    </AlertDialogTitle>
+                    <AlertDialogDescription>
+                        For the best experience and to simulate a real testing environment, this exam will start in fullscreen mode. Please click 'Continue' to proceed.
+                    </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                    <AlertDialogAction onClick={handleStartExam}>
+                        Continue
+                    </AlertDialogAction>
+                    </AlertDialogFooter>
+                </AlertDialogContent>
+                </AlertDialog>
             </div>
           </Card>
         </motion.div>
