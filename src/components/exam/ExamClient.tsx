@@ -15,7 +15,6 @@ import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, AlertTriang
 import { useToast } from '@/hooks/use-toast';
 import Latex from 'react-latex-next';
 import 'katex/dist/katex.min.css';
-import { Breadcrumbs } from '../layout/Breadcrumbs';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
 const MAX_VIOLATIONS = 3;
@@ -53,12 +52,25 @@ export default function ExamClient() {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleFullscreenChange = () => {
-    setIsFullscreen(!!document.fullscreenElement);
+    const isCurrentlyFullscreen = !!document.fullscreenElement;
+    setIsFullscreen(isCurrentlyFullscreen);
+    
+    if (!isCurrentlyFullscreen && questions) { // Only trigger violation if exam has started
+        violationCount.current += 1;
+        if (violationCount.current >= MAX_VIOLATIONS) {
+            toast({ title: "Exam Terminated", description: `Exam submitted due to ${MAX_VIOLATIONS} violations.`, variant: 'destructive' });
+            handleSubmit();
+        } else {
+            setIsViolationDialogOpen(true);
+        }
+    }
   };
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+      document.documentElement.requestFullscreen().catch(err => {
+        alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+      });
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
@@ -71,7 +83,7 @@ export default function ExamClient() {
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
     };
-  }, []);
+  }, [questions]); // Rerun effect if questions load
 
 
   const handleSubmit = useCallback(() => {
@@ -411,15 +423,18 @@ export default function ExamClient() {
             </div>
             <AlertDialogTitle className="text-center font-headline text-2xl text-destructive">Warning: Exam Violation</AlertDialogTitle>
             <AlertDialogDescription className="text-center">
-              You have switched away from the exam window. This is a violation of the rules.
+              You have switched away from the exam window or exited fullscreen. This is a violation of the rules.
               <br />
               You have <strong className="font-bold">{MAX_VIOLATIONS - violationCount.current}</strong> warning(s) remaining.
               <br />
-              If you switch away again, your exam may be terminated.
+              If you violate the rules again, your exam may be terminated. Please re-enter fullscreen to continue.
             </AlertDialogDescription>
           <AlertDialogFooter>
-             <AlertDialogAction onClick={() => setIsViolationDialogOpen(false)} className="w-full">
-                I Understand, Continue Exam
+             <AlertDialogAction onClick={() => {
+                setIsViolationDialogOpen(false);
+                toggleFullscreen();
+              }} className="w-full">
+                I Understand, Go Fullscreen
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -449,5 +464,3 @@ export default function ExamClient() {
     </div>
   );
 }
-
-    
