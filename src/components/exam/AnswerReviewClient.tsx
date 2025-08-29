@@ -73,7 +73,8 @@ export default function AnswerReviewClient() {
     const storedData = sessionStorage.getItem(sessionKey);
     if (storedData) {
         try {
-            setExamData(JSON.parse(storedData));
+            const parsedData = JSON.parse(storedData);
+            setExamData(parsedData);
             // Important: Clean up session storage after loading data
             sessionStorage.removeItem(sessionKey);
         } catch(e) {
@@ -176,8 +177,7 @@ export default function AnswerReviewClient() {
     }
   };
 
-
-  if (!isMounted || !examData) {
+  if (!isMounted || !examData || !examData.questions || examData.questions.length === 0) {
     return <LoadingSkeleton />;
   }
   
@@ -394,5 +394,3 @@ export default function AnswerReviewClient() {
     </div>
   );
 }
-
-    

@@ -43,12 +43,20 @@ export default function ResultsClient() {
     }
     
     const { answers, questions } = examData;
-    const total = questions.length;
     let correct = 0;
+    
+    questions.forEach(q => {
+        if (answers?.[q.id] === q.correctAnswer) {
+            correct++;
+        }
+    });
+
     const attempted = Object.keys(answers || {}).length;
+    const total = questions.length;
+    const incorrect = attempted - correct;
+    const unanswered = total - attempted;
     
     const subjectPerf: Record<string, { correct: number, total: number }> = {};
-
     questions.forEach(q => {
         if (!subjectPerf[q.topic]) {
             subjectPerf[q.topic] = { correct: 0, total: 0 };
@@ -56,14 +64,10 @@ export default function ResultsClient() {
         subjectPerf[q.topic].total++;
 
         if (answers?.[q.id] === q.correctAnswer) {
-            correct++;
             subjectPerf[q.topic].correct++;
         }
     });
     
-    const incorrect = attempted - correct;
-    const unanswered = total - attempted;
-
     const subjectPerformanceWithAccuracy: Record<string, SubjectPerformance> = {};
     for(const topic in subjectPerf){
         const { correct: correctAnswers, total: totalAnswers } = subjectPerf[topic];
@@ -99,7 +103,6 @@ export default function ResultsClient() {
       };
       await updateUserProgress(newScoreData);
       setIsProgressSaved(true); 
-      // Only remove item after successful save
       sessionStorage.removeItem(sessionKey);
     } catch (error) {
       console.error("Error saving progress:", error);
@@ -112,7 +115,6 @@ export default function ResultsClient() {
         router.replace('/');
         return;
     }
-    // Load data only once
     if (!examData) {
         const storedData = sessionStorage.getItem(sessionKey);
         if (storedData) {
@@ -124,8 +126,6 @@ export default function ResultsClient() {
                 router.replace('/');
             }
         } else {
-            // If there's no data, wait a moment before redirecting
-            // This can prevent race conditions on fast refreshes
             setTimeout(() => {
                 if (!sessionStorage.getItem(sessionKey)) {
                    router.replace('/'); 
@@ -137,7 +137,6 @@ export default function ResultsClient() {
 
 
   useEffect(() => {
-    // Attempt to save progress once examData is loaded and user is available
     if (examData && user && !isProgressSaved) {
       saveProgress();
     }
@@ -345,3 +344,4 @@ export default function ResultsClient() {
     </div>
   );
 }
+
