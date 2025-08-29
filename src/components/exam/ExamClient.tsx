@@ -88,6 +88,9 @@ export default function ExamClient() {
 
 
   const handleSubmit = useCallback(() => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    }
     localStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
     if (questions) {
       localStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
