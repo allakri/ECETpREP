@@ -40,44 +40,19 @@ export default function ResultsClient() {
   const searchParams = useSearchParams();
   const { user, loading, updateUserProgress } = useAuth();
   const [examData, setExamData] = useState<{answers: AnswerSheet, questions: Question[], examName: string} | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
   const [isProgressSaved, setIsProgressSaved] = useState(false);
   const [examCompletionDate] = useState(new Date());
 
-  useEffect(() => {
-    setIsMounted(true);
-    const sessionKey = searchParams.get('sessionKey');
-    if (!sessionKey) {
-        router.replace('/');
-        return;
-    }
-    
-    const storedData = sessionStorage.getItem(sessionKey);
-
-    if (storedData) {
-      try {
-        const parsedData = JSON.parse(storedData);
-        setExamData(parsedData);
-        // Important: Clean up session storage immediately after loading data
-        sessionStorage.removeItem(sessionKey);
-      } catch (e) {
-        console.error("Failed to parse session data", e);
-        router.replace('/');
-      }
-    } else {
-      // No results to show, redirect
-      router.replace('/'); 
-    }
-  }, [router, searchParams]);
+  const sessionKey = useMemo(() => searchParams.get('sessionKey'), [searchParams]);
 
   const { score, correctCount, incorrectCount, unansweredCount, accuracy, attemptedCount, totalQuestions, subjectPerformance } = useMemo(() => {
-    if (!examData || !examData.questions) {
+    if (!examData || !examData.questions || examData.questions.length === 0) {
       return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, accuracy: 0, attemptedCount: 0, totalQuestions: 0, subjectPerformance: {} };
     }
     
     const { answers, questions } = examData;
     let correct = 0;
-    const answeredIds = Object.keys(answers).map(Number);
+    const answeredIds = Object.keys(answers || {}).map(Number);
     const answered = answeredIds.length;
     const total = questions.length;
     
@@ -89,7 +64,7 @@ export default function ResultsClient() {
         }
         subjectPerf[q.topic].total++;
 
-        if (answers[q.id] === q.correctAnswer) {
+        if (answers?.[q.id] === q.correctAnswer) {
             correct++;
             subjectPerf[q.topic].correct++;
         }
@@ -120,7 +95,7 @@ export default function ResultsClient() {
   }, [examData]);
   
   const saveProgress = useCallback(async () => {
-    if (loading || !user || !examData || isProgressSaved) {
+    if (loading || !user || !examData || isProgressSaved || !sessionKey) {
       return;
     }
     
@@ -132,19 +107,46 @@ export default function ResultsClient() {
       };
       await updateUserProgress(newScoreData);
       setIsProgressSaved(true); 
-
+      // Cleanup happens only after successful save
+      sessionStorage.removeItem(sessionKey);
     } catch (error) {
       console.error("Error saving progress:", error);
     }
-  }, [user, loading, isProgressSaved, examData, score, updateUserProgress]);
+  }, [user, loading, isProgressSaved, examData, score, updateUserProgress, sessionKey]);
+  
   
   useEffect(() => {
-    if (isMounted && examData && !loading && !isProgressSaved) {
+    // Load data from session storage only once on mount
+    if (!sessionKey) {
+        router.replace('/');
+        return;
+    }
+    if (!examData) {
+        const storedData = sessionStorage.getItem(sessionKey);
+        if (storedData) {
+            try {
+                const parsedData = JSON.parse(storedData);
+                setExamData(parsedData);
+            } catch (e) {
+                console.error("Failed to parse session data", e);
+                router.replace('/');
+            }
+        } else {
+            router.replace('/'); 
+        }
+    }
+  }, [sessionKey, router, examData]);
+
+
+  useEffect(() => {
+    // This effect runs when examData is set, and handles saving progress
+    if (examData && !loading && !isProgressSaved) {
       saveProgress();
     }
-  }, [isMounted, examData, loading, saveProgress, isProgressSaved]);
+  }, [examData, loading, isProgressSaved, saveProgress]);
 
-  if (!isMounted || !examData) {
+
+  if (!examData) {
     return (
         <div className="flex h-screen w-full items-center justify-center bg-secondary/20">
             <Skeleton className="h-64 w-full max-w-2xl"/>
@@ -316,8 +318,10 @@ export default function ResultsClient() {
                 </CardHeader>
                 <CardContent>
                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => {
-                        const tempSessionKey = `temp-review-session-${Date.now()}`;
-                        sessionStorage.setItem(tempSessionKey, JSON.stringify(examData));
+                        const tempAnswers = { ...examData.answers };
+                        const tempQuestions = [...examData.questions];
+                        sessionStorage.setItem('ecetExamAnswers', JSON.stringify(tempAnswers));
+                        sessionStorage.setItem('ecetExamQuestions', JSON.stringify(tempQuestions));
                     }}>
                         <Link href="/chat">
                             Chat with AI <ArrowRight className="ml-2 h-4 w-4" />
@@ -344,3 +348,5 @@ export default function ResultsClient() {
     </div>
   );
 }
+
+    
