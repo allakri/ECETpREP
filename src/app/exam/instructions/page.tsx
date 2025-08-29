@@ -6,8 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
-import { Check, AlertTriangle, Clock, MousePointerSquareDashed, ArrowRight, Fullscreen } from "lucide-react";
+import { Check, AlertTriangle, Clock, FileText, ArrowRight, Fullscreen, BookCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import { useAuth } from "@/hooks/use-auth";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -20,20 +22,59 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
+const details = [
+    { icon: Clock, text: "Duration: 2 hours (120 minutes)" },
+    { icon: FileText, text: "Total Questions: 200" },
+    { icon: BookCheck, text: "Multiple Choice Questions (MCQ)" },
+];
 
 const instructions = [
-  { icon: Clock, text: "The exam has a duration of 2 hours. The timer will start as soon as you click 'Start Exam'." },
-  { icon: AlertTriangle, text: "Do not switch tabs or minimize the browser window. Doing so multiple times will result in automatic submission." },
-  { icon: Check, text: "Ensure you have a stable internet connection throughout the exam." },
-  { icon: MousePointerSquareDashed, text: "Your answers are saved automatically when you select an option. You can change your answers anytime before final submission." }
+    "Each question has 4 options (A, B, C, D)",
+    "You can mark questions for review",
+    "Navigate between questions freely",
+    "Submit before time expires",
+    "Auto-submit when time is up"
 ];
+
+
+const InstructionsPageSkeleton = () => (
+    <div className="flex flex-col min-h-screen bg-background">
+      <AppHeader />
+      <main className="flex-grow flex items-center justify-center p-4">
+          <Card className="w-full max-w-4xl shadow-lg">
+             <CardHeader className="bg-primary text-primary-foreground p-4">
+                <Skeleton className="h-8 w-1/3" />
+             </CardHeader>
+             <CardContent className="p-6 md:p-8 space-y-6">
+                <Skeleton className="h-16 w-full" />
+                <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                        <Skeleton className="h-6 w-1/4" />
+                        <Skeleton className="h-12 w-full" />
+                    </div>
+                    <div className="space-y-4">
+                        <Skeleton className="h-6 w-1/4" />
+                        <Skeleton className="h-12 w-full" />
+                    </div>
+                </div>
+                 <Skeleton className="h-12 w-full" />
+                 <div className="text-center pt-4">
+                    <Skeleton className="h-12 w-48 mx-auto" />
+                 </div>
+             </CardContent>
+          </Card>
+      </main>
+      <AppFooter />
+    </div>
+);
+
 
 export default function ExamInstructionsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { user, loading } = useAuth();
 
   const handleStartExam = () => {
-    // Request fullscreen, then navigate
     document.documentElement.requestFullscreen().catch(err => {
       console.warn(`Fullscreen request failed: ${err.message}. Proceeding without fullscreen.`);
     }).finally(() => {
@@ -41,67 +82,94 @@ export default function ExamInstructionsPage() {
     });
   };
 
+  if (loading || !user) {
+      return <InstructionsPageSkeleton />;
+  }
+
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="flex flex-col min-h-screen bg-secondary/20">
       <AppHeader />
-      <main className="flex-grow flex items-center justify-center p-4">
+      <main className="flex-grow flex items-center justify-center p-4 md:p-8">
         <motion.div
+          className="w-full max-w-4xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Card className="w-full max-w-2xl shadow-2xl border-primary/20">
-            <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-headline text-primary">Exam Instructions</CardTitle>
-              <CardDescription>Please read the following instructions carefully before starting the exam.</CardDescription>
+          <Card className="shadow-2xl border-border overflow-hidden">
+            <CardHeader className="bg-primary text-primary-foreground p-4">
+              <CardTitle className="text-2xl flex items-center gap-2">
+                <FileText />
+                ECET Examination Instructions
+              </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <ul className="space-y-4">
-                {instructions.map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                      className="flex items-start gap-4 p-4 bg-muted/50 rounded-lg"
-                    >
-                      <Icon className="h-6 w-6 text-accent shrink-0 mt-1" />
-                      <span className="text-foreground">{item.text}</span>
-                    </motion.li>
-                  );
-                })}
-              </ul>
-              <div className="p-4 bg-primary/10 border border-primary/20 rounded-lg text-center">
-                <p className="font-semibold text-primary">Wishing you all the very best for your exam. Stay calm and focused!</p>
+            <CardContent className="p-6 md:p-8 space-y-8 bg-card">
+              <div className="bg-blue-100/50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 p-4 rounded-lg">
+                <p className="font-bold">Welcome, {user.name}!</p>
+                <p>Email: {user.email}</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Exam Details */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-foreground">Exam Details</h3>
+                  <ul className="space-y-3">
+                    {details.map((item, index) => {
+                      const Icon = item.icon;
+                      return (
+                        <li key={index} className="flex items-center gap-3">
+                          <Icon className="h-5 w-5 text-primary" />
+                          <span className="text-muted-foreground">{item.text}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+
+                {/* Instructions */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-foreground">Instructions</h3>
+                  <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+                    {instructions.map((text, index) => (
+                      <li key={index}>{text}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Warning */}
+              <div className="flex items-center gap-3 p-4 bg-yellow-100/50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 rounded-lg border border-yellow-300/50 dark:border-yellow-700/50">
+                <AlertTriangle className="h-5 w-5" />
+                <p className="font-medium">Once you start the exam, the timer will begin and cannot be paused. Make sure you have a stable internet connection.</p>
+              </div>
+
+              {/* Start Button */}
+              <div className="text-center pt-4">
+                 <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                        <Button size="lg" className="font-bold text-lg bg-green-600 hover:bg-green-700 text-white px-8 py-6">
+                            Start Examination <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                        <AlertDialogHeader>
+                        <AlertDialogTitle className="flex items-center gap-2">
+                            <Fullscreen className="h-6 w-6" /> Fullscreen Exam Mode
+                        </AlertDialogTitle>
+                        <AlertDialogDescription>
+                            For the best experience and to simulate a real testing environment, this exam will start in fullscreen mode. Please click 'Continue' to proceed.
+                        </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogAction onClick={handleStartExam}>
+                            Continue
+                        </AlertDialogAction>
+                        </AlertDialogFooter>
+                    </AlertDialogContent>
+                </AlertDialog>
               </div>
             </CardContent>
-            <div className="p-6 flex justify-center">
-               <AlertDialog>
-                <AlertDialogTrigger asChild>
-                    <Button size="lg" className="font-bold text-lg">
-                        Start Exam <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                    <AlertDialogHeader>
-                    <AlertDialogTitle className="flex items-center gap-2">
-                        <Fullscreen className="h-6 w-6" /> Fullscreen Exam Mode
-                    </AlertDialogTitle>
-                    <AlertDialogDescription>
-                        For the best experience and to simulate a real testing environment, this exam will start in fullscreen mode. Please click 'Continue' to proceed.
-                    </AlertDialogDescription>
-                    </AlertDialogHeader>
-                    <AlertDialogFooter>
-                    <AlertDialogCancel>Cancel</AlertDialogCancel>
-                    <AlertDialogAction onClick={handleStartExam}>
-                        Continue
-                    </AlertDialogAction>
-                    </AlertDialogFooter>
-                </AlertDialogContent>
-                </AlertDialog>
-            </div>
           </Card>
         </motion.div>
       </main>
@@ -109,3 +177,4 @@ export default function ExamInstructionsPage() {
     </div>
   );
 }
+
