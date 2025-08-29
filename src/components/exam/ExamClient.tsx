@@ -11,10 +11,11 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, AlertTriangle, Loader2, Expand, Shrink } from 'lucide-react';
+import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, AlertTriangle, Loader2, Expand, Shrink, PanelRightOpen, PanelLeftOpen } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Latex from 'react-latex-next';
 import 'katex/dist/katex.min.css';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
 const MAX_VIOLATIONS = 3;
@@ -287,67 +288,8 @@ export default function ExamClient() {
     return 'unanswered';
   };
 
-  return (
-    <div className="flex h-screen flex-col md:flex-row bg-background text-foreground">
-      <main className="flex-1 flex flex-col p-4 md:p-6 overflow-y-auto">
-        <header className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
-          <h1 className="text-xl md:text-2xl font-headline text-primary text-center sm:text-left">{examName}</h1>
-          <div className="flex items-center gap-2 sm:gap-4">
-            <div className={`flex items-center gap-2 font-bold p-2 rounded-lg ${timeLeft < 300 ? 'text-destructive animate-pulse' : 'text-foreground'}`}>
-              <Timer className="h-6 w-6 text-accent" />
-              <span className="font-mono text-xl">{formatTime(timeLeft)}</span>
-            </div>
-            <Button variant="outline" size="icon" onClick={toggleFullscreen}>
-              {isFullscreen ? <Shrink className="h-5 w-5" /> : <Expand className="h-5 w-5" />}
-              <span className="sr-only">{isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}</span>
-            </Button>
-            <Button variant="outline" size="sm" onClick={() => setIsExitDialogOpen(true)}><LogOut className="mr-2 h-4 w-4" /> Exit</Button>
-          </div>
-        </header>
-
-        <Card className="flex-1 flex flex-col shadow-lg">
-          <CardHeader>
-            <CardTitle className="font-headline text-xl">
-              Question {currentQuestionIndex + 1}/{questions.length}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="flex-1">
-            <p className="mb-6 text-lg"><Latex>{currentQuestion.question}</Latex></p>
-            <RadioGroup
-              value={answers[currentQuestion.id] || ''}
-              onValueChange={(value) => handleAnswerSelect(currentQuestion.id, value)}
-              className="space-y-4"
-            >
-              {currentQuestion.options.map((option, index) => (
-                <div key={index} className="flex items-center space-x-3 transition-all duration-200 rounded-lg p-3 hover:bg-primary/5 dark:hover:bg-primary/10">
-                  <RadioGroupItem value={option} id={`q${currentQuestion.id}-op${index}`} />
-                  <Label htmlFor={`q${currentQuestion.id}-op${index}`} className="text-base cursor-pointer flex-1">
-                    <Latex>{option}</Latex>
-                  </Label>
-                </div>
-              ))}
-            </RadioGroup>
-          </CardContent>
-          <CardFooter className="flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 border-t pt-6">
-            <div className="flex gap-2 flex-wrap justify-center">
-              <Button onClick={() => handleMarkForReview(currentQuestion.id)} variant={isMarked ? "default" : "outline"}>
-                <BookMarked className="mr-2 h-4 w-4" /> {isMarked ? 'Unmark' : 'Mark Review'}
-              </Button>
-              <Button onClick={clearResponse} variant="ghost">Clear Response</Button>
-            </div>
-            <div className="flex gap-2">
-              <Button onClick={() => setCurrentQuestionIndex(prev => Math.max(0, prev - 1))} disabled={currentQuestionIndex === 0}>
-                <ChevronLeft className="mr-2 h-4 w-4" /> Prev
-              </Button>
-              <Button onClick={() => setCurrentQuestionIndex(prev => Math.min(questions.length - 1, prev + 1))} disabled={currentQuestionIndex === questions.length - 1}>
-                Next <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </CardFooter>
-        </Card>
-      </main>
-
-      <aside className="w-full md:w-80 lg:w-96 bg-card border-l p-4 md:p-6 flex flex-col gap-6">
+  const PaletteContent = () => (
+    <div className="flex flex-col gap-6 h-full">
         <div className="text-center">
             <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto flex items-center justify-center mb-2">
                 <img src="https://placehold.co/100x100.png" alt="User" data-ai-hint="user avatar" className="rounded-full" />
@@ -395,6 +337,86 @@ export default function ExamClient() {
         <Button className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg" onClick={() => setIsSubmitDialogOpen(true)}>
           <Send className="mr-2 h-4 w-4" /> Submit Exam
         </Button>
+    </div>
+  );
+
+  return (
+    <div className="flex h-screen flex-col md:flex-row bg-background text-foreground">
+      <main className="flex-1 flex flex-col p-4 md:p-6 overflow-y-auto">
+        <header className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
+          <h1 className="text-xl md:text-2xl font-headline text-primary text-center sm:text-left">{examName}</h1>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <div className={`flex items-center gap-2 font-bold p-2 rounded-lg ${timeLeft < 300 ? 'text-destructive animate-pulse' : 'text-foreground'}`}>
+              <Timer className="h-6 w-6 text-accent" />
+              <span className="font-mono text-xl">{formatTime(timeLeft)}</span>
+            </div>
+            <Button variant="outline" size="icon" onClick={toggleFullscreen} className="hidden md:inline-flex">
+              {isFullscreen ? <Shrink className="h-5 w-5" /> : <Expand className="h-5 w-5" />}
+              <span className="sr-only">{isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}</span>
+            </Button>
+             <Sheet>
+                <SheetTrigger asChild>
+                    <Button variant="outline" className="md:hidden"><PanelRightOpen className="mr-2 h-4 w-4" /> View Palette</Button>
+                </SheetTrigger>
+                <SheetContent side="bottom" className="h-[80vh]">
+                    <SheetHeader>
+                        <SheetTitle>Exam Controls</SheetTitle>
+                    </SheetHeader>
+                    <div className="p-4 h-full">
+                       <PaletteContent />
+                    </div>
+                </SheetContent>
+            </Sheet>
+            <Button variant="outline" size="sm" onClick={() => setIsExitDialogOpen(true)}><LogOut className="mr-2 h-4 w-4" /> Exit</Button>
+          </div>
+        </header>
+
+        <Card className="flex-1 flex flex-col shadow-lg">
+          <CardHeader>
+            <CardTitle className="font-headline text-xl">
+              Question {currentQuestionIndex + 1}/{questions.length}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex-1">
+            <ScrollArea className="h-[calc(100%-2rem)]">
+              <p className="mb-6 text-lg pr-4"><Latex>{currentQuestion.question}</Latex></p>
+              <RadioGroup
+                value={answers[currentQuestion.id] || ''}
+                onValueChange={(value) => handleAnswerSelect(currentQuestion.id, value)}
+                className="space-y-4 pr-4"
+              >
+                {currentQuestion.options.map((option, index) => (
+                  <div key={index} className="flex items-center space-x-3 transition-all duration-200 rounded-lg p-3 hover:bg-primary/5 dark:hover:bg-primary/10">
+                    <RadioGroupItem value={option} id={`q${currentQuestion.id}-op${index}`} />
+                    <Label htmlFor={`q${currentQuestion.id}-op${index}`} className="text-base cursor-pointer flex-1">
+                      <Latex>{option}</Latex>
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+            </ScrollArea>
+          </CardContent>
+          <CardFooter className="flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 border-t pt-6">
+            <div className="flex gap-2 flex-wrap justify-center">
+              <Button onClick={() => handleMarkForReview(currentQuestion.id)} variant={isMarked ? "default" : "outline"}>
+                <BookMarked className="mr-2 h-4 w-4" /> {isMarked ? 'Unmark' : 'Mark Review'}
+              </Button>
+              <Button onClick={clearResponse} variant="ghost">Clear Response</Button>
+            </div>
+            <div className="flex gap-2">
+              <Button onClick={() => setCurrentQuestionIndex(prev => Math.max(0, prev - 1))} disabled={currentQuestionIndex === 0}>
+                <ChevronLeft className="mr-2 h-4 w-4" /> Prev
+              </Button>
+              <Button onClick={() => setCurrentQuestionIndex(prev => Math.min(questions.length - 1, prev + 1))} disabled={currentQuestionIndex === questions.length - 1}>
+                Next <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </CardFooter>
+        </Card>
+      </main>
+
+      <aside className="w-full md:w-80 lg:w-96 bg-card border-l p-4 md:p-6 hidden md:flex flex-col gap-6">
+        <PaletteContent />
       </aside>
 
       <AlertDialog open={isSubmitDialogOpen} onOpenChange={setIsSubmitDialogOpen}>
@@ -470,5 +492,3 @@ export default function ExamClient() {
     </div>
   );
 }
-
-    
