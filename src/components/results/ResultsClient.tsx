@@ -71,7 +71,7 @@ export default function ResultsClient() {
   }, [router, searchParams]);
 
   const { score, correctCount, incorrectCount, unansweredCount, accuracy, attemptedCount, totalQuestions, subjectPerformance } = useMemo(() => {
-    if (!examData) {
+    if (!examData || !examData.questions) {
       return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, accuracy: 0, attemptedCount: 0, totalQuestions: 0, subjectPerformance: {} };
     }
     
@@ -344,5 +344,3 @@ export default function ResultsClient() {
     </div>
   );
 }
-
-    
