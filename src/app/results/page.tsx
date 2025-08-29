@@ -1,3 +1,4 @@
+
 import ResultsClient from "@/components/results/ResultsClient";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Suspense } from "react";
@@ -42,3 +43,5 @@ export default function ResultsPage() {
       </Suspense>
     );
 }
+
+    

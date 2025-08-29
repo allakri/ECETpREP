@@ -57,22 +57,18 @@ export default function ExamClient() {
     if (isSubmitting.current) return;
     isSubmitting.current = true;
     
-    // Save final answers
-    sessionStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
-    if (questions) {
-      sessionStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
-      sessionStorage.setItem('ecetExamName', examName);
+    // Save final answers and questions to sessionStorage
+    if (questions && sessionKey) {
+        sessionStorage.setItem(sessionKey, JSON.stringify({
+            answers,
+            questions,
+            examName,
+        }));
     }
     
-    // Clean up the current exam session state
-    if (sessionKey) {
-        sessionStorage.removeItem(sessionKey);
-    }
-
-    // Function to navigate to results
     const navigateToResults = () => {
         // A small timeout helps ensure state changes are processed before navigation
-        setTimeout(() => router.replace('/results'), 100);
+        setTimeout(() => router.replace(`/results?sessionKey=${sessionKey}`), 100);
     };
 
     // Exit fullscreen if active, then navigate
@@ -138,7 +134,7 @@ export default function ExamClient() {
     let currentSessionKey = '';
     if(customExamKey) currentSessionKey = customExamKey;
     else if(offlineTestKey) currentSessionKey = offlineTestKey;
-    else if(examSlug && year && examBoard) currentSessionKey = `exam-session-${examBoard}-${examSlug}-${year}`;
+    else if(examSlug && year && examBoard) currentSessionKey = `exam-session-${examBoard}-${examSlug}-${year}-${Date.now()}`;
     
     if(!currentSessionKey){
         toast({ title: 'Error', description: 'Invalid exam session. Redirecting...', variant: 'destructive' });
@@ -146,6 +142,10 @@ export default function ExamClient() {
         return;
     }
     
+    // Clear any previous session data before starting a new one.
+    if (sessionStorage.getItem(currentSessionKey)) {
+        sessionStorage.removeItem(currentSessionKey);
+    }
     setSessionKey(currentSessionKey);
   }, [searchParams, router, toast]);
 
@@ -525,3 +525,5 @@ export default function ExamClient() {
     </div>
   );
 }
+
+    

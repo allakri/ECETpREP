@@ -3,6 +3,14 @@ import AnswerReviewClient from '@/components/exam/AnswerReviewClient';
 import { AppHeader } from '@/components/layout/AppHeader';
 import { AppFooter } from '@/components/layout/AppFooter';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
+import { Suspense } from 'react';
+import { Loader2 } from 'lucide-react';
+
+const LoadingFallback = () => (
+    <div className="flex h-screen w-full items-center justify-center bg-background">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+)
 
 export default function AnswerReviewPage() {
   return (
@@ -10,9 +18,13 @@ export default function AnswerReviewPage() {
       <AppHeader />
       <main className="flex-grow pt-8">
         <Breadcrumbs />
-        <AnswerReviewClient />
+        <Suspense fallback={<LoadingFallback />}>
+          <AnswerReviewClient />
+        </Suspense>
       </main>
       <AppFooter />
     </div>
   );
 }
+
+    

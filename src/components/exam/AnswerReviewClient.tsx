@@ -1,9 +1,8 @@
 
-
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import type { AnswerSheet, Question } from '@/lib/types';
 import type { MessageData } from 'genkit/experimental/ai';
 import { Button } from '@/components/ui/button';
@@ -43,10 +42,10 @@ type ChatMessage = {
 
 export default function AnswerReviewClient() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { toast } = useToast();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState<AnswerSheet | null>(null);
-  const [questions, setQuestions] = useState<Question[] | null>(null);
+  const [examData, setExamData] = useState<{answers: AnswerSheet, questions: Question[]} | null>(null);
   const [isMounted, setIsMounted] = useState(false);
   const [aiExplanations, setAiExplanations] = useState<Record<number, string>>({});
   const [loadingExplanation, setLoadingExplanation] = useState<number | null>(null);
@@ -60,23 +59,40 @@ export default function AnswerReviewClient() {
 
   useEffect(() => {
     setIsMounted(true);
-    const storedAnswers = sessionStorage.getItem('ecetExamAnswers');
-    const storedQuestions = sessionStorage.getItem('ecetExamQuestions');
-    if (storedAnswers && storedQuestions) {
-      setAnswers(JSON.parse(storedAnswers));
-      setQuestions(JSON.parse(storedQuestions));
-      // Clean up session storage after loading data
-      sessionStorage.removeItem('ecetExamAnswers');
-      sessionStorage.removeItem('ecetExamQuestions');
+    const sessionKey = searchParams.get('sessionKey');
+    if (!sessionKey) {
+        toast({
+            variant: 'destructive',
+            title: 'No Review Data Found',
+            description: 'Redirecting to home page.',
+        });
+        router.replace('/');
+        return;
+    }
+
+    const storedData = sessionStorage.getItem(sessionKey);
+    if (storedData) {
+        try {
+            setExamData(JSON.parse(storedData));
+            // Important: Clean up session storage after loading data
+            sessionStorage.removeItem(sessionKey);
+        } catch(e) {
+            toast({
+                variant: 'destructive',
+                title: 'Error Loading Review Data',
+                description: 'The data seems to be corrupted. Redirecting home.',
+            });
+            router.replace('/');
+        }
     } else {
       toast({
         variant: 'destructive',
-        title: 'No Exam Data Found',
+        title: 'No Review Data Found',
         description: 'Redirecting to home page.',
       });
       router.replace('/');
     }
-  }, [router, toast]);
+  }, [router, toast, searchParams]);
 
   useEffect(() => {
     if (chatScrollAreaRef.current) {
@@ -88,6 +104,7 @@ export default function AnswerReviewClient() {
   }, [chatMessages]);
 
   const handleGenerateExplanation = useCallback(async (question: Question) => {
+    if (!examData) return;
     if (aiExplanations[question.id] && loadingExplanation !== question.id) return;
     
     setLoadingExplanation(question.id);
@@ -95,7 +112,7 @@ export default function AnswerReviewClient() {
       const result = await explainAnswer({
         question: question.question,
         options: question.options,
-        userAnswer: answers?.[question.id] || "Not Answered",
+        userAnswer: examData.answers?.[question.id] || "Not Answered",
         correctAnswer: question.correctAnswer,
         topic: question.topic,
       });
@@ -117,7 +134,7 @@ export default function AnswerReviewClient() {
     } finally {
       setLoadingExplanation(null);
     }
-  }, [toast, aiExplanations, answers, loadingExplanation]);
+  }, [toast, aiExplanations, examData, loadingExplanation]);
 
   const handleOpenChatDialog = (question: Question, explanation: string) => {
     setChatMessages([{ role: 'model', text: `Here is the initial explanation for the question:\n\n${explanation}\n\nWhat would you like to discuss further?` }]);
@@ -127,7 +144,7 @@ export default function AnswerReviewClient() {
   
   const handleSendChatMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!chatInput.trim() || !questions) return;
+    if (!chatInput.trim() || !examData) return;
 
     const userMessage: ChatMessage = { role: 'user', text: chatInput };
     setChatMessages(prev => [...prev, userMessage]);
@@ -140,7 +157,7 @@ export default function AnswerReviewClient() {
             parts: [{ text: msg.text }],
         }));
         
-        const currentQuestion = questions[currentQuestionIndex];
+        const currentQuestion = examData.questions[currentQuestionIndex];
         const contextQuestion = `The user is asking about the following question:\n\nQuestion: "${currentQuestion.question}"\nThe correct answer is "${currentQuestion.correctAnswer}".\nMy initial explanation was: "${aiExplanations[currentQuestion.id]}"\n\nNow, the user's follow-up question is:`;
 
         const result = await clearDoubt({
@@ -160,10 +177,11 @@ export default function AnswerReviewClient() {
   };
 
 
-  if (!isMounted || !questions || !answers) {
+  if (!isMounted || !examData) {
     return <LoadingSkeleton />;
   }
-
+  
+  const { questions, answers } = examData;
   const currentQuestion = questions[currentQuestionIndex];
   const userAnswer = answers[currentQuestion.id];
   const isCorrect = userAnswer === currentQuestion.correctAnswer;
@@ -376,3 +394,5 @@ export default function AnswerReviewClient() {
     </div>
   );
 }
+
+    

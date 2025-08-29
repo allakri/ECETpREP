@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState, useMemo, useCallback } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -11,6 +11,7 @@ import { format } from 'date-fns';
 import Link from 'next/link';
 import { Progress } from '@/components/ui/progress';
 import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText, ArrowRight } from 'lucide-react';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const quotes = [
   "Believe you can and you're halfway there.",
@@ -36,39 +37,45 @@ const getGrade = (score: number): { grade: string, color: string } => {
 
 export default function ResultsClient() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { user, loading, updateUserProgress } = useAuth();
-  const [answers, setAnswers] = useState<AnswerSheet | null>(null);
-  const [questions, setQuestions] = useState<Question[] | null>(null);
-  const [examName, setExamName] = useState<string>('ECET Exam');
+  const [examData, setExamData] = useState<{answers: AnswerSheet, questions: Question[], examName: string} | null>(null);
   const [isMounted, setIsMounted] = useState(false);
   const [isProgressSaved, setIsProgressSaved] = useState(false);
   const [examCompletionDate] = useState(new Date());
 
   useEffect(() => {
     setIsMounted(true);
-    const storedAnswers = sessionStorage.getItem('ecetExamAnswers');
-    const storedQuestions = sessionStorage.getItem('ecetExamQuestions');
-    const storedExamName = sessionStorage.getItem('ecetExamName');
+    const sessionKey = searchParams.get('sessionKey');
+    if (!sessionKey) {
+        router.replace('/');
+        return;
+    }
+    
+    const storedData = sessionStorage.getItem(sessionKey);
 
-    if (storedAnswers && storedQuestions) {
-      setAnswers(JSON.parse(storedAnswers));
-      setQuestions(JSON.parse(storedQuestions));
-      setExamName(storedExamName || 'ECET Exam');
-      // Clean up session storage after loading data
-      sessionStorage.removeItem('ecetExamAnswers');
-      sessionStorage.removeItem('ecetExamQuestions');
-      sessionStorage.removeItem('ecetExamName');
+    if (storedData) {
+      try {
+        const parsedData = JSON.parse(storedData);
+        setExamData(parsedData);
+        // Important: Clean up session storage immediately after loading data
+        sessionStorage.removeItem(sessionKey);
+      } catch (e) {
+        console.error("Failed to parse session data", e);
+        router.replace('/');
+      }
     } else {
       // No results to show, redirect
       router.replace('/'); 
     }
-  }, [router]);
+  }, [router, searchParams]);
 
   const { score, correctCount, incorrectCount, unansweredCount, accuracy, attemptedCount, totalQuestions, subjectPerformance } = useMemo(() => {
-    if (!answers || !questions) {
+    if (!examData) {
       return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, accuracy: 0, attemptedCount: 0, totalQuestions: 0, subjectPerformance: {} };
     }
     
+    const { answers, questions } = examData;
     let correct = 0;
     const answeredIds = Object.keys(answers).map(Number);
     const answered = answeredIds.length;
@@ -110,16 +117,16 @@ export default function ResultsClient() {
       totalQuestions: total,
       subjectPerformance: subjectPerformanceWithAccuracy,
     };
-  }, [answers, questions]);
+  }, [examData]);
   
   const saveProgress = useCallback(async () => {
-    if (loading || !user || !answers || !questions || isProgressSaved) {
+    if (loading || !user || !examData || isProgressSaved) {
       return;
     }
     
     try {
       const newScoreData = {
-          examName: examName,
+          examName: examData.examName,
           score: score,
           date: format(new Date(), 'yyyy-MM-dd'),
       };
@@ -129,18 +136,18 @@ export default function ResultsClient() {
     } catch (error) {
       console.error("Error saving progress:", error);
     }
-  }, [user, loading, isProgressSaved, answers, questions, score, updateUserProgress, examName]);
+  }, [user, loading, isProgressSaved, examData, score, updateUserProgress]);
   
   useEffect(() => {
-    if (isMounted && questions && !loading && !isProgressSaved) {
+    if (isMounted && examData && !loading && !isProgressSaved) {
       saveProgress();
     }
-  }, [isMounted, questions, loading, saveProgress, isProgressSaved]);
+  }, [isMounted, examData, loading, saveProgress, isProgressSaved]);
 
-  if (!isMounted || !questions || !answers) {
+  if (!isMounted || !examData) {
     return (
         <div className="flex h-screen w-full items-center justify-center bg-secondary/20">
-            <p>Loading results...</p>
+            <Skeleton className="h-64 w-full max-w-2xl"/>
         </div>
     );
   }
@@ -178,7 +185,7 @@ export default function ResultsClient() {
                     <Trophy className="h-10 w-10"/>
                     <div>
                         <h1 className="text-3xl font-bold font-headline">Exam Results</h1>
-                        <p className="opacity-90">{examName}</p>
+                        <p className="opacity-90">{examData.examName}</p>
                     </div>
                 </div>
                 <div className="text-center">
@@ -309,8 +316,8 @@ export default function ResultsClient() {
                 </CardHeader>
                 <CardContent>
                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => {
-                        sessionStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
-                        if(questions) sessionStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
+                        const tempSessionKey = `temp-review-session-${Date.now()}`;
+                        sessionStorage.setItem(tempSessionKey, JSON.stringify(examData));
                     }}>
                         <Link href="/chat">
                             Chat with AI <ArrowRight className="ml-2 h-4 w-4" />
@@ -326,9 +333,9 @@ export default function ResultsClient() {
                      <Button size="lg" variant="outline" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" /> Print Results</Button>
                      <Button size="lg" variant="secondary" onClick={() => {
                         // We need to re-save the data to sessionStorage for the review page to access it
-                        sessionStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
-                        if(questions) sessionStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
-                        router.push('/exam/review');
+                        const reviewSessionKey = `review-session-${Date.now()}`;
+                        sessionStorage.setItem(reviewSessionKey, JSON.stringify(examData));
+                        router.push(`/exam/review?sessionKey=${reviewSessionKey}`);
                     }}>Review Answers</Button>
                 </CardContent>
             </Card>
@@ -337,3 +344,5 @@ export default function ResultsClient() {
     </div>
   );
 }
+
+    
