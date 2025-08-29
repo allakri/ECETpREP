@@ -10,7 +10,7 @@ import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import { Progress } from '@/components/ui/progress';
-import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText } from 'lucide-react';
+import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText, ArrowRight } from 'lucide-react';
 
 const quotes = [
   "Believe you can and you're halfway there.",
@@ -284,6 +284,26 @@ export default function ResultsClient() {
                 </Card>
             </div>
             
+             {/* AI Tutor CTA */}
+            <Card className="shadow-lg mb-8 no-print bg-accent/10 border-accent/20 text-center">
+                <CardHeader>
+                    <div className="mx-auto bg-accent/20 text-accent p-3 rounded-full w-fit mb-2">
+                      <HelpCircle className="h-8 w-8" />
+                    </div>
+                    <CardTitle className="font-headline text-accent text-2xl">Ask AI Tutor</CardTitle>
+                    <CardDescription className="max-w-md mx-auto">
+                        Stuck on a concept from the test? Get an instant, detailed explanation from our AI.
+                    </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                        <Link href="/chat">
+                            Chat with AI <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
+                </CardContent>
+            </Card>
+
              {/* Actions */}
              <Card className="shadow-lg no-print">
                 <CardContent className="p-6 flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -297,3 +317,5 @@ export default function ResultsClient() {
     </div>
   );
 }
+
+    
