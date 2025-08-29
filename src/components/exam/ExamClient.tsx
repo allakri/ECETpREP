@@ -57,7 +57,6 @@ export default function ExamClient() {
     if (isSubmitting.current) return;
     isSubmitting.current = true;
     
-    // Save final answers and questions to sessionStorage
     if (questions && sessionKey) {
         sessionStorage.setItem(sessionKey, JSON.stringify({
             answers,
@@ -67,15 +66,13 @@ export default function ExamClient() {
     }
     
     const navigateToResults = () => {
-        // A small timeout helps ensure state changes are processed before navigation
         setTimeout(() => router.replace(`/results?sessionKey=${sessionKey}`), 100);
     };
 
-    // Exit fullscreen if active, then navigate
     if (document.fullscreenElement) {
       document.exitFullscreen()
         .then(navigateToResults)
-        .catch(navigateToResults); // Also navigate if exiting fails
+        .catch(navigateToResults);
     } else {
       navigateToResults();
     }
@@ -83,7 +80,6 @@ export default function ExamClient() {
 
 
   const handleFullscreenChange = useCallback(() => {
-    // A brief delay to allow the isSubmitting flag to be set before this handler runs
     setTimeout(() => {
         const isCurrentlyFullscreen = !!document.fullscreenElement;
         setIsFullscreen(isCurrentlyFullscreen);
@@ -123,7 +119,6 @@ export default function ExamClient() {
 
 
   
-  // Effect to set the session key
   useEffect(() => {
     const customExamKey = searchParams.get('customExamKey');
     const examSlug = searchParams.get('examSlug');
@@ -142,14 +137,12 @@ export default function ExamClient() {
         return;
     }
     
-    // Clear any previous session data before starting a new one.
     if (sessionStorage.getItem(currentSessionKey)) {
         sessionStorage.removeItem(currentSessionKey);
     }
     setSessionKey(currentSessionKey);
   }, [searchParams, router, toast]);
 
-  // Effect to restore state from sessionStorage
   useEffect(() => {
       if (!sessionKey) return;
 
@@ -162,19 +155,18 @@ export default function ExamClient() {
               setTimeLeft(savedState.timeLeft || EXAM_DURATION);
           } catch(e) {
               console.error("Failed to parse saved exam state", e);
-              sessionStorage.removeItem(sessionKey); // Clear corrupted data
+              sessionStorage.removeItem(sessionKey);
           }
       }
   }, [sessionKey]);
 
-  // Effect to load questions
   useEffect(() => {
     async function loadQuestions() {
         const customExamKey = searchParams.get('customExamKey');
         const examSlug = searchParams.get('examSlug');
         const year = searchParams.get('year');
         const offlineTestKey = searchParams.get('offlineTestKey');
-        const examBoard = searchParams.get('examBoard'); // apecet or tgecet
+        const examBoard = searchParams.get('examBoard');
 
         if (customExamKey) {
             const customQuestionsStr = sessionStorage.getItem(customExamKey);
@@ -216,7 +208,6 @@ export default function ExamClient() {
     loadQuestions();
   }, [searchParams, router, toast]);
   
-  // Effect to save progress to sessionStorage
   useEffect(() => {
     if (!sessionKey || !questions) return;
     const stateToSave = {
@@ -228,9 +219,8 @@ export default function ExamClient() {
   }, [answers, markedForReview, timeLeft, sessionKey, questions]);
 
 
-  // Main timer, violation handler, and keyboard lock effect
   useEffect(() => {
-    if (!questions) return; // Don't start until questions are loaded
+    if (!questions) return;
 
     const timer = setInterval(() => {
       setTimeLeft(prevTime => {
@@ -525,5 +515,3 @@ export default function ExamClient() {
     </div>
   );
 }
-
-    

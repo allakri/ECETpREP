@@ -13,14 +13,6 @@ import { Progress } from '@/components/ui/progress';
 import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText, ArrowRight } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 
-const quotes = [
-  "Believe you can and you're halfway there.",
-  "The secret to getting ahead is getting started.",
-  "Don't watch the clock; do what it does. Keep going.",
-  "The expert in anything was once a beginner.",
-  "Success is the sum of small efforts, repeated day in and day out."
-];
-
 interface SubjectPerformance {
     correct: number;
     total: number;
@@ -85,7 +77,7 @@ export default function ResultsClient() {
     return {
       score: total > 0 ? (correct / total) * 100 : 0,
       correctCount: correct,
-      incorrectCount: incorrect < 0 ? 0 : incorrect, // Ensure not negative
+      incorrectCount: incorrect < 0 ? 0 : incorrect,
       unansweredCount: total - answered,
       accuracy: answered > 0 ? (correct / answered) * 100 : 0,
       attemptedCount: answered,
@@ -107,7 +99,6 @@ export default function ResultsClient() {
       };
       await updateUserProgress(newScoreData);
       setIsProgressSaved(true); 
-      // Cleanup happens only after successful save
       sessionStorage.removeItem(sessionKey);
     } catch (error) {
       console.error("Error saving progress:", error);
@@ -116,7 +107,6 @@ export default function ResultsClient() {
   
   
   useEffect(() => {
-    // Load data from session storage only once on mount
     if (!sessionKey) {
         router.replace('/');
         return;
@@ -139,7 +129,6 @@ export default function ResultsClient() {
 
 
   useEffect(() => {
-    // This effect runs when examData is set, and handles saving progress
     if (examData && !loading && !isProgressSaved) {
       saveProgress();
     }
@@ -336,7 +325,6 @@ export default function ResultsClient() {
                      <Button size="lg" onClick={() => router.push('/exams')}>Take Another Test</Button>
                      <Button size="lg" variant="outline" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" /> Print Results</Button>
                      <Button size="lg" variant="secondary" onClick={() => {
-                        // We need to re-save the data to sessionStorage for the review page to access it
                         const reviewSessionKey = `review-session-${Date.now()}`;
                         sessionStorage.setItem(reviewSessionKey, JSON.stringify(examData));
                         router.push(`/exam/review?sessionKey=${reviewSessionKey}`);
@@ -348,5 +336,3 @@ export default function ResultsClient() {
     </div>
   );
 }
-
-    
