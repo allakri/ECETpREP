@@ -199,9 +199,9 @@ export default function ExamClient() {
   }, [answers, markedForReview, timeLeft, sessionKey, questions]);
 
 
-  // Main timer and violation handler effect
+  // Main timer, violation handler, and keyboard lock effect
   useEffect(() => {
-    if (!questions) return; // Don't start timer until questions are loaded
+    if (!questions) return; // Don't start until questions are loaded
 
     const timer = setInterval(() => {
       setTimeLeft(prevTime => {
@@ -226,12 +226,18 @@ export default function ExamClient() {
             }
         }
     };
+    
+    const handleKeyDown = (event: KeyboardEvent) => {
+        event.preventDefault();
+    };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
         clearInterval(timer);
         document.removeEventListener('visibilitychange', handleVisibilityChange);
+        document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleSubmit, questions, toast]);
   
@@ -464,3 +470,5 @@ export default function ExamClient() {
     </div>
   );
 }
+
+    
