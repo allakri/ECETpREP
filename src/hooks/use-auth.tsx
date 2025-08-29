@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
@@ -28,9 +27,6 @@ interface UserProfile {
   tests_taken: number;
   study_activities: string[]; // Array of dates 'yyyy-MM-dd'
   exam_score_history: ExamScore[];
-  current_streak: number;
-  last_month_streak: number;
-  highest_streak: number;
 }
 
 // User profile data that can be updated
@@ -44,9 +40,6 @@ type UpdatableUserProfile = {
   tests_taken?: number;
   study_activities?: string[];
   exam_score_history?: ExamScore[];
-  current_streak?: number;
-  last_month_streak?: number;
-  highest_streak?: number;
 };
 
 
@@ -57,7 +50,7 @@ interface AuthContextType {
   user: User | null;
   loading: boolean;
   logout: () => Promise<void>;
-  updateUser: (details: UpdatableUserProfile) => Promise<void>;
+  updateUser: (details: Partial<UpdatableUserProfile>) => Promise<void>;
   updateUserProgress: (newScore: ExamScore) => Promise<void>;
   isAdmin: boolean;
   isInitialLoad: boolean; // Add this to track initial auth check
@@ -113,9 +106,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         tests_taken: profileData.tests_taken || 0,
         study_activities: profileData.study_activities || [],
         exam_score_history: profileData.exam_score_history || [],
-        current_streak: profileData.current_streak || 0,
-        last_month_streak: profileData.last_month_streak || 0,
-        highest_streak: profileData.highest_streak || 0,
     };
   }, [supabase]);
 
@@ -158,18 +148,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     router.refresh();
   };
 
-  const updateUser = useCallback(async (details: UpdatableUserProfile) => {
+  const updateUser = useCallback(async (details: Partial<UpdatableUserProfile>) => {
     if (!user) return;
 
     const { error } = await supabase
       .from('profiles')
-      .update({
-        name: details.name,
-        phone_number: details.phone_number,
-        branch: details.branch,
-        college: details.college,
-        year_of_study: details.year_of_study,
-       }, { returning: 'minimal' })
+      .update(details, { returning: 'minimal' })
       .eq('id', user.id);
 
 
@@ -195,8 +179,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const newAvgScore = newHistory.reduce((acc, item) => acc + item.score, 0) / newHistory.length;
     const newActivities = [...new Set([...user.study_activities, newScore.date])];
     
-    // TODO: Implement streak logic in the future
-
     const { error } = await supabase
         .from('profiles')
         .update({

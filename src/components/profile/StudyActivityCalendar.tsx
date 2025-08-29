@@ -5,15 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { format, getDay, startOfMonth, getDaysInMonth, endOfMonth } from 'date-fns';
-import { Flame, Sparkles, CalendarClock } from 'lucide-react';
 
 interface StudyActivityCalendarProps {
     activityData: string[]; // Array of 'yyyy-MM-dd' date strings
-    streakData: {
-        current: number;
-        lastMonth: number;
-        highest: number;
-    };
 }
 
 
@@ -26,7 +20,7 @@ const getActivityColor = (count: number) => {
 };
 
 
-export function StudyActivityCalendar({ activityData, streakData }: StudyActivityCalendarProps) {
+export function StudyActivityCalendar({ activityData }: StudyActivityCalendarProps) {
   const today = new Date();
   const monthStart = startOfMonth(today);
   const daysInMonth = getDaysInMonth(today);
@@ -41,12 +35,6 @@ export function StudyActivityCalendar({ activityData, streakData }: StudyActivit
       activityMap.set(date, (activityMap.get(date) || 0) + 1);
   });
   
-  const streakStats = [
-    { title: "Current Streak", value: `${streakData.current} Days`, icon: Flame },
-    { title: "Last Month", value: `${streakData.lastMonth} Days`, icon: CalendarClock },
-    { title: "Highest Streak", value: `${streakData.highest} Days`, icon: Sparkles },
-  ]
-
 
   for (let i = 0; i < firstDayOfMonth; i++) {
     calendarDays.push(<div key={`empty-${i}`} className="h-4 w-4 rounded-sm" />);
@@ -75,21 +63,9 @@ export function StudyActivityCalendar({ activityData, streakData }: StudyActivit
     <Card>
       <CardHeader>
         <CardTitle>Study Activity</CardTitle>
-        <CardDescription>Your daily study consistency.</CardDescription>
+        <CardDescription>Your daily study consistency, inspired by GitHub.</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-6">
-        <div className="grid grid-cols-3 gap-4 text-center">
-            {streakStats.map(stat => {
-                const Icon = stat.icon;
-                return (
-                    <div key={stat.title} className="p-3 bg-muted/50 rounded-lg">
-                        <Icon className="h-6 w-6 text-muted-foreground mx-auto mb-2" />
-                        <p className="text-sm font-semibold">{stat.title}</p>
-                        <p className="text-lg font-bold text-primary">{stat.value}</p>
-                    </div>
-                )
-            })}
-        </div>
+      <CardContent>
         <div>
             <div className="flex justify-between items-center mb-2">
                 <p className="font-semibold text-lg">{format(today, 'MMMM yyyy')}</p>

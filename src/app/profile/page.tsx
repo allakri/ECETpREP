@@ -237,7 +237,7 @@ export default function ProfilePage() {
                         </div>
 
                         <div>
-                            <StudyActivityCalendar activityData={user.study_activities} streakData={{current: user.current_streak, lastMonth: user.last_month_streak, highest: user.highest_streak}}/>
+                            <StudyActivityCalendar activityData={user.study_activities} />
                         </div>
 
                         <Card className="shadow-lg">
