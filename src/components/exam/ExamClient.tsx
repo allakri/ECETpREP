@@ -54,46 +54,56 @@ export default function ExamClient() {
   const isSubmitting = useRef(false);
 
   const handleSubmit = useCallback(() => {
+    if (isSubmitting.current) return;
     isSubmitting.current = true;
     
+    // Save final answers
     sessionStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
     if (questions) {
       sessionStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
       sessionStorage.setItem('ecetExamName', examName);
     }
     
+    // Clean up the current exam session state
     if (sessionKey) {
         sessionStorage.removeItem(sessionKey);
     }
 
+    // Function to navigate to results
+    const navigateToResults = () => {
+        // A small timeout helps ensure state changes are processed before navigation
+        setTimeout(() => router.replace('/results'), 100);
+    };
+
+    // Exit fullscreen if active, then navigate
     if (document.fullscreenElement) {
-      document.exitFullscreen().then(() => {
-        router.replace('/results');
-      }).catch(() => {
-        // even if fullscreen exit fails, proceed to results
-        router.replace('/results');
-      });
+      document.exitFullscreen()
+        .then(navigateToResults)
+        .catch(navigateToResults); // Also navigate if exiting fails
     } else {
-        router.replace('/results');
+      navigateToResults();
     }
-  }, [answers, router, questions, sessionKey, examName]);
+  }, [answers, questions, sessionKey, examName, router]);
 
 
   const handleFullscreenChange = useCallback(() => {
-    const isCurrentlyFullscreen = !!document.fullscreenElement;
-    setIsFullscreen(isCurrentlyFullscreen);
-    
-    if (isSubmitting.current) return;
+    // A brief delay to allow the isSubmitting flag to be set before this handler runs
+    setTimeout(() => {
+        const isCurrentlyFullscreen = !!document.fullscreenElement;
+        setIsFullscreen(isCurrentlyFullscreen);
+        
+        if (isSubmitting.current) return;
 
-    if (!isCurrentlyFullscreen && questions) { 
-        violationCount.current += 1;
-        if (violationCount.current >= MAX_VIOLATIONS) {
-            toast({ title: "Exam Terminated", description: `Exam submitted due to ${MAX_VIOLATIONS} violations.`, variant: 'destructive' });
-            handleSubmit();
-        } else {
-            setIsViolationDialogOpen(true);
+        if (!isCurrentlyFullscreen && questions) { 
+            violationCount.current += 1;
+            if (violationCount.current >= MAX_VIOLATIONS) {
+                toast({ title: "Exam Terminated", description: `Exam submitted due to ${MAX_VIOLATIONS} violations.`, variant: 'destructive' });
+                handleSubmit();
+            } else {
+                setIsViolationDialogOpen(true);
+            }
         }
-    }
+    }, 100);
   }, [questions, handleSubmit, toast]);
 
   const toggleFullscreen = () => {
