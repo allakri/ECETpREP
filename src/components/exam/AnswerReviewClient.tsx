@@ -60,11 +60,14 @@ export default function AnswerReviewClient() {
 
   useEffect(() => {
     setIsMounted(true);
-    const storedAnswers = localStorage.getItem('ecetExamAnswers');
-    const storedQuestions = localStorage.getItem('ecetExamQuestions');
+    const storedAnswers = sessionStorage.getItem('ecetExamAnswers');
+    const storedQuestions = sessionStorage.getItem('ecetExamQuestions');
     if (storedAnswers && storedQuestions) {
       setAnswers(JSON.parse(storedAnswers));
       setQuestions(JSON.parse(storedQuestions));
+      // Clean up session storage after loading data
+      sessionStorage.removeItem('ecetExamAnswers');
+      sessionStorage.removeItem('ecetExamQuestions');
     } else {
       toast({
         variant: 'destructive',

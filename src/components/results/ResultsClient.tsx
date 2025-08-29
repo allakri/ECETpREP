@@ -39,17 +39,25 @@ export default function ResultsClient() {
   const { user, loading, updateUserProgress } = useAuth();
   const [answers, setAnswers] = useState<AnswerSheet | null>(null);
   const [questions, setQuestions] = useState<Question[] | null>(null);
+  const [examName, setExamName] = useState<string>('ECET Exam');
   const [isMounted, setIsMounted] = useState(false);
   const [isProgressSaved, setIsProgressSaved] = useState(false);
   const [examCompletionDate] = useState(new Date());
 
   useEffect(() => {
     setIsMounted(true);
-    const storedAnswers = localStorage.getItem('ecetExamAnswers');
-    const storedQuestions = localStorage.getItem('ecetExamQuestions');
+    const storedAnswers = sessionStorage.getItem('ecetExamAnswers');
+    const storedQuestions = sessionStorage.getItem('ecetExamQuestions');
+    const storedExamName = sessionStorage.getItem('ecetExamName');
+
     if (storedAnswers && storedQuestions) {
       setAnswers(JSON.parse(storedAnswers));
       setQuestions(JSON.parse(storedQuestions));
+      setExamName(storedExamName || 'ECET Exam');
+      // Clean up session storage after loading data
+      sessionStorage.removeItem('ecetExamAnswers');
+      sessionStorage.removeItem('ecetExamQuestions');
+      sessionStorage.removeItem('ecetExamName');
     } else {
       router.replace('/'); // No results to show, redirect
     }
@@ -107,7 +115,7 @@ export default function ResultsClient() {
     
     try {
       const newScoreData = {
-          examName: sessionStorage.getItem('examName') || `Test #${(user.tests_taken || 0) + 1}`,
+          examName: examName,
           score: score,
           date: format(new Date(), 'yyyy-MM-dd'),
       };
@@ -117,13 +125,13 @@ export default function ResultsClient() {
     } catch (error) {
       console.error("Error saving progress:", error);
     }
-  }, [user, loading, isProgressSaved, answers, questions, score, updateUserProgress]);
+  }, [user, loading, isProgressSaved, answers, questions, score, updateUserProgress, examName]);
   
   useEffect(() => {
-    if (isMounted && questions && !loading) {
+    if (isMounted && questions && !loading && !isProgressSaved) {
       saveProgress();
     }
-  }, [isMounted, questions, loading, saveProgress]);
+  }, [isMounted, questions, loading, saveProgress, isProgressSaved]);
 
   if (!isMounted || !questions || !answers) {
     return (
@@ -166,7 +174,7 @@ export default function ResultsClient() {
                     <Trophy className="h-10 w-10"/>
                     <div>
                         <h1 className="text-3xl font-bold font-headline">Exam Results</h1>
-                        <p className="opacity-90">ECET Examination Completed</p>
+                        <p className="opacity-90">{examName}</p>
                     </div>
                 </div>
                 <div className="text-center">
@@ -309,7 +317,12 @@ export default function ResultsClient() {
                 <CardContent className="p-6 flex flex-col sm:flex-row justify-center items-center gap-4">
                      <Button size="lg" onClick={() => router.push('/exams')}>Take Another Test</Button>
                      <Button size="lg" variant="outline" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" /> Print Results</Button>
-                     <Button size="lg" variant="secondary" onClick={() => router.push('/exam/review')}>Review Answers</Button>
+                     <Button size="lg" variant="secondary" onClick={() => {
+                        // We need to re-save the data to sessionStorage for the review page to access it
+                        sessionStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
+                        if(questions) sessionStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
+                        router.push('/exam/review');
+                    }}>Review Answers</Button>
                 </CardContent>
             </Card>
 
@@ -317,5 +330,3 @@ export default function ResultsClient() {
     </div>
   );
 }
-
-    

@@ -91,16 +91,21 @@ export default function ExamClient() {
     if (document.fullscreenElement) {
       document.exitFullscreen();
     }
-    localStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
+    
+    // Use sessionStorage for results to ensure they are available on the next page,
+    // but cleared when the browser tab closes.
+    sessionStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
     if (questions) {
-      localStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
+      sessionStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
+      sessionStorage.setItem('ecetExamName', examName);
     }
-    // Clean up the session state from local storage after submission
+    
+    // Clean up the session state from sessionStorage after submission
     if (sessionKey) {
-        localStorage.removeItem(sessionKey);
+        sessionStorage.removeItem(sessionKey);
     }
     router.replace('/results');
-  }, [answers, router, questions, sessionKey]);
+  }, [answers, router, questions, sessionKey, examName]);
   
   // Effect to set the session key
   useEffect(() => {
@@ -124,11 +129,11 @@ export default function ExamClient() {
     setSessionKey(currentSessionKey);
   }, [searchParams, router, toast]);
 
-  // Effect to restore state from local storage
+  // Effect to restore state from sessionStorage
   useEffect(() => {
       if (!sessionKey) return;
 
-      const savedStateRaw = localStorage.getItem(sessionKey);
+      const savedStateRaw = sessionStorage.getItem(sessionKey);
       if(savedStateRaw){
           try {
               const savedState = JSON.parse(savedStateRaw);
@@ -137,7 +142,7 @@ export default function ExamClient() {
               setTimeLeft(savedState.timeLeft || EXAM_DURATION);
           } catch(e) {
               console.error("Failed to parse saved exam state", e);
-              localStorage.removeItem(sessionKey); // Clear corrupted data
+              sessionStorage.removeItem(sessionKey); // Clear corrupted data
           }
       }
   }, [sessionKey]);
@@ -191,7 +196,7 @@ export default function ExamClient() {
     loadQuestions();
   }, [searchParams, router, toast]);
   
-  // Effect to save progress to localStorage
+  // Effect to save progress to sessionStorage
   useEffect(() => {
     if (!sessionKey || !questions) return;
     const stateToSave = {
@@ -199,7 +204,7 @@ export default function ExamClient() {
         markedForReview,
         timeLeft
     };
-    localStorage.setItem(sessionKey, JSON.stringify(stateToSave));
+    sessionStorage.setItem(sessionKey, JSON.stringify(stateToSave));
   }, [answers, markedForReview, timeLeft, sessionKey, questions]);
 
 

@@ -71,8 +71,8 @@ export default function ChatClient() {
 
   useEffect(() => {
     // Load exam results and course context from storage to provide context to the chat
-    const storedAnswers = localStorage.getItem('ecetExamAnswers');
-    const storedQuestions = localStorage.getItem('ecetExamQuestions');
+    const storedAnswers = sessionStorage.getItem('ecetExamAnswers');
+    const storedQuestions = sessionStorage.getItem('ecetExamQuestions');
     const storedCourseContext = sessionStorage.getItem('courseContext');
     
     if (storedAnswers && storedQuestions) {
