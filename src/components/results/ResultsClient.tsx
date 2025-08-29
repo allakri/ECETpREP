@@ -10,7 +10,7 @@ import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import { Progress } from '@/components/ui/progress';
-import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Download, FileText } from 'lucide-react';
+import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText } from 'lucide-react';
 
 const quotes = [
   "Believe you can and you're halfway there.",
@@ -137,7 +137,29 @@ export default function ResultsClient() {
 
   return (
     <div className="bg-secondary/20 min-h-screen p-4 md:p-8">
-        <div className="max-w-6xl mx-auto">
+        <style jsx global>{`
+          @media print {
+            body {
+              -webkit-print-color-adjust: exact;
+              print-color-adjust: exact;
+            }
+            .no-print {
+              display: none !important;
+            }
+            .results-container {
+              padding: 0;
+              box-shadow: none;
+            }
+            .card-print {
+              border: 1px solid #e2e8f0;
+              box-shadow: none;
+            }
+            .bg-gradient-to-r {
+              background: linear-gradient(to right, #22c55e, #3b82f6) !important;
+            }
+          }
+        `}</style>
+        <div className="max-w-6xl mx-auto results-container">
             {/* Header */}
             <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 rounded-t-lg shadow-lg flex justify-between items-center">
                 <div className="flex items-center gap-4">
@@ -156,7 +178,7 @@ export default function ResultsClient() {
             </div>
 
             {/* User Info */}
-            <Card className="rounded-t-none shadow-lg mb-8">
+            <Card className="rounded-t-none shadow-lg mb-8 card-print">
                 <CardContent className="p-6 grid md:grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center gap-3">
                         <User className="h-5 w-5 text-muted-foreground" />
@@ -177,7 +199,7 @@ export default function ResultsClient() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                <Card className="shadow-md">
+                <Card className="shadow-md card-print">
                     <CardContent className="pt-6 flex flex-col items-center justify-center text-center">
                         <p className="text-3xl font-bold text-green-600">{correctCount}</p>
                         <div className="flex items-center gap-2 mt-1">
@@ -186,7 +208,7 @@ export default function ResultsClient() {
                         </div>
                     </CardContent>
                 </Card>
-                 <Card className="shadow-md">
+                 <Card className="shadow-md card-print">
                     <CardContent className="pt-6 flex flex-col items-center justify-center text-center">
                         <p className="text-3xl font-bold text-red-600">{incorrectCount}</p>
                         <div className="flex items-center gap-2 mt-1">
@@ -195,7 +217,7 @@ export default function ResultsClient() {
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="shadow-md">
+                <Card className="shadow-md card-print">
                     <CardContent className="pt-6 flex flex-col items-center justify-center text-center">
                         <p className="text-3xl font-bold">{unansweredCount}</p>
                         <div className="flex items-center gap-2 mt-1">
@@ -204,7 +226,7 @@ export default function ResultsClient() {
                         </div>
                     </CardContent>
                 </Card>
-                 <Card className="shadow-md">
+                 <Card className="shadow-md card-print">
                     <CardContent className="pt-6 flex flex-col items-center justify-center text-center">
                         <p className="text-3xl font-bold text-blue-600">{score.toFixed(1)}%</p>
                         <div className="flex items-center gap-2 mt-1">
@@ -217,7 +239,7 @@ export default function ResultsClient() {
             
             {/* Analysis */}
             <div className="grid lg:grid-cols-2 gap-8 mb-8">
-                <Card className="shadow-lg">
+                <Card className="shadow-lg card-print">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2"><FileText /> Performance Analysis</CardTitle>
                     </CardHeader>
@@ -243,7 +265,7 @@ export default function ResultsClient() {
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="shadow-lg">
+                <Card className="shadow-lg card-print">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2"><BarChart3/> Subject-wise Performance</CardTitle>
                     </CardHeader>
@@ -263,10 +285,10 @@ export default function ResultsClient() {
             </div>
             
              {/* Actions */}
-             <Card className="shadow-lg">
+             <Card className="shadow-lg no-print">
                 <CardContent className="p-6 flex flex-col sm:flex-row justify-center items-center gap-4">
                      <Button size="lg" onClick={() => router.push('/exams')}>Take Another Test</Button>
-                     <Button size="lg" variant="outline"><Download className="mr-2 h-4 w-4" /> Download Results</Button>
+                     <Button size="lg" variant="outline" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" /> Print Results</Button>
                      <Button size="lg" variant="secondary" onClick={() => router.push('/exam/review')}>Review Answers</Button>
                 </CardContent>
             </Card>
