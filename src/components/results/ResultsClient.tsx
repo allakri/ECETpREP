@@ -43,18 +43,19 @@ export default function ResultsClient() {
     }
     
     const { answers, questions } = examData;
-    let correct = 0;
-    
+    const attemptedIds = Object.keys(answers || {});
+    const attemptedCount = attemptedIds.length;
+
+    let correctCount = 0;
     questions.forEach(q => {
         if (answers?.[q.id] === q.correctAnswer) {
-            correct++;
+            correctCount++;
         }
     });
 
-    const attempted = Object.keys(answers || {}).length;
-    const total = questions.length;
-    const incorrect = attempted - correct;
-    const unanswered = total - attempted;
+    const totalQuestions = questions.length;
+    const incorrectCount = attemptedCount - correctCount;
+    const unansweredCount = totalQuestions - attemptedCount;
     
     const subjectPerf: Record<string, { correct: number, total: number }> = {};
     questions.forEach(q => {
@@ -79,13 +80,13 @@ export default function ResultsClient() {
     }
 
     return {
-      score: total > 0 ? (correct / total) * 100 : 0,
-      correctCount: correct,
-      incorrectCount: incorrect,
-      unansweredCount: unanswered,
-      accuracy: attempted > 0 ? (correct / attempted) * 100 : 0,
-      attemptedCount: attempted,
-      totalQuestions: total,
+      score: totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0,
+      correctCount: correctCount,
+      incorrectCount: incorrectCount,
+      unansweredCount: unansweredCount,
+      accuracy: attemptedCount > 0 ? (correctCount / attemptedCount) * 100 : 0,
+      attemptedCount: attemptedCount,
+      totalQuestions: totalQuestions,
       subjectPerformance: subjectPerformanceWithAccuracy,
     };
   }, [examData]);
@@ -103,8 +104,6 @@ export default function ResultsClient() {
       };
       await updateUserProgress(newScoreData);
       setIsProgressSaved(true); 
-      // Only clear the session storage after successfully saving progress
-      sessionStorage.removeItem(sessionKey);
     } catch (error) {
       console.error("Error saving progress:", error);
     }
@@ -127,7 +126,6 @@ export default function ResultsClient() {
                 router.replace('/');
             }
         } else {
-            // Give it a moment in case of slow redirect
             setTimeout(() => {
                 if (!sessionStorage.getItem(sessionKey)) {
                    router.replace('/'); 
@@ -143,6 +141,15 @@ export default function ResultsClient() {
       saveProgress();
     }
   }, [examData, user, isProgressSaved, saveProgress]);
+
+  // Final cleanup effect
+  useEffect(() => {
+    return () => {
+      if (sessionKey) {
+        sessionStorage.removeItem(sessionKey);
+      }
+    };
+  }, [sessionKey]);
 
 
   if (!examData || loading) {
@@ -318,7 +325,6 @@ export default function ResultsClient() {
                 </CardHeader>
                 <CardContent>
                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => {
-                        // Pass the context to the chat page via sessionStorage
                         sessionStorage.setItem('ecetExamAnswers', JSON.stringify(examData.answers));
                         sessionStorage.setItem('ecetExamQuestions', JSON.stringify(examData.questions));
                     }}>
@@ -346,5 +352,3 @@ export default function ResultsClient() {
     </div>
   );
 }
-
-    

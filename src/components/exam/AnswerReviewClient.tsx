@@ -75,7 +75,6 @@ export default function AnswerReviewClient() {
         try {
             const parsedData = JSON.parse(storedData);
             setExamData(parsedData);
-            // Important: Clean up session storage after loading data
             sessionStorage.removeItem(sessionKey);
         } catch(e) {
             toast({
@@ -394,5 +393,3 @@ export default function AnswerReviewClient() {
     </div>
   );
 }
-
-    
