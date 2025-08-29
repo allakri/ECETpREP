@@ -10,7 +10,7 @@ import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import { Progress } from '@/components/ui/progress';
-import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText, ArrowRight } from 'lucide-react';
+import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText, ArrowRight, Loader2 } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 
 interface SubjectPerformance {
@@ -44,19 +44,17 @@ export default function ResultsClient() {
     
     const { answers, questions } = examData;
     const total = questions.length;
+    let correct = 0;
     const attempted = Object.keys(answers || {}).length;
     
-    let correct = 0;
     const subjectPerf: Record<string, { correct: number, total: number }> = {};
 
     questions.forEach(q => {
-        // Initialize subject performance tracking
         if (!subjectPerf[q.topic]) {
             subjectPerf[q.topic] = { correct: 0, total: 0 };
         }
         subjectPerf[q.topic].total++;
 
-        // Check if the answer is correct
         if (answers?.[q.id] === q.correctAnswer) {
             correct++;
             subjectPerf[q.topic].correct++;
@@ -68,11 +66,11 @@ export default function ResultsClient() {
 
     const subjectPerformanceWithAccuracy: Record<string, SubjectPerformance> = {};
     for(const topic in subjectPerf){
-        const { correct, total } = subjectPerf[topic];
+        const { correct: correctAnswers, total: totalAnswers } = subjectPerf[topic];
         subjectPerformanceWithAccuracy[topic] = {
-            correct,
-            total,
-            accuracy: total > 0 ? (correct / total) * 100 : 0
+            correct: correctAnswers,
+            total: totalAnswers,
+            accuracy: totalAnswers > 0 ? (correctAnswers / totalAnswers) * 100 : 0
         };
     }
 
@@ -101,6 +99,7 @@ export default function ResultsClient() {
       };
       await updateUserProgress(newScoreData);
       setIsProgressSaved(true); 
+      // Only remove item after successful save
       sessionStorage.removeItem(sessionKey);
     } catch (error) {
       console.error("Error saving progress:", error);
@@ -113,6 +112,7 @@ export default function ResultsClient() {
         router.replace('/');
         return;
     }
+    // Load data only once
     if (!examData) {
         const storedData = sessionStorage.getItem(sessionKey);
         if (storedData) {
@@ -124,23 +124,31 @@ export default function ResultsClient() {
                 router.replace('/');
             }
         } else {
-            router.replace('/'); 
+            // If there's no data, wait a moment before redirecting
+            // This can prevent race conditions on fast refreshes
+            setTimeout(() => {
+                if (!sessionStorage.getItem(sessionKey)) {
+                   router.replace('/'); 
+                }
+            }, 500);
         }
     }
   }, [sessionKey, router, examData]);
 
 
   useEffect(() => {
-    if (examData && !loading && !isProgressSaved) {
+    // Attempt to save progress once examData is loaded and user is available
+    if (examData && user && !isProgressSaved) {
       saveProgress();
     }
-  }, [examData, loading, isProgressSaved, saveProgress]);
+  }, [examData, user, isProgressSaved, saveProgress]);
 
 
   if (!examData) {
     return (
         <div className="flex h-screen w-full items-center justify-center bg-secondary/20">
-            <Skeleton className="h-64 w-full max-w-2xl"/>
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            <p className="ml-4 text-lg">Calculating Your Results...</p>
         </div>
     );
   }
@@ -309,10 +317,9 @@ export default function ResultsClient() {
                 </CardHeader>
                 <CardContent>
                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => {
-                        const tempAnswers = { ...examData.answers };
-                        const tempQuestions = [...examData.questions];
-                        sessionStorage.setItem('ecetExamAnswers', JSON.stringify(tempAnswers));
-                        sessionStorage.setItem('ecetExamQuestions', JSON.stringify(tempQuestions));
+                        // Pass the context to the chat page via sessionStorage
+                        sessionStorage.setItem('ecetExamAnswers', JSON.stringify(examData.answers));
+                        sessionStorage.setItem('ecetExamQuestions', JSON.stringify(examData.questions));
                     }}>
                         <Link href="/chat">
                             Chat with AI <ArrowRight className="ml-2 h-4 w-4" />

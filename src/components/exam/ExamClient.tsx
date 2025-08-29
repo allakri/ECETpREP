@@ -58,6 +58,7 @@ export default function ExamClient() {
     isSubmitting.current = true;
     
     if (questions && sessionKey) {
+        // Save the complete data needed for validation
         sessionStorage.setItem(sessionKey, JSON.stringify({
             answers,
             questions,
@@ -66,13 +67,14 @@ export default function ExamClient() {
     }
     
     const navigateToResults = () => {
+        // Add a small delay to ensure state updates before navigation
         setTimeout(() => router.replace(`/results?sessionKey=${sessionKey}`), 100);
     };
 
     if (document.fullscreenElement) {
       document.exitFullscreen()
         .then(navigateToResults)
-        .catch(navigateToResults);
+        .catch(navigateToResults); // Proceed even if exit fails
     } else {
       navigateToResults();
     }
@@ -80,6 +82,7 @@ export default function ExamClient() {
 
 
   const handleFullscreenChange = useCallback(() => {
+    // A small delay to allow the fullscreen state to settle
     setTimeout(() => {
         const isCurrentlyFullscreen = !!document.fullscreenElement;
         setIsFullscreen(isCurrentlyFullscreen);
@@ -112,8 +115,22 @@ export default function ExamClient() {
 
   useEffect(() => {
     document.addEventListener('fullscreenchange', handleFullscreenChange);
+    // Add a keydown listener to block keyboard shortcuts
+    const handleKeyDown = (event: KeyboardEvent) => {
+        // Allow functionality within form inputs, but block browser shortcuts
+        if ((event.ctrlKey || event.metaKey) && event.key !== 'c' && event.key !== 'v' && event.key !== 'x' && event.key !== 'a') {
+            event.preventDefault();
+        }
+        if(event.key === 'F11' || event.key === 'Escape'){
+            event.preventDefault();
+        }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleFullscreenChange]); 
 
@@ -127,8 +144,8 @@ export default function ExamClient() {
     const offlineTestKey = searchParams.get('offlineTestKey');
 
     let currentSessionKey = '';
-    if(customExamKey) currentSessionKey = customExamKey;
-    else if(offlineTestKey) currentSessionKey = offlineTestKey;
+    if(customExamKey) currentSessionKey = `exam-session-${customExamKey}-${Date.now()}`;
+    else if(offlineTestKey) currentSessionKey = `exam-session-${offlineTestKey}-${Date.now()}`;
     else if(examSlug && year && examBoard) currentSessionKey = `exam-session-${examBoard}-${examSlug}-${year}-${Date.now()}`;
     
     if(!currentSessionKey){
@@ -137,6 +154,7 @@ export default function ExamClient() {
         return;
     }
     
+    // Clear any previous session data for this key before starting
     if (sessionStorage.getItem(currentSessionKey)) {
         sessionStorage.removeItem(currentSessionKey);
     }
@@ -173,6 +191,9 @@ export default function ExamClient() {
             if (customQuestionsStr) {
                 setQuestions(JSON.parse(customQuestionsStr));
                 setExamName(sessionStorage.getItem('customExamName') || 'AI Custom Test');
+                 // Clean up the temporary custom exam data
+                sessionStorage.removeItem(customExamKey);
+                sessionStorage.removeItem('customExamName');
             } else {
                  toast({ title: 'Error', description: 'Custom exam data not found.', variant: 'destructive' });
                  router.push('/exams');
@@ -214,6 +235,7 @@ export default function ExamClient() {
         answers,
         markedForReview,
         timeLeft
+        // We no longer save questions here to avoid large sessionStorage writes on every interaction
     };
     sessionStorage.setItem(sessionKey, JSON.stringify(stateToSave));
   }, [answers, markedForReview, timeLeft, sessionKey, questions]);
@@ -246,17 +268,11 @@ export default function ExamClient() {
         }
     };
     
-    const handleKeyDown = (event: KeyboardEvent) => {
-        event.preventDefault();
-    };
-
     document.addEventListener('visibilitychange', handleVisibilityChange);
-    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
         clearInterval(timer);
         document.removeEventListener('visibilitychange', handleVisibilityChange);
-        document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleSubmit, questions, toast]);
   
