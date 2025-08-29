@@ -43,26 +43,28 @@ export default function ResultsClient() {
     }
     
     const { answers, questions } = examData;
-    let correct = 0;
-    const answeredIds = Object.keys(answers || {}).map(Number);
-    const answered = answeredIds.length;
     const total = questions.length;
+    const attempted = Object.keys(answers || {}).length;
     
+    let correct = 0;
     const subjectPerf: Record<string, { correct: number, total: number }> = {};
 
     questions.forEach(q => {
+        // Initialize subject performance tracking
         if (!subjectPerf[q.topic]) {
             subjectPerf[q.topic] = { correct: 0, total: 0 };
         }
         subjectPerf[q.topic].total++;
 
+        // Check if the answer is correct
         if (answers?.[q.id] === q.correctAnswer) {
             correct++;
             subjectPerf[q.topic].correct++;
         }
     });
     
-    const incorrect = answered - correct;
+    const incorrect = attempted - correct;
+    const unanswered = total - attempted;
 
     const subjectPerformanceWithAccuracy: Record<string, SubjectPerformance> = {};
     for(const topic in subjectPerf){
@@ -77,10 +79,10 @@ export default function ResultsClient() {
     return {
       score: total > 0 ? (correct / total) * 100 : 0,
       correctCount: correct,
-      incorrectCount: incorrect < 0 ? 0 : incorrect,
-      unansweredCount: total - answered,
-      accuracy: answered > 0 ? (correct / answered) * 100 : 0,
-      attemptedCount: answered,
+      incorrectCount: incorrect,
+      unansweredCount: unanswered,
+      accuracy: attempted > 0 ? (correct / attempted) * 100 : 0,
+      attemptedCount: attempted,
       totalQuestions: total,
       subjectPerformance: subjectPerformanceWithAccuracy,
     };
