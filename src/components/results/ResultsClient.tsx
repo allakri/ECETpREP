@@ -103,6 +103,7 @@ export default function ResultsClient() {
       };
       await updateUserProgress(newScoreData);
       setIsProgressSaved(true); 
+      // Only clear the session storage after successfully saving progress
       sessionStorage.removeItem(sessionKey);
     } catch (error) {
       console.error("Error saving progress:", error);
@@ -126,6 +127,7 @@ export default function ResultsClient() {
                 router.replace('/');
             }
         } else {
+            // Give it a moment in case of slow redirect
             setTimeout(() => {
                 if (!sessionStorage.getItem(sessionKey)) {
                    router.replace('/'); 
@@ -143,7 +145,7 @@ export default function ResultsClient() {
   }, [examData, user, isProgressSaved, saveProgress]);
 
 
-  if (!examData) {
+  if (!examData || loading) {
     return (
         <div className="flex h-screen w-full items-center justify-center bg-secondary/20">
             <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -345,3 +347,4 @@ export default function ResultsClient() {
   );
 }
 
+    
