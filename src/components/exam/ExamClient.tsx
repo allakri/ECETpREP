@@ -51,12 +51,41 @@ export default function ExamClient() {
   const [examName, setExamName] = useState('ECET Exam');
   const [sessionKey, setSessionKey] = useState<string | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const isSubmitting = useRef(false);
 
-  const handleFullscreenChange = () => {
+  const handleSubmit = useCallback(() => {
+    isSubmitting.current = true;
+    
+    sessionStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
+    if (questions) {
+      sessionStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
+      sessionStorage.setItem('ecetExamName', examName);
+    }
+    
+    if (sessionKey) {
+        sessionStorage.removeItem(sessionKey);
+    }
+
+    if (document.fullscreenElement) {
+      document.exitFullscreen().then(() => {
+        router.replace('/results');
+      }).catch(() => {
+        // even if fullscreen exit fails, proceed to results
+        router.replace('/results');
+      });
+    } else {
+        router.replace('/results');
+    }
+  }, [answers, router, questions, sessionKey, examName]);
+
+
+  const handleFullscreenChange = useCallback(() => {
     const isCurrentlyFullscreen = !!document.fullscreenElement;
     setIsFullscreen(isCurrentlyFullscreen);
     
-    if (!isCurrentlyFullscreen && questions) { // Only trigger violation if exam has started
+    if (isSubmitting.current) return;
+
+    if (!isCurrentlyFullscreen && questions) { 
         violationCount.current += 1;
         if (violationCount.current >= MAX_VIOLATIONS) {
             toast({ title: "Exam Terminated", description: `Exam submitted due to ${MAX_VIOLATIONS} violations.`, variant: 'destructive' });
@@ -65,7 +94,7 @@ export default function ExamClient() {
             setIsViolationDialogOpen(true);
         }
     }
-  };
+  }, [questions, handleSubmit, toast]);
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -84,28 +113,9 @@ export default function ExamClient() {
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
     };
-  }, [questions]); // Rerun effect if questions load
+  }, [handleFullscreenChange]); 
 
 
-  const handleSubmit = useCallback(() => {
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-    }
-    
-    // Use sessionStorage for results to ensure they are available on the next page,
-    // but cleared when the browser tab closes.
-    sessionStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
-    if (questions) {
-      sessionStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
-      sessionStorage.setItem('ecetExamName', examName);
-    }
-    
-    // Clean up the session state from sessionStorage after submission
-    if (sessionKey) {
-        sessionStorage.removeItem(sessionKey);
-    }
-    router.replace('/results');
-  }, [answers, router, questions, sessionKey, examName]);
   
   // Effect to set the session key
   useEffect(() => {
@@ -225,7 +235,7 @@ export default function ExamClient() {
     }, 1000);
 
     const handleVisibilityChange = () => {
-        if (document.hidden) {
+        if (document.hidden && !isSubmitting.current) {
             violationCount.current += 1;
             if (violationCount.current >= MAX_VIOLATIONS) {
                 toast({ title: "Exam Terminated", description: `Exam submitted due to ${MAX_VIOLATIONS} violations.`, variant: 'destructive' });
@@ -489,8 +499,13 @@ export default function ExamClient() {
                 <Button variant="outline">Cancel</Button>
             </AlertDialogCancel>
             <AlertDialogAction onClick={() => {
+                isSubmitting.current = true; // Prevent violation trigger on manual exit
                 setIsExitDialogOpen(false);
-                router.push('/');
+                if (document.fullscreenElement) {
+                    document.exitFullscreen().finally(() => router.push('/'));
+                } else {
+                    router.push('/');
+                }
             }} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
                 Yes, Exit
             </AlertDialogAction>

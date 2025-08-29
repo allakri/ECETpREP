@@ -80,10 +80,15 @@ export default function ChatClient() {
         answers: JSON.parse(storedAnswers),
         questions: JSON.parse(storedQuestions),
       });
+      // Important: Clean up immediately after use
+      sessionStorage.removeItem('ecetExamAnswers');
+      sessionStorage.removeItem('ecetExamQuestions');
     }
 
     if(storedCourseContext) {
       setCourseContext(JSON.parse(storedCourseContext));
+      // Important: Clean up immediately after use
+      sessionStorage.removeItem('courseContext');
     }
   }, []);
 

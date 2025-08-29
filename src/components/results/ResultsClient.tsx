@@ -59,7 +59,8 @@ export default function ResultsClient() {
       sessionStorage.removeItem('ecetExamQuestions');
       sessionStorage.removeItem('ecetExamName');
     } else {
-      router.replace('/'); // No results to show, redirect
+      // No results to show, redirect
+      router.replace('/'); 
     }
   }, [router]);
 
@@ -69,7 +70,8 @@ export default function ResultsClient() {
     }
     
     let correct = 0;
-    const answered = Object.keys(answers).length;
+    const answeredIds = Object.keys(answers).map(Number);
+    const answered = answeredIds.length;
     const total = questions.length;
     
     const subjectPerf: Record<string, { correct: number, total: number }> = {};
@@ -85,6 +87,8 @@ export default function ResultsClient() {
             subjectPerf[q.topic].correct++;
         }
     });
+    
+    const incorrect = answered - correct;
 
     const subjectPerformanceWithAccuracy: Record<string, SubjectPerformance> = {};
     for(const topic in subjectPerf){
@@ -99,7 +103,7 @@ export default function ResultsClient() {
     return {
       score: total > 0 ? (correct / total) * 100 : 0,
       correctCount: correct,
-      incorrectCount: answered - correct,
+      incorrectCount: incorrect < 0 ? 0 : incorrect, // Ensure not negative
       unansweredCount: total - answered,
       accuracy: answered > 0 ? (correct / answered) * 100 : 0,
       attemptedCount: answered,
@@ -304,7 +308,10 @@ export default function ResultsClient() {
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => {
+                        sessionStorage.setItem('ecetExamAnswers', JSON.stringify(answers));
+                        if(questions) sessionStorage.setItem('ecetExamQuestions', JSON.stringify(questions));
+                    }}>
                         <Link href="/chat">
                             Chat with AI <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
