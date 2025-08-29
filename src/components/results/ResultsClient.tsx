@@ -31,14 +31,16 @@ export default function ResultsClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { user, loading, updateUserProgress } = useAuth();
+  
   const [examData, setExamData] = useState<{answers: AnswerSheet, questions: Question[], examName: string} | null>(null);
   const [isProgressSaved, setIsProgressSaved] = useState(false);
+  const [isDataLoaded, setIsDataLoaded] = useState(false); // New state to manage loading
   const [examCompletionDate] = useState(new Date());
 
   const sessionKey = useMemo(() => searchParams.get('sessionKey'), [searchParams]);
 
   const { score, correctCount, incorrectCount, unansweredCount, accuracy, attemptedCount, totalQuestions, subjectPerformance } = useMemo(() => {
-    if (!examData || !examData.questions || examData.questions.length === 0) {
+    if (!examData) {
       return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, accuracy: 0, attemptedCount: 0, totalQuestions: 0, subjectPerformance: {} };
     }
     
@@ -59,13 +61,14 @@ export default function ResultsClient() {
     
     const subjectPerf: Record<string, { correct: number, total: number }> = {};
     questions.forEach(q => {
-        if (!subjectPerf[q.topic]) {
-            subjectPerf[q.topic] = { correct: 0, total: 0 };
+        const topic = q.topic || 'General';
+        if (!subjectPerf[topic]) {
+            subjectPerf[topic] = { correct: 0, total: 0 };
         }
-        subjectPerf[q.topic].total++;
+        subjectPerf[topic].total++;
 
         if (answers?.[q.id] === q.correctAnswer) {
-            subjectPerf[q.topic].correct++;
+            subjectPerf[topic].correct++;
         }
     });
     
@@ -90,59 +93,50 @@ export default function ResultsClient() {
       subjectPerformance: subjectPerformanceWithAccuracy,
     };
   }, [examData]);
-  
+
   const saveProgress = useCallback(async () => {
-    if (loading || !user || !examData || isProgressSaved || !sessionKey) {
-      return;
-    }
-    
+    if (loading || !user || !examData || isProgressSaved) return;
+
     try {
       const newScoreData = {
-          examName: examData.examName,
-          score: score,
-          date: format(new Date(), 'yyyy-MM-dd'),
+        examName: examData.examName,
+        score: score,
+        date: format(new Date(), 'yyyy-MM-dd'),
       };
       await updateUserProgress(newScoreData);
-      setIsProgressSaved(true); 
+      setIsProgressSaved(true);
     } catch (error) {
       console.error("Error saving progress:", error);
     }
-  }, [user, loading, isProgressSaved, examData, score, updateUserProgress, sessionKey]);
-  
+  }, [user, loading, isProgressSaved, examData, score, updateUserProgress]);
   
   useEffect(() => {
+    // This effect runs only once to load data
     if (!sessionKey) {
+      router.replace('/');
+      return;
+    }
+
+    const storedData = sessionStorage.getItem(sessionKey);
+    if (storedData) {
+      try {
+        setExamData(JSON.parse(storedData));
+      } catch (e) {
+        console.error("Failed to parse session data", e);
         router.replace('/');
-        return;
+      }
     }
-    if (!examData) {
-        const storedData = sessionStorage.getItem(sessionKey);
-        if (storedData) {
-            try {
-                const parsedData = JSON.parse(storedData);
-                setExamData(parsedData);
-            } catch (e) {
-                console.error("Failed to parse session data", e);
-                router.replace('/');
-            }
-        } else {
-            setTimeout(() => {
-                if (!sessionStorage.getItem(sessionKey)) {
-                   router.replace('/'); 
-                }
-            }, 500);
-        }
-    }
-  }, [sessionKey, router, examData]);
-
-
+    setIsDataLoaded(true); // Mark data loading as complete
+  }, [sessionKey, router]);
+  
   useEffect(() => {
+    // This effect runs when data is successfully loaded to save progress
     if (examData && user && !isProgressSaved) {
       saveProgress();
     }
   }, [examData, user, isProgressSaved, saveProgress]);
 
-  // Final cleanup effect
+  // When navigating away from this page, clean up the session storage.
   useEffect(() => {
     return () => {
       if (sessionKey) {
@@ -151,14 +145,20 @@ export default function ResultsClient() {
     };
   }, [sessionKey]);
 
-
-  if (!examData || loading) {
+  if (!isDataLoaded || loading) {
     return (
         <div className="flex h-screen w-full items-center justify-center bg-secondary/20">
             <Loader2 className="h-8 w-8 animate-spin text-primary" />
             <p className="ml-4 text-lg">Calculating Your Results...</p>
         </div>
     );
+  }
+
+  if (!examData) {
+    // This will only happen if data was genuinely not found after loading.
+    // We can show a message or redirect.
+    router.replace('/');
+    return null; // Return null while redirecting
   }
 
   const { grade, color: gradeColor } = getGrade(score);
