@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import { useEffect, useState, useMemo, useCallback } from 'react';
@@ -11,7 +10,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { BrainCircuit, Home, UserCheck, ListChecks, Check, X, Target, Clock, Trophy, ArrowRight, MessageCircleQuestion, GraduationCap } from 'lucide-react';
-import { ScoreChart } from './ScoreChart';
 import { useAuth } from '@/hooks/use-auth';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
@@ -202,17 +200,7 @@ export default function ResultsClient() {
                 )
             })}
         </motion.div>
-
-        <motion.div className="grid grid-cols-1" variants={itemVariants}>
-          <ScoreChart
-            score={score}
-            correctCount={correctCount}
-            incorrectCount={incorrectCount}
-            unansweredCount={unansweredCount}
-            totalQuestions={totalQuestions}
-          />
-        </motion.div>
-
+        
         <motion.div variants={itemVariants}>
             <Card>
                 <CardHeader>

@@ -12,15 +12,14 @@ import { useAuth } from '@/hooks/use-auth';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState, useMemo } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Pencil, Book, ListChecks, LayoutDashboard, BarChart2, CheckCircle } from 'lucide-react';
+import { Loader2, Pencil, Book, ListChecks, LayoutDashboard, BarChart2, CheckCircle, Trophy, Calendar, TrendingUp } from 'lucide-react';
 import { StudyActivityCalendar } from '@/components/profile/StudyActivityCalendar';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PersonalNotes } from '@/components/profile/PersonalNotes';
 import { TodoList } from '@/components/profile/TodoList';
 import { Skeleton } from '@/components/ui/skeleton';
-import { ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Legend, Bar as RechartsBar } from 'recharts';
-import { ScoreChart } from '@/components/results/ScoreChart';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
+import { format } from 'date-fns';
 
 const ProfilePageSkeleton = () => (
     <div className="flex flex-col min-h-screen bg-background">
@@ -55,10 +54,7 @@ const ProfilePageSkeleton = () => (
                 <Skeleton className="h-28 w-full" />
               </div>
               <Skeleton className="h-40 w-full" />
-              <div className="grid grid-cols-1 xl:grid-cols-5 gap-8">
-                <Skeleton className="h-80 w-full xl:col-span-3" />
-                <Skeleton className="h-80 w-full xl:col-span-2" />
-              </div>
+              <Skeleton className="h-80 w-full" />
             </div>
           </div>
         </div>
@@ -122,25 +118,7 @@ export default function ProfilePage() {
     }
     setIsEditing(false);
   };
-
-  const overallPerformanceData = useMemo(() => {
-    if (!user || !user.exam_score_history) return null;
-    const totalQuestions = (user.tests_taken || 0) * 100; // This is an approximation
-    if (totalQuestions === 0) return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, totalQuestions: 0 };
-    
-    const correctCount = user.exam_score_history.reduce((acc, test) => acc + (test.score / 100 * totalQuestions / user.tests_taken), 0);
-
-    return user.exam_score_history.reduce(
-        (acc, test) => {
-            const correct = Math.round(test.score * (100 / 100)); // Assuming each test has 100 questions for simplicity
-            acc.correctCount += correct;
-            acc.incorrectCount += (100 - correct);
-            return acc;
-        },
-        { score: user.avg_score || 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, totalQuestions: totalQuestions }
-    );
-  }, [user]);
-
+  
   if (loading || !user) {
     return <ProfilePageSkeleton />;
   }
@@ -236,17 +214,17 @@ export default function ProfilePage() {
                     {/* Right Column for Dashboard Widgets */}
                     <div className="lg:col-span-2 space-y-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <Card>
+                            <Card className="shadow-sm">
                                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                                     <CardTitle className="text-sm font-medium">Avg. Score</CardTitle>
-                                    <CheckCircle className="h-4 w-4 text-muted-foreground" />
+                                    <Trophy className="h-4 w-4 text-muted-foreground" />
                                 </CardHeader>
                                 <CardContent>
                                     <div className="text-2xl font-bold">{user.avg_score.toFixed(1)}%</div>
                                     <p className="text-xs text-muted-foreground">Across {user.tests_taken} tests.</p>
                                 </CardContent>
                             </Card>
-                            <Card>
+                            <Card className="shadow-sm">
                                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                                     <CardTitle className="text-sm font-medium">Tests Taken</CardTitle>
                                     <BarChart2 className="h-4 w-4 text-muted-foreground" />
@@ -262,58 +240,45 @@ export default function ProfilePage() {
                             <StudyActivityCalendar activityData={user.study_activities} streakData={{current: user.current_streak, lastMonth: user.last_month_streak, highest: user.highest_streak}}/>
                         </div>
 
-                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-                            <Card className="shadow-lg">
-                                <CardHeader>
-                                    <CardTitle>Exam Score History</CardTitle>
-                                    <CardDescription>Your performance over time.</CardDescription>
-                                </CardHeader>
-                                <CardContent className="h-[300px]">
-                                    {user.exam_score_history.length > 0 ? (
-                                        <ResponsiveContainer width="100%" height="100%">
-                                            <BarChart data={user.exam_score_history.map(h => ({ name: h.examName, score: h.score }))}>
-                                                <XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
-                                                <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${value}%`}/>
-                                                <Tooltip
-                                                    contentStyle={{
-                                                        backgroundColor: "hsl(var(--background))",
-                                                        border: "1px solid hsl(var(--border))",
-                                                        borderRadius: "var(--radius)"
-                                                    }}
-                                                />
-                                                <Legend iconType="circle" />
-                                                <RechartsBar dataKey="score" fill="hsl(var(--chart-1))" radius={[4, 4, 0, 0]} />
-                                            </BarChart>
-                                        </ResponsiveContainer>
-                                    ) : (
-                                        <div className="h-full flex items-center justify-center">
-                                            <div className="text-center text-muted-foreground">
-                                                <p>No exam data yet.</p>
-                                                <Button variant="link" onClick={() => router.push('/exams')}>Take your first test!</Button>
+                        <Card className="shadow-lg">
+                          <CardHeader>
+                            <CardTitle>Latest Results</CardTitle>
+                            <CardDescription>A summary of your most recent test performances.</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            {user.exam_score_history.length > 0 ? (
+                               <div className="space-y-4">
+                                {user.exam_score_history.slice(-5).reverse().map((test, index) => (
+                                    <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
+                                        <div className="flex items-center gap-3">
+                                            <div className="flex flex-col">
+                                                <span className="font-semibold">{test.examName}</span>
+                                                <span className="text-xs text-muted-foreground flex items-center gap-1.5">
+                                                    <Calendar className="h-3 w-3" />
+                                                    {format(new Date(test.date), 'MMM d, yyyy')}
+                                                </span>
                                             </div>
                                         </div>
-                                    )}
-                                </CardContent>
-                            </Card>
-
-                            <Card className="shadow-lg">
-                                <CardHeader>
-                                    <CardTitle>Overall Performance</CardTitle>
-                                    <CardDescription>A summary of all your answers.</CardDescription>
-                                </CardHeader>
-                                <CardContent className="h-[300px]">
-                                    {user.tests_taken > 0 && overallPerformanceData ? (
-                                       <ScoreChart {...overallPerformanceData} />
-                                    ) : (
-                                        <div className="h-full flex items-center justify-center">
-                                            <div className="text-center text-muted-foreground">
-                                                <p>Complete an exam to see your performance.</p>
+                                        <div className="text-right">
+                                            <div className="font-bold text-lg text-primary">{test.score.toFixed(1)}%</div>
+                                            <div className={`text-xs font-semibold flex items-center gap-1 ${test.score >= 50 ? 'text-green-600' : 'text-red-600'}`}>
+                                                <TrendingUp className="h-3 w-3" />
+                                                {test.score >= 50 ? 'Pass' : 'Needs Improvement'}
                                             </div>
                                         </div>
-                                    )}
-                                </CardContent>
-                            </Card>
-                        </div>
+                                    </div>
+                                ))}
+                               </div>
+                            ) : (
+                                <div className="h-full flex items-center justify-center py-10">
+                                    <div className="text-center text-muted-foreground">
+                                        <p>No exam data yet.</p>
+                                        <Button variant="link" onClick={() => router.push('/exams')}>Take your first test!</Button>
+                                    </div>
+                                </div>
+                            )}
+                          </CardContent>
+                        </Card>
                     </div>
                 </div>
               </TabsContent>

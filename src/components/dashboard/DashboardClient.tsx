@@ -5,7 +5,6 @@ import { useAuth } from "@/hooks/use-auth";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Flame, BarChart, Trophy } from "lucide-react";
 import { ResponsiveContainer, BarChart as RechartsBarChart, XAxis, YAxis, Tooltip, Legend, Bar } from "recharts";
-import { ScoreChart } from "../results/ScoreChart";
 import { Skeleton } from "../ui/skeleton";
 
 const examData = [
@@ -104,8 +103,8 @@ export default function DashboardClient() {
           </Card>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-        <Card className="shadow-lg lg:col-span-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <Card className="shadow-lg">
           <CardHeader>
             <CardTitle>Exam Score History</CardTitle>
             <CardDescription>Your scores on recent mock tests show a positive trend.</CardDescription>
@@ -129,9 +128,6 @@ export default function DashboardClient() {
           </CardContent>
         </Card>
 
-        <div className="lg:col-span-2">
-            <ScoreChart {...overallPerformanceData} />
-        </div>
       </div>
     </div>
   );
