@@ -2,21 +2,27 @@
 "use client";
 
 import { useEffect, useState, useMemo, useCallback } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { useAuth } from '@/hooks/use-auth';
-import { format } from 'date-fns';
-import Link from 'next/link';
+import { format, formatDistanceStrict } from 'date-fns';
 import { Progress } from '@/components/ui/progress';
 import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText, ArrowRight, Loader2 } from 'lucide-react';
-import { Skeleton } from '@/components/ui/skeleton';
 
 interface SubjectPerformance {
     correct: number;
     total: number;
     accuracy: number;
+}
+
+interface ExamResult {
+    answers: AnswerSheet, 
+    questions: Question[], 
+    examName: string,
+    startedAt: string,
+    submittedAt: string,
 }
 
 const getGrade = (score: number): { grade: string, color: string } => {
@@ -29,22 +35,17 @@ const getGrade = (score: number): { grade: string, color: string } => {
 
 export default function ResultsClient() {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const { user, loading, updateUserProgress } = useAuth();
   
-  const [examData, setExamData] = useState<{answers: AnswerSheet, questions: Question[], examName: string} | null>(null);
-  const [isProgressSaved, setIsProgressSaved] = useState(false);
+  const [examData, setExamData] = useState<ExamResult | null>(null);
   const [isDataLoaded, setIsDataLoaded] = useState(false);
-  const [examCompletionDate] = useState(new Date());
 
-  const sessionKey = useMemo(() => searchParams.get('sessionKey'), [searchParams]);
-
-  const { score, correctCount, incorrectCount, unansweredCount, accuracy, attemptedCount, totalQuestions, subjectPerformance } = useMemo(() => {
+  const { score, correctCount, incorrectCount, unansweredCount, accuracy, attemptedCount, totalQuestions, subjectPerformance, timeTaken } = useMemo(() => {
     if (!examData) {
-      return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, accuracy: 0, attemptedCount: 0, totalQuestions: 0, subjectPerformance: {} };
+      return { score: 0, correctCount: 0, incorrectCount: 0, unansweredCount: 0, accuracy: 0, attemptedCount: 0, totalQuestions: 0, subjectPerformance: {}, timeTaken: "0s" };
     }
     
-    const { answers, questions } = examData;
+    const { answers, questions, startedAt, submittedAt } = examData;
     
     let correctCount = 0;
     questions.forEach(q => {
@@ -81,6 +82,8 @@ export default function ResultsClient() {
         };
     }
 
+    const timeTakenFormatted = formatDistanceStrict(new Date(submittedAt), new Date(startedAt));
+
     return {
       score: totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0,
       correctCount: correctCount,
@@ -90,11 +93,12 @@ export default function ResultsClient() {
       attemptedCount: attemptedCount,
       totalQuestions: totalQuestions,
       subjectPerformance: subjectPerformanceWithAccuracy,
+      timeTaken: timeTakenFormatted,
     };
   }, [examData]);
 
   const saveProgress = useCallback(async () => {
-    if (loading || !user || !examData || isProgressSaved) return;
+    if (loading || !user || !examData) return;
 
     try {
       const newScoreData = {
@@ -103,53 +107,41 @@ export default function ResultsClient() {
         date: format(new Date(), 'yyyy-MM-dd'),
       };
       await updateUserProgress(newScoreData);
-      setIsProgressSaved(true);
-      // Now that progress is saved, we can safely remove the session data.
-      if (sessionKey) {
-        sessionStorage.removeItem(sessionKey);
-      }
     } catch (error) {
       console.error("Error saving progress:", error);
     }
-  }, [user, loading, isProgressSaved, examData, score, updateUserProgress, sessionKey]);
+  }, [user, loading, examData, score, updateUserProgress]);
   
   useEffect(() => {
-    if (!sessionKey) {
-      router.replace('/');
-      return;
-    }
-
-    const storedData = sessionStorage.getItem(sessionKey);
+    const storedData = localStorage.getItem("lastExamData");
     if (storedData) {
       try {
-        setExamData(JSON.parse(storedData));
+        const parsedData = JSON.parse(storedData);
+        setExamData(parsedData);
       } catch (e) {
         console.error("Failed to parse session data", e);
         router.replace('/');
       }
+    } else {
+        router.replace('/');
     }
     setIsDataLoaded(true);
-  }, [sessionKey, router]);
+  }, [router]);
   
   useEffect(() => {
-    if (examData && user && !isProgressSaved) {
+    if (examData && user) {
       saveProgress();
     }
-  }, [examData, user, isProgressSaved, saveProgress]);
+  }, [examData, user, saveProgress]);
 
 
-  if (!isDataLoaded || loading) {
+  if (!isDataLoaded || loading || !examData) {
     return (
         <div className="flex h-screen w-full items-center justify-center bg-secondary/20">
             <Loader2 className="h-8 w-8 animate-spin text-primary" />
             <p className="ml-4 text-lg">Calculating Your Results...</p>
         </div>
     );
-  }
-
-  if (!examData) {
-    router.replace('/');
-    return null; 
   }
 
   const { grade, color: gradeColor } = getGrade(score);
@@ -209,8 +201,8 @@ export default function ResultsClient() {
                     <div className="flex items-center gap-3">
                         <Clock className="h-5 w-5 text-muted-foreground" />
                         <div>
-                            <p className="font-semibold">Time Taken: 01:45:32</p>
-                            <p className="text-muted-foreground">Completed on: {format(examCompletionDate, 'dd/MM/yyyy, HH:mm:ss')}</p>
+                            <p className="font-semibold">Time Taken: {timeTaken}</p>
+                            <p className="text-muted-foreground">Completed on: {format(new Date(examData.submittedAt), 'dd/MM/yyyy, HH:mm:ss')}</p>
                         </div>
                     </div>
                 </CardContent>
@@ -331,11 +323,7 @@ export default function ResultsClient() {
                 <CardContent className="p-6 flex flex-col sm:flex-row justify-center items-center gap-4">
                      <Button size="lg" onClick={() => router.push('/exams')}>Take Another Test</Button>
                      <Button size="lg" variant="outline" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" /> Print Results</Button>
-                     <Button size="lg" variant="secondary" onClick={() => {
-                        const reviewSessionKey = `review-session-${Date.now()}`;
-                        sessionStorage.setItem(reviewSessionKey, JSON.stringify(examData));
-                        router.push(`/exam/review?sessionKey=${reviewSessionKey}`);
-                    }}>Review Answers</Button>
+                     <Button size="lg" variant="secondary" onClick={() => router.push(`/exam/review`)}>Review Answers</Button>
                 </CardContent>
             </Card>
 

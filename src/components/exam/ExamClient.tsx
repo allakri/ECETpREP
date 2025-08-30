@@ -49,26 +49,28 @@ export default function ExamClient() {
   const [isExitDialogOpen, setIsExitDialogOpen] = useState(false);
   const violationCount = useRef(0);
   const [examName, setExamName] = useState('ECET Exam');
-  const [sessionKey, setSessionKey] = useState<string | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const isSubmitting = useRef(false);
+  const [startedAt] = useState(new Date().toISOString());
 
   const handleSubmit = useCallback(() => {
     if (isSubmitting.current) return;
     isSubmitting.current = true;
     
-    if (questions && sessionKey) {
-        // Save the complete data needed for validation
-        sessionStorage.setItem(sessionKey, JSON.stringify({
+    if (questions) {
+        // Save the complete data needed for validation to localStorage
+        localStorage.setItem("lastExamData", JSON.stringify({
             answers,
             questions,
             examName,
+            startedAt,
+            submittedAt: new Date().toISOString(),
         }));
     }
     
     const navigateToResults = () => {
         // Add a small delay to ensure state updates before navigation
-        setTimeout(() => router.replace(`/results?sessionKey=${sessionKey}`), 100);
+        setTimeout(() => router.replace(`/results`), 100);
     };
 
     if (document.fullscreenElement) {
@@ -78,7 +80,7 @@ export default function ExamClient() {
     } else {
       navigateToResults();
     }
-  }, [answers, questions, sessionKey, examName, router]);
+  }, [answers, questions, examName, router, startedAt]);
 
 
   const handleFullscreenChange = useCallback(() => {
@@ -135,51 +137,11 @@ export default function ExamClient() {
   }, [handleFullscreenChange]); 
 
 
-  
-  useEffect(() => {
-    const customExamKey = searchParams.get('customExamKey');
-    const examSlug = searchParams.get('examSlug');
-    const examBoard = searchParams.get('examBoard');
-    const year = searchParams.get('year');
-    const offlineTestKey = searchParams.get('offlineTestKey');
-
-    let currentSessionKey = '';
-    if(customExamKey) currentSessionKey = `exam-session-${customExamKey}-${Date.now()}`;
-    else if(offlineTestKey) currentSessionKey = `exam-session-${offlineTestKey}-${Date.now()}`;
-    else if(examSlug && year && examBoard) currentSessionKey = `exam-session-${examBoard}-${examSlug}-${year}-${Date.now()}`;
-    
-    if(!currentSessionKey){
-        toast({ title: 'Error', description: 'Invalid exam session. Redirecting...', variant: 'destructive' });
-        router.push('/exams');
-        return;
-    }
-    
-    // Clear any previous session data for this key before starting
-    if (sessionStorage.getItem(currentSessionKey)) {
-        sessionStorage.removeItem(currentSessionKey);
-    }
-    setSessionKey(currentSessionKey);
-  }, [searchParams, router, toast]);
-
-  useEffect(() => {
-      if (!sessionKey) return;
-
-      const savedStateRaw = sessionStorage.getItem(sessionKey);
-      if(savedStateRaw){
-          try {
-              const savedState = JSON.parse(savedStateRaw);
-              setAnswers(savedState.answers || {});
-              setMarkedForReview(savedState.markedForReview || []);
-              setTimeLeft(savedState.timeLeft || EXAM_DURATION);
-          } catch(e) {
-              console.error("Failed to parse saved exam state", e);
-              sessionStorage.removeItem(sessionKey);
-          }
-      }
-  }, [sessionKey]);
-
   useEffect(() => {
     async function loadQuestions() {
+        // **Cleanup logic**: Remove old exam data before starting a new one.
+        localStorage.removeItem("lastExamData");
+
         const customExamKey = searchParams.get('customExamKey');
         const examSlug = searchParams.get('examSlug');
         const year = searchParams.get('year');
@@ -229,18 +191,6 @@ export default function ExamClient() {
     loadQuestions();
   }, [searchParams, router, toast]);
   
-  useEffect(() => {
-    if (!sessionKey || !questions) return;
-    const stateToSave = {
-        answers,
-        markedForReview,
-        timeLeft
-        // We no longer save questions here to avoid large sessionStorage writes on every interaction
-    };
-    sessionStorage.setItem(sessionKey, JSON.stringify(stateToSave));
-  }, [answers, markedForReview, timeLeft, sessionKey, questions]);
-
-
   useEffect(() => {
     if (!questions) return;
 

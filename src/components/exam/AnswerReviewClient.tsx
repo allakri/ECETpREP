@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import type { AnswerSheet, Question } from '@/lib/types';
 import type { MessageData } from 'genkit/experimental/ai';
 import { Button } from '@/components/ui/button';
@@ -42,7 +42,6 @@ type ChatMessage = {
 
 export default function AnswerReviewClient() {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const { toast } = useToast();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [examData, setExamData] = useState<{answers: AnswerSheet, questions: Question[]} | null>(null);
@@ -59,23 +58,11 @@ export default function AnswerReviewClient() {
 
   useEffect(() => {
     setIsMounted(true);
-    const sessionKey = searchParams.get('sessionKey');
-    if (!sessionKey) {
-        toast({
-            variant: 'destructive',
-            title: 'No Review Data Found',
-            description: 'Redirecting to home page.',
-        });
-        router.replace('/');
-        return;
-    }
-
-    const storedData = sessionStorage.getItem(sessionKey);
+    const storedData = localStorage.getItem("lastExamData");
     if (storedData) {
         try {
             const parsedData = JSON.parse(storedData);
             setExamData(parsedData);
-            sessionStorage.removeItem(sessionKey);
         } catch(e) {
             toast({
                 variant: 'destructive',
@@ -92,7 +79,7 @@ export default function AnswerReviewClient() {
       });
       router.replace('/');
     }
-  }, [router, toast, searchParams]);
+  }, [router, toast]);
 
   useEffect(() => {
     if (chatScrollAreaRef.current) {
