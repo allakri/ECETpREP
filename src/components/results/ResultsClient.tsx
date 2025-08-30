@@ -10,6 +10,7 @@ import { useAuth } from '@/hooks/use-auth';
 import { format, formatDistanceStrict } from 'date-fns';
 import { Progress } from '@/components/ui/progress';
 import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText, ArrowRight, Loader2 } from 'lucide-react';
+import Link from 'next/link';
 
 interface SubjectPerformance {
     correct: number;
