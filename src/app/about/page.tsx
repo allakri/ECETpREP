@@ -34,13 +34,13 @@ const teamMembers = [
         avatarHint: "man portrait smiling",
     },
     {
-        name: "M. Shashi Vardhan reddy",
+        name: "M. Shashi Vardhan Reddy",
         linkedin: "https://www.linkedin.com/in/shashi-vardhan-reddy-mandumula/",
         avatar: "/images/team/shashi.png",
         avatarHint: "man software developer",
     },
     {
-        name: "N. Revanth",
+        name: "N.Revanth",
         linkedin: "https://www.linkedin.com/in/revanth-nagidi-746086275/",
         avatar: "/images/team/revanth.png",
         avatarHint: "man designer",
