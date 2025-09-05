@@ -9,6 +9,7 @@ import { GovtExamSelection } from "@/components/exam/GovtExamSelection";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GraduationCap, Briefcase } from "lucide-react";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { Badge } from "@/components/ui/badge";
 
 
 export default function ExamsPage() {
@@ -24,8 +25,9 @@ export default function ExamsPage() {
                         <TabsTrigger value="ecet" className="text-lg font-headline h-full">
                             <GraduationCap className="mr-2"/> ECET Practice Exams
                         </TabsTrigger>
-                        <TabsTrigger value="govt" className="text-lg font-headline h-full">
+                        <TabsTrigger value="govt" className="text-lg font-headline h-full relative cursor-not-allowed" disabled>
                             <Briefcase className="mr-2"/> Government Exams
+                            <Badge variant="secondary" className="absolute -top-2 right-0 text-xs">Coming Soon</Badge>
                         </TabsTrigger>
                     </TabsList>
                     <TabsContent value="ecet">
@@ -54,3 +56,4 @@ export default function ExamsPage() {
     </div>
   );
 }
+
