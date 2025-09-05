@@ -148,7 +148,7 @@ export default function ResultsClient() {
   const { grade, color: gradeColor } = getGrade(score);
 
   return (
-    <div className="bg-secondary/20 min-h-screen p-4 md:p-8 print:p-0">
+    <div className="bg-secondary/20 min-h-screen p-4 md:p-8 print:bg-white print:p-0">
         <style jsx global>{`
           @media print {
             body {
@@ -172,7 +172,7 @@ export default function ResultsClient() {
               break-inside: avoid;
             }
             .print-header {
-              background-color: #f8fafc !important;
+              background-color: #f1f5f9 !important;
               color: black !important;
               border-bottom: 2px solid #e2e8f0;
             }
@@ -180,7 +180,7 @@ export default function ResultsClient() {
         `}</style>
         <div className="max-w-6xl mx-auto results-container">
             {/* Header */}
-             <div className="hidden print-only mb-4">
+             <div className="hidden print-only mb-4 p-4 border-b">
                 <h1 className="text-2xl font-bold text-center">Exam Result</h1>
             </div>
             <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 rounded-t-lg shadow-lg flex justify-between items-center print:bg-none print-header">
@@ -342,5 +342,3 @@ export default function ResultsClient() {
     </div>
   );
 }
-
-    
