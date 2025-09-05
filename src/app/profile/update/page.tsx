@@ -34,13 +34,11 @@ export default function UpdatePasswordPage() {
         }
         setPageLoading(false);
       } else if (event === 'SIGNED_IN') {
-        // This handles cases where user is already logged in
-        if (session?.user) {
-            setUser(session.user);
-        }
-        setPageLoading(false);
+        // This handles cases where user is already logged in and wants to update password
+        // but for this dedicated page, we should guide them to profile
+        router.replace('/profile');
       } else {
-        // If not a recovery link or signed in, check if there's a session
+        // If not a recovery link, check if there's a session. If not, invalid.
         const checkSession = async () => {
              const { data: { session } } = await supabase.auth.getSession();
              if(!session) {
@@ -50,6 +48,10 @@ export default function UpdatePasswordPage() {
                     description: "No active session found. Please request a new password reset link.",
                 });
                 router.replace('/login');
+             } else {
+               // A session exists, but it's not a password recovery one.
+               // Let's assume they are already logged in and just navigated here.
+               // The PASSWORD_RECOVERY event is the key.
              }
              setPageLoading(false);
         }
