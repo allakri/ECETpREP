@@ -32,6 +32,40 @@ export function AppHeader() {
     { href: "/about", label: "About Us" },
   ];
   
+  const AuthButtons = () => {
+    if (isInitialLoad || !isMounted) {
+      return <div className="flex items-center gap-2">
+        <Skeleton className="h-10 w-20" />
+        <Skeleton className="h-10 w-24" />
+      </div>;
+    }
+
+    if (user) {
+      return (
+        <div className="flex items-center gap-2">
+          <Button onClick={logout} variant="outline" className="bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white">
+            <LogOut className="mr-2 h-4 w-4" />
+            Logout
+          </Button>
+        </div>
+      );
+    }
+
+    return (
+      <div className="flex items-center gap-4">
+        <Link href="/login" className="text-white text-sm font-medium leading-normal hover:text-primary transition-colors">
+          Login
+        </Link>
+        <Button asChild className="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-primary-foreground text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
+          <Link href="/register">
+            <span className="truncate">Get Started</span>
+          </Link>
+        </Button>
+      </div>
+    );
+  };
+
+
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-white/10 px-4 md:px-10 py-5">
         <Link href="/" className="flex items-center gap-3 text-white">
@@ -50,6 +84,9 @@ export function AppHeader() {
                 </Link>
             )}
         </nav>
+        <div className="hidden lg:flex">
+          <AuthButtons />
+        </div>
         <div className="lg:hidden flex items-center">
              <Sheet>
               <SheetTrigger asChild>
@@ -75,7 +112,7 @@ export function AppHeader() {
                   )}
                 </div>
                 <div className="border-t border-white/10 p-4">
-                   {isInitialLoad ? (
+                   {isInitialLoad || !isMounted ? (
                       <Skeleton className="h-10 w-full" />
                    ) : user ? (
                       <Button onClick={logout} variant="outline" className="w-full justify-center text-lg bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white">
