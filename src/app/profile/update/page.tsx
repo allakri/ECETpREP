@@ -12,30 +12,39 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { useToast } from "@/hooks/use-toast";
 import { createClient } from "@/lib/supabase/client";
 import { Loader2, KeyRound } from "lucide-react";
-import { useAuth } from "@/hooks/use-auth";
+import type { User } from "@supabase/supabase-js";
+
 
 export default function UpdatePasswordPage() {
   const { toast } = useToast();
   const router = useRouter();
-  const { user, loading: authLoading } = useAuth();
   const [supabase] = useState(() => createClient());
   
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [pageLoading, setPageLoading] = useState(true); // New state for initial page load
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    // If the user lands here but isn't logged in (which they should be after clicking the link),
-    // send them to the login page.
-    if (!authLoading && !user) {
-      toast({
-        variant: "destructive",
-        title: "Authentication Required",
-        description: "Please log in to update your password.",
-      });
-      router.replace('/login');
-    }
-  }, [user, authLoading, router, toast]);
+    // This effect runs on mount to check for an active session from the recovery link
+    const checkSession = async () => {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session?.user) {
+            setUser(session.user);
+        } else {
+             toast({
+                variant: "destructive",
+                title: "Invalid or Expired Link",
+                description: "No active session found. Please request a new password reset link.",
+            });
+            router.replace('/login');
+        }
+        setPageLoading(false);
+    };
+
+    checkSession();
+  }, [supabase, router, toast]);
 
   const handlePasswordUpdate = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -75,7 +84,7 @@ export default function UpdatePasswordPage() {
     }
   };
   
-  if (authLoading) {
+  if (pageLoading) {
     return (
        <div className="flex h-screen w-full items-center justify-center bg-background">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
