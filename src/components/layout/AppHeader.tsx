@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { Menu, LogOut, Rocket } from "lucide-react";
+import { Menu, LogOut, Rocket, UserPlus, LogIn } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import { Skeleton } from "../ui/skeleton";
 import { useState, useEffect } from 'react';
@@ -53,12 +53,16 @@ export function AppHeader() {
 
     return (
       <div className="flex items-center gap-4">
-        <Link href="/login" className="text-white text-sm font-medium leading-normal hover:text-primary transition-colors">
-          Login
-        </Link>
+        <Button asChild variant="ghost" className="text-white hover:text-primary">
+            <Link href="/login">
+                <LogIn className="mr-2 h-4 w-4"/>
+                Login
+            </Link>
+        </Button>
         <Button asChild className="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-primary-foreground text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
           <Link href="/register">
-            <span className="truncate">Get Started</span>
+             <UserPlus className="mr-2 h-4 w-4"/>
+            <span className="truncate">Register</span>
           </Link>
         </Button>
       </div>
