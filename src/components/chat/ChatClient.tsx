@@ -157,7 +157,7 @@ export default function ChatClient() {
 
   return (
     <div className="flex flex-col h-screen bg-secondary/10 p-2 sm:p-4">
-        <Card className="flex-1 w-full max-w-4xl mx-auto flex flex-col shadow-2xl">
+        <Card className="flex-1 w-full max-w-4xl mx-auto flex flex-col shadow-2xl overflow-hidden">
           <CardHeader className="flex flex-row items-center justify-between border-b">
             <div className="flex items-center gap-3">
               <div className="p-2 bg-primary/10 rounded-full">
@@ -172,56 +172,54 @@ export default function ChatClient() {
                 </Link>
             </Button>
           </CardHeader>
-          <CardContent className="flex-1 p-0 overflow-hidden">
-            <ScrollArea className="h-full p-4 sm:p-6" ref={scrollAreaRef}>
-              <div className="space-y-6">
-                {messages.length === 0 && (
-                  <div className="text-center text-muted-foreground pt-10 px-4">
-                    <p>{getWelcomeMessage()}</p>
-                  </div>
-                )}
-                {messages.map((message, index) => (
-                  <div
-                    key={index}
-                    className={cn(
-                      'flex items-start gap-3',
-                      message.role === 'user' ? 'justify-end' : 'justify-start'
-                    )}
-                  >
-                    {message.role === 'model' && (
-                      <Avatar className="h-8 w-8">
-                        <AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback>
-                      </Avatar>
-                    )}
-                    <div
-                      className={cn(
-                        'max-w-[85%] rounded-lg p-3 text-sm shadow-md',
-                        message.role === 'user'
-                          ? 'bg-primary text-primary-foreground'
-                          : 'bg-muted'
-                      )}
-                    >
-                      <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap">{message.text}</div>
-                    </div>
-                    {message.role === 'user' && (
-                      <Avatar className="h-8 w-8">
-                        <AvatarFallback className="bg-accent text-accent-foreground"><User size={20}/></AvatarFallback>
-                      </Avatar>
-                    )}
-                  </div>
-                ))}
-                {isLoading && (
-                  <div className="flex items-start gap-3 justify-start">
+          <CardContent className="flex-1 overflow-y-auto p-4 sm:p-6" ref={scrollAreaRef}>
+            <div className="space-y-6">
+              {messages.length === 0 && (
+                <div className="text-center text-muted-foreground pt-10 px-4">
+                  <p>{getWelcomeMessage()}</p>
+                </div>
+              )}
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={cn(
+                    'flex items-start gap-3',
+                    message.role === 'user' ? 'justify-end' : 'justify-start'
+                  )}
+                >
+                  {message.role === 'model' && (
                     <Avatar className="h-8 w-8">
                       <AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback>
                     </Avatar>
-                    <div className="bg-muted rounded-lg p-3 shadow-md">
-                      <Loader2 className="h-5 w-5 animate-spin" />
-                    </div>
+                  )}
+                  <div
+                    className={cn(
+                      'max-w-[85%] rounded-lg p-3 text-sm shadow-md',
+                      message.role === 'user'
+                        ? 'bg-primary text-primary-foreground'
+                        : 'bg-muted'
+                    )}
+                  >
+                    <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap">{message.text}</div>
                   </div>
-                )}
-              </div>
-            </ScrollArea>
+                  {message.role === 'user' && (
+                    <Avatar className="h-8 w-8">
+                      <AvatarFallback className="bg-accent text-accent-foreground"><User size={20}/></AvatarFallback>
+                    </Avatar>
+                  )}
+                </div>
+              ))}
+              {isLoading && (
+                <div className="flex items-start gap-3 justify-start">
+                  <Avatar className="h-8 w-8">
+                    <AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback>
+                  </Avatar>
+                  <div className="bg-muted rounded-lg p-3 shadow-md">
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                  </div>
+                </div>
+              )}
+            </div>
           </CardContent>
           <CardFooter className="border-t pt-6">
             <form onSubmit={handleSendMessage} className="flex w-full items-center gap-3">
