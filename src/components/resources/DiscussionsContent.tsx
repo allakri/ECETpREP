@@ -9,33 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-const popularTopics = [
-    {
-        title: "🔥 Must-Read ECET Strategy by Topper (Full Study Plan)",
-        description: "Learn the secrets that helped a top-ranker ace the exam. Includes day-by-day schedule and resource list.",
-        link: "#",
-        icon: Star,
-        image: "https://placehold.co/600x400.png",
-        imageHint: "study plan chart"
-    },
-    {
-        title: "👩‍🎓 Best Diploma Govt Jobs in 2025 – Complete List",
-        description: "Explore the top government job opportunities available after your diploma, with eligibility criteria and salary expectations.",
-        link: "#",
-        icon: Users,
-        image: "https://placehold.co/600x400.png",
-        imageHint: "government building"
-    },
-    {
-        title: "🤖 AI Tools for Students: Write Notes, Solve Questions & More",
-        description: "Discover how AI can supercharge your study habits, from automated note-taking to solving complex problems.",
-        link: "#",
-        icon: BrainCircuit,
-        image: "https://placehold.co/600x400.png",
-        imageHint: "robot brain futuristic"
-    }
-];
-
 const testimonials = [
   {
       name: "Sai Kumar",
@@ -77,36 +50,6 @@ export default function CommunityHubContent() {
                 </Link>
             </Button>
           </div>
-        </section>
-
-        <section>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">Popular Topics & Guides</h2>
-              <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">Hand-picked articles and strategies to boost your preparation.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {popularTopics.map((topic) => {
-                const Icon = topic.icon
-                return (
-                <div key={topic.title}>
-                    <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
-                        <Image src={topic.image} alt={topic.title} data-ai-hint={topic.imageHint} width={600} height={400} className="w-full h-48 object-cover"/>
-                        <CardHeader className="flex-row gap-4 items-start">
-                            <div className="p-2 bg-primary/10 rounded-lg mt-1">
-                                <Icon className="h-6 w-6 text-primary" />
-                            </div>
-                            <div>
-                                <CardTitle className="font-headline text-lg text-primary">{topic.title}</CardTitle>
-                                <CardDescription className="mt-1">{topic.description}</CardDescription>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="mt-auto">
-                            <Button variant="link" className="p-0">Read More <ArrowRight className="ml-2 h-4 w-4" /></Button>
-                        </CardContent>
-                    </Card>
-                </div>
-              )})}
-            </div>
         </section>
         
         <section>
