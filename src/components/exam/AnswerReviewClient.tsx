@@ -200,7 +200,6 @@ export default function AnswerReviewClient() {
                 <CardTitle className="text-base font-headline">Question Palette</CardTitle>
             </CardHeader>
             <CardContent className="flex-1 p-2 overflow-y-auto">
-            <ScrollArea className="h-full">
                 <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-5 lg:grid-cols-6 gap-2 p-2">
                 {questions.map((q, index) => {
                     const status = getQuestionStatus(q.id);
@@ -223,7 +222,6 @@ export default function AnswerReviewClient() {
                     );
                 })}
                 </div>
-            </ScrollArea>
             </CardContent>
         </Card>
     </div>
