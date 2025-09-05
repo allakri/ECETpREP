@@ -156,9 +156,8 @@ export default function ChatClient() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-secondary/10">
-      <main className="flex-grow flex items-center justify-center p-2 sm:p-4">
-        <Card className="w-full max-w-4xl h-[calc(100vh-2rem)] sm:h-[calc(100vh-4rem)] flex flex-col shadow-2xl">
+    <div className="flex flex-col h-screen bg-secondary/10 p-2 sm:p-4">
+        <Card className="flex-1 w-full max-w-4xl mx-auto flex flex-col shadow-2xl">
           <CardHeader className="flex flex-row items-center justify-between border-b">
             <div className="flex items-center gap-3">
               <div className="p-2 bg-primary/10 rounded-full">
@@ -240,7 +239,6 @@ export default function ChatClient() {
             </form>
           </CardFooter>
         </Card>
-      </main>
     </div>
   );
 }
