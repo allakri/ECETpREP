@@ -111,28 +111,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 
   useEffect(() => {
-    // On initial mount, try to load user from cache to prevent UI flicker
-    try {
-        const cachedUser = localStorage.getItem(USER_CACHE_KEY);
-        if (cachedUser) {
-            storeUser(JSON.parse(cachedUser));
-        }
-    } catch (e) {
-        console.error("Failed to parse cached user", e);
-        localStorage.removeItem(USER_CACHE_KEY);
-    }
-    // We still set loading to true initially until the server confirms auth state.
-    setLoading(true);
-
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        // Ignore PASSWORD_RECOVERY event here, as it's handled on its dedicated page
-        if (event === 'PASSWORD_RECOVERY') {
-            setLoading(false);
-            setIsInitialLoad(false);
-            return;
-        }
-        
         let userProfile = null;
         if (session?.user) {
           userProfile = await fetchUserProfile(session.user);
@@ -140,13 +120,31 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         
         storeUser(userProfile);
         setLoading(false);
-        setIsInitialLoad(false);
+        if (isInitialLoad) {
+          setIsInitialLoad(false);
+        }
       }
     );
+
+    // Also check the initial session
+    const checkInitialSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      let userProfile = null;
+      if (session?.user) {
+        userProfile = await fetchUserProfile(session.user);
+      }
+      storeUser(userProfile);
+      setLoading(false);
+      setIsInitialLoad(false);
+    };
+
+    checkInitialSession();
+
 
     return () => {
       subscription.unsubscribe();
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [supabase, fetchUserProfile]);
   
   const logout = async () => {
