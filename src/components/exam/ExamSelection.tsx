@@ -19,7 +19,6 @@ const ExamSelectionSkeleton = () => (
                  </div>
                  <div className="space-y-2 mt-4">
                     <Skeleton className="h-5 w-1/2" />
-                    <Skeleton className="h-5 w-1/3" />
                  </div>
              </div>
         ))}
@@ -56,14 +55,6 @@ export function ExamSelection() {
                     </CardHeader>
                     <CardContent>
                         <div className="text-sm text-muted-foreground space-y-2">
-                            <div className="flex items-center gap-2">
-                                <CheckCircle className="h-4 w-4 text-accent" />
-                                <span>{exam.testCount}+ Mock Tests</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Brain className="h-4 w-4 text-accent" />
-                                <span>AI Feedback Enabled</span>
-                            </div>
                              <div className="flex items-center gap-2">
                                 <CheckCircle className="h-4 w-4 text-accent" />
                                 <span>TG & AP Mock Tests Available</span>
