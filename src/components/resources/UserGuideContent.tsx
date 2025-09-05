@@ -1,12 +1,10 @@
 
 "use client";
 
-import { AppHeader } from "@/components/layout/AppHeader";
-import { AppFooter } from "@/components/layout/AppFooter";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { PlayCircle, ArrowRight, Lightbulb, CheckCircle, Smartphone, Tablet, Laptop, HelpCircle, FileSignature, BarChart, Bot } from "lucide-react";
+import { PlayCircle, Lightbulb, Smartphone, Tablet, Laptop, HelpCircle, FileSignature, BarChart, Bot } from "lucide-react";
 import Image from "next/image";
 
 const guideSteps = [
@@ -55,33 +53,24 @@ const faqs = [
     }
 ];
 
-export default function UserGuidePage() {
+export default function UserGuideContent() {
   return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <AppHeader />
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <div 
-            className="text-center py-16 md:py-24 px-4 bg-primary/5"
-        >
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary font-headline">
+    <div className="space-y-12">
+        <section className="text-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-primary font-headline">
             🚀 Get the Most Out of Your Prep Journey
-          </h1>
-          <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
+          </h2>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
             Your complete walkthrough on how to navigate, learn, and succeed using our platform's powerful features.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="w-full sm:w-auto"><PlayCircle className="mr-2 h-5 w-5" /> Watch Quick Demo</Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto">Start Learning Now <ArrowRight className="ml-2 h-5 w-5" /></Button>
+          <div className="mt-8">
+            <Button size="lg"><PlayCircle className="mr-2 h-5 w-5" /> Watch Quick Demo</Button>
           </div>
-        </div>
+        </section>
         
-        {/* Walkthrough Section */}
-        <div className="py-16 md:py-24 px-4 container mx-auto">
-             <div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
-            >
-                {guideSteps.map((step, index) => (
+        <section>
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                {guideSteps.map((step) => (
                     <div key={step.title}>
                         <Card className="shadow-lg hover:shadow-primary/20 transition-shadow duration-300 border-none overflow-hidden">
                             <CardContent className="p-0">
@@ -106,10 +95,9 @@ export default function UserGuidePage() {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
 
-        {/* FAQs and Compatibility Section */}
-        <div className="py-16 md:py-24 bg-primary/5">
+        <section className="bg-primary/5 py-12 rounded-lg">
             <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-5 gap-12">
                 <div className="lg:col-span-3">
                     <div>
@@ -151,10 +139,8 @@ export default function UserGuidePage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-      </main>
-      <AppFooter />
     </div>
   );
 }

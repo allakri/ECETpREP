@@ -1,13 +1,11 @@
 
 "use client";
 
-import { AppHeader } from "@/components/layout/AppHeader";
-import { AppFooter } from "@/components/layout/AppFooter";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, CheckCircle2, Download, Lightbulb, Target, BookCopy, ShieldQuestion, Medal, Brain, Clock, Users, CalendarCheck, Repeat, Beaker, HeartPulse } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Download, Brain, Clock, ShieldQuestion, BookCopy, Medal, CalendarCheck, Repeat, Beaker, HeartPulse, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 const guideSections = [
     { 
@@ -153,143 +151,125 @@ const guideSections = [
   }
 ];
 
-export default function RoadmapPage() {
-  const [activeSection, setActiveSection] = useState(guideSections[0].id);
+export default function RoadmapContent() {
+    const [activeSection, setActiveSection] = useState(guideSections[0].id);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: '-30% 0px -70% 0px' }
-    );
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                setActiveSection(entry.target.id);
+            }
+            });
+        },
+        { rootMargin: '-30% 0px -70% 0px' }
+        );
 
-    guideSections.forEach((section) => {
-      const element = document.getElementById(section.id);
-      if (element) {
-        observer.observe(element);
-      }
-    });
-
-    return () => {
-      guideSections.forEach((section) => {
+        guideSections.forEach((section) => {
         const element = document.getElementById(section.id);
         if (element) {
-          observer.unobserve(element);
+            observer.observe(element);
         }
-      });
+        });
+
+        return () => {
+        guideSections.forEach((section) => {
+            const element = document.getElementById(section.id);
+            if (element) {
+            observer.unobserve(element);
+            }
+        });
+        };
+    }, []);
+    
+    const handleDownload = (filename: string) => {
+        const element = document.createElement("a");
+        const file = new Blob(["This is a placeholder for your " + filename], {type: 'text/plain'});
+        element.href = URL.createObjectURL(file);
+        element.download = filename;
+        document.body.appendChild(element);
+        element.click();
+        element.remove();
+    }
+
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     };
-  }, []);
-  
-  const handleDownload = (filename: string) => {
-    // In a real app, you'd link to a file in /public
-    // For this prototype, we'll simulate a download by creating a dummy file.
-    const element = document.createElement("a");
-    const file = new Blob(["This is a placeholder for your " + filename], {type: 'text/plain'});
-    element.href = URL.createObjectURL(file);
-    element.download = filename;
-    document.body.appendChild(element); // Required for this to work in FireFox
-    element.click();
-    element.remove();
-  }
 
-  const scrollToSection = (id: string) => {
-      const element = document.getElementById(id);
-      if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-  };
-
-
-  return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <AppHeader />
-      <main className="flex-grow bg-background">
-        <div 
-            className="text-center py-20 px-4 bg-primary/5"
-          >
-            <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl font-headline">
-                Your Personalized Path to Success
-            </h1>
-            <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground">
-              A step-by-step, time-tested guide built by exam experts and toppers to help you ace the ECET & other government exams.
-            </p>
-        </div>
-        
-        <div className="container mx-auto px-4 py-16">
-            <div className="flex flex-col lg:flex-row gap-12">
-                {/* Sticky Sidebar */}
-                <aside className="lg:w-1/4 lg:sticky top-24 self-start">
-                    <Card>
-                        <CardHeader>
-                            <CardTitle className="font-headline">Roadmap Sections</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <ul className="space-y-2">
-                                {guideSections.map(section => {
-                                    const Icon = section.icon;
-                                    return (
-                                        <li key={section.id}>
-                                            <Button
-                                                variant={activeSection === section.id ? 'default' : 'ghost'}
-                                                className="w-full justify-start gap-3"
-                                                onClick={() => scrollToSection(section.id)}
-                                            >
-                                                <Icon className={cn("h-5 w-5", activeSection === section.id ? 'text-primary-foreground' : 'text-primary/80')} />
-                                                <span className="truncate">{section.title.substring(section.title.indexOf(' ')+1)}</span>
-                                            </Button>
-                                        </li>
-                                    );
-                                })}
-                            </ul>
-                        </CardContent>
-                    </Card>
-                </aside>
-
-                {/* Main Content */}
-                <div className="lg:w-3/4 space-y-12">
-                    <div
-                        className="space-y-12"
-                    >
-                        {guideSections.map((section) => (
-                          <div id={section.id} key={section.id}>
-                            <Card className="shadow-lg bg-card border-border scroll-mt-24">
-                                <CardHeader className="flex flex-row items-center gap-4">
-                                     <div className="p-3 bg-accent/10 rounded-lg">
-                                        <section.icon className="h-6 w-6 text-accent"/>
-                                     </div>
-                                    <CardTitle className="text-2xl font-headline text-primary">{section.title}</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    {section.content}
-                                </CardContent>
-                              </Card>
-                          </div>
-                        ))}
-                    </div>
-                    
-                    <div>
-                         <Card className="bg-secondary/10 border-secondary/20">
+    return (
+         <Card>
+            <CardHeader>
+                <CardTitle className="text-2xl font-headline text-primary">Your Personalized Path to Success</CardTitle>
+                <CardDescription>A step-by-step, time-tested guide built by exam experts and toppers to help you ace the ECET & other government exams.</CardDescription>
+            </CardHeader>
+            <CardContent>
+                <div className="flex flex-col lg:flex-row gap-12">
+                    <aside className="lg:w-1/4 lg:sticky top-24 self-start">
+                        <Card>
                             <CardHeader>
-                                <CardTitle className="font-headline text-secondary">Downloadable Resources</CardTitle>
-                                <CardDescription>Get these handy resources to supplement your preparation.</CardDescription>
+                                <CardTitle className="font-headline">Roadmap Sections</CardTitle>
                             </CardHeader>
-                            <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                                <Button variant="outline" onClick={() => handleDownload('study-planner.pdf')}><Download className="mr-2 h-4 w-4" /> Study Planner PDF</Button>
-                                <Button variant="outline" onClick={() => handleDownload('formula-mind-maps.pdf')}><Download className="mr-2 h-4 w-4" /> Formula Mind Maps</Button>
-                                <Button variant="outline" onClick={() => handleDownload('subject-checklist.pdf')}><Download className="mr-2 h-4 w-4" /> Subject Checklist</Button>
+                            <CardContent>
+                                <ul className="space-y-2">
+                                    {guideSections.map(section => {
+                                        const Icon = section.icon;
+                                        return (
+                                            <li key={section.id}>
+                                                <Button
+                                                    variant={activeSection === section.id ? 'default' : 'ghost'}
+                                                    className="w-full justify-start gap-3"
+                                                    onClick={() => scrollToSection(section.id)}
+                                                >
+                                                    <Icon className={cn("h-5 w-5", activeSection === section.id ? 'text-primary-foreground' : 'text-primary/80')} />
+                                                    <span className="truncate">{section.title.substring(section.title.indexOf(' ')+1)}</span>
+                                                </Button>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
                             </CardContent>
-                         </Card>
-                      </div>
+                        </Card>
+                    </aside>
+
+                    <div className="lg:w-3/4 space-y-12">
+                        <div className="space-y-12">
+                            {guideSections.map((section) => (
+                            <div id={section.id} key={section.id}>
+                                <Card className="shadow-lg bg-card border-border scroll-mt-24">
+                                    <CardHeader className="flex flex-row items-center gap-4">
+                                        <div className="p-3 bg-accent/10 rounded-lg">
+                                            <section.icon className="h-6 w-6 text-accent"/>
+                                        </div>
+                                        <CardTitle className="text-2xl font-headline text-primary">{section.title}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        {section.content}
+                                    </CardContent>
+                                </Card>
+                            </div>
+                            ))}
+                        </div>
+                        
+                        <div>
+                            <Card className="bg-secondary/10 border-secondary/20">
+                                <CardHeader>
+                                    <CardTitle className="font-headline text-secondary">Downloadable Resources</CardTitle>
+                                    <CardDescription>Get these handy resources to supplement your preparation.</CardDescription>
+                                </CardHeader>
+                                <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                                    <Button variant="outline" onClick={() => handleDownload('study-planner.pdf')}><Download className="mr-2 h-4 w-4" /> Study Planner PDF</Button>
+                                    <Button variant="outline" onClick={() => handleDownload('formula-mind-maps.pdf')}><Download className="mr-2 h-4 w-4" /> Formula Mind Maps</Button>
+                                    <Button variant="outline" onClick={() => handleDownload('subject-checklist.pdf')}><Download className="mr-2 h-4 w-4" /> Subject Checklist</Button>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-      </main>
-      <AppFooter />
-    </div>
-  );
+            </CardContent>
+        </Card>
+    )
 }

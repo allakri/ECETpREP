@@ -23,10 +23,7 @@ export function AppHeader() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/exams", label: "Exams" },
-    { href: "/roadmap", label: "Roadmap" },
-    { href: "/discussions", label: "Discussions" },
-    { href: "/courses", label: "Courses" },
-    { href: "/user-guide", label: "User Guide" },
+    { href: "/resources", label: "Resources" },
     { href: "/about", label: "About Us" },
   ];
   
