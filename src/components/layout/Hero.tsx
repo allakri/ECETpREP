@@ -28,11 +28,11 @@ export function Hero() {
           <div 
             className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4"
           >
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl transition-all font-bold shadow-lg" onClick={() => router.push('/register')}>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-xl transition-all font-bold shadow-lg" onClick={() => router.push('/register')}>
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="link" size="lg" className="text-foreground hover:text-accent font-bold" onClick={() => router.push('/#how-it-works')}>
-              <PlayCircle className="mr-2 h-5 w-5"/> Watch Demo
+              <PlayCircle className="mr-2 h-5 w-5"/> How it Works
             </Button>
           </div>
           <div 

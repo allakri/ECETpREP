@@ -3,6 +3,7 @@
 
 import { Users, FileText, HelpCircle } from "lucide-react";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const CountUp = ({ end }: { end: number }) => {
     const [count, setCount] = useState(0);
@@ -42,7 +43,7 @@ const stats = [
     },
     {
         icon: HelpCircle,
-        value: 450,
+        value: 450000,
         label: "Questions Solved",
     }
 ]
@@ -57,22 +58,33 @@ export function Stats() {
     return(
         <div className="bg-secondary/20 py-12 sm:py-16">
             <div className="container mx-auto px-4">
-                 <div 
+                 <motion.div 
                     className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ staggerChildren: 0.2 }}
                 >
                     {stats.map((stat, index) => {
                         const Icon = stat.icon;
                         return (
-                            <div key={index} className="flex flex-col items-center">
+                            <motion.div 
+                                key={index} 
+                                className="flex flex-col items-center"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
                                 <Icon className="h-10 w-10 text-primary mb-3" />
                                 <p className="text-4xl font-bold font-headline text-primary">
                                     {isMounted ? <CountUp end={stat.value} /> : '0'}+
                                 </p>
                                 <p className="text-lg text-muted-foreground">{stat.label}</p>
-                            </div>
+                            </motion.div>
                         )
                     })}
-                </div>
+                </motion.div>
             </div>
         </div>
     )

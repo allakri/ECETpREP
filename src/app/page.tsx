@@ -4,6 +4,8 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { Hero } from "@/components/layout/Hero";
 import { Features } from "@/components/layout/Features";
 import { HowItWorks } from "@/components/layout/HowItWorks";
+import { Stats } from "@/components/layout/Stats";
+import { OurMission } from "@/components/layout/OurMission";
 
 export default function HomePage() {
   return (
@@ -12,7 +14,9 @@ export default function HomePage() {
       <main className="flex-grow">
         <Hero />
         <Features />
+        <Stats />
         <HowItWorks />
+        <OurMission />
       </main>
       <AppFooter />
     </div>
