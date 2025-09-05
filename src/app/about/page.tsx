@@ -31,28 +31,28 @@ const teamMembers = [
     {
         name: "Abhishek Rai",
         contribution: "Visionary behind the platform, leading the project from concept to execution with a passion for educational technology.",
-        avatar: "https://placehold.co/150x150.png",
+        avatar: "/images/team/abhishek.png",
         avatarHint: "man portrait smiling",
         icon: Target,
     },
     {
         name: "Shashi",
         contribution: "Architected and built the robust front-end, ensuring a seamless and performant user experience across all devices.",
-        avatar: "https://placehold.co/150x150.png",
+        avatar: "/images/team/shashi.png",
         avatarHint: "man software developer",
         icon: Code,
     },
     {
         name: "Revanth",
         contribution: "Crafted the intuitive and visually appealing user interface, focusing on a clean, user-friendly design system.",
-        avatar: "https://placehold.co/150x150.png",
+        avatar: "/images/team/revanth.png",
         avatarHint: "man designer",
         icon: Brush,
     },
     {
         name: "Sneha",
         contribution: "Developed the intelligent AI flows and managed the backend infrastructure that powers our personalized learning features.",
-        avatar: "https://placehold.co/150x150.png",
+        avatar: "/images/team/sneha.png",
         avatarHint: "woman engineer",
         icon: Bot,
     }
