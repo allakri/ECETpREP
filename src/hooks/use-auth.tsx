@@ -126,12 +126,26 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        if (session?.user) {
-          const userProfile = await fetchUserProfile(session.user);
-          storeUser(userProfile);
-        } else {
-          storeUser(null);
+        // This will be called upon login, logout, and password recovery.
+        // On PASSWORD_RECOVERY, the session is updated, so we re-fetch the user profile.
+        if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED' || event === 'USER_UPDATED' || event === 'PASSWORD_RECOVERY') {
+           if (session?.user) {
+                const userProfile = await fetchUserProfile(session.user);
+                storeUser(userProfile);
+           }
+        } else if (event === 'SIGNED_OUT') {
+            storeUser(null);
         }
+        
+        // Final state after initial load or any auth event
+        const finalSession = (await supabase.auth.getSession()).data.session;
+        if (finalSession?.user) {
+            const userProfile = await fetchUserProfile(finalSession.user);
+            storeUser(userProfile);
+        } else {
+            storeUser(null);
+        }
+
         setLoading(false);
         setIsInitialLoad(false); // Set to false after the first check
       }

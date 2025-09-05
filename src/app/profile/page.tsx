@@ -20,6 +20,7 @@ import { TodoList } from '@/components/profile/TodoList';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { format } from 'date-fns';
+import { createClient } from '@/lib/supabase/client';
 
 const ProfilePageSkeleton = () => (
     <div className="flex flex-col min-h-screen bg-background">
@@ -67,6 +68,7 @@ export default function ProfilePage() {
   const { user, updateUser, loading } = useAuth();
   const router = useRouter();
   const { toast } = useToast();
+  const [supabase] = useState(() => createClient());
 
   const [isEditing, setIsEditing] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
@@ -75,6 +77,8 @@ export default function ProfilePage() {
   const [branch, setBranch] = useState('');
   const [college, setCollege] = useState('');
   const [year, setYear] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   useEffect(() => {
     if (!loading && !user) {
@@ -91,7 +95,32 @@ export default function ProfilePage() {
 
   const handleSaveChanges = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (password && password !== confirmPassword) {
+        toast({
+            variant: 'destructive',
+            title: 'Passwords do not match',
+            description: 'Please ensure both password fields are identical.',
+        });
+        return;
+    }
+
     setIsUpdating(true);
+    
+    // Update user password if it's provided
+    if (password) {
+        const { error: passwordError } = await supabase.auth.updateUser({ password });
+        if (passwordError) {
+            toast({
+                variant: 'destructive',
+                title: 'Password Update Failed',
+                description: passwordError.message,
+            });
+            setIsUpdating(false);
+            return;
+        }
+    }
+
     const updatedDetails = {
       name,
       phone_number: phone,
@@ -100,8 +129,11 @@ export default function ProfilePage() {
       year_of_study: year,
     };
     await updateUser(updatedDetails);
+    
     setIsUpdating(false);
     setIsEditing(false);
+    setPassword('');
+    setConfirmPassword('');
     toast({
       title: "Profile Updated",
       description: "Your changes have been saved successfully.",
@@ -116,6 +148,8 @@ export default function ProfilePage() {
       setCollege(user.college);
       setYear(user.yearOfStudy);
     }
+    setPassword('');
+    setConfirmPassword('');
     setIsEditing(false);
   };
   
@@ -197,6 +231,23 @@ export default function ProfilePage() {
                                 <p className="text-muted-foreground">{year || 'Not set'}</p>
                                 )}
                             </div>
+
+                            {isEditing && (
+                                <>
+                                    <hr />
+                                    <div className="space-y-4">
+                                        <h3 className="font-semibold">Change Password</h3>
+                                        <div className="grid gap-2">
+                                            <Label htmlFor="password">New Password</Label>
+                                            <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Leave blank to keep current password" />
+                                        </div>
+                                        <div className="grid gap-2">
+                                            <Label htmlFor="confirmPassword">Confirm New Password</Label>
+                                            <Input id="confirmPassword" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                                        </div>
+                                    </div>
+                                </>
+                            )}
                             {isEditing && (
                             <div className="flex justify-end gap-2">
                                 <Button type="button" variant="ghost" onClick={handleCancel} disabled={isUpdating}>Cancel</Button>
