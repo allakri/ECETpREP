@@ -274,13 +274,6 @@ export default function ExamClient() {
 
   const PaletteContent = () => (
     <div className="flex flex-col gap-6 h-full">
-        <div className="text-center">
-            <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto flex items-center justify-center mb-2">
-                <img src="https://placehold.co/100x100.png" alt="User" data-ai-hint="user avatar" className="rounded-full" />
-            </div>
-            <h2 className="font-bold font-headline">Student User</h2>
-            <p className="text-sm text-muted-foreground">ECET Aspirant</p>
-        </div>
         <Card className="flex-1 flex flex-col bg-background/50 dark:bg-background/20 overflow-hidden">
             <CardHeader className="p-4 border-b">
                 <CardTitle className="text-lg font-headline">Question Palette</CardTitle>
