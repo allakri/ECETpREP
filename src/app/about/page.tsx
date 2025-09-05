@@ -101,7 +101,9 @@ export default function AboutPage() {
                             <CardContent className="pt-6 flex flex-col items-center">
                                 <Avatar className="h-24 w-24 mb-4 border-4 border-primary/20">
                                     <Image src={member.avatar} alt={member.name} width={100} height={100} className="object-cover" />
-                                    <AvatarFallback>{member.name.substring(0, 2)}</AvatarFallback>
+                                    <AvatarFallback className="bg-primary/20 text-primary font-bold text-2xl">
+                                      {member.name.charAt(0)}
+                                    </AvatarFallback>
                                 </Avatar>
                                 <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
                                 <div className="flex items-center gap-2 text-muted-foreground group-hover:text-primary transition-colors">
