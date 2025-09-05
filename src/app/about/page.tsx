@@ -31,28 +31,28 @@ const teamMembers = [
     {
         name: "Abhishek Rai",
         contribution: "Visionary behind the platform, leading the project from concept to execution with a passion for educational technology.",
-        avatar: "/images/team/abhishek.png",
+        avatar: "https://picsum.photos/seed/abhishek/100/100",
         avatarHint: "man portrait smiling",
         icon: Target,
     },
     {
         name: "Shashi",
         contribution: "Architected and built the robust front-end, ensuring a seamless and performant user experience across all devices.",
-        avatar: "/images/team/shashi.png",
+        avatar: "https://picsum.photos/seed/shashi/100/100",
         avatarHint: "man software developer",
         icon: Code,
     },
     {
         name: "Revanth",
         contribution: "Crafted the intuitive and visually appealing user interface, focusing on a clean, user-friendly design system.",
-        avatar: "/images/team/revanth.png",
+        avatar: "https://picsum.photos/seed/revanth/100/100",
         avatarHint: "man designer",
         icon: Brush,
     },
     {
         name: "Sneha",
         contribution: "Developed the intelligent AI flows and managed the backend infrastructure that powers our personalized learning features.",
-        avatar: "/images/team/sneha.png",
+        avatar: "https://picsum.photos/seed/sneha/100/100",
         avatarHint: "woman engineer",
         icon: Bot,
     }
