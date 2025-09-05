@@ -2,12 +2,11 @@
 import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Target, Cpu, Users, Brush, Code, Bot } from "lucide-react";
+import { Target, Cpu, Users, Linkedin } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+
 
 const corePrinciples = [
     {
@@ -29,32 +28,28 @@ const corePrinciples = [
 
 const teamMembers = [
     {
-        name: "Abhishek Rai",
-        contribution: "Visionary behind the platform, leading the project from concept to execution with a passion for educational technology.",
-        avatar: "https://picsum.photos/seed/abhishek/100/100",
+        name: "Rai Abhishek",
+        linkedin: "https://www.linkedin.com/in/abhishek-rai--/",
+        avatar: "/images/team/abhishek.png",
         avatarHint: "man portrait smiling",
-        icon: Target,
     },
     {
-        name: "Shashi",
-        contribution: "Architected and built the robust front-end, ensuring a seamless and performant user experience across all devices.",
-        avatar: "https://picsum.photos/seed/shashi/100/100",
+        name: "M. Shashi Vardhan reddy",
+        linkedin: "https://www.linkedin.com/in/shashi-vardhan-reddy-mandumula/",
+        avatar: "/images/team/shashi.png",
         avatarHint: "man software developer",
-        icon: Code,
     },
     {
-        name: "Revanth",
-        contribution: "Crafted the intuitive and visually appealing user interface, focusing on a clean, user-friendly design system.",
-        avatar: "https://picsum.photos/seed/revanth/100/100",
+        name: "N. Revanth",
+        linkedin: "https://www.linkedin.com/in/revanth-nagidi-746086275/",
+        avatar: "/images/team/revanth.png",
         avatarHint: "man designer",
-        icon: Brush,
     },
     {
-        name: "Sneha",
-        contribution: "Developed the intelligent AI flows and managed the backend infrastructure that powers our personalized learning features.",
-        avatar: "https://picsum.photos/seed/sneha/100/100",
+        name: "Sneha Goshika",
+        linkedin: "https://www.linkedin.com/in/sneha-goshika-08ba2428b/",
+        avatar: "/images/team/sneha.png",
         avatarHint: "woman engineer",
-        icon: Bot,
     }
 ];
 
@@ -101,16 +96,21 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-center mb-12 font-headline text-primary">Meet the Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {teamMembers.map((member) => (
-                    <Card key={member.name} className="text-center shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
-                        <CardContent className="pt-6 flex flex-col items-center">
-                            <Avatar className="h-24 w-24 mb-4 border-4 border-primary/20">
-                                <AvatarImage src={member.avatar} alt={member.name} data-ai-hint={member.avatarHint} />
-                                <AvatarFallback>{member.name.substring(0, 2)}</AvatarFallback>
-                            </Avatar>
-                            <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
-                            <p className="text-sm text-muted-foreground">{member.contribution}</p>
-                        </CardContent>
-                    </Card>
+                    <Link key={member.name} href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                        <Card className="text-center shadow-lg hover:shadow-primary/20 transition-shadow duration-300 h-full group">
+                            <CardContent className="pt-6 flex flex-col items-center">
+                                <Avatar className="h-24 w-24 mb-4 border-4 border-primary/20">
+                                    <Image src={member.avatar} alt={member.name} width={100} height={100} className="object-cover" />
+                                    <AvatarFallback>{member.name.substring(0, 2)}</AvatarFallback>
+                                </Avatar>
+                                <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
+                                <div className="flex items-center gap-2 text-muted-foreground group-hover:text-primary transition-colors">
+                                    <Linkedin className="h-4 w-4" />
+                                    <span>LinkedIn Profile</span>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </Link>
                 ))}
             </div>
           </div>
