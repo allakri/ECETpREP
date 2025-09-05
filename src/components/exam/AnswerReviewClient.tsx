@@ -200,6 +200,7 @@ export default function AnswerReviewClient() {
                 <CardTitle className="text-base font-headline">Question Palette</CardTitle>
             </CardHeader>
             <CardContent className="flex-1 p-2 overflow-y-auto">
+              <ScrollArea className="h-full">
                 <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-5 lg:grid-cols-6 gap-2 p-2">
                 {questions.map((q, index) => {
                     const status = getQuestionStatus(q.id);
@@ -222,6 +223,7 @@ export default function AnswerReviewClient() {
                     );
                 })}
                 </div>
+              </ScrollArea>
             </CardContent>
         </Card>
     </div>
@@ -231,7 +233,7 @@ export default function AnswerReviewClient() {
     <div className="bg-secondary/10 text-foreground">
         <div className="container mx-auto flex flex-col md:flex-row gap-6 py-6 min-h-[calc(100vh-8rem)]">
             {/* Desktop Sidebar */}
-            <aside className="w-full md:w-80 lg:w-96 bg-card border rounded-lg p-4 hidden md:flex flex-col gap-4 sticky top-24 self-start">
+            <aside className="w-full md:w-80 lg:w-96 bg-card border rounded-lg p-4 hidden md:flex flex-col gap-4 sticky top-24 self-start h-[calc(100vh-8rem-3rem)]">
                <PaletteContent />
             </aside>
 
@@ -379,3 +381,5 @@ export default function AnswerReviewClient() {
     </div>
   );
 }
+
+    
