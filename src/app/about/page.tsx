@@ -114,38 +114,6 @@ export default function AboutPage() {
                 ))}
             </div>
           </div>
-          
-          <div className="max-w-2xl mx-auto mt-20">
-             <Card className="shadow-lg bg-card border-border">
-                <CardHeader>
-                  <CardTitle className="text-3xl font-headline text-primary">Get in Touch</CardTitle>
-                  <CardDescription>Have a question or feedback? Fill out the form below to contact us.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
-                      <Input id="name" placeholder="Enter your name" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email Address</Label>
-                      <Input id="email" type="email" placeholder="student@example.com" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Subject</Label>
-                      <Input id="subject" placeholder="What is your message about?" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea id="message" placeholder="Your message here..." rows={5} />
-                    </div>
-                    <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-          </div>
 
         </div>
       </main>
