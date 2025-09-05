@@ -10,6 +10,7 @@ import * as React from "react";
 import { useAuth } from "@/hooks/use-auth";
 import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
+import { Badge } from "../ui/badge";
 
 const papers = [
     { year: "2025", type: "Latest Pattern", questions: 200, duration: "2 Hours", marks: 200 },
@@ -90,8 +91,13 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                                 <CardDescription>Choose which state's ECET you want to prepare for.</CardDescription>
                             </CardHeader>
                             <CardContent className="flex flex-col sm:flex-row justify-center items-center gap-6 py-10">
-                                <Button onClick={() => setStep("apecet")} size="lg" className="w-full sm:w-auto h-16 text-xl">
+                                <Button
+                                    size="lg"
+                                    className="w-full sm:w-auto h-16 text-xl relative cursor-not-allowed"
+                                    disabled
+                                >
                                     APECET (Andhra Pradesh)
+                                    <Badge variant="secondary" className="absolute -top-2 -right-2 text-xs">Coming Soon</Badge>
                                 </Button>
                                 <Button onClick={() => setStep("tgecet")} size="lg" className="w-full sm:w-auto h-16 text-xl">
                                     TGECET (Telangana)
