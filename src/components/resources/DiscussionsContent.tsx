@@ -59,11 +59,11 @@ export default function CommunityHubContent() {
             </div>
             <Carousel
                 opts={{ align: "start", loop: true, }}
-                className="w-full max-w-5xl mx-auto"
+                className="w-full max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto"
             >
                 <CarouselContent>
                 {testimonials.map((testimonial, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
                         <div className="p-1">
                         <Card className="flex flex-col justify-between shadow-lg bg-card h-[250px]">
                             <CardContent className="pt-6">
