@@ -1,85 +1,56 @@
-
 "use client"
 
 import Link from "next/link";
-import { Copyright, Rocket } from "lucide-react";
-import { useState, useEffect } from 'react';
+import { Facebook, Twitter, Linkedin, Copyright } from "lucide-react";
 
-const CountUp = ({ end }: { end: number }) => {
-    const [count, setCount] = useState(0);
-    const duration = 2000;
-
-    useEffect(() => {
-        let start = 0;
-        const startTimestamp = performance.now();
-        
-        const step = (timestamp: number) => {
-            const progress = timestamp - startTimestamp;
-            const percentage = Math.min(progress / duration, 1);
-            setCount(Math.floor(percentage * (end - start) + start));
-            if (progress < duration) {
-                requestAnimationFrame(step);
-            } else {
-                setCount(end);
-            }
-        };
-
-        requestAnimationFrame(step);
-    }, [end]);
-
-    return <span>{count.toLocaleString()}</span>;
-};
+const DiamondIcon = () => (
+    <svg className="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4L44 24L24 44L4 24L24 4Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4"></path>
+        <path d="M24 29C26.7614 29 29 26.7614 29 24C29 21.2386 26.7614 19 24 19C21.2386 19 19 21.2386 19 24C19 26.7614 21.2386 29 24 29Z" stroke="currentColor" strokeWidth="4"></path>
+    </svg>
+);
 
 
 export function AppFooter() {
   const currentYear = new Date().getFullYear();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-      setIsMounted(true);
-  }, []);
 
   return (
-    <footer className="bg-card text-card-foreground border-t py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-          <div className="md:col-span-2">
-            <div className="flex justify-center md:justify-start items-center gap-2 mb-4">
-                <Rocket className="text-primary"/>
-                <h3 className="font-bold text-lg font-headline text-primary">Diploma Prep Hub</h3>
+     <footer className="border-t border-white/10 py-12">
+        <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="flex flex-col gap-4 md:col-span-2">
+                    <div className="flex items-center gap-3 text-white">
+                        <DiamondIcon />
+                        <h2 className="text-white text-lg font-bold">Diploma Prep Hub</h2>
+                    </div>
+                    <p className="text-white/60 text-sm">Your partner in acing the ECET and building a successful engineering career.</p>
+                </div>
+                <div>
+                    <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul className="space-y-2 text-sm text-white/60">
+                        <li><a className="hover:text-white transition-colors" href="#">Home</a></li>
+                        <li><a className="hover:text-white transition-colors" href="#">Exams</a></li>
+                        <li><a className="hover:text-white transition-colors" href="#">Resources</a></li>
+                        <li><a className="hover:text-white transition-colors" href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 className="text-white font-semibold mb-4">Contact</h3>
+                    <ul className="space-y-2 text-sm text-white/60">
+                        <li><a className="hover:text-white transition-colors" href="mailto:support@diplomaprephub.com">support@diplomaprephub.com</a></li>
+                        <li><a className="hover:text-white transition-colors" href="tel:+911234567890">+91 12345 67890</a></li>
+                    </ul>
+                </div>
             </div>
-            <p className="text-sm text-muted-foreground max-w-md mx-auto md:mx-0">
-              Your comprehensive resource for acing diploma-level and government entrance exams. Built with modern AI to give you a personalized path to success.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg mb-4 font-headline">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/exams" className="hover:underline text-muted-foreground hover:text-primary">Exams</Link></li>
-              <li><Link href="/resources" className="hover:underline text-muted-foreground hover:text-primary">Resources</Link></li>
-              <li><Link href="/profile" className="hover:underline text-muted-foreground hover:text-primary">Profile</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg mb-4 font-headline">Company</h3>
-            <ul className="space-y-2 text-sm">
-                <li><Link href="/about" className="hover:underline text-muted-foreground hover:text-primary">About Us</Link></li>
-                <li><Link href="#" className="hover:underline text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link href="#" className="hover:underline text-muted-foreground hover:text-primary">Terms of Service</Link></li>
-            </ul>
-          </div>
-        </div>
-        <div className="border-t border-border mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-                <Copyright className="h-4 w-4" />
-                <p>{currentYear} Diploma Prep Hub. All Rights Reserved.</p>
-            </div>
-             <div className="flex items-center gap-2 mt-4 sm:mt-0">
-                <span>Contact:</span>
-                <a href="mailto:help@diplomaprep.in" className="font-medium hover:underline text-primary">help@diplomaprep.in</a>
+            <div className="mt-8 border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p className="text-sm text-white/40">© {currentYear} Diploma Prep Hub. All rights reserved.</p>
+                <div className="flex items-center gap-4">
+                    <a className="text-white/60 hover:text-white" href="#"><Facebook className="h-5 w-5" /></a>
+                    <a className="text-white/60 hover:text-white" href="#"><Twitter className="h-5 w-5" /></a>
+                    <a className="text-white/60 hover:text-white" href="#"><Linkedin className="h-5 w-5" /></a>
+                </div>
             </div>
         </div>
-      </div>
     </footer>
   )
 }

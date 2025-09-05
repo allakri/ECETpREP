@@ -1,78 +1,51 @@
-
 "use client";
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Bot, FileText, UserPlus } from "lucide-react";
-import { motion } from "framer-motion";
-
 
 const steps = [
   {
-    icon: UserPlus,
-    title: "1. Register",
-    description: "Create your account in seconds to get a personalized dashboard.",
+    number: "1",
+    title: "Register",
+    description: "Create your account to get started.",
   },
   {
-    icon: FileText,
-    title: "2. Pick Exam",
-    description: "Choose from a wide range of mock tests for your branch.",
+    number: "2",
+    title: "Pick Exam",
+    description: "Choose your ECET branch and start a mock test.",
   },
   {
-    icon: Bot,
-    title: "3. Get Feedback",
-    description: "Receive instant, AI-powered analysis of your performance.",
+    number: "3",
+    title: "Get Feedback",
+    description: "Receive instant AI-powered analysis.",
   },
   {
-    icon: Award,
-    title: "4. Succeed",
-    description: "Use the insights to focus your studies and achieve your goal.",
+    number: "4",
+    title: "Succeed",
+    description: "Achieve your dream of an engineering degree.",
   },
 ];
 
 export function HowItWorks() {
     return (
-        <div id="how-it-works" className="bg-secondary/20 py-16 md:py-24">
+       <section className="py-20 lg:py-28 bg-white/5">
             <div className="container mx-auto px-4">
-                <motion.div 
-                    className="text-center mb-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <h2 className="text-3xl font-extrabold font-headline text-primary tracking-tight">
-                        A Clear Path to Success
-                    </h2>
-                    <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-                        Our platform is designed to be simple and effective. Here’s how you can get started on your journey to acing your exams.
-                    </p>
-                </motion.div>
-                <div 
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-                >
-                    {steps.map((step, index) => (
-                         <motion.div 
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                          >
-                            <Card className="text-center border-border shadow-lg bg-card h-full hover:shadow-primary/20 transition-shadow">
-                                <CardHeader>
-                                    <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
-                                        <step.icon className="h-8 w-8 text-accent" />
-                                    </div>
-                                    <CardTitle className="font-headline text-xl text-primary">{step.title}</CardTitle>
-                                </CardHeader>
-                                <CardContent className="text-muted-foreground">
-                                    {step.description}
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-                    ))}
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">How The Platform Works</h2>
+                    <p className="mt-4 text-lg text-white/60">Get started on your path to success in just a few simple steps.</p>
+                </div>
+                <div className="relative mt-16">
+                    <div className="absolute left-1/2 top-8 w-0.5 h-[calc(100%-4rem)] bg-white/10 hidden md:block"></div>
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                        {steps.map((step) => (
+                             <div key={step.number} className="flex flex-col items-center text-center gap-4">
+                                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold border-4 border-white/20">
+                                    {step.number}
+                                </div>
+                                <h3 className="text-xl font-bold text-white mt-2">{step.title}</h3>
+                                <p className="text-white/60">{step.description}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

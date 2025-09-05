@@ -3,20 +3,14 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { AuthProvider } from '@/hooks/use-auth';
 import { ThemeProvider } from '@/components/layout/ThemeProvider';
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Spline_Sans } from 'next/font/google'
 
-const inter = Inter({
+const splineSans = Spline_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-spline-sans',
 })
  
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-space-grotesk',
-})
-
 
 export const metadata: Metadata = {
   title: 'Diploma Prep Hub',
@@ -32,11 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} h-full`} suppressHydrationWarning>
-      <body className="font-body antialiased">
+    <html lang="en" className={`${splineSans.variable} h-full`} suppressHydrationWarning>
+      <body className="font-body antialiased bg-[#111714] text-white">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
