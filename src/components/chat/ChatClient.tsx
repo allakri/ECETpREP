@@ -9,16 +9,16 @@ import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Home, Send, Bot, User, Loader2 } from 'lucide-react';
+import { ArrowLeft, Send, Bot, User, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { AppHeader } from '../layout/AppHeader';
 import { AppFooter } from '../layout/AppFooter';
-import Link from 'next/link';
 import { useAuth } from '@/hooks/use-auth';
 import { Skeleton } from '../ui/skeleton';
 import type { Course } from '@/lib/courses';
+import Latex from 'react-latex-next';
+import 'katex/dist/katex.min.css';
 
 type ChatMessage = {
   role: 'user' | 'model';
@@ -165,14 +165,12 @@ export default function ChatClient() {
               </div>
               <CardTitle className="font-headline text-2xl text-primary">AI Doubt Solver</CardTitle>
             </div>
-             <Button asChild variant="outline">
-                <Link href="/">
-                    <Home className="mr-2 h-4 w-4" />
-                    Back to Home
-                </Link>
+             <Button variant="outline" onClick={() => router.back()}>
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back
             </Button>
           </CardHeader>
-          <CardContent className="flex-1 overflow-y-auto p-4 sm:p-6" ref={scrollAreaRef}>
+          <CardContent className="flex-1 p-4 sm:p-6 overflow-y-auto" ref={scrollAreaRef}>
             <div className="space-y-6">
               {messages.length === 0 && (
                 <div className="text-center text-muted-foreground pt-10 px-4">
@@ -200,7 +198,7 @@ export default function ChatClient() {
                         : 'bg-muted'
                     )}
                   >
-                    <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap">{message.text}</div>
+                    <div className="prose prose-sm dark:prose-invert max-w-none text-inherit whitespace-pre-wrap"><Latex>{message.text}</Latex></div>
                   </div>
                   {message.role === 'user' && (
                     <Avatar className="h-8 w-8">
