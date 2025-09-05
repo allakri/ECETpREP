@@ -156,9 +156,9 @@ export default function ChatClient() {
   }
 
   return (
-    <div className="flex flex-col min-h-[calc(100vh-8rem)] bg-background">
-      <main className="flex-grow flex items-center justify-center p-4">
-        <Card className="w-full max-w-2xl h-[calc(80vh-2rem)] flex flex-col shadow-2xl">
+    <div className="flex flex-col min-h-screen bg-secondary/10">
+      <main className="flex-grow flex items-center justify-center p-2 sm:p-4">
+        <Card className="w-full max-w-4xl h-[calc(100vh-2rem)] sm:h-[calc(100vh-4rem)] flex flex-col shadow-2xl">
           <CardHeader className="flex flex-row items-center justify-between border-b">
             <div className="flex items-center gap-3">
               <div className="p-2 bg-primary/10 rounded-full">
@@ -173,8 +173,8 @@ export default function ChatClient() {
                 </Link>
             </Button>
           </CardHeader>
-          <CardContent className="flex-1 p-0">
-            <ScrollArea className="h-full p-6" ref={scrollAreaRef}>
+          <CardContent className="flex-1 p-0 overflow-hidden">
+            <ScrollArea className="h-full p-4 sm:p-6" ref={scrollAreaRef}>
               <div className="space-y-6">
                 {messages.length === 0 && (
                   <div className="text-center text-muted-foreground pt-10 px-4">
@@ -196,7 +196,7 @@ export default function ChatClient() {
                     )}
                     <div
                       className={cn(
-                        'max-w-[75%] rounded-lg p-3 text-sm',
+                        'max-w-[85%] rounded-lg p-3 text-sm shadow-md',
                         message.role === 'user'
                           ? 'bg-primary text-primary-foreground'
                           : 'bg-muted'
@@ -216,7 +216,7 @@ export default function ChatClient() {
                     <Avatar className="h-8 w-8">
                       <AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20}/></AvatarFallback>
                     </Avatar>
-                    <div className="bg-muted rounded-lg p-3">
+                    <div className="bg-muted rounded-lg p-3 shadow-md">
                       <Loader2 className="h-5 w-5 animate-spin" />
                     </div>
                   </div>
