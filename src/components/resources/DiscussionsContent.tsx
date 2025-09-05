@@ -45,8 +45,8 @@ export default function CommunityHubContent() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto">
-                <Link href="/chat">
-                    <Megaphone className="mr-2 h-5 w-5" /> Start a Conversation
+                <Link href="https://t.me/diplomaprephub" target="_blank" rel="noopener noreferrer">
+                    <Megaphone className="mr-2 h-5 w-5" /> Join our Telegram
                 </Link>
             </Button>
           </div>
