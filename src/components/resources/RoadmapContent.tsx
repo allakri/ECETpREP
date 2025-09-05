@@ -3,9 +3,10 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, Brain, Clock, ShieldQuestion, BookCopy, Medal, CalendarCheck, Repeat, Beaker, HeartPulse, Target } from "lucide-react";
+import { Link as LinkIcon, Brain, Clock, ShieldQuestion, BookCopy, Medal, CalendarCheck, Repeat, Beaker, HeartPulse, Target, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const guideSections = [
     { 
@@ -182,16 +183,6 @@ export default function RoadmapContent() {
         });
         };
     }, []);
-    
-    const handleDownload = (filename: string) => {
-        const element = document.createElement("a");
-        const file = new Blob(["This is a placeholder for your " + filename], {type: 'text/plain'});
-        element.href = URL.createObjectURL(file);
-        element.download = filename;
-        document.body.appendChild(element);
-        element.click();
-        element.remove();
-    }
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -255,15 +246,22 @@ export default function RoadmapContent() {
                         </div>
                         
                         <div>
-                            <Card className="bg-secondary/10 border-secondary/20">
+                            <Card className="bg-blue-500/10 border-blue-500/20 text-center">
                                 <CardHeader>
-                                    <CardTitle className="font-headline text-secondary">Downloadable Resources</CardTitle>
-                                    <CardDescription>Get these handy resources to supplement your preparation.</CardDescription>
+                                    <div className="mx-auto bg-blue-500/20 text-blue-400 p-3 rounded-full w-fit mb-2">
+                                        <LinkIcon className="h-8 w-8" />
+                                    </div>
+                                    <CardTitle className="font-headline text-blue-400 text-2xl">Previous Year Question Papers</CardTitle>
+                                    <CardDescription className="max-w-md mx-auto text-blue-300/80">
+                                        Access our comprehensive archive of past ECET question papers for all branches. An essential resource for your preparation.
+                                    </CardDescription>
                                 </CardHeader>
-                                <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                                    <Button variant="outline" onClick={() => handleDownload('study-planner.pdf')}><Download className="mr-2 h-4 w-4" /> Study Planner PDF</Button>
-                                    <Button variant="outline" onClick={() => handleDownload('formula-mind-maps.pdf')}><Download className="mr-2 h-4 w-4" /> Formula Mind Maps</Button>
-                                    <Button variant="outline" onClick={() => handleDownload('subject-checklist.pdf')}><Download className="mr-2 h-4 w-4" /> Subject Checklist</Button>
+                                <CardContent>
+                                    <Button asChild className="bg-blue-500 text-white hover:bg-blue-500/90">
+                                        <Link href="https://drive.google.com/drive/folders/11KLvEF58EPsJLE2stRtB1zqnaS3SByl_" target="_blank" rel="noopener noreferrer">
+                                            Go to Question Bank <ExternalLink className="ml-2 h-4 w-4" />
+                                        </Link>
+                                    </Button>
                                 </CardContent>
                             </Card>
                         </div>
