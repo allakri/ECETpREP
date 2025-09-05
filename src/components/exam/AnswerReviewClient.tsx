@@ -231,14 +231,14 @@ export default function AnswerReviewClient() {
 
   return (
     <div className="bg-secondary/10 text-foreground">
-        <div className="container mx-auto h-[calc(100vh-8rem)] flex flex-col md:flex-row gap-6 py-6">
+        <div className="container mx-auto flex flex-col md:flex-row gap-6 py-6 min-h-[calc(100vh-8rem)]">
             {/* Desktop Sidebar */}
-            <aside className="w-full md:w-80 lg:w-96 bg-card border rounded-lg p-4 hidden md:flex flex-col gap-4">
+            <aside className="w-full md:w-80 lg:w-96 bg-card border rounded-lg p-4 hidden md:flex flex-col gap-4 sticky top-24 self-start">
                <PaletteContent />
             </aside>
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col h-full overflow-hidden">
+            <main className="flex-1 flex flex-col overflow-hidden">
                 <Card className="flex-1 flex flex-col shadow-lg">
                 <CardHeader>
                     <div className='flex justify-between items-center'>
@@ -381,3 +381,5 @@ export default function AnswerReviewClient() {
     </div>
   );
 }
+
+    
