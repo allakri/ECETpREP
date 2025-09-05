@@ -64,6 +64,10 @@ export function ExamSelection() {
                                 <Brain className="h-4 w-4 text-accent" />
                                 <span>AI Feedback Enabled</span>
                             </div>
+                             <div className="flex items-center gap-2">
+                                <CheckCircle className="h-4 w-4 text-accent" />
+                                <span>TG & AP Mock Tests Available</span>
+                            </div>
                         </div>
                     </CardContent>
                  </Card>
