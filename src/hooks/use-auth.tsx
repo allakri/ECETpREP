@@ -126,6 +126,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
+        // Ignore PASSWORD_RECOVERY event here, as it's handled on its dedicated page
+        if (event === 'PASSWORD_RECOVERY') {
+            setLoading(false);
+            setIsInitialLoad(false);
+            return;
+        }
+        
         let userProfile = null;
         if (session?.user) {
           userProfile = await fetchUserProfile(session.user);

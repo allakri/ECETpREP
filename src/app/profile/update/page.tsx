@@ -23,27 +23,43 @@ export default function UpdatePasswordPage() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [pageLoading, setPageLoading] = useState(true); // New state for initial page load
+  const [pageLoading, setPageLoading] = useState(true);
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    // This effect runs on mount to check for an active session from the recovery link
-    const checkSession = async () => {
-        const { data: { session } } = await supabase.auth.getSession();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'PASSWORD_RECOVERY') {
         if (session?.user) {
             setUser(session.user);
-        } else {
-             toast({
-                variant: "destructive",
-                title: "Invalid or Expired Link",
-                description: "No active session found. Please request a new password reset link.",
-            });
-            router.replace('/login');
         }
         setPageLoading(false);
-    };
+      } else if (event === 'SIGNED_IN') {
+        // This handles cases where user is already logged in
+        if (session?.user) {
+            setUser(session.user);
+        }
+        setPageLoading(false);
+      } else {
+        // If not a recovery link or signed in, check if there's a session
+        const checkSession = async () => {
+             const { data: { session } } = await supabase.auth.getSession();
+             if(!session) {
+                 toast({
+                    variant: "destructive",
+                    title: "Invalid or Expired Link",
+                    description: "No active session found. Please request a new password reset link.",
+                });
+                router.replace('/login');
+             }
+             setPageLoading(false);
+        }
+        checkSession();
+      }
+    });
 
-    checkSession();
+    return () => {
+      subscription.unsubscribe();
+    };
   }, [supabase, router, toast]);
 
   const handlePasswordUpdate = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -67,20 +83,23 @@ export default function UpdatePasswordPage() {
 
     setLoading(true);
     const { error } = await supabase.auth.updateUser({ password });
-    setLoading(false);
     
     if (error) {
+      setLoading(false);
       toast({
         variant: "destructive",
         title: "Update Failed",
         description: error.message,
       });
     } else {
+      // Sign out to invalidate the recovery session
+      await supabase.auth.signOut();
+      setLoading(false);
       toast({
         title: "Password Updated Successfully!",
-        description: "You can now log in with your new password.",
+        description: "Please log in with your new password.",
       });
-      router.push('/profile');
+      router.push('/login');
     }
   };
   
@@ -102,7 +121,7 @@ export default function UpdatePasswordPage() {
                 <KeyRound className="h-10 w-10" />
             </div>
             <CardTitle className="text-2xl font-headline text-primary">Update Your Password</CardTitle>
-            <CardDescription>Enter a new password for your account below.</CardDescription>
+            <CardDescription>Enter and confirm a new password for your account.</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handlePasswordUpdate} className="grid gap-6">
