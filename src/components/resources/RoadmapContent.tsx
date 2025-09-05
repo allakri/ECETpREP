@@ -1,7 +1,7 @@
 
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, Brain, Clock, ShieldQuestion, BookCopy, Medal, CalendarCheck, Repeat, Beaker, HeartPulse, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
