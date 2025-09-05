@@ -175,9 +175,10 @@ export default function AnswerReviewClient() {
   const getQuestionStatus = (questionId: number) => {
     if (!answers) return 'unanswered';
     const answer = answers[questionId];
-    if (answer === undefined) return 'unanswered';
     const question = questions.find(q => q.id === questionId);
-    return answer === question?.correctAnswer ? 'correct' : 'incorrect';
+    if (!question) return 'unanswered';
+    if (answer === undefined) return 'unanswered';
+    return answer === question.correctAnswer ? 'correct' : 'incorrect';
   };
 
   const PaletteContent = () => (
