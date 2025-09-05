@@ -148,7 +148,7 @@ export default function ResultsClient() {
   const { grade, color: gradeColor } = getGrade(score);
 
   return (
-    <div className="bg-secondary/20 min-h-screen p-4 md:p-8">
+    <div className="bg-secondary/20 min-h-screen p-4 md:p-8 print:p-0">
         <style jsx global>{`
           @media print {
             body {
@@ -158,22 +158,32 @@ export default function ResultsClient() {
             .no-print {
               display: none !important;
             }
+            .print-only {
+                display: block !important;
+            }
             .results-container {
               padding: 0;
               box-shadow: none;
+              margin: 0;
             }
             .card-print {
               border: 1px solid #e2e8f0;
               box-shadow: none;
+              break-inside: avoid;
             }
-            .bg-gradient-to-r {
-              background: linear-gradient(to right, #22c55e, #3b82f6) !important;
+            .print-header {
+              background-color: #f8fafc !important;
+              color: black !important;
+              border-bottom: 2px solid #e2e8f0;
             }
           }
         `}</style>
         <div className="max-w-6xl mx-auto results-container">
             {/* Header */}
-            <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 rounded-t-lg shadow-lg flex justify-between items-center">
+             <div className="hidden print-only mb-4">
+                <h1 className="text-2xl font-bold text-center">Exam Result</h1>
+            </div>
+            <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 rounded-t-lg shadow-lg flex justify-between items-center print:bg-none print-header">
                 <div className="flex items-center gap-4">
                     <Trophy className="h-10 w-10"/>
                     <div>
@@ -181,7 +191,7 @@ export default function ResultsClient() {
                         <p className="opacity-90">{examData.examName}</p>
                     </div>
                 </div>
-                <div className="text-center">
+                <div className="text-center no-print">
                     <div className={`w-16 h-16 rounded-full ${gradeColor} flex items-center justify-center text-3xl font-bold`}>
                         {grade}
                     </div>
@@ -332,3 +342,5 @@ export default function ResultsClient() {
     </div>
   );
 }
+
+    
