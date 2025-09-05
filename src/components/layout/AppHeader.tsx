@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link";
@@ -49,27 +50,6 @@ export function AppHeader() {
                 </Link>
             )}
         </nav>
-        <div className="hidden lg:flex items-center gap-4">
-            {isInitialLoad ? (
-                <div className="flex items-center gap-4">
-                    <Skeleton className="h-9 w-16" />
-                    <Skeleton className="h-10 w-24 rounded-full" />
-                </div>
-            ) : user ? (
-                <Button onClick={logout} variant="ghost" className="text-white text-sm font-medium leading-normal hover:text-primary transition-colors">
-                    Logout
-                </Button>
-            ) : (
-                <>
-                <Link href="/login" className="text-white text-sm font-medium leading-normal hover:text-primary transition-colors">
-                    Login
-                </Link>
-                <Button asChild className="rounded-full bg-primary text-primary-foreground text-sm font-bold hover:bg-primary/90 transition-colors">
-                    <Link href="/register">Get Started</Link>
-                </Button>
-                </>
-            )}
-        </div>
         <div className="lg:hidden flex items-center">
              <Sheet>
               <SheetTrigger asChild>
