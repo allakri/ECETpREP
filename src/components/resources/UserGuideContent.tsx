@@ -12,28 +12,28 @@ const guideSteps = [
         icon: FileSignature,
         title: "1. Select Your Exam & Branch",
         description: "Begin by choosing your specific engineering branch or government exam from our comprehensive list. This tailors the entire platform experience to your needs.",
-        image: "https://placehold.co/600x400.png",
+        image: "/images/default.png",
         imageHint: "course selection screen"
     },
     {
         icon: BarChart,
         title: "2. Take Realistic Mock Tests",
         description: "Simulate the real exam environment with our timed mock tests. Familiarize yourself with the question palette, timer, and navigation to build confidence and improve time management.",
-        image: "https://placehold.co/600x400.png",
+        image: "/images/default.png",
         imageHint: "exam interface"
     },
     {
         icon: Bot,
         title: "3. Get Instant AI-Powered Feedback",
         description: "Upon submission, you get more than just a score. Our AI analyzes your performance, identifies your weak topics, and provides actionable feedback to guide your study plan.",
-        image: "https://placehold.co/600x400.png",
+        image: "/images/default.png",
         imageHint: "analytics dashboard"
     },
     {
         icon: HelpCircle,
         title: "4. Use the 24/7 AI Doubt Solver",
         description: "Stuck on a concept? Our AI tutor is available around the clock. Ask any question, from simple definitions to complex problems, and get clear, step-by-step explanations.",
-        image: "https://placehold.co/600x400.png",
+        image: "/images/default.png",
         imageHint: "ai chat interface"
     }
 ];
