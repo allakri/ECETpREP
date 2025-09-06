@@ -13,7 +13,6 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState, useMemo } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, Pencil, Book, ListChecks, LayoutDashboard, BarChart2, CheckCircle, Trophy, Calendar, TrendingUp } from 'lucide-react';
-import { StudyActivityCalendar } from '@/components/profile/StudyActivityCalendar';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PersonalNotes } from '@/components/profile/PersonalNotes';
 import { TodoList } from '@/components/profile/TodoList';
@@ -107,7 +106,6 @@ export default function ProfilePage() {
 
     setIsUpdating(true);
     
-    // Update user password if it's provided
     if (password) {
         const { error: passwordError } = await supabase.auth.updateUser({ password });
         if (passwordError) {
@@ -177,7 +175,6 @@ export default function ProfilePage() {
 
               <TabsContent value="dashboard">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Left Column for Profile Editing */}
                     <div className="lg:col-span-1">
                     <Card className="w-full shadow-lg">
                         <CardHeader className="flex flex-row justify-between items-center">
@@ -262,7 +259,6 @@ export default function ProfilePage() {
                     </Card>
                     </div>
 
-                    {/* Right Column for Dashboard Widgets */}
                     <div className="lg:col-span-2 space-y-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <Card className="shadow-sm">
@@ -295,7 +291,7 @@ export default function ProfilePage() {
                           <CardContent>
                             {user.exam_score_history.length > 0 ? (
                                <div className="space-y-4">
-                                {user.exam_score_history.slice(-5).reverse().map((test, index) => (
+                                {user.exam_score_history.map((test, index) => (
                                     <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
                                         <div className="flex items-center gap-3">
                                             <div className="flex flex-col">
