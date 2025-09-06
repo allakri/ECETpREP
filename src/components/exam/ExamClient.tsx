@@ -5,13 +5,13 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import type { AnswerSheet, MarkedQuestions, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction, AlertDialogCancel } from '@/components/ui/alert-dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, Loader2, PanelRightOpen } from 'lucide-react';
+import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, Loader2, PanelRightOpen, X } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Latex from 'react-latex-next';
 import 'katex/dist/katex.min.css';
@@ -193,47 +193,45 @@ export default function ExamClient() {
     return 'unanswered';
   };
 
-  const PaletteContent = ({ inSheet = false }: { inSheet?: boolean }) => (
-    <div className="flex flex-col gap-4 h-full">
-        <CardHeader className={cn("p-0", inSheet && "p-4 border-b")}>
-            <CardTitle className="text-lg font-headline">Question Palette</CardTitle>
-        </CardHeader>
-
-        <Card className="flex-grow overflow-hidden">
-            <CardContent className="p-2 h-full overflow-y-auto">
-                <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-4 lg:grid-cols-5 gap-2 p-2">
-                    {questions.map((q, index) => {
-                        const status = getQuestionStatus(q.id);
-                        return (
-                        <Button
-                            key={q.id}
-                            onClick={() => setCurrentQuestionIndex(index)}
-                            variant="outline"
-                            className={cn("h-10 w-10 p-0 text-base rounded-lg transition-all duration-200",
-                            currentQuestionIndex === index && "ring-2 ring-primary ring-offset-2 ring-offset-background",
-                            {
-                                'bg-green-500/20 text-green-800 dark:text-green-300 border-green-500/50 hover:bg-green-500/30': status === 'answered',
-                                'bg-yellow-500/20 text-yellow-800 dark:text-yellow-300 border-yellow-500/50 hover:bg-yellow-500/30': status === 'marked',
-                                'bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-500/50 hover:bg-blue-500/30': status === 'answeredAndMarked',
-                            }
-                            )}
-                        >
-                            {index + 1}
-                        </Button>
-                        );
-                    })}
-                </div>
-            </CardContent>
-        </Card>
-
-        <div className="flex-shrink-0">
-            <div className="space-y-2 text-xs w-full mb-2">
-                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div><span>Answered</span></div>
-                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div><span>Marked</span></div>
-                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500/20 border border-blue-500/50"></div><span>Answered & Marked</span></div>
-                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full border"></div><span>Not Answered</span></div>
+  const PaletteContent = () => (
+    <div className="flex flex-col h-full bg-card rounded-lg">
+        <div className="p-4 border-b">
+            <h3 className="font-bold text-lg font-headline">Question Palette</h3>
+        </div>
+        <div className="flex-grow overflow-y-auto p-4">
+            <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-5 lg:grid-cols-6 gap-2">
+                {questions.map((q, index) => {
+                    const status = getQuestionStatus(q.id);
+                    return (
+                    <Button
+                        key={q.id}
+                        onClick={() => setCurrentQuestionIndex(index)}
+                        variant="outline"
+                        size="icon"
+                        className={cn("h-10 w-10 p-0 text-base rounded-lg transition-all duration-200 font-bold",
+                        currentQuestionIndex === index && "ring-2 ring-primary ring-offset-2 ring-offset-background",
+                        {
+                            'bg-green-500/80 text-white border-green-600 hover:bg-green-500': status === 'answered',
+                            'bg-yellow-500/80 text-white border-yellow-600 hover:bg-yellow-500': status === 'marked',
+                            'bg-blue-500/80 text-white border-blue-600 hover:bg-blue-500': status === 'answeredAndMarked',
+                            'bg-muted/50 border-muted-foreground/20': status === 'unanswered',
+                        }
+                        )}
+                    >
+                        {index + 1}
+                    </Button>
+                    );
+                })}
             </div>
-            <Button className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg mt-2" onClick={() => setIsSubmitDialogOpen(true)}>
+        </div>
+        <div className="p-4 border-t flex-shrink-0">
+            <div className="space-y-2 text-xs w-full mb-4">
+                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500"></div><span>Answered</span></div>
+                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-yellow-500"></div><span>Marked for Review</span></div>
+                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500"></div><span>Answered & Marked</span></div>
+                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-muted border"></div><span>Not Answered</span></div>
+            </div>
+            <Button className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg" onClick={() => setIsSubmitDialogOpen(true)}>
                 <Send className="mr-2 h-4 w-4" /> Submit Exam
             </Button>
         </div>
@@ -241,76 +239,85 @@ export default function ExamClient() {
   );
 
   return (
-    <div className="flex h-screen flex-col md:flex-row bg-background text-foreground">
-      <main className="flex-1 flex flex-col p-4 md:p-6 overflow-y-auto">
-        <header className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
-          <h1 className="text-xl md:text-2xl font-headline text-primary text-center sm:text-left">{examName}</h1>
-          <div className="flex items-center gap-2 sm:gap-4">
-            <div className={`flex items-center gap-2 font-bold p-2 rounded-lg ${timeLeft < 300 ? 'text-destructive animate-pulse' : 'text-foreground'}`}>
-              <Timer className="h-6 w-6 text-accent" />
-              <span className="font-mono text-xl">{formatTime(timeLeft)}</span>
-            </div>
-             <Sheet>
-                <SheetTrigger asChild>
-                    <Button variant="outline" className="md:hidden"><PanelRightOpen className="mr-2 h-4 w-4" /> View Palette</Button>
-                </SheetTrigger>
-                <SheetContent side="bottom" className="h-[80vh] p-0">
-                    <div className="p-4 h-full flex flex-col">
-                       <PaletteContent inSheet={true} />
+    <div className="flex h-screen flex-col bg-secondary/20">
+        <header className="flex-shrink-0 bg-background border-b shadow-sm">
+            <div className="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
+                <h1 className="text-xl md:text-2xl font-headline text-primary truncate pr-4">{examName}</h1>
+                <div className="flex items-center gap-3 sm:gap-4">
+                    <div className={cn('flex items-center gap-2 font-bold p-2 rounded-lg text-foreground', timeLeft < 300 && 'text-destructive animate-pulse')}>
+                        <Timer className="h-6 w-6 text-accent" />
+                        <span className="font-mono text-xl">{formatTime(timeLeft)}</span>
                     </div>
-                </SheetContent>
-            </Sheet>
-            <Button variant="outline" size="sm" onClick={() => setIsExitDialogOpen(true)}><LogOut className="mr-2 h-4 w-4" /> Exit</Button>
-          </div>
+                     <Sheet>
+                        <SheetTrigger asChild>
+                            <Button variant="outline" className="md:hidden" size="icon"><PanelRightOpen className="h-5 w-5" /></Button>
+                        </SheetTrigger>
+                        <SheetContent side="right" className="p-2 w-[300px] sm:w-[350px] bg-secondary/20 border-l-0">
+                            <PaletteContent />
+                        </SheetContent>
+                    </Sheet>
+                    <Button variant="outline" size="icon" onClick={() => setIsExitDialogOpen(true)} className="hidden sm:inline-flex"><LogOut className="h-5 w-5" /></Button>
+                </div>
+            </div>
         </header>
 
-        <Card className="flex-1 flex flex-col shadow-lg">
-          <CardHeader>
-            <CardTitle className="font-headline text-xl">
-              Question {currentQuestionIndex + 1}/{questions.length}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="flex-1">
-            <ScrollArea className="h-[calc(100%-2rem)]">
-              <p className="mb-6 text-lg pr-4"><Latex>{currentQuestion.question}</Latex></p>
-              <RadioGroup
-                value={answers[currentQuestion.id] || ''}
-                onValueChange={(value) => handleAnswerSelect(currentQuestion.id, value)}
-                className="space-y-4 pr-4"
-              >
-                {currentQuestion.options.map((option, index) => (
-                  <div key={index} className="flex items-center space-x-3 transition-all duration-200 rounded-lg p-3 hover:bg-primary/5 dark:hover:bg-primary/10">
-                    <RadioGroupItem value={option} id={`q${currentQuestion.id}-op${index}`} />
-                    <Label htmlFor={`q${currentQuestion.id}-op${index}`} className="text-base cursor-pointer flex-1">
-                      <Latex>{option}</Latex>
-                    </Label>
-                  </div>
-                ))}
-              </RadioGroup>
-            </ScrollArea>
-          </CardContent>
-          <CardFooter className="flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 border-t pt-6">
-            <div className="flex gap-2 flex-wrap justify-center">
-              <Button onClick={() => handleMarkForReview(currentQuestion.id)} variant={isMarked ? "default" : "outline"}>
-                <BookMarked className="mr-2 h-4 w-4" /> {isMarked ? 'Unmark' : 'Mark Review'}
-              </Button>
-              <Button onClick={clearResponse} variant="ghost">Clear Response</Button>
+        <div className="flex-1 container mx-auto px-4 md:px-6 py-6 flex gap-6 overflow-hidden">
+            {/* Main Content */}
+            <div className="flex-1 flex flex-col min-w-0">
+                <Card className="flex-1 flex flex-col shadow-lg">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl">
+                            Question {currentQuestionIndex + 1}/{questions.length}
+                        </CardTitle>
+                        <CardDescription>Topic: {currentQuestion.topic}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-1 py-0">
+                        <ScrollArea className="h-full">
+                            <div className="pr-6 space-y-6">
+                                <p className="text-lg"><Latex>{currentQuestion.question}</Latex></p>
+                                <RadioGroup
+                                    value={answers[currentQuestion.id] || ''}
+                                    onValueChange={(value) => handleAnswerSelect(currentQuestion.id, value)}
+                                    className="space-y-4"
+                                >
+                                    {currentQuestion.options.map((option, index) => (
+                                    <div key={index} className="flex items-start space-x-3 transition-all duration-200 rounded-lg p-3 hover:bg-primary/5 dark:hover:bg-primary/10 border border-transparent has-[[data-state=checked]]:border-primary has-[[data-state=checked]]:bg-primary/5">
+                                        <RadioGroupItem value={option} id={`q${currentQuestion.id}-op${index}`} className="mt-1"/>
+                                        <Label htmlFor={`q${currentQuestion.id}-op${index}`} className="text-base cursor-pointer flex-1">
+                                        <Latex>{option}</Latex>
+                                        </Label>
+                                    </div>
+                                    ))}
+                                </RadioGroup>
+                            </div>
+                        </ScrollArea>
+                    </CardContent>
+                    <CardFooter className="flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 border-t pt-6">
+                        <div className="flex gap-2 flex-wrap justify-center">
+                            <Button onClick={() => handleMarkForReview(currentQuestion.id)} variant={isMarked ? "default" : "outline"} className={cn(isMarked && "bg-yellow-500 hover:bg-yellow-600 text-white")}>
+                                <BookMarked className="mr-2 h-4 w-4" /> {isMarked ? 'Unmark' : 'Mark for Review'}
+                            </Button>
+                            <Button onClick={clearResponse} variant="ghost" className="text-destructive hover:text-destructive hover:bg-destructive/10">
+                                <X className="mr-2 h-4 w-4" /> Clear Response
+                            </Button>
+                        </div>
+                        <div className="flex gap-2">
+                        <Button onClick={() => setCurrentQuestionIndex(prev => Math.max(0, prev - 1))} disabled={currentQuestionIndex === 0}>
+                            <ChevronLeft className="mr-2 h-4 w-4" /> Prev
+                        </Button>
+                        <Button onClick={() => setCurrentQuestionIndex(prev => Math.min(questions.length - 1, prev + 1))} disabled={currentQuestionIndex === questions.length - 1}>
+                            Next <ChevronRight className="ml-2 h-4 w-4" />
+                        </Button>
+                        </div>
+                    </CardFooter>
+                </Card>
             </div>
-            <div className="flex gap-2">
-              <Button onClick={() => setCurrentQuestionIndex(prev => Math.max(0, prev - 1))} disabled={currentQuestionIndex === 0}>
-                <ChevronLeft className="mr-2 h-4 w-4" /> Prev
-              </Button>
-              <Button onClick={() => setCurrentQuestionIndex(prev => Math.min(questions.length - 1, prev + 1))} disabled={currentQuestionIndex === questions.length - 1}>
-                Next <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </CardFooter>
-        </Card>
-      </main>
 
-      <aside className="w-full md:w-80 lg:w-96 bg-card border-l p-4 md:p-6 hidden md:flex">
-        <PaletteContent />
-      </aside>
+            {/* Sidebar */}
+            <aside className="w-80 lg:w-96 hidden md:flex flex-col">
+                <PaletteContent />
+            </aside>
+        </div>
 
       <AlertDialog open={isSubmitDialogOpen} onOpenChange={setIsSubmitDialogOpen}>
         <AlertDialogContent>
