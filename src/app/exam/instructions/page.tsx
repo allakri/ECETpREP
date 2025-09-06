@@ -8,7 +8,6 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Check, AlertTriangle, Clock, FileText, ArrowRight, Fullscreen, BookCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import { useAuth } from "@/hooks/use-auth";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
   AlertDialog,
@@ -72,7 +71,6 @@ const InstructionsPageSkeleton = () => (
 export default function ExamInstructionsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { user, loading } = useAuth();
 
   const handleStartExam = () => {
     document.documentElement.requestFullscreen().catch(err => {
@@ -81,10 +79,6 @@ export default function ExamInstructionsPage() {
         router.push(`/exam?${searchParams.toString()}`);
     });
   };
-
-  if (loading || !user) {
-      return <InstructionsPageSkeleton />;
-  }
 
   return (
     <div className="flex flex-col min-h-screen bg-secondary/20">
@@ -104,11 +98,6 @@ export default function ExamInstructionsPage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6 md:p-8 space-y-8 bg-card">
-              <div className="bg-blue-100/50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 p-4 rounded-lg">
-                <p className="font-bold">Welcome, {user.name}!</p>
-                <p>Email: {user.email}</p>
-              </div>
-
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Exam Details */}
                 <div className="space-y-4">
@@ -177,4 +166,3 @@ export default function ExamInstructionsPage() {
     </div>
   );
 }
-

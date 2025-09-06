@@ -1,5 +1,4 @@
 
-
 "use client"
 
 import { useRouter, usePathname } from "next/navigation";
@@ -7,8 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui
 import { Button } from "../ui/button";
 import { Calendar, FileText, ArrowRight, Sparkles, Clock, HelpCircle, Award, ArrowLeft } from "lucide-react";
 import * as React from "react";
-import { useAuth } from "@/hooks/use-auth";
-import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "../ui/badge";
 
@@ -33,21 +30,9 @@ type SelectionStep = "initial" | "apecet" | "tgecet";
 export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
     const router = useRouter();
     const pathname = usePathname();
-    const { user } = useAuth();
-    const { toast } = useToast();
     const [step, setStep] = React.useState<SelectionStep>("initial");
 
     const handlePaperSelect = (year: string) => {
-        if (!user) {
-            toast({
-                title: "Authentication Required",
-                description: "Please log in to start an exam.",
-                variant: "destructive",
-            });
-            router.push('/login');
-            return;
-        }
-        
         const examBoard = step === "apecet" ? "APECET" : "TGECET";
 
         const params = new URLSearchParams({
@@ -60,15 +45,6 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
     };
     
     const handleCustomPaperSelect = () => {
-        if (!user) {
-            toast({
-                title: "Authentication Required",
-                description: "Please log in to create a custom test.",
-                variant: "destructive",
-            });
-            router.push('/login');
-            return;
-        }
         router.push(`${pathname}/custom`);
     }
 

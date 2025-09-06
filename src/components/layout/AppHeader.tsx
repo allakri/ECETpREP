@@ -4,9 +4,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { Menu, LogOut, Rocket, UserPlus, LogIn } from "lucide-react";
-import { useAuth } from "@/hooks/use-auth";
-import { Skeleton } from "../ui/skeleton";
+import { Menu, Rocket } from "lucide-react";
 import { useState, useEffect } from 'react';
 
 const DiamondIcon = () => (
@@ -18,7 +16,6 @@ const DiamondIcon = () => (
 
 
 export function AppHeader() {
-  const { user, logout, isInitialLoad } = useAuth();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -31,44 +28,6 @@ export function AppHeader() {
     { href: "/resources", label: "Resources" },
     { href: "/about", label: "About Us" },
   ];
-  
-  const AuthButtons = () => {
-    if (isInitialLoad || !isMounted) {
-      return <div className="flex items-center gap-2">
-        <Skeleton className="h-10 w-20" />
-        <Skeleton className="h-10 w-24" />
-      </div>;
-    }
-
-    if (user) {
-      return (
-        <div className="flex items-center gap-2">
-          <Button onClick={logout} variant="outline" className="bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white">
-            <LogOut className="mr-2 h-4 w-4" />
-            Logout
-          </Button>
-        </div>
-      );
-    }
-
-    return (
-      <div className="flex items-center gap-4">
-        <Button asChild variant="ghost" className="text-white hover:text-primary">
-            <Link href="/login">
-                <LogIn className="mr-2 h-4 w-4"/>
-                Login
-            </Link>
-        </Button>
-        <Button asChild className="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-primary-foreground text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
-          <Link href="/register">
-             <UserPlus className="mr-2 h-4 w-4"/>
-            <span className="truncate">Register</span>
-          </Link>
-        </Button>
-      </div>
-    );
-  };
-
 
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-white/10 px-4 md:px-10 py-5">
@@ -82,15 +41,7 @@ export function AppHeader() {
                     {link.label}
                 </Link>
             ))}
-             {!isInitialLoad && user && (
-                <Link href="/profile" className="hover:text-white transition-colors">
-                    Profile
-                </Link>
-            )}
         </nav>
-        <div className="hidden lg:flex">
-          <AuthButtons />
-        </div>
         <div className="lg:hidden flex items-center">
              <Sheet>
               <SheetTrigger asChild>
@@ -109,27 +60,6 @@ export function AppHeader() {
                        <Button variant="ghost" className="w-full justify-start text-lg text-white/80 hover:text-white">{link.label}</Button>
                     </Link>
                   ))}
-                  {!isInitialLoad && user && (
-                    <Link href="/profile" passHref>
-                       <Button variant="ghost" className="w-full justify-start text-lg text-white/80 hover:text-white">Profile</Button>
-                    </Link>
-                  )}
-                </div>
-                <div className="border-t border-white/10 p-4">
-                   {isInitialLoad || !isMounted ? (
-                      <Skeleton className="h-10 w-full" />
-                   ) : user ? (
-                      <Button onClick={logout} variant="outline" className="w-full justify-center text-lg bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white">
-                        <LogOut className="mr-2 h-5 w-5" />
-                        Logout
-                      </Button>
-                    ) : (
-                      <div className="space-y-2">
-                        <Link href="/login" passHref><Button variant="outline" className="w-full justify-center text-lg bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white">Login</Button></Link>
-                        <Link href="/register" passHref><Button className="w-full justify-center text-lg bg-primary text-primary-foreground hover:bg-primary/90">Register</Button></Link>
-                      </div>
-                    )
-                   }
                 </div>
               </SheetContent>
             </Sheet>

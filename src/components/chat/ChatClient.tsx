@@ -14,7 +14,6 @@ import { ArrowLeft, Send, Bot, User, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { AppHeader } from '../layout/AppHeader';
 import { AppFooter } from '../layout/AppFooter';
-import { useAuth } from '@/hooks/use-auth';
 import { Skeleton } from '../ui/skeleton';
 import type { Course } from '@/lib/courses';
 import Latex from 'react-latex-next';
@@ -54,20 +53,12 @@ const ChatSkeleton = () => (
 
 export default function ChatClient() {
   const router = useRouter();
-  const { user, loading } = useAuth();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [examContext, setExamContext] = useState<{ questions: Question[], answers: AnswerSheet } | null>(null);
   const [courseContext, setCourseContext] = useState<Omit<Course, 'icon' | 'description' | 'slug' | 'tags'> | null>(null);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    if (!loading && !user) {
-        router.replace('/login');
-    }
-  }, [user, loading, router]);
-
 
   useEffect(() => {
     // Load exam results and course context from storage to provide context to the chat
@@ -149,10 +140,6 @@ export default function ChatClient() {
       return "I see you've just finished an exam. You can ask me which questions you got wrong or right, and I can help explain the concepts. Or, ask me anything else about ECET subjects!";
     }
     return "Have a question? Ask me anything about ECET subjects! For example: \"Explain the difference between series and parallel circuits.\"";
-  }
-
-  if (loading || !user) {
-    return <ChatSkeleton />;
   }
 
   return (

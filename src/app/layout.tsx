@@ -2,7 +2,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
-import { AuthProvider } from '@/hooks/use-auth';
 import { ThemeProvider } from '@/components/layout/ThemeProvider';
 import { Spline_Sans } from 'next/font/google'
 
@@ -35,9 +34,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AuthProvider>
             {children}
-          </AuthProvider>
           <Toaster />
         </ThemeProvider>
       </body>

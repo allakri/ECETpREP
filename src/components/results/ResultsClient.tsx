@@ -1,12 +1,11 @@
 
 "use client";
 
-import { useEffect, useState, useMemo, useCallback } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { useAuth } from '@/hooks/use-auth';
 import { format, formatDistanceStrict } from 'date-fns';
 import { Progress } from '@/components/ui/progress';
 import { Trophy, CheckCircle, XCircle, HelpCircle, BarChart3, Clock, User, Printer, FileText, ArrowRight, Loader2 } from 'lucide-react';
@@ -36,11 +35,9 @@ const getGrade = (score: number): { grade: string, color: string } => {
 
 export default function ResultsClient() {
   const router = useRouter();
-  const { user, loading, updateUserProgress } = useAuth();
   
   const [examData, setExamData] = useState<ExamResult | null>(null);
   const [isDataLoaded, setIsDataLoaded] = useState(false);
-  const [isProgressSaved, setIsProgressSaved] = useState(false);
 
   const { score, correctCount, incorrectCount, unansweredCount, accuracy, attemptedCount, totalQuestions, subjectPerformance, timeTaken } = useMemo(() => {
     if (!examData) {
@@ -99,20 +96,6 @@ export default function ResultsClient() {
     };
   }, [examData]);
 
-  const saveProgress = useCallback(async () => {
-    if (loading || !user || !examData || isProgressSaved) return;
-
-    try {
-      await updateUserProgress({
-        examName: examData.examName,
-        score: score,
-      });
-      setIsProgressSaved(true); // Mark as saved to prevent re-saving on re-renders
-    } catch (error) {
-      console.error("Error saving progress:", error);
-    }
-  }, [user, loading, examData, score, updateUserProgress, isProgressSaved]);
-  
   useEffect(() => {
     const storedData = localStorage.getItem("lastExamData");
     if (storedData) {
@@ -128,15 +111,9 @@ export default function ResultsClient() {
     }
     setIsDataLoaded(true);
   }, [router]);
-  
-  useEffect(() => {
-    if (isDataLoaded && !isProgressSaved) {
-      saveProgress();
-    }
-  }, [isDataLoaded, isProgressSaved, saveProgress]);
 
 
-  if (!isDataLoaded || loading || !examData) {
+  if (!isDataLoaded || !examData) {
     return (
         <div className="flex h-screen w-full items-center justify-center bg-secondary/20">
             <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -205,8 +182,8 @@ export default function ResultsClient() {
                     <div className="flex items-center gap-3">
                         <User className="h-5 w-5 text-muted-foreground" />
                         <div>
-                            <p className="font-semibold">{user?.name || 'Guest User'}</p>
-                            <p className="text-muted-foreground">{user?.email || 'No email provided'}</p>
+                            <p className="font-semibold">Guest User</p>
+                            <p className="text-muted-foreground">Not logged in</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
