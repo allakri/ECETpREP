@@ -118,6 +118,9 @@ export default function ExamClient() {
                 toast({ title: 'Error Loading Questions', description: 'Could not load the question paper. It might not be available yet.', variant: 'destructive' });
                 router.push('/exams');
             }
+        } else {
+            toast({ title: 'Error', description: 'Invalid exam parameters. Please select an exam again.', variant: 'destructive' });
+            router.push('/exams');
         }
     }
 
@@ -192,48 +195,48 @@ export default function ExamClient() {
 
   const PaletteContent = ({ inSheet = false }: { inSheet?: boolean }) => (
     <div className="flex flex-col gap-4 h-full">
-      <CardHeader className={cn("p-0", inSheet && "p-4 border-b")}>
-        <CardTitle className="text-lg font-headline">Question Palette</CardTitle>
-      </CardHeader>
+        <CardHeader className={cn("p-0", inSheet && "p-4 border-b")}>
+            <CardTitle className="text-lg font-headline">Question Palette</CardTitle>
+        </CardHeader>
 
-      <CardContent className="flex-1 p-0 overflow-y-auto" style={{ height: inSheet ? 'auto' : 'calc(100% - 150px)' }}>
-          <ScrollArea className="h-full">
-            <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-4 lg:grid-cols-5 gap-2 p-2">
-              {questions.map((q, index) => {
-                const status = getQuestionStatus(q.id);
-                return (
-                  <Button
-                    key={q.id}
-                    onClick={() => setCurrentQuestionIndex(index)}
-                    variant="outline"
-                    className={cn("h-10 w-10 p-0 text-base rounded-lg transition-all duration-200",
-                      currentQuestionIndex === index && "ring-2 ring-primary ring-offset-2 ring-offset-background",
-                      {
-                        'bg-green-500/20 text-green-800 dark:text-green-300 border-green-500/50 hover:bg-green-500/30': status === 'answered',
-                        'bg-yellow-500/20 text-yellow-800 dark:text-yellow-300 border-yellow-500/50 hover:bg-yellow-500/30': status === 'marked',
-                        'bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-500/50 hover:bg-blue-500/30': status === 'answeredAndMarked',
-                      }
-                    )}
-                  >
-                    {index + 1}
-                  </Button>
-                );
-              })}
+        <Card className="flex-grow overflow-hidden">
+            <CardContent className="p-2 h-full overflow-y-auto">
+                <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-4 lg:grid-cols-5 gap-2 p-2">
+                    {questions.map((q, index) => {
+                        const status = getQuestionStatus(q.id);
+                        return (
+                        <Button
+                            key={q.id}
+                            onClick={() => setCurrentQuestionIndex(index)}
+                            variant="outline"
+                            className={cn("h-10 w-10 p-0 text-base rounded-lg transition-all duration-200",
+                            currentQuestionIndex === index && "ring-2 ring-primary ring-offset-2 ring-offset-background",
+                            {
+                                'bg-green-500/20 text-green-800 dark:text-green-300 border-green-500/50 hover:bg-green-500/30': status === 'answered',
+                                'bg-yellow-500/20 text-yellow-800 dark:text-yellow-300 border-yellow-500/50 hover:bg-yellow-500/30': status === 'marked',
+                                'bg-blue-500/20 text-blue-800 dark:text-blue-300 border-blue-500/50 hover:bg-blue-500/30': status === 'answeredAndMarked',
+                            }
+                            )}
+                        >
+                            {index + 1}
+                        </Button>
+                        );
+                    })}
+                </div>
+            </CardContent>
+        </Card>
+
+        <div className="flex-shrink-0">
+            <div className="space-y-2 text-xs w-full mb-2">
+                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div><span>Answered</span></div>
+                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div><span>Marked</span></div>
+                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500/20 border border-blue-500/50"></div><span>Answered & Marked</span></div>
+                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full border"></div><span>Not Answered</span></div>
             </div>
-          </ScrollArea>
-      </CardContent>
-
-      <CardFooter className="flex-col gap-2 p-1 pt-2 border-t">
-        <div className="space-y-2 text-xs w-full">
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div><span>Answered</span></div>
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div><span>Marked</span></div>
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500/20 border border-blue-500/50"></div><span>Answered & Marked</span></div>
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full border"></div><span>Not Answered</span></div>
+            <Button className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg mt-2" onClick={() => setIsSubmitDialogOpen(true)}>
+                <Send className="mr-2 h-4 w-4" /> Submit Exam
+            </Button>
         </div>
-        <Button className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg mt-2" onClick={() => setIsSubmitDialogOpen(true)}>
-          <Send className="mr-2 h-4 w-4" /> Submit Exam
-        </Button>
-      </CardFooter>
     </div>
   );
 
@@ -306,9 +309,7 @@ export default function ExamClient() {
       </main>
 
       <aside className="w-full md:w-80 lg:w-96 bg-card border-l p-4 md:p-6 hidden md:flex">
-        <div className="flex flex-col gap-4 w-full">
-            <PaletteContent />
-        </div>
+        <PaletteContent />
       </aside>
 
       <AlertDialog open={isSubmitDialogOpen} onOpenChange={setIsSubmitDialogOpen}>
@@ -359,3 +360,5 @@ export default function ExamClient() {
     </div>
   );
 }
+
+    
