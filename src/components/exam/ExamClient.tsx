@@ -273,13 +273,12 @@ export default function ExamClient() {
   };
 
   const PaletteContent = () => (
-    <div className="flex flex-col gap-6 h-full">
+    <div className="flex flex-col gap-4 h-full">
         <Card className="flex-1 flex flex-col bg-background/50 dark:bg-background/20 overflow-hidden">
             <CardHeader className="p-4 border-b">
                 <CardTitle className="text-lg font-headline">Question Palette</CardTitle>
             </CardHeader>
             <CardContent className="flex-1 p-2 overflow-y-auto">
-              <ScrollArea className="h-full">
                 <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-4 lg:grid-cols-5 gap-2 p-2">
                   {questions.map((q, index) => {
                     const status = getQuestionStatus(q.id);
@@ -302,7 +301,6 @@ export default function ExamClient() {
                     );
                   })}
                 </div>
-              </ScrollArea>
             </CardContent>
         </Card>
         <div className="space-y-2 text-xs">
