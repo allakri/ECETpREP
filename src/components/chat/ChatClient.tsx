@@ -5,7 +5,6 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { clearDoubt } from '@/ai/flows/doubt-clearing-flow';
 import type { MessageData } from 'genkit/experimental/ai';
-import type { AnswerSheet, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -15,7 +14,6 @@ import { cn } from '@/lib/utils';
 import { AppHeader } from '../layout/AppHeader';
 import { AppFooter } from '../layout/AppFooter';
 import { Skeleton } from '../ui/skeleton';
-import type { Course } from '@/lib/courses';
 import Latex from 'react-latex-next';
 import 'katex/dist/katex.min.css';
 
@@ -56,33 +54,7 @@ export default function ChatClient() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [examContext, setExamContext] = useState<{ questions: Question[], answers: AnswerSheet } | null>(null);
-  const [courseContext, setCourseContext] = useState<Omit<Course, 'icon' | 'description' | 'slug' | 'tags'> | null>(null);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Load exam results and course context from storage to provide context to the chat
-    const storedAnswers = sessionStorage.getItem('ecetExamAnswers');
-    const storedQuestions = sessionStorage.getItem('ecetExamQuestions');
-    const storedCourseContext = sessionStorage.getItem('courseContext');
-    
-    if (storedAnswers && storedQuestions) {
-      setExamContext({
-        answers: JSON.parse(storedAnswers),
-        questions: JSON.parse(storedQuestions),
-      });
-      // Important: Clean up immediately after use
-      sessionStorage.removeItem('ecetExamAnswers');
-      sessionStorage.removeItem('ecetExamQuestions');
-    }
-
-    if(storedCourseContext) {
-      setCourseContext(JSON.parse(storedCourseContext));
-      // Important: Clean up immediately after use
-      sessionStorage.removeItem('courseContext');
-    }
-  }, []);
-
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -104,9 +76,6 @@ export default function ChatClient() {
       const result = await clearDoubt({
         question: messageToSend,
         history: history,
-        examQuestions: examContext?.questions,
-        examAnswers: examContext?.answers,
-        courseContext: courseContext || undefined,
       });
 
       const aiMessage: ChatMessage = { role: 'model', text: result.answer };
@@ -133,12 +102,6 @@ export default function ChatClient() {
   }, [messages]);
   
   const getWelcomeMessage = () => {
-    if (courseContext) {
-      return `Welcome! As an AI expert for ${courseContext.title}, I'm here to help you master your subjects. Ask me anything from syllabus details to complex concepts.`;
-    }
-    if (examContext) {
-      return "I see you've just finished an exam. You can ask me which questions you got wrong or right, and I can help explain the concepts. Or, ask me anything else about ECET subjects!";
-    }
     return "Have a question? Ask me anything about ECET subjects! For example: \"Explain the difference between series and parallel circuits.\"";
   }
 

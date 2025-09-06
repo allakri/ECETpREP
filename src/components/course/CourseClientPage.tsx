@@ -157,13 +157,13 @@ export function CourseClientPage({ course, children }: CourseClientPageProps) {
                 className="space-y-8"
               >
                 <motion.div variants={itemVariants}>
-                  <Card className="shadow-lg bg-accent/10 border-accent/20">
+                  <Card className="shadow-lg bg-primary/5 border-primary/20">
                       <CardHeader>
-                          <CardTitle className="flex items-center gap-3 text-accent"><Brain /> AI Mentor</CardTitle>
+                          <CardTitle className="flex items-center gap-3 text-primary"><Brain /> AI Mentor</CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p className="text-sm text-muted-foreground mb-4">Get a strategic study plan, topic analysis, and expert tips from our AI.</p>
-                          <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                          <Button asChild className="w-full">
                             <Link href={`/courses/${course.slug}/ai-mentor`}>
                                 Get AI Study Plan
                             </Link>
