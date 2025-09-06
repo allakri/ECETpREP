@@ -33,8 +33,6 @@ type UpdatableUserProfile = {
   branch?: string;
   college?: string;
   year_of_study?: string;
-  avg_score?: number;
-  tests_taken?: number;
 };
 
 
@@ -46,7 +44,7 @@ interface AuthContextType {
   loading: boolean;
   logout: () => Promise<void>;
   updateUser: (details: Partial<UpdatableUserProfile>) => Promise<void>;
-  updateUserProgress: (newScore: ExamScore) => Promise<void>;
+  updateUserProgress: (newScore: Omit<ExamScore, 'date'>) => Promise<void>;
   isAdmin: boolean;
   isInitialLoad: boolean;
 }
@@ -73,14 +71,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const fetchUserProfile = useCallback(async (supabaseUser: SupabaseUser): Promise<User | null> => {
-    // 1. Fetch from 'profiles' table (equivalent to user's 'users' table)
+    // 1. Fetch from 'profiles' table
     const { data: profileData, error: profileError } = await supabase
       .from('profiles')
       .select('name, phone_number, branch, college, year_of_study, avg_score, tests_taken')
       .eq('id', supabaseUser.id)
       .single();
 
-    if (profileError && profileError.code !== 'PGRST116') {
+    if (profileError && profileError.code !== 'PGRST116') { // PGRST116 means no rows found, which is ok for a new user
       console.error('Error fetching profile:', profileError);
       return null;
     }
@@ -97,7 +95,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         console.error('Error fetching test history:', testsError);
         // We can still proceed without test history
     }
-
+    
+    // Fallback to user_metadata if profile is not yet created by trigger
     const userMetadata = supabaseUser.user_metadata;
     const finalProfileData = profileData || {};
 
@@ -122,6 +121,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       async (event, session) => {
         let userProfile = null;
         if (session?.user) {
+          // Give the trigger a moment to run after sign up
+          if (event === 'SIGNED_IN') {
+             await new Promise(res => setTimeout(res, 500));
+          }
           userProfile = await fetchUserProfile(session.user);
         }
         
@@ -133,6 +136,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       }
     );
 
+    // This handles the initial load when the component mounts
     const checkInitialSession = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       let userProfile = null;
@@ -163,7 +167,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     const { error } = await supabase
       .from('profiles')
-      .update(details, { returning: 'minimal' })
+      .update(details)
       .eq('id', user.id);
 
     if (error) {
@@ -171,6 +175,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         return;
     }
 
+    // Re-fetch user to get updated data
     const {data: { user: supabaseUser }} = await supabase.auth.getUser();
     if (supabaseUser) {
         const updatedUserProfile = await fetchUserProfile(supabaseUser);
@@ -178,34 +183,36 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [user, supabase, fetchUserProfile]);
 
-  const updateUserProgress = useCallback(async (newScoreData: ExamScore) => {
+ const updateUserProgress = useCallback(async (newScoreData: Omit<ExamScore, 'date'>) => {
     if (!user) return;
+
+    const newScoreDate = new Date().toISOString();
 
     // 1. Insert the new test record
     const { error: insertError } = await supabase
-        .from('tests')
-        .insert({
-            user_id: user.id,
-            examName: newScoreData.examName,
-            score: newScoreData.score,
-            date: newScoreData.date
-        });
+      .from('tests')
+      .insert({
+        user_id: user.id,
+        examName: newScoreData.examName,
+        score: newScoreData.score,
+        date: newScoreDate,
+      });
 
     if (insertError) {
-        console.error("Error inserting new test record:", insertError);
-        return;
+      console.error("Error inserting new test record:", insertError);
+      return;
     }
 
     // 2. Fetch current stats to avoid race conditions
     const { data: currentProfile, error: fetchError } = await supabase
-        .from('profiles')
-        .select('avg_score, tests_taken')
-        .eq('id', user.id)
-        .single();
-    
+      .from('profiles')
+      .select('avg_score, tests_taken')
+      .eq('id', user.id)
+      .single();
+
     if (fetchError) {
-        console.error("Error fetching current profile for update:", fetchError);
-        return;
+      console.error("Error fetching current profile for update:", fetchError);
+      return;
     }
 
     // 3. Calculate new average and count
@@ -216,23 +223,23 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     // 4. Update the profiles table with new calculated stats
     const { error: updateError } = await supabase
-        .from('profiles')
-        .update({
-            avg_score: newAvg,
-            tests_taken: newTakes,
-        })
-        .eq('id', user.id);
-    
+      .from('profiles')
+      .update({
+        avg_score: newAvg,
+        tests_taken: newTakes,
+      })
+      .eq('id', user.id);
+
     if (updateError) {
-        console.error("Error updating user progress:", updateError);
-        return;
+      console.error("Error updating user progress stats:", updateError);
+      return;
     }
 
     // 5. Refresh local user state with all new information
-    const {data: { user: supabaseUser }} = await supabase.auth.getUser();
+    const { data: { user: supabaseUser } } = await supabase.auth.getUser();
     if (supabaseUser) {
-        const updatedUserProfile = await fetchUserProfile(supabaseUser);
-        storeUser(updatedUserProfile);
+      const updatedUserProfile = await fetchUserProfile(supabaseUser);
+      storeUser(updatedUserProfile);
     }
   }, [user, supabase, fetchUserProfile]);
 

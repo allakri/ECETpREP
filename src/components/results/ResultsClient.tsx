@@ -40,6 +40,7 @@ export default function ResultsClient() {
   
   const [examData, setExamData] = useState<ExamResult | null>(null);
   const [isDataLoaded, setIsDataLoaded] = useState(false);
+  const [isProgressSaved, setIsProgressSaved] = useState(false);
 
   const { score, correctCount, incorrectCount, unansweredCount, accuracy, attemptedCount, totalQuestions, subjectPerformance, timeTaken } = useMemo(() => {
     if (!examData) {
@@ -99,19 +100,18 @@ export default function ResultsClient() {
   }, [examData]);
 
   const saveProgress = useCallback(async () => {
-    if (loading || !user || !examData) return;
+    if (loading || !user || !examData || isProgressSaved) return;
 
     try {
-      const newScoreData = {
+      await updateUserProgress({
         examName: examData.examName,
         score: score,
-        date: format(new Date(), 'yyyy-MM-dd'),
-      };
-      await updateUserProgress(newScoreData);
+      });
+      setIsProgressSaved(true); // Mark as saved to prevent re-saving on re-renders
     } catch (error) {
       console.error("Error saving progress:", error);
     }
-  }, [user, loading, examData, score, updateUserProgress]);
+  }, [user, loading, examData, score, updateUserProgress, isProgressSaved]);
   
   useEffect(() => {
     const storedData = localStorage.getItem("lastExamData");
@@ -130,10 +130,10 @@ export default function ResultsClient() {
   }, [router]);
   
   useEffect(() => {
-    if (examData && user) {
+    if (isDataLoaded && !isProgressSaved) {
       saveProgress();
     }
-  }, [examData, user, saveProgress]);
+  }, [isDataLoaded, isProgressSaved, saveProgress]);
 
 
   if (!isDataLoaded || loading || !examData) {

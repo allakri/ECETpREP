@@ -59,10 +59,10 @@ export default function RegisterPage() {
     } else {
       toast({
         title: "Registration Successful!",
-        description: "Welcome! Redirecting you to your profile...",
+        description: "Welcome! Please check your email to verify your account. Redirecting you to the homepage...",
       });
       router.refresh();
-      router.push("/profile");
+      router.push("/");
     }
   };
 
