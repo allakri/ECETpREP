@@ -287,10 +287,6 @@ export default function ProfilePage() {
                             </Card>
                         </div>
 
-                        <div>
-                            <StudyActivityCalendar activityData={user.study_activities} />
-                        </div>
-
                         <Card className="shadow-lg">
                           <CardHeader>
                             <CardTitle>Latest Results</CardTitle>
