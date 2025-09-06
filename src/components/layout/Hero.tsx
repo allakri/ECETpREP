@@ -16,7 +16,7 @@ export function Hero() {
                 <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter text-white">Unlock Your Engineering Future</h1>
                 <p className="mt-6 text-lg md:text-xl text-white/70 max-w-3xl mx-auto">From Diploma to Degree, We've Got Your Back. Master key concepts with mock tests, instant AI feedback, and 24/7 doubt solving.</p>
                 <div className="mt-10 flex flex-wrap gap-4 justify-center">
-                    <Button size="lg" onClick={() => router.push('/register')} className="rounded-full h-12 px-8 bg-primary text-primary-foreground text-base font-bold hover:bg-primary/90 transition-colors">
+                    <Button size="lg" onClick={() => router.push('/exams')} className="rounded-full h-12 px-8 bg-primary text-primary-foreground text-base font-bold hover:bg-primary/90 transition-colors">
                       Get Started
                     </Button>
                     <Button variant="outline" size="lg" onClick={() => router.push('/#how-it-works')} className="rounded-full h-12 px-8 bg-white/10 text-white text-base font-bold hover:bg-white/20 transition-colors items-center gap-2 border-0">
