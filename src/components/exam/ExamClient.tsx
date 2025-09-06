@@ -197,6 +197,7 @@ export default function ExamClient() {
                 <CardTitle className="text-lg font-headline">Question Palette</CardTitle>
             </CardHeader>
             <CardContent className="flex-1 p-2 overflow-y-auto">
+              <ScrollArea className="h-full">
                 <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-4 lg:grid-cols-5 gap-2 p-2">
                   {questions.map((q, index) => {
                     const status = getQuestionStatus(q.id);
@@ -219,12 +220,13 @@ export default function ExamClient() {
                     );
                   })}
                 </div>
+              </ScrollArea>
             </CardContent>
         </Card>
         <div className="space-y-2 text-xs">
             <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div><span>Answered</span></div>
             <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div><span>Marked</span></div>
-            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500/20 border-blue-500/50"></div><span>Answered &amp; Marked</span></div>
+            <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500/20 border border-blue-500/50"></div><span>Answered &amp; Marked</span></div>
             <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full border"></div><span>Not Answered</span></div>
         </div>
         <Button className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg" onClick={() => setIsSubmitDialogOpen(true)}>
@@ -356,3 +358,5 @@ export default function ExamClient() {
     </div>
   );
 }
+
+    
