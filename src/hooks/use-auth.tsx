@@ -21,7 +21,6 @@ interface UserProfile {
   branch: string;
   college: string;
   yearOfStudy: string;
-  // Simplified progress fields
   avg_score: number;
   tests_taken: number;
   exam_score_history: ExamScore[]; // This will be fetched from the separate 'tests' table
@@ -107,10 +106,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         id: supabaseUser.id,
         name: finalProfileData.name || userMetadata.name || 'No Name',
         email: supabaseUser.email || '',
-        phoneNumber: finalProfileData.phone_number || userMetadata.phone_number || 'No Phone',
-        branch: finalProfileData.branch || userMetadata.branch || 'No Branch',
-        college: finalProfileData.college || userMetadata.college || 'No College',
-        yearOfStudy: finalProfileData.year_of_study || userMetadata.year_of_study || 'No Year',
+        phoneNumber: finalProfileData.phone_number || userMetadata.phone_number || '',
+        branch: finalProfileData.branch || userMetadata.branch || '',
+        college: finalProfileData.college || userMetadata.college || '',
+        yearOfStudy: finalProfileData.year_of_study || userMetadata.year_of_study || '',
         avg_score: finalProfileData.avg_score || 0,
         tests_taken: finalProfileData.tests_taken || 0,
         exam_score_history: (testsData as ExamScore[] || []),
