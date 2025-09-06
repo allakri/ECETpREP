@@ -11,14 +11,13 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, AlertTriangle, Loader2, Expand, Shrink, PanelRightOpen } from 'lucide-react';
+import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, Loader2, PanelRightOpen } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Latex from 'react-latex-next';
 import 'katex/dist/katex.min.css';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
-const MAX_VIOLATIONS = 3;
 
 // A simple mapping from full slug to the folder name convention
 const slugToFolderMap: Record<string, string> = {
@@ -45,11 +44,8 @@ export default function ExamClient() {
   const [markedForReview, setMarkedForReview] = useState<MarkedQuestions>([]);
   const [timeLeft, setTimeLeft] = useState(EXAM_DURATION);
   const [isSubmitDialogOpen, setIsSubmitDialogOpen] = useState(false);
-  const [isViolationDialogOpen, setIsViolationDialogOpen] = useState(false);
   const [isExitDialogOpen, setIsExitDialogOpen] = useState(false);
-  const violationCount = useRef(0);
   const [examName, setExamName] = useState('ECET Exam');
-  const [isFullscreen, setIsFullscreen] = useState(false);
   const isSubmitting = useRef(false);
   const [startedAt] = useState(new Date().toISOString());
 
@@ -68,73 +64,10 @@ export default function ExamClient() {
         }));
     }
     
-    const navigateToResults = () => {
-        // Add a small delay to ensure state updates before navigation
-        setTimeout(() => router.replace(`/results`), 100);
-    };
+    // Add a small delay to ensure state updates before navigation
+    setTimeout(() => router.replace(`/results`), 100);
 
-    if (document.fullscreenElement) {
-      document.exitFullscreen()
-        .then(navigateToResults)
-        .catch(navigateToResults); // Proceed even if exit fails
-    } else {
-      navigateToResults();
-    }
   }, [answers, questions, examName, router, startedAt]);
-
-
-  const handleFullscreenChange = useCallback(() => {
-    // A small delay to allow the fullscreen state to settle
-    setTimeout(() => {
-        const isCurrentlyFullscreen = !!document.fullscreenElement;
-        setIsFullscreen(isCurrentlyFullscreen);
-        
-        if (isSubmitting.current) return;
-
-        if (!isCurrentlyFullscreen && questions) { 
-            violationCount.current += 1;
-            if (violationCount.current >= MAX_VIOLATIONS) {
-                toast({ title: "Exam Terminated", description: `Exam submitted due to ${MAX_VIOLATIONS} violations.`, variant: 'destructive' });
-                handleSubmit();
-            } else {
-                setIsViolationDialogOpen(true);
-            }
-        }
-    }, 100);
-  }, [questions, handleSubmit, toast]);
-
-  const toggleFullscreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(err => {
-        alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-      });
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      }
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    // Add a keydown listener to block keyboard shortcuts
-    const handleKeyDown = (event: KeyboardEvent) => {
-        // Allow functionality within form inputs, but block browser shortcuts
-        if ((event.ctrlKey || event.metaKey) && event.key !== 'c' && event.key !== 'v' && event.key !== 'x' && event.key !== 'a') {
-            event.preventDefault();
-        }
-        if(event.key === 'F11' || event.key === 'Escape'){
-            event.preventDefault();
-        }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('fullscreenchange', handleFullscreenChange);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleFullscreenChange]); 
 
 
   useEffect(() => {
@@ -206,23 +139,8 @@ export default function ExamClient() {
       });
     }, 1000);
 
-    const handleVisibilityChange = () => {
-        if (document.hidden && !isSubmitting.current) {
-            violationCount.current += 1;
-            if (violationCount.current >= MAX_VIOLATIONS) {
-                toast({ title: "Exam Terminated", description: `Exam submitted due to ${MAX_VIOLATIONS} violations.`, variant: 'destructive' });
-                handleSubmit();
-            } else {
-                setIsViolationDialogOpen(true);
-            }
-        }
-    };
-    
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
     return () => {
         clearInterval(timer);
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, [handleSubmit, questions, toast]);
   
@@ -325,10 +243,6 @@ export default function ExamClient() {
               <Timer className="h-6 w-6 text-accent" />
               <span className="font-mono text-xl">{formatTime(timeLeft)}</span>
             </div>
-            <Button variant="outline" size="icon" onClick={toggleFullscreen} className="hidden md:inline-flex">
-              {isFullscreen ? <Shrink className="h-5 w-5" /> : <Expand className="h-5 w-5" />}
-              <span className="sr-only">{isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}</span>
-            </Button>
              <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="outline" className="md:hidden"><PanelRightOpen className="mr-2 h-4 w-4" /> View Palette</Button>
@@ -417,32 +331,6 @@ export default function ExamClient() {
         </AlertDialogContent>
       </AlertDialog>
 
-      <AlertDialog open={isViolationDialogOpen} onOpenChange={setIsViolationDialogOpen}>
-        <AlertDialogContent>
-          <div className="flex justify-center mb-4">
-              <div className="h-16 w-16 rounded-full bg-destructive/10 flex items-center justify-center">
-                  <AlertTriangle className="h-10 w-10 text-destructive" />
-              </div>
-            </div>
-            <AlertDialogTitle className="text-center font-headline text-2xl text-destructive">Warning: Exam Violation</AlertDialogTitle>
-            <AlertDialogDescription className="text-center">
-              You have switched away from the exam window or exited fullscreen. This is a violation of the rules.
-              <br />
-              You have <strong className="font-bold">{MAX_VIOLATIONS - violationCount.current}</strong> warning(s) remaining.
-              <br />
-              If you violate the rules again, your exam may be terminated. Please re-enter fullscreen to continue.
-            </AlertDialogDescription>
-          <AlertDialogFooter>
-             <AlertDialogAction onClick={() => {
-                setIsViolationDialogOpen(false);
-                toggleFullscreen();
-              }} className="w-full">
-                I Understand, Go Fullscreen
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-
       <AlertDialog open={isExitDialogOpen} onOpenChange={setIsExitDialogOpen}>
         <AlertDialogContent>
             <AlertDialogHeader>
@@ -458,11 +346,7 @@ export default function ExamClient() {
             <AlertDialogAction onClick={() => {
                 isSubmitting.current = true; // Prevent violation trigger on manual exit
                 setIsExitDialogOpen(false);
-                if (document.fullscreenElement) {
-                    document.exitFullscreen().finally(() => router.push('/'));
-                } else {
-                    router.push('/');
-                }
+                router.push('/');
             }} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
                 Yes, Exit
             </AlertDialogAction>

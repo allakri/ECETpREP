@@ -8,18 +8,6 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Check, AlertTriangle, Clock, FileText, ArrowRight, Fullscreen, BookCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import { Skeleton } from "@/components/ui/skeleton";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
 
 const details = [
     { icon: Clock, text: "Duration: 2 hours (120 minutes)" },
@@ -36,48 +24,12 @@ const instructions = [
 ];
 
 
-const InstructionsPageSkeleton = () => (
-    <div className="flex flex-col min-h-screen bg-background">
-      <AppHeader />
-      <main className="flex-grow flex items-center justify-center p-4">
-          <Card className="w-full max-w-4xl shadow-lg">
-             <CardHeader className="bg-primary text-primary-foreground p-4">
-                <Skeleton className="h-8 w-1/3" />
-             </CardHeader>
-             <CardContent className="p-6 md:p-8 space-y-6">
-                <Skeleton className="h-16 w-full" />
-                <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-4">
-                        <Skeleton className="h-6 w-1/4" />
-                        <Skeleton className="h-12 w-full" />
-                    </div>
-                    <div className="space-y-4">
-                        <Skeleton className="h-6 w-1/4" />
-                        <Skeleton className="h-12 w-full" />
-                    </div>
-                </div>
-                 <Skeleton className="h-12 w-full" />
-                 <div className="text-center pt-4">
-                    <Skeleton className="h-12 w-48 mx-auto" />
-                 </div>
-             </CardContent>
-          </Card>
-      </main>
-      <AppFooter />
-    </div>
-);
-
-
 export default function ExamInstructionsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const handleStartExam = () => {
-    document.documentElement.requestFullscreen().catch(err => {
-      console.warn(`Fullscreen request failed: ${err.message}. Proceeding without fullscreen.`);
-    }).finally(() => {
-        router.push(`/exam?${searchParams.toString()}`);
-    });
+    router.push(`/exam?${searchParams.toString()}`);
   };
 
   return (
@@ -134,29 +86,9 @@ export default function ExamInstructionsPage() {
 
               {/* Start Button */}
               <div className="text-center pt-4">
-                 <AlertDialog>
-                    <AlertDialogTrigger asChild>
-                        <Button size="lg" className="font-bold text-lg bg-green-600 hover:bg-green-700 text-white px-8 py-6">
-                            Start Examination <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                    </AlertDialogTrigger>
-                    <AlertDialogContent>
-                        <AlertDialogHeader>
-                        <AlertDialogTitle className="flex items-center gap-2">
-                            <Fullscreen className="h-6 w-6" /> Fullscreen Exam Mode
-                        </AlertDialogTitle>
-                        <AlertDialogDescription>
-                            For the best experience and to simulate a real testing environment, this exam will start in fullscreen mode. Please click 'Continue' to proceed.
-                        </AlertDialogDescription>
-                        </AlertDialogHeader>
-                        <AlertDialogFooter>
-                        <AlertDialogCancel>Cancel</AlertDialogCancel>
-                        <AlertDialogAction onClick={handleStartExam}>
-                            Continue
-                        </AlertDialogAction>
-                        </AlertDialogFooter>
-                    </AlertDialogContent>
-                </AlertDialog>
+                <Button size="lg" className="font-bold text-lg bg-green-600 hover:bg-green-700 text-white px-8 py-6" onClick={handleStartExam}>
+                    Start Examination <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </div>
             </CardContent>
           </Card>
