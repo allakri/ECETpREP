@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import type { AnswerSheet, MarkedQuestions, Question } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction, AlertDialogCancel } from '@/components/ui/alert-dialog';
+import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter } from '@/components/ui/alert-dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
@@ -15,7 +15,8 @@ import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, Loader2, Pa
 import { useToast } from '@/hooks/use-toast';
 import Latex from 'react-latex-next';
 import 'katex/dist/katex.min.css';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet';
+import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
+import { QuestionPalette } from './QuestionPalette';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
 
@@ -184,60 +185,6 @@ export default function ExamClient() {
     return `${h}:${m}:${s}`;
   };
 
-  const getQuestionStatus = (questionId: number) => {
-    const isAnswered = answers[questionId] !== undefined;
-    const isMarked = markedForReview.includes(questionId);
-    if (isAnswered && isMarked) return 'answeredAndMarked';
-    if (isAnswered) return 'answered';
-    if (isMarked) return 'marked';
-    return 'unanswered';
-  };
-
-  const PaletteContent = () => (
-    <div className="flex flex-col h-full bg-card rounded-lg">
-        <div className="p-4 border-b">
-            <h3 className="font-bold text-lg font-headline">Question Palette</h3>
-        </div>
-        <div className="flex-grow overflow-y-auto p-4">
-            <div className="grid grid-cols-5 xs:grid-cols-6 sm:grid-cols-7 md:grid-cols-5 lg:grid-cols-6 gap-2">
-                {questions.map((q, index) => {
-                    const status = getQuestionStatus(q.id);
-                    return (
-                    <Button
-                        key={q.id}
-                        onClick={() => setCurrentQuestionIndex(index)}
-                        variant="outline"
-                        size="icon"
-                        className={cn("h-10 w-10 p-0 text-base rounded-lg transition-all duration-200 font-bold",
-                        currentQuestionIndex === index && "ring-2 ring-primary ring-offset-2 ring-offset-background",
-                        {
-                            'bg-green-500/80 text-white border-green-600 hover:bg-green-500': status === 'answered',
-                            'bg-yellow-500/80 text-white border-yellow-600 hover:bg-yellow-500': status === 'marked',
-                            'bg-blue-500/80 text-white border-blue-600 hover:bg-blue-500': status === 'answeredAndMarked',
-                            'bg-muted/50 border-muted-foreground/20': status === 'unanswered',
-                        }
-                        )}
-                    >
-                        {index + 1}
-                    </Button>
-                    );
-                })}
-            </div>
-        </div>
-        <div className="p-4 border-t flex-shrink-0">
-            <div className="space-y-2 text-xs w-full mb-4">
-                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-500"></div><span>Answered</span></div>
-                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-yellow-500"></div><span>Marked for Review</span></div>
-                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-blue-500"></div><span>Answered & Marked</span></div>
-                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-muted border"></div><span>Not Answered</span></div>
-            </div>
-            <Button className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg" onClick={() => setIsSubmitDialogOpen(true)}>
-                <Send className="mr-2 h-4 w-4" /> Submit Exam
-            </Button>
-        </div>
-    </div>
-  );
-
   return (
     <div className="flex h-screen flex-col bg-secondary/20">
         <header className="flex-shrink-0 bg-background border-b shadow-sm">
@@ -252,8 +199,15 @@ export default function ExamClient() {
                         <SheetTrigger asChild>
                             <Button variant="outline" className="md:hidden" size="icon"><PanelRightOpen className="h-5 w-5" /></Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="p-2 w-[300px] sm:w-[350px] bg-secondary/20 border-l-0">
-                            <PaletteContent />
+                        <SheetContent side="right" className="p-0 w-[300px] sm:w-[350px] bg-secondary/20 border-l-0">
+                            <QuestionPalette
+                                questions={questions}
+                                answers={answers}
+                                markedForReview={markedForReview}
+                                currentQuestionIndex={currentQuestionIndex}
+                                setCurrentQuestionIndex={setCurrentQuestionIndex}
+                                setIsSubmitDialogOpen={setIsSubmitDialogOpen}
+                            />
                         </SheetContent>
                     </Sheet>
                     <Button variant="outline" size="icon" onClick={() => setIsExitDialogOpen(true)} className="hidden sm:inline-flex"><LogOut className="h-5 w-5" /></Button>
@@ -315,7 +269,14 @@ export default function ExamClient() {
 
             {/* Sidebar */}
             <aside className="w-80 lg:w-96 hidden md:flex flex-col">
-                <PaletteContent />
+                 <QuestionPalette
+                    questions={questions}
+                    answers={answers}
+                    markedForReview={markedForReview}
+                    currentQuestionIndex={currentQuestionIndex}
+                    setCurrentQuestionIndex={setCurrentQuestionIndex}
+                    setIsSubmitDialogOpen={setIsSubmitDialogOpen}
+                />
             </aside>
         </div>
 
@@ -328,9 +289,7 @@ export default function ExamClient() {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel asChild>
-              <Button variant="outline">Cancel</Button>
-            </AlertDialogCancel>
+            <Button variant="outline" onClick={() => setIsSubmitDialogOpen(false)}>Cancel</Button>
             <Button onClick={() => {
               setIsSubmitDialogOpen(false);
               toast({ title: "Exam Submitted!", description: "Your answers have been saved." });
@@ -351,21 +310,17 @@ export default function ExamClient() {
             </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
-            <AlertDialogCancel asChild>
-                <Button variant="outline">Cancel</Button>
-            </AlertDialogCancel>
-            <AlertDialogAction onClick={() => {
+            <Button variant="outline" onClick={() => setIsExitDialogOpen(false)}>Cancel</Button>
+            <Button onClick={() => {
                 isSubmitting.current = true; // Prevent violation trigger on manual exit
                 setIsExitDialogOpen(false);
                 router.push('/');
             }} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
                 Yes, Exit
-            </AlertDialogAction>
+            </Button>
             </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
     </div>
   );
 }
-
-    
