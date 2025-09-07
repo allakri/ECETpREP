@@ -21,6 +21,7 @@ import { QuestionPalette } from './QuestionPalette';
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
 const MAX_VIOLATIONS = 3;
 
+
 // A simple mapping from full slug to the folder name convention
 const slugToFolderMap: Record<string, string> = {
     'computer-science': 'CSE',
@@ -312,7 +313,7 @@ export default function ExamClient() {
             </div>
 
             {/* Sidebar */}
-            <aside className="w-80 lg:w-96 hidden md:flex flex-col">
+             <aside className="w-80 lg:w-96 hidden md:flex flex-col">
                  <QuestionPalette
                     questions={questions}
                     answers={answers}

@@ -9,6 +9,17 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { Check, AlertTriangle, Clock, FileText, ArrowRight, Fullscreen, BookCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import * as React from "react";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 
 const details = [
     { icon: Clock, text: "Duration: 2 hours (120 minutes)" },
@@ -31,12 +42,19 @@ export default function ExamInstructionsPage() {
   const handleStartExam = () => {
     const elem = document.documentElement;
     if (elem.requestFullscreen) {
-        elem.requestFullscreen().then(() => {
-             router.push(`/exam?${searchParams.toString()}`);
-        }).catch(err => {
+        elem.requestFullscreen().catch(err => {
             alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
         });
+        // Listen for fullscreen change
+        const fullscreenChangeHandler = () => {
+            if (document.fullscreenElement) {
+                router.push(`/exam?${searchParams.toString()}`);
+                document.removeEventListener('fullscreenchange', fullscreenChangeHandler);
+            }
+        };
+        document.addEventListener('fullscreenchange', fullscreenChangeHandler);
     } else {
+        // Fallback for browsers that don't support the API
         router.push(`/exam?${searchParams.toString()}`);
     }
   };
@@ -52,11 +70,14 @@ export default function ExamInstructionsPage() {
           transition={{ duration: 0.5 }}
         >
           <Card className="shadow-2xl border-border overflow-hidden">
-            <CardHeader className="bg-primary text-primary-foreground p-4">
-              <CardTitle className="text-2xl flex items-center gap-2">
+            <CardHeader className="bg-primary text-primary-foreground p-6">
+              <CardTitle className="text-2xl flex items-center gap-3 font-headline">
                 <FileText />
                 ECET Examination Instructions
               </CardTitle>
+              <CardDescription className="text-primary-foreground/80">
+                Please read the following rules carefully before starting the exam.
+              </CardDescription>
             </CardHeader>
             <CardContent className="p-6 md:p-8 space-y-8 bg-card">
               <div className="grid md:grid-cols-2 gap-8">
@@ -88,16 +109,37 @@ export default function ExamInstructionsPage() {
               </div>
 
               {/* Warning */}
-              <div className="flex items-center gap-3 p-4 bg-yellow-100/50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 rounded-lg border border-yellow-300/50 dark:border-yellow-700/50">
-                <AlertTriangle className="h-5 w-5" />
-                <p className="font-medium">The exam will start in fullscreen mode. Any attempt to exit fullscreen or switch tabs will be counted as a violation.</p>
+              <div className="flex items-start gap-4 p-4 bg-yellow-500/10 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 rounded-lg border border-yellow-500/20">
+                <AlertTriangle className="h-6 w-6 mt-1 flex-shrink-0" />
+                <div className="text-sm">
+                    <h4 className="font-bold">Important Notice</h4>
+                    <p>The exam will start in fullscreen mode to ensure a fair testing environment. Any attempt to exit fullscreen or switch tabs will be counted as a violation and may lead to automatic submission.</p>
+                </div>
               </div>
 
               {/* Start Button */}
               <div className="text-center pt-4">
-                <Button size="lg" className="font-bold text-lg bg-green-600 hover:bg-green-700 text-white px-8 py-6" onClick={handleStartExam}>
-                    Start Examination <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                 <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                         <Button size="lg" className="font-bold text-lg bg-green-600 hover:bg-green-700 text-white px-8 py-6">
+                            Start Examination <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                        <AlertDialogHeader>
+                            <AlertDialogTitle>Enter Fullscreen Mode</AlertDialogTitle>
+                            <AlertDialogDescription>
+                                The exam requires fullscreen mode. Please click "Continue" to proceed.
+                            </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogAction onClick={handleStartExam}>
+                           <Fullscreen className="mr-2 h-4 w-4" /> Continue
+                        </AlertDialogAction>
+                        </AlertDialogFooter>
+                    </AlertDialogContent>
+                </AlertDialog>
               </div>
             </CardContent>
           </Card>
