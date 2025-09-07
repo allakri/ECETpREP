@@ -11,7 +11,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, Loader2, PanelRightOpen, X } from 'lucide-react';
+import { Timer, BookMarked, ChevronLeft, ChevronRight, Send, LogOut, Loader2, PanelRightOpen, X, Fullscreen, AlertTriangle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Latex from 'react-latex-next';
 import 'katex/dist/katex.min.css';
@@ -19,6 +19,7 @@ import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { QuestionPalette } from './QuestionPalette';
 
 const EXAM_DURATION = 2 * 60 * 60; // 2 hours in seconds
+const MAX_VIOLATIONS = 3;
 
 // A simple mapping from full slug to the folder name convention
 const slugToFolderMap: Record<string, string> = {
@@ -50,12 +51,20 @@ export default function ExamClient() {
   const isSubmitting = useRef(false);
   const [startedAt] = useState(new Date().toISOString());
 
+  // Exam Rules State
+  const violationCount = useRef(0);
+  const [isViolationDialogOpen, setIsViolationDialogOpen] = useState(false);
+  const [violationMessage, setViolationMessage] = useState('');
+
   const handleSubmit = useCallback(() => {
     if (isSubmitting.current) return;
     isSubmitting.current = true;
     
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    }
+
     if (questions) {
-        // Save the complete data needed for validation to localStorage
         localStorage.setItem("lastExamData", JSON.stringify({
             answers,
             questions,
@@ -65,15 +74,28 @@ export default function ExamClient() {
         }));
     }
     
-    // Add a small delay to ensure state updates before navigation
     setTimeout(() => router.replace(`/results`), 100);
 
   }, [answers, questions, examName, router, startedAt]);
 
+  const handleViolation = useCallback((message: string) => {
+    violationCount.current += 1;
+    if (violationCount.current >= MAX_VIOLATIONS) {
+        toast({
+            variant: 'destructive',
+            title: "Exam Terminated",
+            description: `You have exceeded the maximum of ${MAX_VIOLATIONS} violations. Your exam has been submitted.`,
+            duration: 5000,
+        });
+        handleSubmit();
+    } else {
+        setViolationMessage(`${message}. You have ${MAX_VIOLATIONS - violationCount.current} warning(s) left.`);
+        setIsViolationDialogOpen(true);
+    }
+  }, [handleSubmit, toast]);
 
   useEffect(() => {
     async function loadQuestions() {
-        // **Cleanup logic**: Remove old exam data before starting a new one.
         localStorage.removeItem("lastExamData");
 
         const customExamKey = searchParams.get('customExamKey');
@@ -87,7 +109,6 @@ export default function ExamClient() {
             if (customQuestionsStr) {
                 setQuestions(JSON.parse(customQuestionsStr));
                 setExamName(sessionStorage.getItem('customExamName') || 'AI Custom Test');
-                 // Clean up the temporary custom exam data
                 sessionStorage.removeItem(customExamKey);
                 sessionStorage.removeItem('customExamName');
             } else {
@@ -143,10 +164,27 @@ export default function ExamClient() {
       });
     }, 1000);
 
+    const handleFullscreenChange = () => {
+        if (!document.fullscreenElement) {
+            handleViolation("You have exited fullscreen mode");
+        }
+    };
+    
+    const handleVisibilityChange = () => {
+        if (document.visibilityState === 'hidden') {
+            handleViolation("You have switched to another tab or window");
+        }
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     return () => {
         clearInterval(timer);
+        document.removeEventListener('fullscreenchange', handleFullscreenChange);
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [handleSubmit, questions, toast]);
+  }, [handleSubmit, questions, toast, handleViolation]);
   
   const handleAnswerSelect = (questionId: number, answer: string) => {
     setAnswers(prev => ({ ...prev, [questionId]: answer }));
@@ -166,6 +204,12 @@ export default function ExamClient() {
     setAnswers(newAnswers);
   };
   
+  const requestFullscreen = () => {
+    if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+    }
+  };
+
   if (!questions) {
     return (
         <div className="flex h-screen w-full items-center justify-center bg-background">
@@ -306,21 +350,45 @@ export default function ExamClient() {
             <AlertDialogHeader>
             <AlertDialogTitle className="font-headline">Confirm Exit</AlertDialogTitle>
             <AlertDialogDescription>
-                Are you sure you want to exit the exam? Your progress will not be saved and you will have to start over.
+                Are you sure you want to exit the exam? Your progress will be submitted as is.
             </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
             <Button variant="outline" onClick={() => setIsExitDialogOpen(false)}>Cancel</Button>
             <Button onClick={() => {
-                isSubmitting.current = true; // Prevent violation trigger on manual exit
                 setIsExitDialogOpen(false);
-                router.push('/');
+                handleSubmit();
             }} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
-                Yes, Exit
+                Yes, Exit & Submit
             </Button>
             </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+        <AlertDialog open={isViolationDialogOpen} onOpenChange={setIsViolationDialogOpen}>
+            <AlertDialogContent>
+                <AlertDialogHeader>
+                    <div className="flex justify-center mb-4">
+                        <AlertTriangle className="h-16 w-16 text-yellow-500" />
+                    </div>
+                    <AlertDialogTitle className="font-headline text-center text-2xl">Rule Violation Warning</AlertDialogTitle>
+                    <AlertDialogDescription className="text-center text-base">
+                       {violationMessage}
+                    </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                    <Button 
+                        className="w-full"
+                        onClick={() => {
+                            setIsViolationDialogOpen(false);
+                            requestFullscreen();
+                        }}>
+                        <Fullscreen className="mr-2 h-4 w-4" /> I Understand, Return to Exam
+                    </Button>
+                </AlertDialogFooter>
+            </AlertDialogContent>
+      </AlertDialog>
+
     </div>
   );
 }

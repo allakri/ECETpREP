@@ -8,6 +8,7 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { Check, AlertTriangle, Clock, FileText, ArrowRight, Fullscreen, BookCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import * as React from "react";
 
 const details = [
     { icon: Clock, text: "Duration: 2 hours (120 minutes)" },
@@ -16,11 +17,10 @@ const details = [
 ];
 
 const instructions = [
-    "Each question has 4 options (A, B, C, D)",
-    "You can mark questions for review",
-    "Navigate between questions freely",
-    "Submit before time expires",
-    "Auto-submit when time is up"
+    "The exam must be taken in fullscreen mode.",
+    "Do not switch tabs or exit fullscreen.",
+    "Switching tabs or exiting fullscreen 3 times will auto-submit the exam.",
+    "The timer cannot be paused once started.",
 ];
 
 
@@ -29,7 +29,16 @@ export default function ExamInstructionsPage() {
   const searchParams = useSearchParams();
 
   const handleStartExam = () => {
-    router.push(`/exam?${searchParams.toString()}`);
+    const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen().then(() => {
+             router.push(`/exam?${searchParams.toString()}`);
+        }).catch(err => {
+            alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+    } else {
+        router.push(`/exam?${searchParams.toString()}`);
+    }
   };
 
   return (
@@ -69,7 +78,7 @@ export default function ExamInstructionsPage() {
 
                 {/* Instructions */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-foreground">Instructions</h3>
+                  <h3 className="text-xl font-bold text-foreground">Rules & Instructions</h3>
                   <ul className="space-y-2 list-disc list-inside text-muted-foreground">
                     {instructions.map((text, index) => (
                       <li key={index}>{text}</li>
@@ -81,7 +90,7 @@ export default function ExamInstructionsPage() {
               {/* Warning */}
               <div className="flex items-center gap-3 p-4 bg-yellow-100/50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 rounded-lg border border-yellow-300/50 dark:border-yellow-700/50">
                 <AlertTriangle className="h-5 w-5" />
-                <p className="font-medium">Once you start the exam, the timer will begin and cannot be paused. Make sure you have a stable internet connection.</p>
+                <p className="font-medium">The exam will start in fullscreen mode. Any attempt to exit fullscreen or switch tabs will be counted as a violation.</p>
               </div>
 
               {/* Start Button */}
