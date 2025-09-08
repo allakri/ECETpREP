@@ -3,6 +3,7 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { Hero } from "@/components/layout/Hero";
 import { Features } from "@/components/layout/Features";
 import { HowItWorks } from "@/components/layout/HowItWorks";
+import { JoinCommunity } from "@/components/layout/JoinCommunity";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
                 <Hero />
                 <Features />
                 <HowItWorks />
+                <JoinCommunity />
             </main>
             <AppFooter />
         </div>
