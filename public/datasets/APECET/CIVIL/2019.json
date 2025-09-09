@@ -1,72 +1,2403 @@
 [
     {
-        "id": 1,
-        "question": "What is the main binding material in cement?",
-        "options": ["Silica", "Alumina", "Lime", "Iron oxide"],
-        "correctAnswer": "Lime",
-        "topic": "Building Materials"
+      "id": "67809438257",
+      "question": "The adjoint of $A=(\\begin{matrix}1&4&-2\\\\ -2&-5&4\\\\ 1&-2&1\\end{matrix})$ is",
+      "options": [
+        "$(\\begin{matrix}3&0&6\\\\ 6&3&0\\\\ 9&6&3\\end{matrix})$",
+        "$(\\begin{matrix}1&4&-2\\\\ -2&-5&4\\\\ 1&-2&1\\end{matrix})$",
+        "$(\\begin{matrix}3&2&1\\\\ 4&1&-1\\\\ 0&3&4\\end{matrix})$",
+        "$(\\begin{matrix}3&0&6\\\\ 6&3&0\\\\ 9&6&3\\end{matrix})$"
+      ],
+      "correctAnswer": "$\\begin{pmatrix}3&0&6\\\\ 6&3&0\\\\ 9&6&3\\end{pmatrix}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 2,
-        "question": "Which type of beam is supported at more than two points?",
-        "options": ["Cantilever beam", "Simply supported beam", "Overhanging beam", "Continuous beam"],
-        "correctAnswer": "Continuous beam",
-        "topic": "Strength of Materials"
+      "id": "67809438258",
+      "question": "If A is a square matrix of order 3 then (adj A) $A=$",
+      "options": [
+        "A $\\cdot$ (adj A)",
+        "A$\\times$(adj A)",
+        "A-(adj A)",
+        "A+(adj A)"
+      ],
+      "correctAnswer": "A $\\cdot$ (adj A)",
+      "topic": "Mathematics"
     },
     {
-        "id": 3,
-        "question": "The art of determining the relative positions of points on, above, or beneath the surface of the earth is called:",
-        "options": ["Leveling", "Surveying", "Contouring", "Mapping"],
-        "correctAnswer": "Surveying",
-        "topic": "Surveying"
+      "id": "67809438259",
+      "question": "The inverse of $A=(\\begin{matrix}2&3\\\\ 2&5\\end{matrix})$ is",
+      "options": [
+        "$(\\begin{matrix}5/4&-3/4\\\\ 1/2&1/2\\end{matrix})$",
+        "$(\\begin{matrix}5/4&3/4\\\\ -1/2&1/2\\end{matrix})$",
+        "$(\\begin{matrix}5/4&-5/4\\\\ -1/2&1/2\\end{matrix})$",
+        "$(\\begin{matrix}5/4&-3/4\\\\ -1/2&1/2\\end{matrix})$"
+      ],
+      "correctAnswer": "$\\begin{pmatrix}5/4&-3/4\\\\ -1/2&1/2\\end{pmatrix}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 4,
-        "question": "A fluid which has no viscosity is called:",
-        "options": ["Real fluid", "Ideal fluid", "Newtonian fluid", "Non-Newtonian fluid"],
-        "correctAnswer": "Ideal fluid",
-        "topic": "Hydraulics"
+      "id": "67809438260",
+      "question": "If $A=(\\begin{matrix}3&2&x\\\\ 4&1&-1\\\\ 0&3&4\\end{matrix})$ is a singular matrix then the value of x is",
+      "options": [
+        "$\\frac{11}{12}$",
+        "$-\\frac{11}{12}$",
+        "$\\frac{13}{12}$",
+        "$\\frac{5}{4}$"
+      ],
+      "correctAnswer": "$-\\frac{11}{12}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 5,
-        "question": "The most common type of reinforcement used in concrete is:",
-        "options": ["Steel", "Aluminum", "Copper", "Wood"],
-        "correctAnswer": "Steel",
-        "topic": "Reinforced Concrete Structure"
+      "id": "67809438261",
+      "question": "If $A=(\\begin{matrix}3&1\\\\ -1&2\\end{matrix})$ then $A^{2}-5A+7I$ is",
+      "options": [
+        "$(\\begin{matrix}1&0\\\\ 0&1\\end{matrix})$",
+        "$(\\begin{matrix}0&3\\\\ 2&0\\end{matrix})$",
+        "$(\\begin{matrix}0&0\\\\ 0&0\\end{vmatrix})$",
+        "$(\\begin{matrix}2&3\\\\ 2&5\\end{vmatrix})$"
+      ],
+      "correctAnswer": "$(\\begin{matrix}0&0\\\\ 0&0\\end{vmatrix})$",
+      "topic": "Mathematics"
     },
     {
-        "id": 6,
-        "question": "The science of water in motion is known as:",
-        "options": ["Hydrostatics", "Hydrokinetics", "Hydrodynamics", "Hydraulics"],
-        "correctAnswer": "Hydrodynamics",
-        "topic": "Hydraulics"
+      "id": "67809438262",
+      "question": "Resolve $\\frac{3x+7}{(x-1)(x-2)}$ into partial fractions",
+      "options": [
+        "$\\frac{12}{(x-2)}-\\frac{10}{(x-1)}$",
+        "$\\frac{13}{(x-2)}-\\frac{10}{(x-1)}$",
+        "$\\frac{13}{(x-5)}-\\frac{10}{(x-1)}$",
+        "$\\frac{13}{(x-2)}-\\frac{10}{(x-7)}$"
+      ],
+      "correctAnswer": "$\\frac{13}{(x-2)}-\\frac{10}{(x-1)}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 7,
-        "question": "Which type of irrigation is also called trickle irrigation?",
-        "options": ["Sprinkler irrigation", "Drip irrigation", "Furrow irrigation", "Basin irrigation"],
-        "correctAnswer": "Drip irrigation",
-        "topic": "Irrigation Engineering"
+      "id": "67809438263",
+      "question": "Resolve $\\frac{5x^{2}+1}{x^{2}-1}$ into partial fractions",
+      "options": [
+        "$\\frac{12}{(x-2)}-\\frac{10}{(x-1)}$",
+        "$\\frac{13}{(x-2)}-\\frac{10}{(x-1)}$",
+        "$\\frac{13}{(x-5)}-\\frac{10}{(x-1)}$",
+        "$\\frac{2}{(x-1)}+\\frac{3x+1}{x^{2}+x+1}$"
+      ],
+      "correctAnswer": "$\\frac{2}{(x-1)}+\\frac{3x+1}{x^{2}+x+1}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 8,
-        "question": "The ability of a material to resist fracture due to high impact loads is called:",
-        "options": ["Strength", "Stiffness", "Toughness", "Hardness"],
-        "correctAnswer": "Toughness",
-        "topic": "Strength of Materials"
+      "id": "67809438264",
+      "question": "If $tan^{2}\\theta+sec\\theta=5$ then the value of cosec is",
+      "options": [
+        "$\\frac{-1}{3}$ or $\\frac{1}{2}$",
+        "$-\\frac{11}{12}$ or 1/2",
+        "$\\frac{13}{12}$ or $\\frac{-1}{3}$",
+        "$\\frac{5}{4}$ or 1/2"
+      ],
+      "correctAnswer": "$-\\frac{11}{12}$ or 1/2",
+      "topic": "Mathematics"
     },
     {
-        "id": 9,
-        "question": "The force per unit area is called:",
-        "options": ["Strain", "Stress", "Modulus of elasticity", "Pressure"],
-        "correctAnswer": "Stress",
-        "topic": "Engineering Mechanics"
+      "id": "67809438265",
+      "question": "The value of $16~sin^{3}\\theta+8~cos^{3}\\theta$ is",
+      "options": [
+        "3",
+        "1",
+        "-3",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
     },
     {
-        "id": 10,
-        "question": "Bitumen is a common material used for:",
-        "options": ["Building walls", "Paving roads", "Making pipes", "Painting"],
-        "correctAnswer": "Paving roads",
-        "topic": "Transportation Engineering"
+      "id": "67809438266",
+      "question": "If $sin\\alpha=\\frac{15}{17}$, $cos\\beta=\\frac{12}{13}$ then the value of $sin(\\alpha+\\beta)$ is",
+      "options": [
+        "$\\frac{110}{105}$",
+        "$-\\frac{121}{152}$",
+        "${\\frac{220}{221}}$",
+        "$\\frac{5}{4}$"
+      ],
+      "correctAnswer": "$\\frac{220}{221}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438267",
+      "question": "The value of $cos~20^{\\circ}cos~40^{\\circ}cos~60^{\\circ}cos~80^{\\circ}$ is",
+      "options": [
+        "$\\frac{11}{12}$",
+        "$\\frac{1}{16}$",
+        "$\\frac{13}{12}$",
+        "$\\frac{5}{4}$"
+      ],
+      "correctAnswer": "$\\frac{1}{16}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438268",
+      "question": "The value of $\\frac{cos~17^{0}+sin~17^{0}}{cos~17^{0}-sin~17^{0}}$ is",
+      "options": [
+        "$cos~20^{\\circ}$",
+        "$tan~65^{\\circ}$",
+        "$tan~60^{\\circ}$",
+        "$tan~62^{\\circ}$"
+      ],
+      "correctAnswer": "$tan~62^{\\circ}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438269",
+      "question": "The value of $sin\\frac{\\pi}{5}sin\\frac{2\\pi}{5}sin\\frac{3\\pi}{5}sin\\frac{4\\pi}{5}=$",
+      "options": [
+        "$\\frac{4}{15}$",
+        "$\\frac{5}{16}$",
+        "$\\frac{-5}{16}$",
+        "$\\frac{7}{15}$"
+      ],
+      "correctAnswer": "$\\frac{5}{16}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438270",
+      "question": "If $tan^{-1}x+tan^{-1}y+tan^{-1}z=\\frac{\\pi}{2}$ then the value of $xy+yz+zx$ is",
+      "options": [
+        "-1",
+        "3",
+        "5",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438271",
+      "question": "The general solution of $4~cos^{2}x-3=0$ is",
+      "options": [
+        "$2n\\pi\\pm\\frac{\\pi}{6}$",
+        "$2n\\pi\\pm\\frac{7\\pi}{6}$",
+        "$3n\\pi\\pm\\frac{5\\pi}{6}$",
+        "$2n\\pi\\pm\\frac{11\\pi}{6}$"
+      ],
+      "correctAnswer": "$2n\\pi\\pm\\frac{\\pi}{6}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438272",
+      "question": "The modulus of a complex number $\\sqrt{3}+i$ is",
+      "options": [
+        "-2",
+        "3",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438273",
+      "question": "The value of $(a-b)^{2}cos^{2}(\\frac{c}{2})+(a+b)^{2}sin^{2}(\\frac{c}{2})$ is",
+      "options": [
+        "$C^{3}$",
+        "C",
+        "$C^{5}$",
+        "$C^{2}$"
+      ],
+      "correctAnswer": "$C^{2}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438274",
+      "question": "If $x+\\frac{1}{x}=2~cos~\\theta$ then the value of $x^{n}+\\frac{1}{x^{n}}$ is",
+      "options": [
+        "2 cos n$\\theta$",
+        "-2 cos n$\\theta$",
+        "3 cos $\\theta$",
+        "2 sin n$\\theta$"
+      ],
+      "correctAnswer": "2 cos n$\\theta$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438275",
+      "question": "The value of $2~tan^{-1}(\\frac{1}{3})+tan^{-1}(\\frac{1}{7})$ is",
+      "options": [
+        "$\\frac{\\pi}{4}$",
+        "$-\\frac{\\pi}{4}$",
+        "$\\frac{\\pi}{6}$",
+        "$\\frac{\\pi}{3}$"
+      ],
+      "correctAnswer": "$\\frac{\\pi}{4}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438276",
+      "question": "The length of the major axis of the ellipse: $4x^{2}+3y^{2}=48$ is",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correctAnswer": "12",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438277",
+      "question": "The Centre of the ellipse: $9x^{2}+25y^{2}-18x+100y-116=0$ is",
+      "options": [
+        "(2,-1)",
+        "(-1,-2)",
+        "(1,-2)",
+        "(1,2)"
+      ],
+      "correctAnswer": "(1,-2)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438278",
+      "question": "The equation of the parabola with vertex (2,-1) and focus (2,-3) is",
+      "options": [
+        "$x^{2}-4x+8y+12=0$",
+        "$x^{2}-4x-8y-12=0$",
+        "$x^{2}+4x-8y-12=0$",
+        "$x^{2}+5x-8y-11=0$"
+      ],
+      "correctAnswer": "$x^{2}-4x-8y-12=0$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438279",
+      "question": "The length of the latus rectum of the hyperbola $\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=1$ is",
+      "options": [
+        "9 units",
+        "5 units",
+        "6 units",
+        "13 units"
+      ],
+      "correctAnswer": "6 units",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438280",
+      "question": "If the length of latus rectum is $\\frac{9}{2}$ and the distance between its foci is 10 then the equation of hyperbola is",
+      "options": [
+        "$\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1$",
+        "$\\frac{x^{2}}{18}-\\frac{y^{2}}{9}=1$",
+        "$\\frac{x^{2}}{16}-\\frac{y^{2}}{6}=1$",
+        "$\\frac{x^{2}}{16}-\\frac{y^{2}}{9}=1$"
+      ],
+      "correctAnswer": "$\\frac{x^{2}}{16}-\\frac{y^{2}}{9}=1$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438281",
+      "question": "The equation of the parabola with focus at (-3,2) and vertex (-2,2) is",
+      "options": [
+        "$x^{2}-4x+8y+12=0$",
+        "$x^{2}+5x-8y-11=0$",
+        "$y^{2}+4x-4y+12=0$",
+        "$x^{2}-4x-8y-12=0$"
+      ],
+      "correctAnswer": "$y^{2}+4x-4y+12=0$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438282",
+      "question": "If $y=\\frac{a+bx}{b-ax}$ then the derivative of y with respect to x is",
+      "options": [
+        "$\\frac{a^{2}+b^{2}}{(b-ax)^{2}}$",
+        "$\\frac{a^{2}+b^{2}}{(b+ax)^{2}}$",
+        "$\\frac{a^{2}-b^{2}}{(b-ax)^{2}}$",
+        "$\\frac{a+b}{(b-ax)^{2}}$"
+      ],
+      "correctAnswer": "$\\frac{a^{2}+b^{2}}{(b-ax)^{2}}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438283",
+      "question": "If $y=\\frac{2+3~sinh~x}{3+2~sinh~x}$ then the derivative of y with respect to x is",
+      "options": [
+        "$\\frac{5~cosh~x}{(3+2~sinh~x)^{2}}$",
+        "$\\frac{5~sin~h~x}{(3+2~sin~h~x)^{2}}$",
+        "$\\frac{5~sin~x}{(3-2~cosh~x)^{2}}$",
+        "$\\frac{sinh^{2}x}{(2-3~sinh~x)^{2}}$"
+      ],
+      "correctAnswer": "$\\frac{5~cosh~x}{(3+2~sinh~x)^{2}}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438284",
+      "question": "The range of x for which the function $x^{3}-3x^{2}-45x+2$ is increasing with x is",
+      "options": [
+        "(3,-5)",
+        "(-3,-5)",
+        "(3,5)",
+        "(-3,5)"
+      ],
+      "correctAnswer": "(-3,5)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438285",
+      "question": "If u is a homogeneous function of x and y with degree n then $x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}=$",
+      "options": [
+        "nu",
+        "$n^{2}u$",
+        "nu",
+        "$nu^{2}+u$"
+      ],
+      "correctAnswer": "nu",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438286",
+      "question": "The angle between the curves $y=x^{2}+3x-7$ and $y^{2}=2x+5$ at (2,3) is",
+      "options": [
+        "$tan~\\theta=2$",
+        "$sec~\\theta=2$",
+        "$cos~\\theta=1$",
+        "$sin~\\theta=3$"
+      ],
+      "correctAnswer": "$tan~\\theta=2$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438287",
+      "question": "The maximum value of the function $2x^{3}-12x^{2}+18x+5$ is",
+      "options": [
+        "13",
+        "12",
+        "10",
+        "15"
+      ],
+      "correctAnswer": "15",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438288",
+      "question": "The three sides of a trapezium are equal each being 6\" long then the area of the trapezium when it is maximum is",
+      "options": [
+        "27 square units",
+        "33 square units",
+        "$27\\sqrt{3}$ square units",
+        "$29\\sqrt{3}$ square units"
+      ],
+      "correctAnswer": "$27\\sqrt{3}$ square units",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438289",
+      "question": "The interval in which the function $f(x)=x^{2}log~x$ is an increasing function is",
+      "options": [
+        "(1,e/2)",
+        "$(2,e^{-1/2})$",
+        "$(0,e^{1/2})$",
+        "$(0,e^{-1/2})$"
+      ],
+      "correctAnswer": "$(0,e^{1/2})$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438290",
+      "question": "The stationary points and the corresponding values of the function $f(x)=x^{3}-9x^{2}+15x-1$ is",
+      "options": [
+        "6,-26",
+        "3,-26",
+        "6,26",
+        "-6,-26"
+      ],
+      "correctAnswer": "6,26",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438291",
+      "question": "If $u=log(\\frac{x^{2}+y^{2}}{x+y})$ then $x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}=$",
+      "options": [
+        "2",
+        "4",
+        "5",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438292",
+      "question": "The value of $\\int log~x~dx$ is",
+      "options": [
+        "$x~log~x+x+c$",
+        "$x^{2}log~x-x+c$",
+        "$x~log~x-x+c$",
+        "$x~log~x-\\frac{x^{2}}{2}+c$"
+      ],
+      "correctAnswer": "$x~log~x-x+c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438293",
+      "question": "The value of $lim_{n\\to\\infty}[\\frac{1}{n+1}+\\frac{1}{n+2}+\\cdots+\\frac{1}{n+n}]$ is",
+      "options": [
+        "log 2",
+        "log 3",
+        "$-log~2$",
+        "log n"
+      ],
+      "correctAnswer": "log 2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438294",
+      "question": "The value of $\\int\\frac{cos\\sqrt{x}}{\\sqrt{x}}dx$ is",
+      "options": [
+        "$2~sin\\sqrt{x}+c$",
+        "$3~sin\\sqrt{x}+c$",
+        "$2~sin~x+c$",
+        "$sin\\sqrt{x}+c$"
+      ],
+      "correctAnswer": "$2~sin\\sqrt{x}+c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438295",
+      "question": "The area enclosed between the curve $y^{2}=4ax$ and the line $x=2y$ is",
+      "options": [
+        "$\\frac{64}{5}$ sq. units",
+        "$\\frac{64}{3}$ sq. units",
+        "$\\frac{65}{4}$ sq. units",
+        "$\\frac{63}{4}$ sq. units"
+      ],
+      "correctAnswer": "$\\frac{64}{3}$ sq. units",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438296",
+      "question": "The value of $\\int_{1}^{\\frac{\\pi}{2}}sin^{2}x~dx$ is",
+      "options": [
+        "$\\frac{\\pi}{2}$",
+        "$-\\frac{\\pi}{4}$",
+        "$\\frac{\\pi}{6}$",
+        "$\\frac{\\pi}{4}$"
+      ],
+      "correctAnswer": "$\\frac{\\pi}{4}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438297",
+      "question": "The value of $\\int_{1}^{4}(\\sqrt{x}+\\frac{1}{\\sqrt{x}})dx$ is",
+      "options": [
+        "$\\frac{20}{3}$",
+        "$-\\frac{20}{3}$",
+        "$\\frac{10}{3}$",
+        "$\\frac{15}{3}$"
+      ],
+      "correctAnswer": "$\\frac{20}{3}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438298",
+      "question": "The value of $\\int_{0}^{\\pi/4}\\sqrt{1+sin~2x}dx=$",
+      "options": [
+        "-1",
+        "-3",
+        "3",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438299",
+      "question": "The value of $\\int_{0}^{\\pi/2}\\frac{sin~x}{1+cos^{2}x}dx=$",
+      "options": [
+        "$\\frac{\\pi}{4}$",
+        "$-\\frac{\\pi}{4}$",
+        "$\\frac{\\pi}{3}$",
+        "$\\frac{\\pi}{2}$"
+      ],
+      "correctAnswer": "$\\frac{\\pi}{4}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438300",
+      "question": "The particular integral of $(D^{2}+5D+6)y=e^{x}$ is",
+      "options": [
+        "$\\frac{-e^{-x}}{12}$",
+        "$\\frac{e^{2x}}{12}$",
+        "$\\frac{e^{x}}{12}$",
+        "$\\frac{e^{x}}{6}$"
+      ],
+      "correctAnswer": "$\\frac{e^{x}}{12}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438301",
+      "question": "Form the differential equation by eliminating the arbitrary constant a from $ay^{2}=x^{3}$",
+      "options": [
+        "$\\frac{dy}{dx}=\\frac{3y}{2x}$",
+        "$\\frac{dy}{dx}=\\frac{2x}{3y}$",
+        "$\\frac{dy}{dx}=\\frac{x}{y}$",
+        "$\\frac{dy}{dx}=\\frac{2y}{x}$"
+      ],
+      "correctAnswer": "$\\frac{dy}{dx}=\\frac{3y}{2x}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438302",
+      "question": "The solution of $\\frac{dy}{dx}+y=e^{-x}$ is",
+      "options": [
+        "$(x+c)e^{-x}$",
+        "$(x-c)e^{x}$",
+        "$(x+c)e^{x}$",
+        "$(x+c)e^{-2x}$"
+      ],
+      "correctAnswer": "$(x+c)e^{-x}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438303",
+      "question": "The complementary function of $(D^{2}+3D+2)y=8sin5x$ is",
+      "options": [
+        "$c_{1}e^{-x}+c_{2}e^{-2x}$",
+        "$c_{1}e^{x}+c_{2}e^{2x}$",
+        "$c_{1}e^{-x}+c_{2}e^{2x}$",
+        "$c_{1}e^{2x}+c_{2}e^{3x}$"
+      ],
+      "correctAnswer": "$c_{1}e^{-x}+c_{2}e^{-2x}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438304",
+      "question": "The solution of exact differential equation $2xy~dx+x^{2}dy=0$ is",
+      "options": [
+        "$x^{2}y^{2}=c$",
+        "$x^{2}y=c$",
+        "$x^{3}y=c$",
+        "$x^{2}y^{3}=c$"
+      ],
+      "correctAnswer": "$x^{2}y=c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438305",
+      "question": "Form the differential equation representing the family of curves $x^{2}=4ay$ where a is any arbitrary constant",
+      "options": [
+        "$x\\frac{dy}{dx}-2y=0$",
+        "$x\\frac{dy}{dx}+2y=0$",
+        "$x\\frac{dy}{dx}-6y=0$",
+        "$x\\frac{dy}{dx}-y=0$"
+      ],
+      "correctAnswer": "$x\\frac{dy}{dx}-2y=0$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438306",
+      "question": "The solution of $\\frac{dy}{dx}+y~cot~x=cos~x$ is",
+      "options": [
+        "$y~sin~x=\\frac{-cos~2x}{4}+c$",
+        "$y~sin~x=\\frac{cos~2x}{4}+c$",
+        "$y~sin~x=\\frac{-cos~5x}{4}+c$",
+        "$y~cos~x=\\frac{-cos~2x}{4}+c$"
+      ],
+      "correctAnswer": "$y~sin~x=\\frac{-cos~2x}{4}+c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809438307",
+      "question": "In the equation $\\frac{\\alpha}{t^{2}}=Fv+\\frac{\\beta}{x^{2}}$ the dimensional formula for [$\\alpha$], [$\\beta$] is (here t = time, F = force, v = velocity, x = distance)",
+      "options": [
+        "$MLT^{-1}$, $MLT^{-3}$",
+        "$ML^{2}T$, $ML^{4}T^{2}$",
+        "$ML^{2}T^{-1}$, $ML^{4}T^{-3}$",
+        "$ML^{3}T^{-1}$, $MLT^{-3}$"
+      ],
+      "correctAnswer": "$ML^{3}T^{-1}$, $MLT^{-3}$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438308",
+      "question": "Which of the following quantities has not been expressed in proper units?",
+      "options": [
+        "Young's modulus $=N/m^{2}$",
+        "Surface tension $=N/m$",
+        "Pressure $=N/m^{2}$",
+        "Energy $=kg~m/s$"
+      ],
+      "correctAnswer": "Energy $=kg~m/s$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438309",
+      "question": "Three vectors A, B and C satisfy the relation $A\\cdot B=0$ and $A\\cdot C=0$ The vector A is parallel to",
+      "options": [
+        "B",
+        "C",
+        "B.C",
+        "B$\\times$C"
+      ],
+      "correctAnswer": "B$\\times$C",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438310",
+      "question": "If three vectors A, B and C are 12, 5 and 13 in magnitude such that $C=A+B$, then the angle between A and B is",
+      "options": [
+        "$60^{0}$",
+        "$90^{0}$",
+        "$120^{0}$",
+        "$30^{0}$"
+      ],
+      "correctAnswer": "$90^{0}$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438311",
+      "question": "A stone dropped from a certain height, can reach the ground in 5s. It is stopped after 3 seconds of its fall and then allowed to fall again. The time taken by the stone to reach the ground for the remaining distance is",
+      "options": [
+        "2 s",
+        "6 s",
+        "4 s",
+        "1s"
+      ],
+      "correctAnswer": "4 s",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438312",
+      "question": "The range of projectile fired at an angle of $15^{0}$ is 50m. If it is fired with the same speed at an angle of $45^{\\circ}$, its range will be",
+      "options": [
+        "25 m",
+        "37 m",
+        "50 m",
+        "100 m"
+      ],
+      "correctAnswer": "100 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438313",
+      "question": "A freely falling body acquires a velocity 'v' $m/s$ in falling through a distance of 80m. How much further distance should it fall, so as to acquire a velocity of '2v' $m/s$?(Take $g=10~m/s^{2}$)",
+      "options": [
+        "240 m",
+        "200 m",
+        "400 m",
+        "280 m"
+      ],
+      "correctAnswer": "240 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438314",
+      "question": "A block is projected along a rough horizontal road with a speed of $10~m/s$. If the coefficient of kinetic friction is 0.10, how far will it travel before coming to rest?",
+      "options": [
+        "50 m",
+        "60 m",
+        "40 m",
+        "10 m"
+      ],
+      "correctAnswer": "50 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438315",
+      "question": "What force is required to push a 200 N body up a $30^{0}$ smooth incline with an acceleration of $2~m/s^{2}$? The force is to be applied along the plane is (Take $g=10~m/s^{2}$)",
+      "options": [
+        "40 N",
+        "60 N",
+        "80 N",
+        "140 N"
+      ],
+      "correctAnswer": "140 N",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438316",
+      "question": "A block of mass 2 kg rests on a rough inclined plane making an angle of $30^{0}$ with the horizontal. The coefficient of static friction between the block and the plane is 0.7. The frictional force on the block is",
+      "options": [
+        "9.8N",
+        "$0.78\\times9.8~N$",
+        "$9.8\\times\\sqrt{3}N$",
+        "$0.7\\times9.8\\sqrt{3}N$"
+      ],
+      "correctAnswer": "9.8N",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438317",
+      "question": "A man moves on a straight horizontal road with a block of mass 2 kg in his hand. If he covers a distance of 40 m with an acceleration of $0.5~m/s^{2}$, the work done by the man on the block during the motion is (Take $g=10~m/s^{2}$)",
+      "options": [
+        "40 J",
+        "1 J",
+        "80 J",
+        "20 J"
+      ],
+      "correctAnswer": "80 J",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438318",
+      "question": "In a factory it is desired to lift 2000 kg of metal through a distance of 12 m in 1 minute. The minimum horse power of the engine to be used is",
+      "options": [
+        "3.5",
+        "5.3",
+        "4.3",
+        "5.8"
+      ],
+      "correctAnswer": "5.3",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438319",
+      "question": "Energy harnessed from flowing water is called",
+      "options": [
+        "Hydel energy",
+        "Solar",
+        "Tidal",
+        "Geothermal"
+      ],
+      "correctAnswer": "Hydel energy",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438320",
+      "question": "When a particle executing simple harmonic motion passes through the mean position, it has",
+      "options": [
+        "minimum K.E and maximum P.E.",
+        "maximum K.E and maximum P.E.",
+        "maximum K.E and minimum P.E.",
+        "mimimum K.E. and mimimum P.E."
+      ],
+      "correctAnswer": "maximum K.E and minimum P.E.",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438321",
+      "question": "A particle of mass 200 g executes a simple harmonic motion. The restoring force is provided by a spring of spring constant 80 N/m. The time period is",
+      "options": [
+        "0.2 s",
+        "0.41 s",
+        "0.31 s",
+        "0.5 s"
+      ],
+      "correctAnswer": "0.31 s",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438322",
+      "question": "The temperature at which the speed of sound will be double of its value at $0^{\\circ}C$ is",
+      "options": [
+        "$819^{0}$ C",
+        "$850^{0}C$",
+        "$919^{0}C$",
+        "$900^{0}C$"
+      ],
+      "correctAnswer": "$819^{0}$ C",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438323",
+      "question": "If the source of sound moves towards an observer, then",
+      "options": [
+        "The frequency of the source is increased",
+        "The velocity of sound in the medium is increased",
+        "The wavelength of sound in the medium towards the observer is decreased",
+        "The amplitude of vibration of the particles is increased."
+      ],
+      "correctAnswer": "The wavelength of sound in the medium towards the observer is decreased",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438324",
+      "question": "A cinema hall has a volume of 7500 $m^{3}$. The total absorption in the hall if the reverberation time of 1.5 s is to be maintained is",
+      "options": [
+        "800 OWU",
+        "925 OWU",
+        "950 OWU",
+        "825 OWU"
+      ],
+      "correctAnswer": "825 OWU",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438325",
+      "question": "One mole of oxygen is heated at constant pressure starting at $0^{\\circ}C$. The heat energy that must be supplied to the gas to double its volume is",
+      "options": [
+        "$2.5\\times273\\times R$",
+        "$3.5\\times273\\times R$",
+        "$2.5\\times546\\times R$",
+        "$3.5\\times546\\times R$"
+      ],
+      "correctAnswer": "$3.5\\times273\\times R$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438326",
+      "question": "A vessel contains a gas at a temperature of $27^{\\circ}C$ and a pressure of 20 atm. If one half of the gas is released and the temperature of the remaining gas is raised by $50^{\\circ}C$, the new pressure will be",
+      "options": [
+        "12.24 atm",
+        "11.67 atm",
+        "13.79 atm",
+        "11 atm"
+      ],
+      "correctAnswer": "11.67 atm",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438327",
+      "question": "The temperature of 5 gm of air is raised from $0^{\\circ}C$ to $1^{\\circ}C$ The increase in the internal energy of air is ($C_{v}=0.172~cal/gm/^{0}C$ and $j=4.18\\times10^{7}erg/cal$)",
+      "options": [
+        "$3.595\\times10^{7}$ erg",
+        "$3\\times10^{7}$ erg",
+        "$4.5\\times10^{7}$ erg",
+        "$2.595\\times10^{7}$ erg"
+      ],
+      "correctAnswer": "$3.595\\times10^{7}$ erg",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438328",
+      "question": "In all reversible processes entropy of the system",
+      "options": [
+        "decreases",
+        "increases",
+        "remains constant",
+        "remains zero"
+      ],
+      "correctAnswer": "remains constant",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438329",
+      "question": "If one mole of a monoatomic gas ('$\\gamma$' = 5/3) is mixed with one mole of a diatomic gas ('$\\gamma$' = 7/5) the value of '$\\gamma$' for the mixture is",
+      "options": [
+        "1.40",
+        "1.50",
+        "1.53",
+        "3.07"
+      ],
+      "correctAnswer": "1.50",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438330",
+      "question": "Electrons are emitted with zero velocity from a certain metal surface when it is exposed to radiations of wavelength 7000 $A^{0}$ The work function of the metal is",
+      "options": [
+        "1 eV",
+        "1.52 eV",
+        "2.52 eV",
+        "1.77 eV"
+      ],
+      "correctAnswer": "1.77 eV",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438331",
+      "question": "A superconducting material exhibits",
+      "options": [
+        "zero conductivity and complete diamagnetism",
+        "zero resistivity and complete paramagnetism",
+        "infinite conductivity and complete paramagnetism",
+        "zero resistivity and complete diamagnetism"
+      ],
+      "correctAnswer": "zero resistivity and complete diamagnetism",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809438332",
+      "question": "The splitting of spectral lines in a strong magnetic field is called",
+      "options": [
+        "Stark effect",
+        "Pauli Exclusion Principle",
+        "Zeeman effect",
+        "Aufbau Principle"
+      ],
+      "correctAnswer": "Zeeman effect",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438333",
+      "question": "Bohr's model can explain",
+      "options": [
+        "The spectrum of hydrogen atom only",
+        "The spectrum of hydrogen molecule",
+        "The solar spectrum",
+        "Spectrum of an atom or ion containing one electron only"
+      ],
+      "correctAnswer": "Spectrum of an atom or ion containing one electron only",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438334",
+      "question": "The maximum number of electrons that a d-orbital can accommodate is",
+      "options": [
+        "2",
+        "6",
+        "10",
+        "14"
+      ],
+      "correctAnswer": "10",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438335",
+      "question": "Magnesium Atomic number is 12, which of the following is the electronic configuration",
+      "options": [
+        "$1S^{2}$ $2S^{1}$ $2P^{6}$ $3S^{2}$",
+        "$1S^{2}$ $2S^{2}$ $2P^{5}$ $3S^{2}$",
+        "$1S^{2}$ $2S^{2}$ $2P^{6}$ $3S^{2}$",
+        "$1S^{2}$ 2S2 $2P^{6}$ 3S13d1"
+      ],
+      "correctAnswer": "$1S^{2}$ $2S^{2}$ $2P^{6}$ $3S^{2}$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438336",
+      "question": "$N_{2}$ molecule contains",
+      "options": [
+        "Covalent bond",
+        "Ionic bond",
+        "Hydrogen bond",
+        "Metalic bond"
+      ],
+      "correctAnswer": "Covalent bond",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438337",
+      "question": "One mole of any of the particles contains",
+      "options": [
+        "$6.023\\times10^{-23}$",
+        "$6.022\\times10^{23}$",
+        "$60.23\\times10^{23}$",
+        "$6.023\\times10^{25}$"
+      ],
+      "correctAnswer": "$6.022\\times10^{23}$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438338",
+      "question": "The normality of the solution obtained by dissolving 4 gm of NaOH in 1Litre is",
+      "options": [
+        "1N",
+        "0.1N",
+        "0.5N",
+        "0.02N"
+      ],
+      "correctAnswer": "0.1N",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438339",
+      "question": "Molecular weight of $H_{2}SO_{4}$ is",
+      "options": [
+        "92",
+        "96",
+        "98",
+        "99"
+      ],
+      "correctAnswer": "98",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438340",
+      "question": "A Lewis acid is a substance which",
+      "options": [
+        "Accept protons",
+        "Accept a lone pair of electrons",
+        "Donate protons",
+        "Donate a lone pair of electrons"
+      ],
+      "correctAnswer": "Accept a lone pair of electrons",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438341",
+      "question": "$P^{H}$ of a solution is 9.5, the solution is",
+      "options": [
+        "Basic",
+        "Acidic",
+        "Neutral",
+        "Amphoteric"
+      ],
+      "correctAnswer": "Basic",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438342",
+      "question": "Laws of electrolysis were given by",
+      "options": [
+        "Ostwald",
+        "Faraday",
+        "Arrhenius",
+        "Volta"
+      ],
+      "correctAnswer": "Faraday",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438343",
+      "question": "Common electrolyte used in the salt bridge is",
+      "options": [
+        "NaOH",
+        "$NaCO_{3}$",
+        "KCl",
+        "KOH"
+      ],
+      "correctAnswer": "KCl",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438344",
+      "question": "Standard Reduction Potential of an element is equal to",
+      "options": [
+        "1 X Its reduction potential",
+        "-1 X Its standard oxidation potential",
+        "-1 X Its reduction potential",
+        "1 X Its standard oxidation potential"
+      ],
+      "correctAnswer": "-1 X Its standard oxidation potential",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438345",
+      "question": "The standard emf for the cell reaction, $Zn+Cu^{+2}\\to Cu+Zn^{2+}$ is 1.10 V at $25^{\\circ}C$. The emf of the cell reaction when 0.1 M $Cu^{+2}$ and 0.1 M $Zn^{+2}$ solutions are used at $25^{\\circ}C$ is",
+      "options": [
+        "1.10V",
+        "0.11V",
+        "-1.10V",
+        "-0.11V"
+      ],
+      "correctAnswer": "1.10V",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438346",
+      "question": "Which chemical is responsible for permanent hardness of water?",
+      "options": [
+        "KCl",
+        "$MgCl_{2}$",
+        "NaCl",
+        "AgCl"
+      ],
+      "correctAnswer": "$MgCl_{2}$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438347",
+      "question": "Permutit is chemically",
+      "options": [
+        "Sodium Silicate",
+        "Aluminium Silicate",
+        "Hydrated Sodium alumino silicate",
+        "Calicium silicate"
+      ],
+      "correctAnswer": "Hydrated Sodium alumino silicate",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438348",
+      "question": "The cation exchange resin possesses",
+      "options": [
+        "Acidic group",
+        "Basic group",
+        "Amphoteric group",
+        "Benzo group"
+      ],
+      "correctAnswer": "Acidic group",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438349",
+      "question": "Chemically the rust is",
+      "options": [
+        "$Fe_{2}O_{3}$",
+        "$Fe_{2}O_{3}\\cdot FeO$",
+        "$Fe_{2}O_{3}\\cdot XH_{2}O$",
+        "$Fe_{2}O_{3}\\cdot NH_{3}$"
+      ],
+      "correctAnswer": "$Fe_{2}O_{3}\\cdot XH_{2}O$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438350",
+      "question": "Galvanizing is the process of coating iron with",
+      "options": [
+        "Mg",
+        "Cu",
+        "Au",
+        "Zn"
+      ],
+      "correctAnswer": "Zn",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438351",
+      "question": "Which of the following is not a thermoplastic?",
+      "options": [
+        "Bakelite",
+        "Polystyrene",
+        "Polythene",
+        "Nylon"
+      ],
+      "correctAnswer": "Bakelite",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438352",
+      "question": "Isoprene is a monomer of",
+      "options": [
+        "Starch",
+        "Cellulose",
+        "Natural rubber",
+        "Lignin"
+      ],
+      "correctAnswer": "Natural rubber",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438353",
+      "question": "Buna-S is a copolymer of",
+      "options": [
+        "Butadiene and Styrene",
+        "Butadiene and Acrylonitrile",
+        "Butadiene and Isoprene",
+        "Formaldehyde and Styrene"
+      ],
+      "correctAnswer": "Butadiene and Styrene",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438354",
+      "question": "Main constituent of natural gas is",
+      "options": [
+        "Ethane",
+        "Methane",
+        "Butane",
+        "Carbon Monoxide"
+      ],
+      "correctAnswer": "Methane",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438355",
+      "question": "Ozone layer is present at",
+      "options": [
+        "Staratosphere",
+        "Inosphere",
+        "Thermosphere",
+        "Atmosphere"
+      ],
+      "correctAnswer": "Staratosphere",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438356",
+      "question": "The amount of DO required to aerobically decompose biodegradable organic matter of a given volume of water is",
+      "options": [
+        "Biochemical Oxygen Demand",
+        "Biological Oxygen Demand",
+        "Chemical Oxygen demand",
+        "Biomagnification"
+      ],
+      "correctAnswer": "Biochemical Oxygen Demand",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809438357",
+      "question": "A material having the same properties throughout the volume is called",
+      "options": [
+        "Isotropic",
+        "Homogeneous",
+        "Orthotropic",
+        "Elastic"
+      ],
+      "correctAnswer": "Homogeneous",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438358",
+      "question": "If $A_{0}$ is the cross sectional area of the steel specimen undergoing tension test, then the gauge length is equal to",
+      "options": [
+        "$4.65\\sqrt{A_{0}}$",
+        "$4.65A_{0}$",
+        "$5.65A_{0}$",
+        "$5.65\\sqrt{A_{0}}$"
+      ],
+      "correctAnswer": "$5.65\\sqrt{A_{0}}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438359",
+      "question": "For the material having Poisson's ratio ($\\mu$) equal to zero, the relationship between modulus of Elasticity (E) and bulk modulus (K) is",
+      "options": [
+        "$E=2K$",
+        "$K=3E$",
+        "$K=\\frac{E}{3}$",
+        "$E=3K+2$"
+      ],
+      "correctAnswer": "$K=\\frac{E}{3}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438360",
+      "question": "A square bar having cross section $10~mm\\times10~mm$ and length 200 mm is subjected to a longitudinal tensile stress of $200~N/mm^{2}$ due to applied load. If the modulus of elasticity and Poison's ratio of the material are 100 GPa and 0.25 respectively, then the volumetric strain is",
+      "options": [
+        "0.001",
+        "0.01",
+        "0.015",
+        "0.0015"
+      ],
+      "correctAnswer": "0.0015",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438361",
+      "question": "A circular tapering bar of length 400 mm having end diameters 20 mm and 40 mm is subjected to a tensile force of 100 kN. If the modulus of elasticity of the material is $2\\times10^{5}N/mm^{2},$ then the elongation of bar is",
+      "options": [
+        "0.01 mm",
+        "0.1 mm",
+        "1 mm",
+        "10 mm"
+      ],
+      "correctAnswer": "0.1 mm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438362",
+      "question": "The elongation of bar of length 800 mm and cross section $20~mm\\times20~mm$ is subjected to an axial tensile force is 0.8 mm. If the modulus of elasticity is $1\\times10^{5}N/mm^{2},$ then the stress induced in the bar is",
+      "options": [
+        "$100~N/mm^{2}$",
+        "$200~N/mm^{2}$",
+        "$800~N/mm^{2}$",
+        "$1000~N/mm^{2}$"
+      ],
+      "correctAnswer": "$100~N/mm^{2}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438363",
+      "question": "A bar of cross sectional area A and length L is subjected to axial pull of P induced the tensile stress of $\\sigma$. If the modulus of elasticity is E, then the strain energy stored in the bar is",
+      "options": [
+        "$U=\\frac{\\sigma^{2}}{4E}\\cdot AL$",
+        "$U=\\frac{\\sigma^{2}}{2E}\\cdot AL$",
+        "$U=\\frac{\\sigma^{2}}{E}\\cdot A\\cdot L$",
+        "$U=\\frac{\\sigma^{2}}{2AE}\\cdot L$"
+      ],
+      "correctAnswer": "$U=\\frac{\\sigma^{2}}{2E}\\cdot AL$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438364",
+      "question": "An overhang beam ABC of length 8 m is provided with a hinge support at left end A and roller support at B which is 6 m from the support A. It is subjected to a uniformly distributed load of 8 $kN/m$ between the supports A and B and a concentrated load of 72 kN at the free end. The reaction of support A is",
+      "options": [
+        "36 kN (upward)",
+        "36 kN (downward)",
+        "72 kN (upward)",
+        "72 kN (downward)"
+      ],
+      "correctAnswer": "72 kN (downward)",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438365",
+      "question": "A cantilever of length 4 m is fixed at A and free at B is subjected to a uniformly distributed load of 24 kN/m over the entire span and a concentrated load of 36 kN at the free end. The maximum bending moment induced in the beam is",
+      "options": [
+        "144 kNm",
+        "236 kNm",
+        "240 kNm",
+        "336 kNm"
+      ],
+      "correctAnswer": "240 kNm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438366",
+      "question": "A simply supported beam of span L is subjected to two concentrated loads of W each acting at a distance of $\\frac{L}{3}$ from either supports. The maximum bending induced in the beam is",
+      "options": [
+        "WL",
+        "$\\frac{WL}{2}$",
+        "$\\frac{WL}{3}$",
+        "$\\frac{WL}{4}$"
+      ],
+      "correctAnswer": "$\\frac{WL}{3}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438367",
+      "question": "The section modulus of a beam for a square cross section of side a is",
+      "options": [
+        "$\\frac{a^{3}}{12}$",
+        "$\\frac{a^{3}}{6}$",
+        "$\\frac{a^{4}}{12}$",
+        "$\\frac{a^{4}}{6}$"
+      ],
+      "correctAnswer": "$\\frac{a^{3}}{6}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438368",
+      "question": "A beam of span L, cross sectional area A, moment of Inertia I is subjected to a bending moment M induced the bending stress $\\sigma$. If the modulus of elasticity of the material of the beam is E, then the curvature of the beam is",
+      "options": [
+        "$\\frac{ME}{I}$",
+        "$\\frac{Ey}{\\sigma}$",
+        "$\\frac{EI}{M}$",
+        "$\\frac{M}{EI}$"
+      ],
+      "correctAnswer": "$\\frac{M}{EI}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438369",
+      "question": "At a section of a rectangular beam of depth 600 mm is subjected to a compressive stress of $80~N/mm^{2}$ at both top and bottom. The position of neutral axis from the bottom is",
+      "options": [
+        "240 mm",
+        "360 mm",
+        "300 mm",
+        "400 mm"
+      ],
+      "correctAnswer": "300 mm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438370",
+      "question": "For a beam of circular cross section, the ratio of average shear stress to maximum shear stress is",
+      "options": [
+        "$\\frac{3}{2}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{4}{3}$",
+        "$\\frac{3}{4}$"
+      ],
+      "correctAnswer": "$\\frac{2}{3}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438371",
+      "question": "When a shaft is subjected to a torque, the maximum shear stress induced across the cross section at",
+      "options": [
+        "the centre",
+        "the extreme fiber",
+        "middle third",
+        "one fourth of diameter from the centre"
+      ],
+      "correctAnswer": "the extreme fiber",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438372",
+      "question": "A circular shaft of diameter D and length L is subjected to a torque T. If the modulus of rigidity is G and polar moment of Inertia is J, then the angle of twist ($\\theta$) of shaft is",
+      "options": [
+        "$\\theta=\\frac{GL}{TJ}$",
+        "$\\theta=\\frac{TG}{JL}$",
+        "$\\theta=\\frac{TL}{GJ}$",
+        "$\\theta=\\frac{TD}{GJ}$"
+      ],
+      "correctAnswer": "$\\theta=\\frac{TL}{GJ}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438373",
+      "question": "The torque induced in a shaft to transmit 50 kW power at an angular speed of 150 rpm is",
+      "options": [
+        "10 kNm",
+        "10 kNm",
+        "$\\frac{10}{\\pi}kNm$",
+        "$\\frac{10000}{\\pi}kNm$"
+      ],
+      "correctAnswer": "$\\frac{10000}{\\pi}kNm$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438374",
+      "question": "A rectangular beam of width 100 mm and depth 200 mm is subjected to a shear force of 100 kN. The maximum shear stress induced in the beam is",
+      "options": [
+        "$5~N/mm^{2}$",
+        "$7.5~N/mm^{2}$",
+        "$10~N/mm^{2}$",
+        "$15~N/mm^{2}$"
+      ],
+      "correctAnswer": "$7.5~N/mm^{2}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438375",
+      "question": "The moment of resistance of a rectangular beam of width 100 mm and depth 200 mm subjected to the maximum bending stress of $120~N/mm^{2}$ is",
+      "options": [
+        "40 kNm",
+        "60 kNm",
+        "80 kNm",
+        "100 kNm"
+      ],
+      "correctAnswer": "80 kNm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438376",
+      "question": "The polar modulus of a solid circular shaft of diameter D is",
+      "options": [
+        "$\\frac{\\pi D^{2}}{16}$",
+        "$\\frac{\\pi D^{2}}{32}$",
+        "$\\frac{\\pi D^{3}}{16}$",
+        "$\\frac{\\pi D^{3}}{32}$"
+      ],
+      "correctAnswer": "$\\frac{\\pi D^{3}}{16}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438377",
+      "question": "A cantilever beam of length 4 m is subjected to a uniformly distributed load of 24 $kN/m$ over the entire span. If the flexural rigidity is 24000 $kNm^{2}$ the deflection at the free end is",
+      "options": [
+        "3.2 mm",
+        "8 mm",
+        "16 mm",
+        "32 mm"
+      ],
+      "correctAnswer": "32 mm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438378",
+      "question": "A beam of length L having flexural rigidity El is subjected to a pure bending moment M bent into a circular arc of radius R. The maximum deflection is given by",
+      "options": [
+        "MI/EI",
+        "$\\frac{M^{2}}{3EI}$",
+        "$\\frac{L^{2}}{8R}$",
+        "$\\frac{L^{2}}{16R}$"
+      ],
+      "correctAnswer": "$\\frac{L^{2}}{8R}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438379",
+      "question": "A simply supported beam AB of span 6 m is subjected to a concentrated load of 48 kN at a distance of 2 m from the left end A. The maximum slope occurs",
+      "options": [
+        "at left support",
+        "at Right support",
+        "at mid span",
+        "under the concentrated load"
+      ],
+      "correctAnswer": "at Right support",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438380",
+      "question": "If the depth of a simply supported rectangular beam subjected to concentrated load at mid span is doubled, the maximum deflection at the mid span will be",
+      "options": [
+        "increased by 12.5%",
+        "decreased by 12.5%",
+        "decreased by 87.5%",
+        "decreased by 50%"
+      ],
+      "correctAnswer": "decreased by 87.5%",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438381",
+      "question": "For a simply supported beam subjected to transverse loading, the maximum deflection occurs at",
+      "options": [
+        "the point where slope is equal to zero",
+        "the point of maximum bending moment",
+        "the point of contraflexure",
+        "the point where slope is maximum"
+      ],
+      "correctAnswer": "the point where slope is equal to zero",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438382",
+      "question": "A fixed beam of span L is subjected to a uniformly distributed load of w per m length throughout the span. The bending moment at mid span of the beam is",
+      "options": [
+        "$\\frac{wL^{2}}{24}$",
+        "$\\frac{wL^{2}}{16}$",
+        "$\\frac{wL^{2}}{12}$",
+        "$\\frac{wL^{2}}{8}$"
+      ],
+      "correctAnswer": "$\\frac{wL^{2}}{24}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438383",
+      "question": "A propped cantilever AB of span 6 m is fixed at A and supported by a prop at B is subjected to a uniformly distributed load of 24 kN/m over the entire span. The reaction of the prop is",
+      "options": [
+        "48 KN",
+        "54 KN",
+        "72 KN",
+        "90 KN"
+      ],
+      "correctAnswer": "54 KN",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438384",
+      "question": "A two span continuous beam supported at A, B and C each of length L is subjected to a uniformly distributed load of w per m through the length. The reaction of the middle support B is",
+      "options": [
+        "$\\frac{2}{3}wL$",
+        "$\\frac{4}{5}wL$",
+        "WL",
+        "$\\frac{5}{4}wL$"
+      ],
+      "correctAnswer": "$\\frac{5}{4}wL$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438385",
+      "question": "A propped cantilever beam AB of span L is fixed at A and supported by a prop at B is subjected to a concentrated load of W at mid span C. The point of contraflexure occurs",
+      "options": [
+        "under the concentrated load",
+        "between A and C",
+        "between B and C",
+        "at the fixed end A"
+      ],
+      "correctAnswer": "between A and C",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438386",
+      "question": "The Euler's buckling load for a long column of length L and flexural rigidity El fixed at the base and hinged at the top, is",
+      "options": [
+        "$\\frac{\\pi^{2}EI}{4L^{2}}$",
+        "$\\frac{\\pi^{2}EI}{L^{2}}$",
+        "$\\frac{2\\pi^{2}EI}{L^{2}}$",
+        "$\\frac{4\\pi^{2}EI}{L^{2}}$"
+      ],
+      "correctAnswer": "$\\frac{2\\pi^{2}EI}{L^{2}}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438387",
+      "question": "The radius of gyration of solid circular column of diameter D is",
+      "options": [
+        "$\\frac{D}{6}$",
+        "$\\frac{D}{4}$",
+        "$\\frac{D}{3}$",
+        "$\\frac{D}{2}$"
+      ],
+      "correctAnswer": "$\\frac{D}{4}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438388",
+      "question": "If the diameter of the long circular column is increased by 10%, the percentage increase in Euler's buckling load for the same condition is",
+      "options": [
+        "10",
+        "20",
+        "46.41",
+        "53.59"
+      ],
+      "correctAnswer": "46.41",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438389",
+      "question": "A steel column of length l fixed at both the ends has a buckling load of 400 kN. If the same column is fixed at bottom and free at top, the buckling load carrying capacity is",
+      "options": [
+        "400 KN",
+        "282.8 kN",
+        "200 KN",
+        "100 KN"
+      ],
+      "correctAnswer": "100 KN",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438390",
+      "question": "The ratio of effective length of a column to its least radius of gyration is known as",
+      "options": [
+        "buckling factor",
+        "crippling factor",
+        "slenderness ratio",
+        "column factor"
+      ],
+      "correctAnswer": "slenderness ratio",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438391",
+      "question": "For a pin jointed plane truss having 3 reaction components at supports and 8 joints, the minimum number of members to be arranged systematically for the stable condition is",
+      "options": [
+        "13",
+        "12",
+        "11",
+        "8"
+      ],
+      "correctAnswer": "13",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438392",
+      "question": "The forces induced in the members of a pin jointed truss subjected to loading at the joints are",
+      "options": [
+        "Axial forces only",
+        "Bending moment only",
+        "Axial force and bending moment",
+        "Axial force, shear force and bending moment."
+      ],
+      "correctAnswer": "Axial forces only",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438393",
+      "question": "If $\\phi$: Angle of repose of soil, the coefficient of active earth pressure is",
+      "options": [
+        "$(\\frac{1-sin~\\phi}{1+sin~\\phi})^{2}$",
+        "$(\\frac{1+sin~\\phi}{1-sin~\\phi})^{2}$",
+        "$\\frac{1-sin~\\phi}{1+sin~\\phi}$",
+        "$\\frac{1+sin~\\phi}{1-sin~\\phi}$"
+      ],
+      "correctAnswer": "$\\frac{1-sin~\\phi}{1+sin~\\phi}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438394",
+      "question": "A dam of height h and base width b having a self weight of W per unit length of dam is used for storing water. If the resultant of all forces acting on the dam strikes the base at an eccentricity of $\\frac{b}{6}$ the maximum compressive stress induced at the toe is",
+      "options": [
+        "$\\frac{W}{h}$",
+        "$\\frac{2W}{h}$",
+        "$\\frac{W}{b}$",
+        "$\\frac{2W}{b}$"
+      ],
+      "correctAnswer": "$\\frac{2W}{b}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438395",
+      "question": "A retaining wall of height 4 m retains the soil horizontal to the top. Angle of repose of soil is $30^{\\circ}$ and unit weight of soil is 18 $kN/m^{3}$ The intensity of active earth pressure at the base is",
+      "options": [
+        "$24~kN/m^{2}$",
+        "$36~kN/m^{2}$",
+        "$48~kN/m^{2}$",
+        "$72~kN/m^{2}$"
+      ],
+      "correctAnswer": "$24~kN/m^{2}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438396",
+      "question": "For the same span and cross section, the ratio of mid span deflection of a simply supported beam to that of a fixed beam subjected to a uniformly distributed load of w per m run throughout, is",
+      "options": [
+        "4",
+        "5",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{3}$"
+      ],
+      "correctAnswer": "5",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438397",
+      "question": "Characteristic strength of concrete is defined as that compressive strength",
+      "options": [
+        "below which not less than 5% of the test results expected to fall",
+        "below which not more than 5% of the test results expected to fall",
+        "above which not more than 5% of the test results expected fall",
+        "above which not more than 10% of the test results expected to fall"
+      ],
+      "correctAnswer": "below which not more than 5% of the test results expected to fall",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438398",
+      "question": "As per IS: 456-2000, the modulus of elasticity for M 25 grade of concrete in $N/mm^{2}$ is",
+      "options": [
+        "36,000",
+        "28,500",
+        "25,000",
+        "3,000"
+      ],
+      "correctAnswer": "28,500",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438399",
+      "question": "As per IS:456-2000, for the limit state design of a flexural member, the strain in reinforcing bars under tension at ultimate state should not be less than",
+      "options": [
+        "$\\frac{f_{y}}{1.15E_{s}}+0.0035$",
+        "$\\frac{f_{y}}{1.15E_{s}}+0.002$",
+        "$\\frac{f_{y}}{E_{s}}+0.0035$",
+        "$\\frac{f_{y}}{E_{s}}+0.002$"
+      ],
+      "correctAnswer": "$\\frac{f_{y}}{1.15E_{s}}+0.002$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438400",
+      "question": "If $f_{ck}$ is the characteristic compressive strength of concrete, the stress in concrete at collapse in flexure as per IS: 456-2000 is",
+      "options": [
+        "0.138 fck",
+        "0.446 fck",
+        "0.576 fck",
+        "0.67 fck"
+      ],
+      "correctAnswer": "0.446 fck",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438401",
+      "question": "For M 25 grade of concrete, the ratio of flexural strength to the characteristic compressive strength of concrete is",
+      "options": [
+        "0.36",
+        "0.17",
+        "0.14",
+        "0.11"
+      ],
+      "correctAnswer": "0.14",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438402",
+      "question": "Grade of steel is designated as Fe 500, if the",
+      "options": [
+        "lower yield stress of steel is $500~N/mm^{2}$",
+        "upper yield stress of steel is $500~N/mm^{2}$",
+        "ultimate stress of steel is $500~N/mm^{2}$",
+        "the characteristic tensile strength is $500~N/mm^{2}$"
+      ],
+      "correctAnswer": "the characteristic tensile strength is $500~N/mm^{2}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438403",
+      "question": "In a reinforced concrete beam design, the distance of the centroid of the area of tension reinforcement from the extreme compression fiber is known as",
+      "options": [
+        "depth of neutral axis",
+        "lever arm",
+        "effective depth",
+        "overall depth"
+      ],
+      "correctAnswer": "effective depth",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438404",
+      "question": "The minimum percentage area of tension reinforcement in a beam shall be greater than",
+      "options": [
+        "$\\frac{85}{f_{y}}$",
+        "$\\frac{0.85}{f_{y}}$",
+        "$\\frac{0.4}{f_{y}}$",
+        "$\\frac{40}{f_{y}}$"
+      ],
+      "correctAnswer": "$\\frac{0.85}{f_{y}}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438405",
+      "question": "The main reinforcement to be provided for a cantilever beam carrying gravity load is",
+      "options": [
+        "at the neutral axis",
+        "above the neutral axis",
+        "below the neutral axis",
+        "in the form of vertical stirrups"
+      ],
+      "correctAnswer": "above the neutral axis",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438406",
+      "question": "As per IS 456:2000, in a reinforced concrete beam, the permissible shear stress depends on",
+      "options": [
+        "shear reinforcement in the beam",
+        "compression reinforcement in the beam",
+        "tension reinforcement in the beam",
+        "the reinforcement at neutral axis"
+      ],
+      "correctAnswer": "tension reinforcement in the beam",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438407",
+      "question": "The computation of limiting deflection of the two way slab as per IS 456:2000 is dependent on",
+      "options": [
+        "Both short and long spans",
+        "long span",
+        "short span",
+        "Not dependent on both short and long spans"
+      ],
+      "correctAnswer": "short span",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438408",
+      "question": "As per IS:456:2000, the clear cover to the main steel bar in column is",
+      "options": [
+        "40 mm",
+        "25 mm",
+        "20 mm",
+        "15 mm"
+      ],
+      "correctAnswer": "40 mm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438409",
+      "question": "The minimum eccentricity for a column of size 300 mm x 300 mm and unsupported length of 3.0 m as per IS:456 is",
+      "options": [
+        "6 mm",
+        "10 mm",
+        "16 mm",
+        "20 mm"
+      ],
+      "correctAnswer": "20 mm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438410",
+      "question": "The maximum size of reinforcement that can be used for a reinforced concrete slab of 75 mm thick is",
+      "options": [
+        "6 mm",
+        "8 mm",
+        "10 mm",
+        "12 mm"
+      ],
+      "correctAnswer": "8 mm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438411",
+      "question": "For the design of footing, the critical section for two way shear is at",
+      "options": [
+        "the face of the column",
+        "a distance of $\\frac{d}{2}$ from the face of the column",
+        "a distance of d from the face of the column",
+        "a distance of 2d from the face of the column"
+      ],
+      "correctAnswer": "a distance of $\\frac{d}{2}$ from the face of the column",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438412",
+      "question": "The live load to be considered in the design of staircase for public building liable for overcrowding is",
+      "options": [
+        "$2~kN/m^{2}$",
+        "$2.5~kN/m^{2}$",
+        "$4~kN/m^{2}$",
+        "$5~kN/m^{2}$"
+      ],
+      "correctAnswer": "$4~kN/m^{2}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438413",
+      "question": "In working stress method of design, the moment carrying capacity of an under reinforced rectangular RCC beam is",
+      "options": [
+        "$Rbd^{2}$",
+        "$\\sigma_{st}\\cdot A_{st}\\cdot(d-\\frac{x}{3})$",
+        "$\\frac{1}{2}\\cdot\\sigma_{cbc}b\\cdot x(d-\\frac{x}{3})$",
+        "$\\sigma_{st}A_{st}\\cdot jd$"
+      ],
+      "correctAnswer": "$\\sigma_{st}A_{st}\\cdot jd$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438414",
+      "question": "For a given RC beam, the critical depth for neutral axis depends on",
+      "options": [
+        "the permissible tensile stress in steel reinforcement ($\\sigma_{st}$)",
+        "the permissible stress in concrete in bending compression ($\\sigma_{cbc}$)",
+        "the modular ratio (m)",
+        "$\\sigma_{st}$ and $\\sigma_{cbc}$ and m"
+      ],
+      "correctAnswer": "$\\sigma_{st}$ and $\\sigma_{cbc}$ and m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438415",
+      "question": "For a given size of RC beam, as the percentage of steel reinforcement increases, the depth of neutral axis",
+      "options": [
+        "remains unchanged",
+        "increases",
+        "decreases",
+        "first decreases and then increases"
+      ],
+      "correctAnswer": "increases",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438416",
+      "question": "In working stress method of design, the depth of neutral axis for a singly reinforced beam of width 230 mm and effective depth 400 mm is 180 mm. The lever arm for the section is",
+      "options": [
+        "200 mm",
+        "310 mm",
+        "340 mm",
+        "360 mm"
+      ],
+      "correctAnswer": "340 mm",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438417",
+      "question": "A 30 m chain is found to be 0.1 m too short throughout the measurement of a line AB and recorded as 300 m. The actual length of the line AB is",
+      "options": [
+        "299.0 m",
+        "300.1 m",
+        "301.0 m",
+        "310.0 m"
+      ],
+      "correctAnswer": "299.0 m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438418",
+      "question": "The side of a square land was measured as 300 m and is in error by 0.05 m. The error in computing the area of land is",
+      "options": [
+        "$40~m^{2}$",
+        "$30~m^{2}$",
+        "$20~m^{2}$",
+        "$10~m^{2}$"
+      ],
+      "correctAnswer": "$30~m^{2}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438419",
+      "question": "In a closed traverse, the sum of north latitudes exceeds the sum of south latitudes and the sum of the west departures exceeds the sum of east departures. The closing line will be in the",
+      "options": [
+        "North-East quadrant",
+        "North-West quadrant",
+        "South-East quadrant",
+        "South-West quadrant"
+      ],
+      "correctAnswer": "North-West quadrant",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438420",
+      "question": "A line AB in an old map has magnetic bearing of $45^{0}30'$ when local magnetic declination was $2^{\\circ}30'$ east. If the magnetic declination is now is $2^{\\circ}00'$ west, then the magnetic bearing of the line AB now is",
+      "options": [
+        "$50^{\\circ}00'$",
+        "$46^{\\circ}00'$",
+        "$45^{\\circ}00'$",
+        "$41^{\\circ}00'$"
+      ],
+      "correctAnswer": "$41^{\\circ}00'$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438421",
+      "question": "The following bearings were observed while traversing with a compass. The station affected by local attraction is ",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correctAnswer": "D",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438422",
+      "question": "The sensitivity of a bubble tube can be increased by",
+      "options": [
+        "using a liquid of greater surface tension",
+        "decreasing the diameter of the tube",
+        "decreasing the length of the tube",
+        "increasing the length of the tube"
+      ],
+      "correctAnswer": "increasing the length of the tube",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438423",
+      "question": "In a leveling survey, the summation of all back sights and the summation of all fore sights are 8.675 m and 8.595 m respectively. The reduced level of the initial bench make is 100.000 m. The reduced level of the last point where the staff is held will be",
+      "options": [
+        "108.675 m",
+        "108.595 m",
+        "100.080 m",
+        "99.920 m"
+      ],
+      "correctAnswer": "100.080 m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438424",
+      "question": "Which of the following is correct about the characteristics of contours?",
+      "options": [
+        "closed contour lines with higher values inside indicate pond",
+        "closely spaced contours indicate plain area",
+        "contour lines intersect each other at right angles",
+        "contour lines always form closed circuit within or outside the limits of the map"
+      ],
+      "correctAnswer": "contour lines always form closed circuit within or outside the limits of the map",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438425",
+      "question": "Remote sensing technique makes use of the properties of",
+      "options": [
+        "Electric waves",
+        "Sound waves",
+        "Wind waves",
+        "Electromagnetic waves"
+      ],
+      "correctAnswer": "Electromagnetic waves",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438426",
+      "question": "The most widely used antenna in Global Positioning System (GPS) is",
+      "options": [
+        "Microstrip antenna",
+        "Parabolic antenna",
+        "Horn antenna",
+        "Slotted antenna"
+      ],
+      "correctAnswer": "Microstrip antenna",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438427",
+      "question": "The data associated with Geographical Information System (GIS) is",
+      "options": [
+        "Binary data",
+        "Spatial data",
+        "Numeric data",
+        "Complex data"
+      ],
+      "correctAnswer": "Spatial data",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438428",
+      "question": "An imaginary line joining the point of intersection of the cross hairs of the diaphragm and an optical centre of object glass and its continuation is called as",
+      "options": [
+        "Line of collimation",
+        "Axis of the telescope",
+        "Horizontal axis",
+        "Turnion axis"
+      ],
+      "correctAnswer": "Line of collimation",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438429",
+      "question": "Turning of the theodolite telescope in vertical plane by $180^{\\circ}$ about the horizontal axis is known as",
+      "options": [
+        "swinging",
+        "transiting",
+        "centering",
+        "setting"
+      ],
+      "correctAnswer": "transiting",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438430",
+      "question": "The length and fore bearing of a line AB are 100 m and $30^{\\circ}$ respectively. The latitude and departure of line AB respectively are",
+      "options": [
+        "86.6 m and 86.6 m",
+        "50 m and 50 m",
+        "50 m and 86.6 m",
+        "86.6 m and 50 m"
+      ],
+      "correctAnswer": "86.6 m and 50 m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438431",
+      "question": "In stadia Tachometer, the ratio of focal length of objective to the stadia intercept is known as",
+      "options": [
+        "Multiplicative constant",
+        "Additive constant",
+        "Stadia constant",
+        "Intercept constant"
+      ],
+      "correctAnswer": "Multiplicative constant",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438432",
+      "question": "The dimension of surface tension is",
+      "options": [
+        "$J/m$",
+        "$J/m^{2}$",
+        "$W/m$",
+        "$N/m^{2}$"
+      ],
+      "correctAnswer": "$J/m^{2}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438433",
+      "question": "The pressure at a point in water column is $4~N/cm^{2}.$ If the unit weight of water is $10~kN/m^{3}$, the corresponding height of water is",
+      "options": [
+        "2 m",
+        "4 m",
+        "6 m",
+        "8 m"
+      ],
+      "correctAnswer": "4 m",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438434",
+      "question": "A streamline is a line",
+      "options": [
+        "which is along path of the particle",
+        "which is always parallel to the main direction of flow",
+        "along which there is no flow",
+        "on which tangent drawn at any point gives the direction of velocity"
+      ],
+      "correctAnswer": "on which tangent drawn at any point gives the direction of velocity",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438435",
+      "question": "The stream function is given by $\\psi=2xy$, then the velocity at the point (4,3) is",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "10",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438436",
+      "question": "The piezometric head is the summation of",
+      "options": [
+        "velocity head and pressure head",
+        "pressure head and elevation head",
+        "elevation head and velocity head",
+        "velocity head, pressure head and elevation head"
+      ],
+      "correctAnswer": "pressure head and elevation head",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438437",
+      "question": "Bernoulli's equation is applicable between any two points located in",
+      "options": [
+        "Rotational flow of an incompressible fluid",
+        "Irrotational flow of a compressible or incompressible fluid",
+        "Steady, rotational flow of an incompressible fluid",
+        "Steady, irrotational flow of an incompressible fluid"
+      ],
+      "correctAnswer": "Steady, irrotational flow of an incompressible fluid",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438438",
+      "question": "A rectangular plate of width b and height h is immersed vertically in water such that the top edge is at the surface of the liquid. The centre of pressure is at a depth of",
+      "options": [
+        "$\\frac{h}{4}$",
+        "$\\frac{h}{3}$",
+        "$\\frac{h}{2}$",
+        "$\\frac{2}{3}h$"
+      ],
+      "correctAnswer": "$\\frac{2}{3}h$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438439",
+      "question": "The relation between the coefficient of discharge $C_{d}$, coefficient of velocity $C_{v}$ and coefficient of contraction $C_{c}$ for an orifice is given by",
+      "options": [
+        "$C_{v}=C_{c}C_{d}$",
+        "$C_{c}=C_{v}C_{d}$",
+        "$C_{d}=C_{c}C_{v}$",
+        "$C_{c}C_{v}C_{d}=1$"
+      ],
+      "correctAnswer": "$C_{d}=C_{c}C_{v}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438440",
+      "question": "For laminar flow through a circular pipe, the shear stress",
+      "options": [
+        "Remains constant over the cross-section",
+        "Varies linearly with the radial distance",
+        "Must be zero at all the points",
+        "Varies parabolically with the radial distance"
+      ],
+      "correctAnswer": "Varies linearly with the radial distance",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438441",
+      "question": "The friction factor for laminar flow through pipe in terms of Reynolds number ($R_{e}$) is",
+      "options": [
+        "$\\frac{64}{R_{e}}$",
+        "$\\frac{R_{e}}{64}$",
+        "$64~R_{e}$",
+        "$\\frac{0.316}{R_{e}^{1/4}}$"
+      ],
+      "correctAnswer": "$\\frac{64}{R_{e}}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438442",
+      "question": "The best hydraulic channel cross-section is defined as the section",
+      "options": [
+        "with minimum roughness coefficient",
+        "that has a maximum area of a given flow",
+        "that has a minimum wetted perimeter",
+        "that has maximum wetted area"
+      ],
+      "correctAnswer": "that has a minimum wetted perimeter",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438443",
+      "question": "For an open channel with cross sectional area A and wetted perimeter P, the hydraulic mean depth R is given by",
+      "options": [
+        "$\\frac{P}{A}$",
+        "$\\frac{A}{P}$",
+        "$\\sqrt{\\frac{A}{P}}$",
+        "$\\sqrt{\\frac{P}{A}}$"
+      ],
+      "correctAnswer": "$\\frac{A}{P}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438444",
+      "question": "If the error in measurement of height of water surface above the crest of a rectangular notch is 2%, then the percentage error in computing the discharge is",
+      "options": [
+        "2%",
+        "3%",
+        "4%",
+        "6%"
+      ],
+      "correctAnswer": "3%",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438445",
+      "question": "The specific speed of a pump is defined as the unit of such a size that it",
+      "options": [
+        "Delivers unit discharge at unit head",
+        "Requires unit power to develop unit head",
+        "Delivers unit discharge at unit power",
+        "Produces unit power with unit head available"
+      ],
+      "correctAnswer": "Delivers unit discharge at unit head",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438446",
+      "question": "The specific speed of a hydraulic turbine depends on",
+      "options": [
+        "speed and power developed only",
+        "speed and water head only",
+        "discharge and power developed only",
+        "speed, head and power developed"
+      ],
+      "correctAnswer": "speed, head and power developed",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438447",
+      "question": "According to Dicken's formula, the peak flood discharge for the catchment area A (in sq.m) is proportional to",
+      "options": [
+        "A",
+        "$A^{1/2}$",
+        "$A^{2/3}$",
+        "$A^{3/4}$"
+      ],
+      "correctAnswer": "$A^{3/4}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438448",
+      "question": "The Duty of irrigation water is large",
+      "options": [
+        "at the head of main canal",
+        "at the head of branch canal",
+        "at the head of water course",
+        "on the field"
+      ],
+      "correctAnswer": "on the field",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438449",
+      "question": "Hydrograph is the graph drawn between",
+      "options": [
+        "Runoff and time",
+        "Base flow and Time",
+        "Ground water and time",
+        "Rainfall and time"
+      ],
+      "correctAnswer": "Runoff and time",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438450",
+      "question": "The water stored in the reservoir below the minimum pool level is",
+      "options": [
+        "Useful storage",
+        "Valley storage",
+        "Dead storage",
+        "Surcharge storage"
+      ],
+      "correctAnswer": "Dead storage",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438451",
+      "question": "A solid construction put across the river to raise its water level and divert the water into canal is",
+      "options": [
+        "Marginal bund",
+        "Barrage",
+        "Weir",
+        "Dam"
+      ],
+      "correctAnswer": "Weir",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438452",
+      "question": "The Non-recording type rain gauge is",
+      "options": [
+        "Tipping bucket type rain gauge",
+        "Simon's rain gauge",
+        "Weighing type rain gauge",
+        "Floating type rain gauge"
+      ],
+      "correctAnswer": "Simon's rain gauge",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438453",
+      "question": "If m is the mean particle diameter of silt in mm, the Lacey's silt factor (f) is given by",
+      "options": [
+        "$f=1.76~m^{1/2}$",
+        "$f=1.76~m^{2}$",
+        "$f=1.76~m^{3/2}$",
+        "$f=1.76~m^{5/2}$"
+      ],
+      "correctAnswer": "$f=1.76~m^{1/2}$",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438454",
+      "question": "For the upstream face of an earthen dam, the most adverse condition for stability of slope is",
+      "options": [
+        "sloughing of slope",
+        "during construction",
+        "steady seepage",
+        "sudden drawdown"
+      ],
+      "correctAnswer": "sudden drawdown",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438455",
+      "question": "If the R.L's of canal bed level and high flood level of drainage are 212.0 m and 210.0 m respectively, then the suitable cross drainage work will be",
+      "options": [
+        "super passage",
+        "Aqueduct",
+        "Level crossing",
+        "Canal siphon"
+      ],
+      "correctAnswer": "super passage",
+      "topic": "Civil Engineering"
+    },
+    {
+      "id": "67809438456",
+      "question": "The method of irrigation used for Orchard's is",
+      "options": [
+        "Border flooding",
+        "Free flood",
+        "Basin flooding",
+        "Check flooding"
+      ],
+      "correctAnswer": "Basin flooding",
+      "topic": "Civil Engineering"
     }
-]
+  ]
+  

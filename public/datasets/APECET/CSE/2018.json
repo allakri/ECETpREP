@@ -1,72 +1,2402 @@
 [
     {
-        "id": 1,
-        "question": "Which of the following is not a type of computer network?",
-        "options": ["LAN", "WAN", "MAN", "NAN"],
-        "correctAnswer": "NAN",
-        "topic": "Computer Networks"
+      "id": "67809417424",
+      "question": "If $A=\\begin{pmatrix}2&-1&0\\\\ 3&4&7\\end{pmatrix}$ and $B=\\begin{pmatrix}5&2&-3\\\\ 1&0&-2\\end{pmatrix}$ then $2A+3B=$",
+      "options": [
+        "$(\\begin{pmatrix}19&4&-9\\\\ 9&8&8\\end{pmatrix})$",
+        "$(\\begin{pmatrix}-19&-4&9\\\\ &8&-8\\end{pmatrix})$",
+        "$(\\begin{pmatrix}18&4&-9\\\\ 9&8&8\\end{pmatrix})$",
+        "$(\\begin{pmatrix}17&5&-9\\\\ 8&8&9\\end{pmatrix})$"
+      ],
+      "correctAnswer": "$\\begin{pmatrix}19&4&-9\\\\ 9&8&8\\end{pmatrix}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 2,
-        "question": "What does CPU stand for?",
-        "options": ["Central Process Unit", "Central Processing Unit", "Computer Personal Unit", "Central Processor Unit"],
-        "correctAnswer": "Central Processing Unit",
-        "topic": "Computer Architecture"
+      "id": "67809417425",
+      "question": "If $A=\\begin{pmatrix}2&-3&0\\\\ 1&4&-1\\end{pmatrix}$ and $B=\\begin{pmatrix}6&1\\\\ 3&0\\\\ 5&2\\end{pmatrix}$ then $(AB)^{T}=$",
+      "options": [
+        "$A^{T}B^{T}$",
+        "$B^{T}A^{T}$",
+        "$(BA)^{T}$",
+        "$AB^{T}$"
+      ],
+      "correctAnswer": "$B^{T}A^{T}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 3,
-        "question": "Which data structure uses a LIFO (Last-In, First-Out) approach?",
-        "options": ["Queue", "Stack", "Linked List", "Tree"],
-        "correctAnswer": "Stack",
-        "topic": "Data Structures"
+      "id": "67809417426",
+      "question": "If two rows or two columns of a determinant are identical then the value of the determinant is",
+      "options": [
+        "2",
+        "-1",
+        "0",
+        "-2"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
     },
     {
-        "id": 4,
-        "question": "What is the main function of an operating system?",
-        "options": ["Manage hardware resources", "Provide a user interface", "Execute application programs", "All of the above"],
-        "correctAnswer": "All of the above",
-        "topic": "Operating Systems"
+      "id": "67809417427",
+      "question": "The value of $\\begin{vmatrix}265&240&219\\\\ 240&225&198\\\\ 219&198&181\\end{vmatrix}$ is",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
     },
     {
-        "id": 5,
-        "question": "In object-oriented programming, what is encapsulation?",
-        "options": ["Hiding the complexity", "Wrapping data and methods together", "Inheriting properties from other classes", "Creating multiple forms of a method"],
-        "correctAnswer": "Wrapping data and methods together",
-        "topic": "Object Oriented Programming"
+      "id": "67809417428",
+      "question": "The adjoint of the square matrix $A=\\begin{pmatrix}2&5&1\\\\ 3&1&2\\\\ 4&3&1\\end{pmatrix}$ is",
+      "options": [
+        "$(\\begin{pmatrix}-5&-2&9\\\\ 5&-2&-1\\\\ 5&14&-13\\end{pmatrix})$",
+        "$(\\begin{pmatrix}5&2&9\\\\ 5&-2&-1\\\\ 5&14&-13\\end{pmatrix})$",
+        "$(\\begin{pmatrix}-5&-2&9\\\\ -5&-2&-1\\\\ -5&14&-13\\end{pmatrix})$",
+        "$(\\begin{pmatrix}-5&-2&-9\\\\ 5&2&1\\\\ 5&14&-13\\end{pmatrix})$"
+      ],
+      "correctAnswer": "$\\begin{pmatrix}-5&-2&9\\\\ 5&-2&-1\\\\ 5&14&-13\\end{pmatrix}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 6,
-        "question": "Which of the following is a non-volatile memory?",
-        "options": ["RAM", "ROM", "Cache", "SRAM"],
-        "correctAnswer": "ROM",
-        "topic": "Computer Architecture"
+      "id": "67809417429",
+      "question": "Resolve into partial fractions $:\\frac{5}{(2x-1)(3x-1)}=$",
+      "options": [
+        "$\\frac{8}{2x-1}+\\frac{5}{3x-1}$",
+        "$\\frac{10}{2x-1}-\\frac{15}{3x-1}$",
+        "$\\frac{11}{3x-1}+\\frac{7}{2x-1}$",
+        "$\\frac{1}{2x-1}+\\frac{2}{3x-1}$"
+      ],
+      "correctAnswer": "$\\frac{10}{2x-1}-\\frac{15}{3x-1}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 7,
-        "question": "What does SQL stand for?",
-        "options": ["Structured Query Language", "Standard Query Language", "Simple Query Language", "Sequential Query Language"],
-        "correctAnswer": "Structured Query Language",
-        "topic": "DBMS"
+      "id": "67809417430",
+      "question": "Resolve into partial fractions $:\\frac{3x-1}{(x-1)(x-2)(x-3)}=$",
+      "options": [
+        "$\\frac{2}{x-1}+\\frac{5}{x-2}-\\frac{4}{x-3}$",
+        "$\\frac{-1}{x-1}+\\frac{5}{x-2}-\\frac{4}{x-3}$",
+        "$\\frac{1}{x-1}+\\frac{5}{x-2}+\\frac{4}{x-3}$",
+        "$\\frac{1}{x-1}-\\frac{5}{x-2}+\\frac{4}{x-3}$"
+      ],
+      "correctAnswer": "$\\frac{1}{x-1}-\\frac{5}{x-2}+\\frac{4}{x-3}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 8,
-        "question": "Which logic gate is a universal gate?",
-        "options": ["AND", "OR", "NAND", "XOR"],
-        "correctAnswer": "NAND",
-        "topic": "Digital Electronics"
+      "id": "67809417431",
+      "question": "If $\\tan A=\\frac{1}{2}$ and $\\tan B=\\frac{1}{3}$ then $\\tan(A-B)=$",
+      "options": [
+        "$\\frac{1}{7}$",
+        "$\\frac{-1}{7}$",
+        "$\\frac{1}{5}$",
+        "$\\frac{1}{3}$"
+      ],
+      "correctAnswer": "$\\frac{1}{7}$",
+      "topic": "Mathematics"
     },
     {
-        "id": 9,
-        "question": "What is Python primarily known as?",
-        "options": ["A low-level language", "A high-level, interpreted language", "A compiled language", "A machine language"],
-        "correctAnswer": "A high-level, interpreted language",
-        "topic": "Python Programming"
+      "id": "67809417432",
+      "question": "The value of $\\cot2A+tanA=$",
+      "options": [
+        "sin2A",
+        "cos2A",
+        "sec2A",
+        "cosec2A"
+      ],
+      "correctAnswer": "cosec2A",
+      "topic": "Mathematics"
     },
     {
-        "id": 10,
-        "question": "HTML is used to create:",
-        "options": ["Web servers", "Web pages", "Databases", "Operating systems"],
-        "correctAnswer": "Web pages",
-        "topic": "Web Technologies"
+      "id": "67809417433",
+      "question": "The value of $\\frac{1-cos2A+sin~2A}{1+cos2A+sin~2A}=$",
+      "options": [
+        "sinA",
+        "cosA",
+        "tanA",
+        "cotA"
+      ],
+      "correctAnswer": "tanA",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417434",
+      "question": "The value of $\\sin\\frac{\\pi}{5}sin\\frac{2\\pi}{5}sin\\frac{3\\pi}{5}sin\\frac{4\\pi}{5}=$",
+      "options": [
+        "$\\frac{4}{15}$",
+        "$\\frac{5}{16}$",
+        "$\\frac{-5}{16}$",
+        "$\\frac{7}{15}$"
+      ],
+      "correctAnswer": "$\\frac{5}{16}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417435",
+      "question": "The value of $\\cos~20^{0}+\\cos~100^{0}+\\cos~140^{0}=$",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "-3"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417436",
+      "question": "The value of $\\sum a(b^{2}+c^{2})cosA$ is",
+      "options": [
+        "2abc",
+        "4abc",
+        "3abc",
+        "5abc"
+      ],
+      "correctAnswer": "2abc",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417437",
+      "question": "The value of $(a-b)^{2}\\cos^{2}(\\frac{c}{2})+(a+b)^{2}\\sin^{2}(\\frac{c}{2})$ is",
+      "options": [
+        "$C^{3}$",
+        "C",
+        "$C^{5}$",
+        "$C^{2}$"
+      ],
+      "correctAnswer": "$C^{2}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417438",
+      "question": "The value of $2tan^{-1}(\\frac{1}{3})+tan^{-1}(\\frac{1}{7})$ is",
+      "options": [
+        "$\\pi/4$",
+        "$\\pi/2$",
+        "$\\pi/6$",
+        "$\\pi/3$"
+      ],
+      "correctAnswer": "$\\pi/4$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417439",
+      "question": "The general solution of $4~cos^{2}x-3=0$ is",
+      "options": [
+        "$2n\\pi\\pm\\frac{\\pi}{6}$",
+        "$2n\\pi\\pm\\frac{7\\pi}{6}$",
+        "$3n\\pi\\pm\\frac{5\\pi}{6}$",
+        "$2n\\pi\\pm\\frac{11\\pi}{6}$"
+      ],
+      "correctAnswer": "$2n\\pi\\pm\\frac{\\pi}{6}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417440",
+      "question": "The modulus of a complex number $\\sqrt{3}+i$ is",
+      "options": [
+        "-2",
+        "3",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417441",
+      "question": "If $x+\\frac{1}{x}=2~cos~\\theta$ then the value of $x^{n}+\\frac{1}{x^{n}}$ is",
+      "options": [
+        "2 cos n$\\theta$",
+        "-2 cos n$\\theta$",
+        "3 cos $\\theta$",
+        "2 sin n$\\theta$"
+      ],
+      "correctAnswer": "2 cos n$\\theta$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417442",
+      "question": "The centre of the circle $:x^{2}+y^{2}-2x+6y-6=0$ is",
+      "options": [
+        "(1,3)",
+        "(2,3)",
+        "(1,-3)",
+        "(-1,3)"
+      ],
+      "correctAnswer": "(1,-3)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417443",
+      "question": "The radius of the circle: $5x^{2}+5y^{2}-6x+8y-75=0$ is",
+      "options": [
+        "-4",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417444",
+      "question": "The equation of the parabola with vertex $(2,-1)$ and focus $(2,-3)$ is",
+      "options": [
+        "$x^{2}-4x+8y+12=0$",
+        "$x^{2}-4x-8y-12=0$",
+        "$x^{2}+4x-8y-12=0$",
+        "$x^{2}+5x-8y-11=0$"
+      ],
+      "correctAnswer": "$x^{2}-4x+8y+12=0$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417445",
+      "question": "The centre of the ellipse: $9x^{2}+25y^{2}-18x+100y-116=0$ is",
+      "options": [
+        "(2,-1)",
+        "(-1,-2)",
+        "(1,-2)",
+        "(1,2)"
+      ],
+      "correctAnswer": "(1,-2)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417446",
+      "question": "The focus of the hyperbola $\\frac{x^{2}}{25}-\\frac{y^{2}}{144}=1$ is",
+      "options": [
+        "(-13,0)",
+        "(13,0)",
+        "(13,-1)",
+        "(13,1)"
+      ],
+      "correctAnswer": "(13,0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417447",
+      "question": "The length of the major axis of the ellipse: $4x^{2}+3y^{2}=48$ is",
+      "options": [
+        "10",
+        "11",
+        "8",
+        "13"
+      ],
+      "correctAnswer": "8",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417448",
+      "question": "The value of $lim_{x\\rightarrow1}\\frac{x^{3}-1}{x-1}$ is",
+      "options": [
+        "3",
+        "-3",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417449",
+      "question": "If $y=\\frac{a+bx}{b-ax}$ then the derivative of y with respect to x is",
+      "options": [
+        "$\\frac{a^{2}+b^{2}}{(b-ax)^{2}}$",
+        "$\\frac{a^{2}+b^{2}}{(b+ax)^{2}}$",
+        "$\\frac{a^{2}-b^{2}}{(b-ax)^{2}}$",
+        "$\\frac{a+b}{(b-ax)^{2}}$"
+      ],
+      "correctAnswer": "$\\frac{a^{2}+b^{2}}{(b-ax)^{2}}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417450",
+      "question": "If $y=x^{3}e^{x}$ then $\\frac{dy}{dx}$ is",
+      "options": [
+        "$(x-3)x^{2}e^{x}$",
+        "$(x-2)x^{3}e^{x}$",
+        "$(x+3)x^{2}e^{x}$",
+        "$(x-1)x^{3}e^{x}$"
+      ],
+      "correctAnswer": "$(x+3)x^{2}e^{x}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417451",
+      "question": "If $y=sec~x+tan~x$ then $\\frac{dy}{dx}$ is",
+      "options": [
+        "y cos x",
+        "y sec x",
+        "$-y~sin~x$",
+        "y tan x"
+      ],
+      "correctAnswer": "y sec x",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417452",
+      "question": "If $y=\\frac{2+3~sinh~x}{3+2~sinh~x}$ then the derivative of y with respect to x is",
+      "options": [
+        "$\\frac{5~cosh~x}{(3+2~sinh~x)^{2}}$",
+        "$\\frac{5~sin~h~x}{(3+2~sin~h~x)^{2}}$",
+        "$\\frac{5~sin~x}{(3-2~cosh~x)^{2}}$",
+        "$\\frac{sinh^{2}x}{(2-3~sinh~x)^{2}}$"
+      ],
+      "correctAnswer": "$\\frac{5~cosh~x}{(3+2~sinh~x)^{2}}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417453",
+      "question": "If $y=\\sqrt{\\frac{1-cos~x}{1+cos~x}}$ then $\\frac{dy}{dx}$ is",
+      "options": [
+        "$\\sec^{2}(\\frac{x}{2})$",
+        "$\\cos^{2}(\\frac{x}{2})$",
+        "$\\frac{1}{2}\\cos^{2}(\\frac{x}{2})$",
+        "$\\frac{1}{2}\\sec^{2}(\\frac{x}{2})$"
+      ],
+      "correctAnswer": "$\\frac{1}{2}\\sec^{2}(\\frac{x}{2})$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417454",
+      "question": "The angle between the curves $y=x^{2}+3x-7$ and $y^{2}=2x+5$ at (2,3) is",
+      "options": [
+        "$tan~\\theta=2$",
+        "$sec~\\theta=2$",
+        "$cos~\\theta=1$",
+        "$sin~\\theta=3$"
+      ],
+      "correctAnswer": "$tan~\\theta=2$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417455",
+      "question": "The range of x for which the function $x^{3}-3x^{2}-45x+2$ is increasing with x is",
+      "options": [
+        "(3,-5)",
+        "(-3,-5)",
+        "(3,5)",
+        "(-3,5)"
+      ],
+      "correctAnswer": "(-3,5)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417456",
+      "question": "The maximum value of the function $2x^{3}-12x^{2}+18x+5$ is",
+      "options": [
+        "13",
+        "12",
+        "10",
+        "15"
+      ],
+      "correctAnswer": "15",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417457",
+      "question": "If u is a homogeneous function of x and y with degreen then $x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}=$",
+      "options": [
+        "-nu",
+        "$n^{2}u$",
+        "nu",
+        "$nu^{2}+u$"
+      ],
+      "correctAnswer": "nu",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417458",
+      "question": "The value of $\\int\\frac{cos\\sqrt{x}}{\\sqrt{x}}dx$ is",
+      "options": [
+        "$2~sin\\sqrt{x}+c$",
+        "$3~sin\\sqrt{x}+c$",
+        "$2~sin~x+c$",
+        "$sin\\sqrt{x}+c$"
+      ],
+      "correctAnswer": "$2~sin\\sqrt{x}+c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417459",
+      "question": "The value of $\\int\\frac{dx}{\\sqrt{a^{2}-x^{2}}}$ is",
+      "options": [
+        "$cos^{-1}(\\frac{x}{a})+c$",
+        "$sin^{-1}(\\frac{x}{a})+c$",
+        "$sinh^{-1}(\\frac{x}{a})+c$",
+        "$sin^{-1}(\\frac{a}{x})+c$"
+      ],
+      "correctAnswer": "$sin^{-1}(\\frac{x}{a})+c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417460",
+      "question": "The value of $\\int\\frac{dx}{4x^{2}+4x+17}$ is",
+      "options": [
+        "$\\frac{1}{8}tan^{-1}(\\frac{2x+1}{4})+c$",
+        "$\\frac{1}{4}cot^{-1}(\\frac{2x+1}{4})+c$",
+        "$\\frac{1}{8}sin^{-1}(\\frac{2x+1}{4})+c$",
+        "$\\frac{1}{3}tan^{-1}(\\frac{2x+1}{4})+c$"
+      ],
+      "correctAnswer": "$\\frac{1}{8}tan^{-1}(\\frac{2x+1}{4})+c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417461",
+      "question": "The value of $\\int log~x~dx$ is",
+      "options": [
+        "$x~log~x+x+c$",
+        "$x^{2}log~x-x+c$",
+        "$x~log~x-x+c$",
+        "$x~log~x-\\frac{x^{2}}{2}+c$"
+      ],
+      "correctAnswer": "$x~log~x-x+c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417462",
+      "question": "The value of $\\int_{1}^{4}(\\sqrt{x}+\\frac{1}{\\sqrt{x}})dx$ is",
+      "options": [
+        "$\\frac{20}{3}$",
+        "$-\\frac{20}{3}$",
+        "$\\frac{10}{3}$",
+        "$\\frac{15}{3}$"
+      ],
+      "correctAnswer": "$\\frac{20}{3}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417463",
+      "question": "The value of $\\int_{0}^{\\pi/2}\\sin^{2}x~dx$ is",
+      "options": [
+        "$\\frac{\\pi}{2}$",
+        "$-\\frac{\\pi}{4}$",
+        "$\\frac{\\pi}{6}$",
+        "$\\frac{\\pi}{4}$"
+      ],
+      "correctAnswer": "$\\frac{\\pi}{4}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417464",
+      "question": "The area enclosed between the curve $y^{2}=4ax$ and the line $x=2y$ is",
+      "options": [
+        "$\\frac{64}{5}$ sq. units",
+        "$\\frac{64}{3}$ sq. units",
+        "$\\frac{65}{4}$ sq. units",
+        "$\\frac{63}{4}$ sq.units"
+      ],
+      "correctAnswer": "$\\frac{64}{3}$ sq. units",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417465",
+      "question": "The value of $lim_{n\\rightarrow\\infty}[\\frac{1}{n+1}+\\frac{1}{n+2}+\\cdot\\cdot\\cdot.+\\frac{1}{n+n}]$ is",
+      "options": [
+        "log 2",
+        "log 3",
+        "-log2",
+        "logn"
+      ],
+      "correctAnswer": "log 2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417466",
+      "question": "Form the differential equation by eliminating the arbitrary constant a from $ay^{2}=x^{3}$",
+      "options": [
+        "$\\frac{dy}{dx}=\\frac{3y}{2x}$",
+        "$\\frac{dy}{dx}=\\frac{2x}{3y}$",
+        "$\\frac{dy}{dx}=\\frac{x}{y}$",
+        "$\\frac{dy}{dx}=\\frac{2y}{x}$"
+      ],
+      "correctAnswer": "$\\frac{dy}{dx}=\\frac{3y}{2x}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417467",
+      "question": "The solution of $\\sqrt{1-y^{2}}dx+\\sqrt{1-x^{2}}dy=0$ is",
+      "options": [
+        "$cos^{-1}x+cos^{-1}y=c$",
+        "$sinh^{-1}x+cosh^{-1}y=c$",
+        "$cos^{-1}x+sec^{-1}x=c$",
+        "$sin^{-1}x+sin^{-1}y=c$"
+      ],
+      "correctAnswer": "$sin^{-1}x+sin^{-1}y=c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417468",
+      "question": "The solution of $\\frac{dy}{dx}=(4x+y+1)^{2}$ is",
+      "options": [
+        "$\\frac{1}{2}tan^{-1}(\\frac{4x+y+1}{2})=x+c$",
+        "$\\frac{1}{2}cot^{-1}(\\frac{4x+y+1}{2})=x+c$",
+        "$-\\frac{1}{2}tan^{-1}(\\frac{4x+y+1}{2})=x+c$",
+        "$\\frac{1}{2}tan^{-1}(\\frac{4x-y-1}{2})=x+c$"
+      ],
+      "correctAnswer": "$\\frac{1}{2}tan^{-1}(\\frac{4x+y+1}{2})=x+c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417469",
+      "question": "The solution of exact differential equation $2xy~dx+x^{2}dy=0$ is",
+      "options": [
+        "$x^{2}y^{2}=c$",
+        "$x^{2}y=c$",
+        "$x^{3}y=c$",
+        "$x^{2}y^{3}=c$"
+      ],
+      "correctAnswer": "$x^{2}y=c$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417470",
+      "question": "The solution of $\\frac{dy}{dx}+y=e^{-x}$ is",
+      "options": [
+        "$(x+c)e^{-x}$",
+        "$(x-c)e^{x}$",
+        "$(x+c)e^{x}$",
+        "$(x+c)e^{-2x}$"
+      ],
+      "correctAnswer": "$(x+c)e^{-x}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417471",
+      "question": "The particular integral of $(D^{2}+5D+6)y=e^{x}$ is",
+      "options": [
+        "$\\frac{-e^{-x'}}{12}$",
+        "$\\frac{e^{2x}}{12}$",
+        "$\\frac{e^{x}}{12}$",
+        "$\\frac{e^{x}}{6}$"
+      ],
+      "correctAnswer": "$\\frac{e^{x}}{12}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417472",
+      "question": "The complementary function of $(D^{2}+3D+2)y=8sin5x$ is",
+      "options": [
+        "$c_{1}e^{-x}+c_{2}e^{-2x}$",
+        "$c_{1}e^{x}+c_{2}e^{2x}$",
+        "$c_{1}e^{-x}+c_{2}e^{2x}$",
+        "$c_{1}e^{2x}+c_{2}e^{3x}$"
+      ],
+      "correctAnswer": "$c_{1}e^{-x}+c_{2}e^{-2x}$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417473",
+      "question": "Which of the following is not the unit of energy?",
+      "options": [
+        "watt second",
+        "Pascal metre",
+        "Newton metre",
+        "Kilowatt hour"
+      ],
+      "correctAnswer": "Pascal metre",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417474",
+      "question": "The height of Mercury barometer is 76 cm and density of Mercury is $13.6~g/cc$ The corresponding height of water barometer in Sl system is",
+      "options": [
+        "10.336 m",
+        "103.36 m",
+        "3.6m",
+        "1.0336 m"
+      ],
+      "correctAnswer": "10.336 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417475",
+      "question": "Angle made by the vector $(\\sqrt{3}\\hat{i}+\\hat{j})$ with the X-axis is",
+      "options": [
+        "$\\pi/2$",
+        "$\\pi/4$",
+        "$\\pi/3$",
+        "$\\pi/6$"
+      ],
+      "correctAnswer": "$\\pi/6$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417476",
+      "question": "The minimum number of unequal forces in a plane that can keep a particle in equilibrium is",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417477",
+      "question": "A body is thrown with a velocity of $(4\\hat{i}+3\\hat{j})m/s$ The maximum height attained by the body is $(g=10~ms^{-2})$",
+      "options": [
+        "2.5 m",
+        "4.5 m",
+        "0.8 m",
+        "0.45 m"
+      ],
+      "correctAnswer": "0.45 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417478",
+      "question": "A person in a lift, which ascends up with acceleration $10ms^{-2}$ drops a stone from a height of 10m. The time of descent is $(g=10~ms^{-2})$",
+      "options": [
+        "0.5 s",
+        "1 s",
+        "1.5 s",
+        "2 s"
+      ],
+      "correctAnswer": "1 s",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417479",
+      "question": "For a projectile, the ratio of maximum height reached to the square of time of flight is",
+      "options": [
+        "5:4",
+        "5:2",
+        "5:1",
+        "10:1"
+      ],
+      "correctAnswer": "5:4",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417480",
+      "question": "The ratio of distances travelled by a body, starting from rest and travelling with uniform acceleration, in successive intervals of time of equal duration will be",
+      "options": [
+        "1:2:3",
+        "1:4:9",
+        "1:3:5",
+        "1:9:16"
+      ],
+      "correctAnswer": "1:3:5",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417481",
+      "question": "A force of 12 N acts on a body of mass 4 kg placed on a rough surface. The coefficient of friction between body and surface is 0.2 and take $g=10~ms^{-2}$ The acceleration of the body in $ms^{-2}$ is",
+      "options": [
+        "1",
+        "0.5",
+        "0.25",
+        "Zero"
+      ],
+      "correctAnswer": "1",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417482",
+      "question": "Brakes stop a train in a certain distance d. When the braking force is made one fourth, the brakes will stop the train in a distance which is",
+      "options": [
+        "$d/2$",
+        "4d",
+        "2d",
+        "d"
+      ],
+      "correctAnswer": "4d",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417483",
+      "question": "The product of linear momentum and velocity of a body represents",
+      "options": [
+        "Kinetic energy of the body",
+        "Potential energy of the body",
+        "Half the Kinetic energy of the body",
+        "Twice the kinetic energy of the body"
+      ],
+      "correctAnswer": "Twice the kinetic energy of the body",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417484",
+      "question": "A man weighing 60 kg eats plum cake whose energy content is 9800 calories. If all this energy could be utilised by him, he can ascend to a height of",
+      "options": [
+        "17 m",
+        "100 m",
+        "70 m",
+        "60m"
+      ],
+      "correctAnswer": "70 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417485",
+      "question": "A crane can lift up 10,000 kg of coal in 1 hour from a mine of depth 180m. If the efficiency of the crane is 80%, its input power must be $(g=10~ms^{-2})$",
+      "options": [
+        "62.5 kW",
+        "6.25 kW",
+        "50 kW",
+        "5 kW"
+      ],
+      "correctAnswer": "6.25 kW",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417486",
+      "question": "The graph of acceleration as a function of displacement in the case of a body executing simple harmonic motion is",
+      "options": [
+        "Parabola",
+        "Hyperbola",
+        "Straight line with positive slope",
+        "Straight line with negative slope"
+      ],
+      "correctAnswer": "Straight line with negative slope",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417487",
+      "question": "The pendulum of length 'L' swings from mean position to mean position 'n' times in one second. The value of acceleration due to gravity is",
+      "options": [
+        "$\\pi^{2}n^{2}L$",
+        "$2\\pi^{2}n^{2}L$",
+        "$(\\pi^{2}n^{2}L)/2$",
+        "$4\\pi^{2}n^{2}L$"
+      ],
+      "correctAnswer": "$\\pi^{2}n^{2}L$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417488",
+      "question": "When a source of sound is in motion towards a stationary observer, the effect observed is",
+      "options": [
+        "Decrease in velocity of sound",
+        "Increase in velocity of sound",
+        "increase in frequency of sound",
+        "decrease in frequency of sound"
+      ],
+      "correctAnswer": "increase in frequency of sound",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417489",
+      "question": "The voice of a male person is different from that of a female person because",
+      "options": [
+        "Two sounds have different phases",
+        "Two persons are of different size",
+        "Two sounds travel with different velocities",
+        "Two sounds have different pitch"
+      ],
+      "correctAnswer": "Two sounds have different pitch",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417490",
+      "question": "If the sound absorption of a hall is changed by 2%, then the percentage change in the reverberation time is",
+      "options": [
+        "2%",
+        "4%",
+        "1%",
+        "No change"
+      ],
+      "correctAnswer": "2%",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417491",
+      "question": "In which of the following process, the internal energy of the system remains constant?",
+      "options": [
+        "Adiabatic",
+        "Isothermal",
+        "Isobaric",
+        "Isochoric"
+      ],
+      "correctAnswer": "Isothermal",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417492",
+      "question": "Heat required to raise the temperature of one gram of water through 1 K is",
+      "options": [
+        "1.0 Kcal",
+        "0.1 Kcal",
+        "0.01 Kcal",
+        "0.001 Kcal"
+      ],
+      "correctAnswer": "0.001 Kcal",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417493",
+      "question": "The specific heat of a gas in an isothermal process is",
+      "options": [
+        "infinity",
+        "Zero",
+        "Finite positive",
+        "Finite negative"
+      ],
+      "correctAnswer": "infinity",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417494",
+      "question": "Specific heat of aluminium is $0.25~cal/g/^{\\circ}C.$ The water equivalent of an aluminium vessel of mass one kilogram is",
+      "options": [
+        "$40~cal/^{\\circ}C$",
+        "$400~cal/^{\\circ}C$",
+        "$250~cal/^{\\circ}C$",
+        "$25~cal/^{\\circ}C$"
+      ],
+      "correctAnswer": "$250~cal/^{\\circ}C$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417495",
+      "question": "What should be the percentage increase in the pressure so that the volume of a gas may decrease by 5% at constant temperature?",
+      "options": [
+        "5%",
+        "5.26%",
+        "10%",
+        "4.26%"
+      ],
+      "correctAnswer": "5.26%",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417496",
+      "question": "If the maximum kinetic energy of emitted photo electrons from a metal is 0.9 eV and work function is 2.2 eV, then the wavelength of incident radiation is",
+      "options": [
+        "4000Å",
+        "8000Å",
+        "3000Å",
+        "2000Å"
+      ],
+      "correctAnswer": "4000Å",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417497",
+      "question": "If the angle of incidence of a ray is greater than the critical angle at the core - cladding interface in an optical fiber, then the ray travels",
+      "options": [
+        "in the core",
+        "in the cladding",
+        "in the buffer",
+        "along the interface"
+      ],
+      "correctAnswer": "in the core",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417498",
+      "question": "Pauli's Exclusion principle states that two electrons in same orbital have",
+      "options": [
+        "same spins",
+        "different spins",
+        "opposite spins",
+        "vertical spins"
+      ],
+      "correctAnswer": "opposite spins",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417499",
+      "question": "Orbits in which electrons move according to Bohr are",
+      "options": [
+        "elliptical",
+        "cylindrical",
+        "circular",
+        "oval"
+      ],
+      "correctAnswer": "circular",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417500",
+      "question": "Phosphorus has an atomic number of 15. A stable phosphorus atom has an electronic configuration of",
+      "options": [
+        "$1s^{2}2s^{2}2p^{6}3p^{5}$",
+        "$1s^{2}2s^{2}2p^{6}3s^{2}3p^{3}$",
+        "$1s^{2}2s^{2}2p^{6}3s^{2}3p^{1}4s^{2}$",
+        "$1s^{2}1p^{6}1d^{7}$"
+      ],
+      "correctAnswer": "$1s^{2}2s^{2}2p^{6}3s^{2}3p^{3}$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417501",
+      "question": "NaCl is classified as having what kind of bonds in the solid phase?",
+      "options": [
+        "Covalent",
+        "Ionic",
+        "Polar",
+        "vander Waals"
+      ],
+      "correctAnswer": "Ionic",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417502",
+      "question": "The Bond formed due to sharing of electrons is",
+      "options": [
+        "Ionic bond",
+        "Metallic bond",
+        "Polar bond",
+        "Covalent bond"
+      ],
+      "correctAnswer": "Covalent bond",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417503",
+      "question": "The normality of solution obtained by dissolving 5.3 grams of $Na_{2}CO_{3}$ in 1 litre solution is",
+      "options": [
+        "1N",
+        "0.1N",
+        "0.05N",
+        "0.5N"
+      ],
+      "correctAnswer": "0.1N",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417504",
+      "question": "The following solution has same molarity and normality",
+      "options": [
+        "$Na_{2}CO_{3}$",
+        "NaCl",
+        "$H_{2}SO_{4}$",
+        "$K_{2}Cr_{2}O_{7}$"
+      ],
+      "correctAnswer": "NaCl",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417505",
+      "question": "5 moles of a solute is dissolved in 10 litres of solution. What is its molarity?",
+      "options": [
+        "5M",
+        "2M",
+        "0.5M",
+        "0.2M"
+      ],
+      "correctAnswer": "0.5M",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417506",
+      "question": "Process in which acids ($H^{+}$) and bases (OH) react to form salts and water is called",
+      "options": [
+        "Neutralization",
+        "Halogenation",
+        "Hydrogenation",
+        "Hydrolysis"
+      ],
+      "correctAnswer": "Neutralization",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417507",
+      "question": "A substance that donates a pair of electrons to form coordinate covalent bond is called",
+      "options": [
+        "Lewis acid",
+        "Lewis base",
+        "Bronsted-Lowry acid",
+        "Bronsted-Lowry base"
+      ],
+      "correctAnswer": "Lewis base",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417508",
+      "question": "One Faraday is equal to",
+      "options": [
+        "99650 C",
+        "93100 C",
+        "96500 C",
+        "94500 C"
+      ],
+      "correctAnswer": "96500 C",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417509",
+      "question": "The cell reaction of a cell is $Mg(s)+2~H^{+}(aq)\\rightarrow Mg^{2+}(aq)+H_{2}(g)$. If the standard reduction potential of Zn is - 2.372 V. then the emf of the cell is",
+      "options": [
+        "+2.372 V",
+        "-2.372 V",
+        "0.00 V",
+        "-1.372 V"
+      ],
+      "correctAnswer": "+2.372 V",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417510",
+      "question": "Galvanic cells are the cells which convert",
+      "options": [
+        "Electrical energy to chemical energy",
+        "Chemical energy to electrical energy",
+        "Chemical energy to free energy",
+        "Potential energy to kinetic energy"
+      ],
+      "correctAnswer": "Chemical energy to electrical energy",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417511",
+      "question": "Mass of substance produced at electrode is directly proportional to the quantity of electricity passed. This is known as",
+      "options": [
+        "Faraday's second law",
+        "Faraday's first law",
+        "Newton's third law",
+        "Newton's first law"
+      ],
+      "correctAnswer": "Faraday's first law",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417512",
+      "question": "Hardness of water is expressed in terms of equivalent of",
+      "options": [
+        "$Na_{2}CO_{3}$",
+        "$K_{2}CO_{3}$",
+        "$MgCO_{3}$",
+        "$CaCO_{3}$"
+      ],
+      "correctAnswer": "$CaCO_{3}$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417513",
+      "question": "Temporary hardness is caused by",
+      "options": [
+        "Carbonates of calcium and magnesium",
+        "Chlorides of calcium and magnesium",
+        "Sulphates of calcium and magnesium",
+        "Nitrates of Calcium"
+      ],
+      "correctAnswer": "Carbonates of calcium and magnesium",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417514",
+      "question": "The exhausted zeolite bed can be regenerated by washing with",
+      "options": [
+        "NaCl",
+        "dil. NaOH",
+        "dil. HCl",
+        "Distilled water"
+      ],
+      "correctAnswer": "NaCl",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417515",
+      "question": "The cation exchange resin possesses",
+      "options": [
+        "Acidic group",
+        "Basic group",
+        "Amphoteric group",
+        "Benzo group"
+      ],
+      "correctAnswer": "Acidic group",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417516",
+      "question": "Corrosion is an example of",
+      "options": [
+        "Oxidation",
+        "Reduction",
+        "Electrolysis",
+        "Halogenation"
+      ],
+      "correctAnswer": "Oxidation",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417517",
+      "question": "The composition of rust is",
+      "options": [
+        "$Fe(OH)_{3}$",
+        "$FeCl_{3}$",
+        "FeO",
+        "$Fe_{2}O_{3}.xH_{2}O$"
+      ],
+      "correctAnswer": "$Fe_{2}O_{3}.xH_{2}O$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417518",
+      "question": "Galvanizing is the process of coating iron with",
+      "options": [
+        "Mg",
+        "Cu",
+        "Au",
+        "Zn"
+      ],
+      "correctAnswer": "Zn",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417519",
+      "question": "Which of the following is not a thermoplastic?",
+      "options": [
+        "Bakelite",
+        "Polystyrene",
+        "Polythene",
+        "Nylon"
+      ],
+      "correctAnswer": "Bakelite",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417520",
+      "question": "Isoprene is a monomer of",
+      "options": [
+        "Starch",
+        "Cellulose",
+        "Natural rubber",
+        "Lignin"
+      ],
+      "correctAnswer": "Natural rubber",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417521",
+      "question": "The plastics which soften when heat is applied with or without pressure, but require cooling to set them to shape are called as",
+      "options": [
+        "Thermosofting materials",
+        "Thermosetting materials",
+        "Thermoplastic materials",
+        "Thermostatting materials"
+      ],
+      "correctAnswer": "Thermoplastic materials",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417522",
+      "question": "Which one of the following statement is not true about ideal fuel?",
+      "options": [
+        "High calorific value",
+        "High moisture content",
+        "Low cost",
+        "Moderate ignition temperature"
+      ],
+      "correctAnswer": "High moisture content",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417523",
+      "question": "Environmental pollution affects",
+      "options": [
+        "Humans only",
+        "Plants only",
+        "Biotic components",
+        "Both abiotic and biotic components"
+      ],
+      "correctAnswer": "Both abiotic and biotic components",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417524",
+      "question": "Layer of atmosphere in which ozone layer lies is",
+      "options": [
+        "Troposphere",
+        "Stratosphere",
+        "Exosphere",
+        "Mesosphere"
+      ],
+      "correctAnswer": "Stratosphere",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417525",
+      "question": "The canonical sum of product form of the function $y(A,B)=A+B$ is",
+      "options": [
+        "$AB+BB+A'A$",
+        "$AB+A'B+A'B'$",
+        "$BA+BA'+A'B'$",
+        "$AB+AB'+A'B$"
+      ],
+      "correctAnswer": "$AB+AB'+A'B$",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417526",
+      "question": "$(A+B)(A'B')=?$",
+      "options": [
+        "1",
+        "0",
+        "AB",
+        "$AB'$"
+      ],
+      "correctAnswer": "0",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417527",
+      "question": "Each \"1\" entry in a K-map square represents:",
+      "options": [
+        "A HIGH for each input truth table condition that produces a HIGH output",
+        "A HIGH output on the truth table for all LOW input combinations",
+        "A LOW output for all possible HIGH input conditions",
+        "A DON'T CARE condition for all possible input truth table combinations"
+      ],
+      "correctAnswer": "A HIGH for each input truth table condition that produces a HIGH output",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417528",
+      "question": "The Register is a type of",
+      "options": [
+        "Combinational circuit",
+        "Sequential circuit",
+        "CPU",
+        "Latches"
+      ],
+      "correctAnswer": "Sequential circuit",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417529",
+      "question": "The output sum of two decimal digits can be represented in",
+      "options": [
+        "Gray Code",
+        "Excess-3",
+        "BCD",
+        "Hexadecimal"
+      ],
+      "correctAnswer": "Hexadecimal",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417530",
+      "question": "A basic S-R flip-flop can be constructed by cross-coupling of which basic logic gates?",
+      "options": [
+        "AND or OR gates",
+        "XOR or XNOR gates",
+        "NOR or AND gates",
+        "NAND or NOR gates"
+      ],
+      "correctAnswer": "NAND or NOR gates",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417531",
+      "question": "If A and B are the inputs of a half adder, the sum is given by",
+      "options": [
+        "A AND B",
+        "A OR B",
+        "A XOR B",
+        "A EXOR B"
+      ],
+      "correctAnswer": "A XOR B",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417532",
+      "question": "If one wants to design a binary counter, preferred type of flip-flop is",
+      "options": [
+        "D type",
+        "S-R type",
+        "Latch",
+        "J-K type"
+      ],
+      "correctAnswer": "J-K type",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417533",
+      "question": "Among the following layers which Layer is responsible for Token management?",
+      "options": [
+        "Physical",
+        "Application",
+        "Session",
+        "Network"
+      ],
+      "correctAnswer": "Session",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417534",
+      "question": "In TCP/IP, The protocol SMTP is used in which layer?",
+      "options": [
+        "Application",
+        "Host-network",
+        "Transport",
+        "Association"
+      ],
+      "correctAnswer": "Application",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417535",
+      "question": "Sending a message to a particular group can be named as",
+      "options": [
+        "Multicasting",
+        "Broadcasting",
+        "point-point",
+        "Unicasting"
+      ],
+      "correctAnswer": "Multicasting",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417536",
+      "question": "Among the following Topologies which topology is the reliable one",
+      "options": [
+        "Star",
+        "Ring",
+        "Mesh",
+        "Bus"
+      ],
+      "correctAnswer": "Mesh",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417537",
+      "question": "Which of the following cables work based on Light?",
+      "options": [
+        "co_axial",
+        "copper",
+        "twisted pair",
+        "optical"
+      ],
+      "correctAnswer": "optical",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417538",
+      "question": "Among the following devices which is used for signal strengths?",
+      "options": [
+        "Repeaters",
+        "Hubs",
+        "Switches",
+        "bridges"
+      ],
+      "correctAnswer": "Repeaters",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417539",
+      "question": "In which of the following networks token bus will be used?",
+      "options": [
+        "point_point",
+        "Broadcast",
+        "Unicast",
+        "Multicast"
+      ],
+      "correctAnswer": "Broadcast",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417540",
+      "question": "When an email is sent from SMTP protocol which port will receive at the destination?",
+      "options": [
+        "25",
+        "31",
+        "45",
+        "86"
+      ],
+      "correctAnswer": "25",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417541",
+      "question": "The IP address 192.168.2.42 belongs to which of the following?",
+      "options": [
+        "class A",
+        "class B",
+        "class C",
+        "class D"
+      ],
+      "correctAnswer": "class C",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417542",
+      "question": "When searching a website which of the following protocol is helpful?",
+      "options": [
+        "SMTP",
+        "HTTP",
+        "FTP",
+        "TELNET"
+      ],
+      "correctAnswer": "HTTP",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417543",
+      "question": "The _________ format is usually used to store data.",
+      "options": [
+        "BCD",
+        "Decimal",
+        "Hecadecimal",
+        "Octal"
+      ],
+      "correctAnswer": "BCD",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417544",
+      "question": "The ALU makes use of _________ to store the intermediate results.",
+      "options": [
+        "Accumulators",
+        "Registers",
+        "Heap",
+        "Stack"
+      ],
+      "correctAnswer": "Registers",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417545",
+      "question": "The addressing mode, where you directly specify the operand value is",
+      "options": [
+        "Relative",
+        "Direct",
+        "Definite",
+        "Immediate"
+      ],
+      "correctAnswer": "Immediate",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417546",
+      "question": "PROM stands for",
+      "options": [
+        "Pre-fed Read Only Memory",
+        "Programmable Read Only Memory",
+        "Pre-required Read Only Memory",
+        "Programmed Read Only Memory"
+      ],
+      "correctAnswer": "Programmable Read Only Memory",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417547",
+      "question": "Executing an instruction involves the following phases",
+      "options": [
+        "Instruction Decoding and Instruction Storage",
+        "Instruction Storage and Instruction Execution",
+        "Instruction Fetch and Instruction Execution",
+        "Instruction Fetch and Instruction Processing"
+      ],
+      "correctAnswer": "Instruction Fetch and Instruction Execution",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417548",
+      "question": "An interrupt that can be temporarily ignored is",
+      "options": [
+        "Vectored interrupt",
+        "Maskable interrupt",
+        "Non-Maskable interrupt",
+        "High priority interrupt"
+      ],
+      "correctAnswer": "Maskable interrupt",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417549",
+      "question": "Both the CISC and RISC architectures have been developed to reduce the",
+      "options": [
+        "Cost",
+        "Time delay",
+        "Turnaround time",
+        "Semantic gap"
+      ],
+      "correctAnswer": "Semantic gap",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417550",
+      "question": "Which of the following is Fastest memory?",
+      "options": [
+        "Cache",
+        "RAM",
+        "Register",
+        "Secondary storage"
+      ],
+      "correctAnswer": "Register",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417551",
+      "question": "The DMA transfers are performed by a control circuit called as",
+      "options": [
+        "Device interface",
+        "DMA controller",
+        "Data controller",
+        "Overlooker"
+      ],
+      "correctAnswer": "DMA controller",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417552",
+      "question": "When we perform subtraction on -7 and 1 the answer in 2's compliment form is",
+      "options": [
+        "1010",
+        "1110",
+        "0110",
+        "1000"
+      ],
+      "correctAnswer": "1000",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417553",
+      "question": "What is the value of X in this C Code? `float X=2*4/5+6;`",
+      "options": [
+        "Compile time error",
+        "7.600000",
+        "7.000000",
+        "7"
+      ],
+      "correctAnswer": "7.000000",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417554",
+      "question": "Which of the following is not a Linear Data Structure?",
+      "options": [
+        "Arrays",
+        "Graphs",
+        "Linked Lists",
+        "Queues"
+      ],
+      "correctAnswer": "Graphs",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417555",
+      "question": "What is the Worst-Case Time complexity to search key in array of size N using Binary Search?",
+      "options": [
+        "$O(N)$",
+        "$O(N^{2})$",
+        "$O(1)$",
+        "$O(log~N)$"
+      ],
+      "correctAnswer": "$O(log~N)$",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417556",
+      "question": "Number of Nodes in a full Binary tree with n leaves is",
+      "options": [
+        "2n-1",
+        "logn-1",
+        "$n^{2}-1$",
+        "$n^{2}+1$"
+      ],
+      "correctAnswer": "2n-1",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417557",
+      "question": "If the given input array is sorted or nearly sorted, which of the following algorithm gives the best performance?",
+      "options": [
+        "Quick sort",
+        "Selection sort",
+        "Insertion sort",
+        "Merge sort"
+      ],
+      "correctAnswer": "Insertion sort",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417558",
+      "question": "What is the output of the following C Code? `int x=10, y; y=x++; y=++x; printf(\"%d %d\",x,y);`",
+      "options": [
+        "10 12",
+        "12 12",
+        "12 10",
+        "10 10"
+      ],
+      "correctAnswer": "12 12",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417559",
+      "question": "The type of the controlling expression of a switch statement cannot be of the type",
+      "options": [
+        "int",
+        "char",
+        "short",
+        "float"
+      ],
+      "correctAnswer": "float",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417560",
+      "question": "What is the output of the following C Code? `void main() { int i; for(i=0;i<10;i++) printf(\"%d\",i); }`",
+      "options": [
+        "Syntax error",
+        "0123456789",
+        "012345678910",
+        "10"
+      ],
+      "correctAnswer": "0123456789",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417561",
+      "question": "Which of the following is the function used to read mixed type of data from file?",
+      "options": [
+        "fscanf()",
+        "fprintf()",
+        "fgets()",
+        "ftell()"
+      ],
+      "correctAnswer": "fscanf()",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417562",
+      "question": "The first micro-processor had a/an",
+      "options": [
+        "1-bit data bus",
+        "2- bit data bus",
+        "3-bit data bus",
+        "4-bit data bus"
+      ],
+      "correctAnswer": "4-bit data bus",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417563",
+      "question": "Intel's 8086 was launched in the year",
+      "options": [
+        "1971",
+        "1972",
+        "1974",
+        "1978"
+      ],
+      "correctAnswer": "1978",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417564",
+      "question": "The registers of 8086 are _________ bits in size.",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "20"
+      ],
+      "correctAnswer": "16",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417565",
+      "question": "_________ register is used as a default counter in case of string and loop instructions.",
+      "options": [
+        "AX",
+        "BX",
+        "CX",
+        "DX"
+      ],
+      "correctAnswer": "CX",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417566",
+      "question": "The numbers of address and data lines of 8086 are _________ and _________ respectively.",
+      "options": [
+        "8 and 8",
+        "16 and 16",
+        "20 and 16",
+        "16 and 20"
+      ],
+      "correctAnswer": "20 and 16",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417567",
+      "question": "_________ is the most important segment that contains the actual assembly language instructions to be executed by the microprocessor.",
+      "options": [
+        "Data segment",
+        "Code segment",
+        "Stack segment",
+        "Extra segment"
+      ],
+      "correctAnswer": "Code segment",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417568",
+      "question": "The instruction, MOV AX, [2500H] is an example of",
+      "options": [
+        "immediate addressing mode",
+        "direct addressing mode",
+        "indirect addressing mode",
+        "register addressing mode"
+      ],
+      "correctAnswer": "direct addressing mode",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417569",
+      "question": "The instruction, JMP 5000H:2000H, is an example of",
+      "options": [
+        "intrasegment direct mode",
+        "intrasegment indirect mode",
+        "intersegment direct mode",
+        "intersegment indirect mode"
+      ],
+      "correctAnswer": "intersegment direct mode",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417570",
+      "question": "During the instruction cycle of 80386, any debug fault can be ignored if",
+      "options": [
+        "VM flag is set",
+        "VM flag is cleared",
+        "RF is cleared",
+        "RF is set"
+      ],
+      "correctAnswer": "RF is set",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417571",
+      "question": "The 16 bit flag of 8086 microprocessor is responsible to indicate",
+      "options": [
+        "The condition of result of ALU operation",
+        "The condition of memory",
+        "The result of addition",
+        "The result of subtraction"
+      ],
+      "correctAnswer": "The condition of result of ALU operation",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417572",
+      "question": "The processes that are residing in main memory and are ready and waiting to execute are kept on a list called",
+      "options": [
+        "Job queue",
+        "Ready queue",
+        "Execution queue",
+        "Process queue"
+      ],
+      "correctAnswer": "Ready queue",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417573",
+      "question": "Processes are executed in the sequence they arrive if _________ rule sequences the jobs.",
+      "options": [
+        "Earliest due date",
+        "Slack time remaining",
+        "First Come First Served",
+        "Critical ratio"
+      ],
+      "correctAnswer": "First Come First Served",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417574",
+      "question": "A System Program that combines the separately compiled modules of a program into a form suitable for execution is",
+      "options": [
+        "Assembler",
+        "Linking loader",
+        "cross compiler",
+        "load and go"
+      ],
+      "correctAnswer": "Linking loader",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417575",
+      "question": "In which addressing mode the contents of a register specified in the instruction are first decremented, and then these contents are used as the effective address of the operands?",
+      "options": [
+        "index addressing",
+        "indirect addressing",
+        "auto increment",
+        "auto decrement"
+      ],
+      "correctAnswer": "auto decrement",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417576",
+      "question": "A deadlock avoidance algorithm dynamically examines the _________ to ensure that a circular wait condition can never exist.",
+      "options": [
+        "Resource allocation state",
+        "System storage state",
+        "Operating system",
+        "Resources"
+      ],
+      "correctAnswer": "Resource allocation state",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417577",
+      "question": "The disadvantage of invoking the detection algorithm for every request is:",
+      "options": [
+        "overhead of the detection algorithm due to consumption of memory",
+        "excessive time consumed in the request to be allocated memory",
+        "considerable overhead in computation time",
+        "either deadlock exists or system is in a safe state"
+      ],
+      "correctAnswer": "considerable overhead in computation time",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417578",
+      "question": "A _________ on free space management has the advantage that it relatively easy to find one or a contiguous group of free blocks.",
+      "options": [
+        "Bit table",
+        "Chained Free Portion",
+        "Indexing",
+        "Free Block List"
+      ],
+      "correctAnswer": "Free Block List",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417579",
+      "question": "The memory which allocates space for DOS and application is called",
+      "options": [
+        "Expanded memory",
+        "Cache memory",
+        "Virtual memory",
+        "Conventional memory"
+      ],
+      "correctAnswer": "Conventional memory",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417580",
+      "question": "Which of the following statements is false?",
+      "options": [
+        "You can find deleted files in recycle bin",
+        "You can restore any files in recycle bin if you ever need",
+        "You can increase free space of disk by sending files in recycle bin",
+        "You can right click and choose Empty Recycle Bin to clean it at once"
+      ],
+      "correctAnswer": "You can increase free space of disk by sending files in recycle bin",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417581",
+      "question": "Which menu bar selection would you access to open file?",
+      "options": [
+        "Option",
+        "Help",
+        "View",
+        "Tool"
+      ],
+      "correctAnswer": "View",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417582",
+      "question": "The primary purpose of an operating system is:",
+      "options": [
+        "To make the most efficient use of the computer hardware",
+        "To allow people to use the computer",
+        "To keep systems programmers employed",
+        "To make computers easier to use"
+      ],
+      "correctAnswer": "To make the most efficient use of the computer hardware",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417583",
+      "question": "Which of the following is an example of a real time operating system?",
+      "options": [
+        "Lynx",
+        "MS DOS",
+        "Windows XP",
+        "RT Linux"
+      ],
+      "correctAnswer": "RT Linux",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417584",
+      "question": "A relational database consists of a collection of",
+      "options": [
+        "Tables",
+        "Fields",
+        "Records",
+        "Keys"
+      ],
+      "correctAnswer": "Tables",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417585",
+      "question": "For each attribute of a relation, there is a set of permitted values, called the _________ of that attribute.",
+      "options": [
+        "Relation",
+        "Schema",
+        "Domain",
+        "Set"
+      ],
+      "correctAnswer": "Domain",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417586",
+      "question": "Which of the following contains a complete record of all activity that affected the contents of a database during a certain period of time?",
+      "options": [
+        "query language",
+        "report writer",
+        "transaction log",
+        "data manipulation language"
+      ],
+      "correctAnswer": "transaction log",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417587",
+      "question": "The statement in SQL which allows to change the definition of a table is",
+      "options": [
+        "ALTER",
+        "UPDATE",
+        "CREATE",
+        "SELECT"
+      ],
+      "correctAnswer": "ALTER",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417588",
+      "question": "The wildcard in a WHERE clause is useful when?",
+      "options": [
+        "An exact match is necessary in a SELECT statement.",
+        "An exact match is not possible in a SELECT statement.",
+        "An exact match is necessary in a CREATE statement.",
+        "An exact match is not possible in a CREATE statement."
+      ],
+      "correctAnswer": "An exact match is not possible in a SELECT statement.",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417589",
+      "question": "When three or more AND and OR conditions are combined, it is easier to use the SQL keyword(s):",
+      "options": [
+        "LIKE Only",
+        "IN only",
+        "NOT IN only",
+        "Both IN and NOT IN"
+      ],
+      "correctAnswer": "Both IN and NOT IN",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417590",
+      "question": "Given the basic ER and relational models, which of the following is INCORRECT?",
+      "options": [
+        "An attribute of an entity can have more than one value",
+        "An attribute of an entity can be composite",
+        "In a row of a relational table, an attribute can have more than one value",
+        "In a row of a relational table, an attribute can have exactly one value or a NULL value"
+      ],
+      "correctAnswer": "In a row of a relational table, an attribute can have more than one value",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417591",
+      "question": "Which of the following is TRUE?",
+      "options": [
+        "Every relation in 3NF is also in BCNF",
+        "Every relation in BCNF is also in 3NF",
+        "A relation R is in 3NF if every non-prime attribute of R is fully functionally dependent on every key of R",
+        "No relation can be in both BCNF and 3NF"
+      ],
+      "correctAnswer": "Every relation in BCNF is also in 3NF",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417592",
+      "question": "A selection of the form giving all the records not satisfying simple individual conditions is",
+      "options": [
+        "Conjunctive selection",
+        "Disjunctive selection",
+        "Negation",
+        "Conjunctive selection by intersection of identifiers"
+      ],
+      "correctAnswer": "Disjunctive selection",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417593",
+      "question": "The lowest level operator to access data in query processing is",
+      "options": [
+        "File scan",
+        "File manipulation",
+        "File handling",
+        "File organization"
+      ],
+      "correctAnswer": "File scan",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417594",
+      "question": "The process of making a function to exhibit different behaviors in different instances is called",
+      "options": [
+        "function overloading",
+        "operator overloading",
+        "inheritance",
+        "polymorphism"
+      ],
+      "correctAnswer": "polymorphism",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417595",
+      "question": "The _________ principle helps the programmer to build secure programs.",
+      "options": [
+        "operator overloading",
+        "encapsulation",
+        "data hiding",
+        "polymorphism"
+      ],
+      "correctAnswer": "encapsulation",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417596",
+      "question": "In a class, encapsulating an object of another class is called",
+      "options": [
+        "Composition",
+        "Inheritance",
+        "Encapsulation",
+        "Polymorphism"
+      ],
+      "correctAnswer": "Composition",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417597",
+      "question": "If you want to write multiple functions in a class with same name, then what C++ feature will you use?",
+      "options": [
+        "Function Overriding",
+        "Function overloading",
+        "Encapsulation",
+        "Inheritance"
+      ],
+      "correctAnswer": "Function overloading",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417598",
+      "question": "In C++, Class object created statically and dynamically are stored in the following memories respectively.",
+      "options": [
+        "Stack, Heap",
+        "heap, Heap",
+        "Heap, Stack",
+        "Stack, Stack"
+      ],
+      "correctAnswer": "Stack, Heap",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417599",
+      "question": "Which of the following statements is correct in C++?",
+      "options": [
+        "C++ allows any operator to be overloaded.",
+        "Some of the existing operators cannot be overloaded.",
+        "Operator precedence cannot be changed",
+        "reduces the compilation time"
+      ],
+      "correctAnswer": "Some of the existing operators cannot be overloaded.",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417600",
+      "question": "Which of the following operators cannot be overloaded?",
+      "options": [
+        ".",
+        "?",
+        "::",
+        "?"
+      ],
+      "correctAnswer": "::",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417601",
+      "question": "The fields in a structure of a C program are by default",
+      "options": [
+        "Protected",
+        "Public",
+        "Private",
+        "Void"
+      ],
+      "correctAnswer": "Public",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417602",
+      "question": "Blanks, tabs, newlines, form feeds and comments are collectively called",
+      "options": [
+        "Blank Fields",
+        "White Space",
+        "Null Values",
+        "Literals"
+      ],
+      "correctAnswer": "White Space",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417603",
+      "question": "Use of existing assets in some form within software product development process is termed as",
+      "options": [
+        "Reusability",
+        "Usability",
+        "Robust",
+        "Reboot"
+      ],
+      "correctAnswer": "Reusability",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417604",
+      "question": "Size of float and double in Java is",
+      "options": [
+        "32 and 64",
+        "64 and 64",
+        "32 and 32",
+        "64 and 32"
+      ],
+      "correctAnswer": "32 and 64",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417605",
+      "question": "The prototype of the default constructor is",
+      "options": [
+        "Set()",
+        "Set (void)",
+        "Public Set ()",
+        "Public Set (void)"
+      ],
+      "correctAnswer": "Public Set ()",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417606",
+      "question": "What is the output of the following program? `boolean a = true; boolean b = false; boolean c = a ^ b; System.out.println(!c);`",
+      "options": [
+        "0",
+        "True",
+        "False",
+        "1"
+      ],
+      "correctAnswer": "False",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417607",
+      "question": "Given the following code fragment, What is the value of $A[3]$? `int A[]; int i=0; A=new int A[4]; while (i<4) { A[i]=10; i=i+1; }`",
+      "options": [
+        "0",
+        "3",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "10",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417608",
+      "question": "Which class cannot be subclassed (or extended) in java?",
+      "options": [
+        "Abstract class",
+        "Parent class",
+        "Final class",
+        "Sub Class"
+      ],
+      "correctAnswer": "Final class",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417609",
+      "question": "Thread class is available in",
+      "options": [
+        "java.io package",
+        "java.lang package",
+        "java.awt package",
+        "java.util package"
+      ],
+      "correctAnswer": "java.lang package",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417610",
+      "question": "Which of the operator is used to generate an instance of an exception than can be thrown by using throw?",
+      "options": [
+        "new",
+        "malloc",
+        "alloc",
+        "thrown"
+      ],
+      "correctAnswer": "new",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417611",
+      "question": "String is the predefined",
+      "options": [
+        "Method",
+        "Class",
+        "Variable",
+        "Object"
+      ],
+      "correctAnswer": "Class",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417612",
+      "question": "Which of these methods can be used to output a string in an applet?",
+      "options": [
+        "display()",
+        "print()",
+        "drawString()",
+        "transient()"
+      ],
+      "correctAnswer": "drawString()",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417613",
+      "question": "Which of these keywords is used by a class to use an interface defined previously?",
+      "options": [
+        "import",
+        "export",
+        "implements",
+        "variables passing"
+      ],
+      "correctAnswer": "implements",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417614",
+      "question": "Which of the following statement is true?",
+      "options": [
+        "Attribute names must be in uppercase",
+        "Attribute values must be quoted",
+        "Attribute minimization is mandatory",
+        "Attribute value must not be quoted"
+      ],
+      "correctAnswer": "Attribute value must not be quoted",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417615",
+      "question": "What will be the output of the following PHP code? `<?php $color = \"maroon\"; $var = $color[2]; echo \"$var\"; ?>`",
+      "options": [
+        "A",
+        "Error",
+        "$var",
+        "r"
+      ],
+      "correctAnswer": "r",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417616",
+      "question": "Correct HTML tag for the largest heading is",
+      "options": [
+        "<head>",
+        "<h6>",
+        "<heading>",
+        "<h1>"
+      ],
+      "correctAnswer": "<h1>",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417617",
+      "question": "Which one of the following functions will convert a string to all uppercase letters?",
+      "options": [
+        "strtoupper()",
+        "uppercase()",
+        "str_uppercase()",
+        "struppercase()"
+      ],
+      "correctAnswer": "strtoupper()",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417618",
+      "question": "Which attribute is used to extend the lifetime of a cookie?",
+      "options": [
+        "higher-age",
+        "increase-age",
+        "max-age",
+        "lifetime"
+      ],
+      "correctAnswer": "max-age",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417619",
+      "question": "If you are using the DataSet and you have to display the data in sorted order what will you do?",
+      "options": [
+        "Use Sort method of Data Table",
+        "Use Sort method of DataSet",
+        "Use DataView object with each sort",
+        "Use datapaging and sort the data"
+      ],
+      "correctAnswer": "Use DataView object with each sort",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417620",
+      "question": "What are the three primary kinds of parameters?",
+      "options": [
+        "Input, Integer, String",
+        "Integer, String, DateTime",
+        "int, varchar, nvarchar",
+        "Input, Output, InputOutput"
+      ],
+      "correctAnswer": "Input, Output, InputOutput",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417621",
+      "question": "Which of the following is not the method of DataAdapter?",
+      "options": [
+        "Fill",
+        "Schema",
+        "ReadData",
+        "Update"
+      ],
+      "correctAnswer": "ReadData",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417622",
+      "question": "Which of the following method of the command object is best suited when you have aggregate functions in a SELECT statement?",
+      "options": [
+        "ExecuteScalar",
+        "ExecuteReader",
+        "ExecuteNonQuery",
+        "Execute"
+      ],
+      "correctAnswer": "ExecuteScalar",
+      "topic": "Computer Science and Engineering"
+    },
+    {
+      "id": "67809417623",
+      "question": "ADO.NET provides the ability to create and process in-memory databases called:",
+      "options": [
+        "Views",
+        "Relations",
+        "Tables",
+        "Datasets"
+      ],
+      "correctAnswer": "Datasets",
+      "topic": "Computer Science and Engineering"
     }
-]
+  ]

@@ -1,72 +1,2403 @@
 [
     {
-        "id": 1,
-        "question": "What is Ohm's Law?",
-        "options": ["V = IR", "P = VI", "V = I/R", "I = V/R^2"],
-        "correctAnswer": "V = IR",
-        "topic": "Basic Electrical Engineering"
+      "id": "67809439057",
+      "question": "The adjoint of $$A=\\begin{pmatrix}1&4&-2\\\\-2&-5&4\\\\1&-2&1\\end{pmatrix}$$ is",
+      "options": [
+        "$$\\begin{pmatrix}1&4&-2\\\\-2&-5&4\\\\1&-2&1\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}3&0&6\\\\6&3&0\\\\9&6&3\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}3&2&1\\\\4&1&-1\\\\0&3&4\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}1&4&-2\\\\-2&-5&4\\\\1&-2&1\\end{pmatrix}$$"
+      ],
+      "correctAnswer": "$$\\begin{pmatrix}3&0&6\\\\6&3&0\\\\9&6&3\\end{pmatrix}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 2,
-        "question": "A transformer is used to...",
-        "options": ["Change AC to DC", "Change DC to AC", "Step up or step down AC voltage", "Step up or step down DC voltage"],
-        "correctAnswer": "Step up or step down AC voltage",
-        "topic": "A.C Machines"
+      "id": "67809439058",
+      "question": "If A is a square matrix of order 3 then (adj A)A=",
+      "options": [
+        "A $\\cdot$ (adj A)",
+        "A $\\times$ (adj A)",
+        "A - (adj A)",
+        "A + (adj A)"
+      ],
+      "correctAnswer": "A $\\cdot$ (adj A)",
+      "topic": "Mathematics"
     },
     {
-        "id": 3,
-        "question": "The unit of electrical power is:",
-        "options": ["Volt", "Ampere", "Watt", "Ohm"],
-        "correctAnswer": "Watt",
-        "topic": "Basic Electrical Engineering"
+      "id": "67809439059",
+      "question": "The inverse of $$A=\\begin{pmatrix}2&3\\\\2&5\\end{pmatrix}$$ is",
+      "options": [
+        "$$\\begin{pmatrix}5/4&-3/4\\\\1/2&1/2\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}5/4&3/4\\\\-1/2&1/2\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}5/4&-5/4\\\\-1/2&1/2\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}5/4&-3/4\\\\-1/2&1/2\\end{pmatrix}$$"
+      ],
+      "correctAnswer": "$$\\begin{pmatrix}5/4&-3/4\\\\-1/2&1/2\\end{pmatrix}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 4,
-        "question": "Which motor is commonly used in ceiling fans?",
-        "options": ["DC Series Motor", "Synchronous Motor", "Single-phase Induction Motor", "Universal Motor"],
-        "correctAnswer": "Single-phase Induction Motor",
-        "topic": "A.C Motors"
+      "id": "67809439060",
+      "question": "If $$A=\\begin{pmatrix}3&2&x\\\\4&1&-1\\\\0&3&4\\end{pmatrix}$$ is a singular matrix then the value of x is",
+      "options": [
+        "$$\\frac{11}{12}$$",
+        "$$-\\frac{11}{12}$$",
+        "$$\\frac{13}{12}$$",
+        "$$\\frac{5}{4}$$"
+      ],
+      "correctAnswer": "$$\\frac{11}{12}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 5,
-        "question": "What does a fuse do in a circuit?",
-        "options": ["Increases current", "Decreases current", "Protects from overcurrent", "Stores energy"],
-        "correctAnswer": "Protects from overcurrent",
-        "topic": "Protection of Power Systems"
+      "id": "67809439061",
+      "question": "If $$A=\\begin{pmatrix}3&1\\\\-1&2\\end{pmatrix}$$ then $$A^2-5A+7I$$ is",
+      "options": [
+        "$$\\begin{pmatrix}1&0\\\\0&1\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}0&3\\\\2&0\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}0&0\\\\0&0\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}2&3\\\\2&5\\end{pmatrix}$$"
+      ],
+      "correctAnswer": "$$\\begin{pmatrix}0&0\\\\0&0\\end{pmatrix}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 6,
-        "question": "A device that converts electrical energy into mechanical energy is a:",
-        "options": ["Generator", "Motor", "Transformer", "Inverter"],
-        "correctAnswer": "Motor",
-        "topic": "D.C Machines"
+      "id": "67809439062",
+      "question": "Resolve $$\\frac{3x+7}{(x-1)(x-2)}$$ into partial fractions",
+      "options": [
+        "$$\\frac{12}{(x-2)}-\\frac{10}{(x-1)}$$",
+        "$$\\frac{13}{(x-2)}-\\frac{10}{(x-1)}$$",
+        "$$\\frac{13}{(x-5)}-\\frac{10}{(x-1)}$$",
+        "$$\\frac{13}{(x-2)}-\\frac{10}{(x-7)}$$"
+      ],
+      "correctAnswer": "$$\\frac{13}{(x-2)}-\\frac{10}{(x-1)}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 7,
-        "question": "What is the frequency of AC mains in India?",
-        "options": ["60 Hz", "50 Hz", "100 Hz", "120 Hz"],
-        "correctAnswer": "50 Hz",
-        "topic": "A.C Circuits"
+      "id": "67809439063",
+      "question": "Resolve $$\\frac{5x^2+1}{x^3-1}$$ into partial fractions",
+      "options": [
+        "$$\\frac{12}{(x-2)}-\\frac{10}{(x-1)}$$",
+        "$$\\frac{13}{(x-2)}-\\frac{10}{(x-1)}$$",
+        "$$\\frac{13}{(x-5)}-\\frac{10}{(x-1)}$$",
+        "$$\\frac{2}{(x-1)}+\\frac{3x+1}{x^2+x+1}$$"
+      ],
+      "correctAnswer": "$$\\frac{2}{(x-1)}+\\frac{3x+1}{x^2+x+1}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 8,
-        "question": "A diode allows current to flow in:",
-        "options": ["One direction", "Both directions", "No direction", "Depends on voltage"],
-        "correctAnswer": "One direction",
-        "topic": "Basic Electronics"
+      "id": "67809439064",
+      "question": "If $tan^2\\theta+sec\\theta=5$ then the value of $$cos\\theta$$ is",
+      "options": [
+        "$$\\frac{-1}{3}$$ or $$\\frac{1}{2}$$",
+        "$$-\\frac{11}{12}$$ or 1/2",
+        "$$\\frac{13}{12}$$ or $$\\frac{-1}{3}$$",
+        "$$\\frac{5}{4}$$ or 1/2"
+      ],
+      "correctAnswer": "$$\\frac{-1}{3}$$ or $$\\frac{1}{2}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 9,
-        "question": "What does PLC stand for?",
-        "options": ["Programmable Logic Controller", "Program Logic Control", "Power Line Carrier", "Programmable Lighting Control"],
-        "correctAnswer": "Programmable Logic Controller",
-        "topic": "PLC and C Language"
+      "id": "67809439065",
+      "question": "The value of $$16sin^3\\theta+8cos^3\\theta$$ is",
+      "options": [
+        "3",
+        "1",
+        "-3",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
     },
     {
-        "id": 10,
-        "question": "The primary source of power in an Electric Vehicle is:",
-        "options": ["Engine", "Battery", "Solar Panel", "Generator"],
-        "correctAnswer": "Battery",
-        "topic": "Electrical Vehicles"
+      "id": "67809439066",
+      "question": "If $$sin\\alpha=\\frac{15}{17}$$, $$cos\\beta=\\frac{12}{13}$$ then the value of $$sin(\\alpha+\\beta)$$ is",
+      "options": [
+        "$$\\frac{110}{105}$$",
+        "$$-\\frac{121}{152}$$",
+        "$$\\frac{220}{221}$$",
+        "$$\\frac{5}{4}$$"
+      ],
+      "correctAnswer": "$$\\frac{220}{221}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439067",
+      "question": "The value of $$cos~20^\\circ cos~40^\\circ cos~60^\\circ cos~80^\\circ$$ is",
+      "options": [
+        "$$\\frac{11}{12}$$",
+        "$$\\frac{1}{16}$$",
+        "$$\\frac{13}{12}$$",
+        "$$\\frac{5}{4}$$"
+      ],
+      "correctAnswer": "$$\\frac{1}{16}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439068",
+      "question": "The value of $$\\frac{cos~17^\\circ+sin~17^\\circ}{cos~17^\\circ-sin~17^\\circ}$$ is",
+      "options": [
+        "$$cos~20^\\circ$$",
+        "$$tan~65^\\circ$$",
+        "$$tan~60^\\circ$$",
+        "$$tan~62^\\circ$$"
+      ],
+      "correctAnswer": "$$tan~62^\\circ$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439069",
+      "question": "The value of $$sin\\frac{\\pi}{5}sin\\frac{2\\pi}{5}sin\\frac{3\\pi}{5}sin\\frac{4\\pi}{5}=$$",
+      "options": [
+        "$$\\frac{4}{15}$$",
+        "$$\\frac{5}{16}$$",
+        "$$-\\frac{5}{16}$$",
+        "$$\\frac{7}{15}$$"
+      ],
+      "correctAnswer": "$$\\frac{5}{16}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439070",
+      "question": "If $$tan^{-1}x+tan^{-1}y+tan^{-1}z=\\frac{\\pi}{2}$$ then the value of $$xy+yz+zx$$ is",
+      "options": [
+        "-1",
+        "3",
+        "5",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439071",
+      "question": "The general solution of $$4cos^2x-3=0$$ is",
+      "options": [
+        "$$2n\\pi\\pm\\frac{\\pi}{6}$$",
+        "$$2n\\pi\\pm\\frac{7\\pi}{6}$$",
+        "$$3n\\pi\\pm\\frac{5\\pi}{6}$$",
+        "$$2n\\pi\\pm\\frac{11\\pi}{6}$$"
+      ],
+      "correctAnswer": "$$2n\\pi\\pm\\frac{\\pi}{6}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439072",
+      "question": "The modulus of a complex number $$\\sqrt{3}+i$$ is",
+      "options": [
+        "-2",
+        "3",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439073",
+      "question": "The value of $$(a-b)^2cos^2(\\frac{c}{2})+(a+b)^2sin^2(\\frac{c}{2})$$ is",
+      "options": [
+        "$$C^3$$",
+        "C",
+        "$$C^5$$",
+        "$$C^2$$"
+      ],
+      "correctAnswer": "$$C^2$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439074",
+      "question": "If $$x+\\frac{1}{x}=2cos\\theta$$ then the value of $$x^n+\\frac{1}{x^n}$$ is",
+      "options": [
+        "2 cos n$\\theta$",
+        "-2 cos n$\\theta$",
+        "3 cos $\\theta$",
+        "2 sin n$\\theta$"
+      ],
+      "correctAnswer": "2 cos n$\\theta$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439075",
+      "question": "The value of $$2tan^{-1}(\\frac{1}{3})+tan^{-1}(\\frac{1}{7})$$ is",
+      "options": [
+        "$$\\frac{\\pi}{4}$$",
+        "$$-\\frac{\\pi}{4}$$",
+        "$$\\frac{\\pi}{6}$$",
+        "$$\\frac{\\pi}{3}$$"
+      ],
+      "correctAnswer": "$$\\frac{\\pi}{4}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439076",
+      "question": "The length of the major axis of the ellipse: $$4x^2+3y^2=48$$ is",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correctAnswer": "12",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439077",
+      "question": "The Centre of the ellipse: $$9x^2+25y^2-18x+100y-116=0$$ is",
+      "options": [
+        "(2,-1)",
+        "(-1,-2)",
+        "(1,-2)",
+        "(1,2)"
+      ],
+      "correctAnswer": "(1,-2)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439078",
+      "question": "The equation of the parabola with vertex (2,-1) and focus (2,-3) is",
+      "options": [
+        "$$x^2-4x+8y+12=0$$",
+        "$$x^2-4x-8y-12=0$$",
+        "$$x^2+4x-8y-12=0$$",
+        "$$x^2+5x-8y-11=0$$"
+      ],
+      "correctAnswer": "$$x^2-4x+8y+12=0$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439079",
+      "question": "The length of the latus rectum of the hyperbola $$\\frac{x^2}{9}-\\frac{y^2}{16}=1$$ is",
+      "options": [
+        "9 units",
+        "5 units",
+        "6 units",
+        "13 units"
+      ],
+      "correctAnswer": "$$\\frac{32}{3}$$ units",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439080",
+      "question": "If the length of latus rectum is $$\\frac{9}{2}$$ and the distance between its foci is 10 then the equation of hyperbola is",
+      "options": [
+        "$$\\frac{x^2}{16}+\\frac{y^2}{9}=1$$",
+        "$$\\frac{x^2}{18}-\\frac{y^2}{9}=1$$",
+        "$$\\frac{x^2}{16}-\\frac{y^2}{6}=1$$",
+        "$$\\frac{x^2}{16}-\\frac{y^2}{9}=1$$"
+      ],
+      "correctAnswer": "$$\\frac{x^2}{16}-\\frac{y^2}{9}=1$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439081",
+      "question": "The equation of the parabola with focus at (-3,2) and vertex (-2,2) is",
+      "options": [
+        "$$x^2-4x+8y+12=0$$",
+        "$$x^2+5x-8y-11=0$$",
+        "$$y^2+4x-4y+12=0$$",
+        "$$x^2-4x-8y-12=0$$"
+      ],
+      "correctAnswer": "$$y^2+4x-4y+12=0$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439082",
+      "question": "If $$y=\\frac{a+bx}{b-ax}$$ then the derivative of y with respect to x is",
+      "options": [
+        "$$\\frac{a^2+b^2}{(b-ax)^2}$$",
+        "$$\\frac{a^2+b^2}{(b+ax)^2}$$",
+        "$$\\frac{a^2-b^2}{(b-ax)^2}$$",
+        "$$\\frac{a+b}{(b-ax)^2}$$"
+      ],
+      "correctAnswer": "$$\\frac{a^2+b^2}{(b-ax)^2}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439083",
+      "question": "If $$y=\\frac{2+3~sinh~x}{3+2~sinh~x}$$ then the derivative of y with respect to x is",
+      "options": [
+        "$$\\frac{5~cosh~x}{(3+2~sinh~x)^2}$$",
+        "$$\\frac{5~sin~h~x}{(3+2~sin~h~x)^2}$$",
+        "$$\\frac{5~sin~x}{(3-2~cosh~x)^2}$$",
+        "$$\\frac{sinh^2x}{(2-3~sinh~x)^2}$$"
+      ],
+      "correctAnswer": "$$\\frac{5~cosh~x}{(3+2~sinh~x)^2}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439084",
+      "question": "The range of x for which the function $$x^3-3x^2-45x+2$$ is increasing with x is",
+      "options": [
+        "(3,-5)",
+        "(-3,-5)",
+        "(3,5)",
+        "(-3,5)"
+      ],
+      "correctAnswer": "(-3,5)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439085",
+      "question": "If u is a homogeneous function of x and y with degree n then $$x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}=$$",
+      "options": [
+        "nu",
+        "$$n^2u$$",
+        "nu",
+        "$$nu^2+u$$"
+      ],
+      "correctAnswer": "nu",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439086",
+      "question": "The angle between the curves $$y=x^2+3x-7$$ and $$y^2=2x+5$$ at (2,3) is",
+      "options": [
+        "$$tan\\theta=2$$",
+        "$$sec\\theta=2$$",
+        "$$cos\\theta=1$$",
+        "$$sin\\theta=3$$"
+      ],
+      "correctAnswer": "$$tan\\theta=2$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439087",
+      "question": "The maximum value of the function $$2x^3-12x^2+18x+5$$ is",
+      "options": [
+        "13",
+        "12",
+        "10",
+        "15"
+      ],
+      "correctAnswer": "15",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439088",
+      "question": "The three sides of a trapezium are equal each being 6\" long then the area of the trapezium when it is maximum is",
+      "options": [
+        "27 square units",
+        "33 square units",
+        "$$27\\sqrt{3}$$ square units",
+        "$$29\\sqrt{3}$$ square units"
+      ],
+      "correctAnswer": "$$27\\sqrt{3}$$ square units",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439089",
+      "question": "The interval in which the function $$f(x)=x^2log~x$$ is an increasing function is",
+      "options": [
+        "(1,e/2)",
+        "$(2,e^{-1/2})$",
+        "$(0,e^{1/2})$",
+        "$(0,e^{-1/2})$"
+      ],
+      "correctAnswer": "$(0,e^{-1/2})$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439090",
+      "question": "The stationary points and the corresponding values of the function $$f(x)=x^3-9x^2+15x-1$$ is",
+      "options": [
+        "6,-26",
+        "3,-26",
+        "6,26",
+        "-6,-26"
+      ],
+      "correctAnswer": "6,-26",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439091",
+      "question": "If $$u=log(\\frac{x^2+y^2}{x+y})$$ then $$x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}=$$",
+      "options": [
+        "2",
+        "4",
+        "5",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439092",
+      "question": "The value of $$\\int log~x~dx$$ is",
+      "options": [
+        "x log x + x + c",
+        "$$x^2log~x-x+c$$",
+        "x log x - x + c",
+        "x log x - $$\\frac{x^2}{2}$$ + c"
+      ],
+      "correctAnswer": "x log x - x + c",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439093",
+      "question": "The value of $$lim_{n\\rightarrow\\infty}[\\frac{1}{n+1}+\\frac{1}{n+2}+\\cdot\\cdot\\cdot+\\frac{1}{n+n}]$$ is",
+      "options": [
+        "log 2",
+        "log 3",
+        "-log 2",
+        "log n"
+      ],
+      "correctAnswer": "log 2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439094",
+      "question": "The value of $$\\int\\frac{cos\\sqrt{x}}{\\sqrt{x}}dx$$ is",
+      "options": [
+        "$$2sin\\sqrt{x}+c$$",
+        "$$3sin\\sqrt{x}+c$$",
+        "$$2sin~x+c$$",
+        "$$sin\\sqrt{x}+c$$"
+      ],
+      "correctAnswer": "$$2sin\\sqrt{x}+c$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439095",
+      "question": "The area enclosed between the curve $$y^2=4ax$$ and the line $$x=2y$$ is",
+      "options": [
+        "$$\\frac{64}{5}sq$$ units",
+        "$$\\frac{64}{3}sq$$ units",
+        "$$\\frac{65}{4}Sq$$ units",
+        "$$\\frac{63}{4}SC$$ units"
+      ],
+      "correctAnswer": "$$\\frac{64}{3}sq$$ units",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439096",
+      "question": "The value of $$\\int_1^{\\pi/2}sin^2x~dx$$ is",
+      "options": [
+        "$$\\frac{\\pi}{2}$$",
+        "$$-\\frac{\\pi}{4}$$",
+        "$$\\frac{\\pi}{6}$$",
+        "$$\\frac{\\pi}{4}$$"
+      ],
+      "correctAnswer": "$$\\frac{\\pi}{4}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439097",
+      "question": "The value of $$\\int_1^4(\\sqrt{x}+\\frac{1}{\\sqrt{x}})dx$$ is",
+      "options": [
+        "$$\\frac{20}{3}$$",
+        "$$-\\frac{20}{3}$$",
+        "$$\\frac{10}{3}$$",
+        "$$\\frac{15}{3}$$"
+      ],
+      "correctAnswer": "$$\\frac{20}{3}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439098",
+      "question": "The value of $$\\int_0^{\\pi/4}\\sqrt{1+sin~2x}dx=$$",
+      "options": [
+        "-1",
+        "3",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439099",
+      "question": "The value of $$\\int_0^{\\pi/2}\\frac{sin~x}{1+cos^2x}dx=$$",
+      "options": [
+        "$$\\frac{\\pi}{4}$$",
+        "$$-\\pi/4$$",
+        "$$\\frac{\\pi}{3}$$",
+        "$$\\pi/2$$"
+      ],
+      "correctAnswer": "$$\\frac{\\pi}{4}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439100",
+      "question": "The particular integral of $$(D^2+5D+6)y=e^x$$ is",
+      "options": [
+        "$$\\frac{-e^{-x}}{12}$$",
+        "$$\\frac{e^{2x}}{12}$$",
+        "$$\\frac{e^x}{12}$$",
+        "$$\\frac{e^x}{6}$$"
+      ],
+      "correctAnswer": "$$\\frac{e^x}{12}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439101",
+      "question": "Form the differential equation by eliminating the arbitrary constant a from $$ay^2=x^3$$",
+      "options": [
+        "$$\\frac{dy}{dx}=\\frac{3y}{2x}$$",
+        "$$\\frac{dy}{dx}=\\frac{2x}{3y}$$",
+        "$$\\frac{dy}{dx}=\\frac{x}{y}$$",
+        "$$\\frac{dy}{dx}=\\frac{2y}{x}$$"
+      ],
+      "correctAnswer": "$$\\frac{dy}{dx}=\\frac{3y}{2x}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439102",
+      "question": "The solution of $$\\frac{dy}{dx}+y=e^{-x}$$ is",
+      "options": [
+        "$$(x+c)e^{-x}$$",
+        "$$(x-c)e^x$$",
+        "$$(x+c)e^x$$",
+        "$$(x+c)e^{-2x}$$"
+      ],
+      "correctAnswer": "$$(x+c)e^{-x}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439103",
+      "question": "The complementary function of $$(D^2+3D+2)y=8sin5x$$ is",
+      "options": [
+        "$$c_1e^{-x}+c_2e^{-2x}$$",
+        "$$c_1e^x+c_2e^2x$$",
+        "$$c_1e^{-x}+c_2e^{2x}$$",
+        "$$c_1e^{2x}+c_2e^{3x}$$"
+      ],
+      "correctAnswer": "$$c_1e^{-x}+c_2e^{-2x}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439104",
+      "question": "The solution of exact differential equation $$2xy~dx+x^2dy=0$$ is",
+      "options": [
+        "$$x^2y^2=c$$",
+        "$$x^2y=c$$",
+        "$$x^3y=c$$",
+        "$$x^2y^3=c$$"
+      ],
+      "correctAnswer": "$$x^2y=c$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439105",
+      "question": "Form the differential equation representing the family of curves $$x^2=4ay$$ where a is any arbitrary constant",
+      "options": [
+        "$$x\\frac{dy}{dx}-2y=0$$",
+        "$$x\\frac{dy}{dx}+2y=0$$",
+        "$$x\\frac{dy}{dx}-6y=0$$",
+        "$$x\\frac{dy}{dx}-y=0$$"
+      ],
+      "correctAnswer": "$$x\\frac{dy}{dx}-2y=0$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439106",
+      "question": "The solution of $$\\frac{dy}{dx}+y~cot~x=cos~x$$ is",
+      "options": [
+        "$$y~sin~x=\\frac{-cos~2x}{4}+c$$",
+        "$$y~sin~x=\\frac{cos~2x}{4}+c$$",
+        "$$y~sin~x=\\frac{-cos~5x}{4}+c$$",
+        "$$y~cos~x=\\frac{-cos~2x}{4}+c$$"
+      ],
+      "correctAnswer": "$$y~sin~x=\\frac{cos~2x}{4}+c$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809439107",
+      "question": "In the equation $$\\frac{\\alpha}{t^2}=Fv+\\frac{\\beta}{x^2}$$ the dimensional formula for [$\\alpha$], [$\\beta$] is (here t = time, F = force, v = velocity, x = distance)",
+      "options": [
+        "$$MLT^{-1}, MLT^{-3}$$",
+        "$$ML^2T, ML^4T^2$$",
+        "$$ML^2T^{-1}, ML^4T^{-3}$$",
+        "$$ML^3T^{-1}, MLT^{-3}$$"
+      ],
+      "correctAnswer": "$$ML^3T^{-1}, MLT^{-3}$$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439108",
+      "question": "Which of the following quantities has not been expressed in proper units?",
+      "options": [
+        "Young's modulus = N/m2",
+        "Surface tension = N/m",
+        "Pressure = N/m2",
+        "Energy = kg m/s"
+      ],
+      "correctAnswer": "Energy = kg m/s",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439109",
+      "question": "Three vectors A, B and C satisfy the relation A.B=0 and A.C=0. The vector A is parallel to",
+      "options": [
+        "B",
+        "C",
+        "B.C",
+        "B x C"
+      ],
+      "correctAnswer": "B x C",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439110",
+      "question": "If three vectors A, B and C are 12, 5 and 13 in magnitude such that C=A+B, then the angle between A and B is",
+      "options": [
+        "$60^{\\circ}$",
+        "$90^{\\circ}$",
+        "$120^{\\circ}$",
+        "$30^{\\circ}$"
+      ],
+      "correctAnswer": "$90^{\\circ}$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439111",
+      "question": "A stone dropped from a certain height, can reach the ground in 5s. It is stopped after 3 seconds of its fall and then allowed to fall again. The time taken by the stone to reach the ground for the remaining distance is",
+      "options": [
+        "2 s",
+        "6 s",
+        "4 s",
+        "1s"
+      ],
+      "correctAnswer": "4 s",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439112",
+      "question": "The range of projectile fired at an angle of $15^{\\circ}$ is 50m. If it is fired with the same speed at an angle of $45^{\\circ}$, its range will be",
+      "options": [
+        "25 m",
+        "37 m",
+        "50 m",
+        "100 m"
+      ],
+      "correctAnswer": "100 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439113",
+      "question": "A freely falling body acquires a velocity 'v' m/s in falling through a distance of 80m. How much further distance should it fall, so as to acquire a velocity of '2v' m/s?(Take $g=10~m/s^2$)",
+      "options": [
+        "240 m",
+        "200 m",
+        "400 m",
+        "280 m"
+      ],
+      "correctAnswer": "240 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439114",
+      "question": "A block is projected along a rough horizontal road with a speed of 10 m/s. If the coefficient of kinetic friction is 0.10, how far will it travel before coming to rest?",
+      "options": [
+        "50 m",
+        "60 m",
+        "40 m",
+        "10 m"
+      ],
+      "correctAnswer": "50 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439115",
+      "question": "What force is required to push a 200 N body up a $30^{\\circ}$ smooth incline with an acceleration of 2 m/s2? The force is to be applied along the plane is (Take $g=10~m/s^2$)",
+      "options": [
+        "40 N",
+        "60 N",
+        "80 N",
+        "140 N"
+      ],
+      "correctAnswer": "140 N",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439116",
+      "question": "A block of mass 2 kg rests on a rough inclined plane making an angle of $30^{\\circ}$ with the horizontal. The coefficient of static friction between the block and the plane is 0.7. The frictional force on the block is",
+      "options": [
+        "9.8 N",
+        "$$0.78\\times9.8~N$$",
+        "$$9.8\\times\\sqrt{3}N$$",
+        "$$0.7\\times9.8\\sqrt{3}$$ N"
+      ],
+      "correctAnswer": "9.8 N",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439117",
+      "question": "A man moves on a straight horizontal road with a block of mass 2 kg in his hand. If he covers a distance of 40 m with an acceleration of 0.5 m/s2, the work done by the man on the block during the motion is (Take $g=10~m/s^2$)",
+      "options": [
+        "40 J",
+        "1 J",
+        "80 J",
+        "20 J"
+      ],
+      "correctAnswer": "20 J",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439118",
+      "question": "In a factory it is desired to lift 2000 kg of metal through a distance of 12 m in 1 minute. The minimum horse power of the engine to be used is",
+      "options": [
+        "3.5",
+        "5.3",
+        "4.3",
+        "5.8"
+      ],
+      "correctAnswer": "5.3",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439119",
+      "question": "Energy harnessed from flowing water is called",
+      "options": [
+        "Hydel energy",
+        "Solar",
+        "Tidal",
+        "Geothermal"
+      ],
+      "correctAnswer": "Hydel energy",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439120",
+      "question": "When a particle executing simple harmonic motion passes through the mean position, it has",
+      "options": [
+        "minimum K.E and maximum P.E.",
+        "maximum K.E and maximum P.E.",
+        "maximum K.E and minimum P.E.",
+        "mimimum K.E. and mimimum P.E."
+      ],
+      "correctAnswer": "maximum K.E and minimum P.E.",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439121",
+      "question": "A particle of mass 200 g executes a simple harmonic motion. The restoring force is provided by a spring of spring constant 80 N/m. The time period is",
+      "options": [
+        "0.2 s",
+        "0.41 s",
+        "0.31 s",
+        "0.5 s"
+      ],
+      "correctAnswer": "0.31 s",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439122",
+      "question": "The temperature at which the speed of sound will be double of its value at $0^{\\circ}C$ is",
+      "options": [
+        "$$819^{\\circ}C$$",
+        "$$850^{\\circ}C$$",
+        "$$919^{\\circ}C$$",
+        "$$900^{\\circ}C$$"
+      ],
+      "correctAnswer": "$$819^{\\circ}C$$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439123",
+      "question": "If the source of sound moves towards an observer, then",
+      "options": [
+        "The frequency of the source is increased",
+        "The velocity of sound in the medium is increased",
+        "The wavelength of sound in the medium towards the observer is decreased",
+        "The amplitude of vibration of the particles is increased."
+      ],
+      "correctAnswer": "The wavelength of sound in the medium towards the observer is decreased",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439124",
+      "question": "A cinema hall has a volume of 7500 m$^3$. The total absorption in the hall if the reverberation time of 1.5 s is to be maintained is",
+      "options": [
+        "800 OWU",
+        "925 OWU",
+        "950 OWU",
+        "825 OWU"
+      ],
+      "correctAnswer": "825 OWU",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439125",
+      "question": "One mole of oxygen is heated at constant pressure starting at $0^{\\circ}C$. The heat energy that must be supplied to the gas to double its volume is",
+      "options": [
+        "$$2.5\\times273\\times R$$",
+        "$$3.5\\times273\\times R$$",
+        "$$2.5\\times546\\times R$$",
+        "$$3.5\\times546\\times R$$"
+      ],
+      "correctAnswer": "$$3.5\\times273\\times R$$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439126",
+      "question": "A vessel contains a gas at a temperature of $27^{\\circ}C$ and a pressure of 20 atm. If one half of the gas is released and the temperature of the remaining gas is raised by $50^{\\circ}C$, the new pressure will be",
+      "options": [
+        "12.24 atm",
+        "11.67 atm",
+        "13.79 atm",
+        "11 atm"
+      ],
+      "correctAnswer": "11.67 atm",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439127",
+      "question": "The temperature of 5 gm of air is raised from $0^{\\circ}C$ to $1^{\\circ}C$. The increase in the internal energy of air is ($C_v=0.172~cal/gm/^{\\circ}C$ and $J=4.18\\times10^7erg/cal$)",
+      "options": [
+        "$$3.595\\times10^7$$ erg",
+        "$$3\\times10^7$$ erg",
+        "$$4.5\\times10^7$$ erg",
+        "$$2.595\\times10^7$$ erg"
+      ],
+      "correctAnswer": "$$3.595\\times10^7$$ erg",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439128",
+      "question": "In all reversible processes entropy of the system",
+      "options": [
+        "decreases",
+        "increases",
+        "remains constant",
+        "remains zero"
+      ],
+      "correctAnswer": "remains constant",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439129",
+      "question": "If one mole of a monoatomic gas ('$\\gamma'=5/3$) is mixed with one mole of a diatomic gas ('$\\gamma'=7/5$) the value of '$\\gamma$' for the mixture is",
+      "options": [
+        "1.40",
+        "1.50",
+        "1.53",
+        "3.07"
+      ],
+      "correctAnswer": "1.50",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439130",
+      "question": "Electrons are emitted with zero velocity from a certain metal surface when it is exposed to radiations of wavelength 7000 A. The work function of the metal is",
+      "options": [
+        "1 eV",
+        "1.52 eV",
+        "2.52 eV",
+        "1.77 eV"
+      ],
+      "correctAnswer": "1.77 eV",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439131",
+      "question": "A superconducting material exhibits",
+      "options": [
+        "zero conductivity and complete diamagnetism",
+        "zero resistivity and complete paramagnetism",
+        "infinite conductivity and complete paramagnetism",
+        "zero resistivity and complete diamagnetism"
+      ],
+      "correctAnswer": "zero resistivity and complete diamagnetism",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809439132",
+      "question": "The splitting of spectral lines in a strong magnetic field is called",
+      "options": [
+        "Stark effect",
+        "Pauli Exclusion Principle",
+        "Zeeman effect",
+        "Aufbau Principle"
+      ],
+      "correctAnswer": "Zeeman effect",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439133",
+      "question": "Bohr's model can explain",
+      "options": [
+        "The spectrum of hydrogen atom only",
+        "The spectrum of hydrogen molecule",
+        "The solar spectrum",
+        "Spectrum of an atom or ion containing one electron only"
+      ],
+      "correctAnswer": "Spectrum of an atom or ion containing one electron only",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439134",
+      "question": "The maximum number of electrons that a d-orbital can accommodate is",
+      "options": [
+        "2",
+        "6",
+        "10",
+        "14"
+      ],
+      "correctAnswer": "10",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439135",
+      "question": "Magnesium Atomic number is 12, which of the following is the electronic configuration",
+      "options": [
+        "$$1S^2 2S^1 2P^6 3S^2$$",
+        "$$1S^2 2S^2 2P^5 3S^2$$",
+        "$$1S^2 2S^2 2P^6 3S^2$$",
+        "$$1S^2 2S^2 2P^6 3S^1 3d^1$$"
+      ],
+      "correctAnswer": "$$1S^2 2S^2 2P^6 3S^2$$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439136",
+      "question": "N2 molecule contains",
+      "options": [
+        "Covalent bond",
+        "Ionic bond",
+        "Hydrogen bond",
+        "Metalic bond"
+      ],
+      "correctAnswer": "Covalent bond",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439137",
+      "question": "One mole of any of the particles contains",
+      "options": [
+        "$$6.023\\times 10^{-23}$$",
+        "$$6.022\\times 10^{23}$$",
+        "$$60.23\\times 10^{23}$$",
+        "$$6.023\\times 10^{25}$$"
+      ],
+      "correctAnswer": "$$6.022\\times 10^{23}$$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439138",
+      "question": "The normality of the solution obtained by dissolving 4 gm of NaOH in 1Litre is",
+      "options": [
+        "1N",
+        "0.1N",
+        "0.5N",
+        "0.02N"
+      ],
+      "correctAnswer": "0.1N",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439139",
+      "question": "Molecular weight of $$H_2SO_4$$ is",
+      "options": [
+        "92",
+        "96",
+        "98",
+        "99"
+      ],
+      "correctAnswer": "98",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439140",
+      "question": "A Lewis acid is a substance which",
+      "options": [
+        "Accept protons",
+        "Accept a lone pair of electrons",
+        "Donate protons",
+        "Donate a lone pair of electrons"
+      ],
+      "correctAnswer": "Accept a lone pair of electrons",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439141",
+      "question": "pH of a solution is 9.5, the solution is",
+      "options": [
+        "Basic",
+        "Acidic",
+        "Neutral",
+        "Amphoteric"
+      ],
+      "correctAnswer": "Basic",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439142",
+      "question": "Laws of electrolysis were given by",
+      "options": [
+        "Ostwald",
+        "Faraday",
+        "Arrhenius",
+        "Volta"
+      ],
+      "correctAnswer": "Faraday",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439143",
+      "question": "Common electrolyte used in the salt bridge is",
+      "options": [
+        "NaOH",
+        "$$NaCO_3$$",
+        "KCl",
+        "KOH"
+      ],
+      "correctAnswer": "KCl",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439144",
+      "question": "Standard Reduction Potential of an element is equal to",
+      "options": [
+        "1 X Its reduction potential",
+        "-1 X Its standard oxidation potential",
+        "-1 X Its reduction potential",
+        "1 X Its standard oxidation potential"
+      ],
+      "correctAnswer": "-1 X Its standard oxidation potential",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439145",
+      "question": "The standard emf for the cell reaction, $$Zn+Cu^{+2}\\rightarrow Cu+Zn^{2+}$$ is 1.10 V at $25^{\\circ}C$. The emf of the cell reaction when 0.1 M $$Cu^{+2}$$ and 0.1 M $$Zn^{+2}$$ solutions are used at $25^{\\circ}C$ is",
+      "options": [
+        "1.10V",
+        "0.11V",
+        "-1.10V",
+        "-0.11V"
+      ],
+      "correctAnswer": "1.10V",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439146",
+      "question": "Which chemical is responsible for permanent hardness of water?",
+      "options": [
+        "KCl",
+        "$$MgCl_2$$",
+        "NaCl",
+        "AgCl"
+      ],
+      "correctAnswer": "$$MgCl_2$$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439147",
+      "question": "Permutit is chemically",
+      "options": [
+        "Sodium Silicate",
+        "Aluminium Silicate",
+        "Hydrated Sodium alumino silicate",
+        "Calicium silicate"
+      ],
+      "correctAnswer": "Hydrated Sodium alumino silicate",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439148",
+      "question": "The cation exchange resin possesses",
+      "options": [
+        "Acidic group",
+        "Basic group",
+        "Amphoteric group",
+        "Benzo group"
+      ],
+      "correctAnswer": "Acidic group",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439149",
+      "question": "Chemically the rust is",
+      "options": [
+        "Fe2O3",
+        "Fe2O3. FeO",
+        "$$Fe2O3 \\cdot xH_2O$$",
+        "Fe2O3. NH3"
+      ],
+      "correctAnswer": "$$Fe2O3 \\cdot xH_2O$$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439150",
+      "question": "Galvanizing is the process of coating iron with",
+      "options": [
+        "Mg",
+        "Cu",
+        "Au",
+        "Zn"
+      ],
+      "correctAnswer": "Zn",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439151",
+      "question": "Which of the following is not a thermoplastic?",
+      "options": [
+        "Bakelite",
+        "Polystyrene",
+        "Polythene",
+        "Nylon"
+      ],
+      "correctAnswer": "Bakelite",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439152",
+      "question": "Isoprene is a monomer of",
+      "options": [
+        "Starch",
+        "Cellulose",
+        "Natural rubber",
+        "Lignin"
+      ],
+      "correctAnswer": "Natural rubber",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439153",
+      "question": "Buna-S is a copolymer of",
+      "options": [
+        "Butadiene and Styrene",
+        "Butadiene and Acrylonitrile",
+        "Butadiene and Isoprene",
+        "Formaldehyde and Styrene"
+      ],
+      "correctAnswer": "Butadiene and Styrene",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439154",
+      "question": "Main constituent of natural gas is",
+      "options": [
+        "Ethane",
+        "Methane",
+        "Butane",
+        "Carbon Monoxide"
+      ],
+      "correctAnswer": "Methane",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439155",
+      "question": "Ozone layer is present at",
+      "options": [
+        "Staratosphere",
+        "Inosphere",
+        "Thermosphere",
+        "Atmosphere"
+      ],
+      "correctAnswer": "Staratosphere",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439156",
+      "question": "The amount of DO required to aerobically decompose biodegradable organic matter of a given volume of water is",
+      "options": [
+        "Biochemical Oxygen Demand",
+        "Biological Oxygen Demand",
+        "Chemical Oxygen demand",
+        "Biomagnification"
+      ],
+      "correctAnswer": "Biochemical Oxygen Demand",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809439157",
+      "question": "Two resistors R1 and R2 give combined resistance of 4.5 $\\Omega$ when in series and 1 $\\Omega$ when in parallel, the resistances are",
+      "options": [
+        "2$\\Omega$ and 2.5$\\Omega$",
+        "1$\\Omega$ and 3.5$\\Omega$",
+        "1.5$\\Omega$ and 3$\\Omega$",
+        "4$\\Omega$ and 0.5$\\Omega$"
+      ],
+      "correctAnswer": "1.5$\\Omega$ and 3$\\Omega$",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439158",
+      "question": "Three resistances each of R $\\Omega$ are connected to form a triangle. The resistance between any two terminals will be",
+      "options": [
+        "R$\\Omega$",
+        "3R/2 $\\Omega$",
+        "3R $\\Omega$",
+        "2R/3 $\\Omega$"
+      ],
+      "correctAnswer": "2R/3 $\\Omega$",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439159",
+      "question": "While Thevenizing a circuit between two terminals, $V_{TH}$ is equal to",
+      "options": [
+        "short circuit terminal voltage",
+        "open circuit terminal voltage",
+        "net voltage available in the circuit",
+        "emf of the battery nearest to the terminals"
+      ],
+      "correctAnswer": "open circuit terminal voltage",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439160",
+      "question": "The principle of dynamically induced emf is utilized in",
+      "options": [
+        "transformer",
+        "choke",
+        "generator",
+        "thermocouple"
+      ],
+      "correctAnswer": "generator",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439161",
+      "question": "The direction of rotation of a DC motor can be determined by",
+      "options": [
+        "Fleming's right hand rule",
+        "Fleming's left hand rule",
+        "Lenz's law",
+        "Ampere law"
+      ],
+      "correctAnswer": "Fleming's left hand rule",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439162",
+      "question": "The basic function of a transformer is to change",
+      "options": [
+        "the level of the voltage",
+        "the power level",
+        "the power factor",
+        "the frequency"
+      ],
+      "correctAnswer": "the level of the voltage",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439163",
+      "question": "A Solar cell is actually a device which utilizes",
+      "options": [
+        "Photoconductive effect",
+        "Photovoltaic effect",
+        "Photoemissive effect",
+        "Photoresistive effect"
+      ],
+      "correctAnswer": "Photovoltaic effect",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439164",
+      "question": "Opto-coupler is used to",
+      "options": [
+        "Reduce SCR turn-off time",
+        "Protect IGBTs against dv/dt",
+        "Regulate gate signal",
+        "Isolate gating circuitry from power lines"
+      ],
+      "correctAnswer": "Isolate gating circuitry from power lines",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439165",
+      "question": "Induction heating takes place in",
+      "options": [
+        "insulating material",
+        "conducting and magnetic materials only",
+        "conducting and non-magnetic materials only",
+        "conducting materials which may be magnetic or non-magnetic"
+      ],
+      "correctAnswer": "conducting materials which may be magnetic or non-magnetic",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439166",
+      "question": "In dielectric heating current flows through",
+      "options": [
+        "air",
+        "dielectric",
+        "metallic conductor",
+        "ionic discharge between dielectric medium and metallic conductor"
+      ],
+      "correctAnswer": "dielectric",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439167",
+      "question": "The main drawback of resistance welding is",
+      "options": [
+        "high initial as well as maintenance cost",
+        "difficult shapes and sections cannot be welded",
+        "only similar metals can be welded",
+        "parent metal is affected"
+      ],
+      "correctAnswer": "parent metal is affected",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439168",
+      "question": "Which one of the following effects in the system is not caused by negative feedback?",
+      "options": [
+        "reduction in gain",
+        "increase in bandwidth",
+        "increase in distortion",
+        "reduction in output impedance"
+      ],
+      "correctAnswer": "increase in distortion",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439169",
+      "question": "The type number of the control system with $G(s)H(s)=\\frac{K(s+2)}{s(s^2+2s+3)}$ is",
+      "options": [
+        "one",
+        "two",
+        "three",
+        "four"
+      ],
+      "correctAnswer": "one",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439170",
+      "question": "A second order system is said to be critically damped if the damping factor ($\\xi$) is",
+      "options": [
+        ">1",
+        "<1",
+        "=1",
+        "=0.707"
+      ],
+      "correctAnswer": "=1",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439171",
+      "question": "Using Routh's criterion, the number of roots in the right half s-plane for the characteristic equation: $$s^4+2s^3+2s^2+3s+6=0$$ is",
+      "options": [
+        "one",
+        "two",
+        "three",
+        "four"
+      ],
+      "correctAnswer": "two",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439172",
+      "question": "A device having characteristics very close to that of an ideal voltage source is",
+      "options": [
+        "vacuum diode",
+        "zener diode",
+        "transistor",
+        "FET"
+      ],
+      "correctAnswer": "zener diode",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439173",
+      "question": "The resistivity of a semiconductor is of the order of",
+      "options": [
+        "$$10^{-6} \\Omega-m$$",
+        "$$10^{-6}$$ to $$100 \\Omega-m$$",
+        "$$10^{-4}$$ to $$10^4 \\Omega-m$$",
+        "above $$10^4$$ $\\Omega$-m"
+      ],
+      "correctAnswer": "$$10^{-4}$$ to $$10^4 \\Omega-m$$",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439174",
+      "question": "In a P-N junction, the barrier potential offers opposition to only",
+      "options": [
+        "holes in P-region",
+        "free electrons in N-region",
+        "majority carriers in both regions",
+        "minority carriers in both regions"
+      ],
+      "correctAnswer": "majority carriers in both regions",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439175",
+      "question": "For constructing a full wave rectifier",
+      "options": [
+        "at least two diodes are needed",
+        "more than two",
+        "at least four",
+        "more than four"
+      ],
+      "correctAnswer": "at least four diodes are needed",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439176",
+      "question": "For an NPN bipolar transistor, what is the main stream of current in the base region?",
+      "options": [
+        "Drift of holes",
+        "Diffusion of holes",
+        "Drift of electrons",
+        "Diffusion of electrons"
+      ],
+      "correctAnswer": "Diffusion of holes",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439177",
+      "question": "The drain-source voltage at which drain current becomes nearly constant is called",
+      "options": [
+        "barrier voltage",
+        "breakdown voltage",
+        "pick-off voltage",
+        "pinch-off voltage"
+      ],
+      "correctAnswer": "pinch-off voltage",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439178",
+      "question": "The effective channel length of a MOSFET in saturation decreases with increase in",
+      "options": [
+        "gate voltage",
+        "drain voltage",
+        "source voltage",
+        "body voltage"
+      ],
+      "correctAnswer": "drain voltage",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439179",
+      "question": "In an R-C coupled amplifier, the voltage gain",
+      "options": [
+        "remains always constant over a range of frequency",
+        "always increases with frequency",
+        "always decreases with frequency",
+        "always decreases with change in time"
+      ],
+      "correctAnswer": "remains always constant over a range of frequency",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439180",
+      "question": "The circuit efficiency of a class A amplifier can be increased with",
+      "options": [
+        "direct-coupled load",
+        "low DC power input",
+        "transformer coupled load",
+        "low rating resistor"
+      ],
+      "correctAnswer": "transformer coupled load",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439181",
+      "question": "The Darlington pair is mainly used for",
+      "options": [
+        "impedance matching",
+        "wideband voltage amplification",
+        "power amplification",
+        "reducing distortion"
+      ],
+      "correctAnswer": "impedance matching",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439182",
+      "question": "In an R-C phase shift oscillator, the minimum number of R-C networks to be connected in cascade will be",
+      "options": [
+        "one",
+        "two",
+        "three",
+        "four"
+      ],
+      "correctAnswer": "three",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439183",
+      "question": "In a Wien bridge oscillator, if the resistances in the positive feedback circuit are decreased, then the frequency",
+      "options": [
+        "decreases",
+        "increases",
+        "remains the same",
+        "fluctuates in an erratic fashion"
+      ],
+      "correctAnswer": "increases",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439184",
+      "question": "What is the addition of (-64)10 and (80)16?",
+      "options": [
+        "(-64)16",
+        "(16)16",
+        "(110000)2",
+        "(01000000)2"
+      ],
+      "correctAnswer": "(16)16",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439185",
+      "question": "The AND function can be realized by using only 'n' number of NOR gates. What is 'n' equal to",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439186",
+      "question": "A full adder can be made of",
+      "options": [
+        "two half adders",
+        "two half adders and a NOR gate",
+        "two half adders and a OR gate",
+        "two half adders and a AND gate"
+      ],
+      "correctAnswer": "two half adders and a OR gate",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439187",
+      "question": "Which of the following flip-flop is used as a latch?",
+      "options": [
+        "J-K flip flop",
+        "RS flip flop",
+        "T flip flop",
+        "D flip flop"
+      ],
+      "correctAnswer": "RS flip flop",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439188",
+      "question": "D flip flop can be made from a J-K flip flop by making",
+      "options": [
+        "J=K",
+        "J=K=1",
+        "J=0, K=1",
+        "J=K"
+      ],
+      "correctAnswer": "J=K",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439189",
+      "question": "Among the following, the slowest ADC is",
+      "options": [
+        "flash type",
+        "successive approximation type",
+        "integrating type",
+        "counting type"
+      ],
+      "correctAnswer": "integrating type",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439190",
+      "question": "The measurement of very low and very high frequency is invariably done using a frequency counter/timer in the",
+      "options": [
+        "frequency measurement mode only",
+        "period measurement mode only",
+        "frequency and period measurements modes respectively",
+        "period and frequency measurements modes respectively"
+      ],
+      "correctAnswer": "period and frequency measurements modes respectively",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439191",
+      "question": "The resolution of Digital to Analog converter is governed by which one of the following? (where 'n' is the number of digital inputs)",
+      "options": [
+        "2n",
+        "2/n",
+        "$$2^n$$",
+        "$$\\sqrt{2^n}$$"
+      ],
+      "correctAnswer": "$$2^n$$",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439192",
+      "question": "In a sequential circuit, the output state depends upon",
+      "options": [
+        "past output states and present input states",
+        "input states only",
+        "input and output states",
+        "past input states"
+      ],
+      "correctAnswer": "past output states and present input states",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439193",
+      "question": "AND operation of (79)10 and (-56)10 results in",
+      "options": [
+        "50 H",
+        "48 H",
+        "42 H",
+        "08 H"
+      ],
+      "correctAnswer": "48 H",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439194",
+      "question": "A 0-100 V voltmeter has an accuracy of 1 percent at full scale reading. What will be the error if it reads 50V?",
+      "options": [
+        "1%",
+        "2%",
+        "0.5%",
+        "4%"
+      ],
+      "correctAnswer": "2%",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439195",
+      "question": "An ammeter has a current range 0-5 A, and its internal resistance is 0.2 $\\Omega$. In order to change the range to 0-25 A, we need to add a resistance of",
+      "options": [
+        "0.8$\\Omega$ in series with the meter",
+        "1$\\Omega$ in series with the meter",
+        "0.04$\\Omega$ in parallel with the meter",
+        "0.05$\\Omega$ in parallel with the meter"
+      ],
+      "correctAnswer": "0.05$\\Omega$ in parallel with the meter",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439196",
+      "question": "In measurements made using a Q-meter, high impedance elements should preferably be connected in",
+      "options": [
+        "star",
+        "delta",
+        "series",
+        "parallel"
+      ],
+      "correctAnswer": "parallel",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439197",
+      "question": "What is the approximate input impedance of a CRO?",
+      "options": [
+        "zero",
+        "1M$\\Omega$",
+        "10$\\Omega$",
+        "10$\\mu\\Omega$"
+      ],
+      "correctAnswer": "1M$\\Omega$",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439198",
+      "question": "The purpose of providing acquadag in CRT is to",
+      "options": [
+        "increase fluorescence",
+        "increase phosphorescence",
+        "protect burning of screen",
+        "remove electro static charge accumulation"
+      ],
+      "correctAnswer": "remove electro static charge accumulation",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439199",
+      "question": "Spectrum analyzer is a combination of",
+      "options": [
+        "narrow band super heterodyne receiver and CRO",
+        "signal generator and CRO",
+        "oscillator and wave analyzer",
+        "VTVM and CRO"
+      ],
+      "correctAnswer": "narrow band super heterodyne receiver and CRO",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439200",
+      "question": "The conversion of a voltage value to a time interval is carried out by comparing the unknown voltage with a voltage ramp in a",
+      "options": [
+        "ramp type DVM",
+        "integrating type DVM",
+        "continuous type DVM",
+        "successive approximation type DVM"
+      ],
+      "correctAnswer": "integrating type DVM",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439201",
+      "question": "The X- and Y-inputs of a CRO are respectively Vsinwt and -Vsinwt. The resulting Lissajous pattern will be",
+      "options": [
+        "a straight line",
+        "a circle",
+        "an ellipse",
+        "a figure of eight"
+      ],
+      "correctAnswer": "a straight line",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439202",
+      "question": "Which one of the following is a passive transducer?",
+      "options": [
+        "Piezoelectric",
+        "thermocouple",
+        "photovoltaic cell",
+        "LVDT"
+      ],
+      "correctAnswer": "LVDT",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439203",
+      "question": "The transducer that converts the input signal into the output signal, which is a continuous function of time, is known as",
+      "options": [
+        "active transducer",
+        "passive",
+        "analog",
+        "digital"
+      ],
+      "correctAnswer": "analog",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439204",
+      "question": "A strain gauge is a passive transducer and is employed for converting",
+      "options": [
+        "mechanical displacement into change of resistance",
+        "pressure into change of resistance",
+        "force into displacement",
+        "current into pressure"
+      ],
+      "correctAnswer": "mechanical displacement into change of resistance",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439205",
+      "question": "RTDs have",
+      "options": [
+        "positive temperature coefficient",
+        "negative temperature coefficient",
+        "either type of temperature coefficient",
+        "high tolerance"
+      ],
+      "correctAnswer": "positive temperature coefficient",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439206",
+      "question": "A fixed resistor of suitable value is usually connected across a thermistor to",
+      "options": [
+        "decrease its resistance",
+        "increase its sensitivity",
+        "compensate its self heating effect",
+        "improve linearity"
+      ],
+      "correctAnswer": "improve linearity",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439207",
+      "question": "Which one of the following thermocouples has the highest temperature measuring range?",
+      "options": [
+        "Copper-Constantan",
+        "Iron-Constantan",
+        "Alumel-Chromel",
+        "Platinum Rhodium - Platinum"
+      ],
+      "correctAnswer": "Platinum Rhodium - Platinum",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439208",
+      "question": "What is a differential transformer?",
+      "options": [
+        "constant pressure transducer",
+        "variable pressure transducer",
+        "constant displacement transducer",
+        "variable inductance transducer"
+      ],
+      "correctAnswer": "variable inductance transducer",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439209",
+      "question": "The dynamic characteristics of capacitive transducers are similar to those of",
+      "options": [
+        "low pass filter",
+        "high pass filter",
+        "notch filter",
+        "band stop filter"
+      ],
+      "correctAnswer": "high pass filter",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439210",
+      "question": "Piezoelectric crystals produce an emf",
+      "options": [
+        "when external mechanical force is applied to it",
+        "when external magnetic field is applied",
+        "when radiant energy stimulates the crystal",
+        "when the junction of two such crystals is heated"
+      ],
+      "correctAnswer": "when external mechanical force is applied to it",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439211",
+      "question": "Which one of the following is used to measure temperature inside a boiler furnace?",
+      "options": [
+        "Resistance thermometer",
+        "Bimetallic thermometer",
+        "Optical pyrometer",
+        "Thermistor"
+      ],
+      "correctAnswer": "Optical pyrometer",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439212",
+      "question": "A flow meter that is independent of liquid density is",
+      "options": [
+        "rotameter",
+        "Electromagnetic flow meter",
+        "venturimeter",
+        "orifice meter"
+      ],
+      "correctAnswer": "Electromagnetic flow meter",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439213",
+      "question": "In radioactive method, the receiver measures fluid level by recording the",
+      "options": [
+        "direction of rays",
+        "number of radioactive particles received",
+        "time taken by the rays in reaching the receiver",
+        "flow of fluid"
+      ],
+      "correctAnswer": "number of radioactive particles received",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439214",
+      "question": "In hygrometers the principle of measurement is",
+      "options": [
+        "change in resistance of salts with humidity",
+        "change in microwave power using klystron",
+        "change in thermal conductivity using thermistor",
+        "change in voltage with level variations"
+      ],
+      "correctAnswer": "change in resistance of salts with humidity",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439215",
+      "question": "Measurements of flow, thermal conductivity and liquid level using thermistors make use of",
+      "options": [
+        "resistance decrease with temperature",
+        "resistance increase with temperature",
+        "self heating phenomenon",
+        "change of resistivity"
+      ],
+      "correctAnswer": "self heating phenomenon",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439216",
+      "question": "A cascade controller is used when the process",
+      "options": [
+        "gain is too small",
+        "gain is too large",
+        "has widely different time constants",
+        "oscillation at the output is not permitted"
+      ],
+      "correctAnswer": "has widely different time constants",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439217",
+      "question": "Control valve is a device that adjusts the value of the",
+      "options": [
+        "controlled variable",
+        "manipulated variable",
+        "input variable",
+        "output variable"
+      ],
+      "correctAnswer": "manipulated variable",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439218",
+      "question": "A temperature control system is usually very sluggish to improve its dynamics. Which of the following controller mode is useful?",
+      "options": [
+        "a PI controller",
+        "an I controller",
+        "a PID controller",
+        "a PD controller"
+      ],
+      "correctAnswer": "a PD controller",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439219",
+      "question": "A first order system with a proportional controller exhibits an offset to step input. The offset can be reduced by",
+      "options": [
+        "increasing the gain",
+        "adding integral mode",
+        "adding derivative mode",
+        "decreasing the gain"
+      ],
+      "correctAnswer": "adding integral mode",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439220",
+      "question": "A plant is controlled by a proportional controller. If a time delay element is introduced in the loop then",
+      "options": [
+        "gain margin increases",
+        "phase margin remains the same",
+        "gain margin decreases",
+        "phase margin decreases"
+      ],
+      "correctAnswer": "gain margin decreases",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439221",
+      "question": "The transfer function of a basic PD controller is",
+      "options": [
+        "$$K_p+K_I/s+K_d s$$",
+        "$$K_p+K_d s$$",
+        "$$K_I/s+K_d s$$",
+        "$$K_p+K_I/s$$"
+      ],
+      "correctAnswer": "$$K_p+K_d s$$",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439222",
+      "question": "The proportional gain of a PID controller can be expressed in terms of its proportional band (PB) as",
+      "options": [
+        "$$K_p=PB$$",
+        "$$K_p=100/PB$$",
+        "$$K_p=PB/100$$",
+        "$$K_p=100\\times PB$$"
+      ],
+      "correctAnswer": "$$K_p=100/PB$$",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439223",
+      "question": "The input to a controller is",
+      "options": [
+        "sensed signal",
+        "error signal",
+        "desired variable value",
+        "signal of fixed amplitude not dependent on desired variable value"
+      ],
+      "correctAnswer": "error signal",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439224",
+      "question": "An integral control is used to",
+      "options": [
+        "improve the transient response",
+        "reduce the offset",
+        "improve rise time",
+        "reduce the settling time"
+      ],
+      "correctAnswer": "reduce the offset",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439225",
+      "question": "When a process is controlled by a PID controller, the sensor has high measurement noise. How can this effect be reduced?",
+      "options": [
+        "by use of band width limited derivative term",
+        "by use of high proportional band",
+        "by use of proportional and derivative terms in the forward path",
+        "by use of low integral gain"
+      ],
+      "correctAnswer": "by use of band width limited derivative term",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439226",
+      "question": "Ratio control system is a special type of",
+      "options": [
+        "cascade control system",
+        "ratio",
+        "feedback",
+        "feed forward"
+      ],
+      "correctAnswer": "feed forward",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439227",
+      "question": "The PID controller is also called",
+      "options": [
+        "on/off controller",
+        "reset controller",
+        "composite controller",
+        "anticipatory controller"
+      ],
+      "correctAnswer": "composite controller",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439228",
+      "question": "In cascade control, if the manipulated variable affects both variables directly, the structure is called",
+      "options": [
+        "series cascade control",
+        "parallel cascade control",
+        "hybrid cascade control",
+        "compound cascade control"
+      ],
+      "correctAnswer": "parallel cascade control",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439229",
+      "question": "Which of the following actuator is used for high speed and large power applications?",
+      "options": [
+        "passive",
+        "electrical",
+        "hydraulic",
+        "pneumatic"
+      ],
+      "correctAnswer": "hydraulic",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439230",
+      "question": "Modulation is primarily accomplished to",
+      "options": [
+        "produce side bands",
+        "mix two waves of different frequencies",
+        "transmit audio frequency signals over long distances",
+        "improves transmission efficiency"
+      ],
+      "correctAnswer": "transmit audio frequency signals over long distances",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439231",
+      "question": "What is the power contained in SSB transmission when the carrier power is 1kW and the modulation index is 0.3?",
+      "options": [
+        "22.5 W",
+        "90 W",
+        "300 W",
+        "1 kW"
+      ],
+      "correctAnswer": "22.5 W",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439232",
+      "question": "The most useful modulation technique for high fidelity audio broadcasting on radio in current practices is",
+      "options": [
+        "amplitude modulation",
+        "frequency modulation",
+        "pulse amplitude modulation",
+        "pulse code modulation"
+      ],
+      "correctAnswer": "frequency modulation",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439233",
+      "question": "In an optical fiber, the light beam propagates due to which one of the following?",
+      "options": [
+        "simple reflection of light at a boundary between two media",
+        "Refraction of light in the medium",
+        "Total internal reflection at the boundary of the fiber",
+        "scattering of light in the medium"
+      ],
+      "correctAnswer": "Total internal reflection at the boundary of the fiber",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439234",
+      "question": "In an ideal op-amp, the voltage gain for the common mode signal is",
+      "options": [
+        "0",
+        "0.5",
+        "2.0",
+        "Infinity"
+      ],
+      "correctAnswer": "0",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439235",
+      "question": "The voltage gain of an ideal voltage follower is",
+      "options": [
+        "1",
+        "<1",
+        "0",
+        "Infinity"
+      ],
+      "correctAnswer": "1",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439236",
+      "question": "Instrumentation amplifiers are used primarily in",
+      "options": [
+        "high noise environment",
+        "medical equipment",
+        "test instruments",
+        "filter circuits"
+      ],
+      "correctAnswer": "high noise environment",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439237",
+      "question": "For a step input, the output of an integrator is",
+      "options": [
+        "a pulse",
+        "a triangular wave form",
+        "a spike",
+        "a ramp"
+      ],
+      "correctAnswer": "a ramp",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439238",
+      "question": "IR spectroscopy",
+      "options": [
+        "has a useful range of radiation from 2.5 to 15 microns",
+        "is unsuitable for analysis of mixture of metals",
+        "is unsuitable for analysis of organic gases",
+        "uses bolometer as one of the detectors"
+      ],
+      "correctAnswer": "uses bolometer as one of the detectors",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439239",
+      "question": "In a spectrophotometer, the monochromator must be able to resolve two wavelengths 599.9 nm and 600.1 nm. The required resolution is",
+      "options": [
+        "100",
+        "1000",
+        "3000",
+        "5000"
+      ],
+      "correctAnswer": "3000",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439240",
+      "question": "In a gas chromatograph, the gas which cannot be used as a carrier gas is",
+      "options": [
+        "Helium",
+        "Nitrogen",
+        "Ammonia",
+        "both helium and nitrogen"
+      ],
+      "correctAnswer": "Ammonia",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439241",
+      "question": "A gas chromatograph is used for",
+      "options": [
+        "measuring flow rate of a gas",
+        "measuring the temperature of a gas",
+        "measuring the pressure of a gas",
+        "analyzing the composition of a gas"
+      ],
+      "correctAnswer": "analyzing the composition of a gas",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439242",
+      "question": "The wavelength range for IR spectroscopy is",
+      "options": [
+        "200nm-400nm",
+        "400nm-700nm",
+        "700nm-1000nm",
+        "0nm-100nm"
+      ],
+      "correctAnswer": "700nm-1000nm",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439243",
+      "question": "Which of the following is used as detector in spectrophotometry?",
+      "options": [
+        "photocell",
+        "RTD",
+        "LVDT",
+        "pyrometer"
+      ],
+      "correctAnswer": "photocell",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439244",
+      "question": "Which of the following instrument uses an ultrasonic transducer?",
+      "options": [
+        "Echo-cardiograph",
+        "Electro-cardiograph",
+        "Electro encephalograph",
+        "Electromyogram"
+      ],
+      "correctAnswer": "Echo-cardiograph",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439245",
+      "question": "Among the electrodes which are used to record ECG signals, the one used for ground referencing is placed at",
+      "options": [
+        "left arm",
+        "right leg",
+        "left leg",
+        "right arm"
+      ],
+      "correctAnswer": "right leg",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439246",
+      "question": "Which of the following is useful for the recording of brain activities",
+      "options": [
+        "ECG",
+        "EEG",
+        "EMG",
+        "pace maker"
+      ],
+      "correctAnswer": "EEG",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439247",
+      "question": "To reduce the effect of electrode resistance changes, the input impedance of the EEG amplifier should be",
+      "options": [
+        "equal to zero",
+        "equal to 1M$\\Omega$",
+        "less than 10M$\\Omega$",
+        "greater than 10M$\\Omega$"
+      ],
+      "correctAnswer": "greater than 10M$\\Omega$",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439248",
+      "question": "Electromyogram is used for the measurement of the",
+      "options": [
+        "Blood flow",
+        "Action potential of muscles",
+        "activity of brain",
+        "cardiac activity"
+      ],
+      "correctAnswer": "Action potential of muscles",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439249",
+      "question": "Number of I/O ports in the 8051 microcontroller are",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439250",
+      "question": "The 8051 can handle interrupt sources",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "5",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439251",
+      "question": "The total external data memory that can be interfaced to the 8051 is",
+      "options": [
+        "32K",
+        "64K",
+        "128K",
+        "256K"
+      ],
+      "correctAnswer": "64K",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439252",
+      "question": "In 8051, bit addressable memory locations are",
+      "options": [
+        "10H through 1FH",
+        "20H through 2FH",
+        "30H through 3FH",
+        "40H through 4FH"
+      ],
+      "correctAnswer": "20H through 2FH",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439253",
+      "question": "Which of the following commands will move the number 27H into the accumulator?",
+      "options": [
+        "MOV A,P27",
+        "MOV A,#27H",
+        "MOV A,27H",
+        "MOV A,@27"
+      ],
+      "correctAnswer": "MOV A,#27H",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439254",
+      "question": "PLC is an acronym of",
+      "options": [
+        "Programmable Logic Controller",
+        "Peripheral",
+        "Periodic",
+        "Pneumatic"
+      ],
+      "correctAnswer": "Programmable Logic Controller",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439255",
+      "question": "In a PLC, scan time refers to the amount of time in which",
+      "options": [
+        "timer and counter are indexed by",
+        "one rung of ladder logic takes to get complete",
+        "the entire program takes to execute",
+        "the technician enters the program"
+      ],
+      "correctAnswer": "the entire program takes to execute",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809439256",
+      "question": "An OR function implemented in Ladder logic uses",
+      "options": [
+        "normally closed contacts in series",
+        "normally open contacts in series",
+        "normally closed contacts in parallel",
+        "normally open contacts in parallel"
+      ],
+      "correctAnswer": "normally open contacts in parallel",
+      "topic": "Electronics and Instrumentation Engineering"
     }
-]
+  ]
+  

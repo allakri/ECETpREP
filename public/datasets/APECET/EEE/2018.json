@@ -1,72 +1,2391 @@
 [
     {
-        "id": 1,
-        "question": "What is Ohm's Law?",
-        "options": ["V = IR", "P = VI", "V = I/R", "I = V/R^2"],
-        "correctAnswer": "V = IR",
-        "topic": "Basic Electrical Engineering"
+      "id": "67809417624",
+      "question": "If A $$=(\\begin{matrix}2&-1&0\\\\3&4&7\\end{matrix})$$ and B $$=(\\begin{matrix}5&2&-3\\\\1&0&-2\\end{matrix})$$ then $$2A+3B=$$",
+      "options": [
+        "$$\\begin{pmatrix}19&4&-9\\\\9&8&8\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}-19&-4&9\\\\8&-8\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}18&4&-9\\\\9&8&8\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}17&5&-9\\\\8&8&9\\end{pmatrix}$$"
+      ],
+      "correctAnswer": "$$\\begin{pmatrix}19&4&-9\\\\9&8&8\\end{pmatrix}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 2,
-        "question": "A transformer is used to...",
-        "options": ["Change AC to DC", "Change DC to AC", "Step up or step down AC voltage", "Step up or step down DC voltage"],
-        "correctAnswer": "Step up or step down AC voltage",
-        "topic": "A.C Machines"
+      "id": "67809417625",
+      "question": "If $$A=(\\begin{matrix}2&-3&0\\\\1&4&-1\\end{matrix})$$ and $$B=(\\begin{matrix}6&1\\\\3&0\\\\5&2\\end{matrix})$$ then $$(AB)^T=$$",
+      "options": [
+        "$$A^T B^T$$",
+        "$$B^T A^T$$",
+        "$$(BA)^T$$",
+        "$$AB^T$$"
+      ],
+      "correctAnswer": "$$B^T A^T$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 3,
-        "question": "The unit of electrical power is:",
-        "options": ["Volt", "Ampere", "Watt", "Ohm"],
-        "correctAnswer": "Watt",
-        "topic": "Basic Electrical Engineering"
+      "id": "67809417626",
+      "question": "If two rows or two columns of a determinant are identical then the value of the determinant is",
+      "options": [
+        "2",
+        "-1",
+        "0",
+        "-2"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
     },
     {
-        "id": 4,
-        "question": "Which motor is commonly used in ceiling fans?",
-        "options": ["DC Series Motor", "Synchronous Motor", "Single-phase Induction Motor", "Universal Motor"],
-        "correctAnswer": "Single-phase Induction Motor",
-        "topic": "A.C Motors"
+      "id": "67809417627",
+      "question": "The value of $$\\begin{vmatrix}265&240&219\\\\240&225&198\\\\219&198&181\\end{vmatrix}$$ is",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
     },
     {
-        "id": 5,
-        "question": "What does a fuse do in a circuit?",
-        "options": ["Increases current", "Decreases current", "Protects from overcurrent", "Stores energy"],
-        "correctAnswer": "Protects from overcurrent",
-        "topic": "Protection of Power Systems"
+      "id": "67809417628",
+      "question": "The adjoint of the square matrix $$A=(\\begin{matrix}2&5&1\\\\3&1&2\\\\4&3&1\\end{matrix})$$ is",
+      "options": [
+        "$$\\begin{pmatrix}-5&-2&9\\\\5&-2&-1\\\\5&14&-13\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}5&2&9\\\\5&-2&-1\\\\5&14&-13\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}-5&-2&9\\\\-5&-2&-1\\\\-5&14&-13\\end{pmatrix}$$",
+        "$$\\begin{pmatrix}-5&-2&-9\\\\5&2&1\\\\5&14&-13\\end{pmatrix}$$"
+      ],
+      "correctAnswer": "$$\\begin{pmatrix}-5&-2&9\\\\5&-2&-1\\\\5&14&-13\\end{pmatrix}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 6,
-        "question": "A device that converts electrical energy into mechanical energy is a:",
-        "options": ["Generator", "Motor", "Transformer", "Inverter"],
-        "correctAnswer": "Motor",
-        "topic": "D.C Machines"
+      "id": "67809417629",
+      "question": "Resolve into partial fractions $$\\frac{5}{(2x-1)(3x-1)}=$$",
+      "options": [
+        "$$\\frac{8}{2x-1}+\\frac{5}{3x-1}$$",
+        "$$\\frac{10}{2x-1}-\\frac{15}{3x-1}$$",
+        "$$\\frac{11}{3x-1}+\\frac{7}{2x-1}$$",
+        "$$\\frac{1}{2x-1}+\\frac{2}{3x-1}$$"
+      ],
+      "correctAnswer": "The resolution is $$\\frac{10}{2x-1}-\\frac{15}{3x-1}$$ but the question has an error in the given options.",
+      "topic": "Mathematics"
     },
     {
-        "id": 7,
-        "question": "What is the frequency of AC mains in India?",
-        "options": ["60 Hz", "50 Hz", "100 Hz", "120 Hz"],
-        "correctAnswer": "50 Hz",
-        "topic": "A.C Circuits"
+      "id": "67809417630",
+      "question": "Resolve into partial fractions $$\\frac{3x-1}{(x-1)(x-2)(x-3)}=$$",
+      "options": [
+        "$$\\frac{2}{x-1}+\\frac{5}{x-2}-\\frac{4}{x-3}$$",
+        "$$\\frac{-1}{x-1}+\\frac{5}{x-2}-\\frac{4}{x-3}$$",
+        "$$\\frac{1}{x-1}+\\frac{5}{x-2}+\\frac{4}{x-3}$$",
+        "$$\\frac{1}{x-1}-\\frac{5}{x-2}+\\frac{4}{x-3}$$"
+      ],
+      "correctAnswer": "The resolution is $$\\frac{1}{x-1}-\\frac{5}{x-2}+\\frac{4}{x-3}$$ but the question has an error in the given options.",
+      "topic": "Mathematics"
     },
     {
-        "id": 8,
-        "question": "A diode allows current to flow in:",
-        "options": ["One direction", "Both directions", "No direction", "Depends on voltage"],
-        "correctAnswer": "One direction",
-        "topic": "Basic Electronics"
+      "id": "67809417631",
+      "question": "If tanA $$=\\frac{1}{2}$$ and tanB $$=\\frac{1}{3}$$ then $$tan(A-B)=$$",
+      "options": [
+        "$$\\frac{1}{7}$$",
+        "$$\\frac{-1}{7}$$",
+        "$$\\frac{1}{5}$$",
+        "$$\\frac{1}{3}$$"
+      ],
+      "correctAnswer": "$$\\frac{1}{7}$$",
+      "topic": "Mathematics"
     },
     {
-        "id": 9,
-        "question": "What does PLC stand for?",
-        "options": ["Programmable Logic Controller", "Program Logic Control", "Power Line Carrier", "Programmable Lighting Control"],
-        "correctAnswer": "Programmable Logic Controller",
-        "topic": "PLC and C Language"
+      "id": "67809417632",
+      "question": "The value of $$cot2A+tanA=$$",
+      "options": [
+        "sin2A",
+        "cos2A",
+        "sec2A",
+        "cosec2A"
+      ],
+      "correctAnswer": "cosec2A",
+      "topic": "Mathematics"
     },
     {
-        "id": 10,
-        "question": "The primary source of power in an Electric Vehicle is:",
-        "options": ["Engine", "Battery", "Solar Panel", "Generator"],
-        "correctAnswer": "Battery",
-        "topic": "Electrical Vehicles"
+      "id": "67809417633",
+      "question": "The value of $$\\frac{1-cos2A+sin~2A}{1+cos2A+sin~2A}=$$",
+      "options": [
+        "sinA",
+        "cosA",
+        "tanA",
+        "cotA"
+      ],
+      "correctAnswer": "tanA",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417634",
+      "question": "The value of $$sin\\frac{\\pi}{5}sin\\frac{2\\pi}{5}sin\\frac{3\\pi}{5}sin\\frac{4\\pi}{5}=$$",
+      "options": [
+        "$$\\frac{4}{15}$$",
+        "$$\\frac{5}{16}$$",
+        "$$-\\frac{5}{16}$$",
+        "$$\\frac{7}{15}$$"
+      ],
+      "correctAnswer": "$$\\frac{5}{16}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417635",
+      "question": "The value of $$cos~20^\\circ+cos~100^\\circ+cos~140^\\circ=$$",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "-3"
+      ],
+      "correctAnswer": "0",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417636",
+      "question": "The value of $$\\Sigma a(b^2+c^2)cosA$$ is",
+      "options": [
+        "2abc",
+        "4abc",
+        "3abc",
+        "5abc"
+      ],
+      "correctAnswer": "2abc",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417637",
+      "question": "The value of $$(a-b)^2cos^2(\\frac{c}{2})+(a+b)^2sin^2(\\frac{c}{2})$$ is",
+      "options": [
+        "$$C^3$$",
+        "C",
+        "$$C^5$$",
+        "$$C^2$$"
+      ],
+      "correctAnswer": "$$C^2$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417638",
+      "question": "The value of $$2tan^{-1}(\\frac{1}{3})+tan^{-1}(\\frac{1}{7})$$ is",
+      "options": [
+        "$$\\pi/4$$",
+        "$$\\pi/2$$",
+        "$$\\pi/6$$",
+        "$$\\pi/3$$"
+      ],
+      "correctAnswer": "$$\\pi/4$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417639",
+      "question": "The general solution of $$4cos^2x-3=0$$ is",
+      "options": [
+        "$$2n\\pi\\pm\\frac{\\pi}{6}$$",
+        "$$2n\\pi\\pm\\frac{7\\pi}{6}$$",
+        "$$3n\\pi\\pm\\frac{5\\pi}{6}$$",
+        "$$2n\\pi\\pm\\frac{11\\pi}{6}$$"
+      ],
+      "correctAnswer": "$$2n\\pi\\pm\\frac{\\pi}{6}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417640",
+      "question": "If $$tan^{-1}x+tan^{-1}y+tan^{-1}z=\\frac{\\pi}{2}$$ then the value of $$xy+yz+zx$$ is",
+      "options": [
+        "-1",
+        "3",
+        "5",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417641",
+      "question": "The modulus of a complex number $$\\sqrt{3}+i$$ is",
+      "options": [
+        "-2",
+        "3",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417642",
+      "question": "If $$x+\\frac{1}{x}=2~cos\\theta$$ then the value of $$x^n+\\frac{1}{x^n}$$ is",
+      "options": [
+        "$$2~cos~n\\theta$$",
+        "$$-2~cos~n\\theta$$",
+        "$$3~cos\\theta$$",
+        "$$2~sin~n\\theta$$"
+      ],
+      "correctAnswer": "$$2~cos~n\\theta$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417643",
+      "question": "The centre of the circle $$x^2+y^2-2x+6y-6=0$$ is",
+      "options": [
+        "(1,3)",
+        "(2,3)",
+        "(1,-3)",
+        "(-1,3)"
+      ],
+      "correctAnswer": "(1,-3)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417644",
+      "question": "The radius of the circle: $$5x^2+5y^2-6x+8y-75=0$$ is",
+      "options": [
+        "-4",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417645",
+      "question": "The equation of the parabola with vertex (2,-1) and focus (2,-3) is",
+      "options": [
+        "$$x^2-4x+8y+12=0$$",
+        "$$x^2-4x-8y-12=0$$",
+        "$$x^2+4x-8y-12=0$$",
+        "$$x^2+5x-8y-11=0$$"
+      ],
+      "correctAnswer": "$$x^2-4x+8y+12=0$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417646",
+      "question": "The centre of the ellipse: $$9x^2+25y^2-18x+100y-116=0$$ is",
+      "options": [
+        "(2,-1)",
+        "(-1,-2)",
+        "(1,-2)",
+        "(1,2)"
+      ],
+      "correctAnswer": "(1,-2)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417647",
+      "question": "The focus of the hyperbola $$\\frac{x^2}{25}-\\frac{y^2}{144}=1$$ is",
+      "options": [
+        "(-13,0)",
+        "(13,0)",
+        "(13,-1)",
+        "(13,1)"
+      ],
+      "correctAnswer": "(13,0)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417648",
+      "question": "The length of the major axis of the ellipse: $$4x^2+3y^2=48$$ is",
+      "options": [
+        "10",
+        "11",
+        "8",
+        "13"
+      ],
+      "correctAnswer": "8",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417649",
+      "question": "The value of $$lim_{x\\rightarrow1}\\frac{x^3-1}{x-1}$$ is",
+      "options": [
+        "3",
+        "-3",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417650",
+      "question": "If $$y=\\frac{a+bx}{b-ax}$$ then the derivative of y with respect to x is",
+      "options": [
+        "$$\\frac{a^2+b^2}{(b-ax)^2}$$",
+        "$$\\frac{a^2+b^2}{(b+ax)^2}$$",
+        "$$\\frac{a^2-b^2}{(b-ax)^2}$$",
+        "$$\\frac{a+b}{(b-ax)^2}$$"
+      ],
+      "correctAnswer": "$$\\frac{a^2+b^2}{(b-ax)^2}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417651",
+      "question": "If $$y=x^3e^x$$ then $$\\frac{dy}{dx}$$ is",
+      "options": [
+        "$$(x-3)x^2e^x$$",
+        "$$(x-2)x^3e^x$$",
+        "$$(x+3)x^2e^x$$",
+        "$$(x-1)x^3e^x$$"
+      ],
+      "correctAnswer": "$$(x+3)x^2e^x$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417652",
+      "question": "If $$y=sec~x+tan~x$$ then $$\\frac{dy}{dx}$$ is",
+      "options": [
+        "y cos x",
+        "y sec x",
+        "-y sin x",
+        "y tan x"
+      ],
+      "correctAnswer": "y sec x",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417653",
+      "question": "If $$y=\\sqrt{\\frac{1-cos~x}{1+cos~x}}$$ then $$\\frac{dy}{dx}$$ is",
+      "options": [
+        "$$sec^2(\\frac{x}{2})$$",
+        "$$cos^2(\\frac{x}{2})$$",
+        "$$\\frac{1}{2}cos^2(\\frac{x}{2})$$",
+        "$$\\frac{1}{2}sec^2(\\frac{x}{2})$$"
+      ],
+      "correctAnswer": "$$\\frac{1}{2}sec^2(\\frac{x}{2})$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417654",
+      "question": "The angle between the curves $$y=x^2+3x-7$$ and $$y^2=2x+5$$ at (2,3) is",
+      "options": [
+        "$$tan\\theta=2$$",
+        "$$sec\\theta=2$$",
+        "$$cos\\theta=1$$",
+        "$$sin\\theta=3$$"
+      ],
+      "correctAnswer": "$$tan\\theta=2$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417655",
+      "question": "The range of x for which the function $$x^3-3x^2-45x+2$$ is increasing with x is",
+      "options": [
+        "(3,-5)",
+        "(-3,-5)",
+        "(3,5)",
+        "(-3,5)"
+      ],
+      "correctAnswer": "(-3,5)",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417656",
+      "question": "The maximum value of the function $$2x^3-12x^2+18x+5$$ is",
+      "options": [
+        "13",
+        "12",
+        "10",
+        "15"
+      ],
+      "correctAnswer": "15",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417657",
+      "question": "If u is a homogeneous function of x and y with degree n then $$x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}=$$",
+      "options": [
+        "-nu",
+        "$$n^2u$$",
+        "nu",
+        "$$nu^2+u$$"
+      ],
+      "correctAnswer": "nu",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417658",
+      "question": "The value of $$\\int\\frac{cos\\sqrt{x}}{\\sqrt{x}}dx$$ is",
+      "options": [
+        "$$2sin\\sqrt{x}+c$$",
+        "$$3sin\\sqrt{x}+c$$",
+        "$$2sin~x+c$$",
+        "$$sin\\sqrt{x}+c$$"
+      ],
+      "correctAnswer": "$$2sin\\sqrt{x}+c$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417659",
+      "question": "The value of $$\\int\\frac{dx}{\\sqrt{a^2-x^2}}$$ is",
+      "options": [
+        "$$cos^{-1}(\\frac{x}{a})+c$$",
+        "$$sin^{-1}(\\frac{x}{a})+c$$",
+        "$$sinh^{-1}(\\frac{x}{a})+c$$",
+        "$$sin^{-1}(\\frac{a}{x})+c$$"
+      ],
+      "correctAnswer": "$$sin^{-1}(\\frac{x}{a})+c$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417660",
+      "question": "The value of $$\\int\\frac{dx}{4x^2+4x+17}$$ is",
+      "options": [
+        "$$\\frac{1}{8}tan^{-1}(\\frac{2x+1}{4})+c$$",
+        "$$\\frac{1}{4}cot^{-1}(\\frac{2x+1}{4})+c$$",
+        "$$\\frac{1}{8}sin^{-1}(\\frac{2x+1}{4})+c$$",
+        "$$\\frac{1}{3}tan^{-1}(\\frac{2x+1}{4})+c$$"
+      ],
+      "correctAnswer": "The integration is $$\\frac{1}{8}tan^{-1}(\\frac{2x+1}{4})+c$$ but the question has an error in the given options. The correct value is $$\\frac{1}{8}tan^{-1}(\\frac{2x+1}{4})+c$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417661",
+      "question": "The value of $$\\int log~x~dx$$ is",
+      "options": [
+        "x log x + x + c",
+        "$$x^2log~x-x+c$$",
+        "x log x - x + c",
+        "x log x - $$\\frac{x^2}{2}$$ + c"
+      ],
+      "correctAnswer": "x log x - x + c",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417662",
+      "question": "The value of $$\\int_1^4(\\sqrt{x}+\\frac{1}{\\sqrt{x}})dx$$ is",
+      "options": [
+        "$$\\frac{20}{3}$$",
+        "$$-\\frac{20}{3}$$",
+        "$$\\frac{10}{3}$$",
+        "$$\\frac{15}{3}$$"
+      ],
+      "correctAnswer": "$$\\frac{20}{3}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417663",
+      "question": "The value of $$\\int_0^{\\pi/2}sin^2x~dx$$ is",
+      "options": [
+        "$$\\frac{\\pi}{2}$$",
+        "$$-\\frac{\\pi}{4}$$",
+        "$$\\frac{\\pi}{6}$$",
+        "$$\\frac{\\pi}{4}$$"
+      ],
+      "correctAnswer": "$$\\frac{\\pi}{4}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417664",
+      "question": "The area enclosed between the curve $$y^2=4ax$$ and the line $$x=2y$$ is",
+      "options": [
+        "$$\\frac{64}{5}sq.$$ units",
+        "$$\\frac{64}{3}$$ sq. units",
+        "$$\\frac{65}{4}sq.$$ units",
+        "$$\\frac{63}{4}sq.$$ units"
+      ],
+      "correctAnswer": "$$\\frac{64}{3}$$ sq. units",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417665",
+      "question": "The value of $$lim_{n\\rightarrow\\infty}[\\frac{1}{n+1}+\\frac{1}{n+2}+\\cdot\\cdot\\cdot+\\frac{1}{n+n}]$$ is",
+      "options": [
+        "log 2",
+        "log3",
+        "-log2",
+        "logn"
+      ],
+      "correctAnswer": "log 2",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417666",
+      "question": "Form the differential equation by eliminating the arbitrary constant a from $$ay^2=x^3$$",
+      "options": [
+        "$$\\frac{dy}{dx}=\\frac{3y}{2x}$$",
+        "$$\\frac{dy}{dx}=\\frac{2x}{3y}$$",
+        "$$\\frac{dy}{dx}=\\frac{x}{y}$$",
+        "$$\\frac{dy}{dx}=\\frac{2y}{x}$$"
+      ],
+      "correctAnswer": "$$\\frac{dy}{dx}=\\frac{3y}{2x}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417667",
+      "question": "The solution of $$\\sqrt{1-y^2}dx+\\sqrt{1-x^2}dy=0$$ is",
+      "options": [
+        "$$cos^{-1}x+cos^{-1}y=c$$",
+        "$$sinh^{-1}x+cosh^{-1}y=c$$",
+        "$$cos^{-1}x+sec^{-1}x=c$$",
+        "$$sin^{-1}x+sin^{-1}y=c$$"
+      ],
+      "correctAnswer": "$$sin^{-1}x+sin^{-1}y=c$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417668",
+      "question": "The solution of $$\\frac{dy}{dx}=(4x+y+1)^2$$ is",
+      "options": [
+        "$$\\frac{1}{2}tan^{-1}(\\frac{4x+y+1}{2})=x+c$$",
+        "$$\\frac{1}{2}cot^{-1}(\\frac{4x+y+1}{2})=x+c$$",
+        "$$-\\frac{1}{2}tan^{-1}(\\frac{4x+y+1}{2})=x+c$$",
+        "$$\\frac{1}{2}tan^{-1}(\\frac{4x-y-1}{2})=x+c$$"
+      ],
+      "correctAnswer": "The solution is $$\\frac{1}{2}tan^{-1}(\\frac{4x+y+1}{2})=x+c$$ but the question has an error in the given options.",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417669",
+      "question": "The solution of exact differential equation $$2xy~dx+x^2dy=0$$ is",
+      "options": [
+        "$$x^2y^2=c$$",
+        "$$x^2y=c$$",
+        "$$x^3y=c$$",
+        "$$x^2y^3=c$$"
+      ],
+      "correctAnswer": "$$x^2y=c$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417670",
+      "question": "The solution of $$\\frac{dy}{dx}+y=e^{-x}$$ is",
+      "options": [
+        "$$(x+c)e^{-x}$$",
+        "$$(x-c)e^x$$",
+        "$$(x+c)e^x$$",
+        "$$(x+c)e^{-2x}$$"
+      ],
+      "correctAnswer": "$$(x+c)e^{-x}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417671",
+      "question": "The particular integral of $$(D^2+5D+6)y=e^x$$ is",
+      "options": [
+        "$$\\frac{-e^{-x}}{12}$$",
+        "$$\\frac{e^{2x}}{12}$$",
+        "$$\\frac{e^x}{12}$$",
+        "$$\\frac{e^x}{6}$$"
+      ],
+      "correctAnswer": "$$\\frac{e^x}{12}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417672",
+      "question": "The complementary function of $$(D^2+3D+2)y=8sin5x$$ is",
+      "options": [
+        "$$c_1e^{-x}+c_2e^{-2x}$$",
+        "$$c_1e^x+c_2e^{2x}$$",
+        "$$c_1e^{-x}+c_2e^{2x}$$",
+        "$$c_1e^{2x}+c_2e^{3x}$$"
+      ],
+      "correctAnswer": "$$c_1e^{-x}+c_2e^{-2x}$$",
+      "topic": "Mathematics"
+    },
+    {
+      "id": "67809417674",
+      "question": "Which of the following is not the unit of energy?",
+      "options": [
+        "watt second",
+        "Pascal metre",
+        "Newton metre",
+        "Kilowatt hour"
+      ],
+      "correctAnswer": "Pascal metre",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417675",
+      "question": "The height of Mercury barometer is 76 cm and density of Mercury is 13.6 g/cc. The corresponding height of water barometer in SI system is",
+      "options": [
+        "10.336 m",
+        "103.36 m",
+        "3.6 m",
+        "1.0336 m"
+      ],
+      "correctAnswer": "10.336 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417676",
+      "question": "Angle made by the vector $$(\\sqrt{3}\\hat{i}+\\hat{j})$$ with the X-axis is",
+      "options": [
+        "$$\\pi/2$$",
+        "$$\\pi/4$$",
+        "$$\\pi/3$$",
+        "$$\\pi/6$$"
+      ],
+      "correctAnswer": "$$\\pi/6$$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417677",
+      "question": "The minimum number of unequal forces in a plane that can keep a particle in equilibrium is",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417678",
+      "question": "A body is thrown with a velocity of $$(4\\hat{i}+3\\hat{j})m/s$$. The maximum height attained by the body is ($g=10~ms^{-2}$)",
+      "options": [
+        "2.5 m",
+        "4.5 m",
+        "0.8 m",
+        "0.45 m"
+      ],
+      "correctAnswer": "0.45 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417679",
+      "question": "A person in a lift, which ascends up with acceleration 10 m/s2, drops a stone from a height of 10m. The time of descent is ($g=10~ms^{-2}$)",
+      "options": [
+        "0.5 s",
+        "1 s",
+        "1.5 s",
+        "2 s"
+      ],
+      "correctAnswer": "1 s",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417680",
+      "question": "For a projectile, the ratio of maximum height reached to the square of time of flight is",
+      "options": [
+        "5:4",
+        "5:2",
+        "5:1",
+        "10:1"
+      ],
+      "correctAnswer": "5:4",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417681",
+      "question": "The ratio of distances travelled by a body, starting from rest and travelling with uniform acceleration, in successive intervals of time of equal duration will be",
+      "options": [
+        "1:2:3",
+        "1:4:9",
+        "1:3:5",
+        "1:9:16"
+      ],
+      "correctAnswer": "1:3:5",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417682",
+      "question": "A force of 12 N acts on a body of mass 4 kg placed on a rough surface. The coefficient of friction between body and surface is 0.2 and take $g=10~ms^{-2}$ The acceleration of the body in m/s2 is",
+      "options": [
+        "1",
+        "0.5",
+        "0.25",
+        "Zero"
+      ],
+      "correctAnswer": "1",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417683",
+      "question": "Brakes stop a train in a certain distance d. When the braking force is made one fourth, the brakes will stop the train in a distance which is",
+      "options": [
+        "d/2",
+        "4d",
+        "2d",
+        "d"
+      ],
+      "correctAnswer": "4d",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417684",
+      "question": "The product of linear momentum and velocity of a body represents",
+      "options": [
+        "Kinetic energy of the body",
+        "Potential energy of the body",
+        "Half the Kinetic energy of the body",
+        "Twice the kinetic energy of the body"
+      ],
+      "correctAnswer": "Twice the kinetic energy of the body",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417685",
+      "question": "A man weighing 60 kg eats plum cake whose energy content is 9800 calories. If all this energy could be utilised by him, he can ascend to a height of",
+      "options": [
+        "17 m",
+        "100 m",
+        "70 m",
+        "60m"
+      ],
+      "correctAnswer": "70 m",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417686",
+      "question": "A crane can lift up 10,000 kg of coal in 1 hour from a mine of depth 180m. If the efficiency of the crane is 80%, its input power must be ($g=10~ms^{-2}$)",
+      "options": [
+        "62.5 kW",
+        "6.25 kW",
+        "50 kW",
+        "5 kW"
+      ],
+      "correctAnswer": "6.25 kW",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417687",
+      "question": "The graph of acceleration as a function of displacement in the case of a body executing simple harmonic motion is",
+      "options": [
+        "Parabola",
+        "Hyperbola",
+        "Straight line with positive slope",
+        "Straight line with negative slope"
+      ],
+      "correctAnswer": "Straight line with negative slope",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417688",
+      "question": "The pendulum of length 'L' swings from mean position to mean position 'n' times in one second. The value of acceleration due to gravity is",
+      "options": [
+        "$$\\pi^2n^2L$$",
+        "$$2\\pi^2n^2L$$",
+        "$$(\\pi^2n^2L)/2$$",
+        "$$4\\pi^2n^2L$$"
+      ],
+      "correctAnswer": "$$\\pi^2n^2L$$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417689",
+      "question": "When a source of sound is in motion towards a stationary observer, the effect observed is",
+      "options": [
+        "Decrease in velocity of sound",
+        "Increase in velocity of sound",
+        "increase in frequency of sound",
+        "decrease in frequency of sound"
+      ],
+      "correctAnswer": "increase in frequency of sound",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417690",
+      "question": "The voice of a male person is different from that of a female person because",
+      "options": [
+        "Two sounds have different phases",
+        "Two persons are of different size",
+        "Two sounds travel with different velocities",
+        "Two sounds have different pitch"
+      ],
+      "correctAnswer": "Two sounds have different pitch",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417691",
+      "question": "If the sound absorption of a hall is changed by 2%, then the percentage change in the reverberation time is",
+      "options": [
+        "2%",
+        "4%",
+        "1%",
+        "No change"
+      ],
+      "correctAnswer": "2%",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417692",
+      "question": "In which of the following process, the internal energy of the system remains constant?",
+      "options": [
+        "Adiabatic",
+        "Isothermal",
+        "Isobaric",
+        "Isochoric"
+      ],
+      "correctAnswer": "Isothermal",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417693",
+      "question": "Heat required to raise the temperature of one gram of water through 1 K is",
+      "options": [
+        "1.0 Kcal",
+        "0.1 Kcal",
+        "0.01 Kcal",
+        "0.001 Kcal"
+      ],
+      "correctAnswer": "0.001 Kcal",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417694",
+      "question": "The specific heat of a gas in an isothermal process is",
+      "options": [
+        "infinity",
+        "Zero",
+        "Finite positive",
+        "Finite negative"
+      ],
+      "correctAnswer": "infinity",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417695",
+      "question": "Specific heat of aluminium is 0.25 cal/g/degree C. The water equivalent of an aluminium vessel of mass one kilogram is",
+      "options": [
+        "40 cal/degree C",
+        "400 cal/degree C",
+        "250 cal/degree C",
+        "25 cal/degree C"
+      ],
+      "correctAnswer": "250 cal/degree C",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417696",
+      "question": "What should be the percentage increase in the pressure so that the volume of a gas may decrease by 5% at constant temperature?",
+      "options": [
+        "5%",
+        "5.26%",
+        "10%",
+        "4.26%"
+      ],
+      "correctAnswer": "5.26%",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417697",
+      "question": "If the maximum kinetic energy of emitted photo electrons from a metal is 0.9 eV and work function is 2.2 eV, then the wavelength of incident radiation is",
+      "options": [
+        "4000$\\AA$",
+        "8000$\\AA$",
+        "3000$\\AA$",
+        "2000$\\AA$"
+      ],
+      "correctAnswer": "4000$\\AA$",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417698",
+      "question": "If the angle of incidence of a ray is greater than the critical angle at the core - cladding interface in an optical fiber, then the ray travels",
+      "options": [
+        "in the core",
+        "in the cladding",
+        "in the buffer",
+        "along the interface"
+      ],
+      "correctAnswer": "in the core",
+      "topic": "Physics"
+    },
+    {
+      "id": "67809417699",
+      "question": "Pauli's Exclusion principle states that two electrons in same orbital have",
+      "options": [
+        "same spins",
+        "different spins",
+        "opposite spins",
+        "vertical spins"
+      ],
+      "correctAnswer": "opposite spins",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417700",
+      "question": "Orbits in which electrons move according to Bohr are",
+      "options": [
+        "elliptical",
+        "cylindrical",
+        "circular",
+        "oval"
+      ],
+      "correctAnswer": "circular",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417701",
+      "question": "Phosphorus has an atomic number of 15. A stable phosphorus atom has an electronic configuration of",
+      "options": [
+        "$$1s^2 2s^2 2p^6 3p^5$$",
+        "$$1s^2 2s^2 2p^6 3s^2 3p^3$$",
+        "$$1s^2 2s^2 2p^6 3s^2 3p^1 4s^2$$",
+        "$$1s^2 1p^6 1d^7$$"
+      ],
+      "correctAnswer": "$$1s^2 2s^2 2p^6 3s^2 3p^3$$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417702",
+      "question": "NaCl is classified as having what kind of bonds in the solid phase?",
+      "options": [
+        "Covalent",
+        "Ionic",
+        "Polar",
+        "van der Waals"
+      ],
+      "correctAnswer": "Ionic",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417703",
+      "question": "The Bond formed due to sharing of electrons is",
+      "options": [
+        "Ionic bond",
+        "Metallic bond",
+        "Polar bond",
+        "Covalent bond"
+      ],
+      "correctAnswer": "Covalent bond",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417704",
+      "question": "The normality of solution obtained by dissolving 5.3 grams of $$Na_2CO_3$$ in 1 litre solution is",
+      "options": [
+        "1N",
+        "0.1N",
+        "0.05N",
+        "0.5N"
+      ],
+      "correctAnswer": "0.1N",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417705",
+      "question": "The following solution has same molarity and normality",
+      "options": [
+        "$$Na_2CO_3$$",
+        "NaCl",
+        "$$H_2SO_4$$",
+        "$$K_2Cr_2O_7$$"
+      ],
+      "correctAnswer": "NaCl",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417706",
+      "question": "5 moles of a solute is dissolved in 10 litres of solution. What is its molarity?",
+      "options": [
+        "5 M",
+        "2M",
+        "0.5M",
+        "0.2M"
+      ],
+      "correctAnswer": "0.5M",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417707",
+      "question": "Process in which acids ($H^+$) and bases ($OH^-$) react to form salts and water is called",
+      "options": [
+        "Neutralization",
+        "Halogenation",
+        "Hydrogenation",
+        "Hydrolysis"
+      ],
+      "correctAnswer": "Neutralization",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417708",
+      "question": "A substance that donates a pair of electrons to form coordinate covalent bond is called",
+      "options": [
+        "Lewis acid",
+        "Lewis base",
+        "Bronsted-Lowry acid",
+        "Bronsted-Lowry base"
+      ],
+      "correctAnswer": "Lewis base",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417709",
+      "question": "One Faraday is equal to",
+      "options": [
+        "99650 C",
+        "93100 C",
+        "96500 C",
+        "94500 C"
+      ],
+      "correctAnswer": "96500 C",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417710",
+      "question": "The cell reaction of a cell is $$Mg(s)+2~H^+(aq)\\rightarrow Mg^{2+}(aq)+H_2(g)$$. If the standard reduction potential of Zn is - 2.372 V, then the emf of the cell is",
+      "options": [
+        "+2.372 V",
+        "-2.372 V",
+        "0.00 V",
+        "-1.372 V"
+      ],
+      "correctAnswer": "+2.372 V",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417711",
+      "question": "Galvanic cells are the cells which convert",
+      "options": [
+        "Electrical energy to chemical energy",
+        "Chemical energy to electrical energy",
+        "Chemical energy to free energy",
+        "Potential energy to kinetic energy"
+      ],
+      "correctAnswer": "Chemical energy to electrical energy",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417712",
+      "question": "Mass of substance produced at electrode is directly proportional to the quantity of electricity passed. This is known as",
+      "options": [
+        "Faraday's second law",
+        "Faraday's first law",
+        "Newton's third law",
+        "Newton's first law"
+      ],
+      "correctAnswer": "Faraday's first law",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417713",
+      "question": "Hardness of water is expressed in terms of equivalent of",
+      "options": [
+        "$$Na_2CO_3$$",
+        "$$K_2CO_3$$",
+        "$$MgCO_3$$",
+        "$$CaCO_3$$"
+      ],
+      "correctAnswer": "$$CaCO_3$$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417714",
+      "question": "Temporary hardness is caused by",
+      "options": [
+        "Carbonates of calcium and magnesium",
+        "Chlorides of calcium and magnesium",
+        "Sulphates of calcium and magnesium",
+        "Nitrates of Calcium"
+      ],
+      "correctAnswer": "Carbonates of calcium and magnesium",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417715",
+      "question": "The exhausted zeolite bed can be regenerated by washing with",
+      "options": [
+        "NaCl",
+        "dil. NaOH",
+        "dil. HCl",
+        "Distilled water"
+      ],
+      "correctAnswer": "NaCl",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417716",
+      "question": "Corrosion is an example of",
+      "options": [
+        "Oxidation",
+        "Reduction",
+        "Electrolysis",
+        "Halogenation"
+      ],
+      "correctAnswer": "Oxidation",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417717",
+      "question": "The composition of rust is",
+      "options": [
+        "$$Fe(OH)_3$$",
+        "$$FeCl_3$$",
+        "FeO",
+        "$$Fe_2O_3\\cdot xH_2O$$"
+      ],
+      "correctAnswer": "$$Fe_2O_3\\cdot xH_2O$$",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417718",
+      "question": "Which one of the following statement is not true?",
+      "options": [
+        "Natural rubber has the trans-configuration at every double bond",
+        "Buna-S is a copolymer of butadiene and styrene",
+        "Natural rubber is a 1,4-polymer of isoprene",
+        "In vulcanization, the formation of sulphur bridges between different chains makes rubber harder and stronger"
+      ],
+      "correctAnswer": "Natural rubber has the trans-configuration at every double bond",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417719",
+      "question": "The monomers of Buna-S rubber are",
+      "options": [
+        "Styrene and butadiene",
+        "Styrene and 2-propene",
+        "Isoprene and butadiene",
+        "Styrene and sulphur"
+      ],
+      "correctAnswer": "Styrene and butadiene",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417720",
+      "question": "The plastics which soften when heat is applied with or without pressure, but require cooling to set them to shape are called as",
+      "options": [
+        "Thermosofting materials",
+        "Thermosetting materials",
+        "Thermoplastic materials",
+        "Thermostatting materials"
+      ],
+      "correctAnswer": "Thermoplastic materials",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417721",
+      "question": "Which one of the following statement is not true about ideal fuel?",
+      "options": [
+        "High calorific value",
+        "High moisture content",
+        "Low cost",
+        "Moderate ignition temperature"
+      ],
+      "correctAnswer": "High moisture content",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417722",
+      "question": "Environmental pollution affects",
+      "options": [
+        "Humans only",
+        "Plants only",
+        "Biotic components",
+        "Both abiotic and biotic components"
+      ],
+      "correctAnswer": "Both abiotic and biotic components",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417723",
+      "question": "Layer of atmosphere in which ozone layer lies is",
+      "options": [
+        "Troposphere",
+        "Stratosphere",
+        "Exosphere",
+        "Mesosphere"
+      ],
+      "correctAnswer": "Stratosphere",
+      "topic": "Chemistry"
+    },
+    {
+      "id": "67809417724",
+      "question": "A network contains four resistors in series across an ideal voltage source. If the values of all the resistors are doubled then the voltage across each resistor will",
+      "options": [
+        "be increased by 2 times",
+        "be increased by 4 times",
+        "be decreased by 2 times",
+        "not change"
+      ],
+      "correctAnswer": "not change",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417725",
+      "question": "If each branch of a delta circuit has resistance of 1.732R. then each branch of its equivalent star circuit has resistance of",
+      "options": [
+        "3R",
+        "1.732R",
+        "0.577R",
+        "0.333R"
+      ],
+      "correctAnswer": "0.577R",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417726",
+      "question": "Thevenin's equivalent circuit consists of",
+      "options": [
+        "A voltage source in parallel with resistance",
+        "A voltage source in series with resistance",
+        "A current source in parallel with resistance",
+        "A current source in series with resistance"
+      ],
+      "correctAnswer": "A voltage source in series with resistance",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417727",
+      "question": "Which of the following statement is correct?",
+      "options": [
+        "Resistor is an active element",
+        "Inductor is an active element",
+        "Voltage source is a passive element",
+        "Current source is an active element"
+      ],
+      "correctAnswer": "Current source is an active element",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417728",
+      "question": "The mutual inductance between two coupled coils with self inductances $$L_1=9$$ H and $$L_2=4$$ H with a coefficient of coupling of 0.5 is",
+      "options": [
+        "3 H",
+        "6 H",
+        "18 H",
+        "36 H"
+      ],
+      "correctAnswer": "3 H",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417729",
+      "question": "If the distance between two charges is doubled, the force between them",
+      "options": [
+        "Increases two times",
+        "decreases two times",
+        "Increases four times",
+        "decreases four times"
+      ],
+      "correctAnswer": "decreases four times",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417730",
+      "question": "The heat produced in a current carrying conductor is",
+      "options": [
+        "IRT",
+        "$$I^2 RT$$",
+        "$$IR^2 T$$",
+        "$$IRT^2$$"
+      ],
+      "correctAnswer": "$$I^2 RT$$",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417731",
+      "question": "If the number of conductors and speed of a Lap wound D.C. Generator is doubled then the generated em.f. will be",
+      "options": [
+        "Remains same",
+        "Double the former value",
+        "Four times the former value",
+        "Eight times the former value"
+      ],
+      "correctAnswer": "Double the former value",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417732",
+      "question": "A 4 pole, D. C. wave wound Generator runs at 600 r.p.m. The flux per pole is 0.015 webers and generator no load voltage is 240Volts. The number of conductors are",
+      "options": [
+        "600",
+        "800",
+        "1000",
+        "1200"
+      ],
+      "correctAnswer": "800",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417733",
+      "question": "The simplest way to shift load from one D. C. shunt generator running in parallel with another is by",
+      "options": [
+        "Adjusting their field rheostats",
+        "Inserting resistance in their armature circuits",
+        "Adjusting the speeds of their prime movers",
+        "Using equalizer connections"
+      ],
+      "correctAnswer": "Adjusting their field rheostats",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417734",
+      "question": "The voltage regulation of an over-compound D.C. generator is always",
+      "options": [
+        "Positive",
+        "negative",
+        "zero",
+        "high"
+      ],
+      "correctAnswer": "Positive",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417735",
+      "question": "D.C. Shunt motors are commonly used in",
+      "options": [
+        "Cranes",
+        "Electric Traction",
+        "Elevators",
+        "Lathe machines"
+      ],
+      "correctAnswer": "Lathe machines",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417736",
+      "question": "The voltage equation of a D.C. motor is",
+      "options": [
+        "$V=E_b/I_a R_a$",
+        "$E_b=V+I_a R_a$",
+        "$V=E_b+I_a R_a$",
+        "$V=E_b+I_a^2 R_a$"
+      ],
+      "correctAnswer": "$$V=E_b+I_a R_a$$",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417737",
+      "question": "A 4 pole 240V, d.c. series motor has a wave wound armature with 180 conductors. The armature resistance and field winding resistance are 0.10 $\\Omega$ and 0.20 $\\Omega$ respectively. If the motor is drawing 40A current at 0.015 webers flux per pole. then the speed under this condition is",
+      "options": [
+        "2533.33 r.p.m.",
+        "2644.4 r.p.m.",
+        "2756.9 r.p.m.",
+        "2987.6 r.p.m."
+      ],
+      "correctAnswer": "2533.33 r.p.m.",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417738",
+      "question": "The capacity of a battery is expressed in",
+      "options": [
+        "watts",
+        "Volt hours",
+        "Ampere hours",
+        "Ohm hours"
+      ],
+      "correctAnswer": "Ampere hours",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417739",
+      "question": "Moving coil and moving iron instruments can be distinguished by looking at",
+      "options": [
+        "Their range",
+        "pointer",
+        "scale",
+        "Size of terminals"
+      ],
+      "correctAnswer": "scale",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417740",
+      "question": "In dynamometer wattmeter, number of coils used are",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417741",
+      "question": "Which of the following transducer is known as 'self generating transducer'?",
+      "options": [
+        "Passive transducer",
+        "Active transducer",
+        "Secondary transducer",
+        "Analog transducer"
+      ],
+      "correctAnswer": "Active transducer",
+      "topic": "Electronics and Instrumentation Engineering"
+    },
+    {
+      "id": "67809417742",
+      "question": "When a Megger is not in operation then its needle shows a resistance of",
+      "options": [
+        "Zero ohms",
+        "10 ohms",
+        "100 ohms",
+        "infinity"
+      ],
+      "correctAnswer": "infinity",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417743",
+      "question": "In a pure inductive circuit, the voltage will be",
+      "options": [
+        "In phase with current",
+        "Lags the current by 90 degrees",
+        "Leads the current by 90 degrees",
+        "Lags the current by 45 degrees"
+      ],
+      "correctAnswer": "Leads the current by 90 degrees",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417744",
+      "question": "The peak factor is the ratio of",
+      "options": [
+        "Peak value to RMS value",
+        "RMS value to peak value",
+        "average value to RMS value",
+        "RMS value to average value"
+      ],
+      "correctAnswer": "Peak value to RMS value",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417745",
+      "question": "A series RLC circuit has a resonant frequency of fo Hz. If all the circuit element values are doubled, the new resonant frequency is",
+      "options": [
+        "2fo",
+        "fo",
+        "0.25fo",
+        "0.5fo"
+      ],
+      "correctAnswer": "0.5fo",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417746",
+      "question": "A three phase balanced delta connected circuit has a load impedance of $$(6+j9)$$ ohms per phase. What is its equivalent star connected load impedance per phase in ohms?",
+      "options": [
+        "$$(6+j9)$$",
+        "$$(2+j3)$$",
+        "$$(18+j27)$$",
+        "$$(12+j18)$$ "
+      ],
+      "correctAnswer": "$$(2+j3)$$",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417747",
+      "question": "In two wattmeter method of measurement of power. if the two wattmeters readings are equal, then the power factor will be",
+      "options": [
+        "zero",
+        "unity",
+        "0.5",
+        "0.866"
+      ],
+      "correctAnswer": "unity",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417748",
+      "question": "A step-up transformer increases",
+      "options": [
+        "voltage",
+        "current",
+        "power",
+        "frequency"
+      ],
+      "correctAnswer": "voltage",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417749",
+      "question": "A transformer having 1000 primary turns is connected to a 250V AC. supply. For a secondary voltage of 400V, the number of secondary turns should be",
+      "options": [
+        "250",
+        "400",
+        "1250",
+        "1600"
+      ],
+      "correctAnswer": "1600",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417750",
+      "question": "The equivalent resistance of the primary of a 220V/1100V transformer is 0.1 $\\Omega$. Its equivalent resistance referred to secondary is",
+      "options": [
+        "0.5$\\Omega$",
+        "0.02$\\Omega$",
+        "0.04$\\Omega$",
+        "2.5$\\Omega$"
+      ],
+      "correctAnswer": "2.5$\\Omega$",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417751",
+      "question": "A 100kVA transformer has an iron loss of 900W and full load copper loss of 1600W. Its load kVA corresponding to maximum efficiency is",
+      "options": [
+        "56.3 kVA",
+        "133.3 kVA",
+        "75 kVA",
+        "177.7 kVA"
+      ],
+      "correctAnswer": "75 kVA",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417752",
+      "question": "If two transformers A and B are operating in parallel, with voltage rating of transformer A is slightly greater than that of transformer B. If $E_A$ and $E_B$ are induced emfs, $Z_A$ and $Z_B$ are the impedances of transformers A and B then the circulating current $I_C$ is given by",
+      "options": [
+        "$$(E_A-E_B)/(Z_A+Z_B)$$",
+        "$$(E_A+E_B)/(Z_A+Z_B)$$",
+        "$$(Z_A-Z_B)/(E_A-E_B)$$",
+        "$$(Z_A+Z_B)/(E_A+E_B)$$"
+      ],
+      "correctAnswer": "$$(E_A-E_B)/(Z_A+Z_B)$$",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417753",
+      "question": "The phase shift in a star-star connected three phase transformer is",
+      "options": [
+        "0 degrees",
+        "30 degrees",
+        "120 degrees",
+        "180 degrees"
+      ],
+      "correctAnswer": "0 degrees",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417754",
+      "question": "An auto transformer supplies a load of 3kW at 115V at unity power factor. If the applied primary voltage is 230V, calculate the power transferred to the load inductively by neglecting losses.",
+      "options": [
+        "0.5kW",
+        "1kW",
+        "1.5kW",
+        "2kW"
+      ],
+      "correctAnswer": "1.5kW",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417755",
+      "question": "The frequency of a 4 pole alternator running at 1500 RPM will be",
+      "options": [
+        "100 Hz",
+        "60 Hz",
+        "50 Hz",
+        "25 Hz"
+      ],
+      "correctAnswer": "50 Hz",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417756",
+      "question": "The dark and bright lamp method is used for",
+      "options": [
+        "Transfer of load",
+        "synchronizing",
+        "Balancing of load",
+        "Phase sequence"
+      ],
+      "correctAnswer": "synchronizing",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417757",
+      "question": "In an alternator, the armature reaction influences",
+      "options": [
+        "Generated voltage per phase",
+        "frequency",
+        "Operating speed",
+        "Winding losses"
+      ],
+      "correctAnswer": "Generated voltage per phase",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417758",
+      "question": "The power developed by a synchronous motor will be maximum when the load angle is",
+      "options": [
+        "0 degrees",
+        "45 degrees",
+        "60 degrees",
+        "90 degrees"
+      ],
+      "correctAnswer": "90 degrees",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417759",
+      "question": "An over excited synchronous motor is used for",
+      "options": [
+        "Fluctuating loads",
+        "Variable speed loads",
+        "Low torque loads",
+        "Power factor corrections"
+      ],
+      "correctAnswer": "Power factor corrections",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417760",
+      "question": "If the field of a synchronous motor is under excited, the power factor will be",
+      "options": [
+        "zero",
+        "unity",
+        "lagging",
+        "leading"
+      ],
+      "correctAnswer": "lagging",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417761",
+      "question": "A 4-pole, 3-phase induction motor is running at 4% slip at full load. If the speed of the motor is 720 r.p.m., the supply frequency is",
+      "options": [
+        "15 Hz",
+        "25 Hz",
+        "50 Hz",
+        "60 Hz"
+      ],
+      "correctAnswer": "25 Hz",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417762",
+      "question": "The rotor power output of a 3-phase induction motor is 15kW and the corresponding slip is 4%. The rotor copper loss will be",
+      "options": [
+        "600W",
+        "625W",
+        "650W",
+        "700W"
+      ],
+      "correctAnswer": "625W",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417763",
+      "question": "When the rotor of a 3-phase induction motor is blocked, the slip is",
+      "options": [
+        "1",
+        "0.5",
+        "0.1",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417764",
+      "question": "Double squirrel cage induction motor has",
+      "options": [
+        "Two series windings in stator",
+        "Two series windings in rotor",
+        "Two parallel windings in rotor",
+        "Two parallel windings in stator"
+      ],
+      "correctAnswer": "Two parallel windings in rotor",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417765",
+      "question": "A capacitor start, capacitor run Induction motor is basically",
+      "options": [
+        "two phase motor",
+        "D.C. motor",
+        "Commutator motor",
+        "Synchronous motor"
+      ],
+      "correctAnswer": "two phase motor",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417766",
+      "question": "Which of the following motor is most suitable for computer drive printers?",
+      "options": [
+        "Reluctance motor",
+        "Hysteresis motor",
+        "Shaded pole motor",
+        "Stepper motor"
+      ],
+      "correctAnswer": "Stepper motor",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417767",
+      "question": "Ash content of Indian coal is approximately",
+      "options": [
+        "5%",
+        "8%",
+        "10%",
+        "25%"
+      ],
+      "correctAnswer": "25%",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417768",
+      "question": "A Kaplan turbine is",
+      "options": [
+        "A low head axial flow turbine",
+        "A high head mixed flow turbine",
+        "Inward flow impulse turbine",
+        "Outward flow reaction turbine"
+      ],
+      "correctAnswer": "A low head axial flow turbine",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417769",
+      "question": "The nuclear reactor starts generation when",
+      "options": [
+        "The safety rod is inserted into the core",
+        "The safety rod is withdrawn from the core",
+        "The shim rod is inserted into the core",
+        "The shim rod is withdrawn from the core"
+      ],
+      "correctAnswer": "The safety rod is withdrawn from the core",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417770",
+      "question": "The maximum demand of a consumer is 2kW and his daily energy consumption is 20 units. His load factor is",
+      "options": [
+        "10.15%",
+        "41.66%",
+        "50%",
+        "75%"
+      ],
+      "correctAnswer": "41.66%",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417771",
+      "question": "It is always economical to improve the power factor of an installation to",
+      "options": [
+        "zero",
+        "unity",
+        "A little less than unity lag",
+        "A little less than unity lead"
+      ],
+      "correctAnswer": "A little less than unity lag",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417772",
+      "question": "A 3-phase breaker is rated at 2000MVA, 33kV. Its breaking current will be",
+      "options": [
+        "35kA",
+        "49kA",
+        "70kA",
+        "89kA"
+      ],
+      "correctAnswer": "35kA",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417773",
+      "question": "The pickup value of a relay is 7.5A and fault current in relay coil is 37.5A. Its plug setting multiplier is",
+      "options": [
+        "10",
+        "7.5",
+        "2.5",
+        "5"
+      ],
+      "correctAnswer": "5",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417774",
+      "question": "A mho relay is a",
+      "options": [
+        "Voltage restrained directional relay",
+        "Voltage controlled over current relay",
+        "Directional restrained over current relay",
+        "Directional restrained over voltage relay"
+      ],
+      "correctAnswer": "Voltage restrained directional relay",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417775",
+      "question": "Buchholz relay provides protection of the transformer from",
+      "options": [
+        "External faults",
+        "Internal faults",
+        "Lightening faults",
+        "Dielectric breakdown"
+      ],
+      "correctAnswer": "Internal faults",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417776",
+      "question": "A differential protection system responds to the of the two electrical quantities.",
+      "options": [
+        "Arithmetic difference",
+        "Arithmetic sum",
+        "Vectorial difference",
+        "Vector Sum"
+      ],
+      "correctAnswer": "Vectorial difference",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417777",
+      "question": "The transfer of electrical energy from consumers localities to the consumers premises is called",
+      "options": [
+        "Primary transmission",
+        "Primary distribution",
+        "secondary transmission",
+        "secondary distribution"
+      ],
+      "correctAnswer": "secondary distribution",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417778",
+      "question": "The capacitive effect is negligible in",
+      "options": [
+        "Short transmission lines",
+        "Medium transmission lines",
+        "Long transmission lines",
+        "Medium and Long transmission lines"
+      ],
+      "correctAnswer": "Short transmission lines",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417779",
+      "question": "Surge impedance of a transmission line is given by",
+      "options": [
+        "Square root of (L/C)",
+        "Square root of (C/L)",
+        "Square root of (LC)",
+        "Square root of (1/LC)"
+      ],
+      "correctAnswer": "Square root of (L/C)",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417780",
+      "question": "If the conductor diameter increases, inductance of the line",
+      "options": [
+        "decreases",
+        "Increases",
+        "Remains same",
+        "Equal to zero"
+      ],
+      "correctAnswer": "decreases",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417781",
+      "question": "The first HVDC scheme in India is",
+      "options": [
+        "Vindhyachal back to back system",
+        "Chandrapur Padghe Scheme",
+        "Delhi Rihand 500kV system",
+        "Sileru-Barsoor system"
+      ],
+      "correctAnswer": "Vindhyachal back to back system",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417782",
+      "question": "ACSR conductor implies",
+      "options": [
+        "All Conductors Surface treated and Realigned",
+        "Aluminium Conductor Steel Reinforced",
+        "Anode Current Sinusoidal Run",
+        "Anodised Core Smooth Run"
+      ],
+      "correctAnswer": "Aluminium Conductor Steel Reinforced",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417783",
+      "question": "Which of the following equipment is not used in the substations?",
+      "options": [
+        "Shunt reactor",
+        "Exciters",
+        "Voltage transformers",
+        "Series capacitors"
+      ],
+      "correctAnswer": "Exciters",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417784",
+      "question": "The most commonly used material for insulators of overhead lines is",
+      "options": [
+        "Plastic",
+        "Rubber",
+        "Mica",
+        "Porcelain"
+      ],
+      "correctAnswer": "Porcelain",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417785",
+      "question": "As compared to a D. C 2-Wire distributor, a 3-Wire distributor with same maximum voltage to earth uses only percent of copper.",
+      "options": [
+        "66.66",
+        "50",
+        "31.25",
+        "75"
+      ],
+      "correctAnswer": "31.25",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417786",
+      "question": "For the voltages beyond 66kV, the cable used is",
+      "options": [
+        "Belted Cables",
+        "Screened Cables",
+        "Pressure Cables",
+        "S.L. Type Cables"
+      ],
+      "correctAnswer": "Pressure Cables",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417787",
+      "question": "The maximum speed attained by a train on the run is known as",
+      "options": [
+        "Crest speed",
+        "Average speed",
+        "Scheduled speed",
+        "coasting"
+      ],
+      "correctAnswer": "Crest speed",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417788",
+      "question": "For train lighting the generator used is",
+      "options": [
+        "Series generator",
+        "Shunt generator",
+        "Rosenberg generator",
+        "Synchronous generator"
+      ],
+      "correctAnswer": "Rosenberg generator",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417789",
+      "question": "In speed-time curve for trains, the notching period is",
+      "options": [
+        "Constant acceleration period",
+        "Free running period of train",
+        "Braking period of train",
+        "Coasting period of train"
+      ],
+      "correctAnswer": "Constant acceleration period",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417790",
+      "question": "Which of the following system is used for long distance railways?",
+      "options": [
+        "250V D.C.",
+        "25kV, Single Phase A. C.",
+        "25kV, 2-Phase A. C.",
+        "25kV, 3-Phase A. C."
+      ],
+      "correctAnswer": "25kV, Single Phase A. C.",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417791",
+      "question": " motor is preferred for printing machines",
+      "options": [
+        "Universal",
+        "Series",
+        "Shunt",
+        "D.C. Compound"
+      ],
+      "correctAnswer": "Shunt",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417792",
+      "question": "If the gain of the Open-loop system is doubled, the gain margin",
+      "options": [
+        "Is not affected",
+        "Becomes half",
+        "Becomes doubled",
+        "Becomes one-fourth"
+      ],
+      "correctAnswer": "Becomes half",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417793",
+      "question": "Which of the following element is not used in an automatic control system?",
+      "options": [
+        "sensor",
+        "Error detector",
+        "oscillator",
+        "Final control element"
+      ],
+      "correctAnswer": "oscillator",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417794",
+      "question": "In SCADA system, the RTU stands for",
+      "options": [
+        "Remote Terminal Unit",
+        "Round Terminal Unit",
+        "Remote Thermal Unit",
+        "Round Thermal Unit"
+      ],
+      "correctAnswer": "Remote Terminal Unit",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417795",
+      "question": "Which of the following tool is used for holding, gripping and cutting of wires?",
+      "options": [
+        "Screw driver",
+        "hammer",
+        "Cutting plier",
+        "hacksaw"
+      ],
+      "correctAnswer": "Cutting plier",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417796",
+      "question": "The wire running on the top of the overhead line, to protect from lightning is called as",
+      "options": [
+        "Phase",
+        "Neutral",
+        "Stay Wire",
+        "Earth Wire"
+      ],
+      "correctAnswer": "Earth Wire",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417797",
+      "question": "In irrigation pump-sets the accidental opening of one of the supply lines is known as",
+      "options": [
+        "Three phasing",
+        "Two phasing",
+        "Single phasing",
+        "Neutral phasing"
+      ],
+      "correctAnswer": "Single phasing",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417798",
+      "question": "The rating of the fuse wire is always expressed in",
+      "options": [
+        "amperes",
+        "volts",
+        "watts",
+        "ohms"
+      ],
+      "correctAnswer": "amperes",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417799",
+      "question": "The current in a Zener Diode is controlled by",
+      "options": [
+        "Reverse-bias voltage",
+        "Potential barrier",
+        "Zener Diode resistance",
+        "External resistance"
+      ],
+      "correctAnswer": "External resistance",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417800",
+      "question": "Each diode of half wave rectifier conducts for",
+      "options": [
+        "90 degrees",
+        "180 degrees",
+        "270 degrees",
+        "360 degrees"
+      ],
+      "correctAnswer": "180 degrees",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417801",
+      "question": "The transistor used in amplifier circuit operates in region",
+      "options": [
+        "active",
+        "saturation",
+        "Cut-off",
+        "reverse"
+      ],
+      "correctAnswer": "active",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417802",
+      "question": "The maximum efficiency of Class A amplifier is",
+      "options": [
+        "100%",
+        "81.8%",
+        "50%",
+        "30%"
+      ],
+      "correctAnswer": "50%",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417803",
+      "question": "The purpose of coupling capacitor in an amplifier is to",
+      "options": [
+        "Control the output",
+        "Match the impedance",
+        "Control the bandwidth",
+        "Prevent D.C. mixing with input"
+      ],
+      "correctAnswer": "Prevent D.C. mixing with input",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417804",
+      "question": "The phase shift oscillator generally contains",
+      "options": [
+        "Four stages of RC circuit",
+        "Three stages of RC circuit",
+        "Two stages of RC circuit",
+        "One stage of RC circuit"
+      ],
+      "correctAnswer": "Three stages of RC circuit",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417805",
+      "question": " oscillator is the most stable oscillator",
+      "options": [
+        "Crystal controlled",
+        "Weinbridge",
+        "Colpitts",
+        "Hartley"
+      ],
+      "correctAnswer": "Crystal controlled",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417806",
+      "question": "The base of the hexadecimal number system is",
+      "options": [
+        "2",
+        "8",
+        "10",
+        "16"
+      ],
+      "correctAnswer": "16",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417807",
+      "question": "The Gate whose output is high, if any of its inputs is high is",
+      "options": [
+        "NAND",
+        "OR",
+        "NOR",
+        "EX-OR"
+      ],
+      "correctAnswer": "OR",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417808",
+      "question": "The memory used for main memory in a hand calculator is",
+      "options": [
+        "RAM",
+        "ROM",
+        "PROM",
+        "EPROM"
+      ],
+      "correctAnswer": "RAM",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417809",
+      "question": "Which of the following is the fastest A to D converter?",
+      "options": [
+        "Successive approximation converter",
+        "Counter type converter",
+        "Comparator converter",
+        "Dual Slope converter"
+      ],
+      "correctAnswer": "Comparator converter",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417810",
+      "question": "An SCR is a Switch",
+      "options": [
+        "Unidirectional",
+        "Two-directional",
+        "Three-directional",
+        "Four-directional"
+      ],
+      "correctAnswer": "Unidirectional",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417811",
+      "question": "Turn-on time of an SCR can be reduced by using a",
+      "options": [
+        "Rectangular pulse of low amplitude and wide width",
+        "Rectangular pulse of high amplitude and narrow width",
+        "Triangular pulse",
+        "Trapezoidal pulse"
+      ],
+      "correctAnswer": "Rectangular pulse of high amplitude and narrow width",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417812",
+      "question": "In an UJT, maximum value of charging resistance is associated with",
+      "options": [
+        "Peak Point",
+        "Valley Point",
+        "Any point between peak and valley point",
+        "After the valley point"
+      ],
+      "correctAnswer": "Peak Point",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417813",
+      "question": "The Triac can be used only in",
+      "options": [
+        "inverter",
+        "rectifier",
+        "Multiquadrant chopper",
+        "Cycloconverter"
+      ],
+      "correctAnswer": "Cycloconverter",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417814",
+      "question": "Freewheeling diode in a converter is placed",
+      "options": [
+        "In series with each thyristor",
+        "In shunt with each thyristor",
+        "Across the D. C. load impedance",
+        "In series with the D. C. load impedance"
+      ],
+      "correctAnswer": "Across the D. C. load impedance",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417815",
+      "question": "A cycloconverter is a",
+      "options": [
+        "Amplitude changer",
+        "Phase changer",
+        "Waveform changer",
+        "Frequency changer"
+      ],
+      "correctAnswer": "Frequency changer",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417816",
+      "question": "In de chopper, if T is the chopping period, then the output voltage may be controlled by PWM by",
+      "options": [
+        "Varying T, keeping TON constant",
+        "Varying TON, keeping T constant",
+        "Varying TOFF, keeping T constant",
+        "Varying T, keeping TOFF constant"
+      ],
+      "correctAnswer": "Varying TON, keeping T constant",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417817",
+      "question": "A single phase voltage source square wave inverter feeds pure inductive load. The waveform of the load current will be",
+      "options": [
+        "sinusoidal",
+        "rectangular",
+        "trapezoidal",
+        "triangular"
+      ],
+      "correctAnswer": "triangular",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417818",
+      "question": "The PWM control of D. C. Motor varies with speed",
+      "options": [
+        "inversely",
+        "parabolically",
+        "exponentially",
+        "linearly"
+      ],
+      "correctAnswer": "linearly",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417819",
+      "question": "SMPS are based on the principle",
+      "options": [
+        "Phase control",
+        "Integral control",
+        "Chopper",
+        "MOSFET"
+      ],
+      "correctAnswer": "Chopper",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417820",
+      "question": "The number of flags of 8051 is",
+      "options": [
+        "5",
+        "8",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417821",
+      "question": "During PUSH instruction, the stack pointer is",
+      "options": [
+        "Incremented by two",
+        "Incremented by one",
+        "Decremented by two",
+        "Decremented by one"
+      ],
+      "correctAnswer": "Decremented by one",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417822",
+      "question": "In 8255, the length of a control word is",
+      "options": [
+        "2-bytes",
+        "4-bits",
+        "8-bits",
+        "12-bits"
+      ],
+      "correctAnswer": "8-bits",
+      "topic": "Electrical and Electronics Engineering"
+    },
+    {
+      "id": "67809417823",
+      "question": "PIC 8259 is a pin chip",
+      "options": [
+        "40",
+        "28",
+        "24",
+        "32"
+      ],
+      "correctAnswer": "28",
+      "topic": "Electrical and Electronics Engineering"
     }
-]
+  ]
+  

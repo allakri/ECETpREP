@@ -14,7 +14,7 @@ const papers = [
     { year: "2024", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
     { year: "2023", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
     { year: "2022", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
-    { year: "2021", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
+    { year: "2021", type: "Previous Paper", questions: 200, duration: "2 Hours-", marks: 200 },
     { year: "2020", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
     { year: "2019", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
     { year: "2018", type: "Previous Paper", questions: 200, duration: "2 Hours", marks: 200 },
@@ -68,12 +68,11 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                             </CardHeader>
                             <CardContent className="flex flex-col sm:flex-row justify-center items-center gap-6 py-10">
                                 <Button
+                                    onClick={() => setStep("apecet")}
                                     size="lg"
-                                    className="w-full sm:w-auto h-16 text-xl relative cursor-not-allowed"
-                                    disabled
+                                    className="w-full sm:w-auto h-16 text-xl"
                                 >
                                     APECET (Andhra Pradesh)
-                                    <Badge variant="secondary" className="absolute -top-2 -right-2 text-xs">Coming Soon</Badge>
                                 </Button>
                                 <Button onClick={() => setStep("tgecet")} size="lg" className="w-full sm:w-auto h-16 text-xl">
                                     TGECET (Telangana)
@@ -124,7 +123,7 @@ export function ExamDetails({ examName, examSlug }: ExamDetailsProps) {
                                                 </div>
                                                 <div className="flex items-center gap-2">
                                                     <Clock className="h-4 w-4" />
-                                                    <span>{paper.duration} Duration</span>
+                                                    <span>{paper.duration}</span>
                                                 </div>
                                                  <div className="flex items-center gap-2">
                                                     <Award className="h-4 w-4" />

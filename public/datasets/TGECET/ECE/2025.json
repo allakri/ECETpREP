@@ -1,2402 +1,2402 @@
 [
-    {
-      "id": "5069616016",
-      "question": "If A = \\(\\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}\\) and if \\((aI + bA)^2 = A\\), then \\(b^4 =\\)",
-      "options": [
-        "1",
-        "\\(\\frac{1}{2}\\)",
-        "\\(-\\frac{1}{4}\\)",
-        "\\(\\frac{1}{4}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{1}{4}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616017",
-      "question": "If A = \\(\\begin{pmatrix} \\cos\\theta & \\sin\\theta & 0 \\\\ -\\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = F(\\theta)\\), then \\(A^{-1} =\\)",
-      "options": [
-        "\\(F(\\theta)\\)",
-        "\\(F(-\\theta)\\)",
-        "\\(-F(\\theta)\\)",
-        "\\(-F(-\\theta)\\)"
-      ],
-      "correctAnswer": "\\(F(-\\theta)\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616018",
-      "question": "If (x, y, z) is the solution of linear equations \\(x + y + z = 6\\), \\(x - y + z = 2\\), \\(2x + y - z = 1\\), then \\(\\frac{yz}{x} =\\)",
-      "options": [
-        "\\(\\frac{1}{6}\\)",
-        "\\(\\frac{3}{2}\\)",
-        "6",
-        "3"
-      ],
-      "correctAnswer": "6",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616019",
-      "question": "If A and B are square matrices of order 3 with \\(|A| = 2, |B| = -4\\), then \\(|2AB| =\\)",
-      "options": [
-        "-64",
-        "16",
-        "64",
-        "-16"
-      ],
-      "correctAnswer": "-64",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616020",
-      "question": "If \\(log_{\\sqrt{27}}(x) = \\frac{8}{3}\\), then x =",
-      "options": [
-        "10",
-        "16",
-        "81",
-        "27"
-      ],
-      "correctAnswer": "81",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616021",
-      "question": "If \\(\\frac{x^3}{(x-1)(x+2)} = Ax + B + \\frac{C}{x-1} + \\frac{D}{x+2}\\), then \\(C + D =\\)",
-      "options": [
-        "-3",
-        "3",
-        "2",
-        "0"
-      ],
-      "correctAnswer": "3",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616022",
-      "question": "\\(\\frac{\\sin^2 33^\\circ - \\sin^2 57^\\circ}{\\sin 21^\\circ - \\cos 21^\\circ} =\\)",
-      "options": [
-        "\\(\\frac{\\sqrt{3}}{2}\\)",
-        "\\(\\frac{1}{2}\\)",
-        "\\(\\frac{1}{\\sqrt{2}}\\)",
-        "1"
-      ],
-      "correctAnswer": "\\(\\frac{1}{\\sqrt{2}}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616023",
-      "question": "If \\(A + B = \\frac{\\pi}{3}\\) and \\(\\cos A + \\cos B = 1\\), then \\(3\\cos(A - B) =\\)",
-      "options": [
-        "-1",
-        "2",
-        "-2",
-        "1"
-      ],
-      "correctAnswer": "-1",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616024",
-      "question": "If \\(2 \\tan^{-1}(\\frac{2}{3}) = \\tan^{-1}(k)\\), then k =",
-      "options": [
-        "\\(\\frac{5}{12}\\)",
-        "\\(\\frac{4}{3}\\)",
-        "\\(\\frac{12}{5}\\)",
-        "\\(\\frac{3}{4}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{12}{5}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616025",
-      "question": "If \\(\\tan^{-1}(\\frac{1-x}{1+x}) = \\frac{1}{2} \\tan^{-1}(x), x > 0\\), then x =",
-      "options": [
-        "\\(\\frac{\\sqrt{3}}{2}\\)",
-        "\\(\\frac{1}{\\sqrt{3}}\\)",
-        "\\(\\frac{1}{2}\\)",
-        "1"
-      ],
-      "correctAnswer": "\\(\\frac{1}{\\sqrt{3}}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616026",
-      "question": "If \\(\\cosh x = \\frac{3}{2}\\) then \\(\\cosh 2x =\\)",
-      "options": [
-        "\\(\\frac{1}{3}\\)",
-        "\\(\\frac{7}{2}\\)",
-        "\\(\\frac{5}{2}\\)",
-        "\\(\\frac{11}{3}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{7}{2}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616027",
-      "question": "\\((\\frac{\\sqrt{3} + i}{2})^6 + (\\frac{\\sqrt{3} - i}{2})^6 =\\)",
-      "options": [
-        "3",
-        "-3",
-        "2",
-        "-2"
-      ],
-      "correctAnswer": "-2",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616028",
-      "question": "The distance between the lines y = 2x + 4 and 6x - 3y = 5 is (in units)",
-      "options": [
-        "\\(\\frac{13}{2\\sqrt{5}}\\)",
-        "\\(\\frac{17}{3\\sqrt{5}}\\)",
-        "\\(\\frac{17}{2\\sqrt{5}}\\)",
-        "\\(\\frac{14}{3\\sqrt{5}}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{17}{3\\sqrt{5}}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616029",
-      "question": "If the radius of the circle \\(x^2 + y^2 - 4x + 6y - k = 0\\) is 4, then k =",
-      "options": [
-        "3",
-        "-3",
-        "2",
-        "\\(\\frac{1}{2}\\)"
-      ],
-      "correctAnswer": "3",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616030",
-      "question": "If the angle between the lines \\(3x - 4y + 1 = 0\\) and \\(ax + by - 7 = 0\\) is \\(90^\\circ\\), then \\(3a - 4b =\\)",
-      "options": [
-        "12",
-        "-1",
-        "0",
-        "4"
-      ],
-      "correctAnswer": "0",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616031",
-      "question": "The equation of the tangent to the circle \\(x^2 + y^2 - 6x + 4y - 12 = 0\\) at (-1, 1) is",
-      "options": [
-        "\\(4x + 3y + 1 = 0\\)",
-        "\\(2x - 3y + 5 = 0\\)",
-        "\\(2x + 3y - 1 = 0\\)",
-        "\\(4x - 3y + 7 = 0\\)"
-      ],
-      "correctAnswer": "\\(4x - 3y + 7 = 0\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616032",
-      "question": "The eccentricity of the ellipse whose latus rectum is equal to half of its major axis is",
-      "options": [
-        "\\(\\sqrt{3}\\)",
-        "\\(\\frac{1}{\\sqrt{2}}\\)",
-        "\\(\\sqrt{2}\\)",
-        "\\(\\frac{1}{\\sqrt{3}}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{1}{\\sqrt{2}}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616033",
-      "question": "\\(\\frac{d}{dx}(\\sqrt{\\sin(x^2)}) =\\)",
-      "options": [
-        "\\(\\frac{x^2 \\cos(x^2)}{\\sqrt{\\sin(x^2)}}\\)",
-        "\\(\\frac{x \\cos(x^2)}{2\\sqrt{\\sin(x^2)}}\\)",
-        "\\(\\frac{x \\cos(x^2)}{\\sqrt{\\sin(x^2)}}\\)",
-        "\\(\\frac{x \\sin(x^2)}{\\sqrt{\\cos(x^2)}}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{x \\cos(x^2)}{\\sqrt{\\sin(x^2)}}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616034",
-      "question": "\\(\\frac{d}{dx} \\tan^{-1}(\\frac{\\sin x}{1 + \\cos x}) =\\)",
-      "options": [
-        "2",
-        "4",
-        "1",
-        "\\(\\frac{1}{2}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{1}{2}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616035",
-      "question": "If \\(y^x = x^{\\cos y}\\), then \\(\\frac{dy}{dx} =\\)",
-      "options": [
-        "\\(\\frac{y(\\cos y - x \\log y)}{x(x + y \\sin y \\log x)}\\)",
-        "\\(\\frac{y(\\cos y + x \\log y)}{x(x + y \\sin y \\log x)}\\)",
-        "\\(\\frac{y(\\cos y - x \\log y)}{x(x - y \\sin y \\log x)}\\)",
-        "\\(\\frac{(\\cos y - x \\log y)}{(x + y \\sin y \\log x)}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{y(\\cos y - x \\log y)}{x(x - y \\sin y \\log x)}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616036",
-      "question": "\\(\\lim_{x \\to 3} \\frac{x^2 - x - 6}{x^2 + x - 12} =\\)",
-      "options": [
-        "\\(\\frac{1}{6}\\)",
-        "\\(\\frac{2}{3}\\)",
-        "\\(\\frac{3}{4}\\)",
-        "\\(\\frac{5}{7}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{5}{7}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616037",
-      "question": "The equation of the normal to the curve \\(y = x^3 - 3x\\) at the point P(2, 2) is",
-      "options": [
-        "\\(x + 9y - 2 = 0\\)",
-        "\\(x + 9y - 22 = 0\\)",
-        "\\(x + 9y - 20 = 0\\)",
-        "\\(x + 9y - 12 = 0\\)"
-      ],
-      "correctAnswer": "\\(x + 9y - 20 = 0\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616038",
-      "question": "The maximum value of \\(y = (x-1)^2 e^x\\) is",
-      "options": [
-        "\\(\\frac{4}{e}\\)",
-        "\\(\\frac{2}{e}\\)",
-        "\\(\\frac{1}{e}\\)",
-        "\\(\\frac{9}{e}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{4}{e}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616039",
-      "question": "If \\(f(x, y) = (x+y)e^{xy}\\), then at P(2,2) the value of \\(\\frac{\\partial f}{\\partial x} =\\)",
-      "options": [
-        "\\(8e^4\\)",
-        "\\(4e^4\\)",
-        "\\(9e^4\\)",
-        "\\(16e^4\\)"
-      ],
-      "correctAnswer": "\\(9e^4\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616040",
-      "question": "If \\(u(x, y) = \\sin^{-1}(\\frac{x^4+y^4}{x^2+y^2})\\), then \\(x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} =\\)",
-      "options": [
-        "2 cot u",
-        "2 tan u",
-        "2 sin u",
-        "2 cos u"
-      ],
-      "correctAnswer": "2 tan u",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616041",
-      "question": "\\(\\int \\frac{1}{1 - \\cos x} dx =\\)",
-      "options": [
-        "\\(-\\cot x - \\csc x + c\\)",
-        "\\(-\\cot x + \\csc x + c\\)",
-        "\\(\\cot x - \\csc x + c\\)",
-        "\\(-\\tan x - \\sec x + c\\)"
-      ],
-      "correctAnswer": "\\(-\\cot x - \\csc x + c\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616042",
-      "question": "\\(\\int_2^4 f(x) dx =\\)",
-      "options": [
-        "\\(\\int_2^4 f(6+x) dx\\)",
-        "\\(\\int_2^4 f(4-x) dx\\)",
-        "\\(\\int_2^4 f(2-x) dx\\)",
-        "\\(\\int_2^4 f(6-x) dx\\)"
-      ],
-      "correctAnswer": "\\(\\int_2^4 f(6-x) dx\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616043",
-      "question": "\\(\\int_{-1}^1 \\sin \\pi x dx =\\)",
-      "options": [
-        "\\(\\frac{1}{\\pi}\\)",
-        "\\(\\frac{2}{\\pi}\\)",
-        "0",
-        "\\(-\\frac{2}{\\pi}\\)"
-      ],
-      "correctAnswer": "0",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616044",
-      "question": "\\(\\lim_{n \\to \\infty} [\\frac{1}{n} + \\frac{n^2}{(n+1)^3} + \\frac{n^2}{(n+2)^3} + ... + \\frac{1}{8n}] =\\)",
-      "options": [
-        "\\(\\frac{1}{8}\\)",
-        "\\(\\frac{1}{4}\\)",
-        "\\(\\frac{3}{8}\\)",
-        "\\(\\frac{1}{2}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{3}{8}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616045",
-      "question": "The area of the region bounded by the lines x = 1, x = 4, y = 4x and y = \\(x^2\\) is",
-      "options": [
-        "2",
-        "6",
-        "16",
-        "9"
-      ],
-      "correctAnswer": "9",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616046",
-      "question": "According to Simpson's \\(\\frac{1}{3}\\) rule, the value of the integral \\(\\int_1^3 \\frac{1}{x} dx\\) with \\(h = \\frac{1}{2}\\) is",
-      "options": [
-        "1.5",
-        "0.5",
-        "1.1",
-        "2"
-      ],
-      "correctAnswer": "1.1",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616047",
-      "question": "The differential equation whose general solution is \\(y = Ax^2 + Bx\\), where A and B are arbitrary constants is",
-      "options": [
-        "\\(x^2 y'' + 2xy' - 2y = 0\\)",
-        "\\(x^2 y'' - 2xy' + 2y = 0\\)",
-        "\\(y'' - 2y' + 2y = 0\\)",
-        "\\(x^2 y'' - 2xy' - 2y = 0\\)"
-      ],
-      "correctAnswer": "\\(x^2 y'' - 2xy' + 2y = 0\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616048",
-      "question": "The general solution of the differential equation \\((e^x + 1)y dy + (y+1) dx = 0\\) is",
-      "options": [
-        "\\(e^{x-y} = c(y+1)(1-e^x)\\)",
-        "\\(e^{x+y} = c(y+1)(1+e^x)\\)",
-        "\\(e^{2x-y} = c(y+1)(1-e^x)\\)",
-        "\\(e^{x+y} = cy(1+e^x)\\)"
-      ],
-      "correctAnswer": "\\(e^{x+y} = c(y+1)(1+e^x)\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616049",
-      "question": "If the differential equation \\((x^2 + y^2)dx + kxy dy = 0\\) is exact, then k =",
-      "options": [
-        "2",
-        "1",
-        "-1",
-        "-2"
-      ],
-      "correctAnswer": "2",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616050",
-      "question": "The general solution of the differential equation \\(\\frac{dy}{dx} + y \\tan x = \\cos^2 x\\) is",
-      "options": [
-        "\\(y \\cot x = \\tan x + c\\)",
-        "\\(y \\sec x = x \\sin x + c\\)",
-        "\\(x \\sec x = \\sin x + c\\)",
-        "\\(y \\sec x = \\sin x + c\\)"
-      ],
-      "correctAnswer": "\\(y \\sec x = \\sin x + c\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616051",
-      "question": "The integrating factor of the differential equation \\(\\frac{dy}{dx} + \\frac{2x}{x^2+1} y = x^2 + 1\\) is",
-      "options": [
-        "2x",
-        "\\(x^2 + 2\\)",
-        "\\(x^2 + 1\\)",
-        "\\(x^2 - 1\\)"
-      ],
-      "correctAnswer": "\\(x^2 + 1\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616052",
-      "question": "The general solution of the differential equation \\(6y'' - 5y' - 6y = 0\\) is",
-      "options": [
-        "\\(y = ae^{9x} + be^{4x}\\)",
-        "\\(y = ae^{-9x} + be^{-4x}\\)",
-        "\\(y = ae^{\\frac{2x}{3}} + be^{-\\frac{2x}{3}}\\)",
-        "\\(y = ae^{-\\frac{3x}{2}} + be^{-\\frac{2x}{3}}\\)"
-      ],
-      "correctAnswer": "\\(y = ae^{\\frac{2x}{3}} + be^{-\\frac{2x}{3}}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616053",
-      "question": "A particular integral of the differential equation \\((4D^2 + 4D - 3)y = e^{3x}\\) is (Here \\(D = \\frac{d}{dx}\\))",
-      "options": [
-        "\\(\\frac{1}{11} e^{3x}\\)",
-        "\\(\\frac{1}{45} e^{3x}\\)",
-        "\\(\\frac{1}{5} e^{3x}\\)",
-        "\\(\\frac{1}{3} e^{3x}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{1}{45} e^{3x}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616054",
-      "question": "A particular integral of the differential equation \\((D^2 + 4)y = 5(\\cos 3x + \\sin 3x)\\) is (Here \\(D = \\frac{d}{dx}\\))",
-      "options": [
-        "\\(\\cos 3x + \\sin 3x\\)",
-        "\\(\\cos 3x - \\sin 3x\\)",
-        "\\(-\\cos 3x - \\sin 3x\\)",
-        "\\(\\sin 3x - \\cos 3x\\)"
-      ],
-      "correctAnswer": "\\(-\\cos 3x - \\sin 3x\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616055",
-      "question": "If \\(L\\{\\int_0^t \\cosh 3u du\\} = f(s)\\), then \\(f(4)=\\)",
-      "options": [
-        "\\(\\frac{1}{7}\\)",
-        "\\(\\frac{1}{32}\\)",
-        "0",
-        "\\(\\frac{7}{32}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{1}{7}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616056",
-      "question": "Let \\(F(t) = \\begin{cases} e^{t-1}, & t > 1 \\\\ 0, & t < 1 \\end{cases}\\). If \\(s > 1\\) then \\(L\\{F(t)\\} =\\)",
-      "options": [
-        "\\(\\frac{1}{s-1}\\)",
-        "\\(\\frac{e^{-1}}{s-1}\\)",
-        "\\(\\frac{e^{-s}}{s-1}\\)",
-        "\\(\\frac{e^s}{s-1}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{e^{-s}}{s-1}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616057",
-      "question": "\\(\\int_0^\\infty te^{-t} \\sin t dt =\\)",
-      "options": [
-        "-1",
-        "\\(\\frac{1}{2}\\)",
-        "0",
-        "2"
-      ],
-      "correctAnswer": "0",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616058",
-      "question": "\\(L^{-1}\\{\\frac{1}{s(s-1)}\\} =\\)",
-      "options": [
-        "\\(1-e^t\\)",
-        "\\(e^t+1\\)",
-        "\\(e^t-1\\)",
-        "\\(e^{-t}-1\\)"
-      ],
-      "correctAnswer": "\\(e^t-1\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616059",
-      "question": "If \\(L^{-1}\\{\\frac{s+1}{s^2+2s+2}\\} = e^{at} \\cos bt\\), then \\(a^2+b^2=\\)",
-      "options": [
-        "2",
-        "4",
-        "0",
-        "8"
-      ],
-      "correctAnswer": "2",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616060",
-      "question": "The convolution of the functions 1 and sin t is",
-      "options": [
-        "\\(1-\\cos t\\)",
-        "\\(1-\\sin t\\)",
-        "\\(\\cos t\\)",
-        "\\(1+\\cos t\\)"
-      ],
-      "correctAnswer": "\\(1-\\cos t\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616061",
-      "question": "The Laplace transform of the solution of the initial value problem \\(y'' + 9y = 9u(t-3), y(0) = 0, y'(0) = 0\\) (Here u(t-3) is the unit step function) is",
-      "options": [
-        "\\(\\frac{9e^{-3s}}{s(s^2-9)}\\)",
-        "\\(\\frac{e^{-3s}}{s^2(s^2+9)}\\)",
-        "\\(\\frac{9e^{-3s}}{(s^2+9)^2}\\)",
-        "\\(\\frac{9e^{-3s}}{s(s^2+9)}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{9e^{-3s}}{s(s^2+9)}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616062",
-      "question": "\\(\\int_{\\pi/2}^{3\\pi/2} \\cos^2 4x dx =\\)",
-      "options": [
-        "\\(\\pi\\)",
-        "\\(3\\pi\\)",
-        "\\(2\\pi\\)",
-        "\\(\\frac{\\pi}{2}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{\\pi}{2}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616063",
-      "question": "The value of \\(a_3\\) in the Fourier series expansion of the function \\(f(x) = \\begin{cases} 0, & -\\pi < x \\le 0 \\\\ x, & 0 < x \\le \\pi \\end{cases}\\)",
-      "options": [
-        "\\(\\frac{-2}{\\pi}\\)",
-        "\\(\\frac{-2}{3\\pi}\\)",
-        "\\(\\frac{-2}{5\\pi}\\)",
-        "\\(\\frac{-2}{9\\pi}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{-2}{9\\pi}\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616064",
-      "question": "The value of \\(b_1\\) in the Fourier series expansion of \\(f(x) = x \\sin x\\) in \\(0 \\le x \\le 2\\pi\\) is",
-      "options": [
-        "\\(\\pi\\)",
-        "\\(2\\pi\\)",
-        "\\(3\\pi\\)",
-        "\\(4\\pi\\)"
-      ],
-      "correctAnswer": "\\(\\pi\\)",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616065",
-      "question": "The period of the function \\(f(x) = \\sin(\\frac{\\pi x}{3})\\) is",
-      "options": [
-        "\\(\\pi\\)",
-        "\\(\\frac{\\pi}{3}\\)",
-        "\\(\\frac{\\pi}{6}\\)",
-        "6"
-      ],
-      "correctAnswer": "6",
-      "topic": "Mathematics"
-    },
-    {
-      "id": "5069616066",
-      "question": "Velocity (v) of water waves depends on their Wavelength (\\(\\lambda\\)), Density of Water (\\(\\rho\\)) and acceleration due to gravity (g). By the method of dimensional analysis, the relation between these quantities is given by",
-      "options": [
-        "\\(v^2\\) is proportional to \\((\\rho \\lambda g)\\)",
-        "v is proportional to \\(\\lambda g / \\sqrt{\\rho}\\)",
-        "\\(v^2\\) is proportional to \\((\\lambda g)\\)",
-        "v is proportional to \\((\\rho \\lambda g)\\)"
-      ],
-      "correctAnswer": "\\(v^2\\) is proportional to \\((\\lambda g)\\)",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616067",
-      "question": "The Force \\(\\vec{F} = 2\\vec{i} + 3\\vec{j} + 7\\vec{k}\\) newtons (N), acting on an object causes a displacement \\(\\vec{S} = 2\\vec{i} + 3\\vec{j} + 5\\vec{k}\\) meters (m). Then the work done is",
-      "options": [
-        "30 Nm",
-        "40 Nm",
-        "48 Nm",
-        "25 Nm"
-      ],
-      "correctAnswer": "48 Nm",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616068",
-      "question": "\\(\\vec{A} = \\vec{i} + 2\\vec{j} + 3\\vec{k}\\) and \\(\\vec{B} = 3\\vec{i} + 2\\vec{j} + \\vec{k}\\) are the adjacent sides of a parallelogram respectively. The area of the Parallelogram is",
-      "options": [
-        "\\(8\\sqrt{2}\\)",
-        "\\(8\\sqrt{3}\\)",
-        "\\(3\\sqrt{8}\\)",
-        "\\(\\sqrt{8}\\)"
-      ],
-      "correctAnswer": "\\(8\\sqrt{3}\\)",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616069",
-      "question": "A block is placed on a rough floor and a horizontal force 'F' is applied on it. The force of friction 'f' by the floor on the block is measured for different values of 'F'. The graph between the 'f' and 'F' would be",
-      "options": [
-        "The graph is a straight line of slope 45° for all 'F'",
-        "The graph is a straight line parallel to 'F' axis for all 'F'",
-        "The graph is a straight line of slope 45° for small values of 'F' and straight line parallel to 'F' axis for large 'F'",
-        "The graph is exponential with values of 'F'"
-      ],
-      "correctAnswer": "The graph is a straight line of slope 45° for small values of 'F' and straight line parallel to 'F' axis for large 'F'",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616070",
-      "question": "Throughout the flight of a particle in projectile motion",
-      "options": [
-        "The horizontal component of velocity is constant",
-        "The vertical component of velocity is constant",
-        "The horizontal component of velocity decreases",
-        "The horizontal component of velocity is zero"
-      ],
-      "correctAnswer": "The horizontal component of velocity is constant",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616071",
-      "question": "A motor cyclist driving with a speed of 0.6 km/minute goes over a turn of radius of curvature 10 m. His slope with vertical in degrees (take \\(g = 10 m/sec^2\\))",
-      "options": [
-        "0°",
-        "30°",
-        "45°",
-        "60°"
-      ],
-      "correctAnswer": "45°",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616072",
-      "question": "Two wires of lengths in the ratio 2:3 taken from same material and having the same mass are stretched by same force. Their elongations are in the ratio of",
-      "options": [
-        "2:3",
-        "3:2",
-        "1:2",
-        "4:9"
-      ],
-      "correctAnswer": "4:9",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616073",
-      "question": "Which of the following statements is wrong?",
-      "options": [
-        "Surface Tension of a liquid decreases with increase of temperature",
-        "Surface Tension of a liquid increases or decreases depending on the type of impurities added to the liquid",
-        "Angle of Contact depends on the inclination of the solid rod placed in the liquid",
-        "A drop of oil placed on the surface of water will spread as a thin layer"
-      ],
-      "correctAnswer": "Angle of Contact depends on the inclination of the solid rod placed in the liquid",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616074",
-      "question": "A streamline flow is maintained across the two capillary tubes A and B connected in series. The length of B is twice that of A and the radius of B is half that of A. The pressure across A is P. The pressure across B is",
-      "options": [
-        "4P",
-        "16P",
-        "32P",
-        "P/32"
-      ],
-      "correctAnswer": "32P",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616075",
-      "question": "A body of mass 0.1 kg is thrown vertically upward. At a certain point above the ground, the Potential energy and Kinetic energy of the body are 3.7 J and 6.3 J. The maximum height it reaches is (g=10m/s²)",
-      "options": [
-        "10 m",
-        "4 m",
-        "100 m",
-        "0.7 m"
-      ],
-      "correctAnswer": "10 m",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616076",
-      "question": "Two containers of volumes \\(20m^3\\) and \\(30m^3\\) have gases at Pressures of 40 MPa and 50 MPa. The two containers are connected by a very narrow pipe of negligible volume and the gases are allowed to intermingle. If the temperature remains constant, the final pressure in MPa is",
-      "options": [
-        "46",
-        "40",
-        "50",
-        "30"
-      ],
-      "correctAnswer": "46",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616077",
-      "question": "During an adiabatic process, a mono atomic gas at 27°C is compressed suddenly to 1/8 of its original volume. Then the Final temperature in °C is (The ratio of the two specific heats of gases = 5/3)",
-      "options": [
-        "1160",
-        "887",
-        "927",
-        "88"
-      ],
-      "correctAnswer": "927",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616078",
-      "question": "The time period of a simple pendulum is 3 sec. Its length is made 4 times. Then its time period is",
-      "options": [
-        "3 sec",
-        "4 sec",
-        "6 sec",
-        "1.5 sec"
-      ],
-      "correctAnswer": "6 sec",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616079",
-      "question": "A particle executes Simple Harmonic Motion with an amplitude of 5 cm. When the particle is at 4 cm from the mean position, the magnitude of its velocity in SI units is equal to that of its acceleration. Then, its periodic time in seconds is",
-      "options": [
-        "\\(8\\pi/3\\)",
-        "\\(4\\pi/3\\)",
-        "\\(3\\pi/8\\)",
-        "\\(7\\pi/3\\)"
-      ],
-      "correctAnswer": "\\(8\\pi/3\\)",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616080",
-      "question": "The two equations of Simple Harmonic Motions are \\(Y_1= 12 \\sin(50t +\\pi/2)\\) and \\(Y_2 =12 \\sin(50t +\\pi/3)\\). The phase difference between two motions is",
-      "options": [
-        "\\(\\pi/2\\)",
-        "\\(\\pi/3\\)",
-        "\\(\\pi/6\\)",
-        "\\(\\pi/8\\)"
-      ],
-      "correctAnswer": "\\(\\pi/6\\)",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616081",
-      "question": "Multiple reflections leading to persistence of sound in an auditorium are",
-      "options": [
-        "beats",
-        "echo",
-        "reverberation",
-        "stationary waves"
-      ],
-      "correctAnswer": "reverberation",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616082",
-      "question": "Two sources \\(S_1\\) and \\(S_2\\) are moving with certain velocities. The apparent frequencies observed by a stationary observer are double and half of their original frequencies respectively. If the velocity of sound is v and velocity of wind is zero, then the velocities of two sources respectively are",
-      "options": [
-        "v/2 and 2v",
-        "v and v/2",
-        "3v/2 and 2v",
-        "v/2 and v"
-      ],
-      "correctAnswer": "v/2 and v",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616083",
-      "question": "The Moment of couple acting on a bar magnet kept at an angle 30° to the direction of uniform magnetic field of induction 2 Tesla is equal to",
-      "options": [
-        "Pole Strength of the Magnet",
-        "Length of the Magnet",
-        "Magnetic Flux",
-        "Magnetic Moment of the Magnet"
-      ],
-      "correctAnswer": "Magnetic Moment of the Magnet",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616084",
-      "question": "In a Meter Bridge, \\(R_1\\) and \\(R_2\\) are the resistances connected in the left and right gaps respectively. The bridge is balanced at the balancing point of 60 cm from left. When a resistance of 30 \\(\\Omega\\) is connected in parallel to \\(R_2\\), the balancing point shifted to 90 cm. The values of \\(R_1\\) and \\(R_2\\) respectively are (in \\(\\Omega\\))",
-      "options": [
-        "30 and 50",
-        "200 and 350",
-        "225 and 150",
-        "100 and 75"
-      ],
-      "correctAnswer": "225 and 150",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616085",
-      "question": "When 220 V AC is applied across a step-up transformer, it draws a current of 3A in the secondary. If the number of turns in the primary coil of the transformer is 100 and that of secondary coil is 2000. The output power of the transformer is",
-      "options": [
-        "8800 W",
-        "13200 W",
-        "4400 W",
-        "2200 W"
-      ],
-      "correctAnswer": "13200 W",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616086",
-      "question": "A photon of frequency \\(\\nu\\) is incident on a photosensitive metal surface whose threshold frequency is \\(\\nu_o\\). The kinetic energy of emitted photo electron is",
-      "options": [
-        "\\(h^*\\nu\\)",
-        "\\(h^*\\nu_o\\)",
-        "\\(h^*(\\nu - \\nu_o)\\)",
-        "\\(h^*(\\nu + \\nu_o)\\)"
-      ],
-      "correctAnswer": "\\(h^*(\\nu - \\nu_o)\\)",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616087",
-      "question": "In LASER, the condition of Population Inversion mean",
-      "options": [
-        "The number of atoms in the lower energy state are more than the higher energy state",
-        "The number of atoms in the higher energy state are more than the lower energy state",
-        "The number of atoms in the lower and higher energy states are same",
-        "The number of atoms in higher energy state are zero"
-      ],
-      "correctAnswer": "The number of atoms in the higher energy state are more than the lower energy state",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616088",
-      "question": "In a Graded Index Optical Fibre",
-      "options": [
-        "The Refractive Index of the core remains constant and will be greater than that of the cladding",
-        "The Refractive Index of the core remains constant and will be less than that of the cladding",
-        "The Refractive Indices of both core and cladding remain constant and are equal",
-        "The Refractive Index of the core varies with maximum at the centre and decreases as the radial distance increases from the axis of the core"
-      ],
-      "correctAnswer": "The Refractive Index of the core varies with maximum at the centre and decreases as the radial distance increases from the axis of the core",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616089",
-      "question": "Which of the following statements is correct, if \\(n_e\\) and \\(n_h\\) are the concentrations of the Electrons and Holes respectively",
-      "options": [
-        "In an intrinsic semiconductor, \\(n_e = n_h\\) and both these charge carriers contribute to current equally",
-        "In p-type semiconductor, \\(n_e > n_h\\) and the current due to electrons is more than that of holes",
-        "In n-type semiconductor, \\(n_p > n_e\\) and current due to holes is more than that of electrons",
-        "In an extrinsic semiconductor, \\(n_e = n_h\\) and both these charge carriers contribute to current equally"
-      ],
-      "correctAnswer": "In an intrinsic semiconductor, \\(n_e = n_h\\) and both these charge carriers contribute to current equally",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616090",
-      "question": "The semiconductors used for fabrication of visible LEDs have band gap",
-      "options": [
-        "Close to 1.5 eV",
-        "Close to 1.1 eV",
-        "About 1.0 eV to 1.6 eV",
-        "About 1.8 eV to 3 eV"
-      ],
-      "correctAnswer": "About 1.8 eV to 3 eV",
-      "topic": "Physics"
-    },
-    {
-      "id": "5069616091",
-      "question": "According to Aufbau principle, which orbital is filled immediately after each of the 3p, 4f and 5d?",
-      "options": [
-        "3d, 5s, 5d, 6p",
-        "3d, 4d, 5d, 6p",
-        "4s, 5s, 5d, 6p",
-        "4s, 5s, 5d, 7s"
-      ],
-      "correctAnswer": "4s, 5s, 5d, 6p",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616092",
-      "question": "Which one of the following properties is not due to hydrogen bonding.",
-      "options": [
-        "High boiling point of water",
-        "High viscosity of glycerol",
-        "Solubility of ammonia in water",
-        "Polar nature of halogen acid"
-      ],
-      "correctAnswer": "Polar nature of halogen acid",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616093",
-      "question": "2Mg(s) + \\(O_2\\)(g) \\(\\rightarrow\\) 2MgO(s) In above reaction equation, the oxidation state of magnesium is changed from",
-      "options": [
-        "0 to +2",
-        "0 to -2",
-        "+2 to -1",
-        "+2 to 0"
-      ],
-      "correctAnswer": "0 to +2",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616094",
-      "question": "100 mL of ethanol, whose density is 1.2 g.mL\\(^{-1}\\) is diluted to 1.0 L by addition of distilled water. Molarity of the resultant solution is",
-      "options": [
-        "1.60",
-        "2.60",
-        "0.46",
-        "2.90"
-      ],
-      "correctAnswer": "2.60",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616095",
-      "question": "Among the below options, which is not a characteristic of a colloid",
-      "options": [
-        "Particle size between 10 A° - 1000 A°",
-        "Heterogeneous",
-        "Can be separable by filtration",
-        "Diffuse slowly"
-      ],
-      "correctAnswer": "Can be separable by filtration",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616096",
-      "question": "The correct order of decreasing strength of acids is",
-      "options": [
-        "\\(HClO_4 > H_2SO_4 > HNO_3 > HCl\\)",
-        "\\(H_2SO_4 > HClO_4 > HCl > HNO_3\\)",
-        "\\(HClO_4 > H_2SO_4 > HCl > HNO_3\\)",
-        "\\(HNO_3 > HCl > H_2SO_4 > HClO_4\\)"
-      ],
-      "correctAnswer": "\\(HClO_4 > H_2SO_4 > HCl > HNO_3\\)",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616097",
-      "question": "The solution which can resist change in its pH on the addition of an acid or a base is known as",
-      "options": [
-        "Isotonic solution",
-        "Colloidal solution",
-        "Neutral solution",
-        "Buffer solution"
-      ],
-      "correctAnswer": "Buffer solution",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616098",
-      "question": "The minimum level of a pollutant above which a healthy individual worker is adversely affected on exposure to it for eight hours in a day is called",
-      "options": [
-        "Critical Limit Value",
-        "Toxic Limit Value",
-        "Threshold Limit Value",
-        "Dangerous Limit Value"
-      ],
-      "correctAnswer": "Threshold Limit Value",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616099",
-      "question": "The consequences of global warming are: (A) Increase in average temperature of the earth (B) Melting of Himalayan glaciers (C) Increased Biochemical Oxygen Demand of natural water (D) Eutrophication of water bodies. Choose the correct option.",
-      "options": [
-        "A, D",
-        "A, C",
-        "A, B",
-        "A, B, C"
-      ],
-      "correctAnswer": "A, B",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616100",
-      "question": "The chemicals used for defluoridation of water by Nalgonda Technique are",
-      "options": [
-        "CaO and CaOC\\(l_2\\)",
-        "Alum, CaO and CaOC\\(l_2\\)",
-        "Ca\\(H_2\\), NaOCl and Alum",
-        "NaOCl, NaH and Alum"
-      ],
-      "correctAnswer": "Alum, CaO and CaOC\\(l_2\\)",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616101",
-      "question": "The process which removes non-ionic, ionic, colloidal and organic matter in water is",
-      "options": [
-        "Ion exchange process",
-        "Lime soda process",
-        "Reverse osmosis process",
-        "Zeolite process"
-      ],
-      "correctAnswer": "Reverse osmosis process",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616102",
-      "question": "The set of products that are formed during electrolysis of aqueous solution of KCl between platinum electrodes is",
-      "options": [
-        "HCl and KOH",
-        "KOH and C\\(l_2\\)",
-        "KOH, C\\(l_2\\) and \\(H_2\\)",
-        "K and C\\(l_2\\)"
-      ],
-      "correctAnswer": "KOH, C\\(l_2\\) and \\(H_2\\)",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616103",
-      "question": "When same quantity of electricity is passed through aqueous AgN\\(O_3\\) and \\(H_2\\)S\\(O_4\\) solutions connected in series, 5.04 x 10\\(^{-2}\\) g of \\(H_2\\) is liberated. What is the mass of silver (in grams) deposited? (Eq. Wt. of hydrogen and silver is 1.008 and 108 respectively)",
-      "options": [
-        "54",
-        "0.54",
-        "5.4",
-        "10.8"
-      ],
-      "correctAnswer": "5.4",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616104",
-      "question": "Choose the correct option that differentiates metals from non-metals",
-      "options": [
-        "Metals form acidic oxides, whereas non-metals form basic oxides.",
-        "Metals have a tendency to gain electrons, whereas non-metals have a tendency to lose electrons.",
-        "Metals are generally good conductors of electricity, whereas non-metals are insulators.",
-        "All metals exist in a solid state at room temperature."
-      ],
-      "correctAnswer": "Metals are generally good conductors of electricity, whereas non-metals are insulators.",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616105",
-      "question": "Nichrome is commonly used in heating elements because",
-      "options": [
-        "It has high electrical conductivity",
-        "It has a high melting point and corrosion resistance",
-        "It is lightweight",
-        "It is brittle and hard"
-      ],
-      "correctAnswer": "It has a high melting point and corrosion resistance",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616106",
-      "question": "_________ combinations is used for prevention of corrosion.",
-      "options": [
-        "Phosphorous or Antimony",
-        "Phosphorous or Chlorine",
-        "Antimony or Nitrogen",
-        "Antimony or Sodium"
-      ],
-      "correctAnswer": "Phosphorous or Antimony",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616107",
-      "question": "The process of coating zinc metal over iron to improve corrosion resistance of iron is called",
-      "options": [
-        "Electroplating",
-        "Annealing",
-        "Galvanizing",
-        "Tinning"
-      ],
-      "correctAnswer": "Galvanizing",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616108",
-      "question": "_________ is a cross linked polymer.",
-      "options": [
-        "Bakelite",
-        "LDPE",
-        "Polystyrene",
-        "PVC"
-      ],
-      "correctAnswer": "Bakelite",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616109",
-      "question": "Identify the Biodegradable polymers from the following and choose the correct option. (I) PVC (II) PHBV (III) Polypropylene (IV) Nylon-2-nylon-6",
-      "options": [
-        "I and II",
-        "II and IV",
-        "I and IV",
-        "I, II and III"
-      ],
-      "correctAnswer": "II and IV",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616110",
-      "question": "Calculate the amount of oxygen required for the complete combustion of 1 mole of Methane (C\\(H_4\\)).",
-      "options": [
-        "1 mole",
-        "2 moles",
-        "3 moles",
-        "4 moles"
-      ],
-      "correctAnswer": "2 moles",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616111",
-      "question": "_________ represents the composition of water gas",
-      "options": [
-        "CO + \\(H_2\\)",
-        "C\\(O_2\\) + \\(H_2\\)",
-        "CO + C\\(H_4\\)",
-        "C\\(O_2\\) + C\\(H_4\\)"
-      ],
-      "correctAnswer": "CO + \\(H_2\\)",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616112",
-      "question": "Match the following and choose the correct option. List - I a) Hydrogen electrode b) Standard hydrogen electrode c) Metal-metal ion electrode d) Glass electrode List - II (i) Pt | F\\(e^{3+}\\), F\\(e^{2+}\\) (ii) Fe | F\\(e^{2+}\\) (iii) pH measurement (iv) Pt, \\(H_2\\) (2 bar) | \\(H^+\\) (0.1M) (v) Pt, \\(H_2\\) (1 bar) | \\(H^+\\) (1.0M) (vi) Oxidation electrode",
-      "options": [
-        "a - iii, b - v, c - i, d - vi",
-        "a - v, b - iv, c - ii, d - iii",
-        "a - v, b - iii, c -i, d - vi",
-        "a - iv, b - v, c - ii, d - iii"
-      ],
-      "correctAnswer": "a - iv, b - v, c - ii, d - iii",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616113",
-      "question": "The cell reaction of the galvanic cell Cu(s) | C\\(u^{2+}\\)(aq) || A\\(g^+\\)(aq) | Ag(s) is",
-      "options": [
-        "Ag + C\\(u^{2+}\\) \\(\\rightarrow\\) A\\(g^+\\) + \\(Cu^+\\)",
-        "Ag + C\\(u^{2+}\\) \\(\\rightarrow\\) A\\(g^+\\) + Cu",
-        "Cu + 2A\\(g^+\\) \\(\\rightarrow\\) C\\(u^{2+}\\) + 2Ag",
-        "\\(Cu^{2+}\\) + 2Ag \\(\\rightarrow\\) C\\(u^{2+}\\) + 2A\\(g^+\\)"
-      ],
-      "correctAnswer": "Cu + 2A\\(g^+\\) \\(\\rightarrow\\) C\\(u^{2+}\\) + 2Ag",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616114",
-      "question": "_________ is used to reduce water pollution.",
-      "options": [
-        "Neem",
-        "Watermelon",
-        "Water hyacinth",
-        "People"
-      ],
-      "correctAnswer": "Water hyacinth",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616115",
-      "question": "Which of the following can cause soil pollution",
-      "options": [
-        "DDT",
-        "C\\(O_2\\)",
-        "N\\(O_2\\)",
-        "Nitrogen"
-      ],
-      "correctAnswer": "DDT",
-      "topic": "Chemistry"
-    },
-    {
-      "id": "5069616116",
-      "question": "Drift current in the semiconductors depends upon _________",
-      "options": [
-        "only the electric field",
-        "only the carrier concentration gradient",
-        "both the electric field and the carrier concentration",
-        "both the electric field and the carrier concentration gradient"
-      ],
-      "correctAnswer": "both the electric field and the carrier concentration",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616117",
-      "question": "Which of the following is NOT associated with a P-N junction",
-      "options": [
-        "Junction Capacitance",
-        "Charge Storage Capacitance",
-        "Depletion Capacitance",
-        "Channel Length Modulation"
-      ],
-      "correctAnswer": "Channel Length Modulation",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616118",
-      "question": "In a FET, the relation between the amplification factor (\\(\\mu\\)), dynamic drain resistance (rd), and transconductance (gm) is",
-      "options": [
-        "\\(\\mu\\) = rd / gm",
-        "gm = rd + \\(\\mu\\)",
-        "\\(\\mu\\) = rd * gm",
-        "gm = rd * \\(\\mu\\)"
-      ],
-      "correctAnswer": "\\(\\mu\\) = rd * gm",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616119",
-      "question": "The ratio of change in drain current (\\(\\Delta I_D\\)) to the change in gate-source voltage (\\(\\Delta V_{GS}\\)) is",
-      "options": [
-        "output conductance",
-        "trans conductance",
-        "trans resistance",
-        "output resistance"
-      ],
-      "correctAnswer": "trans conductance",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616120",
-      "question": "The use of coupling capacitor in CE amplifier is",
-      "options": [
-        "to block DC",
-        "to allow low frequency without any attenuation",
-        "to shift Q point",
-        "to allow DC"
-      ],
-      "correctAnswer": "to block DC",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616121",
-      "question": "Which of the following parameters of P-N junction diode increases with temperature.",
-      "options": [
-        "Cut in voltage",
-        "Reverse saturation current",
-        "Ideality factor",
-        "Diode Resistance"
-      ],
-      "correctAnswer": "Reverse saturation current",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616122",
-      "question": "Trans resistance amplifier has",
-      "options": [
-        "high input impedance & low output impedance",
-        "high input impedance & high output impedance",
-        "low input impedance & high output impedance",
-        "low input impedance & low output impedance"
-      ],
-      "correctAnswer": "low input impedance & low output impedance",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616123",
-      "question": "Consider the circuit shown in figure. Assume base-to-emitter voltage \\(V_{BE}\\) = 0.8V and common base current gain (\\(\\alpha\\)) of the transistor is unity. The value of the collector-to-emitter voltage \\(V_{CE}\\) (in volts) is",
-      "options": [
-        "6V",
-        "8V",
-        "10V",
-        "4V"
-      ],
-      "correctAnswer": "6V",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616124",
-      "question": "A transistor has an Ic of 100 mA and \\(I_B\\) of 0.5 mA. What is the value of \\(\\alpha_{dc}\\)?",
-      "options": [
-        "0.565",
-        "0.754",
-        "1.24",
-        "0.995"
-      ],
-      "correctAnswer": "0.995",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616125",
-      "question": "The Peak Inverse Voltage (PIV) of a non-conducting diode in a bridge rectifier is",
-      "options": [
-        "Twice the peak value of the ac input",
-        "Half the peak value of the ac input",
-        "The peak value of the ac input",
-        "Four times the peak value of the ac input"
-      ],
-      "correctAnswer": "The peak value of the ac input",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616126",
-      "question": "For a BJT, the common base current gain \\(a\\) = 0.98 and the collector base junction reverse bias saturation current \\(I_{CO}\\) = 0.6 \\(\\mu\\)A. This BJT is connected in the common emitter mode and operated in the active region with a base drive current \\(I_B\\) = 20 \\(\\mu\\)A. The collector current \\(I_C\\) for this mode of operation is",
-      "options": [
-        "0.98 mA",
-        "0.99 mA",
-        "1.0 mA",
-        "1.01 mA"
-      ],
-      "correctAnswer": "1.01 mA",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616127",
-      "question": "Determine the resistance R required to achieve an output pulse duration of 100 \\(\\mu\\)s in a monostable circuit utilizing a 10 nF capacitor C with a 555 timer.",
-      "options": [
-        "13.3 k\\(\\Omega\\)",
-        "15.9 k\\(\\Omega\\)",
-        "9.09 k\\(\\Omega\\)",
-        "19.14 k\\(\\Omega\\)"
-      ],
-      "correctAnswer": "9.09 k\\(\\Omega\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616128",
-      "question": "Gain in transistor amplifiers decreases at high frequencies due to",
-      "options": [
-        "Short circuit of external coupling capacitors",
-        "Open circuit of internal junction capacitors",
-        "Short circuit of internal junction capacitors",
-        "Open circuit of external coupling capacitors"
-      ],
-      "correctAnswer": "Short circuit of internal junction capacitors",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616129",
-      "question": "The circuit shown in figure represents the",
-      "options": [
-        "Monostable multivibrator",
-        "Astable multivibrator",
-        "Bistable multivibrator",
-        "Feedback Amplifier"
-      ],
-      "correctAnswer": "Astable multivibrator",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616130",
-      "question": "A diode for which you can change the reverse bias, and thus vary the capacitance is called as ________",
-      "options": [
-        "Tunnel diode",
-        "Varactor diode",
-        "Zener diode",
-        "Switching diode"
-      ],
-      "correctAnswer": "Varactor diode",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616131",
-      "question": "The fundamental condition for clamping, if RC is an RC network's time constant and T is the period of the input signal",
-      "options": [
-        "RC << T",
-        "RC >> T",
-        "RC == T",
-        "No such condition"
-      ],
-      "correctAnswer": "RC >> T",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616132",
-      "question": "Given that the pinch-off voltage for an n-channel JFET is -4 volts, determine the Vgs value at which pinch-off occurs when Vgs is -1 volt.",
-      "options": [
-        "3 V",
-        "5 V",
-        "4 V",
-        "1 V"
-      ],
-      "correctAnswer": "3 V",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616133",
-      "question": "Virtual ground concept is valid only for operational amplifier with ________ feedback",
-      "options": [
-        "Positive",
-        "Negative",
-        "Zero",
-        "Positive and Negative"
-      ],
-      "correctAnswer": "Negative",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616134",
-      "question": "Super position theorem is applicable for ________",
-      "options": [
-        "linear and unilateral networks",
-        "nonlinear and unilateral networks",
-        "linear and bilateral networks",
-        "nonlinear and bilateral networks"
-      ],
-      "correctAnswer": "linear and bilateral networks",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616135",
-      "question": "The equivalent resistance of four resistors joined in parallel is 20 \\(\\Omega\\). The currents flowing through them are 0.6 A, 0.3 A, 0.2 A and 0.1 A. The lowest value of resistor is",
-      "options": [
-        "40 \\(\\Omega\\)",
-        "80 \\(\\Omega\\)",
-        "20 \\(\\Omega\\)",
-        "240 \\(\\Omega\\)"
-      ],
-      "correctAnswer": "40 \\(\\Omega\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616136",
-      "question": "The equivalent resistance of the circuit shown in figure is",
-      "options": [
-        "4 \\(\\Omega\\)",
-        "5 \\(\\Omega\\)",
-        "6 \\(\\Omega\\)",
-        "10 \\(\\Omega\\)"
-      ],
-      "correctAnswer": "4 \\(\\Omega\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616137",
-      "question": "A circuit consists of 6 nodes, 9 branches and 3 independent loops. Determine the number of tree branches (b) and links (l) in the graph?",
-      "options": [
-        "b = 4 and l = 5",
-        "b = 5 and l = 3",
-        "b = 3 and l = 6",
-        "b = 5 and l = 4"
-      ],
-      "correctAnswer": "b = 5 and l = 4",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616138",
-      "question": "When a source is delivering maximum power to a load, the efficiency of the circuit",
-      "options": [
-        "is always 50%",
-        "is always 75%",
-        "depends on the circuit parameters",
-        "is always 100%"
-      ],
-      "correctAnswer": "is always 50%",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616139",
-      "question": "An RC high-pass circuit has C = 0.01 \\(\\mu\\)F and cutoff frequency \\(f_c\\) = 15.9 kHz. The R value is",
-      "options": [
-        "4 k\\(\\Omega\\)",
-        "3 k\\(\\Omega\\)",
-        "2 k\\(\\Omega\\)",
-        "1 k\\(\\Omega\\)"
-      ],
-      "correctAnswer": "1 k\\(\\Omega\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616140",
-      "question": "What would be the value of power factor for series RLC circuit under the resonance phenomenon?",
-      "options": [
-        "0",
-        "0.5",
-        "1",
-        "Infinity"
-      ],
-      "correctAnswer": "1",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616141",
-      "question": "A transmission line is terminated with its characteristic impedance. The reflection coefficient, VSWR respectively are ________, ________.",
-      "options": [
-        "1, 1",
-        "-1, 0",
-        "0, 1",
-        "1, 0"
-      ],
-      "correctAnswer": "0, 1",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616142",
-      "question": "Find the equivalent resistance between X and Y in the given circuit.",
-      "options": [
-        "3.33 \\(\\Omega\\)",
-        "2.38 \\(\\Omega\\)",
-        "5.65 \\(\\Omega\\)",
-        "4.34 \\(\\Omega\\)"
-      ],
-      "correctAnswer": "2.38 \\(\\Omega\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616143",
-      "question": "A Radio Frequency (RF) circuit has a transmitting antenna with impedance 50 \\(\\Omega\\) and a receiving antenna with impedance 75 \\(\\Omega\\). If the transmitting antenna receives 1 mW when the receiving antenna acts as the source, what will be the received power when the transmission is reversed?",
-      "options": [
-        "1 mW",
-        "2 mW",
-        "0.5 mW",
-        "0.25 mW"
-      ],
-      "correctAnswer": "1 mW",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616144",
-      "question": "Find the characteristic impedance (\\(Z_0\\)) of a loss less transmission line with the following parameters: Inductance per unit length: L= 0.25 \\(\\mu\\)H/m, Capacitance per unit length: C = 100 pF/m.",
-      "options": [
-        "100 \\(\\Omega\\)",
-        "50 \\(\\Omega\\)",
-        "25 \\(\\Omega\\)",
-        "200 \\(\\Omega\\)"
-      ],
-      "correctAnswer": "50 \\(\\Omega\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616145",
-      "question": "A 50 \\(\\Omega\\) transmission line is terminated with a load impedance of \\(Z_0\\) and standing wave ratio (SWR) equal to 4. Find the value of \\(Z_0\\)?",
-      "options": [
-        "50 \\(\\Omega\\)",
-        "100 \\(\\Omega\\)",
-        "200 \\(\\Omega\\)",
-        "25 \\(\\Omega\\)"
-      ],
-      "correctAnswer": "200 \\(\\Omega\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616146",
-      "question": "Match List I with List II and choose the correct option.",
-      "options": [
-        "i - a, ii - c, iii - b, iv - d, v - e",
-        "i - b, ii - e, iii - c, iv - d, v - a",
-        "i - c, ii - b, iii - e, iv - d, v - a",
-        "i - a, ii - b, iii - c, iv - d, v - e"
-      ],
-      "correctAnswer": "i - a, ii - b, iii - c, iv - d, v - e",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616147",
-      "question": "Choose the correct option A. Photodiodes and light-dependent resistors are both light-sensitive devices. B. Photodiodes are faster and more accurate compared to LDRs C. Photo diode converts light energy into electric energy D. LDR changes resistance based on light intensity",
-      "options": [
-        "A, B, C and D are true",
-        "Only A and B are true",
-        "Only C and D are true",
-        "Only A, B and C are true"
-      ],
-      "correctAnswer": "A, B, C and D are true",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616148",
-      "question": "Given below is a list of transducers. Identify the active transducers. A. LVDT (Linear Variable Differential Transformer) B. RTD (Resistance Temperature Detector) C. Thermocouple D. Strain gauge",
-      "options": [
-        "Only A is correct",
-        "Both A and B are correct",
-        "Only C is correct",
-        "Both A and D are correct"
-      ],
-      "correctAnswer": "Only C is correct",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616149",
-      "question": "In one of the types of electric welding, ________ is used to generate intense heat and melt metals together, often requiring filler material.",
-      "options": [
-        "Electric arc",
-        "Resistance",
-        "Friction",
-        "Induction heating"
-      ],
-      "correctAnswer": "Electric arc",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616150",
-      "question": "Types of resistive welding includes _________.",
-      "options": [
-        "Spot welding, seam welding, and projection welding",
-        "MIG welding (Metal Inert Gas welding)",
-        "TIG welding (Tungsten Inert Gas welding)",
-        "Arc welding"
-      ],
-      "correctAnswer": "Spot welding, seam welding, and projection welding",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616151",
-      "question": "What type of programming language is typically used to program a PLC?",
-      "options": [
-        "C++",
-        "Java",
-        "Ladder Logic",
-        "Python"
-      ],
-      "correctAnswer": "Ladder Logic",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616152",
-      "question": "Given Seebeck coefficient S is 40 \\(\\mu\\)V/°C, hot junction temperature is 200°C and cold junction temperature is 25°C, then the thermocouple voltage is",
-      "options": [
-        "1 mV",
-        "3.5 mV",
-        "1.5 mV",
-        "7 mV"
-      ],
-      "correctAnswer": "7 mV",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616153",
-      "question": "What is the overall gain (C(s)/R(s)) of the closed loop system given below?",
-      "options": [
-        "\\(\\frac{G(s)}{1 - G(s)H(s)}\\)",
-        "\\(\\frac{G(s)}{1 + G(s)H(s)}\\)",
-        "\\(\\frac{H(s)}{1 + G(s)H(s)}\\)",
-        "\\(\\frac{H(s)}{1 - G(s)H(s)}\\)"
-      ],
-      "correctAnswer": "\\(\\frac{G(s)}{1 + G(s)H(s)}\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616154",
-      "question": "The range of frequencies used for dielectric heating and induction heating are ________ respectively.",
-      "options": [
-        "10 MHz to 50 MHz and 100 kHz to 500 kHz",
-        "10 MHz to 50 MHz and 100 MHz to 500 MHz",
-        "10 kHz to 50 kHz and 100 kHz to 500 kHz",
-        "10 kHz to 50 kHz and 100 MHz to 500 MHz"
-      ],
-      "correctAnswer": "10 MHz to 50 MHz and 100 kHz to 500 kHz",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616155",
-      "question": "As a result of introduction of negative feedback in a control system, which of the following will not decrease?",
-      "options": [
-        "Bandwidth",
-        "Overall gain",
-        "Distortion",
-        "Instability"
-      ],
-      "correctAnswer": "Bandwidth",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616156",
-      "question": "A 400 W carrier is amplitude modulated to a depth of 80%. What is the total transmitted power?",
-      "options": [
-        "512 W",
-        "528 W",
-        "640 W",
-        "720 W"
-      ],
-      "correctAnswer": "528 W",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616157",
-      "question": "A superheterodyne receiver has an RF input of 10 MHz and an Intermediate Frequency (IF) of 455 kHz. If image frequency rejection is required, what should be the minimum image frequency?",
-      "options": [
-        "9.09 MHz",
-        "10.91 MHz",
-        "10.455 MHz",
-        "9.545 MHz"
-      ],
-      "correctAnswer": "10.91 MHz",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616158",
-      "question": "A radar system transmits a signal at 10 GHz. If the target is moving at 200 m/s, what is the Doppler frequency shift? Assume speed of light to be 3 x \\(10^8\\) m/s.",
-      "options": [
-        "10 kHz",
-        "13.33 kHz",
-        "16.67 kHz",
-        "20 kHz"
-      ],
-      "correctAnswer": "13.33 kHz",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616159",
-      "question": "A 10 kHz modulating signal frequency produces a maximum frequency deviation of 50 kHz in an FM signal. What is the modulation index?",
-      "options": [
-        "5",
-        "2",
-        "10",
-        "20"
-      ],
-      "correctAnswer": "5",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616160",
-      "question": "In Pulse Code Modulation (PCM), quantization noise is reduced by",
-      "options": [
-        "Increasing the sampling rate",
-        "Increasing the number of quantization levels",
-        "Using larger bandwidth",
-        "Using Pulse Amplitude Modulation"
-      ],
-      "correctAnswer": "Increasing the number of quantization levels",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616161",
-      "question": "The threshold electric field required to trigger Gunn oscillations in GaAs is typically around",
-      "options": [
-        "3.2 kV/cm",
-        "1 kV/cm",
-        "10 kV/cm",
-        "100 kV/cm"
-      ],
-      "correctAnswer": "3.2 kV/cm",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616162",
-      "question": "If bandwidth is of primary concern, which one of the following schemes is generally not considered?",
-      "options": [
-        "PSK",
-        "ASK",
-        "DPSK",
-        "FSK"
-      ],
-      "correctAnswer": "FSK",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616163",
-      "question": "A rectangular waveguide is 5.1 cm by 2.4 cm (inside measurements). The cutoff frequency of the dominant mode will be nearly",
-      "options": [
-        "5.38 GHz",
-        "4.54 GHz",
-        "3.78 GHz",
-        "2.94 GHz"
-      ],
-      "correctAnswer": "2.94 GHz",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616164",
-      "question": "Which of the following is a primary advantage of a TWT (Travelling Wave Tube) over a klystron amplifier?",
-      "options": [
-        "Higher efficiency",
-        "Wider bandwidth",
-        "Smaller size and simpler design",
-        "Works at low frequencies"
-      ],
-      "correctAnswer": "Wider bandwidth",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616165",
-      "question": "A Delta Modulation system has a step size of 1V and operates at 10 kHz. What is the maximum slope it can track?",
-      "options": [
-        "10 V/ms",
-        "5 V/ms",
-        "1 V/ms",
-        "100 V/ms"
-      ],
-      "correctAnswer": "10 V/ms",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616166",
-      "question": "A PCM system samples an analog signal with a maximum frequency of 10 kHz. If each sample is quantized into 256 levels, what is the minimum transmission bit rate?",
-      "options": [
-        "10 kbps",
-        "20 kbps",
-        "80 kbps",
-        "160 kbps"
-      ],
-      "correctAnswer": "160 kbps",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616167",
-      "question": "A magnetron is commonly used in which application?",
-      "options": [
-        "Radar",
-        "Optical fiber communication",
-        "TV Broadcasting",
-        "VHF communications"
-      ],
-      "correctAnswer": "Radar",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616168",
-      "question": "The purpose of pre-emphasis in FM transmission is",
-      "options": [
-        "To reduce bandwidth",
-        "To suppress noise at low frequencies",
-        "To amplify high-frequency components",
-        "To avoid phase distortion"
-      ],
-      "correctAnswer": "To amplify high-frequency components",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616169",
-      "question": "A satellite transmits at 6 GHz and receives at 4 GHz. What is the transponder bandwidth if the received signal has a 50 MHz bandwidth?",
-      "options": [
-        "50 MHz",
-        "100 MHz",
-        "500 MHz",
-        "1 GHz"
-      ],
-      "correctAnswer": "50 MHz",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616170",
-      "question": "A 1 MHz carrier is amplitude-modulated by a 10 kHz signal. What are the sideband frequencies?",
-      "options": [
-        "990 kHz and 1010 kHz",
-        "900 kHz and 1100 kHz",
-        "995 kHz and 1005 kHz",
-        "500 kHz and 1500 kHz"
-      ],
-      "correctAnswer": "990 kHz and 1010 kHz",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616171",
-      "question": "A microwave semiconductor device is",
-      "options": [
-        "Klystron",
-        "GUNN Diode",
-        "Magnetron",
-        "TWT"
-      ],
-      "correctAnswer": "GUNN Diode",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616172",
-      "question": "The term in satellite communication refers to the closest point of the satellite's orbit to Earth is",
-      "options": [
-        "Perigee",
-        "Apogee",
-        "Azimuth",
-        "Elevation"
-      ],
-      "correctAnswer": "Perigee",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616173",
-      "question": "In a TDM system, 4 signals each band limited to 3 kHz are multiplexed. What is the minimum sampling rate per signal?",
-      "options": [
-        "3 kHz",
-        "6 kHz",
-        "12 kHz",
-        "24 kHz"
-      ],
-      "correctAnswer": "6 kHz",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616174",
-      "question": "In a BPSK system, the phase difference between '0' and '1' is",
-      "options": [
-        "0 degree",
-        "90 degrees",
-        "180 degrees",
-        "270 degrees"
-      ],
-      "correctAnswer": "180 degrees",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616175",
-      "question": "The primary purpose of modulation in communication systems is",
-      "options": [
-        "To reduce antenna size",
-        "To increase signal power",
-        "To convert from digital to analog",
-        "To remove channel noise"
-      ],
-      "correctAnswer": "To reduce antenna size",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616176",
-      "question": "The primary function of a radar duplexer is",
-      "options": [
-        "Amplifies received signals",
-        "Separates transmitted and received signals",
-        "Detects frequency shifts",
-        "Reduces noise"
-      ],
-      "correctAnswer": "Separates transmitted and received signals",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616177",
-      "question": "A radar transmits pulses at 5 GHz. If the pulse round-trip time is 40 \\(\\mu\\)s, what is the target distance?",
-      "options": [
-        "3 km",
-        "6 km",
-        "12 km",
-        "24 km"
-      ],
-      "correctAnswer": "6 km",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616178",
-      "question": "RZ and NRZ refers to",
-      "options": [
-        "AM and FM waveforms",
-        "Digital multiplexing techniques",
-        "Line coding schemes",
-        "Pulse shaping filters"
-      ],
-      "correctAnswer": "Line coding schemes",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616179",
-      "question": "For a 16-QAM modulation scheme, how many bits are transmitted per symbol?",
-      "options": [
-        "2 bits",
-        "3 bits",
-        "4 bits",
-        "8 bits"
-      ],
-      "correctAnswer": "4 bits",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616180",
-      "question": "A 64-QAM system is required to provide a data rate of 24 Mbps. What must the symbol rate be?",
-      "options": [
-        "2 Msymbol/s",
-        "3 Msymbol/s",
-        "4 Msymbol/s",
-        "6 Msymbol/s"
-      ],
-      "correctAnswer": "4 Msymbol/s",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616181",
-      "question": "What is the equivalent Gray code for the binary code (1100 1010)\\(_{2}\\)?",
-      "options": [
-        "11110111",
-        "10101110",
-        "11101111",
-        "10101111"
-      ],
-      "correctAnswer": "10101111",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616182",
-      "question": "A bulb in a staircase has two switches, one switch is on the ground floor and the other one on the first floor. The bulb can be turned ON and also can be turned OFF by any one of the switches irrespective of the state of the other switch. The logic of switching of the bulb resembles",
-      "options": [
-        "An OR gate",
-        "An XOR gate",
-        "An AND gate",
-        "A NAND gate"
-      ],
-      "correctAnswer": "An XOR gate",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616183",
-      "question": "The Boolean expression \\(A + \\bar{A}B\\) is same as",
-      "options": [
-        "\\(A + B\\)",
-        "\\(\\bar{A} + B\\)",
-        "AB",
-        "\\(\\bar{A}\\bar{B}\\)"
-      ],
-      "correctAnswer": "\\(A + B\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616184",
-      "question": "Which logic families among the following are the fastest and slowest respectively. A. CMOS B. ECL C. DTL D. TTL",
-      "options": [
-        "A and B respectively",
-        "C and B respectively",
-        "D and A respectively",
-        "B and A respectively"
-      ],
-      "correctAnswer": "B and A respectively",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616185",
-      "question": "A full adder can be implemented by using the blocks indicated with question marks. They are:",
-      "options": [
-        "Two Half adders and an OR gate",
-        "Two Half adders and an AND gate",
-        "Two Half subtractors and an OR gate",
-        "Two Half subtractors and an AND gate"
-      ],
-      "correctAnswer": "Two Half adders and an OR gate",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616186",
-      "question": "What is the Boolean function Y from the multiplexer shown below?",
-      "options": [
-        "SI",
-        "\\(\\bar{S}I\\)",
-        "\\(\\bar{S}\\bar{I}\\)",
-        "\\(S\\bar{I}\\)"
-      ],
-      "correctAnswer": "SI",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616187",
-      "question": "A/An ________ is a ________ circuit that converts coded inputs into coded outputs, where the input and output codes are different.",
-      "options": [
-        "Encoder, sequential",
-        "Decoder, combinational",
-        "Decoder, sequential",
-        "Counter, combinational"
-      ],
-      "correctAnswer": "Decoder, combinational",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616188",
-      "question": "Choose the correct characteristic equation of a JK flip-flop.",
-      "options": [
-        "\\(Q_{n+1} = J'Q_n' + K'Q_n\\)",
-        "\\(Q_{n+1} = JQ_n' + KQ_n\\)",
-        "\\(Q_{n+1} = JQ_n' + K'Q_n\\)",
-        "\\(Q_{n+1} = J'Q_n' + KQ_n\\)"
-      ],
-      "correctAnswer": "\\(Q_{n+1} = JQ_n' + K'Q_n\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616189",
-      "question": "Universal shift register is capable of doing which of the following functions? A. Shift Left (L) B. Shift Right (R) C. No change (Hold) D. Parallel Load (Load)",
-      "options": [
-        "A and B only",
-        "C and D only",
-        "A and C only",
-        "A, B, C and D"
-      ],
-      "correctAnswer": "A, B, C and D",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616190",
-      "question": "The largest binary number that can be represented by a 16-bit counter has a decimal equivalent of ________.",
-      "options": [
-        "65536",
-        "16",
-        "15",
-        "65535"
-      ],
-      "correctAnswer": "65535",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616191",
-      "question": "SRAM cell consists of ________, whereas a DRAM cell is made up of ________.",
-      "options": [
-        "multiple transistors; multiple capacitors",
-        "multiple transistors; single transistor and a capacitor",
-        "single transistor; single transistor and a capacitor",
-        "single transistor and a capacitor; multiple transistors"
-      ],
-      "correctAnswer": "multiple transistors; single transistor and a capacitor",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616192",
-      "question": "Given below is a 4-bit weighted resistor DAC, the output analog voltage for digital input \"1000\" is ________. (Assume voltage \\(V_D, V_C, V_B, V_A\\) of +5V for '1' and 0V for '0')",
-      "options": [
-        "-1 V",
-        "+1 V",
-        "+5 V",
-        "-5 V"
-      ],
-      "correctAnswer": "-5 V",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616193",
-      "question": "Select the correct option from the features of 8051 microcontroller with respect to the on-chip ROM, RAM, Timers and I/O ports respectively",
-      "options": [
-        "4 KB of on chip ROM",
-        "3 I/O ports",
-        "4 Timers",
-        "512 bytes of RAM"
-      ],
-      "correctAnswer": "4 KB of on chip ROM",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616194",
-      "question": "If the crystal connected to an 8051 microcontroller is of 10 MHz, the length of its machine cycle will be",
-      "options": [
-        "1.2 microseconds",
-        "1.4 microseconds",
-        "1.0 microseconds",
-        "1.6 microseconds"
-      ],
-      "correctAnswer": "1.2 microseconds",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616195",
-      "question": "The default interrupt priority in 8051 is",
-      "options": [
-        "INT0 > TF0 > RI + TI> INT1 > TF1",
-        "INT1> TF1 > RI + TI> INT0 > TF0",
-        "INT0 > TF0 > INT1 > TF1 > RI + TI",
-        "INT1> TF1 > INT0 > TF0 > RI + TI"
-      ],
-      "correctAnswer": "INT0 > TF0 > INT1 > TF1 > RI + TI",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616196",
-      "question": "After executing the following instructions, the status of the carry flag (CY), auxiliary carry flag (AC) and parity flag (P) is MOV A, #9CH ADD A, #64H",
-      "options": [
-        "CY=0, AC=0, P=0",
-        "CY=1, AC=1, P=0",
-        "CY=0, AC=1, P=0",
-        "CY=1, AC=1, P=1"
-      ],
-      "correctAnswer": "CY=1, AC=1, P=0",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616197",
-      "question": "How many times the instruction CPL A is executed in the following program of an 8051? MOV A, #F0H MOV R1, #60 NEXT: MOV R6, #10H AGAIN: CPL A DJNZ R6, AGAIN DJNZ R1, NEXT",
-      "options": [
-        "600 times",
-        "900 times",
-        "690 times",
-        "960 times"
-      ],
-      "correctAnswer": "600 times",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616198",
-      "question": "In 8257, the pin that is used to write data to the addressed memory location, during DMA write operation is",
-      "options": [
-        "\\(\\overline{AEN}\\)",
-        "\\(\\overline{MEMR}\\)",
-        "\\(\\overline{MEMW}\\)",
-        "\\(\\overline{IOW}\\)"
-      ],
-      "correctAnswer": "\\(\\overline{MEMW}\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616199",
-      "question": "Which port of the 8255 PPI is capable of performing the handshaking function with the interfaced devices?",
-      "options": [
-        "Port A",
-        "Port B",
-        "Port C",
-        "IO Port"
-      ],
-      "correctAnswer": "Port C",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616200",
-      "question": "In 8251A, the pin that controls the rate at which the character is to be transmitted is",
-      "options": [
-        "\\(\\overline{CLK}\\)",
-        "\\(\\overline{RxC}\\)",
-        "\\(\\overline{TxC}\\)",
-        "\\(\\overline{TxE}\\)"
-      ],
-      "correctAnswer": "\\(\\overline{TxC}\\)",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616201",
-      "question": "The command for turning off the display and turning off the cursor in a 16*2 LCD display is",
-      "options": [
-        "0CH",
-        "08H",
-        "0EH",
-        "8DH"
-      ],
-      "correctAnswer": "08H",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616202",
-      "question": "Aspect ratio can be defined as the ratio of width to height of the picture frame. For television, it is standardized as _________.",
-      "options": [
-        "4:3",
-        "3:4",
-        "3:5",
-        "5:3"
-      ],
-      "correctAnswer": "4:3",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616203",
-      "question": "Composite video signal consists of A. camera signal B. blanking pulses C. synchronizing pulse D. camera signal and blanking pulses",
-      "options": [
-        "Only A",
-        "Only B",
-        "Both C and D",
-        "D only"
-      ],
-      "correctAnswer": "Both C and D",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616204",
-      "question": "NTSC is one of the various TV broadcasting standards. It stands for",
-      "options": [
-        "National Television Standard Committee",
-        "National Television System Committee",
-        "National Television System Consortium",
-        "National Telescope Standard Committee"
-      ],
-      "correctAnswer": "National Television System Committee",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616205",
-      "question": "Various steps in DTH system are given below. Choose the correct sequence: A. Uplink center receives TV programs from content providers B. Signal is compressed, encrypted, and sent to a geostationary satellite. C. Satellite amplifies and retransmits the signal back to Earth. D. Dish antenna at the consumer's home receives the signal and sends to Set-Top Box (STB). E. STB decrypts, decompresses, and converts the signal into TV channels.",
-      "options": [
-        "B, C, A, D, E",
-        "A, B, C, E, D",
-        "E, C, D, B, A",
-        "A, B, C, D, E"
-      ],
-      "correctAnswer": "A, B, C, D, E",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616206",
-      "question": "Phase Alternating Line (PAL) is a colour encoding system for analog TV. It's picture is made up of ________ interlaced lines, displayed at a rate of ________ frames per second in most countries.",
-      "options": [
-        "625, 25",
-        "25, 625",
-        "5, 25",
-        "25, 125"
-      ],
-      "correctAnswer": "625, 25",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616207",
-      "question": "Comparing HDTV and Smart TV, select the correct option. A. A high-definition television supports HD resolutions like 720p, 1080p, or 4K. B. Smart TV has built-in internet connectivity, apps for streaming, browsing, etc. C. A HDTV must and should support Wi-Fi, an operating system and ethernet D. HDTV mandatorily requires external devices like Firestick, Chromecast, set-top box for normal TV functionality",
-      "options": [
-        "Both A and B",
-        "Both A and C",
-        "Both A and D",
-        "Both C and B"
-      ],
-      "correctAnswer": "Both A and B",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616208",
-      "question": "_________ network type covers multiple locations spanning over a large geographic area.",
-      "options": [
-        "LAN",
-        "WAN",
-        "MAN",
-        "PAN"
-      ],
-      "correctAnswer": "WAN",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616209",
-      "question": "Which of the following network topologies are widely used? A) Bus B) Lan C) Mesh D) Pan E) Tree",
-      "options": [
-        "A, B, C",
-        "A, B, D",
-        "B, D",
-        "A, C, E"
-      ],
-      "correctAnswer": "A, C, E",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616210",
-      "question": "In wired transmission, ________ are the widely used physical media.",
-      "options": [
-        "Infrared, Twisted Pair, Coaxial Cable",
-        "Copper Wires, High frequency Radio, Coaxial Cable",
-        "Copper Wires, Optical Fiber, Coaxial Cable",
-        "Infrared, Laser, Coaxial Cable"
-      ],
-      "correctAnswer": "Copper Wires, Optical Fiber, Coaxial Cable",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616211",
-      "question": "_________ and _________ are the two types of data switching techniques employed in network services.",
-      "options": [
-        "Circuit, Packet",
-        "Transport, Network",
-        "Data Link, Session",
-        "Application, Presentation"
-      ],
-      "correctAnswer": "Circuit, Packet",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616212",
-      "question": "_________ and _________ are used as LAN components and Internetwork connecting devices respectively.",
-      "options": [
-        "Hub, Repeater, Router and Gateway, bridge",
-        "Hub, Repeater, Bridge and Router, Gateway",
-        "Hub, Switch, Router and Repeater, Gateway",
-        "Hub, Switch, Gateway and bridge, router"
-      ],
-      "correctAnswer": "Hub, Repeater, Bridge and Router, Gateway",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616213",
-      "question": "The FTP (File Transfer Protocol) uses _________ port numbers.",
-      "options": [
-        "80 and 443",
-        "23 and 24",
-        "25 and 26",
-        "20 and 21"
-      ],
-      "correctAnswer": "20 and 21",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616214",
-      "question": "The channel capacity (C) of a communication channel is defined as",
-      "options": [
-        "The maximum amount of data that can be transmitted through the channel",
-        "The maximum amount of data rate supported by a channel",
-        "The minimum amount of data that can be transmitted through the channel",
-        "The minimum amount of data rate supported by a channel"
-      ],
-      "correctAnswer": "The maximum amount of data rate supported by a channel",
-      "topic": "Electronics and Communication Engineering"
-    },
-    {
-      "id": "5069616215",
-      "question": "Bluetooth technology is also known as _________.",
-      "options": [
-        "Wired LAN",
-        "Wired PAN",
-        "Wireless PAN",
-        "Wireless LAN"
-      ],
-      "correctAnswer": "Wireless PAN",
-      "topic": "Electronics and Communication Engineering"
-    }
-  ]
+  {
+    "id": "5069616016",
+    "question": "If A = \\(\\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}\\) and if \\((aI + bA)^2 = A\\), then \\(b^4 =\\)",
+    "options": [
+      "1",
+      "\\(\\frac{1}{2}\\)",
+      "\\(-\\frac{1}{4}\\)",
+      "\\(\\frac{1}{4}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{1}{4}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616017",
+    "question": "If A = \\(\\begin{pmatrix} \\cos\\theta & \\sin\\theta & 0 \\\\ -\\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = F(\\theta)\\), then \\(A^{-1} =\\)",
+    "options": [
+      "\\(F(\\theta)\\)",
+      "\\(F(-\\theta)\\)",
+      "\\(-F(\\theta)\\)",
+      "\\(-F(-\\theta)\\)"
+    ],
+    "correctAnswer": "\\(F(-\\theta)\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616018",
+    "question": "If (x, y, z) is the solution of linear equations \\(x + y + z = 6\\), \\(x - y + z = 2\\), \\(2x + y - z = 1\\), then \\(\\frac{yz}{x} =\\)",
+    "options": [
+      "\\(\\frac{1}{6}\\)",
+      "\\(\\frac{3}{2}\\)",
+      "6",
+      "3"
+    ],
+    "correctAnswer": "6",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616019",
+    "question": "If A and B are square matrices of order 3 with \\(|A| = 2, |B| = -4\\), then \\(|2AB| =\\)",
+    "options": [
+      "-64",
+      "16",
+      "64",
+      "-16"
+    ],
+    "correctAnswer": "-64",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616020",
+    "question": "If \\(log_{\\sqrt{27}}(x) = \\frac{8}{3}\\), then x =",
+    "options": [
+      "10",
+      "16",
+      "81",
+      "27"
+    ],
+    "correctAnswer": "81",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616021",
+    "question": "If \\(\\frac{x^3}{(x-1)(x+2)} = Ax + B + \\frac{C}{x-1} + \\frac{D}{x+2}\\), then \\(C + D =\\)",
+    "options": [
+      "-3",
+      "3",
+      "2",
+      "0"
+    ],
+    "correctAnswer": "3",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616022",
+    "question": "\\(\\frac{\\sin^2 33^\\circ - \\sin^2 57^\\circ}{\\sin 21^\\circ - \\cos 21^\\circ} =\\)",
+    "options": [
+      "\\(\\frac{\\sqrt{3}}{2}\\)",
+      "\\(\\frac{1}{2}\\)",
+      "\\(\\frac{1}{\\sqrt{2}}\\)",
+      "1"
+    ],
+    "correctAnswer": "\\(\\frac{1}{\\sqrt{2}}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616023",
+    "question": "If \\(A + B = \\frac{\\pi}{3}\\) and \\(\\cos A + \\cos B = 1\\), then \\(3\\cos(A - B) =\\)",
+    "options": [
+      "-1",
+      "2",
+      "-2",
+      "1"
+    ],
+    "correctAnswer": "-1",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616024",
+    "question": "If \\(2 \\tan^{-1}(\\frac{2}{3}) = \\tan^{-1}(k)\\), then k =",
+    "options": [
+      "\\(\\frac{5}{12}\\)",
+      "\\(\\frac{4}{3}\\)",
+      "\\(\\frac{12}{5}\\)",
+      "\\(\\frac{3}{4}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{12}{5}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616025",
+    "question": "If \\(\\tan^{-1}(\\frac{1-x}{1+x}) = \\frac{1}{2} \\tan^{-1}(x), x > 0\\), then x =",
+    "options": [
+      "\\(\\frac{\\sqrt{3}}{2}\\)",
+      "\\(\\frac{1}{\\sqrt{3}}\\)",
+      "\\(\\frac{1}{2}\\)",
+      "1"
+    ],
+    "correctAnswer": "\\(\\frac{1}{\\sqrt{3}}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616026",
+    "question": "If \\(\\cosh x = \\frac{3}{2}\\) then \\(\\cosh 2x =\\)",
+    "options": [
+      "\\(\\frac{1}{3}\\)",
+      "\\(\\frac{7}{2}\\)",
+      "\\(\\frac{5}{2}\\)",
+      "\\(\\frac{11}{3}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{7}{2}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616027",
+    "question": "\\((\\frac{\\sqrt{3} + i}{2})^6 + (\\frac{\\sqrt{3} - i}{2})^6 =\\)",
+    "options": [
+      "3",
+      "-3",
+      "2",
+      "-2"
+    ],
+    "correctAnswer": "-2",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616028",
+    "question": "The distance between the lines y = 2x + 4 and 6x - 3y = 5 is (in units)",
+    "options": [
+      "\\(\\frac{13}{2\\sqrt{5}}\\)",
+      "\\(\\frac{17}{3\\sqrt{5}}\\)",
+      "\\(\\frac{17}{2\\sqrt{5}}\\)",
+      "\\(\\frac{14}{3\\sqrt{5}}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{17}{3\\sqrt{5}}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616029",
+    "question": "If the radius of the circle \\(x^2 + y^2 - 4x + 6y - k = 0\\) is 4, then k =",
+    "options": [
+      "3",
+      "-3",
+      "2",
+      "\\(\\frac{1}{2}\\)"
+    ],
+    "correctAnswer": "3",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616030",
+    "question": "If the angle between the lines \\(3x - 4y + 1 = 0\\) and \\(ax + by - 7 = 0\\) is \\(90^\\circ\\), then \\(3a - 4b =\\)",
+    "options": [
+      "12",
+      "-1",
+      "0",
+      "4"
+    ],
+    "correctAnswer": "0",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616031",
+    "question": "The equation of the tangent to the circle \\(x^2 + y^2 - 6x + 4y - 12 = 0\\) at (-1, 1) is",
+    "options": [
+      "\\(4x + 3y + 1 = 0\\)",
+      "\\(2x - 3y + 5 = 0\\)",
+      "\\(2x + 3y - 1 = 0\\)",
+      "\\(4x - 3y + 7 = 0\\)"
+    ],
+    "correctAnswer": "\\(4x - 3y + 7 = 0\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616032",
+    "question": "The eccentricity of the ellipse whose latus rectum is equal to half of its major axis is",
+    "options": [
+      "\\(\\sqrt{3}\\)",
+      "\\(\\frac{1}{\\sqrt{2}}\\)",
+      "\\(\\sqrt{2}\\)",
+      "\\(\\frac{1}{\\sqrt{3}}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{1}{\\sqrt{2}}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616033",
+    "question": "\\(\\frac{d}{dx}(\\sqrt{\\sin(x^2)}) =\\)",
+    "options": [
+      "\\(\\frac{x^2 \\cos(x^2)}{\\sqrt{\\sin(x^2)}}\\)",
+      "\\(\\frac{x \\cos(x^2)}{2\\sqrt{\\sin(x^2)}}\\)",
+      "\\(\\frac{x \\cos(x^2)}{\\sqrt{\\sin(x^2)}}\\)",
+      "\\(\\frac{x \\sin(x^2)}{\\sqrt{\\cos(x^2)}}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{x \\cos(x^2)}{\\sqrt{\\sin(x^2)}}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616034",
+    "question": "\\(\\frac{d}{dx} \\tan^{-1}(\\frac{\\sin x}{1 + \\cos x}) =\\)",
+    "options": [
+      "2",
+      "4",
+      "1",
+      "\\(\\frac{1}{2}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{1}{2}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616035",
+    "question": "If \\(y^x = x^{\\cos y}\\), then \\(\\frac{dy}{dx} =\\)",
+    "options": [
+      "\\(\\frac{y(\\cos y - x \\log y)}{x(x + y \\sin y \\log x)}\\)",
+      "\\(\\frac{y(\\cos y + x \\log y)}{x(x + y \\sin y \\log x)}\\)",
+      "\\(\\frac{y(\\cos y - x \\log y)}{x(x - y \\sin y \\log x)}\\)",
+      "\\(\\frac{(\\cos y - x \\log y)}{(x + y \\sin y \\log x)}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{y(\\cos y - x \\log y)}{x(x - y \\sin y \\log x)}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616036",
+    "question": "\\(\\lim_{x \\to 3} \\frac{x^2 - x - 6}{x^2 + x - 12} =\\)",
+    "options": [
+      "\\(\\frac{1}{6}\\)",
+      "\\(\\frac{2}{3}\\)",
+      "\\(\\frac{3}{4}\\)",
+      "\\(\\frac{5}{7}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{5}{7}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616037",
+    "question": "The equation of the normal to the curve \\(y = x^3 - 3x\\) at the point P(2, 2) is",
+    "options": [
+      "\\(x + 9y - 2 = 0\\)",
+      "\\(x + 9y - 22 = 0\\)",
+      "\\(x + 9y - 20 = 0\\)",
+      "\\(x + 9y - 12 = 0\\)"
+    ],
+    "correctAnswer": "\\(x + 9y - 20 = 0\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616038",
+    "question": "The maximum value of \\(y = (x-1)^2 e^x\\) is",
+    "options": [
+      "\\(\\frac{4}{e}\\)",
+      "\\(\\frac{2}{e}\\)",
+      "\\(\\frac{1}{e}\\)",
+      "\\(\\frac{9}{e}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{4}{e}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616039",
+    "question": "If \\(f(x, y) = (x+y)e^{xy}\\), then at P(2,2) the value of \\(\\frac{\\partial f}{\\partial x} =\\)",
+    "options": [
+      "\\(8e^4\\)",
+      "\\(4e^4\\)",
+      "\\(9e^4\\)",
+      "\\(16e^4\\)"
+    ],
+    "correctAnswer": "\\(9e^4\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616040",
+    "question": "If \\(u(x, y) = \\sin^{-1}(\\frac{x^4+y^4}{x^2+y^2})\\), then \\(x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} =\\)",
+    "options": [
+      "2 cot u",
+      "2 tan u",
+      "2 sin u",
+      "2 cos u"
+    ],
+    "correctAnswer": "2 tan u",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616041",
+    "question": "\\(\\int \\frac{1}{1 - \\cos x} dx =\\)",
+    "options": [
+      "\\(-\\cot x - \\csc x + c\\)",
+      "\\(-\\cot x + \\csc x + c\\)",
+      "\\(\\cot x - \\csc x + c\\)",
+      "\\(-\\tan x - \\sec x + c\\)"
+    ],
+    "correctAnswer": "\\(-\\cot x - \\csc x + c\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616042",
+    "question": "\\(\\int_2^4 f(x) dx =\\)",
+    "options": [
+      "\\(\\int_2^4 f(6+x) dx\\)",
+      "\\(\\int_2^4 f(4-x) dx\\)",
+      "\\(\\int_2^4 f(2-x) dx\\)",
+      "\\(\\int_2^4 f(6-x) dx\\)"
+    ],
+    "correctAnswer": "\\(\\int_2^4 f(6-x) dx\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616043",
+    "question": "\\(\\int_{-1}^1 \\sin \\pi x dx =\\)",
+    "options": [
+      "\\(\\frac{1}{\\pi}\\)",
+      "\\(\\frac{2}{\\pi}\\)",
+      "0",
+      "\\(-\\frac{2}{\\pi}\\)"
+    ],
+    "correctAnswer": "0",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616044",
+    "question": "\\(\\lim_{n \\to \\infty} [\\frac{1}{n} + \\frac{n^2}{(n+1)^3} + \\frac{n^2}{(n+2)^3} + ... + \\frac{1}{8n}] =\\)",
+    "options": [
+      "\\(\\frac{1}{8}\\)",
+      "\\(\\frac{1}{4}\\)",
+      "\\(\\frac{3}{8}\\)",
+      "\\(\\frac{1}{2}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{3}{8}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616045",
+    "question": "The area of the region bounded by the lines x = 1, x = 4, y = 4x and y = \\(x^2\\) is",
+    "options": [
+      "2",
+      "6",
+      "16",
+      "9"
+    ],
+    "correctAnswer": "9",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616046",
+    "question": "According to Simpson's \\(\\frac{1}{3}\\) rule, the value of the integral \\(\\int_1^3 \\frac{1}{x} dx\\) with \\(h = \\frac{1}{2}\\) is",
+    "options": [
+      "1.5",
+      "0.5",
+      "1.1",
+      "2"
+    ],
+    "correctAnswer": "1.1",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616047",
+    "question": "The differential equation whose general solution is \\(y = Ax^2 + Bx\\), where A and B are arbitrary constants is",
+    "options": [
+      "\\(x^2 y'' + 2xy' - 2y = 0\\)",
+      "\\(x^2 y'' - 2xy' + 2y = 0\\)",
+      "\\(y'' - 2y' + 2y = 0\\)",
+      "\\(x^2 y'' - 2xy' - 2y = 0\\)"
+    ],
+    "correctAnswer": "\\(x^2 y'' - 2xy' + 2y = 0\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616048",
+    "question": "The general solution of the differential equation \\((e^x + 1)y dy + (y+1) dx = 0\\) is",
+    "options": [
+      "\\(e^{x-y} = c(y+1)(1-e^x)\\)",
+      "\\(e^{x+y} = c(y+1)(1+e^x)\\)",
+      "\\(e^{2x-y} = c(y+1)(1-e^x)\\)",
+      "\\(e^{x+y} = cy(1+e^x)\\)"
+    ],
+    "correctAnswer": "\\(e^{x+y} = c(y+1)(1+e^x)\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616049",
+    "question": "If the differential equation \\((x^2 + y^2)dx + kxy dy = 0\\) is exact, then k =",
+    "options": [
+      "2",
+      "1",
+      "-1",
+      "-2"
+    ],
+    "correctAnswer": "2",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616050",
+    "question": "The general solution of the differential equation \\(\\frac{dy}{dx} + y \\tan x = \\cos^2 x\\) is",
+    "options": [
+      "\\(y \\cot x = \\tan x + c\\)",
+      "\\(y \\sec x = x \\sin x + c\\)",
+      "\\(x \\sec x = \\sin x + c\\)",
+      "\\(y \\sec x = \\sin x + c\\)"
+    ],
+    "correctAnswer": "\\(y \\sec x = \\sin x + c\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616051",
+    "question": "The integrating factor of the differential equation \\(\\frac{dy}{dx} + \\frac{2x}{x^2+1} y = x^2 + 1\\) is",
+    "options": [
+      "2x",
+      "\\(x^2 + 2\\)",
+      "\\(x^2 + 1\\)",
+      "\\(x^2 - 1\\)"
+    ],
+    "correctAnswer": "\\(x^2 + 1\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616052",
+    "question": "The general solution of the differential equation \\(6y'' - 5y' - 6y = 0\\) is",
+    "options": [
+      "\\(y = ae^{9x} + be^{4x}\\)",
+      "\\(y = ae^{-9x} + be^{-4x}\\)",
+      "\\(y = ae^{\\frac{2x}{3}} + be^{-\\frac{2x}{3}}\\)",
+      "\\(y = ae^{-\\frac{3x}{2}} + be^{-\\frac{2x}{3}}\\)"
+    ],
+    "correctAnswer": "\\(y = ae^{\\frac{2x}{3}} + be^{-\\frac{2x}{3}}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616053",
+    "question": "A particular integral of the differential equation \\((4D^2 + 4D - 3)y = e^{3x}\\) is (Here \\(D = \\frac{d}{dx}\\))",
+    "options": [
+      "\\(\\frac{1}{11} e^{3x}\\)",
+      "\\(\\frac{1}{45} e^{3x}\\)",
+      "\\(\\frac{1}{5} e^{3x}\\)",
+      "\\(\\frac{1}{3} e^{3x}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{1}{45} e^{3x}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616054",
+    "question": "A particular integral of the differential equation \\((D^2 + 4)y = 5(\\cos 3x + \\sin 3x)\\) is (Here \\(D = \\frac{d}{dx}\\))",
+    "options": [
+      "\\(\\cos 3x + \\sin 3x\\)",
+      "\\(\\cos 3x - \\sin 3x\\)",
+      "\\(-\\cos 3x - \\sin 3x\\)",
+      "\\(\\sin 3x - \\cos 3x\\)"
+    ],
+    "correctAnswer": "\\(-\\cos 3x - \\sin 3x\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616055",
+    "question": "If \\(L\\{\\int_0^t \\cosh 3u du\\} = f(s)\\), then \\(f(4)=\\)",
+    "options": [
+      "\\(\\frac{1}{7}\\)",
+      "\\(\\frac{1}{32}\\)",
+      "0",
+      "\\(\\frac{7}{32}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{1}{7}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616056",
+    "question": "Let \\(F(t) = \\begin{cases} e^{t-1}, & t > 1 \\\\ 0, & t < 1 \\end{cases}\\). If \\(s > 1\\) then \\(L\\{F(t)\\} =\\)",
+    "options": [
+      "\\(\\frac{1}{s-1}\\)",
+      "\\(\\frac{e^{-1}}{s-1}\\)",
+      "\\(\\frac{e^{-s}}{s-1}\\)",
+      "\\(\\frac{e^s}{s-1}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{e^{-s}}{s-1}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616057",
+    "question": "\\(\\int_0^\\infty te^{-t} \\sin t dt =\\)",
+    "options": [
+      "-1",
+      "\\(\\frac{1}{2}\\)",
+      "0",
+      "2"
+    ],
+    "correctAnswer": "0",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616058",
+    "question": "\\(L^{-1}\\{\\frac{1}{s(s-1)}\\} =\\)",
+    "options": [
+      "\\(1-e^t\\)",
+      "\\(e^t+1\\)",
+      "\\(e^t-1\\)",
+      "\\(e^{-t}-1\\)"
+    ],
+    "correctAnswer": "\\(e^t-1\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616059",
+    "question": "If \\(L^{-1}\\{\\frac{s+1}{s^2+2s+2}\\} = e^{at} \\cos bt\\), then \\(a^2+b^2=\\)",
+    "options": [
+      "2",
+      "4",
+      "0",
+      "8"
+    ],
+    "correctAnswer": "2",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616060",
+    "question": "The convolution of the functions 1 and sin t is",
+    "options": [
+      "\\(1-\\cos t\\)",
+      "\\(1-\\sin t\\)",
+      "\\(\\cos t\\)",
+      "\\(1+\\cos t\\)"
+    ],
+    "correctAnswer": "\\(1-\\cos t\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616061",
+    "question": "The Laplace transform of the solution of the initial value problem \\(y'' + 9y = 9u(t-3), y(0) = 0, y'(0) = 0\\) (Here u(t-3) is the unit step function) is",
+    "options": [
+      "\\(\\frac{9e^{-3s}}{s(s^2-9)}\\)",
+      "\\(\\frac{e^{-3s}}{s^2(s^2+9)}\\)",
+      "\\(\\frac{9e^{-3s}}{(s^2+9)^2}\\)",
+      "\\(\\frac{9e^{-3s}}{s(s^2+9)}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{9e^{-3s}}{s(s^2+9)}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616062",
+    "question": "\\(\\int_{\\pi/2}^{3\\pi/2} \\cos^2 4x dx =\\)",
+    "options": [
+      "\\(\\pi\\)",
+      "\\(3\\pi\\)",
+      "\\(2\\pi\\)",
+      "\\(\\frac{\\pi}{2}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{\\pi}{2}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616063",
+    "question": "The value of \\(a_3\\) in the Fourier series expansion of the function \\(f(x) = \\begin{cases} 0, & -\\pi < x \\le 0 \\\\ x, & 0 < x \\le \\pi \\end{cases}\\)",
+    "options": [
+      "\\(\\frac{-2}{\\pi}\\)",
+      "\\(\\frac{-2}{3\\pi}\\)",
+      "\\(\\frac{-2}{5\\pi}\\)",
+      "\\(\\frac{-2}{9\\pi}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{-2}{9\\pi}\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616064",
+    "question": "The value of \\(b_1\\) in the Fourier series expansion of \\(f(x) = x \\sin x\\) in \\(0 \\le x \\le 2\\pi\\) is",
+    "options": [
+      "\\(\\pi\\)",
+      "\\(2\\pi\\)",
+      "\\(3\\pi\\)",
+      "\\(4\\pi\\)"
+    ],
+    "correctAnswer": "\\(\\pi\\)",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616065",
+    "question": "The period of the function \\(f(x) = \\sin(\\frac{\\pi x}{3})\\) is",
+    "options": [
+      "\\(\\pi\\)",
+      "\\(\\frac{\\pi}{3}\\)",
+      "\\(\\frac{\\pi}{6}\\)",
+      "6"
+    ],
+    "correctAnswer": "6",
+    "topic": "Mathematics"
+  },
+  {
+    "id": "5069616066",
+    "question": "Velocity (v) of water waves depends on their Wavelength (\\(\\lambda\\)), Density of Water (\\(\\rho\\)) and acceleration due to gravity (g). By the method of dimensional analysis, the relation between these quantities is given by",
+    "options": [
+      "\\(v^2\\) is proportional to \\((\\rho \\lambda g)\\)",
+      "v is proportional to \\(\\lambda g / \\sqrt{\\rho}\\)",
+      "\\(v^2\\) is proportional to \\((\\lambda g)\\)",
+      "v is proportional to \\((\\rho \\lambda g)\\)"
+    ],
+    "correctAnswer": "\\(v^2\\) is proportional to \\((\\lambda g)\\)",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616067",
+    "question": "The Force \\(\\vec{F} = 2\\vec{i} + 3\\vec{j} + 7\\vec{k}\\) newtons (N), acting on an object causes a displacement \\(\\vec{S} = 2\\vec{i} + 3\\vec{j} + 5\\vec{k}\\) meters (m). Then the work done is",
+    "options": [
+      "30 Nm",
+      "40 Nm",
+      "48 Nm",
+      "25 Nm"
+    ],
+    "correctAnswer": "48 Nm",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616068",
+    "question": "\\(\\vec{A} = \\vec{i} + 2\\vec{j} + 3\\vec{k}\\) and \\(\\vec{B} = 3\\vec{i} + 2\\vec{j} + \\vec{k}\\) are the adjacent sides of a parallelogram respectively. The area of the Parallelogram is",
+    "options": [
+      "\\(8\\sqrt{2}\\)",
+      "\\(8\\sqrt{3}\\)",
+      "\\(3\\sqrt{8}\\)",
+      "\\(\\sqrt{8}\\)"
+    ],
+    "correctAnswer": "\\(8\\sqrt{3}\\)",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616069",
+    "question": "A block is placed on a rough floor and a horizontal force 'F' is applied on it. The force of friction 'f' by the floor on the block is measured for different values of 'F'. The graph between the 'f' and 'F' would be",
+    "options": [
+      "The graph is a straight line of slope 45° for all 'F'",
+      "The graph is a straight line parallel to 'F' axis for all 'F'",
+      "The graph is a straight line of slope 45° for small values of 'F' and straight line parallel to 'F' axis for large 'F'",
+      "The graph is exponential with values of 'F'"
+    ],
+    "correctAnswer": "The graph is a straight line of slope 45° for small values of 'F' and straight line parallel to 'F' axis for large 'F'",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616070",
+    "question": "Throughout the flight of a particle in projectile motion",
+    "options": [
+      "The horizontal component of velocity is constant",
+      "The vertical component of velocity is constant",
+      "The horizontal component of velocity decreases",
+      "The horizontal component of velocity is zero"
+    ],
+    "correctAnswer": "The horizontal component of velocity is constant",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616071",
+    "question": "A motor cyclist driving with a speed of 0.6 km/minute goes over a turn of radius of curvature 10 m. His slope with vertical in degrees (take \\(g = 10 m/sec^2\\))",
+    "options": [
+      "0°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "correctAnswer": "45°",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616072",
+    "question": "Two wires of lengths in the ratio 2:3 taken from same material and having the same mass are stretched by same force. Their elongations are in the ratio of",
+    "options": [
+      "2:3",
+      "3:2",
+      "1:2",
+      "4:9"
+    ],
+    "correctAnswer": "4:9",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616073",
+    "question": "Which of the following statements is wrong?",
+    "options": [
+      "Surface Tension of a liquid decreases with increase of temperature",
+      "Surface Tension of a liquid increases or decreases depending on the type of impurities added to the liquid",
+      "Angle of Contact depends on the inclination of the solid rod placed in the liquid",
+      "A drop of oil placed on the surface of water will spread as a thin layer"
+    ],
+    "correctAnswer": "Angle of Contact depends on the inclination of the solid rod placed in the liquid",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616074",
+    "question": "A streamline flow is maintained across the two capillary tubes A and B connected in series. The length of B is twice that of A and the radius of B is half that of A. The pressure across A is P. The pressure across B is",
+    "options": [
+      "4P",
+      "16P",
+      "32P",
+      "P/32"
+    ],
+    "correctAnswer": "32P",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616075",
+    "question": "A body of mass 0.1 kg is thrown vertically upward. At a certain point above the ground, the Potential energy and Kinetic energy of the body are 3.7 J and 6.3 J. The maximum height it reaches is (g=10m/s²)",
+    "options": [
+      "10 m",
+      "4 m",
+      "100 m",
+      "0.7 m"
+    ],
+    "correctAnswer": "10 m",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616076",
+    "question": "Two containers of volumes \\(20m^3\\) and \\(30m^3\\) have gases at Pressures of 40 MPa and 50 MPa. The two containers are connected by a very narrow pipe of negligible volume and the gases are allowed to intermingle. If the temperature remains constant, the final pressure in MPa is",
+    "options": [
+      "46",
+      "40",
+      "50",
+      "30"
+    ],
+    "correctAnswer": "46",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616077",
+    "question": "During an adiabatic process, a mono atomic gas at 27°C is compressed suddenly to 1/8 of its original volume. Then the Final temperature in °C is (The ratio of the two specific heats of gases = 5/3)",
+    "options": [
+      "1160",
+      "887",
+      "927",
+      "88"
+    ],
+    "correctAnswer": "927",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616078",
+    "question": "The time period of a simple pendulum is 3 sec. Its length is made 4 times. Then its time period is",
+    "options": [
+      "3 sec",
+      "4 sec",
+      "6 sec",
+      "1.5 sec"
+    ],
+    "correctAnswer": "6 sec",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616079",
+    "question": "A particle executes Simple Harmonic Motion with an amplitude of 5 cm. When the particle is at 4 cm from the mean position, the magnitude of its velocity in SI units is equal to that of its acceleration. Then, its periodic time in seconds is",
+    "options": [
+      "\\(8\\pi/3\\)",
+      "\\(4\\pi/3\\)",
+      "\\(3\\pi/8\\)",
+      "\\(7\\pi/3\\)"
+    ],
+    "correctAnswer": "\\(8\\pi/3\\)",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616080",
+    "question": "The two equations of Simple Harmonic Motions are \\(Y_1= 12 \\sin(50t +\\pi/2)\\) and \\(Y_2 =12 \\sin(50t +\\pi/3)\\). The phase difference between two motions is",
+    "options": [
+      "\\(\\pi/2\\)",
+      "\\(\\pi/3\\)",
+      "\\(\\pi/6\\)",
+      "\\(\\pi/8\\)"
+    ],
+    "correctAnswer": "\\(\\pi/6\\)",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616081",
+    "question": "Multiple reflections leading to persistence of sound in an auditorium are",
+    "options": [
+      "beats",
+      "echo",
+      "reverberation",
+      "stationary waves"
+    ],
+    "correctAnswer": "reverberation",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616082",
+    "question": "Two sources \\(S_1\\) and \\(S_2\\) are moving with certain velocities. The apparent frequencies observed by a stationary observer are double and half of their original frequencies respectively. If the velocity of sound is v and velocity of wind is zero, then the velocities of two sources respectively are",
+    "options": [
+      "v/2 and 2v",
+      "v and v/2",
+      "3v/2 and 2v",
+      "v/2 and v"
+    ],
+    "correctAnswer": "v/2 and v",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616083",
+    "question": "The Moment of couple acting on a bar magnet kept at an angle 30° to the direction of uniform magnetic field of induction 2 Tesla is equal to",
+    "options": [
+      "Pole Strength of the Magnet",
+      "Length of the Magnet",
+      "Magnetic Flux",
+      "Magnetic Moment of the Magnet"
+    ],
+    "correctAnswer": "Magnetic Moment of the Magnet",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616084",
+    "question": "In a Meter Bridge, \\(R_1\\) and \\(R_2\\) are the resistances connected in the left and right gaps respectively. The bridge is balanced at the balancing point of 60 cm from left. When a resistance of 30 \\(\\Omega\\) is connected in parallel to \\(R_2\\), the balancing point shifted to 90 cm. The values of \\(R_1\\) and \\(R_2\\) respectively are (in \\(\\Omega\\))",
+    "options": [
+      "30 and 50",
+      "200 and 350",
+      "225 and 150",
+      "100 and 75"
+    ],
+    "correctAnswer": "225 and 150",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616085",
+    "question": "When 220 V AC is applied across a step-up transformer, it draws a current of 3A in the secondary. If the number of turns in the primary coil of the transformer is 100 and that of secondary coil is 2000. The output power of the transformer is",
+    "options": [
+      "8800 W",
+      "13200 W",
+      "4400 W",
+      "2200 W"
+    ],
+    "correctAnswer": "13200 W",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616086",
+    "question": "A photon of frequency \\(\\nu\\) is incident on a photosensitive metal surface whose threshold frequency is \\(\\nu_o\\). The kinetic energy of emitted photo electron is",
+    "options": [
+      "\\(h^*\\nu\\)",
+      "\\(h^*\\nu_o\\)",
+      "\\(h^*(\\nu - \\nu_o)\\)",
+      "\\(h^*(\\nu + \\nu_o)\\)"
+    ],
+    "correctAnswer": "\\(h^*(\\nu - \\nu_o)\\)",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616087",
+    "question": "In LASER, the condition of Population Inversion mean",
+    "options": [
+      "The number of atoms in the lower energy state are more than the higher energy state",
+      "The number of atoms in the higher energy state are more than the lower energy state",
+      "The number of atoms in the lower and higher energy states are same",
+      "The number of atoms in higher energy state are zero"
+    ],
+    "correctAnswer": "The number of atoms in the higher energy state are more than the lower energy state",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616088",
+    "question": "In a Graded Index Optical Fibre",
+    "options": [
+      "The Refractive Index of the core remains constant and will be greater than that of the cladding",
+      "The Refractive Index of the core remains constant and will be less than that of the cladding",
+      "The Refractive Indices of both core and cladding remain constant and are equal",
+      "The Refractive Index of the core varies with maximum at the centre and decreases as the radial distance increases from the axis of the core"
+    ],
+    "correctAnswer": "The Refractive Index of the core varies with maximum at the centre and decreases as the radial distance increases from the axis of the core",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616089",
+    "question": "Which of the following statements is correct, if \\(n_e\\) and \\(n_h\\) are the concentrations of the Electrons and Holes respectively",
+    "options": [
+      "In an intrinsic semiconductor, \\(n_e = n_h\\) and both these charge carriers contribute to current equally",
+      "In p-type semiconductor, \\(n_e > n_h\\) and the current due to electrons is more than that of holes",
+      "In n-type semiconductor, \\(n_p > n_e\\) and current due to holes is more than that of electrons",
+      "In an extrinsic semiconductor, \\(n_e = n_h\\) and both these charge carriers contribute to current equally"
+    ],
+    "correctAnswer": "In an intrinsic semiconductor, \\(n_e = n_h\\) and both these charge carriers contribute to current equally",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616090",
+    "question": "The semiconductors used for fabrication of visible LEDs have band gap",
+    "options": [
+      "Close to 1.5 eV",
+      "Close to 1.1 eV",
+      "About 1.0 eV to 1.6 eV",
+      "About 1.8 eV to 3 eV"
+    ],
+    "correctAnswer": "About 1.8 eV to 3 eV",
+    "topic": "Physics"
+  },
+  {
+    "id": "5069616091",
+    "question": "According to Aufbau principle, which orbital is filled immediately after each of the 3p, 4f and 5d?",
+    "options": [
+      "3d, 5s, 5d, 6p",
+      "3d, 4d, 5d, 6p",
+      "4s, 5s, 5d, 6p",
+      "4s, 5s, 5d, 7s"
+    ],
+    "correctAnswer": "4s, 5s, 5d, 6p",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616092",
+    "question": "Which one of the following properties is not due to hydrogen bonding.",
+    "options": [
+      "High boiling point of water",
+      "High viscosity of glycerol",
+      "Solubility of ammonia in water",
+      "Polar nature of halogen acid"
+    ],
+    "correctAnswer": "Polar nature of halogen acid",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616093",
+    "question": "2Mg(s) + \\(O_2\\)(g) \\(\\rightarrow\\) 2MgO(s) In above reaction equation, the oxidation state of magnesium is changed from",
+    "options": [
+      "0 to +2",
+      "0 to -2",
+      "+2 to -1",
+      "+2 to 0"
+    ],
+    "correctAnswer": "0 to +2",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616094",
+    "question": "100 mL of ethanol, whose density is 1.2 g.mL\\(^{-1}\\) is diluted to 1.0 L by addition of distilled water. Molarity of the resultant solution is",
+    "options": [
+      "1.60",
+      "2.60",
+      "0.46",
+      "2.90"
+    ],
+    "correctAnswer": "2.60",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616095",
+    "question": "Among the below options, which is not a characteristic of a colloid",
+    "options": [
+      "Particle size between 10 A° - 1000 A°",
+      "Heterogeneous",
+      "Can be separable by filtration",
+      "Diffuse slowly"
+    ],
+    "correctAnswer": "Can be separable by filtration",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616096",
+    "question": "The correct order of decreasing strength of acids is",
+    "options": [
+      "\\(HClO_4 > H_2SO_4 > HNO_3 > HCl\\)",
+      "\\(H_2SO_4 > HClO_4 > HCl > HNO_3\\)",
+      "\\(HClO_4 > H_2SO_4 > HCl > HNO_3\\)",
+      "\\(HNO_3 > HCl > H_2SO_4 > HClO_4\\)"
+    ],
+    "correctAnswer": "\\(HClO_4 > H_2SO_4 > HCl > HNO_3\\)",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616097",
+    "question": "The solution which can resist change in its pH on the addition of an acid or a base is known as",
+    "options": [
+      "Isotonic solution",
+      "Colloidal solution",
+      "Neutral solution",
+      "Buffer solution"
+    ],
+    "correctAnswer": "Buffer solution",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616098",
+    "question": "The minimum level of a pollutant above which a healthy individual worker is adversely affected on exposure to it for eight hours in a day is called",
+    "options": [
+      "Critical Limit Value",
+      "Toxic Limit Value",
+      "Threshold Limit Value",
+      "Dangerous Limit Value"
+    ],
+    "correctAnswer": "Threshold Limit Value",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616099",
+    "question": "The consequences of global warming are: (A) Increase in average temperature of the earth (B) Melting of Himalayan glaciers (C) Increased Biochemical Oxygen Demand of natural water (D) Eutrophication of water bodies. Choose the correct option.",
+    "options": [
+      "A, D",
+      "A, C",
+      "A, B",
+      "A, B, C"
+    ],
+    "correctAnswer": "A, B",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616100",
+    "question": "The chemicals used for defluoridation of water by Nalgonda Technique are",
+    "options": [
+      "CaO and CaOC\\(l_2\\)",
+      "Alum, CaO and CaOC\\(l_2\\)",
+      "Ca\\(H_2\\), NaOCl and Alum",
+      "NaOCl, NaH and Alum"
+    ],
+    "correctAnswer": "Alum, CaO and CaOC\\(l_2\\)",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616101",
+    "question": "The process which removes non-ionic, ionic, colloidal and organic matter in water is",
+    "options": [
+      "Ion exchange process",
+      "Lime soda process",
+      "Reverse osmosis process",
+      "Zeolite process"
+    ],
+    "correctAnswer": "Reverse osmosis process",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616102",
+    "question": "The set of products that are formed during electrolysis of aqueous solution of KCl between platinum electrodes is",
+    "options": [
+      "HCl and KOH",
+      "KOH and C\\(l_2\\)",
+      "KOH, C\\(l_2\\) and \\(H_2\\)",
+      "K and C\\(l_2\\)"
+    ],
+    "correctAnswer": "KOH, C\\(l_2\\) and \\(H_2\\)",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616103",
+    "question": "When same quantity of electricity is passed through aqueous AgN\\(O_3\\) and \\(H_2\\)S\\(O_4\\) solutions connected in series, 5.04 x 10\\(^{-2}\\) g of \\(H_2\\) is liberated. What is the mass of silver (in grams) deposited? (Eq. Wt. of hydrogen and silver is 1.008 and 108 respectively)",
+    "options": [
+      "54",
+      "0.54",
+      "5.4",
+      "10.8"
+    ],
+    "correctAnswer": "5.4",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616104",
+    "question": "Choose the correct option that differentiates metals from non-metals",
+    "options": [
+      "Metals form acidic oxides, whereas non-metals form basic oxides.",
+      "Metals have a tendency to gain electrons, whereas non-metals have a tendency to lose electrons.",
+      "Metals are generally good conductors of electricity, whereas non-metals are insulators.",
+      "All metals exist in a solid state at room temperature."
+    ],
+    "correctAnswer": "Metals are generally good conductors of electricity, whereas non-metals are insulators.",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616105",
+    "question": "Nichrome is commonly used in heating elements because",
+    "options": [
+      "It has high electrical conductivity",
+      "It has a high melting point and corrosion resistance",
+      "It is lightweight",
+      "It is brittle and hard"
+    ],
+    "correctAnswer": "It has a high melting point and corrosion resistance",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616106",
+    "question": "_________ combinations is used for prevention of corrosion.",
+    "options": [
+      "Phosphorous or Antimony",
+      "Phosphorous or Chlorine",
+      "Antimony or Nitrogen",
+      "Antimony or Sodium"
+    ],
+    "correctAnswer": "Phosphorous or Antimony",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616107",
+    "question": "The process of coating zinc metal over iron to improve corrosion resistance of iron is called",
+    "options": [
+      "Electroplating",
+      "Annealing",
+      "Galvanizing",
+      "Tinning"
+    ],
+    "correctAnswer": "Galvanizing",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616108",
+    "question": "_________ is a cross linked polymer.",
+    "options": [
+      "Bakelite",
+      "LDPE",
+      "Polystyrene",
+      "PVC"
+    ],
+    "correctAnswer": "Bakelite",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616109",
+    "question": "Identify the Biodegradable polymers from the following and choose the correct option. (I) PVC (II) PHBV (III) Polypropylene (IV) Nylon-2-nylon-6",
+    "options": [
+      "I and II",
+      "II and IV",
+      "I and IV",
+      "I, II and III"
+    ],
+    "correctAnswer": "II and IV",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616110",
+    "question": "Calculate the amount of oxygen required for the complete combustion of 1 mole of Methane (C\\(H_4\\)).",
+    "options": [
+      "1 mole",
+      "2 moles",
+      "3 moles",
+      "4 moles"
+    ],
+    "correctAnswer": "2 moles",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616111",
+    "question": "_________ represents the composition of water gas",
+    "options": [
+      "CO + \\(H_2\\)",
+      "C\\(O_2\\) + \\(H_2\\)",
+      "CO + C\\(H_4\\)",
+      "C\\(O_2\\) + C\\(H_4\\)"
+    ],
+    "correctAnswer": "CO + \\(H_2\\)",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616112",
+    "question": "Match the following and choose the correct option. List - I a) Hydrogen electrode b) Standard hydrogen electrode c) Metal-metal ion electrode d) Glass electrode List - II (i) Pt | F\\(e^{3+}\\), F\\(e^{2+}\\) (ii) Fe | F\\(e^{2+}\\) (iii) pH measurement (iv) Pt, \\(H_2\\) (2 bar) | \\(H^+\\) (0.1M) (v) Pt, \\(H_2\\) (1 bar) | \\(H^+\\) (1.0M) (vi) Oxidation electrode",
+    "options": [
+      "a - iii, b - v, c - i, d - vi",
+      "a - v, b - iv, c - ii, d - iii",
+      "a - v, b - iii, c -i, d - vi",
+      "a - iv, b - v, c - ii, d - iii"
+    ],
+    "correctAnswer": "a - iv, b - v, c - ii, d - iii",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616113",
+    "question": "The cell reaction of the galvanic cell Cu(s) | C\\(u^{2+}\\)(aq) || A\\(g^+\\)(aq) | Ag(s) is",
+    "options": [
+      "Ag + C\\(u^{2+}\\) \\(\\rightarrow\\) A\\(g^+\\) + \\(Cu^+\\)",
+      "Ag + C\\(u^{2+}\\) \\(\\rightarrow\\) A\\(g^+\\) + Cu",
+      "Cu + 2A\\(g^+\\) \\(\\rightarrow\\) C\\(u^{2+}\\) + 2Ag",
+      "\\(Cu^{2+}\\) + 2Ag \\(\\rightarrow\\) C\\(u^{2+}\\) + 2A\\(g^+\\)"
+    ],
+    "correctAnswer": "Cu + 2A\\(g^+\\) \\(\\rightarrow\\) C\\(u^{2+}\\) + 2Ag",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616114",
+    "question": "_________ is used to reduce water pollution.",
+    "options": [
+      "Neem",
+      "Watermelon",
+      "Water hyacinth",
+      "People"
+    ],
+    "correctAnswer": "Water hyacinth",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616115",
+    "question": "Which of the following can cause soil pollution",
+    "options": [
+      "DDT",
+      "C\\(O_2\\)",
+      "N\\(O_2\\)",
+      "Nitrogen"
+    ],
+    "correctAnswer": "DDT",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "5069616116",
+    "question": "Drift current in the semiconductors depends upon _________",
+    "options": [
+      "only the electric field",
+      "only the carrier concentration gradient",
+      "both the electric field and the carrier concentration",
+      "both the electric field and the carrier concentration gradient"
+    ],
+    "correctAnswer": "both the electric field and the carrier concentration",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616117",
+    "question": "Which of the following is NOT associated with a P-N junction",
+    "options": [
+      "Junction Capacitance",
+      "Charge Storage Capacitance",
+      "Depletion Capacitance",
+      "Channel Length Modulation"
+    ],
+    "correctAnswer": "Channel Length Modulation",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616118",
+    "question": "In a FET, the relation between the amplification factor (\\(\\mu\\)), dynamic drain resistance (rd), and transconductance (gm) is",
+    "options": [
+      "\\(\\mu\\) = rd / gm",
+      "gm = rd + \\(\\mu\\)",
+      "\\(\\mu\\) = rd * gm",
+      "gm = rd * \\(\\mu\\)"
+    ],
+    "correctAnswer": "\\(\\mu\\) = rd * gm",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616119",
+    "question": "The ratio of change in drain current (\\(\\Delta I_D\\)) to the change in gate-source voltage (\\(\\Delta V_{GS}\\)) is",
+    "options": [
+      "output conductance",
+      "trans conductance",
+      "trans resistance",
+      "output resistance"
+    ],
+    "correctAnswer": "trans conductance",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616120",
+    "question": "The use of coupling capacitor in CE amplifier is",
+    "options": [
+      "to block DC",
+      "to allow low frequency without any attenuation",
+      "to shift Q point",
+      "to allow DC"
+    ],
+    "correctAnswer": "to block DC",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616121",
+    "question": "Which of the following parameters of P-N junction diode increases with temperature.",
+    "options": [
+      "Cut in voltage",
+      "Reverse saturation current",
+      "Ideality factor",
+      "Diode Resistance"
+    ],
+    "correctAnswer": "Reverse saturation current",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616122",
+    "question": "Trans resistance amplifier has",
+    "options": [
+      "high input impedance & low output impedance",
+      "high input impedance & high output impedance",
+      "low input impedance & high output impedance",
+      "low input impedance & low output impedance"
+    ],
+    "correctAnswer": "low input impedance & low output impedance",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616123",
+    "question": "Consider the circuit shown in figure. Assume base-to-emitter voltage \\(V_{BE}\\) = 0.8V and common base current gain (\\(\\alpha\\)) of the transistor is unity. The value of the collector-to-emitter voltage \\(V_{CE}\\) (in volts) is",
+    "options": [
+      "6V",
+      "8V",
+      "10V",
+      "4V"
+    ],
+    "correctAnswer": "6V",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616124",
+    "question": "A transistor has an Ic of 100 mA and \\(I_B\\) of 0.5 mA. What is the value of \\(\\alpha_{dc}\\)?",
+    "options": [
+      "0.565",
+      "0.754",
+      "1.24",
+      "0.995"
+    ],
+    "correctAnswer": "0.995",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616125",
+    "question": "The Peak Inverse Voltage (PIV) of a non-conducting diode in a bridge rectifier is",
+    "options": [
+      "Twice the peak value of the ac input",
+      "Half the peak value of the ac input",
+      "The peak value of the ac input",
+      "Four times the peak value of the ac input"
+    ],
+    "correctAnswer": "The peak value of the ac input",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616126",
+    "question": "For a BJT, the common base current gain \\(a\\) = 0.98 and the collector base junction reverse bias saturation current \\(I_{CO}\\) = 0.6 \\(\\mu\\)A. This BJT is connected in the common emitter mode and operated in the active region with a base drive current \\(I_B\\) = 20 \\(\\mu\\)A. The collector current \\(I_C\\) for this mode of operation is",
+    "options": [
+      "0.98 mA",
+      "0.99 mA",
+      "1.0 mA",
+      "1.01 mA"
+    ],
+    "correctAnswer": "1.01 mA",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616127",
+    "question": "Determine the resistance R required to achieve an output pulse duration of 100 \\(\\mu\\)s in a monostable circuit utilizing a 10 nF capacitor C with a 555 timer.",
+    "options": [
+      "13.3 k\\(\\Omega\\)",
+      "15.9 k\\(\\Omega\\)",
+      "9.09 k\\(\\Omega\\)",
+      "19.14 k\\(\\Omega\\)"
+    ],
+    "correctAnswer": "9.09 k\\(\\Omega\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616128",
+    "question": "Gain in transistor amplifiers decreases at high frequencies due to",
+    "options": [
+      "Short circuit of external coupling capacitors",
+      "Open circuit of internal junction capacitors",
+      "Short circuit of internal junction capacitors",
+      "Open circuit of external coupling capacitors"
+    ],
+    "correctAnswer": "Short circuit of internal junction capacitors",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616129",
+    "question": "The circuit shown in figure represents the",
+    "options": [
+      "Monostable multivibrator",
+      "Astable multivibrator",
+      "Bistable multivibrator",
+      "Feedback Amplifier"
+    ],
+    "correctAnswer": "Astable multivibrator",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616130",
+    "question": "A diode for which you can change the reverse bias, and thus vary the capacitance is called as ________",
+    "options": [
+      "Tunnel diode",
+      "Varactor diode",
+      "Zener diode",
+      "Switching diode"
+    ],
+    "correctAnswer": "Varactor diode",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616131",
+    "question": "The fundamental condition for clamping, if RC is an RC network's time constant and T is the period of the input signal",
+    "options": [
+      "RC << T",
+      "RC >> T",
+      "RC == T",
+      "No such condition"
+    ],
+    "correctAnswer": "RC >> T",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616132",
+    "question": "Given that the pinch-off voltage for an n-channel JFET is -4 volts, determine the Vgs value at which pinch-off occurs when Vgs is -1 volt.",
+    "options": [
+      "3 V",
+      "5 V",
+      "4 V",
+      "1 V"
+    ],
+    "correctAnswer": "3 V",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616133",
+    "question": "Virtual ground concept is valid only for operational amplifier with ________ feedback",
+    "options": [
+      "Positive",
+      "Negative",
+      "Zero",
+      "Positive and Negative"
+    ],
+    "correctAnswer": "Negative",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616134",
+    "question": "Super position theorem is applicable for ________",
+    "options": [
+      "linear and unilateral networks",
+      "nonlinear and unilateral networks",
+      "linear and bilateral networks",
+      "nonlinear and bilateral networks"
+    ],
+    "correctAnswer": "linear and bilateral networks",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616135",
+    "question": "The equivalent resistance of four resistors joined in parallel is 20 \\(\\Omega\\). The currents flowing through them are 0.6 A, 0.3 A, 0.2 A and 0.1 A. The lowest value of resistor is",
+    "options": [
+      "40 \\(\\Omega\\)",
+      "80 \\(\\Omega\\)",
+      "20 \\(\\Omega\\)",
+      "240 \\(\\Omega\\)"
+    ],
+    "correctAnswer": "40 \\(\\Omega\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616136",
+    "question": "The equivalent resistance of the circuit shown in figure is",
+    "options": [
+      "4 \\(\\Omega\\)",
+      "5 \\(\\Omega\\)",
+      "6 \\(\\Omega\\)",
+      "10 \\(\\Omega\\)"
+    ],
+    "correctAnswer": "4 \\(\\Omega\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616137",
+    "question": "A circuit consists of 6 nodes, 9 branches and 3 independent loops. Determine the number of tree branches (b) and links (l) in the graph?",
+    "options": [
+      "b = 4 and l = 5",
+      "b = 5 and l = 3",
+      "b = 3 and l = 6",
+      "b = 5 and l = 4"
+    ],
+    "correctAnswer": "b = 5 and l = 4",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616138",
+    "question": "When a source is delivering maximum power to a load, the efficiency of the circuit",
+    "options": [
+      "is always 50%",
+      "is always 75%",
+      "depends on the circuit parameters",
+      "is always 100%"
+    ],
+    "correctAnswer": "is always 50%",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616139",
+    "question": "An RC high-pass circuit has C = 0.01 \\(\\mu\\)F and cutoff frequency \\(f_c\\) = 15.9 kHz. The R value is",
+    "options": [
+      "4 k\\(\\Omega\\)",
+      "3 k\\(\\Omega\\)",
+      "2 k\\(\\Omega\\)",
+      "1 k\\(\\Omega\\)"
+    ],
+    "correctAnswer": "1 k\\(\\Omega\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616140",
+    "question": "What would be the value of power factor for series RLC circuit under the resonance phenomenon?",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Infinity"
+    ],
+    "correctAnswer": "1",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616141",
+    "question": "A transmission line is terminated with its characteristic impedance. The reflection coefficient, VSWR respectively are ________, ________.",
+    "options": [
+      "1, 1",
+      "-1, 0",
+      "0, 1",
+      "1, 0"
+    ],
+    "correctAnswer": "0, 1",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616142",
+    "question": "Find the equivalent resistance between X and Y in the given circuit.",
+    "options": [
+      "3.33 \\(\\Omega\\)",
+      "2.38 \\(\\Omega\\)",
+      "5.65 \\(\\Omega\\)",
+      "4.34 \\(\\Omega\\)"
+    ],
+    "correctAnswer": "2.38 \\(\\Omega\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616143",
+    "question": "A Radio Frequency (RF) circuit has a transmitting antenna with impedance 50 \\(\\Omega\\) and a receiving antenna with impedance 75 \\(\\Omega\\). If the transmitting antenna receives 1 mW when the receiving antenna acts as the source, what will be the received power when the transmission is reversed?",
+    "options": [
+      "1 mW",
+      "2 mW",
+      "0.5 mW",
+      "0.25 mW"
+    ],
+    "correctAnswer": "1 mW",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616144",
+    "question": "Find the characteristic impedance (\\(Z_0\\)) of a loss less transmission line with the following parameters: Inductance per unit length: L= 0.25 \\(\\mu\\)H/m, Capacitance per unit length: C = 100 pF/m.",
+    "options": [
+      "100 \\(\\Omega\\)",
+      "50 \\(\\Omega\\)",
+      "25 \\(\\Omega\\)",
+      "200 \\(\\Omega\\)"
+    ],
+    "correctAnswer": "50 \\(\\Omega\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616145",
+    "question": "A 50 \\(\\Omega\\) transmission line is terminated with a load impedance of \\(Z_0\\) and standing wave ratio (SWR) equal to 4. Find the value of \\(Z_0\\)?",
+    "options": [
+      "50 \\(\\Omega\\)",
+      "100 \\(\\Omega\\)",
+      "200 \\(\\Omega\\)",
+      "25 \\(\\Omega\\)"
+    ],
+    "correctAnswer": "200 \\(\\Omega\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616146",
+    "question": "Match List I with List II and choose the correct option.",
+    "options": [
+      "i - a, ii - c, iii - b, iv - d, v - e",
+      "i - b, ii - e, iii - c, iv - d, v - a",
+      "i - c, ii - b, iii - e, iv - d, v - a",
+      "i - a, ii - b, iii - c, iv - d, v - e"
+    ],
+    "correctAnswer": "i - a, ii - b, iii - c, iv - d, v - e",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616147",
+    "question": "Choose the correct option A. Photodiodes and light-dependent resistors are both light-sensitive devices. B. Photodiodes are faster and more accurate compared to LDRs C. Photo diode converts light energy into electric energy D. LDR changes resistance based on light intensity",
+    "options": [
+      "A, B, C and D are true",
+      "Only A and B are true",
+      "Only C and D are true",
+      "Only A, B and C are true"
+    ],
+    "correctAnswer": "A, B, C and D are true",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616148",
+    "question": "Given below is a list of transducers. Identify the active transducers. A. LVDT (Linear Variable Differential Transformer) B. RTD (Resistance Temperature Detector) C. Thermocouple D. Strain gauge",
+    "options": [
+      "Only A is correct",
+      "Both A and B are correct",
+      "Only C is correct",
+      "Both A and D are correct"
+    ],
+    "correctAnswer": "Only C is correct",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616149",
+    "question": "In one of the types of electric welding, ________ is used to generate intense heat and melt metals together, often requiring filler material.",
+    "options": [
+      "Electric arc",
+      "Resistance",
+      "Friction",
+      "Induction heating"
+    ],
+    "correctAnswer": "Electric arc",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616150",
+    "question": "Types of resistive welding includes _________.",
+    "options": [
+      "Spot welding, seam welding, and projection welding",
+      "MIG welding (Metal Inert Gas welding)",
+      "TIG welding (Tungsten Inert Gas welding)",
+      "Arc welding"
+    ],
+    "correctAnswer": "Spot welding, seam welding, and projection welding",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616151",
+    "question": "What type of programming language is typically used to program a PLC?",
+    "options": [
+      "C++",
+      "Java",
+      "Ladder Logic",
+      "Python"
+    ],
+    "correctAnswer": "Ladder Logic",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616152",
+    "question": "Given Seebeck coefficient S is 40 \\(\\mu\\)V/°C, hot junction temperature is 200°C and cold junction temperature is 25°C, then the thermocouple voltage is",
+    "options": [
+      "1 mV",
+      "3.5 mV",
+      "1.5 mV",
+      "7 mV"
+    ],
+    "correctAnswer": "7 mV",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616153",
+    "question": "What is the overall gain (C(s)/R(s)) of the closed loop system given below?",
+    "options": [
+      "\\(\\frac{G(s)}{1 - G(s)H(s)}\\)",
+      "\\(\\frac{G(s)}{1 + G(s)H(s)}\\)",
+      "\\(\\frac{H(s)}{1 + G(s)H(s)}\\)",
+      "\\(\\frac{H(s)}{1 - G(s)H(s)}\\)"
+    ],
+    "correctAnswer": "\\(\\frac{G(s)}{1 + G(s)H(s)}\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616154",
+    "question": "The range of frequencies used for dielectric heating and induction heating are ________ respectively.",
+    "options": [
+      "10 MHz to 50 MHz and 100 kHz to 500 kHz",
+      "10 MHz to 50 MHz and 100 MHz to 500 MHz",
+      "10 kHz to 50 kHz and 100 kHz to 500 kHz",
+      "10 kHz to 50 kHz and 100 MHz to 500 MHz"
+    ],
+    "correctAnswer": "10 MHz to 50 MHz and 100 kHz to 500 kHz",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616155",
+    "question": "As a result of introduction of negative feedback in a control system, which of the following will not decrease?",
+    "options": [
+      "Bandwidth",
+      "Overall gain",
+      "Distortion",
+      "Instability"
+    ],
+    "correctAnswer": "Bandwidth",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616156",
+    "question": "A 400 W carrier is amplitude modulated to a depth of 80%. What is the total transmitted power?",
+    "options": [
+      "512 W",
+      "528 W",
+      "640 W",
+      "720 W"
+    ],
+    "correctAnswer": "528 W",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616157",
+    "question": "A superheterodyne receiver has an RF input of 10 MHz and an Intermediate Frequency (IF) of 455 kHz. If image frequency rejection is required, what should be the minimum image frequency?",
+    "options": [
+      "9.09 MHz",
+      "10.91 MHz",
+      "10.455 MHz",
+      "9.545 MHz"
+    ],
+    "correctAnswer": "10.91 MHz",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616158",
+    "question": "A radar system transmits a signal at 10 GHz. If the target is moving at 200 m/s, what is the Doppler frequency shift? Assume speed of light to be 3 x \\(10^8\\) m/s.",
+    "options": [
+      "10 kHz",
+      "13.33 kHz",
+      "16.67 kHz",
+      "20 kHz"
+    ],
+    "correctAnswer": "13.33 kHz",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616159",
+    "question": "A 10 kHz modulating signal frequency produces a maximum frequency deviation of 50 kHz in an FM signal. What is the modulation index?",
+    "options": [
+      "5",
+      "2",
+      "10",
+      "20"
+    ],
+    "correctAnswer": "5",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616160",
+    "question": "In Pulse Code Modulation (PCM), quantization noise is reduced by",
+    "options": [
+      "Increasing the sampling rate",
+      "Increasing the number of quantization levels",
+      "Using larger bandwidth",
+      "Using Pulse Amplitude Modulation"
+    ],
+    "correctAnswer": "Increasing the number of quantization levels",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616161",
+    "question": "The threshold electric field required to trigger Gunn oscillations in GaAs is typically around",
+    "options": [
+      "3.2 kV/cm",
+      "1 kV/cm",
+      "10 kV/cm",
+      "100 kV/cm"
+    ],
+    "correctAnswer": "3.2 kV/cm",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616162",
+    "question": "If bandwidth is of primary concern, which one of the following schemes is generally not considered?",
+    "options": [
+      "PSK",
+      "ASK",
+      "DPSK",
+      "FSK"
+    ],
+    "correctAnswer": "FSK",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616163",
+    "question": "A rectangular waveguide is 5.1 cm by 2.4 cm (inside measurements). The cutoff frequency of the dominant mode will be nearly",
+    "options": [
+      "5.38 GHz",
+      "4.54 GHz",
+      "3.78 GHz",
+      "2.94 GHz"
+    ],
+    "correctAnswer": "2.94 GHz",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616164",
+    "question": "Which of the following is a primary advantage of a TWT (Travelling Wave Tube) over a klystron amplifier?",
+    "options": [
+      "Higher efficiency",
+      "Wider bandwidth",
+      "Smaller size and simpler design",
+      "Works at low frequencies"
+    ],
+    "correctAnswer": "Wider bandwidth",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616165",
+    "question": "A Delta Modulation system has a step size of 1V and operates at 10 kHz. What is the maximum slope it can track?",
+    "options": [
+      "10 V/ms",
+      "5 V/ms",
+      "1 V/ms",
+      "100 V/ms"
+    ],
+    "correctAnswer": "10 V/ms",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616166",
+    "question": "A PCM system samples an analog signal with a maximum frequency of 10 kHz. If each sample is quantized into 256 levels, what is the minimum transmission bit rate?",
+    "options": [
+      "10 kbps",
+      "20 kbps",
+      "80 kbps",
+      "160 kbps"
+    ],
+    "correctAnswer": "160 kbps",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616167",
+    "question": "A magnetron is commonly used in which application?",
+    "options": [
+      "Radar",
+      "Optical fiber communication",
+      "TV Broadcasting",
+      "VHF communications"
+    ],
+    "correctAnswer": "Radar",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616168",
+    "question": "The purpose of pre-emphasis in FM transmission is",
+    "options": [
+      "To reduce bandwidth",
+      "To suppress noise at low frequencies",
+      "To amplify high-frequency components",
+      "To avoid phase distortion"
+    ],
+    "correctAnswer": "To amplify high-frequency components",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616169",
+    "question": "A satellite transmits at 6 GHz and receives at 4 GHz. What is the transponder bandwidth if the received signal has a 50 MHz bandwidth?",
+    "options": [
+      "50 MHz",
+      "100 MHz",
+      "500 MHz",
+      "1 GHz"
+    ],
+    "correctAnswer": "50 MHz",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616170",
+    "question": "A 1 MHz carrier is amplitude-modulated by a 10 kHz signal. What are the sideband frequencies?",
+    "options": [
+      "990 kHz and 1010 kHz",
+      "900 kHz and 1100 kHz",
+      "995 kHz and 1005 kHz",
+      "500 kHz and 1500 kHz"
+    ],
+    "correctAnswer": "990 kHz and 1010 kHz",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616171",
+    "question": "A microwave semiconductor device is",
+    "options": [
+      "Klystron",
+      "GUNN Diode",
+      "Magnetron",
+      "TWT"
+    ],
+    "correctAnswer": "GUNN Diode",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616172",
+    "question": "The term in satellite communication refers to the closest point of the satellite's orbit to Earth is",
+    "options": [
+      "Perigee",
+      "Apogee",
+      "Azimuth",
+      "Elevation"
+    ],
+    "correctAnswer": "Perigee",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616173",
+    "question": "In a TDM system, 4 signals each band limited to 3 kHz are multiplexed. What is the minimum sampling rate per signal?",
+    "options": [
+      "3 kHz",
+      "6 kHz",
+      "12 kHz",
+      "24 kHz"
+    ],
+    "correctAnswer": "6 kHz",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616174",
+    "question": "In a BPSK system, the phase difference between '0' and '1' is",
+    "options": [
+      "0 degree",
+      "90 degrees",
+      "180 degrees",
+      "270 degrees"
+    ],
+    "correctAnswer": "180 degrees",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616175",
+    "question": "The primary purpose of modulation in communication systems is",
+    "options": [
+      "To reduce antenna size",
+      "To increase signal power",
+      "To convert from digital to analog",
+      "To remove channel noise"
+    ],
+    "correctAnswer": "To reduce antenna size",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616176",
+    "question": "The primary function of a radar duplexer is",
+    "options": [
+      "Amplifies received signals",
+      "Separates transmitted and received signals",
+      "Detects frequency shifts",
+      "Reduces noise"
+    ],
+    "correctAnswer": "Separates transmitted and received signals",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616177",
+    "question": "A radar transmits pulses at 5 GHz. If the pulse round-trip time is 40 \\(\\mu\\)s, what is the target distance?",
+    "options": [
+      "3 km",
+      "6 km",
+      "12 km",
+      "24 km"
+    ],
+    "correctAnswer": "6 km",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616178",
+    "question": "RZ and NRZ refers to",
+    "options": [
+      "AM and FM waveforms",
+      "Digital multiplexing techniques",
+      "Line coding schemes",
+      "Pulse shaping filters"
+    ],
+    "correctAnswer": "Line coding schemes",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616179",
+    "question": "For a 16-QAM modulation scheme, how many bits are transmitted per symbol?",
+    "options": [
+      "2 bits",
+      "3 bits",
+      "4 bits",
+      "8 bits"
+    ],
+    "correctAnswer": "4 bits",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616180",
+    "question": "A 64-QAM system is required to provide a data rate of 24 Mbps. What must the symbol rate be?",
+    "options": [
+      "2 Msymbol/s",
+      "3 Msymbol/s",
+      "4 Msymbol/s",
+      "6 Msymbol/s"
+    ],
+    "correctAnswer": "4 Msymbol/s",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616181",
+    "question": "What is the equivalent Gray code for the binary code (1100 1010)\\(_{2}\\)?",
+    "options": [
+      "11110111",
+      "10101110",
+      "11101111",
+      "10101111"
+    ],
+    "correctAnswer": "10101111",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616182",
+    "question": "A bulb in a staircase has two switches, one switch is on the ground floor and the other one on the first floor. The bulb can be turned ON and also can be turned OFF by any one of the switches irrespective of the state of the other switch. The logic of switching of the bulb resembles",
+    "options": [
+      "An OR gate",
+      "An XOR gate",
+      "An AND gate",
+      "A NAND gate"
+    ],
+    "correctAnswer": "An XOR gate",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616183",
+    "question": "The Boolean expression \\(A + \\bar{A}B\\) is same as",
+    "options": [
+      "\\(A + B\\)",
+      "\\(\\bar{A} + B\\)",
+      "AB",
+      "\\(\\bar{A}\\bar{B}\\)"
+    ],
+    "correctAnswer": "\\(A + B\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616184",
+    "question": "Which logic families among the following are the fastest and slowest respectively. A. CMOS B. ECL C. DTL D. TTL",
+    "options": [
+      "A and B respectively",
+      "C and B respectively",
+      "D and A respectively",
+      "B and A respectively"
+    ],
+    "correctAnswer": "B and A respectively",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616185",
+    "question": "A full adder can be implemented by using the blocks indicated with question marks. They are:",
+    "options": [
+      "Two Half adders and an OR gate",
+      "Two Half adders and an AND gate",
+      "Two Half subtractors and an OR gate",
+      "Two Half subtractors and an AND gate"
+    ],
+    "correctAnswer": "Two Half adders and an OR gate",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616186",
+    "question": "What is the Boolean function Y from the multiplexer shown below?",
+    "options": [
+      "SI",
+      "\\(\\bar{S}I\\)",
+      "\\(\\bar{S}\\bar{I}\\)",
+      "\\(S\\bar{I}\\)"
+    ],
+    "correctAnswer": "SI",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616187",
+    "question": "A/An ________ is a ________ circuit that converts coded inputs into coded outputs, where the input and output codes are different.",
+    "options": [
+      "Encoder, sequential",
+      "Decoder, combinational",
+      "Decoder, sequential",
+      "Counter, combinational"
+    ],
+    "correctAnswer": "Decoder, combinational",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616188",
+    "question": "Choose the correct characteristic equation of a JK flip-flop.",
+    "options": [
+      "\\(Q_{n+1} = J'Q_n' + K'Q_n\\)",
+      "\\(Q_{n+1} = JQ_n' + KQ_n\\)",
+      "\\(Q_{n+1} = JQ_n' + K'Q_n\\)",
+      "\\(Q_{n+1} = J'Q_n' + KQ_n\\)"
+    ],
+    "correctAnswer": "\\(Q_{n+1} = JQ_n' + K'Q_n\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616189",
+    "question": "Universal shift register is capable of doing which of the following functions? A. Shift Left (L) B. Shift Right (R) C. No change (Hold) D. Parallel Load (Load)",
+    "options": [
+      "A and B only",
+      "C and D only",
+      "A and C only",
+      "A, B, C and D"
+    ],
+    "correctAnswer": "A, B, C and D",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616190",
+    "question": "The largest binary number that can be represented by a 16-bit counter has a decimal equivalent of ________.",
+    "options": [
+      "65536",
+      "16",
+      "15",
+      "65535"
+    ],
+    "correctAnswer": "65535",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616191",
+    "question": "SRAM cell consists of ________, whereas a DRAM cell is made up of ________.",
+    "options": [
+      "multiple transistors; multiple capacitors",
+      "multiple transistors; single transistor and a capacitor",
+      "single transistor; single transistor and a capacitor",
+      "single transistor and a capacitor; multiple transistors"
+    ],
+    "correctAnswer": "multiple transistors; single transistor and a capacitor",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616192",
+    "question": "Given below is a 4-bit weighted resistor DAC, the output analog voltage for digital input \"1000\" is ________. (Assume voltage \\(V_D, V_C, V_B, V_A\\) of +5V for '1' and 0V for '0')",
+    "options": [
+      "-1 V",
+      "+1 V",
+      "+5 V",
+      "-5 V"
+    ],
+    "correctAnswer": "-5 V",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616193",
+    "question": "Select the correct option from the features of 8051 microcontroller with respect to the on-chip ROM, RAM, Timers and I/O ports respectively",
+    "options": [
+      "4 KB of on chip ROM",
+      "3 I/O ports",
+      "4 Timers",
+      "512 bytes of RAM"
+    ],
+    "correctAnswer": "4 KB of on chip ROM",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616194",
+    "question": "If the crystal connected to an 8051 microcontroller is of 10 MHz, the length of its machine cycle will be",
+    "options": [
+      "1.2 microseconds",
+      "1.4 microseconds",
+      "1.0 microseconds",
+      "1.6 microseconds"
+    ],
+    "correctAnswer": "1.2 microseconds",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616195",
+    "question": "The default interrupt priority in 8051 is",
+    "options": [
+      "INT0 > TF0 > RI + TI> INT1 > TF1",
+      "INT1> TF1 > RI + TI> INT0 > TF0",
+      "INT0 > TF0 > INT1 > TF1 > RI + TI",
+      "INT1> TF1 > INT0 > TF0 > RI + TI"
+    ],
+    "correctAnswer": "INT0 > TF0 > INT1 > TF1 > RI + TI",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616196",
+    "question": "After executing the following instructions, the status of the carry flag (CY), auxiliary carry flag (AC) and parity flag (P) is MOV A, #9CH ADD A, #64H",
+    "options": [
+      "CY=0, AC=0, P=0",
+      "CY=1, AC=1, P=0",
+      "CY=0, AC=1, P=0",
+      "CY=1, AC=1, P=1"
+    ],
+    "correctAnswer": "CY=1, AC=1, P=0",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616197",
+    "question": "How many times the instruction CPL A is executed in the following program of an 8051? MOV A, #F0H MOV R1, #60 NEXT: MOV R6, #10H AGAIN: CPL A DJNZ R6, AGAIN DJNZ R1, NEXT",
+    "options": [
+      "600 times",
+      "900 times",
+      "690 times",
+      "960 times"
+    ],
+    "correctAnswer": "600 times",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616198",
+    "question": "In 8257, the pin that is used to write data to the addressed memory location, during DMA write operation is",
+    "options": [
+      "\\(\\overline{AEN}\\)",
+      "\\(\\overline{MEMR}\\)",
+      "\\(\\overline{MEMW}\\)",
+      "\\(\\overline{IOW}\\)"
+    ],
+    "correctAnswer": "\\(\\overline{MEMW}\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616199",
+    "question": "Which port of the 8255 PPI is capable of performing the handshaking function with the interfaced devices?",
+    "options": [
+      "Port A",
+      "Port B",
+      "Port C",
+      "IO Port"
+    ],
+    "correctAnswer": "Port C",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616200",
+    "question": "In 8251A, the pin that controls the rate at which the character is to be transmitted is",
+    "options": [
+      "\\(\\overline{CLK}\\)",
+      "\\(\\overline{RxC}\\)",
+      "\\(\\overline{TxC}\\)",
+      "\\(\\overline{TxE}\\)"
+    ],
+    "correctAnswer": "\\(\\overline{TxC}\\)",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616201",
+    "question": "The command for turning off the display and turning off the cursor in a 16*2 LCD display is",
+    "options": [
+      "0CH",
+      "08H",
+      "0EH",
+      "8DH"
+    ],
+    "correctAnswer": "08H",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616202",
+    "question": "Aspect ratio can be defined as the ratio of width to height of the picture frame. For television, it is standardized as _________.",
+    "options": [
+      "4:3",
+      "3:4",
+      "3:5",
+      "5:3"
+    ],
+    "correctAnswer": "4:3",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616203",
+    "question": "Composite video signal consists of A. camera signal B. blanking pulses C. synchronizing pulse D. camera signal and blanking pulses",
+    "options": [
+      "Only A",
+      "Only B",
+      "Both C and D",
+      "D only"
+    ],
+    "correctAnswer": "Both C and D",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616204",
+    "question": "NTSC is one of the various TV broadcasting standards. It stands for",
+    "options": [
+      "National Television Standard Committee",
+      "National Television System Committee",
+      "National Television System Consortium",
+      "National Telescope Standard Committee"
+    ],
+    "correctAnswer": "National Television System Committee",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616205",
+    "question": "Various steps in DTH system are given below. Choose the correct sequence: A. Uplink center receives TV programs from content providers B. Signal is compressed, encrypted, and sent to a geostationary satellite. C. Satellite amplifies and retransmits the signal back to Earth. D. Dish antenna at the consumer's home receives the signal and sends to Set-Top Box (STB). E. STB decrypts, decompresses, and converts the signal into TV channels.",
+    "options": [
+      "B, C, A, D, E",
+      "A, B, C, E, D",
+      "E, C, D, B, A",
+      "A, B, C, D, E"
+    ],
+    "correctAnswer": "A, B, C, D, E",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616206",
+    "question": "Phase Alternating Line (PAL) is a colour encoding system for analog TV. It's picture is made up of ________ interlaced lines, displayed at a rate of ________ frames per second in most countries.",
+    "options": [
+      "625, 25",
+      "25, 625",
+      "5, 25",
+      "25, 125"
+    ],
+    "correctAnswer": "625, 25",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616207",
+    "question": "Comparing HDTV and Smart TV, select the correct option. A. A high-definition television supports HD resolutions like 720p, 1080p, or 4K. B. Smart TV has built-in internet connectivity, apps for streaming, browsing, etc. C. A HDTV must and should support Wi-Fi, an operating system and ethernet D. HDTV mandatorily requires external devices like Firestick, Chromecast, set-top box for normal TV functionality",
+    "options": [
+      "Both A and B",
+      "Both A and C",
+      "Both A and D",
+      "Both C and B"
+    ],
+    "correctAnswer": "Both A and B",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616208",
+    "question": "_________ network type covers multiple locations spanning over a large geographic area.",
+    "options": [
+      "LAN",
+      "WAN",
+      "MAN",
+      "PAN"
+    ],
+    "correctAnswer": "WAN",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616209",
+    "question": "Which of the following network topologies are widely used? A) Bus B) Lan C) Mesh D) Pan E) Tree",
+    "options": [
+      "A, B, C",
+      "A, B, D",
+      "B, D",
+      "A, C, E"
+    ],
+    "correctAnswer": "A, C, E",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616210",
+    "question": "In wired transmission, ________ are the widely used physical media.",
+    "options": [
+      "Infrared, Twisted Pair, Coaxial Cable",
+      "Copper Wires, High frequency Radio, Coaxial Cable",
+      "Copper Wires, Optical Fiber, Coaxial Cable",
+      "Infrared, Laser, Coaxial Cable"
+    ],
+    "correctAnswer": "Copper Wires, Optical Fiber, Coaxial Cable",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616211",
+    "question": "_________ and _________ are the two types of data switching techniques employed in network services.",
+    "options": [
+      "Circuit, Packet",
+      "Transport, Network",
+      "Data Link, Session",
+      "Application, Presentation"
+    ],
+    "correctAnswer": "Circuit, Packet",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616212",
+    "question": "_________ and _________ are used as LAN components and Internetwork connecting devices respectively.",
+    "options": [
+      "Hub, Repeater, Router and Gateway, bridge",
+      "Hub, Repeater, Bridge and Router, Gateway",
+      "Hub, Switch, Router and Repeater, Gateway",
+      "Hub, Switch, Gateway and bridge, router"
+    ],
+    "correctAnswer": "Hub, Repeater, Bridge and Router, Gateway",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616213",
+    "question": "The FTP (File Transfer Protocol) uses _________ port numbers.",
+    "options": [
+      "80 and 443",
+      "23 and 24",
+      "25 and 26",
+      "20 and 21"
+    ],
+    "correctAnswer": "20 and 21",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616214",
+    "question": "The channel capacity (C) of a communication channel is defined as",
+    "options": [
+      "The maximum amount of data that can be transmitted through the channel",
+      "The maximum amount of data rate supported by a channel",
+      "The minimum amount of data that can be transmitted through the channel",
+      "The minimum amount of data rate supported by a channel"
+    ],
+    "correctAnswer": "The maximum amount of data rate supported by a channel",
+    "topic": "Electronics and Communication Engineering"
+  },
+  {
+    "id": "5069616215",
+    "question": "Bluetooth technology is also known as _________.",
+    "options": [
+      "Wired LAN",
+      "Wired PAN",
+      "Wireless PAN",
+      "Wireless LAN"
+    ],
+    "correctAnswer": "Wireless PAN",
+    "topic": "Electronics and Communication Engineering"
+  }
+]
