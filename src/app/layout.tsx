@@ -27,10 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${splineSans.variable} h-full`} suppressHydrationWarning>
-      <body className="font-body antialiased bg-[#111714] text-white">
+      <body className="font-body antialiased bg-background text-foreground">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

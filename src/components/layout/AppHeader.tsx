@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Menu, Rocket } from "lucide-react";
 import { useState, useEffect } from 'react';
+import { ThemeToggle } from "./ThemeToggle";
 
 const DiamondIcon = () => (
     <svg className="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -30,39 +31,47 @@ export function AppHeader() {
   ];
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-white/10 px-4 md:px-10 py-5">
-        <Link href="/" className="flex items-center gap-3 text-white">
+    <header className="flex items-center justify-between whitespace-nowrap border-b px-4 md:px-10 py-5">
+        <Link href="/" className="flex items-center gap-3">
             <DiamondIcon />
-            <h2 className="hidden sm:block text-white text-xl font-bold leading-tight tracking-[-0.015em]">Diploma Prep Hub</h2>
+            <h2 className="hidden sm:block text-xl font-bold leading-tight tracking-[-0.015em]">Diploma Prep Hub</h2>
         </Link>
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             {navLinks.map(link => (
-                <Link key={link.href} href={link.href} className="hover:text-white transition-colors">
+                <Link key={link.href} href={link.href} className="hover:text-foreground transition-colors">
                     {link.label}
                 </Link>
             ))}
         </nav>
-        <div className="lg:hidden flex items-center">
-             <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-white">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Open menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-full max-w-xs bg-[#111714] text-white flex flex-col p-0 border-l-white/10">
-                <SheetHeader className="p-4 border-b border-white/10">
-                  <SheetTitle className="text-left text-2xl font-bold text-white">Menu</SheetTitle>
-                </SheetHeader>
-                <div className="flex flex-col space-y-2 pt-4 flex-grow p-4">
-                  {navLinks.map((link) => (
-                    <Link key={link.href} href={link.href} passHref>
-                       <Button variant="ghost" className="w-full justify-start text-lg text-white/80 hover:text-white">{link.label}</Button>
-                    </Link>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
+        <div className="flex items-center gap-4">
+            <div className="hidden lg:block">
+                {isMounted && <ThemeToggle />}
+            </div>
+            <div className="lg:hidden flex items-center">
+                <Sheet>
+                <SheetTrigger asChild>
+                    <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Open menu</span>
+                    </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-full max-w-xs bg-background flex flex-col p-0">
+                    <SheetHeader className="p-4 border-b">
+                    <SheetTitle className="text-left text-2xl font-bold">Menu</SheetTitle>
+                    </SheetHeader>
+                    <div className="flex flex-col space-y-2 pt-4 flex-grow p-4">
+                    {navLinks.map((link) => (
+                        <Link key={link.href} href={link.href} passHref>
+                        <Button variant="ghost" className="w-full justify-start text-lg text-muted-foreground hover:text-foreground">{link.label}</Button>
+                        </Link>
+                    ))}
+                    </div>
+                     <div className="p-4 border-t">
+                        {isMounted && <ThemeToggle />}
+                    </div>
+                </SheetContent>
+                </Sheet>
+            </div>
         </div>
     </header>
   )
