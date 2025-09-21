@@ -7,7 +7,7 @@ import { JoinCommunity } from "@/components/layout/JoinCommunity";
 
 export default function HomePage() {
   return (
-    <div className="relative flex size-full min-h-screen flex-col bg-[#111714] group/design-root overflow-x-hidden">
+    <div className="relative flex size-full min-h-screen flex-col bg-background group/design-root overflow-x-hidden">
         <div className="layout-container flex h-full grow flex-col">
             <AppHeader />
             <main className="flex-1">

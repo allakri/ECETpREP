@@ -22,21 +22,21 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-28 bg-card">
         <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">Your Path to Success with Diploma Prep Hub</h2>
-                <p className="mt-4 text-lg text-white/60">We provide the tools and support you need to excel in your exam and secure your engineering degree.</p>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Your Path to Success with Diploma Prep Hub</h2>
+                <p className="mt-4 text-lg text-muted-foreground">We provide the tools and support you need to excel in your exam and secure your engineering degree.</p>
             </div>
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
                  {features.map((feature) => (
-                    <div key={feature.name} className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                    <div key={feature.name} className="flex flex-col gap-4 rounded-2xl border bg-background p-8 transition-all duration-300 hover:shadow-lg">
                         <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
                             <feature.icon className="text-3xl" />
                         </div>
                         <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold text-white">{feature.name}</h3>
-                            <p className="text-white/60">{feature.description}</p>
+                            <h3 className="text-xl font-bold text-foreground">{feature.name}</h3>
+                            <p className="text-muted-foreground">{feature.description}</p>
                         </div>
                     </div>
                 ))}

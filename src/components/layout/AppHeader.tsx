@@ -31,10 +31,10 @@ export function AppHeader() {
   ];
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b px-4 md:px-10 py-5">
+    <header className="flex items-center justify-between whitespace-nowrap border-b bg-card px-4 md:px-10 py-5">
         <Link href="/" className="flex items-center gap-3">
             <DiamondIcon />
-            <h2 className="hidden sm:block text-xl font-bold leading-tight tracking-[-0.015em]">Diploma Prep Hub</h2>
+            <h2 className="hidden sm:block text-xl font-bold leading-tight tracking-[-0.015em] text-foreground">Diploma Prep Hub</h2>
         </Link>
         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             {navLinks.map(link => (
@@ -48,6 +48,7 @@ export function AppHeader() {
                 {isMounted && <ThemeToggle />}
             </div>
             <div className="lg:hidden flex items-center">
+                 {isMounted && <ThemeToggle />}
                 <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="ghost" size="icon">
@@ -65,9 +66,6 @@ export function AppHeader() {
                         <Button variant="ghost" className="w-full justify-start text-lg text-muted-foreground hover:text-foreground">{link.label}</Button>
                         </Link>
                     ))}
-                    </div>
-                     <div className="p-4 border-t">
-                        {isMounted && <ThemeToggle />}
                     </div>
                 </SheetContent>
                 </Sheet>
