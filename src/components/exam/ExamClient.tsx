@@ -35,6 +35,18 @@ const slugToFolderMap: Record<string, string> = {
     'bsc-mathematics': 'BSCMATHS',
 };
 
+// Shuffle function to randomize question order
+function shuffleArray(array: Question[]): Question[] {
+  return array
+    .map(q => ({ ...q, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(q => { 
+        const newQ = { ...q };
+        delete (newQ as any).sort; 
+        return newQ; 
+    });
+}
+
 
 export default function ExamClient() {
   const router = useRouter();
@@ -105,26 +117,30 @@ export default function ExamClient() {
         const offlineTestKey = searchParams.get('offlineTestKey');
         const examBoard = searchParams.get('examBoard');
 
+        let loadedQuestions: Question[] = [];
+
         if (customExamKey) {
             const customQuestionsStr = sessionStorage.getItem(customExamKey);
             if (customQuestionsStr) {
-                setQuestions(JSON.parse(customQuestionsStr));
+                loadedQuestions = JSON.parse(customQuestionsStr);
                 setExamName(sessionStorage.getItem('customExamName') || 'AI Custom Test');
                 sessionStorage.removeItem(customExamKey);
                 sessionStorage.removeItem('customExamName');
             } else {
                  toast({ title: 'Error', description: 'Custom exam data not found.', variant: 'destructive' });
                  router.push('/exams');
+                 return;
             }
         } else if (offlineTestKey) {
              const offlineDataRaw = localStorage.getItem(offlineTestKey);
              if (offlineDataRaw) {
                  const offlineData = JSON.parse(offlineDataRaw);
-                 setQuestions(offlineData.questions);
+                 loadedQuestions = offlineData.questions;
                  setExamName(`${offlineData.examName} - ${offlineData.year} (Offline)`);
              } else {
                  toast({ title: 'Error', description: 'Offline exam data not found.', variant: 'destructive' });
                  router.push('/exams/offline');
+                 return;
              }
         } else if (examSlug && year && examBoard) {
             setExamName(searchParams.get('examName') || 'ECET Exam');
@@ -134,16 +150,22 @@ export default function ExamClient() {
                 const filePath = `/datasets/${examBoardFolder}/${folderName}/${year}.json`;
                 const response = await fetch(filePath);
                 if (!response.ok) throw new Error(`Failed to load questions from ${filePath}. Status: ${response.status}`);
-                const data = await response.json();
-                setQuestions(data);
+                loadedQuestions = await response.json();
             } catch (error) {
                 console.error(error);
                 toast({ title: 'Error Loading Questions', description: 'Could not load the question paper. It might not be available yet.', variant: 'destructive' });
                 router.push('/exams');
+                return;
             }
         } else {
             toast({ title: 'Error', description: 'Invalid exam parameters. Please select an exam again.', variant: 'destructive' });
             router.push('/exams');
+            return;
+        }
+
+        // Shuffle the loaded questions before setting state
+        if (loadedQuestions.length > 0) {
+            setQuestions(shuffleArray(loadedQuestions));
         }
     }
 
@@ -215,7 +237,7 @@ export default function ExamClient() {
     return (
         <div className="flex h-screen w-full items-center justify-center bg-background">
             <Loader2 className="h-8 w-8 animate-spin text-primary" />
-            <p className="ml-4 text-lg">Loading Question Paper...</p>
+            <p className="ml-4 text-lg">Loading & Shuffling Questions...</p>
         </div>
     );
   }
